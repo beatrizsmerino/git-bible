@@ -16,7 +16,7 @@ export default {
 
 <style lang="scss" scoped>
 .page-title {
-	margin-bottom: 2rem;
+	margin: 4rem 0 2rem;
 	text-align: center;
 	font-size: 3rem;
 	line-height: 1.5;

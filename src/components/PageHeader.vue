@@ -21,6 +21,7 @@ export default {
 <style lang="scss" scoped>
 .page-header {
 	width: 100%;
+	height: 6rem;
 	padding: 1.5rem 3rem;
 	display: flex;
 	justify-content: flex-end;
@@ -29,6 +30,7 @@ export default {
 	top: 0;
 	left:0;
 	z-index: 999;
+	background-color: var(--color-brand-1);
 
 	&__item {
 		display: flex;
@@ -37,6 +39,7 @@ export default {
 
 .nav {
 	font-size: 1.5rem;
+	font-weight: 300;
 
 	&__item {
 		color: var(--color-brand-2);
@@ -46,7 +49,7 @@ export default {
 		}
 
 		&.router-link-exact-active {
-			color: var(--color-brand-1);
+			color: var(--color-white);
 		}
 	}
 }
