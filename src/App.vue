@@ -23,6 +23,9 @@
 
 
 <style lang="scss">
+	@import url("https://fonts.googleapis.com/css?family=Oxygen:400,700,300");
+	@import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
+
 	:root {
 		// COLOR
 		--color-flamingo: #F05133;
