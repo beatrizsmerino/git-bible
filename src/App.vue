@@ -23,6 +23,14 @@
 
 
 <style lang="scss">
+	:root {
+		--color-brand-1: #42b883;
+		--color-brand-2: #35495e;
+		--color-gray: #3f3f3f;
+		--color-light: #fafafa;
+		--color-silver: #ececec;
+	}
+
 	[v-cloak] {
 		display: none;
 	}
@@ -40,7 +48,7 @@
     -webkit-font-smoothing: antialiased;
 		font-family: "Oxygen", Helvetica, sans-serif;
 		font-size: 62.5%;
-    color: #2c3e50;
+    color: var(--color-gray-1);
   }
 
   a {
