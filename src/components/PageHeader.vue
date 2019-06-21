@@ -39,14 +39,14 @@ export default {
 	font-size: 1.5rem;
 
 	&__item {
-		color: #35495e;
+		color: var(--color-brand-2);
 
 		&:not(:last-child) {
 			margin-right: 2rem;
 		}
 
 		&.router-link-exact-active {
-			color: #42b883;
+			color: var(--color-brand-1);
 		}
 	}
 }
