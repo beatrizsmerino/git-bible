@@ -1,7 +1,4 @@
 <template>
-  <div class="page-content page-home">
-    <img alt="Vue logo" src="../assets/logo-vue.png">
-  </div>
 </template>
 
 
