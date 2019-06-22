@@ -20,6 +20,6 @@ export default {
 	text-align: center;
 	font-size: 3rem;
 	line-height: 1.5;
-	color: var(--color-brand-1);
+	color: $color-brand-1;
 }
 </style>
