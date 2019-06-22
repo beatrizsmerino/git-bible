@@ -1,5 +1,6 @@
 <template>
 	<header class="page-header">
+		<div class="page-header__icon icon icon-git"></div>
 		<nav class="nav">
 			<router-link to="/" class="nav__item">Home</router-link>
 			<router-link to="/gitflow" class="nav__item">Git Flow</router-link>
@@ -24,22 +25,26 @@ export default {
 	height: 6rem;
 	padding: 1.5rem 3rem;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-between;
 	align-items: center;
 	position: fixed;
 	top: 0;
-	left:0;
+	left: 0;
 	z-index: 999;
 	background-color: $color-brand-1;
 
 	&__item {
 		display: flex;
 	}
+
+	&__icon{
+		font-size: 4rem;
+		color: $color-white;
+	}
 }
 
 .nav {
 	font-size: 1.5rem;
-	font-weight: 300;
 
 	&__item {
 		color: $color-brand-2;

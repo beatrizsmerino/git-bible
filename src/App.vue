@@ -23,9 +23,6 @@ export default {
 
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css?family=Oxygen:400,700,300");
-@import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
-
 
 [v-cloak] {
 	display: none;
@@ -36,10 +33,5 @@ body {
 	-webkit-font-smoothing: antialiased;
 	font-family: 'Oxygen', sans-serif;
 	color: $color-gray;
-}
-
-.logo {
-	font-family: 'Adelle Regular', 'Georgia', 'Times New Roman', serif;
-	font-size: 20rem;
 }
 </style>
