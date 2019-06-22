@@ -30,7 +30,7 @@ export default {
 	top: 0;
 	left:0;
 	z-index: 999;
-	background-color: var(--color-brand-1);
+	background-color: $color-brand-1;
 
 	&__item {
 		display: flex;
@@ -42,14 +42,14 @@ export default {
 	font-weight: 300;
 
 	&__item {
-		color: var(--color-brand-2);
+		color: $color-brand-2;
 
 		&:not(:last-child) {
 			margin-right: 2rem;
 		}
 
 		&.router-link-exact-active {
-			color: var(--color-white);
+			color: $color-white;
 		}
 	}
 }
