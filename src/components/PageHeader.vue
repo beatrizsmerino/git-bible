@@ -3,6 +3,7 @@
     <div class="page-header__icon icon icon-git"></div>
     <nav class="nav">
       <router-link to="/" class="nav__item">Home</router-link>
+      <router-link to="/commands" class="nav__item">Commands</router-link>
       <router-link to="/gitflow" class="nav__item">Git Flow</router-link>
       <router-link to="/bibliografy" class="nav__item">Bibliografy</router-link>
     </nav>
@@ -42,7 +43,7 @@ export default {};
 }
 
 .nav {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
 
   &__item {
