@@ -21,7 +21,7 @@ export default {};
 .page-header {
 	width: 100%;
 	height: 6rem;
-	padding: 1.5rem 3rem;
+	padding: 1rem 2rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -42,14 +42,14 @@ export default {};
 }
 
 .nav {
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	font-weight: 600;
 
 	&__item {
 		color: $color-brand-2;
 
 		&:not(:last-child) {
-			margin-right: 2rem;
+			margin-right: 1.5rem;
 		}
 
 		&.router-link-exact-active {
