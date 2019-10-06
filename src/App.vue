@@ -1,12 +1,14 @@
 <template>
-	<div id="app" v-cloak>
-		<page-header></page-header>
+	<div id="app" class="sticky__app" v-cloak>
+		<div class="sticky__content">
+			<page-header></page-header>
 
-		<page-title></page-title>
+			<page-title></page-title>
 
-		<router-view />
+			<router-view />
+		</div>
 
-		<page-footer></page-footer>
+		<page-footer class="sticky__footer"></page-footer>
 	</div>
 </template>
 
@@ -32,9 +34,28 @@ export default {
 }
 
 body {
-	padding-top: 6rem;
 	-webkit-font-smoothing: antialiased;
 	font-family: "Oxygen", sans-serif;
 	color: $color-gray;
+}
+
+// STICKY
+html,
+body {
+	height: 100%;
+}
+.sticky {
+	&__app {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	&__content {
+		margin-top: 6rem;
+		flex: 1 0 auto;
+	}
+	&__footer {
+		flex-shrink: 0;
+	}
 }
 </style>
