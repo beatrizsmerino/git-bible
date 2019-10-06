@@ -45,7 +45,7 @@ export default {
 	justify-content: center;
 	align-items: center;
 	font-family: "Adelle Bold", "Georgia", "Times New Roman", serif;
-  font-size: 8rem;
+  font-size: 7rem;
   
   @include t-media('md'){
     font-size: 16vw;
