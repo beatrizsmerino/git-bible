@@ -4,7 +4,9 @@
 
 		<page-title></page-title>
 
-		<router-view/>
+		<router-view />
+
+		<page-footer></page-footer>
 	</div>
 </template>
 
@@ -12,18 +14,19 @@
 <script>
 import PageHeader from "./components/PageHeader.vue";
 import PageTitle from "./components/PageTitle.vue";
+import PageFooter from "./components/PageFooter.vue";
 
 export default {
 	components: {
 		PageHeader,
-		PageTitle
+		PageTitle,
+		PageFooter
 	}
 };
 </script>
 
 
 <style lang="scss">
-
 [v-cloak] {
 	display: none;
 }
@@ -31,7 +34,7 @@ export default {
 body {
 	padding-top: 6rem;
 	-webkit-font-smoothing: antialiased;
-	font-family: 'Oxygen', sans-serif;
+	font-family: "Oxygen", sans-serif;
 	color: $color-gray;
 }
 </style>
