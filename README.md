@@ -6,7 +6,10 @@
 ![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
 -->
 
-![Git](https://github.com/beatrizsmerino/git-bible/blob/documentation/documentation/images/git.jpeg)
+![Git](https://github.com/beatrizsmerino/git-bible/blob/feature/documentation/documentation/images/git.jpg)
+
+![Git](https://github.com/beatrizsmerino/git-bible/blob/feature/documentation/documentation/images/git-bible-1.jpg)
+![Git](https://github.com/beatrizsmerino/git-bible/blob/feature/documentation/documentation/images/git-bible-2.jpg)
 
 ## Project setup
 
