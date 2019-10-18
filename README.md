@@ -11,6 +11,12 @@
 ![Git](https://github.com/beatrizsmerino/git-bible/blob/feature/documentation/documentation/images/git-bible-1.jpg)
 ![Git](https://github.com/beatrizsmerino/git-bible/blob/feature/documentation/documentation/images/git-bible-2.jpg)
 
+## Development interface
+
+![Vue logo](https://github.com/beatrizsmerino/git-bible/blob/feature/documentation/documentation/images/vue-logo.png)
+
+Is developed with **[vue.js](https://vuejs.org/)** 2.6.10 a Javascript framework. This project use [Vue Cli](https://cli.vuejs.org/) and has dependencies as vue router.
+
 ## Project setup
 
 ```
