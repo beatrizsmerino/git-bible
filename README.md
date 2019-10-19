@@ -8,8 +8,7 @@
 
 ![Git](https://github.com/beatrizsmerino/git-bible/blob/feature/documentation/documentation/images/git.jpg)
 
-![Git](https://github.com/beatrizsmerino/git-bible/blob/feature/documentation/documentation/images/git-bible-1.jpg)
-![Git](https://github.com/beatrizsmerino/git-bible/blob/feature/documentation/documentation/images/git-bible-2.jpg)
+![Git](https://github.com/beatrizsmerino/git-bible/blob/feature/documentation/documentation/images/git-bible.jpg)
 
 ## Development interface
 
