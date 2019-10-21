@@ -8,9 +8,7 @@
 <script>
 export default {
 	name: "gitflow",
-	components: {
-
-  }
+	components: {}
 };
 </script>
 

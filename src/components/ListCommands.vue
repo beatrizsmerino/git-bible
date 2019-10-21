@@ -11,6 +11,7 @@
 
 <script>
 export default {
+  name: 'ListCommands',
   data() {
     return {
       commands: [
