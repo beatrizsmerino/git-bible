@@ -1,17 +1,17 @@
 <template>
-  <div class="page-content page-bibliografy">
-    
-  </div>
+	<div class="page-content page-bibliografy">
+
+	</div>
 </template>
 
 
 <script>
-export default {
-	name: "bibliografy",
-	components: {
+	export default {
+		name: "bibliografy",
+		components: {
 
-  }
-};
+		}
+	};
 </script>
 
 

@@ -7,19 +7,19 @@
 
 
 <script>
-export default {
-	name: 'PageTitle',
-};
+	export default {
+		name: 'PageTitle',
+	};
 </script>
 
 
 
 <style lang="scss" scoped>
-.page-title {
-	margin: 4rem 0 2rem;
-	text-align: center;
-	font-size: 3rem;
-	line-height: 1.5;
-	color: $color-brand-1;
-}
+	.page-title {
+		margin: 4rem 0 2rem;
+		text-align: center;
+		font-size: 3rem;
+		line-height: 1.5;
+		color: $color-brand-1;
+	}
 </style>

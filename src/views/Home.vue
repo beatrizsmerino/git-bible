@@ -16,55 +16,55 @@
 
 
 <script>
-// @ is an alias to /src
-import Search from "@/components/Search.vue";
+	// @ is an alias to /src
+	import Search from "@/components/Search.vue";
 
-export default {
-	name: "home",
-	components: {
-		Search
-	}
-};
+	export default {
+		name: "home",
+		components: {
+			Search
+		}
+	};
 </script>
 
 
 <style lang="scss" scoped>
-.page-content {
-	text-align: center;
+	.page-content {
+		text-align: center;
 
-	&__inner {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-}
-
-.logo {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-family: "Adelle Bold", "Georgia", "Times New Roman", serif;
-  font-size: 7rem;
-  
-  @include t-media('md'){
-    font-size: 16vw;
-  }
-
-	&__icon {
-		color: $color-brand-1;
+		&__inner {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
 	}
 
-	&__text {
-		margin-left: 1rem;
+	.logo {
 		display: flex;
-	}
+		justify-content: center;
+		align-items: center;
+		font-family: "Adelle Bold", "Georgia", "Times New Roman", serif;
+		font-size: 7rem;
 
-	&__git {
-		color: $color-brand-2;
+		@include t-media("md") {
+			font-size: 16vw;
+		}
+
+		&__icon {
+			color: $color-brand-1;
+		}
+
+		&__text {
+			margin-left: 1rem;
+			display: flex;
+		}
+
+		&__git {
+			color: $color-brand-2;
+		}
+		&__bible {
+			color: $color-brand-2-light;
+		}
 	}
-	&__bible {
-		color: $color-brand-2-light;
-	}
-}
 </style>
