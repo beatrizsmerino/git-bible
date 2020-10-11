@@ -50,6 +50,7 @@
 		}
 		&__content {
 			margin-top: 6rem;
+			margin-bottom: 6rem;
 			flex: 1 0 auto;
 		}
 		&__footer {

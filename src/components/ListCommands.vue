@@ -52,7 +52,9 @@
 		}
 
 		&__code {
+			width: 100%;
 			margin-left: 1.5rem;
+			display: inline-block;
 			color: $color-brand-3;
 		}
 	}
