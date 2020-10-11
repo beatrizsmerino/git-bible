@@ -10,23 +10,18 @@
 
 
 <script>
+import data from "../data/data-commands.json"
 export default {
   name: 'ListCommands',
   data() {
     return {
       commands: [
-        {
-          id: 1,
-          code: "git --version",
-          description: "Known the git version"
-        },
-        {
-          id: 2,
-          code: "git init",
-          description: "Inizialice git repository"
-        }
+        
       ]
     };
+  },
+  created(){
+    this.commands = data
   }
 };
 </script>

@@ -8,5 +8,14 @@
 		"id": 2,
 		"code": "git init",
 		"description": "Inizialice git repository"
+	},
+	{
+		"id":3,
+		"code":"git log",
+		"description":"see all commits made"
+	},{
+		"id":4,
+		"code":"git tag -a '<TAG VERSION>' -m '<MESSAGE>' ",
+		"description":"create a new tag"
 	}
 ]
