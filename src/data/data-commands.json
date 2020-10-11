@@ -1,0 +1,12 @@
+[
+	{
+		"id": 1,
+		"code": "git --version",
+		"description": "Known the git version"
+	},
+	{
+		"id": 2,
+		"code": "git init",
+		"description": "Inizialice git repository"
+	}
+]
