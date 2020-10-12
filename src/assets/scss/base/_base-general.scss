@@ -1,0 +1,42 @@
+// BASE
+// GENERAL
+// ------------------
+
+
+
+
+// SELECTION TEXT
+// =================================================
+::-moz-selection { /* Code for Firefox */
+  color: $color-brand-1;
+  background: $color-brand-2;
+}
+
+::selection {
+  color: $color-brand-1;
+  background: $color-brand-2;
+}
+
+
+
+// FORMS
+// =================================================
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: $color-brand-2-light;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: $color-brand-2-light;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: $color-brand-2-light;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: $color-brand-2-light;
+}

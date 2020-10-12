@@ -1,12 +1,16 @@
 <template>
 	<footer class="footer">
 		<div>
-			<p>© Copyright 2019. Git Bible. beatrizsmerino</p>
+			<p>
+				© Copyright 2019. Git Bible. beatrizsmerino
+			</p>
 		</div>
 
 		<div>
 			<nav class="nav">
-				<router-link to="/bibliografy" class="nav__item">Bibliografy</router-link>
+				<router-link to="/bibliografy" class="nav__item">
+					Bibliografy
+				</router-link>
 			</nav>
 		</div>
 	</footer>
@@ -14,21 +18,21 @@
 
 
 <script>
-export default {
-	name: 'PageFooter',
-};
+	export default {
+		name: 'PageFooter',
+	};
 </script>
 
 
 <style lang="scss" scoped>
-.footer {
-	padding: 1rem 2rem;
-	display: flex;
-	justify-content: space-between;
-	color: $color-white;
-	background-color: $color-brand-2-light;
-}
-a {
-	color: $color-brand-2;
-}
+	.footer {
+		padding: 1rem 2rem;
+		display: flex;
+		justify-content: space-between;
+		color: $color-white;
+		background-color: $color-brand-2-light;
+	}
+	a {
+		color: $color-brand-2;
+	}
 </style>

@@ -1,0 +1,22 @@
+[
+	{
+		"id": 1,
+		"url": "https://git-scm.com/doc",
+		"description": "Git documentation"
+	},
+	{
+		"id": 2,
+		"url": "https://training.github.com/",
+		"description": "Git Cheat Sheets"
+	},
+	{
+		"id": 3,
+		"url": "https://ndpsoftware.com/git-cheatsheet.html",
+		"description": "Git: cheatsheet interactive"
+	},
+	{
+		"id": 4,
+		"url": "http://danielkummer.github.io/git-flow-cheatsheet/",
+		"description": "Git Flow: cheatsheet"
+	}
+]

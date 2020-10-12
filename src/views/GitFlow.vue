@@ -1,15 +1,15 @@
 <template>
 	<div class="page-content page-gitflow">
-		
+
 	</div>
 </template>
 
 
 <script>
-export default {
-	name: "gitflow",
-	components: {}
-};
+	export default {
+		name: "gitflow",
+		components: {}
+	};
 </script>
 
 
