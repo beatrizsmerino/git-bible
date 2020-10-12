@@ -7,7 +7,7 @@
 				</p>
 				<p>
 					<i class="reference__link-icon">
-						<font-awesome-icon :icon="['fas', 'link']" flip="horizontal"/>
+						<font-awesome-icon :icon="['fas', 'link']"/>
 					</i>
 
 					<span class="reference__link-text">

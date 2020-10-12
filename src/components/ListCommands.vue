@@ -4,7 +4,7 @@
 			<p class="command__description">
 				{{command.description}}
 			</p>
-			<tag-code class="command__code" :code="command.code"/>
+			<code-theme class="command__code" :code="command.code"/>
 		</li>
 	</ul>
 </template>
@@ -12,13 +12,13 @@
 
 
 <script>
-	import TagCode from "@/components/TagCode.vue";
+	import CodeTheme from "@/components/CodeTheme.vue";
 	import data from "../data/data-commands.json";
 
 	export default {
 		name: 'ListCommands',
 		components: {
-			TagCode
+			CodeTheme
 		},
 		props: {
 			code: String,

@@ -1,18 +1,17 @@
 // GENERICS
-// reset-personal
+// RESET
 // ------------------
-// Change : 17-09-2017
-// Date   : 17-09-2017
 
 
 
 
 
 * {
-
 	&,
 	&:before,
 	&:after {
+		margin: 0;
+		padding: 0;
 		box-sizing: border-box;
 	}
 }

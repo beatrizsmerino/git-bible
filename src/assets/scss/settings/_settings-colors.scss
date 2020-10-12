@@ -1,4 +1,13 @@
+// SETTINGS
+// COLORS
+// ------------------
+
+
+
+
+
 // COLOR
+// =================================================
 $color-flamingo:      #f05133;
 $color-totem-pole:    #9d0a0e;
 $color-milano-red:    #bd2c00;
@@ -8,14 +17,20 @@ $color-orange:        #fc6d26;
 $color-sea-buckthorn: #fca326;
 $color-cola:          #413000;
 
-// BRAND
-$color-brand-1:       $color-orange;
-$color-brand-2:       $color-cola;
-$color-brand-2-light: rgba($color-brand-2, 0.4);
-$color-brand-3:       $color-tia-maria;
+
 
 // GRAY SCALE
+// =================================================
 $color-gray:    #3f3f3f;
-$color-silver:  #ececec;
-$color-light:   #fafafa;
+$color-silver:  #dedede;
+$color-light:   #ececec;
 $color-white:   #ffffff;
+
+
+
+// BRAND
+// =================================================
+$color-brand-1:       $color-orange;
+$color-brand-2:       $color-cola;
+$color-brand-2-light: mix($color-white, $color-brand-2, 50%);
+$color-brand-3:       $color-tia-maria;
