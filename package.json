@@ -5,7 +5,8 @@
 	"scripts": {
 		"serve": "vue-cli-service serve",
 		"build": "vue-cli-service build",
-		"lint": "vue-cli-service lint"
+		"lint": "vue-cli-service lint",
+		"deploy": "node scripts/gh-pages-deploy.js"
 	},
 	"dependencies": {
 		"@fortawesome/fontawesome-svg-core": "^1.2.32",
@@ -16,6 +17,7 @@
 		"vue-router": "^3.4.6"
 	},
 	"devDependencies": {
+		"execa": "latest",
 		"@vue/cli-plugin-babel": "^4.5.7",
 		"@vue/cli-plugin-eslint": "^4.5.7",
 		"@vue/cli-service": "^4.5.7",
