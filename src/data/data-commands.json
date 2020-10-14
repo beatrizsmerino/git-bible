@@ -18,5 +18,15 @@
 		"id": 4,
 		"code": "git tag -a '<TAG VERSION>' -m '<MESSAGE>'",
 		"description": "Create a new tag"
+	},
+	{
+		"id": 5,
+		"code": "GIT_COMMITTER_DATE='YYYY-MM-DDThh:mm:ss±hh:mm' git commit --amend --date='YYYY-MM-DDThh:mm:ss±hh:mm' -C <COMMIT>",
+		"description": "Overwrite the date commit"
+	},
+	{
+		"id": 6,
+		"code": "git show -s --format=%ci <COMMIT>",
+		"description": "Get date commit"
 	}
 ]
