@@ -58,7 +58,6 @@
 		},
 		created(){
 			this.commands = dataCommands;
-			console.table(this.commands);
 		}
 	};
 </script>
@@ -77,8 +76,9 @@
 			width: 100%;
 			padding: 1.92rem 3.2rem;
 			font-size: 2rem;
-			color: $color-brand-2;
-			border: 0.2rem solid $color-brand-1;
+			font-weight: 700;
+			color: $color-brand-1;
+			border: 0.3rem solid $color-brand-1;
 		}
 
 		&__icon {
@@ -101,7 +101,7 @@
 			display: inline-block;
 			width: 100%;
 			height: 5rem;
-			position: fixed;
+			position: absolute;
 			bottom: 0;
 			left: 0;
 			background: $color-white;
@@ -151,7 +151,7 @@
 				display: inline-block;
 				width: 100%;
 				height: 5rem;
-				position: fixed;
+				position: absolute;
 				left: 0;
 				z-index: 1;
 			}

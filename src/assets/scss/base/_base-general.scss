@@ -22,21 +22,25 @@
 // FORMS
 // =================================================
 ::-webkit-input-placeholder {
-    /* Chrome/Opera/Safari */
+	/* Chrome/Opera/Safari */
+	font-weight: 400;
     color: $color-brand-2-light;
 }
 
 ::-moz-placeholder {
-    /* Firefox 19+ */
+	/* Firefox 19+ */
+	font-weight: 400;
     color: $color-brand-2-light;
 }
 
 :-ms-input-placeholder {
-    /* IE 10+ */
+	/* IE 10+ */
+	font-weight: 400;
     color: $color-brand-2-light;
 }
 
 :-moz-placeholder {
-    /* Firefox 18- */
+	/* Firefox 18- */
+	font-weight: 400;
     color: $color-brand-2-light;
 }
