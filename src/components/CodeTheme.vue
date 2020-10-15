@@ -1,12 +1,24 @@
 <template>
 	<div>
-		<code class="code-theme">
-			<label class="switch-theme" v-on:change="switchTheme">
-				<input class="switch-theme__field" type="checkbox">
+		<div class="code-theme">
+			<label
+				class="code-theme__switch switch-theme"
+				v-on:change="switchTheme"
+			>
+				<input
+					class="switch-theme__field"
+					type="checkbox"
+				>
 				<span class="switch-theme__bullet switch-theme__bullet--rounded"></span>
 			</label>
-			{{code}}
-		</code>
+
+			<code
+				class="code-theme__code"
+				v-on:scroll="checkStatusScrollHorizontal"
+			>
+				{{code}}
+			</code>
+		</div>
 	</div>
 </template>
 
@@ -19,16 +31,32 @@
 			code: String,
 		},
 		methods: {
-			switchTheme: function(event) {
-				const $thisSwitchField = event.target;
-				const $thisSwitchParent = $thisSwitchField.parentNode.parentNode;
+			checkStatusScrollHorizontal: function (event) {
+				const $thisBox = event.target;
+				const $thisBoxWidth = $thisBox.offsetWidth;
+				const $thisBoxScrollLeft = $thisBox.scrollLeft;
+				const $thisBoxScrollWidth = $thisBox.scrollWidth;
 
-				if ($thisSwitchParent && $thisSwitchField.checked) {
-					$thisSwitchParent.classList.remove("code-theme--light");
-					$thisSwitchParent.classList.add("code-theme--dark");
+				const $thisBoxParent = $thisBox.parentNode;
+				$thisBoxParent.classList.add("is-scroll");
+				if ($thisBoxScrollLeft === 0) {
+					$thisBoxParent.classList.remove("is-scroll-end");
+					$thisBoxParent.classList.add("is-scroll-start");
+				} else if ($thisBoxScrollWidth - $thisBoxScrollLeft == $thisBoxWidth) {
+					$thisBoxParent.classList.remove("is-scroll-start");
+					$thisBoxParent.classList.add("is-scroll-end");
+				}
+			},
+			switchTheme: function (event) {
+				const $thisSwitchThemeField = event.target;
+				const $thisCodeTheme = $thisSwitchThemeField.parentNode.parentNode;
+
+				if ($thisCodeTheme && $thisSwitchThemeField.checked) {
+					$thisCodeTheme.classList.remove("is-theme-light");
+					$thisCodeTheme.classList.add("is-theme-dark");
 				} else {
-					$thisSwitchParent.classList.remove("code-theme--dark");
-					$thisSwitchParent.classList.add("code-theme--light");
+					$thisCodeTheme.classList.remove("is-theme-dark");
+					$thisCodeTheme.classList.add("is-theme-light");
 				}
 			}
 		}
@@ -38,29 +66,11 @@
 
 
 <style lang="scss" scoped>
-	.code-theme{
-		width: 100%;
-		padding: 1rem;
-		position: relative;
-		display: inline-block;
-		font-weight: 600;
-		color: $color-brand-3;
-		border-radius: 0.4rem;
-		background-color: $color-white;
-
-		&--dark{
-			color: $color-brand-1;
-			background-color: $color-brand-2;
-		}
-	}
-
 	.switch-theme {
 		width: 2.8rem;
 		height: 1.4rem;
 		display: inline-block;
-		position: absolute;
-		top: 0.5rem;
-		right: 0.5rem;
+		position: relative;
 
 		&__field {
 			width: 1rem;
@@ -108,6 +118,155 @@
 				&:before {
 					border-radius: 50%;
 				}
+			}
+		}
+	}
+
+	.code-theme {
+		width: 100%;
+		position: relative;
+		white-space: nowrap;
+		font-weight: 600;
+		color: $color-brand-3;
+		border-radius: 0.4rem;
+		background-color: $color-white;
+		overflow: hidden;
+
+		&:after {
+			content: "";
+			display: inline-block;
+			width: 2rem;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			z-index: 1;
+		}
+
+		&:after {
+			width: 7rem;
+			right: 0;
+			background: $color-white;
+			background: linear-gradient(
+				90deg,
+				rgba($color-white, 0) 0%,
+				rgba($color-white, 1) 20%,
+				rgba($color-white, 1) 80%
+			);
+		}
+
+		&__switch {
+			position: absolute;
+			top: 0.5rem;
+			right: 0.5rem;
+			z-index: 2;
+		}
+
+		&__code {
+			width: calc(100% - 4rem);
+			padding: 1rem;
+			display: block;
+			border-radius: 0.4rem;
+			overflow-x: auto;
+		}
+
+		&.is-scroll {
+			&:before,
+			&:after {
+				content: "";
+				display: inline-block;
+				width: 2rem;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				z-index: 1;
+			}
+
+			&:before {
+				left: 0;
+				background: $color-white;
+				background: linear-gradient(
+					90deg,
+					rgba($color-white, 1) 0%,
+					rgba($color-white, 1) 20%,
+					rgba($color-white, 0) 80%
+				);
+			}
+
+			&:after {
+				width: 7rem;
+				right: 0;
+				background: $color-white;
+				background: linear-gradient(
+					90deg,
+					rgba($color-white, 0) 0%,
+					rgba($color-white, 1) 20%,
+					rgba($color-white, 1) 80%
+				);
+			}
+		}
+
+		&.is-scroll-start {
+			&:before {
+				display: none;
+			}
+		}
+
+		&.is-scroll-end {
+			&:after {
+				display: none;
+			}
+		}
+
+		&.is-theme-light {
+			color: $color-brand-3;
+			background-color: $color-white;
+
+			&:before {
+				left: 0;
+				background: $color-white;
+				background: linear-gradient(
+					90deg,
+					rgba($color-white, 1) 0%,
+					rgba($color-white, 1) 20%,
+					rgba($color-white, 0) 80%
+				);
+			}
+
+			&:after {
+				width: 7rem;
+				right: 0;
+				background: $color-white;
+				background: linear-gradient(
+					90deg,
+					rgba($color-white, 0) 0%,
+					rgba($color-white, 1) 20%,
+					rgba($color-white, 1) 80%
+				);
+			}
+		}
+
+		&.is-theme-dark {
+			color: $color-brand-1;
+			background-color: $color-brand-2;
+
+			&:before {
+				background: $color-brand-2;
+				background: linear-gradient(
+					90deg,
+					rgba($color-brand-2, 1) 0%,
+					rgba($color-brand-2, 1) 20%,
+					rgba($color-brand-2, 0) 80%
+				);
+			}
+
+			&:after {
+				background: $color-brand-2;
+				background: linear-gradient(
+					90deg,
+					rgba($color-brand-2, 0) 0%,
+					rgba($color-brand-2, 1) 20%,
+					rgba($color-brand-2, 1) 80%
+				);
 			}
 		}
 	}
