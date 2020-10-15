@@ -13,7 +13,7 @@
 
 <script>
 	import CodeTheme from "@/components/CodeTheme.vue";
-	import data from "../data/data-commands.json";
+	import dataCommands from "../data/data-commands.json";
 
 	export default {
 		name: 'ListCommands',
@@ -26,7 +26,7 @@
 			};
 		},
 		created() {
-			this.commands = data
+			this.commands = dataCommands
 		}
 	};
 </script>
