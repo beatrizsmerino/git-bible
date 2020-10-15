@@ -1,12 +1,12 @@
 <template>
 	<div>
-		<div class="logo" :class="theme">
+		<router-link to="/" class="logo" :class="theme">
 			<i class="logo__icon icon icon-git"></i>
 			<div class="logo__text">
 				<span class="logo__git">git</span>
 				<span class="logo__bible">Bible</span>
 			</div>
-		</div>
+		</router-link>
 	</div>
 </template>
 
