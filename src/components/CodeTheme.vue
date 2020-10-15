@@ -3,19 +3,16 @@
 		<div class="code-theme">
 			<label
 				class="code-theme__switch switch-theme"
-				v-on:change="switchTheme"
-			>
+				v-on:change="switchTheme">
 				<input
 					class="switch-theme__field"
-					type="checkbox"
-				>
+					type="checkbox">
 				<span class="switch-theme__bullet switch-theme__bullet--rounded"></span>
 			</label>
 
 			<code
 				class="code-theme__code"
-				v-on:scroll="checkStatusScrollHorizontal"
-			>
+				v-on:scroll="checkStatusScrollHorizontal">
 				{{code}}
 			</code>
 		</div>

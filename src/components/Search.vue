@@ -3,7 +3,7 @@
 		<form class="form" method action>
 			<div class="form__field">
 				<input class="form__input" type="text" placeholder="Search command"/>
-				<span class="form__icon icon icon-search"></span>
+				<i class="form__icon icon icon-search"></i>
 			</div>
 		</form>
 	</div>

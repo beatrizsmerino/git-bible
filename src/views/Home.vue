@@ -2,14 +2,14 @@
 	<div class="page-content page-home">
 		<div class="page-content__inner">
 			<div class="logo">
-				<span class="logo__icon icon icon-git"></span>
+				<i class="logo__icon icon icon-git"></i>
 				<div class="logo__text">
 					<span class="logo__git">git</span>
 					<span class="logo__bible">Bible</span>
 				</div>
 			</div>
 
-			<search></search>
+			<search/>
 		</div>
 	</div>
 </template>

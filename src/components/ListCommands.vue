@@ -20,9 +20,6 @@
 		components: {
 			CodeTheme
 		},
-		props: {
-			code: String,
-		},
 		data() {
 			return {
 				commands: []
