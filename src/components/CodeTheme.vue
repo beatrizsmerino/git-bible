@@ -64,30 +64,30 @@
 
 <style lang="scss" scoped>
 	.switch-theme {
-		width: 2.8rem;
-		height: 1.4rem;
+		width: 4.5rem;
+		height: 2.2rem;
 		display: inline-block;
 		position: relative;
 
 		&__field {
-			width: 1rem;
-			height: 1rem;
+			width: 1.5rem;
+			height: 1.5rem;
 			position: absolute;
 			top: 50%;
-			left: 0.3rem;
+			left: 4.8rem;
 			transform: translate(0, -50%);
 			opacity: 0;
 
 			&:checked + .switch-theme__bullet:before {
 				left: initial;
-				right: 0.3rem;
+				right: 0.5rem;
 				background-color: $color-brand-2;
 			}
 		}
 
 		&__bullet {
 			width: 100%;
-			height: 1.4rem;
+			height: 2.2rem;
 			display: inline-block;
 			position: absolute;
 			top: 0;
@@ -98,11 +98,11 @@
 
 			&:before {
 				content: "";
-				width: 1rem;
-				height: 1rem;
+				width: 1.5rem;
+				height: 1.5rem;
 				display: inline-block;
 				position: absolute;
-				left: 0.3rem;
+				left: 0.5rem;
 				top: 50%;
 				transform: translate(0, -50%);
 				background-color: $color-silver;
@@ -110,7 +110,7 @@
 			}
 
 			&--rounded {
-				border-radius: 1rem;
+				border-radius: 2rem;
 
 				&:before {
 					border-radius: 50%;
@@ -125,7 +125,7 @@
 		white-space: nowrap;
 		font-weight: 600;
 		color: $color-brand-3;
-		border-radius: 0.4rem;
+		border-radius: 0.5rem;
 		background-color: $color-white;
 		overflow: hidden;
 
@@ -153,15 +153,16 @@
 
 		&__switch {
 			position: absolute;
-			top: 0.5rem;
-			right: 0.5rem;
+			top: 0.8rem;
+			right: 0.8rem;
 			z-index: 2;
 		}
 
 		&__code {
 			width: calc(100% - 4rem);
-			padding: 1rem;
+			padding: 1.6rem;
 			display: block;
+			font-size: 1.56rem;
 			border-radius: 0.4rem;
 			overflow-x: auto;
 		}

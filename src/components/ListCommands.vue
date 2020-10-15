@@ -41,13 +41,13 @@
 	}
 
 	.command {
-		padding: 1.2rem 2rem;
-		font-size: 1.2rem;
+		padding: 1.92rem 3.2rem;
+		font-size: 1.92rem;
 		background-color: $color-light;
-		border-bottom: 0.5rem solid $color-silver;
+		border-bottom: 0.8rem solid $color-silver;
 
 		&:not(:last-child) {
-			margin-bottom: 1rem;
+			margin-bottom: 1.6rem;
 		}
 
 		&__description {

@@ -25,8 +25,8 @@
 <style lang="scss" scoped>
 	.page-header {
 		width: 100%;
-		height: 6rem;
-		padding: 1rem 2rem;
+		height: 9rem;
+		padding: 1.6rem 3.2rem;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;

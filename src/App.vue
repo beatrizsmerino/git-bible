@@ -49,8 +49,8 @@
 			flex-direction: column;
 		}
 		&__content {
-			margin-top: 6rem;
-			margin-bottom: 6rem;
+			margin-top: 9rem;
+			margin-bottom: 9rem;
 			flex: 1 0 auto;
 		}
 		&__footer {

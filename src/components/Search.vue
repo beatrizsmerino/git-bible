@@ -28,21 +28,22 @@
 			position: relative;
 		}
 
-		&__icon {
-			position: absolute;
-			right: 2rem;
-			top: 50%;
-			transform: translate(0, -50%);
-			font-size: 2rem;
-			color: $color-brand-1;
-		}
-
 		&__input {
 			width: 100%;
-			padding: 1.2rem 2rem;
-			font-size: 1.5rem;
+			padding: 1.92rem 3.2rem;
+			font-size: 2rem;
 			color: $color-brand-2;
 			border: 0.2rem solid $color-brand-1;
 		}
+
+		&__icon {
+			position: absolute;
+			right: 3.2rem;
+			top: 50%;
+			transform: translate(0, -50%);
+			font-size: 3.2rem;
+			color: $color-brand-1;
+		}
 	}
+
 </style>

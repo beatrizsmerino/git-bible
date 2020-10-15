@@ -57,14 +57,14 @@
 
 		&__list{
 			display: flex;
-			font-size: 1.2rem;
+			font-size: 2rem;
 			font-weight: 600;
 			list-style: none;
 
 			@include t-media("md") {
 				flex-direction: column;
 				align-items: flex-end;
-				font-size: 1.1rem;
+				font-size: 1.8rem;
 				opacity: 0;
 				transform: translate(100%, 0);
 				transition: all 0.5s ease-in-out 0s;
@@ -73,7 +73,7 @@
 
 		&__item {
 			&:not(:last-child) {
-				margin-right: 1.5rem;
+				margin-right: 2.4rem;
 
 				@include t-media("md") {
 					margin-right: 0;
@@ -92,7 +92,7 @@
 		&__button{
 			display: none;
 			appearance: none;
-			margin-left: 1.5rem;
+			margin-left: 3rem;
 			position: relative;
 			z-index: 2;
 			border: none;
@@ -105,7 +105,7 @@
 		}
 
 		&__icon{
-			font-size: 2rem;
+			font-size: 3rem;
 			color: $color-white;
 			pointer-events: none;
 		}

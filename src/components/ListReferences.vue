@@ -50,7 +50,7 @@
 		width: 100%;
 		display: flex;
 		align-items: center;
-		font-size: 1.2rem;
+		font-size: 1.92rem;
 		background-color: $color-light;
 
 		&:hover{
@@ -62,17 +62,17 @@
 		}
 
 		&:not(:last-child) {
-			margin-bottom: 1rem;
+			margin-bottom: 1.6rem;
 		}
 
 		&__link{
 			width: 100%;
-			padding: 1.2rem 2rem;
+			padding: 1.92rem 3.2rem;
 			color: $color-brand-3;
 		}
 
 		&__link-icon{
-			margin-right: 0.5rem;
+			margin-right: 0.8rem;
 		}
 
 		&__link-text {

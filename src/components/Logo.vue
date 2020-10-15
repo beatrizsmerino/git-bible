@@ -30,7 +30,7 @@
 		justify-content: center;
 		align-items: center;
 		font-family: "Adelle Bold", "Georgia", "Times New Roman", serif;
-		font-size: 7rem;
+		font-size: 11.2rem;
 
 		@include t-media("md") {
 			font-size: 16vw;
@@ -41,7 +41,7 @@
 		}
 
 		&__text {
-			margin-left: 1rem;
+			margin-left: 1.6rem;
 			display: flex;
 		}
 
@@ -77,10 +77,10 @@
 		}
 
 		&--header {
-			font-size: 3rem;
+			font-size: 5rem;
 
 			@include t-media("sm") {
-				font-size: 2.5rem;
+				font-size: 4rem;
 			}
 		}
 	}

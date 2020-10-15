@@ -26,10 +26,11 @@
 
 <style lang="scss" scoped>
 	.footer {
-		padding: 1rem 2rem;
+		padding: 1.6rem 3.2rem;
 		display: flex;
 		justify-content: space-between;
 		color: $color-white;
+		font-size: 1.6rem;
 		background-color: $color-brand-2-light;
 	}
 	a {
