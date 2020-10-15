@@ -11,22 +11,8 @@ Vue.use(VueRouter);
 
 const routes = [
 	{
-		path: '*',
-		redirect: '/',
-		component: Home,
-		meta: {
-			title: 'Home',
-			metaTags: [
-				{
-					name: 'description',
-					content: 'The home page of GitBible app.'
-				}
-			]
-		}
-	},
-	{
 		path: '',
-		name: 'home',
+		name: '/home',
 		component: Home,
 		meta: {
 			title: 'Home',
@@ -79,8 +65,25 @@ const routes = [
 				}
 			]
 		}
+	},
+	{
+		path: '*',
+		redirect: '/',
+		component: Home,
+		meta: {
+			title: 'Home',
+			metaTags: [
+				{
+					name: 'description',
+					content: 'The home page of GitBible app.'
+				}
+			]
+		}
 	}
 ];
+
+
+
 
 const router = new VueRouter({
 	mode: 'history',

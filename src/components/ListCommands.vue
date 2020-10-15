@@ -1,6 +1,6 @@
 <template>
 	<ul class="list-commands">
-		<li v-for="command in commands" :key="command.id" class="command">
+		<li v-for="command in commands" :key="command.id" :ref="command.name" :id="command.name" class="command" :data-index="command.id">
 			<p class="command__description">
 				{{command.description}}
 			</p>
@@ -22,12 +22,31 @@
 		},
 		data() {
 			return {
+				anchorName: this.$route.hash.split('#').pop(),
 				commands: []
 			};
 		},
+		methods: {
+			scrollAnchor: function($thisAnchor) {
+				setTimeout(() => {
+					if($thisAnchor !== undefined){
+						let $thisAnchorTop = $thisAnchor[0].offsetTop;
+						window.scrollTo({
+							left: 0,
+							top: $thisAnchorTop - 90 - 70,
+							behavior: 'smooth',
+						});
+						$thisAnchor[0].classList.add("is-selected");
+					}
+				}, 100);
+			}
+		},
 		created() {
-			this.commands = dataCommands
-		}
+			this.commands = dataCommands;
+		},
+		mounted(){
+			this.scrollAnchor(this.$refs[this.anchorName]);
+		},
 	};
 </script>
 
@@ -55,6 +74,10 @@
 		&__code {
 			width: 100%;
 			display: inline-block;
+		}
+
+		&.is-selected{
+			background-color: $color-silver;
 		}
 	}
 </style>

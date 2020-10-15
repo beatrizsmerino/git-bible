@@ -12,7 +12,7 @@
 				<li class="nav__item">
 					<router-link
 						to="/commands"
-						class="nav__link">
+						class="nav__link" :class="[currentPage.includes('commands') ? isActive : '', 'nav__link']">
 						Commands
 					</router-link>
 				</li>
@@ -41,6 +41,7 @@
 		name: 'PageNav',
 		data() {
 			return {
+				isActive: 'router-link-exact-active router-link-active',
 				isOpen: false
 			}
 		},
@@ -48,7 +49,12 @@
 			openCloseNav: function(){
 				(this.isOpen == false) ? this.isOpen = true : this.isOpen = false;
 			}
-		}
+		},
+		computed: {
+			currentPage(){
+				return this.$route.path;
+			}
+		},
 	};
 </script>
 

@@ -1,6 +1,6 @@
 <template>
 	<ul class="list-references">
-		<li v-for="reference in references" :key="reference.id" class="reference">
+		<li v-for="reference in references" :key="reference.id" class="reference" :data-index="reference.id">
 			<a class="reference__link" :href="reference.url" target="_blank">
 				<p class="reference__description">
 					{{reference.description}}

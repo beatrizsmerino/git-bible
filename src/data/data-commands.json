@@ -1,31 +1,37 @@
 [
 	{
 		"id": 1,
+		"name": "get-git-version",
 		"code": "git --version",
 		"description": "Known the git version"
 	},
 	{
 		"id": 2,
+		"name": "create-repository",
 		"code": "git init",
 		"description": "Inizialice git repository"
 	},
 	{
 		"id": 3,
+		"name": "get-commits-list",
 		"code": "git log",
 		"description": "See all commits made"
 	},
 	{
 		"id": 4,
+		"name": "create-tag",
 		"code": "git tag -a '<TAG VERSION>' -m '<MESSAGE>'",
 		"description": "Create a new tag"
 	},
 	{
 		"id": 5,
+		"name": "overwrite-date-commit",
 		"code": "GIT_COMMITTER_DATE='YYYY-MM-DDThh:mm:ss±hh:mm' git commit --amend --date='YYYY-MM-DDThh:mm:ss±hh:mm' -C <COMMIT>",
 		"description": "Overwrite the date commit"
 	},
 	{
 		"id": 6,
+		"name": "show-date-commit",
 		"code": "git show -s --format=%ci <COMMIT>",
 		"description": "Get date commit"
 	}

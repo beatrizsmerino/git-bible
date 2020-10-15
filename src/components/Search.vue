@@ -9,8 +9,8 @@
 		<div class="search-results">
 			<div class="search-results__inner" v-on:scroll="checkStatusScrollVertical">
 				<ul class="search-results__list">
-					<li v-for="command in filteredList" :key="command.id" class="search-results__item">
-						<router-link :to="`/commands/${command.id}`" class="search-results__link">
+					<li v-for="command in filteredList" :key="command.id" :id="command.name" class="search-results__item" :data-index="command.id">
+						<router-link :to="`/commands/#${command.name}`" class="search-results__link">
 							{{command.description}}
 						</router-link>
 					</li>
