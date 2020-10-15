@@ -1,6 +1,6 @@
 <template>
 	<header class="page-header">
-		<div class="page-header__icon icon icon-git"></div>
+		<logo theme="logo--header logo--light"/>
 		<nav class="nav">
 			<router-link to="/" class="nav__item">
 				Home
@@ -18,8 +18,13 @@
 
 
 <script>
+	import Logo from "@/components/Logo.vue";
+
 	export default {
 		name: 'PageHeader',
+		components:{
+			Logo,
+		}
 	};
 </script>
 

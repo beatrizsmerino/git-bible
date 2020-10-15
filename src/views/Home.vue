@@ -1,13 +1,7 @@
 <template>
 	<div class="page-content page-home">
 		<div class="page-content__inner">
-			<div class="logo">
-				<i class="logo__icon icon icon-git"></i>
-				<div class="logo__text">
-					<span class="logo__git">git</span>
-					<span class="logo__bible">Bible</span>
-				</div>
-			</div>
+			<logo/>
 
 			<search/>
 		</div>
@@ -17,11 +11,13 @@
 
 <script>
 	// @ is an alias to /src
+	import Logo from "@/components/Logo.vue";
 	import Search from "@/components/Search.vue";
 
 	export default {
 		name: "home",
 		components: {
+			Logo,
 			Search
 		}
 	};
@@ -37,34 +33,6 @@
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-		}
-	}
-
-	.logo {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-family: "Adelle Bold", "Georgia", "Times New Roman", serif;
-		font-size: 7rem;
-
-		@include t-media("md") {
-			font-size: 16vw;
-		}
-
-		&__icon {
-			color: $color-brand-1;
-		}
-
-		&__text {
-			margin-left: 1rem;
-			display: flex;
-		}
-
-		&__git {
-			color: $color-brand-2;
-		}
-		&__bible {
-			color: $color-brand-2-light;
 		}
 	}
 </style>
