@@ -36,12 +36,16 @@
 
 				const $thisBoxParent = $thisBox.parentNode;
 				$thisBoxParent.classList.add("is-scroll");
+
 				if ($thisBoxScrollLeft === 0) {
 					$thisBoxParent.classList.remove("is-scroll-end");
 					$thisBoxParent.classList.add("is-scroll-start");
 				} else if ($thisBoxScrollWidth - $thisBoxScrollLeft == $thisBoxWidth) {
 					$thisBoxParent.classList.remove("is-scroll-start");
 					$thisBoxParent.classList.add("is-scroll-end");
+				} else {
+					$thisBoxParent.classList.remove("is-scroll-end");
+					$thisBoxParent.classList.remove("is-scroll-start");
 				}
 			},
 			switchTheme: function (event) {
@@ -132,16 +136,12 @@
 		&:after {
 			content: "";
 			display: inline-block;
-			width: 2rem;
+			width: 10rem;
 			height: 100%;
 			position: absolute;
 			top: 0;
-			z-index: 1;
-		}
-
-		&:after {
-			width: 7rem;
 			right: 0;
+			z-index: 1;
 			background: $color-white;
 			background: linear-gradient(
 				90deg,
@@ -159,7 +159,7 @@
 		}
 
 		&__code {
-			width: calc(100% - 4rem);
+			width: calc(100% - 6.3rem);
 			padding: 1.6rem;
 			display: block;
 			font-size: 1.56rem;
@@ -172,7 +172,7 @@
 			&:after {
 				content: "";
 				display: inline-block;
-				width: 2rem;
+				width: 3rem;
 				height: 100%;
 				position: absolute;
 				top: 0;
@@ -191,7 +191,7 @@
 			}
 
 			&:after {
-				width: 7rem;
+				width: 10rem;
 				right: 0;
 				background: $color-white;
 				background: linear-gradient(

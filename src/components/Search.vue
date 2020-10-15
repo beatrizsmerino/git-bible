@@ -48,6 +48,9 @@
 				} else if ($thisBoxScrollHeight - $thisBoxScrollTop == $thisBoxHeight) {
 					$thisBoxParent.classList.remove("is-scroll-start");
 					$thisBoxParent.classList.add("is-scroll-end");
+				} else{
+					$thisBoxParent.classList.remove("is-scroll-end");
+					$thisBoxParent.classList.remove("is-scroll-start");
 				}
 			},
 		},
