@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<nav id="nav" class="nav">
+		<nav class="nav" :class="{'is-open': isOpen}">
 			<ul class="nav__list">
 				<li class="nav__item">
 					<router-link
@@ -39,10 +39,14 @@
 <script>
 	export default {
 		name: 'PageNav',
+		data() {
+			return {
+				isOpen: false
+			}
+		},
 		methods:{
 			openCloseNav: function(){
-				const nav = document.getElementById("nav");
-				nav.classList.toggle("is-open");
+				(this.isOpen == false) ? this.isOpen = true : this.isOpen = false;
 			}
 		}
 	};
