@@ -1,6 +1,6 @@
 <template>
 	<ul class="list-commands">
-		<li v-for="command in commands" :key="command.id" class="command">
+		<li v-for="command in commands" :key="command.id" :ref="command.name" :id="command.name" class="command" :data-index="command.id">
 			<p class="command__description">
 				{{command.description}}
 			</p>
@@ -13,24 +13,40 @@
 
 <script>
 	import CodeTheme from "@/components/CodeTheme.vue";
-	import data from "../data/data-commands.json";
+	import dataCommands from "../data/data-commands.json";
 
 	export default {
 		name: 'ListCommands',
 		components: {
 			CodeTheme
 		},
-		props: {
-			code: String,
-		},
 		data() {
 			return {
+				anchorName: this.$route.hash.split('#').pop(),
 				commands: []
 			};
 		},
+		methods: {
+			scrollAnchor: function($thisAnchor) {
+				setTimeout(() => {
+					if($thisAnchor !== undefined){
+						let $thisAnchorTop = $thisAnchor[0].offsetTop;
+						window.scrollTo({
+							left: 0,
+							top: $thisAnchorTop - 90 - 70,
+							behavior: 'smooth',
+						});
+						$thisAnchor[0].classList.add("is-selected");
+					}
+				}, 100);
+			}
+		},
 		created() {
-			this.commands = data
-		}
+			this.commands = dataCommands;
+		},
+		mounted(){
+			this.scrollAnchor(this.$refs[this.anchorName]);
+		},
 	};
 </script>
 
@@ -38,19 +54,17 @@
 
 <style lang="scss" scoped>
 	.list-commands {
-		width: 90%;
-		margin: 0 auto;
 		list-style: none;
 	}
 
 	.command {
-		padding: 1.2rem 2rem;
-		font-size: 1.2rem;
+		padding: 1.92rem 3.2rem;
+		font-size: 1.92rem;
 		background-color: $color-light;
-		border-bottom: 0.5rem solid $color-silver;
+		border-bottom: 0.8rem solid $color-silver;
 
 		&:not(:last-child) {
-			margin-bottom: 1rem;
+			margin-bottom: 1.6rem;
 		}
 
 		&__description {
@@ -60,6 +74,10 @@
 		&__code {
 			width: 100%;
 			display: inline-block;
+		}
+
+		&.is-selected{
+			background-color: $color-silver;
 		}
 	}
 </style>

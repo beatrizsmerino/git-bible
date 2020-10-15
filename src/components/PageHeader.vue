@@ -1,25 +1,22 @@
 <template>
 	<header class="page-header">
-		<div class="page-header__icon icon icon-git"></div>
-		<nav class="nav">
-			<router-link to="/" class="nav__item">
-				Home
-			</router-link>
-			<router-link to="/commands" class="nav__item">
-				Commands
-			</router-link>
-			<router-link to="/gitflow" class="nav__item">
-				Git Flow
-			</router-link>
-		</nav>
+		<logo theme="logo--header logo--light"/>
+		<page-nav/>
 	</header>
 </template>
 
 
 
 <script>
+	import Logo from "@/components/Logo.vue";
+	import PageNav from "@/components/PageNav.vue";
+
 	export default {
 		name: 'PageHeader',
+		components:{
+			Logo,
+			PageNav
+		}
 	};
 </script>
 
@@ -28,8 +25,8 @@
 <style lang="scss" scoped>
 	.page-header {
 		width: 100%;
-		height: 6rem;
-		padding: 1rem 2rem;
+		height: 9rem;
+		padding: 1.6rem 3.2rem;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -38,31 +35,5 @@
 		left: 0;
 		z-index: 999;
 		background-color: $color-brand-1;
-
-		&__item {
-			display: flex;
-		}
-
-		&__icon {
-			font-size: 4rem;
-			color: $color-white;
-		}
-	}
-
-	.nav {
-		font-size: 1.2rem;
-		font-weight: 600;
-
-		&__item {
-			color: $color-brand-2;
-
-			&:not(:last-child) {
-				margin-right: 1.5rem;
-			}
-
-			&.router-link-exact-active {
-				color: $color-white;
-			}
-		}
 	}
 </style>

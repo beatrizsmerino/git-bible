@@ -16,6 +16,16 @@
 	}
 }
 
+html{
+	font-size: 10px;
+}
+
+body{
+	-webkit-font-smoothing: antialiased;
+	font-family: sans-serif;
+	font-size: 1rem;
+}
+
 html,
 body,
 div,
@@ -193,7 +203,6 @@ textarea {
 
 textarea {
 	min-height: 150px;
-	// para quitar el margin bottom fantasma que tiee por defecto
 	display: inherit;
 	resize: vertical;
 }

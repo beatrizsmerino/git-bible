@@ -1,6 +1,8 @@
 <template>
 	<div class="page-content page-commands">
-		<list-commands></list-commands>
+		<div class="page-content__inner">
+			<list-commands></list-commands>
+		</div>
 	</div>
 </template>
 

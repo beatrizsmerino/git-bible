@@ -16,9 +16,9 @@
 
 <style lang="scss" scoped>
 	.page-title {
-		margin: 4rem 0 2rem;
+		margin: 7rem 0 3.2rem;
 		text-align: center;
-		font-size: 3rem;
+		font-size: 4.8rem;
 		line-height: 1.5;
 		color: $color-brand-1;
 	}

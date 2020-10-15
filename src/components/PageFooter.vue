@@ -2,7 +2,7 @@
 	<footer class="footer">
 		<div>
 			<p>
-				© Copyright 2019. Git Bible. beatrizsmerino
+				© Copyright 2019. Git Bible. @beatrizsmerino
 			</p>
 		</div>
 
@@ -26,10 +26,13 @@
 
 <style lang="scss" scoped>
 	.footer {
-		padding: 1rem 2rem;
+		padding: 1.6rem 3.2rem;
 		display: flex;
 		justify-content: space-between;
+		position: relative;
+		z-index: 2;
 		color: $color-white;
+		font-size: 1.6rem;
 		background-color: $color-brand-2-light;
 	}
 	a {

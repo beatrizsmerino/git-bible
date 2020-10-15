@@ -1,6 +1,6 @@
 <template>
 	<ul class="list-references">
-		<li v-for="reference in references" :key="reference.id" class="reference">
+		<li v-for="reference in references" :key="reference.id" class="reference" :data-index="reference.id">
 			<a class="reference__link" :href="reference.url" target="_blank">
 				<p class="reference__description">
 					{{reference.description}}
@@ -41,8 +41,6 @@
 
 <style lang="scss" scoped>
 	.list-references {
-		width: 90%;
-		margin: 0 auto;
 		list-style: none;
 	}
 
@@ -50,7 +48,7 @@
 		width: 100%;
 		display: flex;
 		align-items: center;
-		font-size: 1.2rem;
+		font-size: 1.92rem;
 		background-color: $color-light;
 
 		&:hover{
@@ -62,17 +60,17 @@
 		}
 
 		&:not(:last-child) {
-			margin-bottom: 1rem;
+			margin-bottom: 1.6rem;
 		}
 
 		&__link{
 			width: 100%;
-			padding: 1.2rem 2rem;
+			padding: 1.92rem 3.2rem;
 			color: $color-brand-3;
 		}
 
 		&__link-icon{
-			margin-right: 0.5rem;
+			margin-right: 0.8rem;
 		}
 
 		&__link-text {

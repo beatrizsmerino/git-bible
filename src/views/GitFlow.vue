@@ -1,6 +1,8 @@
 <template>
 	<div class="page-content page-gitflow">
-
+		<div class="page-content__inner">
+			
+		</div>
 	</div>
 </template>
 
