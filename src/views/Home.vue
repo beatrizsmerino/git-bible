@@ -25,15 +25,16 @@
 
 <style lang="scss" scoped>
 	.page-content {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		text-align: center;
 
 		&__inner {
 			max-width: 80rem;
 			margin: 0 auto;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
 		}
 	}
 </style>
