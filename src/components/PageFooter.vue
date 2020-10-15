@@ -29,6 +29,8 @@
 		padding: 1.6rem 3.2rem;
 		display: flex;
 		justify-content: space-between;
+		position: relative;
+		z-index: 2;
 		color: $color-white;
 		font-size: 1.6rem;
 		background-color: $color-brand-2-light;
