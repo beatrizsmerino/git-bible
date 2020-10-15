@@ -2,18 +2,20 @@
 	<div class="search">
 		<form class="search-form" method action>
 			<div class="search-form__field">
-				<input class="search-form__input" type="text" placeholder="Search command"/>
+				<input id="searchField" class="search-form__input" type="text" placeholder="Search command" v-model="searchText"/>
 				<i class="search-form__icon icon icon-search"></i>
 			</div>
 		</form>
 		<div class="search-results">
-			<ul class="search-results__list">
-				<li v-for="command in commands" :key="command.id" class="search-results__item">
-					<router-link :to="`/commands/${command.id}`" class="search-results__link">
-						{{command.description}}
-					</router-link>
-				</li>
-			</ul>
+			<div class="search-results__inner" v-on:scroll="checkStatusScrollVertical">
+				<ul class="search-results__list">
+					<li v-for="command in filteredList" :key="command.id" class="search-results__item">
+						<router-link :to="`/commands/${command.id}`" class="search-results__link">
+							{{command.description}}
+						</router-link>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </template>
@@ -28,6 +30,30 @@
 		data() {
 			return {
 				commands: [],
+				searchText: '',
+			}
+		},
+		methods:{
+			checkStatusScrollVertical: function (event) {
+				const $thisBox = event.target;
+				const $thisBoxHeight = $thisBox.offsetHeight;
+				const $thisBoxScrollTop = $thisBox.scrollTop;
+				const $thisBoxScrollHeight = $thisBox.scrollHeight;
+
+				const $thisBoxParent = $thisBox.parentNode;
+				$thisBoxParent.classList.add("is-scroll");
+				if ($thisBoxScrollTop === 0) {
+					$thisBoxParent.classList.remove("is-scroll-end");
+					$thisBoxParent.classList.add("is-scroll-start");
+				} else if ($thisBoxScrollHeight - $thisBoxScrollTop == $thisBoxHeight) {
+					$thisBoxParent.classList.remove("is-scroll-start");
+					$thisBoxParent.classList.add("is-scroll-end");
+				}
+			},
+		},
+		computed:{
+			filteredList: function(){
+				return this.commands.filter(command => command.description.includes(this.searchText));
 			}
 		},
 		created(){
@@ -66,11 +92,30 @@
 	}
 
 	.search-results{
-		display: none;
-		height: #{(6 * 3)}rem;
 		margin-top: 2rem;
+		position: relative;
 		font-size: 1.7rem;
-		overflow-y: scroll;
+
+		&:after{
+			content: '';
+			display: inline-block;
+			width: 100%;
+			height: 5rem;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			background: $color-white;
+			background: linear-gradient(
+				0deg,
+				rgba($color-white, 1) 0%,
+				rgba($color-white, 0) 100%
+			);
+		}
+
+		&__inner{
+			height: #{(6 * 3)}rem;
+			overflow-y: scroll;
+		}
 
 		&__list{
 			list-style: none;
@@ -96,6 +141,52 @@
 						color: $color-brand-2;
 					}
 				}
+			}
+		}
+
+		&.is-scroll {
+			&:before,
+			&:after {
+				content: "";
+				display: inline-block;
+				width: 100%;
+				height: 5rem;
+				position: fixed;
+				left: 0;
+				z-index: 1;
+			}
+
+			&:before {
+				position: absolute;
+				top: 0;
+				background: $color-white;
+				background: linear-gradient(
+					0deg,
+					rgba($color-white, 0) 0%,
+					rgba($color-white, 1) 100%
+				);
+			}
+
+			&:after {
+				bottom: 0;
+				background: $color-white;
+				background: linear-gradient(
+					0deg,
+					rgba($color-white, 1) 0%,
+					rgba($color-white, 0) 100%
+				);
+			}
+		}
+
+		&.is-scroll-start {
+			&:before {
+				display: none;
+			}
+		}
+
+		&.is-scroll-end {
+			&:after {
+				display: none;
 			}
 		}
 	}
