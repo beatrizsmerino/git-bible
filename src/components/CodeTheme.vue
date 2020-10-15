@@ -12,7 +12,7 @@
 
 			<code
 				class="code-theme__code"
-				v-on:scroll="checkStatusScrollHorizontal">
+				v-on:scroll="checkScrollHorizontal">
 				{{code}}
 			</code>
 		</div>
@@ -28,7 +28,7 @@
 			code: String,
 		},
 		methods: {
-			checkStatusScrollHorizontal: function (event) {
+			checkScrollHorizontal: function (event) {
 				const $thisBox = event.target;
 				const $thisBoxWidth = $thisBox.offsetWidth;
 				const $thisBoxScrollLeft = $thisBox.scrollLeft;
