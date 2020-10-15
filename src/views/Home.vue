@@ -2,7 +2,6 @@
 	<div class="page-content page-home">
 		<div class="page-content__inner">
 			<logo/>
-
 			<search/>
 		</div>
 	</div>
@@ -29,6 +28,8 @@
 		text-align: center;
 
 		&__inner {
+			max-width: 80rem;
+			margin: 0 auto;
 			position: absolute;
 			top: 50%;
 			left: 50%;

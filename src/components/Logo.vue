@@ -1,6 +1,6 @@
 <template>
-	<div>
-		<router-link to="/" class="logo" :class="theme">
+	<div class="logo" :class="theme">
+		<router-link to="/" class="logo__link">
 			<i class="logo__icon icon icon-git"></i>
 			<div class="logo__text">
 				<span class="logo__git">git</span>
@@ -34,6 +34,12 @@
 
 		@include t-media("md") {
 			font-size: 16vw;
+		}
+
+		&__link{
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 
 		&__icon {

@@ -35,8 +35,6 @@
 
 <style lang="scss" scoped>
 	.list-commands {
-		width: 90%;
-		margin: 0 auto;
 		list-style: none;
 	}
 

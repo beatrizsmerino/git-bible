@@ -32,7 +32,6 @@
 	}
 
 	body {
-		-webkit-font-smoothing: antialiased;
 		font-family: "Oxygen", sans-serif;
 		color: $color-gray;
 	}
@@ -55,6 +54,15 @@
 		}
 		&__footer {
 			flex-shrink: 0;
+		}
+	}
+
+	.page-content{
+		width: 90%;
+		margin: 0 auto;
+
+		&__inner{
+
 		}
 	}
 </style>

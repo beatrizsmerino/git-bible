@@ -1,6 +1,8 @@
 <template>
 	<div class="page-content page-bibliografy">
-		<list-references></list-references>
+		<div class="page-content__inner">
+			<list-references></list-references>
+		</div>
 	</div>
 </template>
 

@@ -92,7 +92,7 @@
 		&__button{
 			display: none;
 			appearance: none;
-			margin-left: 3rem;
+			margin-left: 2rem;
 			position: relative;
 			z-index: 2;
 			border: none;

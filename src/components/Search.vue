@@ -1,9 +1,9 @@
 <template>
 	<div class="search">
-		<form class="form" method action>
-			<div class="form__field">
-				<input class="form__input" type="text" placeholder="Search command"/>
-				<i class="form__icon icon icon-search"></i>
+		<form class="search-form" method action>
+			<div class="search-form__field">
+				<input class="search-form__input" type="text" placeholder="Search command"/>
+				<i class="search-form__icon icon icon-search"></i>
 			</div>
 		</form>
 		<div class="search-results">
@@ -40,8 +40,7 @@
 
 
 <style lang="scss" scoped>
-	.form {
-		max-width: 800px;
+	.search-form {
 		margin: 2rem auto 0;
 
 		&__field {
@@ -68,7 +67,6 @@
 
 	.search-results{
 		display: none;
-		max-width: 800px;
 		height: #{(6 * 3)}rem;
 		margin-top: 2rem;
 		font-size: 1.7rem;

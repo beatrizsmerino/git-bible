@@ -41,8 +41,6 @@
 
 <style lang="scss" scoped>
 	.list-references {
-		width: 90%;
-		margin: 0 auto;
 		list-style: none;
 	}
 
