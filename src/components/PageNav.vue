@@ -71,7 +71,7 @@
 			font-weight: 600;
 			list-style: none;
 
-			@include t-media("md") {
+			@include media("md") {
 				flex-direction: column;
 				align-items: flex-end;
 				font-size: 1.8rem;
@@ -85,7 +85,7 @@
 			&:not(:last-child) {
 				margin-right: 2.4rem;
 
-				@include t-media("md") {
+				@include media("md") {
 					margin-right: 0;
 				}
 			}
@@ -109,7 +109,7 @@
 			background-color: transparent;
 			cursor: pointer;
 
-			@include t-media("md") {
+			@include media("md") {
 				display: inline-block;
 			}
 		}
