@@ -35,6 +35,10 @@
 		&__inner {
 			max-width: 80rem;
 			margin: 0 auto;
+
+			@include media('lg'){
+				max-width: 90%;
+			}
 		}
 	}
 </style>
