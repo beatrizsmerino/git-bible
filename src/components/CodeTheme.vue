@@ -125,6 +125,7 @@
 
 	.code-theme {
 		width: 100%;
+		min-height: 5rem;
 		position: relative;
 		white-space: nowrap;
 		font-weight: 600;
