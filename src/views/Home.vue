@@ -37,7 +37,8 @@
 			margin: 0 auto;
 
 			@include media('lg'){
-				max-width: 90%;
+				width: 90%;
+				max-width: 100%;
 			}
 		}
 	}
