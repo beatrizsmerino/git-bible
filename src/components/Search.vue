@@ -140,7 +140,7 @@
 		font-size: 1.7rem;
 
 		&__inner {
-			height: #{(6 * 3)}rem;
+			height: #{((5 + 1) * 4)}rem;
 			overflow-y: scroll;
 		}
 
@@ -149,12 +149,17 @@
 		}
 
 		&__item {
-			height: 6rem;
+			height: 5rem;
 			text-align: left;
+
+			&:not(:last-child){
+				margin-bottom: 1rem;
+			}
 		}
 
 		&__link {
 			width: 100%;
+			height: 100%;
 			padding: 1.3rem;
 			color: $color-brand-3;
 			background-color: $color-light;
