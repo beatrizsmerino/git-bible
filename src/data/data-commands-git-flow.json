@@ -2,6 +2,7 @@
 	{
 		"id": 1,
 		"name": "create-gitflow-repository",
+		"title": "Initialize repository",
 		"description": "Git flow needs to be initialized in order to customize your project setup. Start using git-flow by initializing it inside an existing git repository. You'll have to answer a few questions regarding the naming conventions for your branches. It's recommended to use the default values.",
 		"code": "git flow init"
 	}

@@ -30,7 +30,9 @@
 						<router-link
 							:to="`/commands-git/#${command.name}`"
 							class="search-results__link">
-							{{command.description}}
+							<span class="text-ellipsis">
+								{{command.title}}
+							</span>
 						</router-link>
 					</li>
 				</ul>
@@ -97,7 +99,7 @@
 		},
 		computed: {
 			filteredList: function () {
-				return this.commands.filter(command => command.description.includes(this.searchText));
+				return this.commands.filter(command => command.title.includes(this.searchText));
 			}
 		},
 		created() {

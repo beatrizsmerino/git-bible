@@ -1,9 +1,14 @@
 <template>
 	<ul class="list-commands">
 		<li v-for="command in commands" :key="command.id" :ref="command.name" :id="command.name" class="command" :data-index="command.id">
-			<p class="command__description">
-				{{command.description}}
-			</p>
+			<h3 class="command__title">
+				{{command.title}}
+			</h3>
+			<div class="command__description">
+				<p>
+					{{command.description}}
+				</p>
+			</div>
 			<code-theme class="command__code" :code="command.code"/>
 		</li>
 	</ul>
@@ -67,7 +72,13 @@
 			margin-bottom: 1.6rem;
 		}
 
+		&__title{
+			margin-bottom: 0.5rem;
+			color: $color-brand-2;
+		}
+
 		&__description {
+			margin-bottom: 2rem;
 			color: $color-brand-2;
 		}
 
