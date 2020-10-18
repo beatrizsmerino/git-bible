@@ -11,14 +11,14 @@
 				</li>
 				<li class="nav__item">
 					<router-link
-						to="/commands"
-						class="nav__link" :class="[currentPage.includes('commands') ? isActive : '', 'nav__link']">
-						Commands
+						to="/commands-git"
+						class="nav__link" :class="[currentPage.includes('commands-git/') ? isActive : '', 'nav__link']">
+						Git
 					</router-link>
 				</li>
 				<li class="nav__item">
 					<router-link
-						to="/gitflow"
+						to="/commands-git-flow"
 						class="nav__link">
 						Git Flow
 					</router-link>

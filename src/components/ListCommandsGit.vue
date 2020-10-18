@@ -13,10 +13,10 @@
 
 <script>
 	import CodeTheme from "@/components/CodeTheme.vue";
-	import dataCommands from "../data/data-commands.json";
+	import dataCommandsGit from "../data/data-commands-git.json";
 
 	export default {
-		name: 'ListCommands',
+		name: 'ListCommandsGit',
 		components: {
 			CodeTheme
 		},
@@ -42,7 +42,7 @@
 			}
 		},
 		created() {
-			this.commands = dataCommands;
+			this.commands = dataCommandsGit;
 		},
 		mounted(){
 			this.scrollAnchor(this.$refs[this.anchorName]);

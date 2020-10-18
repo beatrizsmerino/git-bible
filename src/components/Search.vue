@@ -28,7 +28,7 @@
 						class="search-results__item"
 						:data-index="command.id">
 						<router-link
-							:to="`/commands/#${command.name}`"
+							:to="`/commands-git/#${command.name}`"
 							class="search-results__link">
 							{{command.description}}
 						</router-link>
@@ -42,7 +42,7 @@
 
 
 <script>
-	import dataCommands from "../data/data-commands.json";
+	import dataCommandsGit from "../data/data-commands-git.json";
 
 	export default {
 		name: 'Search',
@@ -101,7 +101,7 @@
 			}
 		},
 		created() {
-			this.commands = dataCommands;
+			this.commands = dataCommandsGit;
 		}
 	};
 </script>
