@@ -28,9 +28,11 @@
 						class="search-results__item"
 						:data-index="command.id">
 						<router-link
-							:to="`/commands/#${command.name}`"
+							:to="`/commands-git/#${command.name}`"
 							class="search-results__link">
-							{{command.description}}
+							<span class="text-ellipsis">
+								{{command.title}}
+							</span>
 						</router-link>
 					</li>
 				</ul>
@@ -42,7 +44,7 @@
 
 
 <script>
-	import dataCommands from "../data/data-commands.json";
+	import dataCommandsGit from "../data/data-commands-git.json";
 
 	export default {
 		name: 'Search',
@@ -97,11 +99,11 @@
 		},
 		computed: {
 			filteredList: function () {
-				return this.commands.filter(command => command.description.includes(this.searchText));
+				return this.commands.filter(command => command.title.includes(this.searchText));
 			}
 		},
 		created() {
-			this.commands = dataCommands;
+			this.commands = dataCommandsGit;
 		}
 	};
 </script>
@@ -140,7 +142,7 @@
 		font-size: 1.7rem;
 
 		&__inner {
-			height: #{(6 * 3)}rem;
+			height: #{((5 + 1) * 4)}rem;
 			overflow-y: scroll;
 		}
 
@@ -149,12 +151,17 @@
 		}
 
 		&__item {
-			height: 6rem;
+			height: 5rem;
 			text-align: left;
+
+			&:not(:last-child){
+				margin-bottom: 1rem;
+			}
 		}
 
 		&__link {
 			width: 100%;
+			height: 100%;
 			padding: 1.3rem;
 			color: $color-brand-3;
 			background-color: $color-light;

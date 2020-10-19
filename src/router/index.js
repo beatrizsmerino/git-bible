@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
-import Commands from '../views/Commands.vue';
-import GitFlow from '../views/GitFlow.vue';
+import CommandsGit from '../views/CommandsGit.vue';
+import CommandsGitFlow from '../views/CommandsGitFlow.vue';
 import Bibliografy from '../views/Bibliografy.vue';
 
 
@@ -25,29 +25,29 @@ const routes = [
 		}
 	},
 	{
-		path: '/commands',
-		name: 'commands',
-		component: Commands,
+		path: '/commands-git',
+		name: 'commands-git',
+		component: CommandsGit,
 		meta: {
-			title: 'Commands',
+			title: 'Git commands',
 			metaTags: [
 				{
 					name: 'description',
-					content: 'List of commands of GitBible app.'
+					content: 'List of Git commands of GitBible app.'
 				}
 			]
 		}
 	},
 	{
-		path: '/gitflow',
-		name: 'gitflow',
-		component: GitFlow,
+		path: '/commands-git-flow',
+		name: 'commands-git-flow',
+		component: CommandsGitFlow,
 		meta: {
-			title: 'Git Flow',
+			title: 'Git Flow commands',
 			metaTags: [
 				{
 					name: 'description',
-					content: 'Git Flow of GitBible app.'
+					content: 'List of Git Flow commands of GitBible app.'
 				}
 			]
 		}

@@ -32,7 +32,7 @@
 		font-family: "Adelle Bold", "Georgia", "Times New Roman", serif;
 		font-size: 11.2rem;
 
-		@include t-media("md") {
+		@include media("md") {
 			font-size: 16vw;
 		}
 
@@ -85,7 +85,7 @@
 		&--header {
 			font-size: 5rem;
 
-			@include t-media("sm") {
+			@include media("sm") {
 				font-size: 4rem;
 			}
 		}

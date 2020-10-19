@@ -1,10 +1,7 @@
 <template>
 	<ul class="list-commands">
-		<li v-for="command in commands" :key="command.id" :ref="command.name" :id="command.name" class="command" :data-index="command.id">
-			<p class="command__description">
-				{{command.description}}
-			</p>
-			<code-theme class="command__code" :code="command.code"/>
+		<li class="list-commands__item" v-for="command in commands" :key="command.id" :ref="command.name" :id="command.name" :data-index="command.id">
+			<command :dataCommand="command"/>
 		</li>
 	</ul>
 </template>
@@ -12,18 +9,19 @@
 
 
 <script>
-	import CodeTheme from "@/components/CodeTheme.vue";
-	import dataCommands from "../data/data-commands.json";
+	import Command from "@/components/Command.vue";
 
 	export default {
 		name: 'ListCommands',
 		components: {
-			CodeTheme
+			Command
+		},
+		props: {
+			commands: Array,
 		},
 		data() {
 			return {
 				anchorName: this.$route.hash.split('#').pop(),
-				commands: []
 			};
 		},
 		methods: {
@@ -41,9 +39,6 @@
 				}, 100);
 			}
 		},
-		created() {
-			this.commands = dataCommands;
-		},
 		mounted(){
 			this.scrollAnchor(this.$refs[this.anchorName]);
 		},
@@ -51,33 +46,14 @@
 </script>
 
 
-
 <style lang="scss" scoped>
 	.list-commands {
 		list-style: none;
-	}
 
-	.command {
-		padding: 1.92rem 3.2rem;
-		font-size: 1.92rem;
-		background-color: $color-light;
-		border-bottom: 0.8rem solid $color-silver;
-
-		&:not(:last-child) {
-			margin-bottom: 1.6rem;
-		}
-
-		&__description {
-			color: $color-brand-2;
-		}
-
-		&__code {
-			width: 100%;
-			display: inline-block;
-		}
-
-		&.is-selected{
-			background-color: $color-silver;
+		&__item{
+			&:not(:last-child){
+				margin-bottom: 3rem;
+			}
 		}
 	}
 </style>

@@ -11,14 +11,14 @@
 				</li>
 				<li class="nav__item">
 					<router-link
-						to="/commands"
-						class="nav__link" :class="[currentPage.includes('commands') ? isActive : '', 'nav__link']">
-						Commands
+						to="/commands-git"
+						class="nav__link" :class="[currentPage.includes('commands-git/') ? isActive : '', 'nav__link']">
+						Git
 					</router-link>
 				</li>
 				<li class="nav__item">
 					<router-link
-						to="/gitflow"
+						to="/commands-git-flow"
 						class="nav__link">
 						Git Flow
 					</router-link>
@@ -71,7 +71,7 @@
 			font-weight: 600;
 			list-style: none;
 
-			@include t-media("md") {
+			@include media("md") {
 				flex-direction: column;
 				align-items: flex-end;
 				font-size: 1.8rem;
@@ -85,7 +85,7 @@
 			&:not(:last-child) {
 				margin-right: 2.4rem;
 
-				@include t-media("md") {
+				@include media("md") {
 					margin-right: 0;
 				}
 			}
@@ -109,7 +109,7 @@
 			background-color: transparent;
 			cursor: pointer;
 
-			@include t-media("md") {
+			@include media("md") {
 				display: inline-block;
 			}
 		}

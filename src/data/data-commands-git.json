@@ -1,0 +1,93 @@
+[
+	{
+		"id": 1,
+		"name": "get-git-version",
+		"title": "Get version",
+		"description": "Get git version",
+		"code": "git --version"
+	},
+	{
+		"id": 2,
+		"name": "create-git-repository",
+		"title": "Initialize repository",
+		"description": "Initialize git repository",
+		"code": "git init"
+	},
+	{
+		"id": 3,
+		"name": "get-commits",
+		"title": "Get all commits made",
+		"description": "Get all commits made, with his complete information (sha, author, date and message)",
+		"code": "git log"
+	},
+	{
+		"id": 4,
+		"name": "get-commits-oneline",
+		"title": "Get all commits made in a single line",
+		"description": "Get all commits made, with his information in a single line (sha with 6 cifres and message)",
+		"code": "git log --oneline"
+	},
+	{
+		"id": 5,
+		"name": "get-commits-oneline-graph",
+		"title": "Get graph of all commits made",
+		"description": "Get all commits made, with his information in a single line (sha with 6 cifres and message) and in a graphic",
+		"code": "git log --oneline --graph --decorate"
+	},
+	{
+		"id": 6,
+		"name": "show-info-commit",
+		"title": "Show the information for a commit",
+		"description": "Get the complete information for a commit (sha, author, date and message)",
+		"code": "git show <SHA_COMMIT>"
+	},
+	{
+		"id": 7,
+		"name": "show-date-commit",
+		"title": "Show date commit",
+		"description": "Get the date of a specific commit",
+		"code": "git show -s --format=%ci <SHA_COMMIT>"
+	},
+	{
+		"id": 8,
+		"name": "overwrite-date-commit",
+		"title": "Overwrite date commit",
+		"description": "Overwrite the date of a specific commit",
+		"code": "GIT_COMMITTER_DATE='<YYYY-MM-DDThh:mm:ss±hh:mm>' git commit --amend --date='<YYYY-MM-DDThh:mm:ss±hh:mm>' -C <SHA_COMMIT>"
+	},
+	{
+		"id": 9,
+		"name": "add-folders-and-files-to-staging-area",
+		"title": "Add folders and files to staging area",
+		"description": "Add folders and files to staging area (index)",
+		"code": "git add <ROOT_FOLDER/FILE>"
+	},
+	{
+		"id": 10,
+		"name": "create-commit",
+		"title": "Create a commit with a message",
+		"description": "Create a new commit with a message",
+		"code": "git commit -m '<MESSAGE_COMMIT>'"
+	},
+	{
+		"id": 11,
+		"name": "overwrite-last-commit",
+		"title": "Overwrite the last commit",
+		"description": "Overwrite the last commit",
+		"code": "git commit --amend"
+	},
+	{
+		"id": 12,
+		"name": "add-and-create-commit",
+		"title": "Add folders and files to staging area and create a commit",
+		"description": "Add folders and files to staging area (index) and create a commit",
+		"code": "git commit -am '<MESSAGE_COMMIT>'"
+	},
+	{
+		"id": 13,
+		"name": "create-tag",
+		"title": "Create a new tag",
+		"description": "Create a new tag",
+		"code": "git tag -a '<TAG_VERSION>' -m '<MESSAGE_COMMIT>'"
+	}
+]
