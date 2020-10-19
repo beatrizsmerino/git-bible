@@ -17,7 +17,7 @@
 			Command
 		},
 		props: {
-			commands: Object,
+			commands: Array,
 		},
 		data() {
 			return {

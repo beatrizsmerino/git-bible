@@ -44,12 +44,13 @@
 		}
 
 		&__title {
-			margin-bottom: 0.5rem;
+			margin-bottom: 1rem;
 			color: $color-brand-2;
 		}
 
 		&__description {
-			margin-bottom: 2rem;
+			margin-bottom: 3rem;
+			font-size: 1.8rem;
 			color: $color-brand-2;
 		}
 

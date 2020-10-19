@@ -1,18 +1,26 @@
 <template>
 	<div>
 		<div class="code-theme">
+			<button-copy
+				class="code-theme__button-copy"
+				:textToCopy="code"
+			/>
+
 			<label
 				class="code-theme__switch switch-theme"
-				v-on:change="switchTheme">
+				v-on:change="switchTheme"
+			>
 				<input
 					class="switch-theme__field"
-					type="checkbox">
+					type="checkbox"
+				>
 				<span class="switch-theme__bullet switch-theme__bullet--rounded"></span>
 			</label>
 
 			<code
 				class="code-theme__code"
-				v-on:scroll="checkScrollHorizontal">
+				v-on:scroll="checkScrollHorizontal"
+			>
 				{{code}}
 			</code>
 		</div>
@@ -22,8 +30,13 @@
 
 
 <script>
+	import ButtonCopy from "@/components/ButtonCopy.vue";
+
 	export default {
 		name: 'CodeTheme',
+		components: {
+			ButtonCopy
+		},
 		props: {
 			code: String,
 		},
@@ -109,7 +122,7 @@
 				left: 0.5rem;
 				top: 50%;
 				transform: translate(0, -50%);
-				background-color: $color-silver;
+				background-color: $color-light;
 				transition: 0.4s;
 			}
 
@@ -118,6 +131,22 @@
 
 				&:before {
 					border-radius: 50%;
+				}
+			}
+		}
+
+		&:hover {
+			.switch-theme {
+				&__field {
+					&:checked + .switch-theme__bullet:before {
+						background-color: $color-black;
+					}
+				}
+
+				&__bullet {
+					&:before {
+						background-color: $color-white;
+					}
 				}
 			}
 		}
@@ -132,17 +161,17 @@
 		color: $color-brand-3;
 		border-radius: 0.5rem;
 		background-color: $color-white;
-		overflow: hidden;
 
 		&:after {
 			content: "";
 			display: inline-block;
-			width: 10rem;
+			width: 14rem;
 			height: 100%;
 			position: absolute;
 			top: 0;
 			right: 0;
 			z-index: 1;
+			border-radius: 0 0.4rem 0.4rem 0;
 			background: $color-white;
 			background: linear-gradient(
 				90deg,
@@ -159,8 +188,15 @@
 			z-index: 2;
 		}
 
+		&__button-copy {
+			position: absolute;
+			top: 0.8rem;
+			right: 6rem;
+			z-index: 2;
+		}
+
 		&__code {
-			width: calc(100% - 6.3rem);
+			width: calc(100% - 10rem);
 			padding: 1.6rem;
 			display: block;
 			font-size: 1.56rem;
@@ -182,6 +218,7 @@
 
 			&:before {
 				left: 0;
+				border-radius: 0.4rem 0 0 0.4rem;
 				background: $color-white;
 				background: linear-gradient(
 					90deg,
@@ -192,8 +229,9 @@
 			}
 
 			&:after {
-				width: 10rem;
+				width: 14rem;
 				right: 0;
+				border-radius: 0 0.4rem 0.4rem 0;
 				background: $color-white;
 				background: linear-gradient(
 					90deg,
@@ -232,7 +270,7 @@
 			}
 
 			&:after {
-				width: 7rem;
+				width: 14rem;
 				right: 0;
 				background: $color-white;
 				background: linear-gradient(
