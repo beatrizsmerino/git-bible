@@ -1,7 +1,7 @@
 <template>
 	<ul class="list-commands">
-		<li class="list-commands__item" v-for="command in commands" :key="command.id" :ref="command.name" >
-			<command :dataCommand="command" :id="command.name" :data-index="command.id" :class="{'is-selected': command.name === anchorName}"/>
+		<li class="list-commands__item" v-for="(command, index) in commands" :key="`command-${index}`" :ref="command.name" >
+			<command :dataCommand="command" :id="command.name" :data-index="index" :class="{'is-selected': command.name === anchorName}"/>
 		</li>
 	</ul>
 </template>
