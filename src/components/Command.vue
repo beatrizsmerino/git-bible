@@ -8,10 +8,22 @@
 				{{dataCommand.description}}
 			</p>
 		</div>
-		<code-theme
-			class="command__code"
-			:code="dataCommand.code"
-		/>
+		<div class="command__code">
+			<div v-if="Array.isArray(dataCommand.code) && Array.isArray(dataCommand.code[0])">
+				<code-theme
+					class="command__code"
+					v-for="(codeBlock, index) in dataCommand.code"
+					:code="dataCommand.code[index]"
+					:key="`code-${index}`"
+				/>
+			</div>
+
+			<code-theme
+				class="command__code"
+				:code="dataCommand.code"
+				v-if="Array.isArray(dataCommand.code) && typeof dataCommand.code[0] == 'string' || typeof dataCommand.code == 'string'"
+			/>
+		</div>
 	</div>
 </template>
 
@@ -57,6 +69,10 @@
 		&__code {
 			width: 100%;
 			display: inline-block;
+
+			&:not(:last-child) {
+				margin-bottom: 1.5rem;
+			}
 		}
 
 		&.is-selected {

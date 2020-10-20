@@ -3,7 +3,7 @@
 		<div class="code-theme">
 			<button-copy
 				class="code-theme__button-copy"
-				:textToCopy="code"
+				:textToCopy="code.toString()"
 			/>
 
 			<label
@@ -20,6 +20,23 @@
 			<code
 				class="code-theme__code"
 				v-on:scroll="checkScrollHorizontal"
+				v-if="typeof code == 'object'"
+			>
+				<ul class="code-theme__code-list">
+					<li
+						class="code-theme__code-item"
+						v-for="(line, index) in code"
+						:key="`line-${index}`"
+					>
+						{{code[index]}}
+					</li>
+				</ul>
+			</code>
+
+			<code
+				class="code-theme__code"
+				v-on:scroll="checkScrollHorizontal"
+				v-else
 			>
 				{{code}}
 			</code>
@@ -38,7 +55,7 @@
 			ButtonCopy
 		},
 		props: {
-			code: String,
+			code: [String, Array],
 		},
 		methods: {
 			checkScrollHorizontal: function (event) {
@@ -202,6 +219,10 @@
 			font-size: 1.56rem;
 			border-radius: 0.4rem;
 			overflow-x: auto;
+		}
+
+		&__code-list{
+			list-style: none;
 		}
 
 		&.is-scroll {

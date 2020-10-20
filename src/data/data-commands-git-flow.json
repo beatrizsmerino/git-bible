@@ -1,125 +1,107 @@
 [
 	{
-		"id": 1,
 		"name": "create-gitflow-repository",
 		"title": "Initialize repository",
 		"description": "Git flow needs to be initialized in order to customize your project setup. Start using git-flow by initializing it inside an existing git repository. You'll have to answer a few questions regarding the naming conventions for your branches. It's recommended to use the default values (feature, release, hotfix and support).",
 		"code": "git flow init"
 	},
 	{
-		"id": 2,
 		"name": "gitflow-feature-start",
 		"title": "Start a new feature",
 		"description": "Development of new features starting from the 'develop' branch. This action creates a new feature branch based on 'develop' and switches to it.",
 		"code": "git flow feature start <FEATURE_NAME>"
 	},
 	{
-		"id": 3,
 		"name": "gitflow-feature-list",
 		"title": "Get a feature list",
 		"description": "You can to see a list of the features created on the local repository.",
 		"code": "git flow feature list"
 	},
 	{
-		"id": 4,
 		"name": "gitflow-feature-publish",
 		"title": "Publish a feature",
 		"description": "If you want to share this feature branch with some of you team so you can do some collaborative development then you would publish a feature to the remote server so it can be used by other users.",
 		"code": "git flow feature publish <FEATURE_NAME>"
 	},
 	{
-		"id": 5,
 		"name": "gitflow-feature-pull",
 		"title": "Getting a published feature",
 		"description": "This will be done when more than one person works on a feature together. Once you’ve published the feature your team mates will be able to work on the feature branch with you by cloning the repository. Once they have a Gitflow enabled repository they should be in the develop branch on which they should now do a pull to ensure their local repository is in sync with the one on the remote. Something to note here is that if you do a pull from the feature branch with the normal “git pull” command it breaks your HEAD and for some reason it’s very hard to get back to a point where you would be able to push any changes made or even do a feature pull in the future.",
 		"code": "git flow feature pull origin <FEATURE_NAME>"
 	},
 	{
-		"id": 6,
 		"name": "gitflow-feature-track",
 		"title": "Track a published feature",
 		"description": "You can track the changes a feature published on origin repository.",
 		"code": "git flow feature track <FEATURE_NAME>"
 	},
 	{
-		"id": 7,
 		"name": "gitflow-feature-finish",
 		"title": "Finish up a feature",
 		"description": "Finish the development of a feature. This action performs the following: merges <FEATURE_NAME> into 'develop', removes the feature branch and switches back to 'develop' branch.",
 		"code": "git flow feature finish <FEATURE_NAME>"
 	},
 	{
-		"id": 8,
 		"name": "gitflow-bugfix-start",
 		"title": "Start a bugfix",
 		"description": "If you want to fix a known bug in some branch of the repository, you should create a bugfix or hotfix branch. The difference between bugfix and hotfix has to do with where they fit into the git flow workflow. The bugfix branches are used for to fix bugs of features or omissions of development, are created from develop and merge back into develop.",
 		"code": "git flow bugfix start <BUGFIX_NAME>"
 	},
 	{
-		"id": 9,
 		"name": "gitflow-bugfix-finish",
 		"title": "Finish a bugfix",
 		"description": "The bugfix branches are temporary branches that are removed after merging into develop.",
 		"code": "git flow bugfix finish <BUGFIX_NAME>"
 	},
 	{
-		"id": 10,
 		"name": "gitflow-release-start",
 		"title": "Start a release",
 		"description": "A release support preparation of a new production release and allow for minor bug fixes and preparing meta-data for a release. It creates a release branch created from the 'develop' branch. You can optionally supply a <[BASE]> commit sha-1 hash to start the release from. The commit must be on the 'develop' branch.",
 		"code": "git flow release start <VERSION_NUMBER> <[BASE]>"
 	},
 	{
-		"id": 11,
 		"name": "gitflow-release-list",
 		"title": "Get a release list",
 		"description": "You can see a lists all the current release branches created on the local repository.",
 		"code": "git flow release list"
 	},
 	{
-		"id": 12,
 		"name": "gitflow-release-publish",
 		"title": "Publish a release",
 		"description": "It's wise to publish the release branch after creating it to allow release commits by other developers.",
 		"code": "git flow release publish <VERSION_NUMBER>"
 	},
 	{
-		"id": 13,
 		"name": "gitflow-release-track",
 		"title": "Track a release",
 		"description": "You can track the changes a release published on remote repository.",
 		"code": "git flow release track <VERSION_NUMBER>"
 	},
 	{
-		"id": 14,
 		"name": "gitflow-release-finish",
 		"title": "Finish up a release",
 		"description": "Finishing a release is one of the big steps in git branching. It performs several actions: merges the release branch back into 'master', tags the release with its name, back-merges the release into 'develop' and removes the release branch.",
 		"code": "git flow release finish <VERSION_NUMBER>"
 	},
 	{
-		"id": 15,
 		"name": "gitflow-tags-push-single",
 		"title": "Push a single tag",
 		"description": "After finishing the release branch, don't forget to add the tags to the remote repository. This command will push a single tag to the remote repository.",
 		"code": "git push <REPO_NAME> <TAG_NAME>"
 	},
 	{
-		"id": 16,
 		"name": "gitflow-tags-push",
 		"title": "Push all the tags",
 		"description": "After finishing the release branch, don't forget to add the tags to the remote repository. This command will push all tags to the remote repository. This way is not recommended because it's common for developers to have old or 'bad' tags in their local repositories that have no need to be in the remote one, so it's advised to only ever explicitly push a tag and not all of your tags at once.",
 		"code": "git push <REPO_NAME> --tags"
 	},
 	{
-		"id": 17,
 		"name": "gitflow-hotfix-start",
 		"title": "Start a hotfix",
 		"description": "The hotfix branches are created to act immediately on an unwanted state of a live production release. This branch is used for to correct errors or omissions is created from master, is merged back into master and removed after merging. It can be derived from the corresponding tag in the master branch that marks the production version. The version argument marks the name of the new hotfix version. Optionally, you can specify a base name to start from.",
 		"code": "git flow hotfix start <VERSION_NUMBER> <[BASE_NAME]>"
 	},
 	{
-		"id": 18,
 		"name": "gitflow-hotfix-finish",
 		"title": "Finish a hotfix",
 		"description": "By finishing a hotfix it gets merged back into develop and master. Additionally the master merge is tagged with the hotfix version.",
