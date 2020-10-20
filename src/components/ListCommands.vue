@@ -1,7 +1,7 @@
 <template>
 	<ul class="list-commands">
-		<li class="list-commands__item" v-for="command in commands" :key="command.id" :ref="command.name" :id="command.name" :data-index="command.id">
-			<command :dataCommand="command"/>
+		<li class="list-commands__item" v-for="command in commands" :key="command.id" :ref="command.name" >
+			<command :dataCommand="command" :id="command.name" :data-index="command.id" :class="{'is-selected': command.name === anchorName}"/>
 		</li>
 	</ul>
 </template>
@@ -21,7 +21,7 @@
 		},
 		data() {
 			return {
-				anchorName: this.$route.hash.split('#').pop(),
+				anchorName: this.$route.hash.split('#').pop()
 			};
 		},
 		methods: {
@@ -34,7 +34,6 @@
 							top: $thisAnchorTop - 90 - 70,
 							behavior: 'smooth',
 						});
-						$thisAnchor[0].classList.add("is-selected");
 					}
 				}, 100);
 			}
