@@ -72,9 +72,77 @@
 		"code": "git commit -am '<MESSAGE_COMMIT>'"
 	},
 	{
+		"name": "get-tags",
+		"title": "Get all tags made",
+		"description": "Get a simple list of the tags, if you want to make sure they exist and what their version numbers are.",
+		"code": "git tag -l"
+	},
+	{
 		"name": "create-tag",
 		"title": "Create a new tag",
-		"description": "Create a new tag",
+		"description": "Create a new tag (mark, label, or pointer that always points to a commit) on the local repository",
 		"code": "git tag -a '<TAG_VERSION>' -m '<MESSAGE_COMMIT>'"
+	},
+	{
+		"name": "remove-tag-local",
+		"title": "Remove a local tag",
+		"description": "Delete a tag on the local repository",
+		"code": "git tag -d <TAG_VERSION>"
+	},
+	{
+		"name": "remove-tag-remote",
+		"title": "Remove a remote tag",
+		"description": "Delete a tag on the remote repository",
+		"code": "git push --delete origin <TAG_VERSION>"
+	},
+	{
+		"name": "remove-tag-push",
+		"title": "Remove a tag and push it",
+		"description": "Two alternatives of remove a tag on the local and remote repository",
+		"code": [
+			[
+				"git tag -d <TAG_VERSION>",
+				"git push origin : refs/tags/<TAG_VERSION>"
+			],
+			[
+				"git push --delete origin <TAG_VERSION>",
+				"git tag -d <TAG_VERSION>"
+			]
+		]
+	},
+	{
+		"name": "rename-tag-local",
+		"title": "Rename a local tag",
+		"description": "Rename a tag on the local repository",
+		"code": "git tag <NEW_TAG_VERSION> <OLD_TAG_VERSION>"
+	},
+	{
+		"name": "rename-tag-and-push",
+		"title": "Rename a tag and push it",
+		"description": "Rename a tag and upload it to the remote repository",
+		"code": [
+			"git tag <NEW_TAG_VERSION> <OLD_TAG_VERSION>",
+			"git tag -d <OLD_TAG_VERSION>",
+			"git push origin :refs/tags/<OLD_TAG_VERSION>",
+			"git push --tags"
+		]
+	},
+	{
+		"name": "update-tags-remote",
+		"title": "Update the tags of the remote repository",
+		"description": "Update the tags remote repository with the local tags",
+		"code": "git pull --prune --tags"
+	},
+	{
+		"name": "exit-without-save",
+		"title": "Exit without save from the text window",
+		"description": "If you're inside the vi editor and you want to just come out from the text window without save the changes, typing the command and press 'enter'.",
+		"code": ":q!"
+	},
+	{
+		"name": "exit-and-save",
+		"title": "Exit and save from the text window",
+		"description": "If you're inside the vi editor and you want come out from the text window and save the changes, typing the command and press 'enter'.",
+		"code": ":wq"
 	}
 ]
