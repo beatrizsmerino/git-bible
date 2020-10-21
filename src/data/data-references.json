@@ -1,44 +1,42 @@
 [
-	
-
 	{
-		"id": 1,
 		"url": "https://gist.github.com/beatrizsmerino/4a91c69b7590b469c2d09e5007855e56",
 		"description": "GitHub Gist of @beatrizsmerino: Commands Git"
 	},
 	{
-		"id": 2,
 		"url": "https://git-scm.com/doc",
 		"description": "Git documentation"
 	},
 	{
-		"id": 3,
 		"url": "https://training.github.com/",
 		"description": "Git Cheat Sheets"
 	},
 	{
-		"id": 4,
 		"url": "https://ndpsoftware.com/git-cheatsheet.html",
 		"description": "Git: cheatsheet interactive"
 	},
 	{
-		"id": 5,
 		"url": "http://danielkummer.github.io/git-flow-cheatsheet/",
 		"description": "Git Flow: cheatsheet"
 	},
 	{
-		"id": 6,
 		"url": "https://yakiloo.com/getting-started-git-flow/",
 		"description": "Getting Started – Git-Flow"
 	},
 	{
-		"id":7,
 		"url": "https://stackabuse.com/git-push-tags-to-a-remote-repo/",
 		"description": "Git: Push Tags to a Remote Repo"
 	},
-		{
-		"id": 8,
+	{
 		"url": "https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/developer/practices/gitflow.html#gitflow-top",
 		"description": "Follow the Git flow Paradigm"
+	},
+	{
+		"url":"https://www.atlassian.com/git/tutorials/rewriting-history",
+		"description": "Rewriting history"
+	},
+	{
+		"url": "https://blog.ostermiller.org/removing-and-purging-files-from-git-history/",
+		"description": "Removing and purging files from git history"
 	}
 ]

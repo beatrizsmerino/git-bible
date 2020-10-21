@@ -1,10 +1,10 @@
 <template>
 	<ul class="list-references">
 		<li
-			v-for="reference in references"
-			:key="reference.id"
+			v-for="(reference, index) in references"
+			:key="`reference-${index}`"
 			class="reference"
-			:data-index="reference.id"
+			:data-index="index"
 		>
 			<a
 				class="reference__link"

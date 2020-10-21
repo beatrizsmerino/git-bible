@@ -39,7 +39,7 @@
 		},
 		props: {
 			dataCommand: Object,
-		},
+		}
 	}
 </script>
 
