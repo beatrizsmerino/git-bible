@@ -2,7 +2,7 @@
 	<button
 		class="button-copy"
 		aria-label="Copy text"
-		v-clipboard:copy="text"
+		v-clipboard:copy="textToCopy"
 		v-clipboard:success="onSuccess"
 		v-clipboard:error="onError"
 	>
@@ -34,7 +34,6 @@
 		name: 'ButtonCopy',
 		data() {
 			return {
-				text: this.textToCopy,
 				status: null,
 			}
 		},
@@ -52,7 +51,7 @@
 			onError: function () {
 				this.status = false;
 				setTimeout(() => this.resetStatus(), 5000);
-			}
+			},
 		},
 	}
 </script>

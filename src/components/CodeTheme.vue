@@ -3,7 +3,7 @@
 		<div class="code-theme">
 			<button-copy
 				class="code-theme__button-copy"
-				:textToCopy="code.toString()"
+				:textToCopy="codeFormatted"
 			/>
 
 			<label
@@ -54,6 +54,11 @@
 		components: {
 			ButtonCopy
 		},
+		data() {
+			return {
+				codeFormatted: ''
+			}
+		},
 		props: {
 			code: [String, Array],
 		},
@@ -89,7 +94,13 @@
 					$thisCodeTheme.classList.remove("is-theme-dark");
 					$thisCodeTheme.classList.add("is-theme-light");
 				}
+			},
+			convertArrayToStringLines(codeText) {
+				return (Array.isArray(codeText) || Array.isArray(codeText[0])) ? codeText.join('\r\n') : codeText;
 			}
+		},
+		created() {
+			this.codeFormatted = this.convertArrayToStringLines(this.code);
 		}
 	};
 </script>
