@@ -144,5 +144,21 @@
 		"title": "Exit and save from the text window",
 		"description": "If you're inside the vi editor and you want come out from the text window and save the changes, typing the command and press 'enter'.",
 		"code": ":wq"
+	},
+	{
+		"name": "reflog",
+		"title": "View reference log (reflog)",
+		"description": "Before talking about the reference journal, it should be remembered that HEAD is a reference (that is, a pointer) that points to the most recent commit of the current branch. There is a record of all the references taken by the HEAD pointer in Git called reflog (reference record shortcut). It is a record that will store all commits where the pointer passes, for example, it will be able to save branch changes or the addition of a commit.",
+		"code": "git reflog"
+	},
+	{
+		"name": "reflog-remove",
+		"title": "Prune all references with garbage collection and reclaim space",
+		"description": "The expire subcommand cleans up old or unreachable reflog entries. The expire subcommand has potential for data loss. This subcommand is not typically used by end users, but used by git internally. By default, the reflog expiration date is set to 90 days. An expire time can be specified by passing a command line argument or by setting a git configuration name.",
+		"code": [
+			"rm -rf .git/refs/original/",
+			"git reflog expire --expire=now --all",
+			"git gc --aggressive --prune=now"
+		]
 	}
 ]

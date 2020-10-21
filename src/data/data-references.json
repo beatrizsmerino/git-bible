@@ -30,5 +30,13 @@
 	{
 		"url": "https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/developer/practices/gitflow.html#gitflow-top",
 		"description": "Follow the Git flow Paradigm"
+	},
+	{
+		"url":"https://www.atlassian.com/git/tutorials/rewriting-history",
+		"description": "Rewriting history"
+	},
+	{
+		"url": "https://blog.ostermiller.org/removing-and-purging-files-from-git-history/",
+		"description": "Removing and purging files from git history"
 	}
 ]
