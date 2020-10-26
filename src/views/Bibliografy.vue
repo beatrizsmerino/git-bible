@@ -1,5 +1,5 @@
 <template>
-	<div class="page-content page-bibliografy">
+	<div class="page-content">
 		<div class="page-content__inner">
 			<list-references></list-references>
 		</div>

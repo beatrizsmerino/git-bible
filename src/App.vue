@@ -21,7 +21,22 @@
 			PageHeader,
 			PageTitle,
 			PageFooter
-		}
+		},
+		watch: {
+			$route: {
+				handler(to, from) {
+					const html = document.getElementsByTagName('html')[0];
+					const body = document.getElementsByTagName('body')[0];
+
+					if (from !== undefined) {
+						html.classList.remove('page', 'page-' + from.name.toLowerCase());
+					}
+					html.classList.add('page', 'page-' + to.name.toLowerCase());
+					body.classList.add('page-body');
+				},
+				immediate: true,
+			}
+		},
 	};
 </script>
 
@@ -41,6 +56,7 @@
 	body {
 		height: 100%;
 	}
+
 	.sticky {
 		&__app {
 			height: 100%;
@@ -49,7 +65,6 @@
 		}
 		&__content {
 			margin-top: 9rem;
-			margin-bottom: 9rem;
 			flex: 1 0 auto;
 		}
 		&__footer {
@@ -59,7 +74,7 @@
 
 	.page-content{
 		width: 90%;
-		margin: 0 auto;
+		margin: 0 auto 9rem;
 
 		&__inner{
 

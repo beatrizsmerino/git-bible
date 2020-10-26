@@ -1,5 +1,5 @@
 <template>
-	<div class="page-content page-home">
+	<div class="page-content">
 		<div class="page-content__inner">
 			<logo/>
 			<search/>
