@@ -1,3 +1,7 @@
+![shieldsIO](https://img.shields.io/github/issues/beatrizsmerino/git-bible)
+![shieldsIO](https://img.shields.io/github/forks/beatrizsmerino/git-bible)
+![shieldsIO](https://img.shields.io/github/stars/beatrizsmerino/git-bible)
+
 # Git Bible
 
 ### Git Bible is an application that acts as a consultation dictionary in which the most used 'GIT' and desktop commands are collected.
