@@ -1,5 +1,5 @@
 <template>
-	<div class="page-content page-commands">
+	<div class="page-content">
 		<div class="page-content__inner">
 			<list-commands-git-flow></list-commands-git-flow>
 		</div>
