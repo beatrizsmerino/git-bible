@@ -38,5 +38,9 @@
 	{
 		"url": "https://blog.ostermiller.org/removing-and-purging-files-from-git-history/",
 		"description": "Removing and purging files from git history"
+	},
+	{
+		"url": "https://www.atlassian.com/es/git/tutorials/comparing-workflows/feature-branch-workflow",
+		"description": "Git Feature Branch Workflow"
 	}
 ]

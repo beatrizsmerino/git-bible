@@ -96,7 +96,7 @@
 		"code": "git push --delete origin <TAG_VERSION>"
 	},
 	{
-		"name": "remove-tag-push",
+		"name": "remove-tag-and-push",
 		"title": "Remove a tag and push it",
 		"description": "Two alternatives of remove a tag on the local and remote repository",
 		"code": [
@@ -160,5 +160,89 @@
 			"git reflog expire --expire=now --all",
 			"git gc --aggressive --prune=now"
 		]
+	},
+	{
+		"name": "get-branches",
+		"title": "Get all branches",
+		"description": "List both branches: remote and local. The current branch will be highlighted in color and marked an asterisk '*'.",
+		"code": "git branch -a"
+	},
+	{
+		"name": "get-branches-local",
+		"title": "Get all local branches",
+		"description": "A local branch is one whose full name starts with 'refs/heads/', the 'git branch' command strips off this part. There are several commands for view a list of all local branches created in the repository:",
+		"code": [["git branch"], ["git branch --list"], ["git branch -l"]]
+	},
+	{
+		"name": "get-branches-remotes",
+		"title": "Get all remote branches",
+		"description": "A remote-tracking branch is one whose full name starts with 'refs/remotes/', this command remove this part and it is used fot view a list of all remote branches created in the repository.",
+		"code": "git branch -r"
+	},
+	{
+		"name": "summary-branches",
+		"title": "Summary branches",
+		"description": "It shows us a summary of all the branches that are in a project together with their last modifications or commits.",
+		"code": "git show-branch"
+	},
+	{
+		"name": "create-branch",
+		"title": "Create a new branch",
+		"description": "You can create a new branch while in another and move to it later.",
+		"code": "git branch <NEW_NAME_BRANCH>"
+	},
+	{
+		"name": "move-to-branch",
+		"title": "Move to the branch",
+		"description": "When you try move to a local branch that does not exist, this command will search to see if there is a remote-tracking branch with a similar name. If so, it will create the local branch and set it up to track the remote-tracking branch.",
+		"code": "git checkout <NAME_BRANCH>"
+	},
+	{
+		"name": "traking-another-branch",
+		"title": "To make one branch track another",
+		"description": "To make one branch track another, first check out the first branch.",
+		"code": [
+			"git checkout <LOCAL_NAME_BRANCH>",
+			"git branch --set-upstream-to origin/<OTHER_NAME_BRANCH>"
+		]
+	},
+	{
+		"name": "create-and-move-to-branch",
+		"title": "Create and move to branch",
+		"description": "You must use a separate branch for each function or issue you work on. Once you have created it, extract it locally so that all changes you make are applied to that branch. With this action, a branch named '<NEW_FEATURE>' is extracted from the MASTER branch, and the '-b' flag tells Git to create it if it doesn't already exist, otherwise, it is reset. That is to say, the branch is not reset/created unless 'git checkout' is successful.",
+		"code": [
+			["git checkout -B <NEW_NAME_BRANCH>"],
+			["git checkout -b <NEW_NAME_BRANCH>"]
+		]
+	},
+	{
+		"name": "rename-branch",
+		"title": "Rename a branch",
+		"description": "If you want to rename a local branch while pointed to any branch.",
+		"code": "git branch -m <OLD_NAME_BRANCH> <NEW_NAME_BRANCH>"
+	},
+	{
+		"name": "rename-current-branch",
+		"title": "Rename current branch",
+		"description": "If you want to rename the current local branch.",
+		"code": "git branch -m <NEW_NAME_BRANCH>"
+	},
+	{
+		"name": "rename-and-push-branch",
+		"title": "Rename and push branch",
+		"description": "Delete the old remote branch and push the new local branch.",
+		"code": "git push origin :<OLD_NAME_BRANCH> <NEW_NAME_BRANCH>"
+	},
+	{
+		"name": "push-branch",
+		"title": "Send the local branch to remote repository",
+		"description": "It is recommended to send the new branch to the central repository (ORIGIN), since this acts as a practical backup and, when collaborating with other developers, it allows them access to see the commits made in the new branch. The '-u' flag adds it as a remote tracking branch, after that it can be invoked without any parameters to automatically send the branch to the central repository.",
+		"code": "git push origin -u <NEW_NAME_BRANCH>"
+	},
+	{
+		"name": "remove-branch",
+		"title": "Remove a branch",
+		"description": "To delete a branch from Git you must not be positioned in it.",
+		"code": "git branch -D <NAME_BRANCH>"
 	}
 ]
