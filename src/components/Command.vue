@@ -3,11 +3,11 @@
 		<h3 class="command__title">
 			{{dataCommand.title}}
 		</h3>
-		<div class="command__description">
-			<p>
-				{{dataCommand.description}}
-			</p>
-		</div>
+		<div
+			class="command__description"
+			v-if="dataCommand.description"
+			v-html="dataCommand.description"
+		></div>
 		<div class="command__code">
 			<div v-if="Array.isArray(dataCommand.code) && Array.isArray(dataCommand.code[0])">
 				<code-theme
@@ -64,6 +64,11 @@
 			margin-bottom: 3rem;
 			font-size: 1.8rem;
 			color: $color-brand-2;
+
+			/deep/ a {
+				font-weight: 700;
+				color: $color-brand-3;
+			}
 		}
 
 		&__code {
