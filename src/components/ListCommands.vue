@@ -39,7 +39,9 @@
 			}
 		},
 		mounted(){
-			this.scrollAnchor(this.$refs[this.anchorName]);
+			if(this.anchorName){
+				this.scrollAnchor(this.$refs[this.anchorName]);
+			}
 		},
 	};
 </script>
