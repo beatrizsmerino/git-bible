@@ -244,5 +244,11 @@
 		"title": "Update the tags of the remote repository",
 		"description": "Update the tags remote repository with the local tags",
 		"code": "git pull --prune --tags"
+	},
+	{
+		"name": "",
+		"title": "",
+		"description": "",
+		"code": ""
 	}
 ]
