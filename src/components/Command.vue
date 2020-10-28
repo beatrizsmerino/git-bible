@@ -46,7 +46,7 @@
 
 <style lang="scss" scoped>
 	.command {
-		padding: 1.92rem 3.2rem;
+		padding: 2.72rem 3.2rem 1.92rem;
 		font-size: 1.92rem;
 		background-color: $color-light;
 		border-bottom: 0.8rem solid $color-silver;
@@ -61,7 +61,7 @@
 		}
 
 		&__description {
-			margin-bottom: 3rem;
+			margin-bottom: 2rem;
 			font-size: 1.8rem;
 			color: $color-brand-2;
 
