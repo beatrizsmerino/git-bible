@@ -1,108 +1,230 @@
 [
 	{
 		"name": "get-git-version",
-		"title": "Get version",
-		"description": "Get git version",
+		"title": "Get git version",
+		"description": "<p>Before you install git, it's a good idea to check if you already have it installed by using the following command, which will return the version number installed on your computer. If not, follow the steps described in this <a href='https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git' target='_blank'>link</a> depending on your operating system.</p>",
 		"code": "git --version"
 	},
 	{
 		"name": "create-git-repository",
-		"title": "Initialize repository",
-		"description": "Initialize git repository",
+		"title": "Initialize git repository",
+		"description": "<p>A git repository is a virtual storage for your project. It allows you to save versions of the code that you can access whenever you need to. The following command, used only once during the initial setup of a new repository, will create a new <code>.git</code> subdirectory in your current working directory and a new <code>MASTER</code> branch.</p><p><a href='https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-init' target='_blank'>Know more</a></p>",
 		"code": "git init"
 	},
 	{
 		"name": "get-commits",
 		"title": "Get all commits made",
-		"description": "Get all commits made, with his complete information (sha, author, date and message)",
+		"description": "<p>After you have made several commits, or if you have cloned a repository that already had a commit history, you will probably want to look back to see what modifications have been made.<br>This command shows a list of all the commits made, in reverse chronological order, i.e. the most recent ones are shown at the beginning. Each commit contains information about the identification number (<em>Secure Hash Algorithm</em>, <code>SHA-1</code>), the author's name and e-mail address, the date and the commit message.</p><p><a href='https://git-scm.com/book/es/v2/Fundamentos-de-Git-Ver-el-Historial-de-Confirmaciones' target='_blank'>Know more</a></p>",
 		"code": "git log"
 	},
 	{
 		"name": "get-commits-oneline",
 		"title": "Get all commits made in a single line",
-		"description": "Get all commits made, with his information in a single line (sha with 6 cifres and message)",
+		"description": "<p>The <code>git log</code> command has many optional parameters for formatting the output of the commit information. The <code>--oneline</code> option shows the information of each commit in a single line with the first 6 characters of the <code>SHA-1</code> number, the branches, the tags and the message.</p><p><a href='https://git-scm.com/book/es/v2/Fundamentos-de-Git-Ver-el-Historial-de-Confirmaciones#rlog_options' target='_blank'>Know more</a></p>",
 		"code": "git log --oneline"
 	},
 	{
 		"name": "get-commits-oneline-graph",
 		"title": "Get graph of all commits made",
-		"description": "Get all commits made, with his information in a single line (sha with 6 cifres and message) and in a graphic",
+		"description": "<p>This command condenses the information of each commit into a single line, showing only the commit ID and the first line of the commit message, highlighting all references (branches, tags...).<br> It draws a graphical <em>ASCII</em> representation of the commit history structure. Prints additional lines between commits, so that the history chart is drawn correctly, and it use asterisks to show which branch the commit was on.</p><p><a href='https://www.atlassian.com/git/tutorials/git-log' target='_blank'>Know more</a></p>",
 		"code": "git log --oneline --graph --decorate"
 	},
 	{
 		"name": "show-info-commit",
 		"title": "Show the information for a commit",
-		"description": "Get the complete information for a commit (sha, author, date and message)",
+		"description": "<p>This is a command-line tool that you use to view expanded details in git objects such as blobs, trees, tags, and commits. In this case it shows the complete information for a commit (<code>SHA-1</code>, author, date and message).</p>",
 		"code": "git show <SHA_COMMIT>"
 	},
 	{
 		"name": "show-date-commit",
 		"title": "Show date commit",
-		"description": "Get the date of a specific commit",
+		"description": "<p>Formats the output information of a commit, showing the format of the committer date.</p><p><ul><li><code>%ai</code>: author date, <em>ISO 8601-like</em> format</li><li><code>%ci</code>: committer date, <em>ISO 8601-like</em> format</li></ul></p>",
 		"code": "git show -s --format=%ci <SHA_COMMIT>"
 	},
 	{
 		"name": "overwrite-date-commit",
 		"title": "Overwrite date commit",
-		"description": "Overwrite the date of a specific commit",
+		"description": "<p>This command change the author and committer date of the commit already created.<br>Why change two dates? The <strong>author</strong> is the person who originally wrote the work, whereas the <strong>committer</strong> is the person who last applied the work.If we are working alone on the project, the date should be the same in both cases.</p><p><a href='https://garysferrao.github.io/git/commit/date/2015/12/01/change-git-commit-date.html' target='_blank'>Know more</a></p>",
 		"code": "GIT_COMMITTER_DATE='<YYYY-MM-DDThh:mm:ss±hh:mm>' git commit --amend --date='<YYYY-MM-DDThh:mm:ss±hh:mm>' -C <SHA_COMMIT>"
 	},
 	{
-		"name": "add-folders-and-files-to-staging-area",
+		"name": "git-add",
 		"title": "Add folders and files to staging area",
-		"description": "Add folders and files to staging area (index)",
-		"code": "git add <ROOT_FOLDER/FILE>"
+		"description": "<p>There are different areas in a git repository: the working tree, working directory or workspace, the staging area or index, the stash, the local repository and remote repository.<ul><li>The <strong>workspace</strong> contains the files you're currently working on, git will notice the changes (if you haven't previously excluded them), but it won't save them until you explicitly tell it to track them.</li><li>The <strong>staging area</strong> contains a snapshot of the content tracking the work tree. This snapshot represents the contents of the next commit.</li></ul></p><p>We use the <code>git add</code> command to add the changes in the working directory to the staging area.<br>You can add them all at the same time (3 first commands) or by indicating the file paths (last command):</p>",
+		"code": [
+			["git add --all"],
+			["git add -A"],
+			["git add ."],
+			["git add <PATH/TO/FOLDER/FILE> <PATH/TO/FOLDER/FILE>"]
+		]
 	},
 	{
 		"name": "create-commit",
 		"title": "Create a commit with a message",
-		"description": "Create a new commit with a message",
-		"code": "git commit -m '<MESSAGE_COMMIT>'"
-	},
-	{
-		"name": "overwrite-last-commit",
-		"title": "Overwrite the last commit",
-		"description": "Overwrite the last commit",
-		"code": "git commit --amend"
+		"description": "<p>Commits are created to capture the status of one or more project files at a particular time. They are a <strong>changeset</strong>, snapshots or milestones in the history of a git project. Each commit contains the date it was made, the changes of each file, the author information, a message describing the content of the commit, and a unique identifier (<code>SHA-1</code>) to reference this commit.</p><p>This command only includes modifications to tracked files (those that have been added with git add at some point in their history).</p>",
+		"code": "git commit -m '<COMMIT_MESSAGE>'"
 	},
 	{
 		"name": "add-and-create-commit",
 		"title": "Add folders and files to staging area and create a commit",
-		"description": "Add folders and files to staging area (index) and create a commit",
-		"code": "git commit -am '<MESSAGE_COMMIT>'"
+		"description": "<p>This combination immediately creates a confirmation of all prepared changes and applies an online confirmation message.<br>It is a shortcut command for advanced users that combines the options <code>-a</code> or <code>--all</code> (adds the modified or deleted files to the stage, but not the newly created ones, since they have not been reported to git for tracking) and <code>-m</code> or <code>--message</code> (with the specified message).</p><p><a href='https://www.atlassian.com/es/git/tutorials/saving-changes/git-commit' target='_blank'>Know more</a></p>",
+		"code": "git commit -am '<COMMIT_MESSAGE>'"
+	},
+	{
+		"name": "overwrite-last-commit",
+		"title": "Overwrite the last commit",
+		"description": "<p>If a commit message or file contains unclear, incorrect, sensitive, or missing information, you can correct it locally and send a new commit with a new message to GitHub. <br>Executing this command will open a text editor and ask you to edit the message and save the commit. This process will change the commit ID, creating a new commit that replaces the previous one.</p><p><a href='https://blog.kirei.io/buenas-pr%C3%A1cticas-para-los-mensajes-de-commit-en-git-a9fc43a83821' target='_blank'>Know more</a></p>",
+		"code": [["git commit --amend"], ["git commit --amend", "git push -f"]]
+	},
+	{
+		"name": "exit-without-save",
+		"title": "Exit without save from the text window",
+		"description": "<p>If you're inside the <strong>vi</strong> editor and you want to just come out from the text window without save the changes, typing the command and press <em>'enter'</em>.</p>",
+		"code": ":q!"
+	},
+	{
+		"name": "exit-and-save",
+		"title": "Exit and save from the text window",
+		"description": "<p>If you're inside the <strong>vi</strong> editor and you want come out from the text window and save the changes, typing the command and press <em>'enter'</em>.</p>",
+		"code": ":wq"
+	},
+	{
+		"name": "reflog",
+		"title": "View reference log (reflog)",
+		"description": "<p>Before talking about the reference journal, it should be remembered that <code>HEAD</code> is a reference (that is, a pointer) that points to the most recent commit of the current branch. There is a record of all the references taken by the <code>HEAD</code> pointer in git called reflog (reference record shortcut). It is a record that will store all commits where the pointer passes, for example, it will be able to save branch changes or the addition of a commit.</p>",
+		"code": "git reflog"
+	},
+	{
+		"name": "reflog-remove",
+		"title": "Prune all references with garbage collection and reclaim space",
+		"description": "<p>The <code>expire</code> subcommand cleans up old or unreachable reflog entries. It has potential for data loss and is not typically used by end users, but used by git internally. By default, the reflog expiration date is set to 90 days. An expire time can be specified by passing a command line argument or by setting a git configuration name.</p>",
+		"code": [
+			"rm -rf .git/refs/original/",
+			"git reflog expire --expire=now --all",
+			"git gc --aggressive --prune=now"
+		]
+	},
+	{
+		"name": "get-branches",
+		"title": "Get all branches",
+		"description": "<p>Sometimes it is necessary to know what branches exist in a remote repository in order to determine the names of the available branches.<br> With this command you can list both types of branches: remote and local. The current branch will be highlighted in color and marked an asterisk <em>'*'</em>.</p>",
+		"code": [["git branch --all"], ["git branch -a"]]
+	},
+	{
+		"name": "get-branches-local",
+		"title": "Get all local branches",
+		"description": "<p>A local branch is one whose full name starts with <code>refs/heads/</code>, the <code>git branch</code> command strips off this part to make it easier.</p><p>It seems that with git there is always more than one way to do the same thing:</p>",
+		"code": [["git branch"], ["git branch --list"], ["git branch -l"]]
+	},
+	{
+		"name": "get-branches-remotes",
+		"title": "Get all remote branches",
+		"description": "<p>A remote-tracking branch is one whose full name starts with <code>refs/remotes/</code>, this command remove this part to make it easier.</p>",
+		"code": [["git branch --remotes"], ["git branch -r"]]
+	},
+	{
+		"name": "summary-branches",
+		"title": "Summary branches",
+		"description": "<p>It shows us a summary of all the branches that are in a project together with their last modifications or commits.</p>",
+		"code": "git show-branch"
+	},
+	{
+		"name": "create-branch",
+		"title": "Create a new branch",
+		"description": "<p>You can create a new branch while in another and move to it later.</p>",
+		"code": "git branch <NEW_BRANCH_NAME>"
+	},
+	{
+		"name": "move-to-branch",
+		"title": "Move to the branch",
+		"description": "<p>When you try move to a local branch that does not exist, this command will search to see if there is a remote-tracking branch with a similar name. If so, it will create the local branch and set it up to track the remote-tracking branch.</p>",
+		"code": "git checkout <BRANCH_NAME>"
+	},
+	{
+		"name": "create-and-move-to-branch",
+		"title": "Create and move to branch",
+		"description": "<p>You must use a separate branch for each function or issue you work on. With this command you make 2 steps at the same time create and move to the branch so that all changes you make are applied to it. The <code>-b</code> flag tells git to create it if it doesn't already exist, otherwise, it is reset. That is to say, the branch is not reset/created unless <code>git checkout</code> is successful.</p>",
+		"code": [
+			["git checkout -B <NEW_BRANCH_NAME>"],
+			["git checkout -b <NEW_BRANCH_NAME>"]
+		]
+	},
+	{
+		"name": "rename-current-branch",
+		"title": "Rename current branch",
+		"description": "<p>It is possible that at some time, as with the commit messages, you may want to rename a branch.<br>With this command you can rename the local branch you are working on.</p><p>It has  optional parametters: <ul><li><code>--move</code> or <code>-m</code>: Move/rename a branch and the corresponding reflog.</li><li><code>-M</code>: It is a shortcut of <code>--delete --force</code></li></ul></p><p><a href='https://git-scm.com/docs/git-branch' target='_blank'>Know more</a></p>",
+		"code": "git branch -m <NEW_BRANCH_NAME>"
+	},
+	{
+		"name": "rename-local-branch",
+		"title": "Rename a local branch",
+		"description": "<p>If you want to rename a local branch while pointed to any branch.</p>",
+		"code": [["git branch -m <OLD_BRANCH_NAME> <NEW_BRANCH_NAME>"]]
+	},
+	{
+		"name": "rename-remote-branch",
+		"title": "Rename a remote branch",
+		"description": "<p>You are collaborating on a project with a group of people, and you have defined a naming convention for git branches. You created a new branch , pushed the changes to the remote repository, and realized that your branch name was incorrect. Luckily, git allows you to rename the branch very easily using the next command.</p><p><a href='https://linuxize.com/post/how-to-rename-local-and-remote-git-branch/' target='_blank'>Know more</a></p>",
+		"code": [
+			[
+				"git checkout <OLD_BRANCH_NAME>",
+				"git branch -m <NEW_BRANCH_NAME>",
+				"git push origin -u <NEW_BRANCH_NAME>",
+				"git push origin --delete <OLD_BRANCH_NAME>"
+			],
+			["git push origin :<OLD_BRANCH_NAME> <NEW_BRANCH_NAME>"]
+		]
+	},
+	{
+		"name": "upload-local-branch",
+		"title": "Send the local branch to remote repository",
+		"description": "<p>It is recommended to send the new branch to the remote repository (<code>ORIGIN</code>), since this acts as backup and, when collaborating with other developers, it allows them access to see the commits made in the new branch. The <code>-u</code> flag adds it as a remote tracking branch.</p>",
+		"code": [
+			["git branch --set-upstream-to origin/<OTHER_BRANCH_NAME>"],
+			["git push origin -u <NEW_BRANCH_NAME>"]
+		]
+	},
+	{
+		"name": "remove-branch",
+		"title": "Remove a branch",
+		"description": "<p>To delete a branch from git repository you must not be positioned in it.</p>",
+		"code": [
+			["git branch -D <BRANCH_NAME>"],
+			["git branch -d <BRANCH_NAME>"]
+		]
 	},
 	{
 		"name": "get-tags",
 		"title": "Get all tags made",
-		"description": "Get a simple list of the tags, if you want to make sure they exist and what their version numbers are.",
-		"code": "git tag -l"
+		"description": "<p>Get a simple list of the tags, if you want to make sure they exist and what their version numbers are.</p>",
+		"code": [["git tag --list"], ["git tag -l"]]
 	},
 	{
 		"name": "create-tag",
 		"title": "Create a new tag",
-		"description": "Create a new tag (mark, label, or pointer that always points to a commit) on the local repository",
-		"code": "git tag -a '<TAG_VERSION>' -m '<MESSAGE_COMMIT>'"
+		"description": "<p>In software development, git tags represent a version of our code at a given moment in time. Unlike branches, tags are not mutable y always point to the same commit, them so people generally use them to mark important points in git history (as the release points v1.0, v2.0 and so on).</p><p>The <strong>Semantic Versioning</strong> use a version format based on 3 integers separated by points: <em>X.Y.Z</em> (<em>Major.Minor.Patch</em>). This would be translated to gitflow branch structure as <em>release.feature.bug</em>.<br>The developer is the responsible for communicating the status of their software publishing this number.</p><p><a href='https://semver.org/' target='_blank'>Know more</a></p>",
+		"code": "git tag -a '<TAG_VERSION>' -m '<COMMIT_MESSAGE>'"
 	},
 	{
-		"name": "remove-tag-local",
+		"name": "remove-local-tag",
 		"title": "Remove a local tag",
-		"description": "Delete a tag on the local repository",
+		"description": "",
 		"code": "git tag -d <TAG_VERSION>"
 	},
 	{
 		"name": "remove-tag-remote",
 		"title": "Remove a remote tag",
-		"description": "Delete a tag on the remote repository",
+		"description": "",
 		"code": "git push --delete origin <TAG_VERSION>"
 	},
 	{
-		"name": "remove-tag-push",
-		"title": "Remove a tag and push it",
-		"description": "Two alternatives of remove a tag on the local and remote repository",
+		"name": "remove-and-upload-tag",
+		"title": "Remove local and remote tag",
+		"description": "<p>When you want rename or remove a tag and you have already pushed it to a remote repository (eg. GitHub) then you’ll also need to update the remote references right after renaming or deleting the tag from your local repo.</p><p>Here are two alternatives for remove a tag on the local and remote repository:<ul><li>Delete the local tag and overwrite this change by referring to the name of the deleted tag in the remote repository.</li><li>Or do the process in reverse, delete it first the tag in the remote repository and then in the local repository.</li></ul></p><p><a href='https://cabrerahector.com/development/how-to-remove-a-git-tag-locally-and-remotely/' target='_blank'>Know more</a></p>",
 		"code": [
 			[
 				"git tag -d <TAG_VERSION>",
-				"git push origin : refs/tags/<TAG_VERSION>"
+				"git push origin :refs/tags/<TAG_VERSION>"
 			],
 			[
 				"git push --delete origin <TAG_VERSION>",
@@ -111,15 +233,15 @@
 		]
 	},
 	{
-		"name": "rename-tag-local",
+		"name": "rename-local-tag",
 		"title": "Rename a local tag",
-		"description": "Rename a tag on the local repository",
+		"description": "<p>If you use tags in your projects, you probably have encountered some issue that forced you to remove the tag: <ul><li>There was a change that had to be shipped with this release and you forgot all about it.</li><li>There’s some debugging code that wasn’t supposed to be included with this release.</li><li>There’s a really obvious typo that everyone will notice right away.</li></ul></p><p>If you have not yet uploaded the tag to the remote repository, you can rename the tag with the following command:</p><p><a href='https://cabrerahector.com/development/how-to-remove-a-git-tag-locally-and-remotely/' target='_blank'>Know more</a></p>",
 		"code": "git tag <NEW_TAG_VERSION> <OLD_TAG_VERSION>"
 	},
 	{
-		"name": "rename-tag-and-push",
+		"name": "rename-and-upload-tag",
 		"title": "Rename a tag and push it",
-		"description": "Rename a tag and upload it to the remote repository",
+		"description": "<p>If you have made a mistake and need to rename a tag and update it in the remote repository, you should follow these steps:<ol><li>Rename the local tag.</li><li>Remove the old tag so that git knows about the change.</li><li>Tell the remote git repository that you've removed the old tag.</li><li>Update remote repository tags to upload new tag.</li></ol></p>",
 		"code": [
 			"git tag <NEW_TAG_VERSION> <OLD_TAG_VERSION>",
 			"git tag -d <OLD_TAG_VERSION>",
@@ -128,37 +250,21 @@
 		]
 	},
 	{
-		"name": "update-tags-remote",
-		"title": "Update the tags of the remote repository",
-		"description": "Update the tags remote repository with the local tags",
+		"name": "update-remote-repository",
+		"title": "Update remote repository",
+		"description": "<p>This is highly desirable when working in a team workflow where remote branches are removed after merging with master or are left with obsolete tags.<br>In this case, you will want to remove references to branches or tags that no longer exist on the remote control by connecting to the remote control and getting the last remote status before pruning. It's essentially a combination of commands:</p>",
+		"code": "git fetch --all && git remote prune"
+	},
+	{
+		"name": "update-local-tags",
+		"title": "Update local tags",
+		"description": "<p>If your project is open source, you will probably have to update the status of your local repository from time to time, since other people may have removed or renamed some tags while you were working and you now have obsolete local tags.<br> This command prunes the tags that no longer exist in the remote repository but in your local repository.</p>",
 		"code": "git pull --prune --tags"
 	},
 	{
-		"name": "exit-without-save",
-		"title": "Exit without save from the text window",
-		"description": "If you're inside the vi editor and you want to just come out from the text window without save the changes, typing the command and press 'enter'.",
-		"code": ":q!"
-	},
-	{
-		"name": "exit-and-save",
-		"title": "Exit and save from the text window",
-		"description": "If you're inside the vi editor and you want come out from the text window and save the changes, typing the command and press 'enter'.",
-		"code": ":wq"
-	},
-	{
-		"name": "reflog",
-		"title": "View reference log (reflog)",
-		"description": "Before talking about the reference journal, it should be remembered that HEAD is a reference (that is, a pointer) that points to the most recent commit of the current branch. There is a record of all the references taken by the HEAD pointer in Git called reflog (reference record shortcut). It is a record that will store all commits where the pointer passes, for example, it will be able to save branch changes or the addition of a commit.",
-		"code": "git reflog"
-	},
-	{
-		"name": "reflog-remove",
-		"title": "Prune all references with garbage collection and reclaim space",
-		"description": "The expire subcommand cleans up old or unreachable reflog entries. The expire subcommand has potential for data loss. This subcommand is not typically used by end users, but used by git internally. By default, the reflog expiration date is set to 90 days. An expire time can be specified by passing a command line argument or by setting a git configuration name.",
-		"code": [
-			"rm -rf .git/refs/original/",
-			"git reflog expire --expire=now --all",
-			"git gc --aggressive --prune=now"
-		]
+		"name": "",
+		"title": "",
+		"description": "",
+		"code": ""
 	}
 ]
