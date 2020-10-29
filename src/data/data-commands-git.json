@@ -8,25 +8,25 @@
 	{
 		"name": "create-git-repository",
 		"title": "Initialize git repository",
-		"description": "<p>A Git repository is a virtual storage for your project. It allows you to save versions of the code that you can access whenever you need to. The following command, used only once during the initial setup of a new repository, will create a new <code>.git</code> subdirectory in your current working directory and a new <code>MASTER</code> branch.</p><p><a href='https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-init' target='_blank'>Read more</a></p>",
+		"description": "<p>A Git repository is a virtual storage for your project. It allows you to save versions of the code that you can access whenever you need to. The following command, used only once during the initial setup of a new repository, will create a new <code>.git</code> subdirectory in your current working directory and a new <code>MASTER</code> branch.</p><p><a href='https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-init' target='_blank'>Know more</a></p>",
 		"code": "git init"
 	},
 	{
 		"name": "get-commits",
 		"title": "Get all commits made",
-		"description": "<p>After you have made several commits, or if you have cloned a repository that already had a commit history, you will probably want to look back to see what modifications have been made.<br>This command shows a list of all the commits made, in reverse chronological order, i.e. the most recent ones are shown at the beginning. Each commit contains information about the identification number (<em>Secure Hash Algorithm</em>, <code>SHA-1</code>), the author's name and e-mail address, the date and the commit message.</p><p><a href='https://git-scm.com/book/es/v2/Fundamentos-de-Git-Ver-el-Historial-de-Confirmaciones' target='_blank'>Read more</a></p>",
+		"description": "<p>After you have made several commits, or if you have cloned a repository that already had a commit history, you will probably want to look back to see what modifications have been made.<br>This command shows a list of all the commits made, in reverse chronological order, i.e. the most recent ones are shown at the beginning. Each commit contains information about the identification number (<em>Secure Hash Algorithm</em>, <code>SHA-1</code>), the author's name and e-mail address, the date and the commit message.</p><p><a href='https://git-scm.com/book/es/v2/Fundamentos-de-Git-Ver-el-Historial-de-Confirmaciones' target='_blank'>Know more</a></p>",
 		"code": "git log"
 	},
 	{
 		"name": "get-commits-oneline",
 		"title": "Get all commits made in a single line",
-		"description": "<p>The <code>git log</code> command has many optional parameters for formatting the output of the commit information. The <code>--oneline</code> option shows the information of each commit in a single line with the first 6 characters of the <code>SHA-1</code> number, branchs, tags and the message.</p><p><a href='https://git-scm.com/book/es/v2/Fundamentos-de-Git-Ver-el-Historial-de-Confirmaciones#rlog_options' target='_blank'>Read more</a></p>",
+		"description": "<p>The <code>git log</code> command has many optional parameters for formatting the output of the commit information. The <code>--oneline</code> option shows the information of each commit in a single line with the first 6 characters of the <code>SHA-1</code> number, branchs, tags and the message.</p><p><a href='https://git-scm.com/book/es/v2/Fundamentos-de-Git-Ver-el-Historial-de-Confirmaciones#rlog_options' target='_blank'>Know more</a></p>",
 		"code": "git log --oneline"
 	},
 	{
 		"name": "get-commits-oneline-graph",
 		"title": "Get graph of all commits made",
-		"description": "<p>This command condenses the information of each commit into a single line, showing only the commit ID and the first line of the commit message and highlighting all references (branches, tags...).<br> It draws a graphical <em>ASCII</em> representation of the commit history structure. Prints additional lines between commits, so that the history chart is drawn correctly. And use asterisks to show which branch the commit was on.</p><p><a href='https://www.atlassian.com/git/tutorials/git-log' target='_blank'>Read more</a></p>",
+		"description": "<p>This command condenses the information of each commit into a single line, showing only the commit ID and the first line of the commit message and highlighting all references (branches, tags...).<br> It draws a graphical <em>ASCII</em> representation of the commit history structure. Prints additional lines between commits, so that the history chart is drawn correctly. And use asterisks to show which branch the commit was on.</p><p><a href='https://www.atlassian.com/git/tutorials/git-log' target='_blank'>Know more</a></p>",
 		"code": "git log --oneline --graph --decorate"
 	},
 	{
@@ -44,7 +44,7 @@
 	{
 		"name": "overwrite-date-commit",
 		"title": "Overwrite date commit",
-		"description": "<p>This command change the author and committer date of the commit already created.<br>Why change two dates? The <strong>author</strong> is the person who originally wrote the work, whereas the <strong>committer</strong> is the person who last applied the work.</p><p><a href='https://garysferrao.github.io/git/commit/date/2015/12/01/change-git-commit-date.html' target='_blank'>Read more</a></p>",
+		"description": "<p>This command change the author and committer date of the commit already created.<br>Why change two dates? The <strong>author</strong> is the person who originally wrote the work, whereas the <strong>committer</strong> is the person who last applied the work.</p><p><a href='https://garysferrao.github.io/git/commit/date/2015/12/01/change-git-commit-date.html' target='_blank'>Know more</a></p>",
 		"code": "GIT_COMMITTER_DATE='<YYYY-MM-DDThh:mm:ss±hh:mm>' git commit --amend --date='<YYYY-MM-DDThh:mm:ss±hh:mm>' -C <SHA_COMMIT>"
 	},
 	{
@@ -67,13 +67,13 @@
 	{
 		"name": "add-and-create-commit",
 		"title": "Add folders and files to staging area and create a commit",
-		"description": "<p> This combination immediately creates a confirmation of all prepared changes and applies an online confirmation message.<br> A shortcut command for advanced users that combines the options <code>-a</code> or <code>--all</code> (adds the modified or deleted files to the stage, but not the newly created ones, since they have not been reported to git for <strong>tracking</strong>) and <code>-m</code> or <code>--message</code> (with the specified message).</p><p><a href='https://www.atlassian.com/es/git/tutorials/saving-changes/git-commit' target='_blank'>Read more</a></p>",
+		"description": "<p> This combination immediately creates a confirmation of all prepared changes and applies an online confirmation message.<br> A shortcut command for advanced users that combines the options <code>-a</code> or <code>--all</code> (adds the modified or deleted files to the stage, but not the newly created ones, since they have not been reported to git for <strong>tracking</strong>) and <code>-m</code> or <code>--message</code> (with the specified message).</p><p><a href='https://www.atlassian.com/es/git/tutorials/saving-changes/git-commit' target='_blank'>Know more</a></p>",
 		"code": "git commit -am '<MESSAGE_COMMIT>'"
 	},
 	{
 		"name": "overwrite-last-commit",
 		"title": "Overwrite the last commit",
-		"description": "<p>If a commit message or file contains unclear, incorrect, sensitive, or missing information, you can correct it locally and send a new commit with a new message to GitHub. <br>Performing this command will change the commit ID, and if you do, you're creating a new commit that replaces the old one.</p><p><a href='https://blog.kirei.io/buenas-pr%C3%A1cticas-para-los-mensajes-de-commit-en-git-a9fc43a83821' target='_blank'>Read more</a></p>",
+		"description": "<p>If a commit message or file contains unclear, incorrect, sensitive, or missing information, you can correct it locally and send a new commit with a new message to GitHub. <br>Performing this command will change the commit ID, and if you do, you're creating a new commit that replaces the old one.</p><p><a href='https://blog.kirei.io/buenas-pr%C3%A1cticas-para-los-mensajes-de-commit-en-git-a9fc43a83821' target='_blank'>Know more</a></p>",
 		"code": "git commit --amend"
 	},
 	{
@@ -161,7 +161,7 @@
 	{
 		"name": "rename-current-branch",
 		"title": "Rename current branch",
-		"description": "<p></p><p>The optional parametters: <ul><li><code>--move</code> or <code>-m</code>: Move/rename a branch and the corresponding reflog.</li><li><code>-M</code>: It is a shortcut of <code>--delete --force</code></li></ul></p><p><a href='https://git-scm.com/docs/git-branch' target='_blank'>Read more</a></p>",
+		"description": "<p></p><p>The optional parametters: <ul><li><code>--move</code> or <code>-m</code>: Move/rename a branch and the corresponding reflog.</li><li><code>-M</code>: It is a shortcut of <code>--delete --force</code></li></ul></p><p><a href='https://git-scm.com/docs/git-branch' target='_blank'>Know more</a></p>",
 		"code": "git branch -m <NEW_NAME_BRANCH>"
 	},
 	{
@@ -175,7 +175,7 @@
 	{
 		"name": "rename-remote-branch",
 		"title": "Rename a remote branch",
-		"description": "<p>You are collaborating on a project with a group of people, and you have defined a naming convention for git branches. You created a new branch , pushed the changes to the remote repository, and realized that your branch name was incorrect. Luckily, Git allows you to rename the branch very easily using the next command.</p><p><a href='https://linuxize.com/post/how-to-rename-local-and-remote-git-branch/' target='_blank'>Read more</a></p>",
+		"description": "<p>You are collaborating on a project with a group of people, and you have defined a naming convention for git branches. You created a new branch , pushed the changes to the remote repository, and realized that your branch name was incorrect. Luckily, Git allows you to rename the branch very easily using the next command.</p><p><a href='https://linuxize.com/post/how-to-rename-local-and-remote-git-branch/' target='_blank'>Know more</a></p>",
 		"code": [
 			[
 				"git checkout <OLD_NAME_BRANCH>",
@@ -215,7 +215,7 @@
 	{
 		"name": "create-tag",
 		"title": "Create a new tag",
-		"description": "<p>In software development, Git tags represent a version of our code at a given moment in time. Unlike branches, tags are not mutable y always point to the same commit, them so people generally use them to mark important points in Git history (as the release points v1.0, v2.0 and so on).</p><p>The <strong>Semantic Versioning</strong> use a version format based on 3 integers separated by points: <em>X.Y.Z</em> (<em>Major.Minor.Patch</em>). This would be translated to gitflow branch structure as <em>release.feature.bug</em>.<br>The developer is the responsible for communicating the status of their software publishing this number.</p><p><a href='https://semver.org/' target='_blank'>Read more</a></p>",
+		"description": "<p>In software development, Git tags represent a version of our code at a given moment in time. Unlike branches, tags are not mutable y always point to the same commit, them so people generally use them to mark important points in Git history (as the release points v1.0, v2.0 and so on).</p><p>The <strong>Semantic Versioning</strong> use a version format based on 3 integers separated by points: <em>X.Y.Z</em> (<em>Major.Minor.Patch</em>). This would be translated to gitflow branch structure as <em>release.feature.bug</em>.<br>The developer is the responsible for communicating the status of their software publishing this number.</p><p><a href='https://semver.org/' target='_blank'>Know more</a></p>",
 		"code": "git tag -a '<TAG_VERSION>' -m '<MESSAGE_COMMIT>'"
 	},
 	{
@@ -233,7 +233,7 @@
 	{
 		"name": "remove-tag-and-push",
 		"title": "Remove a tag and push it",
-		"description": "<p>If you have already pushed the tag to a remote repository (eg. GitHub) then you’ll also need to update the remote references right after renaming or deleting the tag from your local repo.</p><p>Here are two alternatives for remove a tag on the local and remote repository:</p><p><a href='https://cabrerahector.com/development/how-to-remove-a-git-tag-locally-and-remotely/' target='_blank'>Read more</a></p>",
+		"description": "<p>If you have already pushed the tag to a remote repository (eg. GitHub) then you’ll also need to update the remote references right after renaming or deleting the tag from your local repo.</p><p>Here are two alternatives for remove a tag on the local and remote repository:</p><p><a href='https://cabrerahector.com/development/how-to-remove-a-git-tag-locally-and-remotely/' target='_blank'>Know more</a></p>",
 		"code": [
 			[
 				"git tag -d <TAG_VERSION>",
@@ -248,7 +248,7 @@
 	{
 		"name": "rename-tag-local",
 		"title": "Rename a local tag",
-		"description": "<p>If you use tags in your projects, you probably have encountered some issue that forced you to remove the tag: <ul><li>There was a change that had to be shipped with this release and you forgot all about it.</li><li>There’s some debugging code that wasn’t supposed to be included with this release.</li><li>There’s a really obvious typo that everyone will notice right away.</li></ul></p><p>If you have not yet uploaded the tag to the remote repository, you can rename the tag with the following command:</p><p><a href='https://cabrerahector.com/development/how-to-remove-a-git-tag-locally-and-remotely/' target='_blank'>Read more</a></p>",
+		"description": "<p>If you use tags in your projects, you probably have encountered some issue that forced you to remove the tag: <ul><li>There was a change that had to be shipped with this release and you forgot all about it.</li><li>There’s some debugging code that wasn’t supposed to be included with this release.</li><li>There’s a really obvious typo that everyone will notice right away.</li></ul></p><p>If you have not yet uploaded the tag to the remote repository, you can rename the tag with the following command:</p><p><a href='https://cabrerahector.com/development/how-to-remove-a-git-tag-locally-and-remotely/' target='_blank'>Know more</a></p>",
 		"code": "git tag <NEW_TAG_VERSION> <OLD_TAG_VERSION>"
 	},
 	{
