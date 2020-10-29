@@ -66,6 +66,7 @@
 			color: $color-brand-2;
 
 			/deep/ {
+				ol,
 				ul {
 					margin-left: 3rem;
 				}
