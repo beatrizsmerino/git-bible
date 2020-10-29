@@ -65,9 +65,25 @@
 			font-size: 1.8rem;
 			color: $color-brand-2;
 
-			/deep/ a {
-				font-weight: 700;
-				color: $color-brand-3;
+			/deep/ {
+				ul {
+					margin-left: 3rem;
+				}
+
+				a {
+					font-weight: 700;
+					color: $color-brand-3;
+				}
+
+				code {
+					margin: 0 0.2rem;
+					padding: 0.25rem 0.5rem;
+					display: inline-block;
+					white-space: nowrap;
+					font-size: 0.9em;
+					border-radius: 0.6rem;
+					background-color: $color-silver;
+				}
 			}
 		}
 
