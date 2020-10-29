@@ -103,7 +103,7 @@
 			}
 		},
 		created() {
-			this.commands = dataCommandsGit;
+			this.commands = dataCommandsGit.filter(command => command.name !== "" && command.title !== "");
 		}
 	};
 </script>
@@ -151,7 +151,6 @@
 		}
 
 		&__item {
-			height: 5rem;
 			text-align: left;
 
 			&:not(:last-child){
@@ -161,7 +160,7 @@
 
 		&__link {
 			width: 100%;
-			height: 100%;
+			height: 5rem;
 			padding: 1.3rem;
 			color: $color-brand-3;
 			background-color: $color-light;
