@@ -25,27 +25,75 @@
 	},
 	{
 		"name": "get-commits-oneline-graph",
-		"title": "Get graph of all commits made",
+		"title": "Get all commits made in a graph",
 		"description": "<p>This command condenses the information of each commit into a single line, showing only the commit ID and the first line of the commit message, highlighting all references (branches, tags...).<br> It draws a graphical <em>ASCII</em> representation of the commit history structure. Prints additional lines between commits, so that the history chart is drawn correctly, and it use asterisks to show which branch the commit was on.</p><p><a href='https://www.atlassian.com/git/tutorials/git-log' target='_blank'>Know more</a></p>",
 		"code": "git log --oneline --graph --decorate"
 	},
 	{
+		"name": "get-commit-without-merges",
+		"title": "Get all commits made, hiding the merge commits",
+		"description": "<p>A merge is the result of merging 2 or more branches. The merge commits that are created by merging branches do not usually give me information and we can show the list of commits without them with this command.</p>",
+		"code": "git log --oneline --no-merges"
+	},
+	{
+		"name": "get-commits-range",
+		"title": "Get commits between ranges",
+		"description": "<p>Identify ranges from commit x to y</p>",
+		"code": "git log master~<POSITION_NUMBER>..master~<POSITION_NUMBER>"
+	},
+	{
+		"name": "get-commit-by-date",
+		"title": "Search the commits by date",
+		"description": "<p>Search the commits by date (YYYY-MM-DD):</p><p><ul><li>Shows the commits from the given date.</li><li>Shows commits before the date.</li><li>Shows the commits after the given date.</li></ul></p>",
+		"code": [
+			["git log --since={<DATE>}"],
+			["git log --before={<DATE>}"],
+			["git log --after={<DATE>}"]
+		]
+	},
+	{
+		"name": "show-commits-of-file",
+		"title": "Show only the commits in which a file is involved",
+		"description": "<p>It shows all the commits in which the indicated file has been modified.</p>",
+		"code": "git log --oneline -- <FILE_NAME>"
+	},
+	{
+		"name": "get-commits-regex",
+		"title": "Commit filter using a regular expression.",
+		"description": "<p>We can look for a commit according to the message (regular expression that is repeated).</p>",
+		"code": "git log --grep='<REGEX>'"
+	},
+	{
 		"name": "show-info-commit",
-		"title": "Show the information for a commit",
-		"description": "<p>This is a command-line tool that you use to view expanded details in git objects such as blobs, trees, tags, and commits. In this case it shows the complete information for a commit (<code>SHA-1</code>, author, date and message).</p>",
-		"code": "git show <SHA_COMMIT>"
+		"title": "Show the information of a commit",
+		"description": "<p>This is a command-line tool that you use to view expanded details in git objects such as blobs, trees, tags, and commits.<br>In this case it shows the complete information for a commit (id or <code>SHA-1</code>, author, date and message).</p><p>There are many ways to access a commit's information:<br><ul><li>In an absolute way, referring to the code that identifies it.</li><li>Relatively, referring to the name of the branch of the last commit.</li><li>Through <code>HEAD</code>, accessing the last commit that has been made.</li><li>By his position in the git tree. See all the commits backwards from the moment we tell you, with the sign <code>^</code> we can go 1 or 3 commits backwards and with the sign <code>-</code> or <code>~</code> we can specify the number of commits backwards we want to go until we find the one we want to see.</li></ul></p>",
+		"code": [
+			["git show <COMMIT_ID>"],
+			["git show <BRANCH_NAME>"],
+			["git show HEAD"],
+			["git show HEAD^"],
+			["git show HEAD^^^"],
+			["git show HEAD~<POSITION_NUMBER>"],
+			["git show -<POSITION_NUMBER>"]
+		]
+	},
+	{
+		"name": "get-commits-with-relative-references",
+		"title": "Get a number of commits with their relative references",
+		"description": "<p>Show branches and their commits. <br>Usually the command stops output upon showing the commit that is the common ancestor of all the branches. This flag tells the command to go <n> more common commits beyond that. When <n> is negative, display only the <reference>s given, without showing the commit ancestry tree.</p>",
+		"code": "git show-branch --more=<NUMBER_COMMITS>"
 	},
 	{
 		"name": "show-date-commit",
 		"title": "Show date commit",
 		"description": "<p>Formats the output information of a commit, showing the format of the committer date.</p><p><ul><li><code>%ai</code>: author date, <em>ISO 8601-like</em> format</li><li><code>%ci</code>: committer date, <em>ISO 8601-like</em> format</li></ul></p>",
-		"code": "git show -s --format=%ci <SHA_COMMIT>"
+		"code": "git show -s --format=%ci <COMMIT_ID>"
 	},
 	{
 		"name": "overwrite-date-commit",
 		"title": "Overwrite date commit",
 		"description": "<p>This command change the author and committer date of the commit already created.<br>Why change two dates? The <strong>author</strong> is the person who originally wrote the work, whereas the <strong>committer</strong> is the person who last applied the work.If we are working alone on the project, the date should be the same in both cases.</p><p><a href='https://garysferrao.github.io/git/commit/date/2015/12/01/change-git-commit-date.html' target='_blank'>Know more</a></p>",
-		"code": "GIT_COMMITTER_DATE='<YYYY-MM-DDThh:mm:ss±hh:mm>' git commit --amend --date='<YYYY-MM-DDThh:mm:ss±hh:mm>' -C <SHA_COMMIT>"
+		"code": "GIT_COMMITTER_DATE='<YYYY-MM-DDThh:mm:ss±hh:mm>' git commit --amend --date='<YYYY-MM-DDThh:mm:ss±hh:mm>' -C <COMMIT_ID>"
 	},
 	{
 		"name": "git-add",
@@ -67,8 +115,14 @@
 	{
 		"name": "add-and-create-commit",
 		"title": "Add folders and files to staging area and create a commit",
-		"description": "<p>This combination immediately creates a confirmation of all prepared changes and applies an online confirmation message.<br>It is a shortcut command for advanced users that combines the options <code>-a</code> or <code>--all</code> (adds the modified or deleted files to the stage, but not the newly created ones, since they have not been reported to git for tracking) and <code>-m</code> or <code>--message</code> (with the specified message).</p><p><a href='https://www.atlassian.com/es/git/tutorials/saving-changes/git-commit' target='_blank'>Know more</a></p>",
+		"description": "<p>If we've already done the first <code>git add</code> and <code>git commit</code> of a file, that is, git already knows about it, the next times we can use another command that includes both steps in a single command.</p><p>This combination immediately creates a confirmation of all prepared changes and applies an online confirmation message.<br>It is a shortcut command for advanced users that combines the options <code>-a</code> or <code>--all</code> (adds the modified or deleted files to the stage, but not the newly created ones, since they have not been reported to git for tracking) and <code>-m</code> or <code>--message</code> (with the specified message).</p><p><a href='https://www.atlassian.com/es/git/tutorials/saving-changes/git-commit' target='_blank'>Know more</a></p>",
 		"code": "git commit -am '<COMMIT_MESSAGE>'"
+	},
+	{
+		"name": "commit-particular-file-on-index",
+		"title": "Make a confirmation of only one file in the staging area",
+		"description": "<p>If you have several files added to the index zone and you regret it, because you only want to commit one particular file, you can select the file and commit only the changes to it.</p>",
+		"code": ["git <FILE_NAME>", "git commit -am <COMMIT_MESSAGE>"]
 	},
 	{
 		"name": "overwrite-last-commit",

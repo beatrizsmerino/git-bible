@@ -45,5 +45,9 @@
 	},{
 		"url": "https://explainshell.com/explain?cmd=git+log+--all+--graph+--decorate+--oneline+--simplify-by-decoration",
 		"description": "explainshell.com: About git log --all --graph --decorate --oneline --simplify-by-decoration"
+	},
+	{
+		"url": "https://davidinformatico.com/apuntes-git/",
+		"description": "David Poza: Mis apuntes de git"
 	}
 ]
