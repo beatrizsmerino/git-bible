@@ -12,6 +12,59 @@
 		"code": "git init"
 	},
 	{
+		"name": "show-configuration",
+		"title": "Show the set configuration",
+		"description": "<p>To visualize our current configuration. We must know that all the configuration is saved in the file <code>.gitconfig</code>, found in the user <code>HOME</code> if you are Linux or in <code>C:Users</code> if you are on Windows or typing on the console <code>git config --list --show-origin</code> if you are  Mac.</p>",
+		"code": [
+			["git config -l"],
+			["git config --list"],
+			["git config --global --list"]
+		]
+	},
+	{
+		"name": "config-user-name-email",
+		"title": "Configure the name and email of user",
+		"description": "<p>Git is a <strong>distributed version control system</strong> that’s being used by most software teams today. The first thing you should do after installing Git on your system is to configure your git username and email address. Git associate your identity with every commit you make.</p><p>Git allows you to set a global and per-project username and email address. You can set or change your git identity using the next command. Changes only affect future commits. The name and email associated with the commits you made prior to the change are not affected.</p>",
+		"code": [
+			["git config --global user.name <USER_NAME>"],
+			["git config --global user.email <USER_EMAIL>"]
+		]
+	},
+	{
+		"name": "config-code-editor",
+		"title": "Add or edit the default editor",
+		"description": "<p>When you create a Git commit with <code>git commit –a</code>, the default editor that will be opened is <strong>Vim</strong>. This can be very confusing for people, as Vim is not an easy editor if you have never worked with it previously.</p><p>Luckily, Git allows you to change the editor that gets opened by default very easily!</p><p>There are two ways in which this can be done: the first is via the terminal with the next command and the second option it is edting the <code>.gitconfig</code> file.</p>",
+		"code": "git config --global core.editor <ROUTE_EDITOR_CODE>"
+	},
+	{
+		"name": "change-autor-email-last-commits",
+		"title": "Change the name and email of the author of the last commit",
+		"description": "<p>If you have made a mistake and made your commit with another name or email you can overwrite the author information of only the last commit with this command.</p>",
+		"code": "git commit --amend --author='<USER_NAME> <USER_EMAIL>'"
+	},
+	{
+		"name": "change-autor-email-commits",
+		"title": "Change the name and email of the author after make a commit",
+		"description": "<p>If you have made a mistake and made several commits with another name or user email you can overwrite the author information of all commits with the following command.</p><p>Be very careful if these commits have been previously uploaded to the remote repository and if more people are collaborating in the repository. If this is the case, it is important to communicate it before making this command, because you'll also have to overwrite changes in the remote repository with <code>git push -f</code> and the other contributors will have to update their local repository with <code>git pull -f</code>. This type of changes is best made without having any changes saved in the staging area or the working directory.</p>",
+		"code": [
+			"$ git filter-branch --env-filter \"",
+			"OLD_EMAIL='<WRONG_EMAIL>'",
+			"NEW_NAME='<CORRECT_NAME>'",
+			"NEW_EMAIL='<CORRECT_EMAIL>'",
+			"if ['$GIT_COMMITTER_EMAIL' = '$OLD_EMAIL']",
+			"then",
+			"export GIT_COMMITTER_NAME='$NEW_NAME'",
+			"export GIT_COMMITTER_EMAIL='$NEW_EMAIL'",
+			"fi",
+			"if ['$GIT_AUTHOR_EMAIL' = '$OLD_EMAIL']",
+			"then",
+			"export GIT_AUTHOR_NAME='$NEW_NAME'",
+			"export GIT_AUTHOR_EMAIL='$NEW_EMAIL'",
+			"fi",
+			"\" --tag-name-filter cat -- --branches --tags"
+		]
+	},
+	{
 		"name": "get-commits",
 		"title": "Get all commits made",
 		"description": "<p>After you have made several commits, or if you have cloned a repository that already had a commit history, you will probably want to look back to see what modifications have been made.<br>This command shows a list of all the commits made, in reverse chronological order, i.e. the most recent ones are shown at the beginning. Each commit contains information about the identification number (<em>Secure Hash Algorithm</em>, <code>SHA-1</code>), the author's name and e-mail address, the date and the commit message.</p><p><a href='https://git-scm.com/book/es/v2/Fundamentos-de-Git-Ver-el-Historial-de-Confirmaciones' target='_blank'>Know more</a></p>",
