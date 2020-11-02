@@ -12,6 +12,59 @@
 		"code": "git init"
 	},
 	{
+		"name": "show-configuration",
+		"title": "Show the set configuration",
+		"description": "<p>To visualize our current configuration. We must know that all the configuration is saved in the file <code>.gitconfig</code>, found in the user <code>HOME</code> if you are Linux or in <code>C:Users</code> if you are on Windows or typing on the console <code>git config --list --show-origin</code> if you are  Mac.</p>",
+		"code": [
+			["git config -l"],
+			["git config --list"],
+			["git config --global --list"]
+		]
+	},
+	{
+		"name": "config-user-name-email",
+		"title": "Configure the name and email of user",
+		"description": "<p>Git is a <strong>distributed version control system</strong> that’s being used by most software teams today. The first thing you should do after installing Git on your system is to configure your git username and email address. Git associate your identity with every commit you make.</p><p>Git allows you to set a global and per-project username and email address. You can set or change your git identity using the next command. Changes only affect future commits. The name and email associated with the commits you made prior to the change are not affected.</p>",
+		"code": [
+			["git config --global user.name <USER_NAME>"],
+			["git config --global user.email <USER_EMAIL>"]
+		]
+	},
+	{
+		"name": "config-code-editor",
+		"title": "Add or edit the default editor",
+		"description": "<p>When you create a Git commit with <code>git commit –a</code>, the default editor that will be opened is <strong>Vim</strong>. This can be very confusing for people, as Vim is not an easy editor if you have never worked with it previously.</p><p>Luckily, Git allows you to change the editor that gets opened by default very easily!</p><p>There are two ways in which this can be done: the first is via the terminal with the next command and the second option it is edting the <code>.gitconfig</code> file.</p>",
+		"code": "git config --global core.editor <ROUTE_EDITOR_CODE>"
+	},
+	{
+		"name": "change-autor-email-last-commits",
+		"title": "Change the name and email of the author of the last commit",
+		"description": "<p>If you have made a mistake and made your commit with another name or email you can overwrite the author information of only the last commit with this command.</p>",
+		"code": "git commit --amend --author='<USER_NAME> <USER_EMAIL>'"
+	},
+	{
+		"name": "change-autor-email-commits",
+		"title": "Change the name and email of the author after make a commit",
+		"description": "<p>If you have made a mistake and made several commits with another name or user email you can overwrite the author information of all commits with the following command.</p><p>Be very careful if these commits have been previously uploaded to the remote repository and if more people are collaborating in the repository. If this is the case, it is important to communicate it before making this command, because you'll also have to overwrite changes in the remote repository with <code>git push -f</code> and the other contributors will have to update their local repository with <code>git pull -f</code>. This type of changes is best made without having any changes saved in the staging area or the working directory.</p>",
+		"code": [
+			"$ git filter-branch --env-filter \"",
+			"OLD_EMAIL='<WRONG_EMAIL>'",
+			"NEW_NAME='<CORRECT_NAME>'",
+			"NEW_EMAIL='<CORRECT_EMAIL>'",
+			"if ['$GIT_COMMITTER_EMAIL' = '$OLD_EMAIL']",
+			"then",
+			"export GIT_COMMITTER_NAME='$NEW_NAME'",
+			"export GIT_COMMITTER_EMAIL='$NEW_EMAIL'",
+			"fi",
+			"if ['$GIT_AUTHOR_EMAIL' = '$OLD_EMAIL']",
+			"then",
+			"export GIT_AUTHOR_NAME='$NEW_NAME'",
+			"export GIT_AUTHOR_EMAIL='$NEW_EMAIL'",
+			"fi",
+			"\" --tag-name-filter cat -- --branches --tags"
+		]
+	},
+	{
 		"name": "get-commits",
 		"title": "Get all commits made",
 		"description": "<p>After you have made several commits, or if you have cloned a repository that already had a commit history, you will probably want to look back to see what modifications have been made.<br>This command shows a list of all the commits made, in reverse chronological order, i.e. the most recent ones are shown at the beginning. Each commit contains information about the identification number (<em>Secure Hash Algorithm</em>, <code>SHA-1</code>), the author's name and e-mail address, the date and the commit message.</p><p><a href='https://git-scm.com/book/es/v2/Fundamentos-de-Git-Ver-el-Historial-de-Confirmaciones' target='_blank'>Know more</a></p>",
@@ -25,27 +78,75 @@
 	},
 	{
 		"name": "get-commits-oneline-graph",
-		"title": "Get graph of all commits made",
+		"title": "Get all commits made in a graph",
 		"description": "<p>This command condenses the information of each commit into a single line, showing only the commit ID and the first line of the commit message, highlighting all references (branches, tags...).<br> It draws a graphical <em>ASCII</em> representation of the commit history structure. Prints additional lines between commits, so that the history chart is drawn correctly, and it use asterisks to show which branch the commit was on.</p><p><a href='https://www.atlassian.com/git/tutorials/git-log' target='_blank'>Know more</a></p>",
 		"code": "git log --oneline --graph --decorate"
 	},
 	{
+		"name": "get-commit-without-merges",
+		"title": "Get all commits made, hiding the merge commits",
+		"description": "<p>A merge is the result of merging 2 or more branches. The merge commits that are created by merging branches do not usually give me information and we can show the list of commits without them with this command.</p>",
+		"code": "git log --oneline --no-merges"
+	},
+	{
+		"name": "get-commits-range",
+		"title": "Get commits between ranges",
+		"description": "<p>Identify ranges from commit x to y</p>",
+		"code": "git log master~<POSITION_NUMBER>..master~<POSITION_NUMBER>"
+	},
+	{
+		"name": "get-commit-by-date",
+		"title": "Search the commits by date",
+		"description": "<p>Search the commits by date (YYYY-MM-DD):</p><p><ul><li>Shows the commits from the given date.</li><li>Shows commits before the date.</li><li>Shows the commits after the given date.</li></ul></p>",
+		"code": [
+			["git log --since={<DATE>}"],
+			["git log --before={<DATE>}"],
+			["git log --after={<DATE>}"]
+		]
+	},
+	{
+		"name": "show-commits-of-file",
+		"title": "Show only the commits in which a file is involved",
+		"description": "<p>It shows all the commits in which the indicated file has been modified.</p>",
+		"code": "git log --oneline -- <FILE_NAME>"
+	},
+	{
+		"name": "get-commits-regex",
+		"title": "Commit filter using a regular expression.",
+		"description": "<p>We can look for a commit according to the message (regular expression that is repeated).</p>",
+		"code": "git log --grep='<REGEX>'"
+	},
+	{
 		"name": "show-info-commit",
-		"title": "Show the information for a commit",
-		"description": "<p>This is a command-line tool that you use to view expanded details in git objects such as blobs, trees, tags, and commits. In this case it shows the complete information for a commit (<code>SHA-1</code>, author, date and message).</p>",
-		"code": "git show <SHA_COMMIT>"
+		"title": "Show the information of a commit",
+		"description": "<p>This is a command-line tool that you use to view expanded details in git objects such as blobs, trees, tags, and commits.<br>In this case it shows the complete information for a commit (id or <code>SHA-1</code>, author, date and message).</p><p>There are many ways to access a commit's information:<br><ul><li>In an absolute way, referring to the code that identifies it.</li><li>Relatively, referring to the name of the branch of the last commit.</li><li>Through <code>HEAD</code>, accessing the last commit that has been made.</li><li>By his position in the git tree. See all the commits backwards from the moment we tell you, with the sign <code>^</code> we can go 1 or 3 commits backwards and with the sign <code>-</code> or <code>~</code> we can specify the number of commits backwards we want to go until we find the one we want to see.</li></ul></p>",
+		"code": [
+			["git show <COMMIT_ID>"],
+			["git show <BRANCH_NAME>"],
+			["git show HEAD"],
+			["git show HEAD^"],
+			["git show HEAD^^^"],
+			["git show HEAD~<POSITION_NUMBER>"],
+			["git show -<POSITION_NUMBER>"]
+		]
+	},
+	{
+		"name": "get-commits-with-relative-references",
+		"title": "Get a number of commits with their relative references",
+		"description": "<p>Show branches and their commits. <br>Usually the command stops output upon showing the commit that is the common ancestor of all the branches. This flag tells the command to go <n> more common commits beyond that. When <n> is negative, display only the <reference>s given, without showing the commit ancestry tree.</p>",
+		"code": "git show-branch --more=<NUMBER_COMMITS>"
 	},
 	{
 		"name": "show-date-commit",
 		"title": "Show date commit",
 		"description": "<p>Formats the output information of a commit, showing the format of the committer date.</p><p><ul><li><code>%ai</code>: author date, <em>ISO 8601-like</em> format</li><li><code>%ci</code>: committer date, <em>ISO 8601-like</em> format</li></ul></p>",
-		"code": "git show -s --format=%ci <SHA_COMMIT>"
+		"code": "git show -s --format=%ci <COMMIT_ID>"
 	},
 	{
 		"name": "overwrite-date-commit",
 		"title": "Overwrite date commit",
 		"description": "<p>This command change the author and committer date of the commit already created.<br>Why change two dates? The <strong>author</strong> is the person who originally wrote the work, whereas the <strong>committer</strong> is the person who last applied the work.If we are working alone on the project, the date should be the same in both cases.</p><p><a href='https://garysferrao.github.io/git/commit/date/2015/12/01/change-git-commit-date.html' target='_blank'>Know more</a></p>",
-		"code": "GIT_COMMITTER_DATE='<YYYY-MM-DDThh:mm:ss±hh:mm>' git commit --amend --date='<YYYY-MM-DDThh:mm:ss±hh:mm>' -C <SHA_COMMIT>"
+		"code": "GIT_COMMITTER_DATE='<YYYY-MM-DDThh:mm:ss±hh:mm>' git commit --amend --date='<YYYY-MM-DDThh:mm:ss±hh:mm>' -C <COMMIT_ID>"
 	},
 	{
 		"name": "git-add",
@@ -67,14 +168,45 @@
 	{
 		"name": "add-and-create-commit",
 		"title": "Add folders and files to staging area and create a commit",
-		"description": "<p>This combination immediately creates a confirmation of all prepared changes and applies an online confirmation message.<br>It is a shortcut command for advanced users that combines the options <code>-a</code> or <code>--all</code> (adds the modified or deleted files to the stage, but not the newly created ones, since they have not been reported to git for tracking) and <code>-m</code> or <code>--message</code> (with the specified message).</p><p><a href='https://www.atlassian.com/es/git/tutorials/saving-changes/git-commit' target='_blank'>Know more</a></p>",
+		"description": "<p>If we've already done the first <code>git add</code> and <code>git commit</code> of a file, that is, git already knows about it, the next times we can use another command that includes both steps in a single command.</p><p>This combination immediately creates a confirmation of all prepared changes and applies an online confirmation message.<br>It is a shortcut command for advanced users that combines the options <code>-a</code> or <code>--all</code> (adds the modified or deleted files to the stage, but not the newly created ones, since they have not been reported to git for tracking) and <code>-m</code> or <code>--message</code> (with the specified message).</p><p><a href='https://www.atlassian.com/es/git/tutorials/saving-changes/git-commit' target='_blank'>Know more</a></p>",
 		"code": "git commit -am '<COMMIT_MESSAGE>'"
+	},
+	{
+		"name": "commit-particular-file-on-index",
+		"title": "Make a confirmation of only one file in the staging area",
+		"description": "<p>If you have several files added to the index zone and you regret it, because you only want to commit one particular file, you can select the file and commit only the changes to it.</p>",
+		"code": ["git <FILE_NAME>", "git commit -am <COMMIT_MESSAGE>"]
 	},
 	{
 		"name": "overwrite-last-commit",
 		"title": "Overwrite the last commit",
 		"description": "<p>If a commit message or file contains unclear, incorrect, sensitive, or missing information, you can correct it locally and send a new commit with a new message to GitHub. <br>Executing this command will open a text editor and ask you to edit the message and save the commit. This process will change the commit ID, creating a new commit that replaces the previous one.</p><p><a href='https://blog.kirei.io/buenas-pr%C3%A1cticas-para-los-mensajes-de-commit-en-git-a9fc43a83821' target='_blank'>Know more</a></p>",
 		"code": [["git commit --amend"], ["git commit --amend", "git push -f"]]
+	},
+	{
+		"name": "remove-commit",
+		"title": "Remove a commit",
+		"description": "<p>The <code>git reset</code> command is a tool for undoing changes. If you run it without indicating a commit SHA, it will only remove the changes added to the staging area.</p><p>It has 3 arguments that correspond to the 3 internal mechanisms of Git state management, the confirmation tree (HEAD), the staging area, and the working directory.</p><p>When we specify the type of reset we want with one of these arguments, we indicate the previous SHA commit to all those we want to delete<ul><li><code>--mixed</code>: It is the default option, it causes the same effect as executing<code>git reset</code>. Removes the commits after the selected commit. Remove the changes from the stage area, but keep the ones from the working directory.</li><li><code>--soft</code>: Removes the commits after the selected commit, but keeps the changes added to the stage area and keeps the changes made in the working directory.</li><li><code>--hard</code>: It is the most dangerous option because you lose all the changes made. Remove the commits after the selected commit, which also removes the changes from the stage area and the working directory.</li></ul></p>",
+		"code": [
+			["git reset --soft <idCommit>"],
+			["git reset --mixed <idCommit>"],
+			["git reset --hard <idCommit>"]
+		]
+	},
+	{
+		"name": "squashing-commits",
+		"title": "Squashing or merging of commits",
+		"description": "<p>Delete <em>N</em> commits with the argument <code>--soft</code> and then making a commit is usually called doing <strong>squashing</strong>, as it is like compacting n commits into one.</p>",
+		"code": [
+			"git reset --soft master~<NUMBER_LAST_COMMITS>",
+			"git commit -m '<COMMIT_MESSAGE>'"
+		]
+	},
+	{
+		"name": "revert-commit",
+		"title": "Reverses changes to a commit and creates a new one",
+		"description": "<p>It allows us to create a commit that reverses the changes of the indicated reference. In other words, if we indicate a commit that added one line and deleted two, we are now creating another commit that deletes the added line and adds the two deleted ones.<br>After running this command in the console it will ask us for the message and create a new commit</p>",
+		"code": "git revert <COMMIT_ID>"
 	},
 	{
 		"name": "exit-without-save",

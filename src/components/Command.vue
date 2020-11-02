@@ -99,6 +99,16 @@
 
 		&.is-selected {
 			background-color: $color-silver;
+
+			.command{
+				&__description {
+					/deep/ {
+						code {
+							background-color: $color-light;
+						}
+					}
+				}
+			}
 		}
 	}
 </style>
