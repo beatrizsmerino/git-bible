@@ -131,6 +131,31 @@
 		"code": [["git commit --amend"], ["git commit --amend", "git push -f"]]
 	},
 	{
+		"name": "remove-commit",
+		"title": "Remove a commit",
+		"description": "<p>The <code>git reset</code> command is a tool for undoing changes. If you run it without indicating a commit SHA, it will only remove the changes added to the staging area.</p><p>It has 3 arguments that correspond to the 3 internal mechanisms of Git state management, the confirmation tree (HEAD), the staging area, and the working directory.</p><p>When we specify the type of reset we want with one of these arguments, we indicate the previous SHA commit to all those we want to delete<ul><li><code>--mixed</code>: It is the default option, it causes the same effect as executing<code>git reset</code>. Removes the commits after the selected commit. Remove the changes from the stage area, but keep the ones from the working directory.</li><li><code>--soft</code>: Removes the commits after the selected commit, but keeps the changes added to the stage area and keeps the changes made in the working directory.</li><li><code>--hard</code>: It is the most dangerous option because you lose all the changes made. Remove the commits after the selected commit, which also removes the changes from the stage area and the working directory.</li></ul></p>",
+		"code": [
+			["git reset --soft <idCommit>"],
+			["git reset --mixed <idCommit>"],
+			["git reset --hard <idCommit>"]
+		]
+	},
+	{
+		"name": "squashing-commits",
+		"title": "Squashing or merging of commits",
+		"description": "<p>Delete <em>N</em> commits with the argument <code>--soft</code> and then making a commit is usually called doing <strong>squashing</strong>, as it is like compacting n commits into one.</p>",
+		"code": [
+			"git reset --soft master~<NUMBER_LAST_COMMITS>",
+			"git commit -m '<COMMIT_MESSAGE>'"
+		]
+	},
+	{
+		"name": "revert-commit",
+		"title": "Reverses changes to a commit and creates a new one",
+		"description": "<p>It allows us to create a commit that reverses the changes of the indicated reference. In other words, if we indicate a commit that added one line and deleted two, we are now creating another commit that deletes the added line and adds the two deleted ones.<br>After running this command in the console it will ask us for the message and create a new commit</p>",
+		"code": "git revert <COMMIT_ID>"
+	},
+	{
 		"name": "exit-without-save",
 		"title": "Exit without save from the text window",
 		"description": "<p>If you're inside the <strong>vi</strong> editor and you want to just come out from the text window without save the changes, typing the command and press <em>'enter'</em>.</p>",
