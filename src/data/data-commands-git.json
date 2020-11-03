@@ -211,13 +211,13 @@
 	{
 		"name": "exit-without-save",
 		"title": "Exit without save from the text window",
-		"description": "<p>If you're inside the <strong>vi</strong> editor and you want to just come out from the text window without save the changes, typing the command and press <em>'enter'</em>.</p>",
+		"description": "<p>If you're inside the <strong>Vi</strong> editor (text editor created for UNIX, whose improved version is called <strong>Vim</strong>) and you want to just come out from the text window without save the changes, typing the command and press <em>'enter'</em>.</p>",
 		"code": ":q!"
 	},
 	{
 		"name": "exit-and-save",
 		"title": "Exit and save from the text window",
-		"description": "<p>If you're inside the <strong>vi</strong> editor and you want come out from the text window and save the changes, typing the command and press <em>'enter'</em>.</p>",
+		"description": "<p>If you're inside the <strong>Vi</strong> editor (text editor created for UNIX, whose improved version is called <strong>Vim</strong>) and you want come out from the text window and save the changes, typing the command and press <em>'enter'</em>.</p>",
 		"code": ":wq"
 	},
 	{
