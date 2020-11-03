@@ -34,7 +34,17 @@
 		"name": "config-code-editor",
 		"title": "Add or edit the default editor",
 		"description": "<p>When you create a Git commit with <code>git commit –a</code>, the default editor that will be opened is <strong>Vim</strong>. This can be very confusing for people, as Vim is not an easy editor if you have never worked with it previously.</p><p>Luckily, Git allows you to change the editor that gets opened by default very easily!</p><p>There are two ways in which this can be done: the first is via the terminal with the next command and the second option it is edting the <code>.gitconfig</code> file.</p>",
-		"code": "git config --global core.editor <ROUTE_EDITOR_CODE>"
+		"code": "git config --global core.editor <PATH/TO/EDITOR_CODE>"
+	},
+	{
+		"name": "open-file-with-editor",
+		"title": "Open a project or file with the editor",
+		"description": "<p>Through the terminal you can open a file with your preferred code editor. These commands open a file with the SublimeText, Atom and Visual Studio Code editors.</p>",
+		"code": [
+			["subl <PATH/TO/FOLDER/FILE>"],
+			["atom <PATH/TO/FOLDER/FILE>"],
+			["code <PATH/TO/FOLDER/FILE>"]
+		]
 	},
 	{
 		"name": "change-autor-email-last-commits",
@@ -160,6 +170,28 @@
 		]
 	},
 	{
+		"name": "show-status-files",
+		"title": "Show the status of files in a git directory",
+		"description": "<p>Executing this command we can see the branch in which we are and the files contained in the stage along with its state (new/modified/deleted). It also warns us of files that are untracked by git (untracked) or files with conflicts.</p>",
+		"code": "git status"
+	},
+	{
+		"name": "remove-file-track",
+		"title": "Delete and tracking file",
+		"description": "<p>The <code>git rm</code> command is used to remove individual files or a set of files from a Git repository. Git won't delete files that have unsaved changes. Its main function is to remove the tracked files from the Git index. You can think of it as the opposite of what the <code>git add</code> command does.<br>It only acts on the current branch and the removal only affects the working directory areas and the staging area. The file deletion is not stored in the repository history until a new commit is created.</p><p><strong>Why use <code>git rm</code> instead of <code>rm</code></strong><br>With the <code>rm</code> command, a Git repository will recognize when it has run over a file that is being tracked, update the working directory to reflect the removal but not the staging area. You need to run an additional <code>git add</code> command in the deleted file paths to add the changes to the staging area. The <code>git rm</code> command acts as a shortcut as it will update the working directory and the test index with the removal.</p><p>The next commands do:<ul><li>Delete the selected file and git doesn't notice this change.</li><li>It only works if the file was already being tracked, i.e. if a <code>git add</code> and a <code>git commit</code> were executed. Delete the selected file, and add the changes to the staging area.</li><li>Removes the trace of the selected file from version control, without deleting the file, this is called an <strong>untracking file</strong>.</li></ul></p><p><a href='https://www.atlassian.com/es/git/tutorials/undoing-changes/git-rm'>Know more</a></p>",
+		"code": [
+			["rm <PATH/TO/FOLDER/FILE>"],
+			["git rm <PATH/TO/FOLDER/FILE>"],
+			["git rm --cached <PATH/TO/FOLDER/FILE>"]
+		]
+	},
+	{
+		"name": "rename-file-track",
+		"title": "Rename and tracking file",
+		"description": "<p>This command works the same as <code>git rm</code> command.</p><p>The next commands do:<ul><li>Modify the name of a file without the git adding it to the staging area.</li><li>Change the name of a file and have git track this change. After this, if we do a <code>git status</code> it will appear as renamed.</li></ul></p>",
+		"code": [["mv <OLD_FILE_NAME> <NEW_FILE_NAME>"],["git mv <OLD_FILE_NAME> <NEW_FILE_NAME>"]]
+	},
+	{
 		"name": "create-commit",
 		"title": "Create a commit with a message",
 		"description": "<p>Commits are created to capture the status of one or more project files at a particular time. They are a <strong>changeset</strong>, snapshots or milestones in the history of a git project. Each commit contains the date it was made, the changes of each file, the author information, a message describing the content of the commit, and a unique identifier (<code>SHA-1</code>) to reference this commit.</p><p>This command only includes modifications to tracked files (those that have been added with git add at some point in their history).</p>",
@@ -211,13 +243,13 @@
 	{
 		"name": "exit-without-save",
 		"title": "Exit without save from the text window",
-		"description": "<p>If you're inside the <strong>Vim</strong> editor and you want to just come out from the text window without save the changes, typing the command and press <em>'enter'</em>.</p>",
+		"description": "<p>If you're inside the <strong>Vi</strong> editor (text editor created for UNIX, whose improved version is called <strong>Vim</strong>) and you want to just come out from the text window without save the changes, typing the command and press <em>'enter'</em>.</p>",
 		"code": ":q!"
 	},
 	{
 		"name": "exit-and-save",
 		"title": "Exit and save from the text window",
-		"description": "<p>If you're inside the <strong>Vim</strong> editor and you want come out from the text window and save the changes, typing the command and press <em>'enter'</em>.</p>",
+		"description": "<p>If you're inside the <strong>Vi</strong> editor (text editor created for UNIX, whose improved version is called <strong>Vim</strong>) and you want come out from the text window and save the changes, typing the command and press <em>'enter'</em>.</p>",
 		"code": ":wq"
 	},
 	{

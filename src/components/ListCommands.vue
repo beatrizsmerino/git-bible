@@ -45,7 +45,7 @@
 			}
 		},
 		created() {
-			this.commandsFormatted = this.commands.filter(command => command.name !== "" && command.code !== "");
+			this.commandsFormatted = this.commands.filter(command => command.name !== "" && command.title !== "" && command.code !== "");
 		}
 	};
 </script>
