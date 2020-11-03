@@ -166,7 +166,8 @@
 			["git add --all"],
 			["git add -A"],
 			["git add ."],
-			["git add <PATH/TO/FOLDER/FILE> <PATH/TO/FOLDER/FILE>"]
+			["git add <PATH/TO/FOLDER/FILE>"],
+			["git add <PATH/TO/FOLDER/FILE_1> <PATH/TO/FOLDER/FILE_2>"]
 		]
 	},
 	{
@@ -178,7 +179,7 @@
 	{
 		"name": "remove-file-track",
 		"title": "Delete and tracking file",
-		"description": "<p>The <code>git rm</code> command is used to remove individual files or a set of files from a Git repository. Git won't delete files that have unsaved changes. Its main function is to remove the tracked files from the Git index. You can think of it as the opposite of what the <code>git add</code> command does.<br>It only acts on the current branch and the removal only affects the working directory areas and the staging area. The file deletion is not stored in the repository history until a new commit is created.</p><p><strong>Why use <code>git rm</code> instead of <code>rm</code></strong><br>With the <code>rm</code> command, a Git repository will recognize when it has run over a file that is being tracked, update the working directory to reflect the removal but not the staging area. You need to run an additional <code>git add</code> command in the deleted file paths to add the changes to the staging area. The <code>git rm</code> command acts as a shortcut as it will update the working directory and the test index with the removal.</p><p>The next commands do:<ul><li>Delete the selected file and git doesn't notice this change.</li><li>It only works if the file was already being tracked, i.e. if a <code>git add</code> and a <code>git commit</code> were executed. Delete the selected file, and add the changes to the staging area.</li><li>Removes the trace of the selected file from version control, without deleting the file, this is called an <strong>untracking file</strong>.</li></ul></p><p><a href='https://www.atlassian.com/es/git/tutorials/undoing-changes/git-rm'>Know more</a></p>",
+		"description": "<p>The <code>git rm</code> command is used to remove individual files or a set of files from a Git repository. Git won't delete files that have unsaved changes. Its main function is to remove the tracked files from the Git index. You can think of it as the opposite of what the <code>git add</code> command does.<br>It only acts on the current branch and the removal only affects the working directory areas and the staging area. The file deletion is not stored in the repository history until a new commit is created.</p><p><strong>Why use <code>git rm</code> instead of <code>rm</code></strong><br>With the <code>rm</code> command, a Git repository will recognize when it has run over a file that is being tracked, update the working directory to reflect the removal but not the staging area. You need to run an additional <code>git add</code> command in the deleted file paths to add the changes to the staging area. The <code>git rm</code> command acts as a shortcut as it will update the working directory and the test index with the removal.</p><p>The next commands do:<ul><li><code>rm</code>: Delete the selected file and git doesn't notice this change.</li><li><code>git rm </code>: It only works if the file was already being tracked, i.e. if a <code>git add</code> and a <code>git commit</code> were executed. Delete the selected file, and add the changes to the staging area.</li><li><code>git rm --cached</code>: Removes the trace of the selected file from version control, without deleting the file, this is called an <strong>untracking file</strong>.</li></ul></p><p><a href='https://www.atlassian.com/es/git/tutorials/undoing-changes/git-rm'>Know more</a></p>",
 		"code": [
 			["rm <PATH/TO/FOLDER/FILE>"],
 			["git rm <PATH/TO/FOLDER/FILE>"],
@@ -188,8 +189,11 @@
 	{
 		"name": "rename-file-track",
 		"title": "Rename and tracking file",
-		"description": "<p>This command works the same as <code>git rm</code> command.</p><p>The next commands do:<ul><li>Modify the name of a file without the git adding it to the staging area.</li><li>Change the name of a file and have git track this change. After this, if we do a <code>git status</code> it will appear as renamed.</li></ul></p>",
-		"code": [["mv <OLD_FILE_NAME> <NEW_FILE_NAME>"],["git mv <OLD_FILE_NAME> <NEW_FILE_NAME>"]]
+		"description": "<p>This command works the same as <code>git rm</code> command.</p><p>The next commands do:<ul><li><code>mv</code>: Modify the name of a file without the git adding it to the staging area.</li><li><code>git mv</code>: Change the name of a file and have git track this change. After this, if we do a <code>git status</code> it will appear as renamed.</li></ul></p>",
+		"code": [
+			["mv <OLD_FILE_NAME> <NEW_FILE_NAME>"],
+			["git mv <OLD_FILE_NAME> <NEW_FILE_NAME>"]
+		]
 	},
 	{
 		"name": "create-commit",
@@ -299,6 +303,15 @@
 		"code": "git branch <NEW_BRANCH_NAME>"
 	},
 	{
+		"name": "checkout-branch-path",
+		"title": "Checkout branch/path",
+		"description": "<p>With <code>--</code> is a way to tell Git to treat what follows <code>checkout</code> as a file and not as a branch. Suppose that you had both a file and a branch called <em>stuff</em>. Then the following command would seem ambiguous <code>git checkout stuff</code>,  because it is not clear whether you are asking to checkout a file or a branch. When you use it, it explicitly tell Git to checkout a file by that name/path</p><p>Note that in <code>git checkout &lt;NAME&gt;</code> is really meant for branches, but Git syntax is relaxed, and if Git can't find a branch, then it will look for a file.<br>This command made: <ul><li>If it's local branch or remote branch tracked, switch to it.</li><li>If it's a tracked path of a file, reset it, i.e. delete the unsaved changes from the working directory.</li><li>If it's a remote branch, create a tracking branch and switch to it.</li></ul></p><p>So in this case the following commands allow you to move a local branch or download it from the remote and reset a file:</p>",
+		"code": [
+			["git checkout <BRANCH_NAME>"],
+			["git checkout -- <FILE_NAME>"]
+		]
+	},
+	{
 		"name": "move-to-branch",
 		"title": "Move to the branch",
 		"description": "<p>When you try move to a local branch that does not exist, this command will search to see if there is a remote-tracking branch with a similar name. If so, it will create the local branch and set it up to track the remote-tracking branch.</p>",
@@ -314,10 +327,23 @@
 		]
 	},
 	{
+		"name": "extract-files-from-staging-area",
+		"title": "Extract files from the staging area",
+		"description": "<p>If I have already added the file with a <code>git add</code> to the index zone but don't want to commit it yet, and want to remove it from this zone, these are some ways to solve it:<ul><li><code>git reset <FILE_NAME></code>: If changes have been made and added to the staging area</li><li><code>git rm --cached <FILE_NAME></code>: If I have not launched a commit yet, and therefore the HEAD pointer has not been created</li><li><code>git reset HEAD <FILE_NAME></code>: If I've already launched my first commit, i.e. there's a HEAD pointer. Git moves between the commits always pointing to the last one created.</li></ul></p>",
+		"code": [
+			["git reset <FILE_NAME>"],
+			["git rm --cached <FILE_NAME>"],
+			["git reset HEAD <FILE_NAME>"]
+		]
+	},
+	{
 		"name": "rename-current-branch",
 		"title": "Rename current branch",
 		"description": "<p>It is possible that at some time, as with the commit messages, you may want to rename a branch.<br>With this command you can rename the local branch you are working on.</p><p>It has  optional parametters: <ul><li><code>--move</code> or <code>-m</code>: Move/rename a branch and the corresponding reflog.</li><li><code>-M</code>: It is a shortcut of <code>--delete --force</code></li></ul></p><p><a href='https://git-scm.com/docs/git-branch' target='_blank'>Know more</a></p>",
-		"code": "git branch -m <NEW_BRANCH_NAME>"
+		"code": [
+			["git branch -m <NEW_BRANCH_NAME>"],
+			["git branch -M <NEW_BRANCH_NAME>"]
+		]
 	},
 	{
 		"name": "rename-local-branch",
