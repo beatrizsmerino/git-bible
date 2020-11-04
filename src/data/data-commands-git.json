@@ -245,6 +245,37 @@
 		"code": "git revert <COMMIT_ID>"
 	},
 	{
+		"name": "add-stash",
+		"title": "Save changes on the stash area",
+		"description": "<p>Git has an area called the <strong>stash</strong> where you can temporarily store a snapshot of your changes without committing them to the repository. It’s separate from the working directory, the staging area, or the repository.<br> This functionality is useful when you’ve made changes to a branch that you aren’t ready to commit, but you need to switch to another branch. This saves your changes, that will be available from any branch in that repository and reverts the working directory to what it looked like for the latest commit.<br>Note that changes you want to stash need to be on tracked files. If you created a new file and try to stash your changes, you may get the error <em>'No local changes to save'</em>.</p><p>Snapshots are saved in the format <code>stash@{0}: BRANCH: SHA MESSAGE</code>. They will be saved with an identifier of type <code>stash@{0}</code>, where stash indicates that it is a snapshot and the number between the keys is the index of that stash. The number of the index grows as you create new snapshots and are ordered inversely, ie the smaller number will always be the last snapshot made. The branch in which the changes were made is indicated, and the identifier and message will be the same as the last commit we have in the repository.</p><p>By default, send all the files we have in the working directory and the staging area, except the untracked ones to the Stash zone. And it generates the message automatically. But there are several options that we can add to the command:<ul><li><code>--include-untracked</code> or <code>-u</code>: Add also the untracked files.</li><li><code>--all</code> or <code>-a</code>: Add also the untracked and ignored files (.gitignore).</li><li><code>--patch</code>: Git will not stash everything that is modified but will instead prompt you interactively which of the changes you would like to stash and which you would like to keep in your working directory.</li><li><code>push -m</code>: Allows us to specify a message for the commit we are sending to the stash.</li><li><code>save</code>: It is deprecated in favour of <code>push -m</code>.</li></ul></p><p><a href='https://www.freecodecamp.org/news/git-stash-explained/'>Know more</a></p>",
+		"code": [
+			["git stash"],
+			["git stash -u"],
+			["git stash -a"],
+			["git stash --patch"],
+			["git stash push -m '<STASH_MESSAGE>'"],
+			["git stash save '<STASH_MESSAGE>'"]
+		]
+	},
+	{
+		"name": "get-stash-list",
+		"title": "Get a list of saved stash",
+		"description": "<p>When you have a lot of snapshots saved, you'll want to see a list of all of them so you can select them. The message and id, which by default come from the confirmation before those changes, will help you differentiate them.<br>It is advisable to clean the stash or delete those snapshots that we do not need so as not to accumulate them.</p>",
+		"code": "git stash list"
+	},
+	{
+		"name": "get-stash",
+		"title": "Re-applying your stashed changes",
+		"description": "<p></p>",
+		"code": [["git stash pop"], ["git stash apply stash@{<STASH_NUMBER>}"]]
+	},
+	{
+		"name": "remove-stash",
+		"title": "Remove stash",
+		"description": "<p></p>",
+		"code": [["git stash clear"], ["git stash drop <COMMIT_ID>"]]
+	},
+	{
 		"name": "exit-without-save",
 		"title": "Exit without save from the text window",
 		"description": "<p>If you're inside the <strong>Vi</strong> editor (text editor created for UNIX, whose improved version is called <strong>Vim</strong>) and you want to just come out from the text window without save the changes, typing the command and press <em>'enter'</em>.</p>",
