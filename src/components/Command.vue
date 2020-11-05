@@ -100,7 +100,7 @@
 		&.is-selected {
 			background-color: $color-silver;
 
-			.command{
+			.command {
 				&__description {
 					/deep/ {
 						code {

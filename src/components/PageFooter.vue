@@ -8,7 +8,10 @@
 
 		<div>
 			<nav class="nav">
-				<router-link to="/bibliografy" class="nav__item">
+				<router-link
+					to="/bibliografy"
+					class="nav__item"
+				>
 					Bibliografy
 				</router-link>
 			</nav>

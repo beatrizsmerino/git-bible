@@ -3,7 +3,8 @@
 		<form
 			class="search-form"
 			method
-			action>
+			action
+		>
 			<div class="search-form__field">
 				<input
 					id="searchField"
@@ -11,7 +12,8 @@
 					type="text"
 					placeholder="Search command"
 					v-model="searchText"
-					v-on:change="checkScrollVertical"/>
+					v-on:change="checkScrollVertical"
+				/>
 				<i class="search-form__icon icon icon-search"></i>
 			</div>
 		</form>
@@ -19,17 +21,20 @@
 			<div
 				id="searchResultsInner"
 				class="search-results__inner"
-				v-on:scroll="checkScrollVertical">
+				v-on:scroll="checkScrollVertical"
+			>
 				<ul class="search-results__list">
 					<li
 						v-for="command in filteredList"
 						:key="command.id"
 						:id="command.name"
 						class="search-results__item"
-						:data-index="command.id">
+						:data-index="command.id"
+					>
 						<router-link
 							:to="`/commands-git/#${command.name}`"
-							class="search-results__link">
+							class="search-results__link"
+						>
 							<span class="text-ellipsis">
 								{{command.title}}
 							</span>
@@ -65,7 +70,7 @@
 				element.classList.add("is-scroll-end");
 				element.classList.remove("is-scroll-start");
 			},
-			isScrollBoth: function(element){
+			isScrollBoth: function (element) {
 				element.classList.add("is-scroll");
 				element.classList.remove("is-scroll-start");
 				element.classList.remove("is-scroll-end");
@@ -153,7 +158,7 @@
 		&__item {
 			text-align: left;
 
-			&:not(:last-child){
+			&:not(:last-child) {
 				margin-bottom: 1rem;
 			}
 		}

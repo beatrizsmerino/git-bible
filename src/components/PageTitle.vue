@@ -1,5 +1,8 @@
 <template>
-	<h1 class="page-title" v-if="$route.meta.title != 'Home'">
+	<h1
+		class="page-title"
+		v-if="$route.meta.title != 'Home'"
+	>
 		{{ $route.meta.title }}
 	</h1>
 </template>

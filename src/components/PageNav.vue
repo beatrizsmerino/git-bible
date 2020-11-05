@@ -1,33 +1,43 @@
 <template>
 	<div>
-		<nav class="nav" :class="{'is-open': isOpen}">
+		<nav
+			class="nav"
+			:class="{'is-open': isOpen}"
+		>
 			<ul class="nav__list">
 				<li class="nav__item">
 					<router-link
 						to="/"
-						class="nav__link">
+						class="nav__link"
+					>
 						Home
 					</router-link>
 				</li>
 				<li class="nav__item">
 					<router-link
 						to="/commands-git"
-						class="nav__link" :class="[currentPage.includes('commands-git/') ? isActive : '', 'nav__link']">
+						class="nav__link"
+						:class="[currentPage.includes('commands-git/') ? isActive : '', 'nav__link']"
+					>
 						Git
 					</router-link>
 				</li>
 				<li class="nav__item">
 					<router-link
 						to="/commands-git-flow"
-						class="nav__link">
+						class="nav__link"
+					>
 						Git Flow
 					</router-link>
 				</li>
 			</ul>
 
-			<button class="nav__button" v-on:click="openCloseNav">
+			<button
+				class="nav__button"
+				v-on:click="openCloseNav"
+			>
 				<i class="nav__icon">
-					<font-awesome-icon :icon="['fas', 'code-branch']"/>
+					<font-awesome-icon :icon="['fas', 'code-branch']" />
 				</i>
 			</button>
 		</nav>
@@ -45,13 +55,13 @@
 				isOpen: false
 			}
 		},
-		methods:{
-			openCloseNav: function(){
+		methods: {
+			openCloseNav: function () {
 				(this.isOpen == false) ? this.isOpen = true : this.isOpen = false;
 			}
 		},
 		computed: {
-			currentPage(){
+			currentPage() {
 				return this.$route.path;
 			}
 		},
@@ -65,7 +75,7 @@
 		display: flex;
 		align-items: center;
 
-		&__list{
+		&__list {
 			display: flex;
 			font-size: 2rem;
 			font-weight: 600;
@@ -91,8 +101,8 @@
 			}
 		}
 
-		&__link{
-            white-space: nowrap;
+		&__link {
+			white-space: nowrap;
 			color: $color-brand-2;
 
 			&.router-link-exact-active {
@@ -100,7 +110,7 @@
 			}
 		}
 
-		&__button{
+		&__button {
 			display: none;
 			appearance: none;
 			margin-left: 2rem;
@@ -115,15 +125,15 @@
 			}
 		}
 
-		&__icon{
+		&__icon {
 			font-size: 3rem;
 			color: $color-white;
 			pointer-events: none;
 		}
 
-		&.is-open{
-			.nav{
-				&__list{
+		&.is-open {
+			.nav {
+				&__list {
 					opacity: 1;
 					transform: translate(0, 0);
 				}

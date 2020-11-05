@@ -82,7 +82,7 @@
 			display: flex;
 			align-items: center;
 		}
-		
+
 		&__url-icon {
 			margin-right: 0.8rem;
 		}

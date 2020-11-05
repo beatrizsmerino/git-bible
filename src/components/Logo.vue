@@ -1,6 +1,12 @@
 <template>
-	<div class="logo" :class="theme">
-		<router-link to="/" class="logo__link">
+	<div
+		class="logo"
+		:class="theme"
+	>
+		<router-link
+			to="/"
+			class="logo__link"
+		>
 			<i class="logo__icon icon icon-git"></i>
 			<div class="logo__text">
 				<span class="logo__git">git</span>
@@ -36,7 +42,7 @@
 			font-size: 16vw;
 		}
 
-		&__link{
+		&__link {
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -72,7 +78,7 @@
 					color: $color-white;
 				}
 
-				&__git{
+				&__git {
 					color: $color-white;
 				}
 

@@ -1,5 +1,9 @@
 <template>
-	<div id="app" class="sticky__app" v-cloak>
+	<div
+		id="app"
+		class="sticky__app"
+		v-cloak
+	>
 		<div class="sticky__content">
 			<page-header></page-header>
 			<page-title></page-title>
@@ -72,12 +76,11 @@
 		}
 	}
 
-	.page-content{
+	.page-content {
 		width: 90%;
 		margin: 0 auto 9rem;
 
-		&__inner{
-
+		&__inner {
 		}
 	}
 </style>

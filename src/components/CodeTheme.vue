@@ -232,7 +232,7 @@
 			overflow-x: auto;
 		}
 
-		&__code-list{
+		&__code-list {
 			list-style: none;
 		}
 

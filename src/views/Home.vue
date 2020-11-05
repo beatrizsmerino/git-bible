@@ -1,8 +1,8 @@
 <template>
 	<div class="page-content">
 		<div class="page-content__inner">
-			<logo/>
-			<search/>
+			<logo />
+			<search />
 		</div>
 	</div>
 </template>
@@ -36,7 +36,7 @@
 			max-width: 80rem;
 			margin: 0 auto;
 
-			@include media('lg'){
+			@include media("lg") {
 				width: 90%;
 				max-width: 100%;
 			}

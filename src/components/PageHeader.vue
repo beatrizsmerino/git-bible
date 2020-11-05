@@ -1,7 +1,7 @@
 <template>
 	<header class="page-header">
-		<logo theme="logo--header logo--light"/>
-		<page-nav/>
+		<logo theme="logo--header logo--light" />
+		<page-nav />
 	</header>
 </template>
 
@@ -13,7 +13,7 @@
 
 	export default {
 		name: 'PageHeader',
-		components:{
+		components: {
 			Logo,
 			PageNav
 		}
