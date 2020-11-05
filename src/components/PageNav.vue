@@ -92,6 +92,7 @@
 		}
 
 		&__link{
+            white-space: nowrap;
 			color: $color-brand-2;
 
 			&.router-link-exact-active {
