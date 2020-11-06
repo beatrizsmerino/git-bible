@@ -41,7 +41,7 @@
 			textToCopy: String
 		},
 		methods: {
-			resetStatus: function(){
+			resetStatus: function () {
 				this.status = null;
 			},
 			onSuccess: function () {
@@ -115,11 +115,11 @@
 			opacity: 1;
 			transform: translate(-50%, -3rem) scale(1);
 		}
-		15%{
+		15% {
 			opacity: 1;
 			transform: translate(-50%, -3rem) scale(1.1);
 		}
-		20%{
+		20% {
 			opacity: 1;
 			transform: translate(-50%, -3rem) scale(1);
 		}

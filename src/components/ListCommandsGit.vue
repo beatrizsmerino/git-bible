@@ -1,5 +1,5 @@
 <template>
-	<list-commands :commands="commands"/>
+	<list-commands :commands="commands" />
 </template>
 
 
@@ -27,5 +27,4 @@
 
 
 <style lang="scss" scoped>
-	
 </style>

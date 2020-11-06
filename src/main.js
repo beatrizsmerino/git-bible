@@ -2,14 +2,15 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faLink, faCodeBranch, faClone } from '@fortawesome/free-solid-svg-icons';
+import { faLink, faCodeBranch, faClone, faTerminal } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText } from '@fortawesome/vue-fontawesome';
 import VueClipboard from 'vue-clipboard2';
 
 library.add(
 	faLink,
 	faCodeBranch,
-	faClone
+	faClone,
+	faTerminal
 );
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
