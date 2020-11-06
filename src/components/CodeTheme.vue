@@ -266,6 +266,10 @@
 			font-size: 1.56rem;
 			border-radius: 0.4rem;
 			overflow-x: auto;
+
+			@include media("sm") {
+				font-size: 1.3rem;
+			}
 		}
 
 		&__code-list {
