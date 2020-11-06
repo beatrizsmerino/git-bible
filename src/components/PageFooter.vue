@@ -2,7 +2,7 @@
 	<footer class="footer">
 		<div class="footer__copyright footer__item">
 			<p>
-				© Copyright 2019. Git Bible. @beatrizsmerino
+				© Copyright 2019-2020. Git Bible. @beatrizsmerino
 			</p>
 		</div>
 
