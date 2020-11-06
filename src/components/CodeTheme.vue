@@ -1,53 +1,65 @@
 <template>
 	<div>
-		<div class="code-theme">
-			<button-copy
-				class="code-theme__button-copy"
-				:textToCopy="codeFormatted"
-			/>
+		<div class="code-theme is-theme-light is-scroll is-scroll-start">
+			<div class="code-theme__header">
+				<p class="code-theme__type">
+					<i class="code-theme__type-icon">
+						<font-awesome-icon :icon="['fas', 'terminal']" />
+					</i>
+					Shell Bash
+				</p>
+				<div class="code-theme__buttons">
+					<button-copy
+						class="code-theme__button-copy code-theme__button"
+						:textToCopy="codeFormatted"
+					/>
 
-			<label
-				class="code-theme__switch switch-theme"
-				v-on:change="switchTheme"
-			>
-				<input
-					class="switch-theme__field"
-					type="checkbox"
-				>
-				<span class="switch-theme__bullet switch-theme__bullet--rounded"></span>
-			</label>
-
-			<code
-				class="code-theme__code"
-				v-on:scroll="checkScrollHorizontal"
-				v-if="checkLines(code) === 2"
-			>
-				<ul class="code-theme__code-list">
-					<li
-						class="code-theme__code-item"
-						v-for="(line, index) in code"
-						:key="`line-${index}`"
+					<label
+						class="switch-theme code-theme__button-switch code-theme__button"
+						v-on:change="switchTheme"
 					>
-						{{code[index]}}
-					</li>
-				</ul>
-			</code>
+						<input
+							class="switch-theme__field"
+							type="checkbox"
+						>
+						<span class="switch-theme__bullet switch-theme__bullet--rounded"></span>
+					</label>
+				</div>
+			</div>
 
-			<code
-				class="code-theme__code"
-				v-on:scroll="checkScrollHorizontal"
-				v-else-if="checkLines(code) === 1"
-			>
-				{{code[0]}}
-			</code>
+			<div class="code-theme__content">
+				<code
+					class="code-theme__code"
+					v-on:scroll="checkScrollHorizontal"
+					v-if="checkLines(code) === 2"
+				>
+					<ul class="code-theme__code-list">
+						<li
+							class="code-theme__code-item"
+							v-for="(line, index) in code"
+							:key="`line-${index}`"
+						>
+							{{code[index]}}
+						</li>
+					</ul>
+				</code>
 
-			<code
-				class="code-theme__code"
-				v-on:scroll="checkScrollHorizontal"
-				v-else
-			>
-				{{code}}
-			</code>
+				<code
+					class="code-theme__code"
+					v-on:scroll="checkScrollHorizontal"
+					v-else-if="checkLines(code) === 1"
+				>
+					{{code[0]}}
+				</code>
+
+				<code
+					class="code-theme__code"
+					v-on:scroll="checkScrollHorizontal"
+					v-else
+				>
+					{{code}}
+				</code>
+			</div>
 		</div>
 	</div>
 </template>
@@ -77,7 +89,7 @@
 				const $thisBoxScrollLeft = $thisBox.scrollLeft;
 				const $thisBoxScrollWidth = $thisBox.scrollWidth;
 
-				const $thisBoxParent = $thisBox.parentNode;
+				const $thisBoxParent = $thisBox.parentNode.parentNode;
 				$thisBoxParent.classList.add("is-scroll");
 
 				if ($thisBoxScrollLeft === 0) {
@@ -93,7 +105,7 @@
 			},
 			switchTheme: function (event) {
 				const $thisSwitchThemeField = event.target;
-				const $thisCodeTheme = $thisSwitchThemeField.parentNode.parentNode;
+				const $thisCodeTheme = $thisSwitchThemeField.parentNode.parentNode.parentNode.parentNode;
 
 				if ($thisCodeTheme && $thisSwitchThemeField.checked) {
 					$thisCodeTheme.classList.remove("is-theme-light");
@@ -200,6 +212,7 @@
 	.code-theme {
 		width: 100%;
 		min-height: 5rem;
+		padding: 1.6rem 1.6rem 0;
 		position: relative;
 		white-space: nowrap;
 		font-weight: 600;
@@ -207,42 +220,48 @@
 		border-radius: 0.5rem;
 		background-color: $color-white;
 
-		&:after {
-			content: "";
-			display: inline-block;
-			width: 14rem;
-			height: 100%;
-			position: absolute;
-			top: 0;
-			right: 0;
-			z-index: 1;
-			border-radius: 0 0.4rem 0.4rem 0;
-			background: $color-white;
-			background: linear-gradient(
-				90deg,
-				rgba($color-white, 0) 0%,
-				rgba($color-white, 1) 20%,
-				rgba($color-white, 1) 80%
-			);
+		&__header {
+			margin-bottom: 1.8rem;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
 		}
 
-		&__switch {
-			position: absolute;
-			top: 0.8rem;
-			right: 0.8rem;
-			z-index: 2;
+		&__type {
+			font-size: 1.5rem;
+			font-weight: 300;
+		}
+
+		&__type-icon {
+			font-size: 0.9rem;
+		}
+
+		&__buttons {
+			display: flex;
+			align-items: center;
+		}
+
+		&__button {
+			position: relative;
+
+			&:not(:last-child) {
+				margin-right: 0.5rem;
+			}
+		}
+
+		&__button-switch {
 		}
 
 		&__button-copy {
-			position: absolute;
-			top: 0.8rem;
-			right: 6rem;
-			z-index: 2;
+		}
+
+		&__content {
+			position: relative;
 		}
 
 		&__code {
-			width: calc(100% - 10rem);
-			padding: 1.6rem;
+			width: 100%;
+			padding-bottom: 1.6rem;
 			display: block;
 			font-size: 1.56rem;
 			border-radius: 0.4rem;
@@ -254,52 +273,49 @@
 		}
 
 		&.is-scroll {
-			&:before,
-			&:after {
-				content: "";
-				display: inline-block;
-				width: 3rem;
-				height: 100%;
-				position: absolute;
-				top: 0;
-				z-index: 1;
-			}
+			.code-theme {
+				&__content {
+					&:before,
+					&:after {
+						content: "";
+						display: inline-block;
+						width: 3rem;
+						height: 100%;
+						position: absolute;
+						top: 0;
+						z-index: 1;
+					}
 
-			&:before {
-				left: 0;
-				border-radius: 0.4rem 0 0 0.4rem;
-				background: $color-white;
-				background: linear-gradient(
-					90deg,
-					rgba($color-white, 1) 0%,
-					rgba($color-white, 1) 20%,
-					rgba($color-white, 0) 80%
-				);
-			}
+					&:before {
+						left: 0;
+						border-radius: 0.4rem 0 0 0.4rem;
+					}
 
-			&:after {
-				width: 14rem;
-				right: 0;
-				border-radius: 0 0.4rem 0.4rem 0;
-				background: $color-white;
-				background: linear-gradient(
-					90deg,
-					rgba($color-white, 0) 0%,
-					rgba($color-white, 1) 20%,
-					rgba($color-white, 1) 80%
-				);
+					&:after {
+						right: 0;
+						border-radius: 0 0.4rem 0.4rem 0;
+					}
+				}
 			}
 		}
 
 		&.is-scroll-start {
-			&:before {
-				display: none;
+			.code-theme {
+				&__content {
+					&:before {
+						display: none;
+					}
+				}
 			}
 		}
 
 		&.is-scroll-end {
-			&:after {
-				display: none;
+			.code-theme {
+				&__content {
+					&:after {
+						display: none;
+					}
+				}
 			}
 		}
 
@@ -307,27 +323,28 @@
 			color: $color-brand-3;
 			background-color: $color-white;
 
-			&:before {
-				left: 0;
-				background: $color-white;
-				background: linear-gradient(
-					90deg,
-					rgba($color-white, 1) 0%,
-					rgba($color-white, 1) 20%,
-					rgba($color-white, 0) 80%
-				);
-			}
+			.code-theme {
+				&__content {
+					&:before {
+						background: $color-white;
+						background: linear-gradient(
+							90deg,
+							rgba($color-white, 1) 0%,
+							rgba($color-white, 1) 40%,
+							rgba($color-white, 0) 80%
+						);
+					}
 
-			&:after {
-				width: 14rem;
-				right: 0;
-				background: $color-white;
-				background: linear-gradient(
-					90deg,
-					rgba($color-white, 0) 0%,
-					rgba($color-white, 1) 20%,
-					rgba($color-white, 1) 80%
-				);
+					&:after {
+						background: $color-white;
+						background: linear-gradient(
+							90deg,
+							rgba($color-white, 0) 0%,
+							rgba($color-white, 1) 40%,
+							rgba($color-white, 1) 80%
+						);
+					}
+				}
 			}
 		}
 
@@ -335,24 +352,28 @@
 			color: $color-brand-1;
 			background-color: $color-brand-2;
 
-			&:before {
-				background: $color-brand-2;
-				background: linear-gradient(
-					90deg,
-					rgba($color-brand-2, 1) 0%,
-					rgba($color-brand-2, 1) 20%,
-					rgba($color-brand-2, 0) 80%
-				);
-			}
+			.code-theme {
+				&__content {
+					&:before {
+						background: $color-brand-2;
+						background: linear-gradient(
+							90deg,
+							rgba($color-brand-2, 1) 0%,
+							rgba($color-brand-2, 1) 40%,
+							rgba($color-brand-2, 0) 80%
+						);
+					}
 
-			&:after {
-				background: $color-brand-2;
-				background: linear-gradient(
-					90deg,
-					rgba($color-brand-2, 0) 0%,
-					rgba($color-brand-2, 1) 20%,
-					rgba($color-brand-2, 1) 80%
-				);
+					&:after {
+						background: $color-brand-2;
+						background: linear-gradient(
+							90deg,
+							rgba($color-brand-2, 0) 0%,
+							rgba($color-brand-2, 1) 40%,
+							rgba($color-brand-2, 1) 80%
+						);
+					}
+				}
 			}
 		}
 	}
