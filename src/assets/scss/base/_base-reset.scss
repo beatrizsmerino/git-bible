@@ -2,10 +2,6 @@
 // RESET
 // ------------------
 
-
-
-
-
 * {
 	&,
 	&:before,
@@ -16,11 +12,11 @@
 	}
 }
 
-html{
+html {
 	font-size: 10px;
 }
 
-body{
+body {
 	-webkit-font-smoothing: antialiased;
 	font-family: sans-serif;
 	font-size: 1rem;
@@ -115,18 +111,12 @@ video {
 	outline: 0;
 }
 
-
-
-
 // FONT
 // =================================================
 textarea,
 address {
 	font-style: normal;
 }
-
-
-
 
 // TEXT
 // =================================================
@@ -156,9 +146,6 @@ table {
 	width: 100%;
 }
 
-
-
-
 // IMAGE
 // =================================================
 img {
@@ -167,9 +154,6 @@ img {
 	vertical-align: middle;
 	display: block;
 }
-
-
-
 
 // FORM
 // =================================================
