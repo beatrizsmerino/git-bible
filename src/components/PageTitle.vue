@@ -22,7 +22,12 @@
 		margin: 7rem 0 3.2rem;
 		text-align: center;
 		font-size: 4.8rem;
-		line-height: 1.5;
+		line-height: 100%;
 		color: $color-brand-1;
+
+		@include media("md") {
+			margin: 4rem 0 3.5rem;
+			font-size: 3.5rem;
+		}
 	}
 </style>

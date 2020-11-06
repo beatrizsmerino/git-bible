@@ -4,7 +4,7 @@
 		class="sticky__app"
 		v-cloak
 	>
-		<div class="sticky__content">
+		<div class="page-content__wrapper sticky__content">
 			<page-header></page-header>
 			<page-title></page-title>
 			<router-view />
@@ -134,7 +134,6 @@
 		}
 
 		&__content {
-			margin-top: 9rem;
 			flex: 1 0 auto;
 		}
 
@@ -145,7 +144,15 @@
 
 	.page-content {
 		width: 90%;
-		margin: 0 auto 9rem;
+		margin: 0 auto 5rem;
+
+		&__wrapper {
+			margin-top: 9rem;
+
+			@include media("sm") {
+				margin-top: 8rem;
+			}
+		}
 
 		&__inner {
 		}

@@ -117,7 +117,7 @@
 
 <style lang="scss" scoped>
 	.search-form {
-		margin: 2rem auto 0;
+		margin: 0 auto;
 
 		&__field {
 			position: relative;

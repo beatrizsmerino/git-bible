@@ -35,5 +35,10 @@
 		left: 0;
 		z-index: 999;
 		background-color: $color-brand-1;
+
+		@include media("sm") {
+			height: 8rem;
+			padding: 0.5rem 5%;
+		}
 	}
 </style>
