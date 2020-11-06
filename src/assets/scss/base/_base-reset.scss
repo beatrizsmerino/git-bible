@@ -131,14 +131,14 @@ a {
 }
 
 p {
-	margin-bottom: 10px;
-
-	&:only-child {
-		margin-bottom: 0;
+	line-height: 130%;
+	
+	&:not(:last-child) {
+		margin-bottom: 1rem;
 	}
 
-	&+p:not(:last-child) {
-		margin-bottom: 10px;
+	&:only-of-type {
+		margin-bottom: 0;
 	}
 }
 

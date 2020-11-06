@@ -47,6 +47,11 @@
 			color: $color-brand-3;
 			background-color: $color-light;
 
+			@include media("sm") {
+				padding: 1.5rem;
+				font-size: 1.5rem;
+			}
+
 			&:hover {
 				color: $color-brand-2;
 				background-color: $color-silver;
@@ -55,6 +60,10 @@
 
 		&__description {
 			color: $color-brand-2;
+
+			@include media("sm") {
+				margin-bottom: 0.5rem;
+			}
 		}
 
 		&__url {
@@ -64,6 +73,11 @@
 
 		&__url-icon {
 			margin-right: 0.8rem;
+
+			@include media("sm") {
+				margin-right: 0.5rem;
+				font-size: 1.2rem;
+			}
 		}
 
 		&__url-text {
