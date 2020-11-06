@@ -35,7 +35,7 @@
 							:to="`/commands-git/#${command.name}`"
 							class="search-results__link"
 						>
-							<span class="text-ellipsis">
+							<span class="search-results__text text-ellipsis">
 								{{command.title}}
 							</span>
 						</router-link>
@@ -104,7 +104,7 @@
 		},
 		computed: {
 			filteredList: function () {
-				return this.commands.filter(command => command.title.includes(this.searchText));
+				return this.commands.filter(command => command.title.toLowerCase().includes(this.searchText.toLowerCase()));
 			}
 		},
 		created() {
@@ -152,6 +152,7 @@
 		}
 
 		&__list {
+			width: 100%;
 			list-style: none;
 		}
 
@@ -166,7 +167,9 @@
 		&__link {
 			width: 100%;
 			height: 5rem;
+			margin: 0 auto;
 			padding: 1.3rem;
+			display: inline-block;
 			color: $color-brand-3;
 			background-color: $color-light;
 			border-bottom: 0.5rem solid $color-silver;
@@ -180,6 +183,10 @@
 					}
 				}
 			}
+		}
+
+		&__text{
+			width: 100%;
 		}
 
 		&.is-scroll {
