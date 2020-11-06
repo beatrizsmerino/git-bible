@@ -1,7 +1,17 @@
 <template>
 	<ul class="list-commands">
-		<li class="list-commands__item" v-for="(command, index) in commandsFormatted" :key="`command-${index}`" :ref="command.name" >
-			<command :dataCommand="command" :id="command.name" :data-index="index" :class="{'is-selected': command.name === anchorName}"/>
+		<li
+			class="list-commands__item"
+			v-for="(command, index) in commandsFormatted"
+			:key="`command-${index}`"
+			:ref="command.name"
+		>
+			<command
+				:dataCommand="command"
+				:id="command.name"
+				:data-index="index"
+				:class="{'is-selected': command.name === anchorName}"
+			/>
 		</li>
 	</ul>
 </template>
@@ -26,9 +36,9 @@
 			};
 		},
 		methods: {
-			scrollAnchor: function($thisAnchor) {
+			scrollAnchor: function ($thisAnchor) {
 				setTimeout(() => {
-					if($thisAnchor !== undefined){
+					if ($thisAnchor !== undefined) {
 						let $thisAnchorTop = $thisAnchor[0].offsetTop;
 						window.scrollTo({
 							left: 0,
@@ -39,8 +49,8 @@
 				}, 100);
 			}
 		},
-		mounted(){
-			if(this.anchorName){
+		mounted() {
+			if (this.anchorName) {
 				this.scrollAnchor(this.$refs[this.anchorName]);
 			}
 		},
@@ -55,8 +65,8 @@
 	.list-commands {
 		list-style: none;
 
-		&__item{
-			&:not(:last-child){
+		&__item {
+			&:not(:last-child) {
 				margin-bottom: 3rem;
 			}
 		}

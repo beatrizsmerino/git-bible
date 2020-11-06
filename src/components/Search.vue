@@ -3,7 +3,8 @@
 		<form
 			class="search-form"
 			method
-			action>
+			action
+		>
 			<div class="search-form__field">
 				<input
 					id="searchField"
@@ -11,7 +12,8 @@
 					type="text"
 					placeholder="Search command"
 					v-model="searchText"
-					v-on:change="checkScrollVertical"/>
+					v-on:change="checkScrollVertical"
+				/>
 				<i class="search-form__icon icon icon-search"></i>
 			</div>
 		</form>
@@ -19,18 +21,21 @@
 			<div
 				id="searchResultsInner"
 				class="search-results__inner"
-				v-on:scroll="checkScrollVertical">
+				v-on:scroll="checkScrollVertical"
+			>
 				<ul class="search-results__list">
 					<li
 						v-for="command in filteredList"
 						:key="command.id"
 						:id="command.name"
 						class="search-results__item"
-						:data-index="command.id">
+						:data-index="command.id"
+					>
 						<router-link
 							:to="`/commands-git/#${command.name}`"
-							class="search-results__link">
-							<span class="text-ellipsis">
+							class="search-results__link"
+						>
+							<span class="search-results__text text-ellipsis">
 								{{command.title}}
 							</span>
 						</router-link>
@@ -65,7 +70,7 @@
 				element.classList.add("is-scroll-end");
 				element.classList.remove("is-scroll-start");
 			},
-			isScrollBoth: function(element){
+			isScrollBoth: function (element) {
 				element.classList.add("is-scroll");
 				element.classList.remove("is-scroll-start");
 				element.classList.remove("is-scroll-end");
@@ -99,7 +104,7 @@
 		},
 		computed: {
 			filteredList: function () {
-				return this.commands.filter(command => command.title.includes(this.searchText));
+				return this.commands.filter(command => command.title.toLowerCase().includes(this.searchText.toLowerCase()));
 			}
 		},
 		created() {
@@ -112,7 +117,7 @@
 
 <style lang="scss" scoped>
 	.search-form {
-		margin: 2rem auto 0;
+		margin: 0 auto;
 
 		&__field {
 			position: relative;
@@ -147,13 +152,14 @@
 		}
 
 		&__list {
+			width: 100%;
 			list-style: none;
 		}
 
 		&__item {
 			text-align: left;
 
-			&:not(:last-child){
+			&:not(:last-child) {
 				margin-bottom: 1rem;
 			}
 		}
@@ -161,7 +167,9 @@
 		&__link {
 			width: 100%;
 			height: 5rem;
+			margin: 0 auto;
 			padding: 1.3rem;
+			display: inline-block;
 			color: $color-brand-3;
 			background-color: $color-light;
 			border-bottom: 0.5rem solid $color-silver;
@@ -175,6 +183,10 @@
 					}
 				}
 			}
+		}
+
+		&__text{
+			width: 100%;
 		}
 
 		&.is-scroll {

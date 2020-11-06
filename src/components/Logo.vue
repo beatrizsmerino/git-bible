@@ -1,6 +1,12 @@
 <template>
-	<div class="logo" :class="theme">
-		<router-link to="/" class="logo__link">
+	<div
+		class="logo"
+		:class="theme"
+	>
+		<router-link
+			to="/"
+			class="logo__link"
+		>
 			<i class="logo__icon icon icon-git"></i>
 			<div class="logo__text">
 				<span class="logo__git">git</span>
@@ -26,17 +32,10 @@
 
 <style lang="scss">
 	.logo {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		display: inline-block;
 		font-family: "Adelle Bold", "Georgia", "Times New Roman", serif;
-		font-size: 11.2rem;
 
-		@include media("md") {
-			font-size: 16vw;
-		}
-
-		&__link{
+		&__link {
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -72,7 +71,7 @@
 					color: $color-white;
 				}
 
-				&__git{
+				&__git {
 					color: $color-white;
 				}
 
@@ -85,8 +84,37 @@
 		&--header {
 			font-size: 5rem;
 
+			.logo {
+				&__icon {
+					font-size: 4rem;
+				}
+
+				&__text {
+					@include media("sm") {
+						display: none;
+					}
+				}
+			}
+		}
+
+		&--home {
+			margin-bottom: 2rem;
+			font-size: 11.2rem;
+
+			@include media("md") {
+				font-size: 10rem;
+			}
+
 			@include media("sm") {
-				font-size: 4rem;
+				font-size: 16vw;
+			}
+
+			@include media("xs") {
+				margin-top: 4rem;
+			}
+
+			@include media("md", $dimension: "height") {
+				margin-top: 4rem;
 			}
 		}
 	}

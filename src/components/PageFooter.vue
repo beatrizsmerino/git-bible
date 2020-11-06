@@ -1,14 +1,17 @@
 <template>
 	<footer class="footer">
-		<div>
+		<div class="footer__copyright footer__item">
 			<p>
 				© Copyright 2019. Git Bible. @beatrizsmerino
 			</p>
 		</div>
 
-		<div>
+		<div class="footer__nav footer__item">
 			<nav class="nav">
-				<router-link to="/bibliografy" class="nav__item">
+				<router-link
+					to="/bibliografy"
+					class="nav__item"
+				>
 					Bibliografy
 				</router-link>
 			</nav>
@@ -34,7 +37,21 @@
 		color: $color-white;
 		font-size: 1.6rem;
 		background-color: $color-brand-2-light;
+
+		@include media("sm") {
+			text-align: center;
+			flex-direction: column-reverse;
+		}
+
+		&__item{
+			&:not(:first-child){
+				@include media("sm") {
+					margin-bottom: 0.5rem;
+				}
+			}
+		}
 	}
+
 	a {
 		color: $color-brand-2;
 	}
