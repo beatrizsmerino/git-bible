@@ -20,7 +20,7 @@
 			<code
 				class="code-theme__code"
 				v-on:scroll="checkScrollHorizontal"
-				v-if="typeof code == 'object'"
+				v-if="checkLines(code) === 2"
 			>
 				<ul class="code-theme__code-list">
 					<li
@@ -31,6 +31,14 @@
 						{{code[index]}}
 					</li>
 				</ul>
+			</code>
+
+			<code
+				class="code-theme__code"
+				v-on:scroll="checkScrollHorizontal"
+				v-else-if="checkLines(code) === 1"
+			>
+				{{code[0]}}
 			</code>
 
 			<code
@@ -93,6 +101,15 @@
 				} else {
 					$thisCodeTheme.classList.remove("is-theme-dark");
 					$thisCodeTheme.classList.add("is-theme-light");
+				}
+			},
+			checkLines(codeText) {
+				if (Array.isArray(codeText) && codeText.length == 1) {
+					return 1;
+				} else if (Array.isArray(codeText) && codeText.length >= 1) {
+					return 2;
+				} else {
+					return 0;
 				}
 			},
 			convertArrayToStringLines(codeText) {
