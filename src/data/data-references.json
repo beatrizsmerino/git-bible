@@ -54,8 +54,21 @@
 	{
 		"url": "https://www.git-tower.com/learn/git/faq/change-author-name-email/",
 		"description": "How can I change the author name / email of a commit?"
-	},{
+	},
+	{
 		"url": "https://www.runroom.com/realworld/git-stash",
 		"description": "El comando stash para cambios rápidos en un proyecto"
+	},
+	{
+		"url": "https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase",
+		"description": "Rewriting history: git rebase"
+	},
+	{
+		"url": "https://www.runroom.com/realworld/comandos-de-git-rebase",
+		"description": "Comandos de Git: Rebase"
+	},
+	{
+		"url": "https://www.atlassian.com/git/tutorials/merging-vs-rebasing",
+		"description": "Merging vs. Rebasing"
 	}
 ]
