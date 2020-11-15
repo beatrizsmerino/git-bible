@@ -179,7 +179,7 @@
 	{
 		"name": "remove-file-track",
 		"title": "Delete and tracking file",
-		"description": "<p>The <code>git rm</code> command is used to remove individual files or a set of files from a Git repository. Git won't delete files that have unsaved changes. Its main function is to remove the tracked files from the Git index. You can think of it as the opposite of what the <code>git add</code> command does.<br>It only acts on the current branch and the removal only affects the working directory areas and the staging area. The file deletion is not stored in the repository history until a new commit is created.</p><p><strong>Why use <code>git rm</code> instead of <code>rm</code></strong><br>With the <code>rm</code> command, a Git repository will recognize when it has run over a file that is being tracked, update the working directory to reflect the removal but not the staging area. You need to run an additional <code>git add</code> command in the deleted file paths to add the changes to the staging area. The <code>git rm</code> command acts as a shortcut as it will update the working directory and the test index with the removal.</p><p>The next commands do:<ul><li><code>rm</code>: Delete the selected file and git doesn't notice this change.</li><li><code>git rm </code>: It only works if the file was already being tracked, i.e. if a <code>git add</code> and a <code>git commit</code> were executed. Delete the selected file, and add the changes to the staging area.</li><li><code>git rm --cached</code>: Removes the trace of the selected file from version control, without deleting the file, this is called an <strong>untracking file</strong>.</li></ul></p><p><a href='https://www.atlassian.com/es/git/tutorials/undoing-changes/git-rm'>Know more</a></p>",
+		"description": "<p>The <code>git rm</code> command is used to remove individual files or a set of files from a Git repository. Git won't delete files that have unsaved changes. Its main function is to remove the tracked files from the Git index. You can think of it as the opposite of what the <code>git add</code> command does.<br>It only acts on the current branch and the removal only affects the working directory areas and the staging area. The file deletion is not stored in the repository history until a new commit is created.</p><p><strong>Why use <code>git rm</code> instead of <code>rm</code></strong><br>With the <code>rm</code> command, a Git repository will recognize when it has run over a file that is being tracked, update the working directory to reflect the removal but not the staging area. You need to run an additional <code>git add</code> command in the deleted file paths to add the changes to the staging area. The <code>git rm</code> command acts as a shortcut as it will update the working directory and the test index with the removal.</p><p>The next commands do:<ul><li><code>rm</code>: Delete the selected file and git doesn't notice this change.</li><li><code>git rm </code>: It only works if the file was already being tracked, i.e. if a <code>git add</code> and a <code>git commit</code> were executed. Delete the selected file, and add the changes to the staging area.</li><li><code>git rm --cached</code>: Removes the trace of the selected file from version control, without deleting the file, this is called an <strong>untracking file</strong>.</li></ul></p><p><a href='https://www.atlassian.com/es/git/tutorials/undoing-changes/git-rm' target='_blank'>Know more</a></p>",
 		"code": [
 			["rm <PATH/TO/FOLDER/FILE>"],
 			["git rm <PATH/TO/FOLDER/FILE>"],
@@ -247,7 +247,7 @@
 	{
 		"name": "add-stash",
 		"title": "Save changes on the stash area",
-		"description": "<p>Git has an area called the <strong>stash</strong> where you can temporarily store a snapshot of your changes without committing them to the repository. It’s separate from the working directory, the staging area, or the repository.<br> This functionality is useful when you’ve made changes to a branch that you aren’t ready to commit, but you need to switch to another branch. This saves your changes, that will be available from any branch in that repository and reverts the working directory to what it looked like for the latest commit.<br>Note that changes you want to stash need to be on tracked files. If you created a new file and try to stash your changes, you may get the error <em>'No local changes to save'</em>.</p><p>Snapshots are saved in the format <code>stash@{0}: BRANCH: SHA MESSAGE</code>. They will be saved with an identifier of type <code>stash@{0}</code>, where stash indicates that it is a snapshot and the number between the keys is the index of that stash. The number of the index grows as you create new snapshots and are ordered inversely, ie the smaller number will always be the last snapshot made. The branch in which the changes were made is indicated, and the identifier and message will be the same as the last commit we have in the repository.</p><p>By default, send all the files we have in the working directory and the staging area, except the untracked ones to the Stash zone. And it generates the message automatically. But there are several options that we can add to the command:<ul><li><code>--include-untracked</code> or <code>-u</code>: Add also the untracked files.</li><li><code>--all</code> or <code>-a</code>: Add also the untracked and ignored files (.gitignore).</li><li><code>--patch</code>: Git will not stash everything that is modified but will instead prompt you interactively which of the changes you would like to stash and which you would like to keep in your working directory.</li><li><code>push -m</code>: Allows us to specify a message for the commit we are sending to the stash.</li><li><code>save</code>: It is deprecated in favour of <code>push -m</code>.</li></ul></p><p><a href='https://www.freecodecamp.org/news/git-stash-explained/'>Know more</a></p>",
+		"description": "<p>Git has an area called the <strong>stash</strong> where you can temporarily store a snapshot of your changes without committing them to the repository. It’s separate from the working directory, the staging area, or the repository.<br> This functionality is useful when you’ve made changes to a branch that you aren’t ready to commit, but you need to switch to another branch. This saves your changes, that will be available from any branch in that repository and reverts the working directory to what it looked like for the latest commit.<br>Note that changes you want to stash need to be on tracked files. If you created a new file and try to stash your changes, you may get the error <em>'No local changes to save'</em>.</p><p>Snapshots are saved in the format <code>stash@{0}: BRANCH: SHA MESSAGE</code>. They will be saved with an identifier of type <code>stash@{0}</code>, where stash indicates that it is a snapshot and the number between the keys is the index of that stash. The number of the index grows as you create new snapshots and are ordered inversely, ie the smaller number will always be the last snapshot made. The branch in which the changes were made is indicated, and the identifier and message will be the same as the last commit we have in the repository.</p><p>By default, send all the files we have in the working directory and the staging area, except the untracked ones to the Stash zone. And it generates the message automatically. But there are several options that we can add to the command:<ul><li><code>--include-untracked</code> or <code>-u</code>: Add also the untracked files.</li><li><code>--all</code> or <code>-a</code>: Add also the untracked and ignored files (.gitignore).</li><li><code>--patch</code>: Git will not stash everything that is modified but will instead prompt you interactively which of the changes you would like to stash and which you would like to keep in your working directory.</li><li><code>push -m</code>: Allows us to specify a message for the commit we are sending to the stash.</li><li><code>save</code>: It is deprecated in favour of <code>push -m</code>.</li></ul></p><p><a href='https://www.freecodecamp.org/news/git-stash-explained/' target='_blank'>Know more</a></p>",
 		"code": [
 			["git stash"],
 			["git stash -u"],
@@ -266,14 +266,44 @@
 	{
 		"name": "get-stash",
 		"title": "Re-applying your stashed changes",
-		"description": "<p></p>",
-		"code": [["git stash pop"], ["git stash apply stash@{<STASH_NUMBER>}"]]
+		"description": "<p>There are two different ways to recover the changes saved in the stash area: <code>apply</code> and <code>pop</code>.</p><p>By default, executing any of these 2 commands we can recover the top stashed element saved (the last stash: <code>stash@{0}</code>). The difference is that the option <code>apply</code>, keeps the change in the list for a possible later reuse, and <code>pop</code> after apply the change removes it from the stash stack. If during this process there are conflicts, it will not delete it, leaving it to behave exactly like <code>apply</code> option. Another way to do the same as with the <code>pop</code> option is to do it in 2 steps: <code>git stash apply</code> && <code>git stash drop</code>.</p><p>Or also, we can obtain the changes of a specific stash from out stack, indicating their index number.</p><p><a href='https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning#_git_clean' target='_blank'>Know more</a></p>",
+		"code": [
+			["git stash apply"],
+			["git stash pop"],
+			["git stash apply", "git stash drop"],
+			["git stash apply stash@{<STASH_NUMBER>}"],
+			["git stash apply <STASH_NUMBER>"]
+		]
+	},
+	{
+		"name": "create-stash-branch",
+		"title": "Create a branch from a stash",
+		"description": "<p>This is a nice shortcut to recover stashed work easily and work on it in a new branch. This command creates a new branch with the latest stash (<code>stash@{0}</code>), and then deletes the latest stash (like <code>git stash pop</code>). If you need a particular stash you can specify the stash id. This will be useful when you run into conflicts after you’ve applied the stash to the latest version of your branch.</p><p><a href='https://www.freecodecamp.org/news/useful-tricks-you-might-not-know-about-git-stash-e8a9490f0a1a/' target='_blank'>Know more</a></p>",
+		"code": [
+			["git stash branch <BRANCH_NAME>"],
+			["git stash branch <BRANCH_NAME> stash@{<STASH_NUMBER>}"]
+		]
+	},
+	{
+		"name": "show-stash",
+		"title": "Show the stash diffs",
+		"description": "<p>The <code>show</code> option of the stash command gives a very brief summary of the changes made to the files. It shows in one line the path and name of the file and the number of deleted lines.</p><p>Default, shows the information of the last stash (<code>stash@{0}</code>), but we can indicate an index number to see some other.</p><p>If we want to go deeper and see all the changes of each line of the file in the terminal editor we can use the option <code>-p</code>.</p><p><a href='https://howto.lintel.in/how-to-see-stashed-changes-using-git-stash/' target='_blank'>Know more</a></p>",
+		"code": [
+			["git stash show"],
+			["git stash show stash@{<STASH_NUMBER>}"],
+			["git stash show -p"]
+		]
 	},
 	{
 		"name": "remove-stash",
 		"title": "Remove stash",
-		"description": "<p></p>",
-		"code": [["git stash clear"], ["git stash drop <COMMIT_ID>"]]
+		"description": "<p>There are two different ways to remove the changes saved in the stash area: <code>drop</code> and <code> clear</code>.</p><p>We can remove the top stashed element saved (the last stash: <code>stash@{0}</code>) with <code>drop</code> or if you no longer need a particular stash, select it by their index number.</p><p>But, if what we want is to clean the storage area completely, the <code>clear</code> option deletes all the stashes list. <strong>IMPORTANT WARNING</strong>: With <code>clear</code>option those states will then be subject to pruning, and may be impossible to recover. Use both of them with caution, it maybe is difficult to revert the once deleted stashes.</p><p>To confirm if all cleared, obtain again the stashes list with <code>git stash list</code> command.</p><p><a href='https://kolosek.com/git-stash/' target='_blank'>Know more</a></p>",
+		"code": [
+			["git stash drop"],
+			["git stash drop stash@{<STASH_NUMBER>}"],
+			["git stash drop <STASH_NUMBER>"],
+			["git stash clear"]
+		]
 	},
 	{
 		"name": "exit-without-save",
