@@ -54,5 +54,8 @@
 	{
 		"url": "https://www.git-tower.com/learn/git/faq/change-author-name-email/",
 		"description": "How can I change the author name / email of a commit?"
+	},{
+		"url": "https://www.runroom.com/realworld/git-stash",
+		"description": "El comando stash para cambios rápidos en un proyecto"
 	}
 ]
