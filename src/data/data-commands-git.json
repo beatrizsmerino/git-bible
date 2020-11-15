@@ -445,6 +445,40 @@
 		]
 	},
 	{
+		"name": "merge",
+		"title": "Merge branch",
+		"description": "<p>The fusion is Git's way of putting a forked history back together again. The <code>git merge</code> command lets you take the independent lines of development created by <code>git branch</code> command and integrate them into a single branch.<br>It takes two confirmation pointers from the ends of each branch and combines them into the current branch, generating a new merge commit. However, if git find data that has been changed in both histories, it will be unable to automatically combine them. In that case, a version control conflict is created and Git will ask for user intervention to continue.</p><p>Before performing a merge there are a couple of preparation steps to take to ensure the merge goes smoothly: <ul><li><strong>Confirm the receiving branch:</strong> Make sure<code>HEAD</code> points to the correct branch with the <code>git status</code> command. If needed, execute <code>git checkout</code> to switch to the receiving branch.</li><li><strong>Fetch latest remote commits: </strong> Make sure the receiving branch and the merging branch are updated with the latest remote changes. Execute <code>git fetch</code> to pull the latest remote commits. Once the fetch is completed ensure the master branch has the latest updates by executing <code>git pull</code>.</li></ul></p><p>This means that <code>git merge</code> is often used in conjunction with <code>git checkout</code> for selecting the current branch and <code>git branch -d</code> for deleting the obsolete target branch.</p><p>If the two branches you're trying to merge both changed the same part of the same file, Git won't be able to figure out which version to use. When such a situation occurs, it stops right before the merge commit so that you can resolve the conflicts manually. When Git encounters a conflict during a merge, It will edit the content of the affected files with visual indicators that mark both sides of the conflicted content <code><<<<<<<</code> <code> =======</code> <code>>>>>>>></code>. The content before the <code>=======</code> marker is the receiving branch and the part after is the merging branch.Once you've identified conflicting sections, you can go in and fix up the merge to your liking. When you're ready to finish the merge, all you have to do is run <code>git add</code> on the conflicted file(s) to tell Git they're resolved. Then, you run a normal <code>git commit</code> to generate the merge commit.</p><p><a href='https://www.atlassian.com/es/git/tutorials/using-branches/git-merge' target='_blank'>Know more</a></p>",
+		"code": [
+			["git merge <BRANCH_NAME>"],
+			["git merge --continue"],
+			["git merge --abort"]
+		]
+	},
+	{
+		"name": "rebase",
+		"title": "Rebase",
+		"description": "<p>At Git we have two ways of integrating changes from one branch to another: the fusion (merge) and the reorganization (rebase).</p>Git <code>rebase</code> allows us to modify the history of Git using a reference point. It captures all confirmed changes from the branch we're in and applies them to the one we're indicating you about, that is, it is able to recognize that commits are not on the timeline for that reference point and apply them on top of the reference point, this is what we call in Git <strong>rebasing</strong>.<br>In contrast to the merge, this generates a perfectly linear project history, being able to go from the end of the branch to the start of the project without finding any bifurcation.</p><p>It's very important to understand that, even though the branch looks the same, it is made up of entirely new commits, which changes the history of Git. This implies that these commits are being recreated with the same message and content, which can lead to <strong>conflicts</strong> when applying them to the new branch if it has new changes.<br>If this happens, they have to be resolved as they occur and are considered modifications of the commit itself. This allows us to delete, reorder, merge or change the commit message before applying them. When you have the changes fixed, you will have to ask the command to continue with the <code>--continue</code> option to apply the next commit.<br>At any time during <code>rebase</code> if you change your mind you can reject the whole process with the <code>--abort</code> option.</p>",
+		"code": [
+			["git rebase <BRANCH_NAME>"],
+			["git rebase --continue"],
+			["git rebase --abort"]
+		]
+	},
+	{
+		"name": "cherry-pick",
+		"title": "Cherry-pick: Copy and paste commits",
+		"description": "<p>It may happen that, at some point, we want to apply some of the changes we have made in another branch without having to make a full merge. The cherry-pick command allows  allows you to <em>'copy'</em> one or more commits from one branch and <em>'paste'</em> them into another branch. Before using, you must have a clean <strong>working directory</strong> and <strong>staging area</strong>. </p><p>By default cherry-pick keeps the original commit message, so the <code>-x</code> option may be useful to modify the message to add a reference to the original commit, so that you know where you've got this commit from. Other interesting options are <code>-e</code>, which allows you to edit the commit message instead of using the original one and the <code>-n</code> option which will apply the changes but not make any commits.</p><p>As with the <code>merge</code> and <code>rebase</code> commands, after resolving the conflicts, we can indicate to continue applying the changes with the option <code>--continue</code> or reject the process completely with the option <code>--abort</code>.</p><p><a href='https://www.runroom.com/realworld/seleccionando-commits-cherry-pick' target='_blank'>Know more</a></p>",
+		"code": [
+			["git cherry-pick"],
+			["git cherry-pick <COMMIT_ID> <COMMIT_ID>"],
+			["git cherry-pick -x"],
+			["git cherry-pick -e"],
+			["git cherry-pick -n"],
+			["git cherry-pick --continue"],
+			["git cherry-pick --abort"]
+		]
+	},
+	{
 		"name": "get-tags",
 		"title": "Get all tags made",
 		"description": "<p>Get a simple list of the tags, if you want to make sure they exist and what their version numbers are.</p>",
