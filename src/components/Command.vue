@@ -88,6 +88,11 @@
 					margin-left: 3rem;
 				}
 
+				p + ul,
+				p + ol{
+					margin-bottom: 1rem;
+				}
+
 				a {
 					font-weight: 700;
 					color: $color-brand-3;

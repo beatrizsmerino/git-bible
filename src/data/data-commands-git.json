@@ -57,10 +57,7 @@
 		"title": "Change the name and email of the author after make a commit",
 		"description": "<p>If you have made a mistake and made several commits with another name or user email you can overwrite the author information of all commits with the following command.</p><p>Be very careful if these commits have been previously uploaded to the remote repository and if more people are collaborating in the repository. If this is the case, it is important to communicate it before making this command, because you'll also have to overwrite changes in the remote repository with <code>git push -f</code> and the other contributors will have to update their local repository with <code>git pull -f</code>. This type of changes is best made without having any changes saved in the staging area or the working directory.</p>",
 		"code": [
-			"$ git filter-branch --env-filter \"",
-			"OLD_EMAIL='<WRONG_EMAIL>'",
-			"NEW_NAME='<CORRECT_NAME>'",
-			"NEW_EMAIL='<CORRECT_EMAIL>'",
+			"git filter-branch --env-filter \"",
 			"if ['$GIT_COMMITTER_EMAIL' = '$OLD_EMAIL']",
 			"then",
 			"export GIT_COMMITTER_NAME='$NEW_NAME'",
@@ -149,14 +146,26 @@
 	{
 		"name": "show-date-commit",
 		"title": "Show date commit",
-		"description": "<p>Formats the output information of a commit, showing the format of the committer date.</p><p><ul><li><code>%ai</code>: author date, <em>ISO 8601-like</em> format</li><li><code>%ci</code>: committer date, <em>ISO 8601-like</em> format</li></ul></p>",
+		"description": "<p>Formats the output information of a commit, showing the format of the committer date (2020-12-03 19:28:49 +0100).</p><p><ul><li><code>%ai</code>: author date, <em>ISO 8601-like</em> format</li><li><code>%ci</code>: committer date, <em>ISO 8601-like</em> format</li></ul></p>",
 		"code": "git show -s --format=%ci <COMMIT_ID>"
 	},
 	{
 		"name": "overwrite-date-commit",
 		"title": "Overwrite date commit",
-		"description": "<p>This command change the author and committer date of the commit already created.<br>Why change two dates? The <strong>author</strong> is the person who originally wrote the work, whereas the <strong>committer</strong> is the person who last applied the work.If we are working alone on the project, the date should be the same in both cases.</p><p><a href='https://garysferrao.github.io/git/commit/date/2015/12/01/change-git-commit-date.html' target='_blank'>Know more</a></p>",
-		"code": "GIT_COMMITTER_DATE='<YYYY-MM-DDThh:mm:ss±hh:mm>' git commit --amend --date='<YYYY-MM-DDThh:mm:ss±hh:mm>' -C <COMMIT_ID>"
+		"description": "<p>This command change the author and committer date of the commit already created (2020-12-03 19:28:49 +0100).<br>Why change two dates? The <strong>author</strong> is the person who originally wrote the work, whereas the <strong>committer</strong> is the person who last applied the work.If we are working alone on the project, the date should be the same in both cases.</p><p>We have 2 ways to overwrite the date of a commit:</p><ul><li>We can modify the date of the <strong>last commit</strong> made with this first command.<br><a href='https://garysferrao.github.io/git/commit/date/2015/12/01/change-git-commit-date.html' target='_blank'>Know more</a></li><li>Or we can modify the date of a particular commit by filtering the list of commits <strong>by the id of the commit</strong> to be searched. The date of the first commit made to a repository can be modified using this second command.<br><a href='https://stackoverflow.com/questions/454734/how-can-one-change-the-timestamp-of-an-old-commit-in-git' target='_blank'>Know more</a></li></ul><p>The second time we run any of these commands we we won't be able to create a new backup. We must delete the previous backup that already exists in <code>.git/refs/original/</code> folder or force overwriting the backup with <code>-f</code>.</p>",
+		"code": [
+			[
+				"GIT_COMMITTER_DATE='<YYYY-MM-DDThh:mm:ss±hh:mm>' git commit --amend --date='<YYYY-MM-DDThh:mm:ss±hh:mm>' -C <COMMIT_ID>"
+			],
+			[
+				"git filter-branch --env-filter \\",
+				"'if [ $GIT_COMMIT = <COMMIT_ID> ]",
+				"then",
+				"export GIT_AUTHOR_DATE=\"<YYYY-MM-DDThh:mm:ss±hh:mm>\"",
+				"export GIT_COMMITTER_DATE=\"<YYYY-MM-DDThh:mm:ss±hh:mm>\"",
+				"fi'"
+			]
+		]
 	},
 	{
 		"name": "git-add",
@@ -479,6 +488,18 @@
 		]
 	},
 	{
+		"name": "diff",
+		"title": "Comparing changes with git diff",
+		"description": "<p>See what changes have been made to the code (- is what has been deleted and + is what has been added)</p><p>The next tool online can help you. DiffMerge is an application to visually compare and merge files on Windows, OS X and Linux: <a href='http://sourcegear.com/diffmerge/' target='_blank'>http://sourcegear.com/diffmerge/</a></p><p>Compare the changes that have been made to the code of each commit</p><p><a href='https://www.atlassian.com/git/tutorials/saving-changes/git-diff' target='_blank'>Know more</a></p>",
+		"code": [["git diff"], ["git diff <idCommit1> <idCommit2>"]]
+	},
+	{
+		"name": "mark-conflicts-resolved",
+		"title": "Mark that the conflict is resolved",
+		"description": "<p>Steps to follow after resolving a conflict in the files: <ul><li>Add all files to the index zone</li><li>View the status of the files (modified/deleted/added)</li><li>Make a commitment to change</li></ul></p>",
+		"code": ["git add .", "git status", "git commit -m '<COMMIT_MESSAGE>'"]
+	},
+	{
 		"name": "get-tags",
 		"title": "Get all tags made",
 		"description": "<p>Get a simple list of the tags, if you want to make sure they exist and what their version numbers are.</p>",
@@ -545,6 +566,48 @@
 		"title": "Update local tags",
 		"description": "<p>If your project is open source, you will probably have to update the status of your local repository from time to time, since other people may have removed or renamed some tags while you were working and you now have obsolete local tags.<br> This command prunes the tags that no longer exist in the remote repository but in your local repository.</p>",
 		"code": "git pull --prune --tags"
+	},
+	{
+		"name": "",
+		"title": "",
+		"description": "",
+		"code": ""
+	},
+	{
+		"name": "",
+		"title": "",
+		"description": "",
+		"code": ""
+	},
+	{
+		"name": "",
+		"title": "",
+		"description": "",
+		"code": ""
+	},
+	{
+		"name": "",
+		"title": "",
+		"description": "",
+		"code": ""
+	},
+	{
+		"name": "",
+		"title": "",
+		"description": "",
+		"code": ""
+	},
+	{
+		"name": "",
+		"title": "",
+		"description": "",
+		"code": ""
+	},
+	{
+		"name": "",
+		"title": "",
+		"description": "",
+		"code": ""
 	},
 	{
 		"name": "",
