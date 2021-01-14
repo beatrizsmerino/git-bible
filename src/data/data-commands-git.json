@@ -58,15 +58,18 @@
 		"description": "<p>If you have made a mistake and made several commits with another name or user email you can overwrite the author information of all commits with the following command.</p><p>Be very careful if these commits have been previously uploaded to the remote repository and if more people are collaborating in the repository. If this is the case, it is important to communicate it before making this command, because you'll also have to overwrite changes in the remote repository with <code>git push -f</code> and the other contributors will have to update their local repository with <code>git pull -f</code>. This type of changes is best made without having any changes saved in the staging area or the working directory.</p>",
 		"code": [
 			"git filter-branch --env-filter \"",
-			"if ['$GIT_COMMITTER_EMAIL' = '$OLD_EMAIL']",
+			"WRONG_EMAIL='<yourWrongEmail@example.com>'",
+			"CORRECT_NAME='<Your Correct Name>'",
+			"CORRECT_EMAIL='<yourCorrectEmail@example.com>'",
+			"if ['$GIT_COMMITTER_EMAIL' = '$WRONG_EMAIL']",
 			"then",
-			"export GIT_COMMITTER_NAME='$NEW_NAME'",
-			"export GIT_COMMITTER_EMAIL='$NEW_EMAIL'",
+			"export GIT_COMMITTER_NAME='$CORRECT_NAME'",
+			"export GIT_COMMITTER_EMAIL='$CORRECT_EMAIL'",
 			"fi",
-			"if ['$GIT_AUTHOR_EMAIL' = '$OLD_EMAIL']",
+			"if ['$GIT_AUTHOR_EMAIL' = '$WRONG_EMAIL']",
 			"then",
-			"export GIT_AUTHOR_NAME='$NEW_NAME'",
-			"export GIT_AUTHOR_EMAIL='$NEW_EMAIL'",
+			"export GIT_AUTHOR_NAME='$CORRECT_NAME'",
+			"export GIT_AUTHOR_EMAIL='$CORRECT_EMAIL'",
 			"fi",
 			"\" --tag-name-filter cat -- --branches --tags"
 		]
@@ -479,7 +482,7 @@
 		"description": "<p>It may happen that, at some point, we want to apply some of the changes we have made in another branch without having to make a full merge. The cherry-pick command allows  allows you to <em>'copy'</em> one or more commits from one branch and <em>'paste'</em> them into another branch. Before using, you must have a clean <strong>working directory</strong> and <strong>staging area</strong>. </p><p>By default cherry-pick keeps the original commit message, so the <code>-x</code> option may be useful to modify the message to add a reference to the original commit, so that you know where you've got this commit from. Other interesting options are <code>-e</code>, which allows you to edit the commit message instead of using the original one and the <code>-n</code> option which will apply the changes but not make any commits.</p><p>As with the <code>merge</code> and <code>rebase</code> commands, after resolving the conflicts, we can indicate to continue applying the changes with the option <code>--continue</code> or reject the process completely with the option <code>--abort</code>.</p><p><a href='https://www.runroom.com/realworld/seleccionando-commits-cherry-pick' target='_blank'>Know more</a></p>",
 		"code": [
 			["git cherry-pick"],
-			["git cherry-pick <COMMIT_ID> <COMMIT_ID>"],
+			["git cherry-pick <COMMIT_ID>"],
 			["git cherry-pick -x"],
 			["git cherry-pick -e"],
 			["git cherry-pick -n"],
