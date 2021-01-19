@@ -40,6 +40,13 @@
 					<font-awesome-icon :icon="['fas', 'code-branch']" />
 				</i>
 			</button>
+
+			<i
+				class="nav__bg-mobile"
+				:class="{'is-view': isOpen}"
+			>
+				<font-awesome-icon :icon="['fas', 'code-branch']" />
+			</i>
 		</nav>
 	</div>
 </template>
@@ -65,7 +72,7 @@
 		},
 		watch: {
 			$route(to, from) {
-				if(to !== from){
+				if (to !== from) {
 					this.closeNav();
 				}
 			}
@@ -100,7 +107,7 @@
 				left: 0;
 				flex-direction: column;
 				align-items: flex-end;
-				font-size: 3rem;
+				font-size: 3.5rem;
 				background-color: $color-brand-1;
 				opacity: 0;
 				transform: translate(100%, 0);
@@ -160,6 +167,23 @@
 			padding-top: 2rem;
 			font-size: 3rem;
 			pointer-events: none;
+		}
+
+		&__bg-mobile {
+			position: absolute;
+			bottom: -80rem;
+			left: 4rem;
+			z-index: 999;
+			font-size: 50rem;
+			color: rgba(0, 0, 0, 0.1);
+			opacity: 0;
+			pointer-events: none;
+			transition: opacity 0s ease-in-out;
+
+			&.is-view {
+				opacity: 1;
+				transition: opacity 1.8s ease-in-out, opacity 1s ease-in;
+			}
 		}
 
 		&.is-open {
