@@ -56,8 +56,18 @@
 			}
 		},
 		methods: {
-			openCloseNav: function () {
+			openCloseNav() {
 				(this.isOpen == false) ? this.isOpen = true : this.isOpen = false;
+			},
+			closeNav() {
+				this.isOpen = false;
+			}
+		},
+		watch: {
+			$route(to, from) {
+				if(to !== from){
+					this.closeNav();
+				}
 			}
 		},
 		computed: {
@@ -82,9 +92,16 @@
 			list-style: none;
 
 			@include media("md") {
+				width: 100%;
+				height: calc(100% - 8rem);
+				padding: 4rem 3rem;
+				position: fixed;
+				top: 8rem;
+				left: 0;
 				flex-direction: column;
 				align-items: flex-end;
-				font-size: 1.8rem;
+				font-size: 3rem;
+				background-color: $color-brand-1;
 				opacity: 0;
 				transform: translate(100%, 0);
 				transition: all 0.5s ease-in-out 0s;
@@ -97,6 +114,7 @@
 
 				@include media("md") {
 					margin-right: 0;
+					margin-bottom: 1.5rem;
 				}
 			}
 		}
@@ -122,13 +140,13 @@
 			background-color: transparent;
 			cursor: pointer;
 
-			&:before{
-				content: 'Menu';
+			&:before {
+				content: "Menu";
 				display: inline-block;
 				position: absolute;
 				top: -1.5rem;
 				left: 50%;
-				transform: translate3d(-50%, 0,0);
+				transform: translate3d(-50%, 0, 0);
 				font-style: initial;
 				font-size: 1.2rem;
 			}
