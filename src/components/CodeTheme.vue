@@ -33,32 +33,26 @@
 					v-on:scroll="checkScrollHorizontal"
 					v-if="checkLines(code) === 2"
 				>
-					<ul class="code-theme__code-list">
+					<ol class="code-theme__code-list">
 						<li
 							class="code-theme__code-item"
 							v-for="(line, index) in code"
 							:key="`line-${index}`"
-						>
-							{{code[index]}}
-						</li>
-					</ul>
+						>{{code[index]}}</li>
+					</ol>
 				</code>
 
 				<code
 					class="code-theme__code"
 					v-on:scroll="checkScrollHorizontal"
 					v-else-if="checkLines(code) === 1"
-				>
-					{{code[0]}}
-				</code>
+				>{{code[0]}}</code>
 
 				<code
 					class="code-theme__code"
 					v-on:scroll="checkScrollHorizontal"
 					v-else
-				>
-					{{code}}
-				</code>
+				>{{code}}</code>
 			</div>
 		</div>
 	</div>
@@ -212,7 +206,7 @@
 	.code-theme {
 		width: 100%;
 		min-height: 5rem;
-		padding: 1.6rem 1.6rem 0;
+		padding: 1.6rem;
 		position: relative;
 		white-space: nowrap;
 		font-weight: 600;
@@ -263,6 +257,7 @@
 			width: 100%;
 			padding-bottom: 1.6rem;
 			display: block;
+			white-space: pre;
 			font-size: 1.56rem;
 			border-radius: 0.4rem;
 			overflow-x: auto;
@@ -274,6 +269,20 @@
 
 		&__code-list {
 			list-style: none;
+			counter-reset: numberOfLine;
+			margin-left: 0;
+		}
+
+		&__code-item {
+			counter-increment: numberOfLine;
+
+			&::before {
+				content: counter(numberOfLine);
+				min-width: 4rem;
+				margin-right: 1rem;
+				display: inline-block;
+				color: rgba($color-brand-2-light, 0.5);
+			}
 		}
 
 		&.is-scroll {
