@@ -39,7 +39,7 @@
 			position: fixed;
 			top: 9rem;
 			left: 0;
-			z-index: 999;
+			z-index: 99;
 			font-size: 3.5rem;
 			color: $color-white;
 			background-color: rgba($color-brand-3, 0.9);
