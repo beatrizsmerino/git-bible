@@ -35,13 +35,32 @@
 			};
 		},
 		methods: {
-			scrollAnchor: function ($thisAnchor) {
+			getDistanceScrollAnchor() {
+				let sizeHeight = [
+					{
+						name: 'header',
+						size: 90
+					},
+					{
+						name: 'title',
+						size: 65
+					},
+					{
+						name: 'margin',
+						size: 30
+					}
+				];
+				let sumValues = sizeHeight.reduce((prevent, current) => prevent + current.size, 0);
+				return sumValues;
+			},
+			scrollAnchor($thisAnchor) {
 				setTimeout(() => {
 					if ($thisAnchor !== undefined) {
 						let $thisAnchorTop = $thisAnchor[0].offsetTop;
+						
 						window.scrollTo({
 							left: 0,
-							top: $thisAnchorTop - 90 - 70,
+							top: $thisAnchorTop - this.getDistanceScrollAnchor(),
 							behavior: 'smooth',
 						});
 					}
