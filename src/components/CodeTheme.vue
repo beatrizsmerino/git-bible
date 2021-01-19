@@ -38,9 +38,7 @@
 							class="code-theme__code-item"
 							v-for="(line, index) in code"
 							:key="`line-${index}`"
-						>
-							{{code[index]}}
-						</li>
+						>{{code[index]}}</li>
 					</ul>
 				</code>
 
@@ -48,17 +46,13 @@
 					class="code-theme__code"
 					v-on:scroll="checkScrollHorizontal"
 					v-else-if="checkLines(code) === 1"
-				>
-					{{code[0]}}
-				</code>
+				>{{code[0]}}</code>
 
 				<code
 					class="code-theme__code"
 					v-on:scroll="checkScrollHorizontal"
 					v-else
-				>
-					{{code}}
-				</code>
+				>{{code}}</code>
 			</div>
 		</div>
 	</div>
@@ -263,6 +257,7 @@
 			width: 100%;
 			padding-bottom: 1.6rem;
 			display: block;
+			white-space: pre;
 			font-size: 1.56rem;
 			border-radius: 0.4rem;
 			overflow-x: auto;
