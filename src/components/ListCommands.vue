@@ -7,10 +7,9 @@
 			:ref="command.name"
 		>
 			<command
-				:dataCommand="command"
-				:id="command.name"
-				:data-index="index"
-				:class="{'is-selected': command.name === anchorName}"
+				:command-data="command"
+				:command-index="index"
+				:command-status="(command.name === anchorName) ? true : false"
 			/>
 		</li>
 	</ul>
@@ -47,6 +46,12 @@
 						});
 					}
 				}, 100);
+			}
+		},
+		watch: {
+			$route(to) {
+				this.anchorName = to.hash.split('#').pop();
+				this.scrollAnchor(this.$refs[this.anchorName]);
 			}
 		},
 		mounted() {

@@ -1,31 +1,44 @@
 <template>
-	<div class="command">
+	<div
+		class="command"
+		:id="commandData.name"
+		:data-index="commandIndex"
+		:class="{'is-selected': commandStatus}"
+	>
 		<h3 class="command__title">
-			{{dataCommand.title}}
+			<router-link
+				:to="`#${commandData.name}`"
+				class="command__anchor-link"
+			>
+				<i class="reference__url-icon">
+					<font-awesome-icon :icon="['fas', 'link']" />
+				</i>
+			</router-link>
+			{{commandData.title}}
 		</h3>
-		
+
 		<div
 			class="command__description"
-			v-if="dataCommand.description"
-			v-html="dataCommand.description"
+			v-if="commandData.description"
+			v-html="commandData.description"
 		></div>
-		
+
 		<div
 			class="command__blocks-code"
-			v-if="Array.isArray(dataCommand.code) && Array.isArray(dataCommand.code[0])"
+			v-if="Array.isArray(commandData.code) && Array.isArray(commandData.code[0])"
 		>
 			<code-theme
 				class="command__code"
-				v-for="(codeBlock, index) in dataCommand.code"
-				:code="dataCommand.code[index]"
+				v-for="(codeBlock, index) in commandData.code"
+				:code="commandData.code[index]"
 				:key="`code-${index}`"
 			/>
 		</div>
 
 		<code-theme
 			class="command__code"
-			:code="dataCommand.code"
-			v-if="Array.isArray(dataCommand.code) && typeof dataCommand.code[0] == 'string' || typeof dataCommand.code == 'string'"
+			:code="commandData.code"
+			v-if="Array.isArray(commandData.code) && typeof commandData.code[0] == 'string' || typeof commandData.code == 'string'"
 		/>
 	</div>
 </template>
@@ -41,7 +54,18 @@
 			CodeTheme
 		},
 		props: {
-			dataCommand: Object,
+			commandData: {
+				type: Object,
+				required: true
+			},
+			commandIndex: {
+				type: Number,
+				required: true
+			},
+			commandStatus: {
+				type: Boolean,
+				reuired: true
+			}
 		}
 	}
 </script>
@@ -72,6 +96,15 @@
 			}
 		}
 
+		&__anchor-link {
+			margin-right: 1rem;
+			color: $color-brand-2-light;
+
+			&:hover {
+				color: $color-brand-2;
+			}
+		}
+
 		&__description {
 			margin-bottom: 2rem;
 			font-size: 1.8rem;
@@ -89,7 +122,7 @@
 				}
 
 				p + ul,
-				p + ol{
+				p + ol {
 					margin-bottom: 1rem;
 				}
 
