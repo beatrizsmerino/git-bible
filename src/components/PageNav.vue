@@ -113,12 +113,25 @@
 		&__button {
 			display: none;
 			appearance: none;
+			margin-top: 1.5rem;
 			margin-left: 2rem;
 			position: relative;
 			z-index: 2;
+			color: $color-white;
 			border: none;
 			background-color: transparent;
 			cursor: pointer;
+
+			&:before{
+				content: 'Menu';
+				display: inline-block;
+				position: absolute;
+				top: -1.5rem;
+				left: 50%;
+				transform: translate3d(-50%, 0,0);
+				font-style: initial;
+				font-size: 1.2rem;
+			}
 
 			@include media("md") {
 				display: inline-block;
@@ -126,8 +139,8 @@
 		}
 
 		&__icon {
+			padding-top: 2rem;
 			font-size: 3rem;
-			color: $color-white;
 			pointer-events: none;
 		}
 
