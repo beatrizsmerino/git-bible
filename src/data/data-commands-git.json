@@ -172,8 +172,8 @@
 				"git filter-branch --env-filter \\",
 				"'if [ $GIT_COMMIT = <COMMIT_ID> ]",
 				"then",
-				"export GIT_AUTHOR_DATE=\"<YYYY-MM-DDThh:mm:ss±hh:mm>\"",
-				"export GIT_COMMITTER_DATE=\"<YYYY-MM-DDThh:mm:ss±hh:mm>\"",
+				"    export GIT_AUTHOR_DATE=\"<YYYY-MM-DDThh:mm:ss±hh:mm>\"",
+				"    export GIT_COMMITTER_DATE=\"<YYYY-MM-DDThh:mm:ss±hh:mm>\"",
 				"fi'"
 			]
 		]
