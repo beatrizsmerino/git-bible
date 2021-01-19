@@ -2,11 +2,12 @@
 	<div
 		id="app"
 		class="sticky__app"
+		:class="{'is-scroll-down': !isScrollUp}"
 		v-cloak
 	>
 		<div class="page-content__wrapper sticky__content">
-			<page-header></page-header>
-			<page-title></page-title>
+			<page-header/>
+			<page-title :class="{'is-fixed': !isScrollUp}"/>
 			<router-view />
 		</div>
 
@@ -26,12 +27,21 @@
 			PageTitle,
 			PageFooter
 		},
+		data(){
+			return{
+				isScrollUp: true
+			}
+		},
 		methods: {
 			addSticky: function () {
 				const html = document.getElementsByTagName('html')[0];
 				const body = document.getElementsByTagName('body')[0];
 				html.classList.add("sticky");
 				body.classList.add("sticky__body");
+			},
+			handleScroll() {
+				const maxScroll = 95;
+				(window.scrollY >= maxScroll) ? this.isScrollUp = false : this.isScrollUp = true;
 			}
 		},
 		watch: {
@@ -51,6 +61,10 @@
 		},
 		created() {
 			this.addSticky();
+			window.addEventListener('scroll', this.handleScroll);
+		},
+		destroyed() {
+			window.removeEventListener('scroll', this.handleScroll);
 		},
 	};
 </script>
