@@ -29,7 +29,7 @@
 
 			<div class="code-theme__content">
 				<code
-					class="code-theme__code"
+					class="code-theme__code is-multiple-line"
 					v-on:scroll="checkScrollHorizontal"
 					v-if="checkLines(code) === 2"
 				>
@@ -43,13 +43,13 @@
 				</code>
 
 				<code
-					class="code-theme__code"
+					class="code-theme__code is-one-line"
 					v-on:scroll="checkScrollHorizontal"
 					v-else-if="checkLines(code) === 1"
 				>{{code[0]}}</code>
 
 				<code
-					class="code-theme__code"
+					class="code-theme__code is-one-line"
 					v-on:scroll="checkScrollHorizontal"
 					v-else
 				>{{code}}</code>
@@ -265,6 +265,16 @@
 			@include media("sm") {
 				font-size: 1.3rem;
 			}
+
+			&.is-one-line {
+				&::before {
+					content: "1";
+					min-width: 3rem;
+					margin-right: 0.5rem;
+					display: inline-block;
+					color: rgba($color-brand-2-light, 0.5);
+				}
+			}
 		}
 
 		&__code-list {
@@ -278,8 +288,8 @@
 
 			&::before {
 				content: counter(numberOfLine);
-				min-width: 4rem;
-				margin-right: 1rem;
+				min-width: 3rem;
+				margin-right: 0.5rem;
 				display: inline-block;
 				color: rgba($color-brand-2-light, 0.5);
 			}

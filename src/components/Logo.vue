@@ -34,6 +34,7 @@
 	.logo {
 		display: inline-block;
 		font-family: "Adelle Bold", "Georgia", "Times New Roman", serif;
+		font-size: 5rem;
 
 		&__link {
 			display: flex;
@@ -82,16 +83,11 @@
 		}
 
 		&--header {
-			font-size: 5rem;
-
 			.logo {
-				&__icon {
-					font-size: 4rem;
-				}
-
+				&__icon,
 				&__text {
 					@include media("sm") {
-						display: none;
+						font-size: 0.8em;
 					}
 				}
 			}

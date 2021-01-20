@@ -2,11 +2,12 @@
 	<div
 		id="app"
 		class="sticky__app"
+		:class="{'is-scroll-down': !isScrollUp}"
 		v-cloak
 	>
 		<div class="page-content__wrapper sticky__content">
-			<page-header></page-header>
-			<page-title></page-title>
+			<page-header />
+			<page-title :class="{'is-fixed': !isScrollUp}" />
 			<router-view />
 		</div>
 
@@ -26,12 +27,21 @@
 			PageTitle,
 			PageFooter
 		},
+		data() {
+			return {
+				isScrollUp: true
+			}
+		},
 		methods: {
 			addSticky: function () {
 				const html = document.getElementsByTagName('html')[0];
 				const body = document.getElementsByTagName('body')[0];
 				html.classList.add("sticky");
 				body.classList.add("sticky__body");
+			},
+			handleScroll() {
+				const maxScroll = 95;
+				(window.scrollY >= maxScroll) ? this.isScrollUp = false : this.isScrollUp = true;
 			}
 		},
 		watch: {
@@ -51,6 +61,10 @@
 		},
 		created() {
 			this.addSticky();
+			window.addEventListener('scroll', this.handleScroll);
+		},
+		destroyed() {
+			window.removeEventListener('scroll', this.handleScroll);
 		},
 	};
 </script>
@@ -68,6 +82,21 @@
 	body {
 		font-family: $font-oxygen;
 		color: $color-gray;
+
+		&::-webkit-scrollbar {
+			width: 1.5em;
+			padding: 0 0.5rem;
+			background-color: rgba($color-white, 0.7);
+		}
+
+		&::-webkit-scrollbar-track {
+			-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: $color-brand-1;
+			-webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+		}
 	}
 
 	// SELECTION TEXT
@@ -147,10 +176,12 @@
 		margin: 0 auto 5rem;
 
 		&__wrapper {
-			margin-top: 9rem;
+			padding-top: 8rem;
+			padding-bottom: 5.2rem;
 
 			@include media("sm") {
-				margin-top: 8rem;
+				padding-top: 6rem;
+				padding-bottom: 0;
 			}
 		}
 

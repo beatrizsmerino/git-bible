@@ -25,7 +25,7 @@
 <style lang="scss" scoped>
 	.page-header {
 		width: 100%;
-		height: 9rem;
+		height: 8rem;
 		padding: 1.6rem 3.2rem;
 		display: flex;
 		justify-content: space-between;
@@ -37,7 +37,7 @@
 		background-color: $color-brand-1;
 
 		@include media("sm") {
-			height: 8rem;
+			height: 6rem;
 			padding: 0.5rem 5%;
 		}
 	}

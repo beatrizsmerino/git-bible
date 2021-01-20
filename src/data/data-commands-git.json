@@ -33,8 +33,14 @@
 	{
 		"name": "config-code-editor",
 		"title": "Add or edit the default editor",
-		"description": "<p>When you create a Git commit with <code>git commit –a</code>, the default editor that will be opened is <strong>Vim</strong>. This can be very confusing for people, as Vim is not an easy editor if you have never worked with it previously.</p><p>Luckily, Git allows you to change the editor that gets opened by default very easily!</p><p>There are two ways in which this can be done: the first is via the terminal with the next command and the second option it is edting the <code>.gitconfig</code> file.</p>",
-		"code": "git config --global core.editor <PATH/TO/EDITOR_CODE>"
+		"description": "<p>When you create a Git commit with <code>git commit –a</code>, the default editor that will be opened is <strong>Vim</strong>. This can be very confusing for people, as Vim is not an easy editor if you have never worked with it previously.</p><p>There are many ways in which this can be done: via the terminal with the next command, edting the <code>.gitconfig</code> file...</p><p>On <strong>OSX</strong> for set <strong>Visual Studio Code</strong> as global Git editor, you need to do the next steps: <ul><li>Open the editor and press at the same time the keys <code>Shift + Command + P</code>.</li><li>Type the word <code>Code</code> on the emergent window and click on <code>Shell Command: Install 'code' command in PATH</code> to do the installation.</li><li>And then use the second block of commands of this description, for run the 2 lines in your terminal. This defines it in your settings as the global editor of Git and opens this same settings file with it.</li></ul></p><p><a href='https://stackoverflow.com/questions/34746045/set-visual-studio-code-to-be-global-git-editor-on-osx' target='_blank'>Know more</a></p>",
+		"code": [
+			["git config --global core.editor <PATH/TO/EDITOR_CODE>"],
+			[
+				"git config --global core.editor 'code --wait'",
+				"git config --global -e"
+			]
+		]
 	},
 	{
 		"name": "open-file-with-editor",
@@ -166,8 +172,8 @@
 				"git filter-branch --env-filter \\",
 				"'if [ $GIT_COMMIT = <COMMIT_ID> ]",
 				"then",
-				"export GIT_AUTHOR_DATE=\"<YYYY-MM-DDThh:mm:ss±hh:mm>\"",
-				"export GIT_COMMITTER_DATE=\"<YYYY-MM-DDThh:mm:ss±hh:mm>\"",
+				"    export GIT_AUTHOR_DATE=\"<YYYY-MM-DDThh:mm:ss±hh:mm>\"",
+				"    export GIT_COMMITTER_DATE=\"<YYYY-MM-DDThh:mm:ss±hh:mm>\"",
 				"fi'"
 			]
 		]
