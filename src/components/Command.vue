@@ -140,6 +140,10 @@
 					font-size: 0.85em;
 					border-radius: 0.6rem;
 					background-color: $color-silver;
+
+					@include media("sm") {
+						white-space: initial;
+					}
 				}
 			}
 		}

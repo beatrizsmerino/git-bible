@@ -9,17 +9,19 @@
 					<router-link
 						to="/"
 						class="nav__link"
+						exact
 					>
-						Home
+						<span>Search</span>
+						<span class="is-small">commands</span>
 					</router-link>
 				</li>
 				<li class="nav__item">
 					<router-link
 						to="/commands-git"
 						class="nav__link"
-						:class="[currentPage.includes('commands-git/') ? isActive : '', 'nav__link']"
 					>
-						Git
+						<span>Git</span>
+						<span class="is-small">commands</span>
 					</router-link>
 				</li>
 				<li class="nav__item">
@@ -27,7 +29,16 @@
 						to="/commands-git-flow"
 						class="nav__link"
 					>
-						Git Flow
+						<span>Git Flow</span>
+						<span class="is-small">commands</span>
+					</router-link>
+				</li>
+				<li class="nav__item" v-show="isOpen">
+					<router-link
+						to="/bibliografy"
+						class="nav__link"
+					>
+						Bibliografy
 					</router-link>
 				</li>
 			</ul>
@@ -58,7 +69,6 @@
 		name: 'PageNav',
 		data() {
 			return {
-				isActive: 'router-link-exact-active router-link-active',
 				isOpen: false
 			}
 		},
@@ -68,6 +78,12 @@
 			},
 			closeNav() {
 				this.isOpen = false;
+			},
+			handleResize(event) {
+				const maxWidthBreakpointMD = 768;
+				if (event.target.outerWidth >= maxWidthBreakpointMD) {
+					this.closeNav();
+				}
 			}
 		},
 		watch: {
@@ -77,11 +93,12 @@
 				}
 			}
 		},
-		computed: {
-			currentPage() {
-				return this.$route.path;
-			}
+		created() {
+			window.addEventListener('resize', this.handleResize);
 		},
+		destroyed() {
+			window.removeEventListener('resize', this.handleResize);
+		}
 	};
 </script>
 
@@ -100,38 +117,75 @@
 
 			@include media("md") {
 				width: 100%;
-				height: calc(100% - 8rem);
-				padding: 4rem 3rem;
+				height: calc(100% - 6rem);
+				padding: 4rem 6rem 4rem 4rem;
 				position: fixed;
 				top: 8rem;
 				left: 0;
 				flex-direction: column;
 				align-items: flex-end;
-				font-size: 3.5rem;
+				font-size: 4rem;
 				background-color: $color-brand-1;
+				overflow-y: scroll;
 				opacity: 0;
 				transform: translate(100%, 0);
 				transition: all 0.5s ease-in-out 0s;
 			}
+
+			@include media("sm") {
+				top: 6rem;
+				padding: 2rem 4rem 2rem 2rem;
+				font-size: 3rem;
+			}
 		}
 
 		&__item {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			@include media("md") {
+				// width: 20rem;
+				justify-content: flex-end;
+			}
+
 			&:not(:last-child) {
 				margin-right: 2.4rem;
 
 				@include media("md") {
 					margin-right: 0;
-					margin-bottom: 1.5rem;
+					margin-bottom: 4rem;
 				}
 			}
 		}
 
 		&__link {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 			white-space: nowrap;
 			color: $color-brand-2;
 
-			&.router-link-exact-active {
+			@include media("md") {
+				align-items: flex-end;
+				justify-content: flex-end;
+			}
+
+			&.router-link-active {
 				color: $color-white;
+			}
+
+			> * {
+				line-height: 100%;
+
+				&.is-small {
+					font-size: 1.5rem;
+
+					@include media("md") {
+						font-size: 3rem;
+					}
+				}
 			}
 		}
 

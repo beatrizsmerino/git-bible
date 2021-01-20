@@ -269,8 +269,8 @@
 			&.is-one-line {
 				&::before {
 					content: "1";
-					min-width: 4rem;
-					margin-right: 1rem;
+					min-width: 3rem;
+					margin-right: 0.5rem;
 					display: inline-block;
 					color: rgba($color-brand-2-light, 0.5);
 				}
@@ -288,8 +288,8 @@
 
 			&::before {
 				content: counter(numberOfLine);
-				min-width: 4rem;
-				margin-right: 1rem;
+				min-width: 3rem;
+				margin-right: 0.5rem;
 				display: inline-block;
 				color: rgba($color-brand-2-light, 0.5);
 			}
