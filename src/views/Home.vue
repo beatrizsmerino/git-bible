@@ -35,6 +35,12 @@
 
 		@include media("md", $dimension: "height") {
 			height: auto;
+			margin: 6rem auto;
+		}
+
+		@include media("md") {
+			height: auto;
+			margin: 6rem auto;
 		}
 
 		&__inner {

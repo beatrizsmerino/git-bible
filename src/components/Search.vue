@@ -156,6 +156,14 @@
 			width: 100%;
 			height: #{((5 + 1) * 4)}rem;
 			overflow-y: scroll;
+
+			@include media('md'){
+				height: #{((5 + 1) * 8)}rem;
+			}
+
+			@include media("md", $dimension: "height") {
+				height: #{((5 + 1) * 8)}rem;
+			}
 		}
 
 		&__list {
