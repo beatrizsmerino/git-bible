@@ -130,11 +130,12 @@
 
 		&__input {
 			width: 100%;
-			padding: 1.92rem 3.2rem;
+			padding: 1.8rem 3rem;
 			font-size: 2rem;
 			font-weight: 700;
 			color: $color-brand-1;
-			border: 0.3rem solid $color-brand-1;
+			border: none;
+			border-bottom: 0.3rem solid $color-brand-1;
 		}
 
 		&__icon {
