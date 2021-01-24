@@ -116,7 +116,12 @@
 
 
 <style lang="scss" scoped>
+	.search{
+		width: 100%;
+	}
+
 	.search-form {
+		width: 100%;
 		margin: 0 auto;
 
 		&__field {
@@ -143,10 +148,12 @@
 	}
 
 	.search-results {
+		width: 100%;
 		margin-top: 2rem;
 		font-size: 1.7rem;
 
 		&__inner {
+			width: 100%;
 			height: #{((5 + 1) * 4)}rem;
 			overflow-y: scroll;
 		}

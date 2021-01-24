@@ -94,6 +94,7 @@
 		}
 
 		&--home {
+			width: 100%;
 			margin-bottom: 2rem;
 			font-size: 11.2rem;
 
