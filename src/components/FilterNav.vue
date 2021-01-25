@@ -22,15 +22,35 @@
 			</i>
 		</button>
 
-		<div class="filter__content">
+		<div class="filter__inner">
+			<h1 class="filter__title">
+				{{ $t('hello.world') }}
+			</h1>
 
+			<div class="filter__content">
+				<ul class="filter-list">
+					<li class="filter-list__item">
+						<h2 class="filter-list__title">
+							Languages
+						</h2>
+						<div class="filter-list__content">
+							<ButtonsLanguages />
+						</div>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </template>
 
 <script>
+	import ButtonsLanguages from "@/components/Button/ButtonsLanguages";
+
 	export default {
 		name: 'FilterNav',
+		components: {
+			ButtonsLanguages
+		},
 		data() {
 			return {
 				isOpen: false
@@ -98,14 +118,39 @@
 			pointer-events: none;
 		}
 
-		&__content {
+		&__inner {
 			width: 100%;
 			height: 100%;
+			padding: 4rem 2rem;
 			background-color: $color-white;
+		}
+
+		&__title {
+			margin-bottom: 3rem;
+		}
+
+		&__content{
+			overflow-y: scroll;
 		}
 
 		&.is-open {
 			transform: translate3d(0, 0, 0);
+		}
+	}
+
+	.filter-list {
+		list-style: none;
+
+		&__item {
+			&:not(:last-child) {
+				margin-bottom: 2rem;
+			}
+		}
+
+		&__title {
+			margin-bottom: 1rem;
+			font-size: 2rem;
+			color: $color-brand-1;
 		}
 	}
 </style>
