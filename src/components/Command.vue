@@ -6,15 +6,14 @@
 		:class="{'is-selected': commandStatus}"
 	>
 		<h3 class="command__title">
-			<router-link
-				:to="`#${commandData.name}`"
+			<a
+				:href="`#${commandData.name}`"
 				class="command__anchor-link"
-				@click.native="anchorClick"
 			>
 				<i class="reference__url-icon">
 					<font-awesome-icon :icon="['fas', 'link']" />
 				</i>
-			</router-link>
+			</a>
 			{{commandData.title}}
 		</h3>
 
@@ -65,9 +64,6 @@
 			},
 			commandStatus: {
 				type: Boolean,
-		methods: {
-			anchorClick() {
-				this.$emit('emit-click');
 				required: true
 			}
 		}
@@ -77,17 +73,16 @@
 
 <style lang="scss" scoped>
 	.command {
-		padding: 2.72rem 3.2rem;
-		font-size: 1.92rem;
+		padding: 2.7rem 3.2rem;
+		font-size: 1.9rem;
 		background-color: $color-light;
 		border-bottom: 0.8rem solid $color-silver;
+		scroll-margin-top: calc(8em + 3rem);
+		transition: all 0.5s ease-in-out 0s;
 
 		@include media("sm") {
-			padding: 1.5rem;
-		}
-
-		&:not(:last-child) {
-			margin-bottom: 1.6rem;
+			padding: 1.8rem;
+			scroll-margin-top: calc(6em + 3rem);
 		}
 
 		&__title {
@@ -167,11 +162,11 @@
 		}
 
 		&.is-selected {
-			padding: 2.72rem 3.2rem calc(2.72rem - 0.8rem);
+			padding: 2.7rem 3.2rem calc(2.7rem - 0.8rem);
 			background-color: $color-silver;
 
 			@include media("sm") {
-				padding: 1.5rem 1.5rem calc(1.5rem - 0.8rem);
+				padding: 1.8rem 1.8rem calc(1.8rem - 0.8rem);
 			}
 
 			.command {
