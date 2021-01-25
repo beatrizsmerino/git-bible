@@ -78,7 +78,7 @@
 	[v-cloak] {
 		display: none;
 	}
-
+	
 	body {
 		font-family: $font-oxygen;
 		color: $color-gray;

@@ -30,14 +30,14 @@
 						class="search-results__item"
 						:data-index="command.id"
 					>
-						<router-link
-							:to="`/${command.url}/#${command.name}`"
+						<a
+							:href="`/${command.url}/#${command.name}`"
 							class="search-results__link"
 						>
 							<span class="search-results__text text-ellipsis">
 								{{command.title}}
 							</span>
-						</router-link>
+						</a>
 					</li>
 				</ul>
 			</div>
