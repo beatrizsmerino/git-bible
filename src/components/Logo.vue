@@ -94,6 +94,7 @@
 		}
 
 		&--home {
+			width: 100%;
 			margin-bottom: 2rem;
 			font-size: 11.2rem;
 
@@ -101,16 +102,12 @@
 				font-size: 10rem;
 			}
 
-			@include media("sm") {
-				font-size: 16vw;
-			}
-
-			@include media("xs") {
-				margin-top: 4rem;
+			@include media("md") {
+				display: none;
 			}
 
 			@include media("md", $dimension: "height") {
-				margin-top: 4rem;
+				display: none;
 			}
 		}
 	}
