@@ -140,7 +140,7 @@
 					border-radius: 0.6rem;
 					background-color: $color-silver;
 
-					@include media("sm") {
+					@include media("md") {
 						white-space: initial;
 					}
 				}

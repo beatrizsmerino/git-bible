@@ -1,8 +1,8 @@
 <template>
 	<div class="page-content">
 		<div class="page-content__inner">
-			<FilterNav/>
-			<ListCommandsGitFlow/>
+			<FilterNav />
+			<ListCommands :commands="getCommands" />
 		</div>
 	</div>
 </template>
@@ -11,13 +11,18 @@
 
 <script>
 	import FilterNav from "@/components/FilterNav";
-	import ListCommandsGitFlow from "@/components/ListCommandsGitFlow";
+	import ListCommands from "@/components/ListCommands";
 
 	export default {
 		name: "CommandsGitFlow",
 		components: {
 			FilterNav,
-			ListCommandsGitFlow
+			ListCommands
+		},
+		computed: {
+			getCommands() {
+				return this.$t('commands.gitFlow');
+			}
 		}
 	};
 </script>

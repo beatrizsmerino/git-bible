@@ -4,7 +4,7 @@
 			v-for="(language) in languages"
 			:key="language.locale"
 			@emit-click="changeLanguage(language.locale)"
-			class="button--bg-color-1"
+			:class="[(language.locale == $i18n.locale) ? 'button--bg-color-1': 'button--bg-color-2-light']"
 		>
 			{{ language.title }}
 		</Button>
@@ -23,8 +23,8 @@
 		computed: {
 			languages() {
 				return [
-					{ locale: 'es', title: this.$t('spanish') },
-					{ locale: 'en', title: this.$t('english') }
+					{ locale: 'es', title: this.$t('language.spanish') },
+					{ locale: 'en', title: this.$t('language.english') }
 				]
 			}
 		},
@@ -41,7 +41,11 @@
 		display: flex;
 
 		> * {
-			margin-right: 1rem;
+			flex: 1;
+
+			&:not(:last-child){
+				margin-right: 1rem;
+			}
 		}
 	}
 </style>

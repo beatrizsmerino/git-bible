@@ -128,6 +128,15 @@
 				}
 			}
 
+			&-2-light {
+				color: $color-white;
+				background-color: $color-brand-2-light;
+
+				&:hover {
+					background-color: mix($color-black, $color-brand-2-light, 15%);
+				}
+			}
+
 			&-3 {
 				color: $color-white;
 				background-color: $color-brand-3;

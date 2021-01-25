@@ -33,7 +33,10 @@
 						<span class="is-small">commands</span>
 					</router-link>
 				</li>
-				<li class="nav__item" v-show="isOpen">
+				<li
+					class="nav__item"
+					v-show="isOpen"
+				>
 					<router-link
 						to="/bibliografy"
 						class="nav__link"
@@ -91,6 +94,9 @@
 				if (to !== from) {
 					this.closeNav();
 				}
+			},
+			isOpen: function () {
+				document.body.style.overflow = this.isOpen ? 'hidden' : ''
 			}
 		},
 		created() {
@@ -145,7 +151,6 @@
 			align-items: center;
 
 			@include media("md") {
-				// width: 20rem;
 				justify-content: flex-end;
 			}
 
