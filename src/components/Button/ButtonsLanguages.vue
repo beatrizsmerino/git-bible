@@ -20,12 +20,14 @@
 		components: {
 			Button
 		},
-		data: () => ({
-			languages: [
-				{ locale: 'es', title: 'Español' },
-				{ locale: 'en', title: 'Inglés' }
-			]
-		}),
+		computed: {
+			languages() {
+				return [
+					{ locale: 'es', title: this.$t('spanish') },
+					{ locale: 'en', title: this.$t('english') }
+				]
+			}
+		},
 		methods: {
 			changeLanguage(locale) {
 				i18n.locale = locale

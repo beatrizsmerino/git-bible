@@ -13,12 +13,16 @@ const messages = {
 	es: {
 		hello: {
 			world: 'Hola mundo!'
-		}
+		},
+		spanish: 'Español',
+		english: 'Inglés'
 	},
 	en: {
 		hello: {
 			world: 'Hello world!'
-		}
+		},
+		spanish: 'Spanish',
+		english: 'English'
 	}
 }
 
