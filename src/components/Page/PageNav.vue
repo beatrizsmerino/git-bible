@@ -45,7 +45,7 @@
 
 			<button
 				class="nav__button"
-				v-on:click="openCloseNav"
+				@click="openCloseNav"
 			>
 				<i class="nav__icon">
 					<font-awesome-icon :icon="['fas', 'code-branch']" />

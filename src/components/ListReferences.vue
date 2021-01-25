@@ -6,7 +6,7 @@
 			:key="`reference-${index}`"
 			:data-index="index"
 		>
-			<Reference :dataReference="reference" />
+			<Reference :data-reference="reference" />
 		</li>
 	</ul>
 </template>

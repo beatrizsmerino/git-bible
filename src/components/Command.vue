@@ -9,6 +9,7 @@
 			<router-link
 				:to="`#${commandData.name}`"
 				class="command__anchor-link"
+				@click.native="anchorClick"
 			>
 				<i class="reference__url-icon">
 					<font-awesome-icon :icon="['fas', 'link']" />
@@ -21,7 +22,7 @@
 			class="command__description"
 			v-if="commandData.description"
 			v-html="commandData.description"
-		></div>
+		/>
 
 		<div
 			class="command__blocks-code"
@@ -64,7 +65,10 @@
 			},
 			commandStatus: {
 				type: Boolean,
-				reuired: true
+		methods: {
+			anchorClick() {
+				this.$emit('emit-click');
+				required: true
 			}
 		}
 	}

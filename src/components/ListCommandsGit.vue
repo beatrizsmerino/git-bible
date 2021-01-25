@@ -6,7 +6,7 @@
 
 <script>
 	import ListCommands from "@/components/ListCommands";
-	import dataCommandsGit from "../data/data-commands-git.json";
+	import dataCommands from "../data/data-commands.json";
 
 	export default {
 		name: 'ListCommandsGit',
@@ -19,7 +19,7 @@
 			};
 		},
 		created() {
-			this.commands = dataCommandsGit;
+			this.commands = dataCommands.git;
 		},
 	};
 </script>

@@ -10,6 +10,7 @@
 				:command-data="command"
 				:command-index="index"
 				:command-status="(command.name === anchorName) ? true : false"
+				@emit-click="scrollAnchor($refs[anchorName])"
 			/>
 		</li>
 	</ul>
@@ -87,7 +88,7 @@
 				const maxWidth = 576;
 				if (window.outerWidth <= maxWidth) {
 					this.formatScreen = 'mobile';
-				}else{
+				} else {
 					this.formatScreen = 'desktop';
 				}
 			}
@@ -96,7 +97,9 @@
 			$route(to) {
 				this.handleResize();
 				this.anchorName = to.hash.split('#').pop();
-				this.scrollAnchor(this.$refs[this.anchorName]);
+				if (this.anchorName) {
+					this.scrollAnchor(this.$refs[this.anchorName]);
+				}
 			}
 		},
 		mounted() {
