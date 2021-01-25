@@ -6,7 +6,7 @@
 
 <script>
 	import ListCommands from "@/components/ListCommands";
-	import dataCommandsGitFlow from "../data/data-commands-git-flow.json";
+	import dataCommands from "../data/data-commands.json";
 
 	export default {
 		name: 'ListCommandsGitFlow',
@@ -19,7 +19,7 @@
 			};
 		},
 		created() {
-			this.commands = dataCommandsGitFlow;
+			this.commands = dataCommands.gitFlow;
 		},
 	};
 </script>
