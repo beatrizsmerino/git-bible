@@ -4,8 +4,8 @@
 			"parent": "git",
 			"url": "commands-git",
 			"name": "get-git-version",
-			"title": "Git. Get git version",
-			"description": "<p>Before you install git, it's a good idea to check if you already have it installed by using the following command, which will return the version number installed on your computer. If not, follow the steps described in this <a href='https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git' target='_blank'>link</a> depending on your operating system.</p>",
+			"title": "Git. Obtener la versión git",
+			"description": "<p>Antes de instalar git, es conveniente comprobar si ya lo tienes instalado mediante el siguiente comando, que te devolverá el número de versión instalado en tu ordenador. Si no es así, sigue los pasos descritos en este <a href='https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git' target='_blank'>enlace</a> en función de tu sistema operativo.</p>",
 			"code": "git --version"
 		},
 		{
@@ -738,8 +738,8 @@
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
 			"name": "create-gitflow-repository",
-			"title": "Git Flow. Initialize repository",
-			"description": "Git flow needs to be initialized in order to customize your project setup. Start using git-flow by initializing it inside an existing git repository. You'll have to answer a few questions regarding the naming conventions for your branches. It's recommended to use the default values (feature, release, hotfix and support).",
+			"title": "Git Flow. Inicializar el repositorio",
+			"description": "<p>Git-flow necesita ser inicializado para personalizar la configuración de tu proyecto. Empieza a usar git-flow inicializándolo dentro de un repositorio git existente. Tendrás que responder a algunas preguntas sobre las convenciones de nomenclatura para tus ramas. Se recomienda utilizar los valores por defecto (feature, release, hotfix y support).</p>",
 			"code": "git flow init"
 		},
 		{
@@ -747,7 +747,7 @@
 			"url": "commands-git-flow",
 			"name": "gitflow-feature-start",
 			"title": "Git Flow. Start a new feature",
-			"description": "Development of new features starting from the 'develop' branch. This action creates a new feature branch based on 'develop' and switches to it.",
+			"description": "<p>Development of new features starting from the 'develop' branch. This action creates a new feature branch based on 'develop' and switches to it.</p>",
 			"code": "git flow feature start <FEATURE_NAME>"
 		},
 		{
@@ -755,7 +755,7 @@
 			"url": "commands-git-flow",
 			"name": "gitflow-feature-list",
 			"title": "Git Flow. Get a feature list",
-			"description": "You can to see a list of the features created on the local repository.",
+			"description": "<p>You can to see a list of the features created on the local repository.</p>",
 			"code": "git flow feature list"
 		},
 		{
@@ -763,7 +763,7 @@
 			"url": "commands-git-flow",
 			"name": "gitflow-feature-publish",
 			"title": "Git Flow. Publish a feature",
-			"description": "If you want to share this feature branch with some of you team so you can do some collaborative development then you would publish a feature to the remote server so it can be used by other users.",
+			"description": "<p>If you want to share this feature branch with some of you team so you can do some collaborative development then you would publish a feature to the remote server so it can be used by other users.</p>",
 			"code": "git flow feature publish <FEATURE_NAME>"
 		},
 		{
@@ -771,7 +771,7 @@
 			"url": "commands-git-flow",
 			"name": "gitflow-feature-pull",
 			"title": "Git Flow. Getting a published feature",
-			"description": "This will be done when more than one person works on a feature together. Once you’ve published the feature your team mates will be able to work on the feature branch with you by cloning the repository. Once they have a Gitflow enabled repository they should be in the develop branch on which they should now do a pull to ensure their local repository is in sync with the one on the remote. Something to note here is that if you do a pull from the feature branch with the normal “git pull” command it breaks your HEAD and for some reason it’s very hard to get back to a point where you would be able to push any changes made or even do a feature pull in the future.",
+			"description": "<p>This will be done when more than one person works on a feature together. Once you’ve published the feature your team mates will be able to work on the feature branch with you by cloning the repository. Once they have a Gitflow enabled repository they should be in the develop branch on which they should now do a pull to ensure their local repository is in sync with the one on the remote. Something to note here is that if you do a pull from the feature branch with the normal “git pull” command it breaks your HEAD and for some reason it’s very hard to get back to a point where you would be able to push any changes made or even do a feature pull in the future.</p>",
 			"code": "git flow feature pull origin <FEATURE_NAME>"
 		},
 		{
@@ -779,7 +779,7 @@
 			"url": "commands-git-flow",
 			"name": "gitflow-feature-track",
 			"title": "Git Flow. Track a published feature",
-			"description": "You can track the changes a feature published on origin repository.",
+			"description": "<p>You can track the changes a feature published on origin repository.</p>",
 			"code": "git flow feature track <FEATURE_NAME>"
 		},
 		{
@@ -787,7 +787,7 @@
 			"url": "commands-git-flow",
 			"name": "gitflow-feature-finish",
 			"title": "Git Flow. Finish up a feature",
-			"description": "Finish the development of a feature. This action performs the following: merges <FEATURE_NAME> into 'develop', removes the feature branch and switches back to 'develop' branch.",
+			"description": "<p>Finish the development of a feature. This action performs the following: merges <FEATURE_NAME> into 'develop', removes the feature branch and switches back to 'develop' branch.</p>",
 			"code": "git flow feature finish <FEATURE_NAME>"
 		},
 		{
@@ -795,7 +795,7 @@
 			"url": "commands-git-flow",
 			"name": "gitflow-bugfix-start",
 			"title": "Git Flow. Start a bugfix",
-			"description": "If you want to fix a known bug in some branch of the repository, you should create a bugfix or hotfix branch. The difference between bugfix and hotfix has to do with where they fit into the git flow workflow. The bugfix branches are used for to fix bugs of features or omissions of development, are created from develop and merge back into develop.",
+			"description": "<p>If you want to fix a known bug in some branch of the repository, you should create a bugfix or hotfix branch. The difference between bugfix and hotfix has to do with where they fit into the git flow workflow. The bugfix branches are used for to fix bugs of features or omissions of development, are created from develop and merge back into develop.</p>",
 			"code": "git flow bugfix start <BUGFIX_NAME>"
 		},
 		{
@@ -803,7 +803,7 @@
 			"url": "commands-git-flow",
 			"name": "gitflow-bugfix-finish",
 			"title": "Git Flow. Finish a bugfix",
-			"description": "The bugfix branches are temporary branches that are removed after merging into develop.",
+			"description": "<p>The bugfix branches are temporary branches that are removed after merging into develop.</p>",
 			"code": "git flow bugfix finish <BUGFIX_NAME>"
 		},
 		{
@@ -811,7 +811,7 @@
 			"url": "commands-git-flow",
 			"name": "gitflow-release-start",
 			"title": "Git Flow. Start a release",
-			"description": "A release support preparation of a new production release and allow for minor bug fixes and preparing meta-data for a release. It creates a release branch created from the 'develop' branch. You can optionally supply a <[BASE]> commit sha-1 hash to start the release from. The commit must be on the 'develop' branch.",
+			"description": "<p>A release support preparation of a new production release and allow for minor bug fixes and preparing meta-data for a release. It creates a release branch created from the 'develop' branch. You can optionally supply a <[BASE]> commit sha-1 hash to start the release from. The commit must be on the 'develop' branch.</p>",
 			"code": "git flow release start <VERSION_NUMBER> <[BASE]>"
 		},
 		{
@@ -819,7 +819,7 @@
 			"url": "commands-git-flow",
 			"name": "gitflow-release-list",
 			"title": "Git Flow. Get a release list",
-			"description": "You can see a lists all the current release branches created on the local repository.",
+			"description": "<p>You can see a lists all the current release branches created on the local repository.</p>",
 			"code": "git flow release list"
 		},
 		{
@@ -827,7 +827,7 @@
 			"url": "commands-git-flow",
 			"name": "gitflow-release-publish",
 			"title": "Git Flow. Publish a release",
-			"description": "It's wise to publish the release branch after creating it to allow release commits by other developers.",
+			"description": "<p>It's wise to publish the release branch after creating it to allow release commits by other developers.</p>",
 			"code": "git flow release publish <VERSION_NUMBER>"
 		},
 		{
@@ -835,7 +835,7 @@
 			"url": "commands-git-flow",
 			"name": "gitflow-release-track",
 			"title": "Git Flow. Track a release",
-			"description": "You can track the changes a release published on remote repository.",
+			"description": "<p>You can track the changes a release published on remote repository.</p>",
 			"code": "git flow release track <VERSION_NUMBER>"
 		},
 		{
@@ -843,7 +843,7 @@
 			"url": "commands-git-flow",
 			"name": "gitflow-release-finish",
 			"title": "Git Flow. Finish up a release",
-			"description": "Finishing a release is one of the big steps in git branching. It performs several actions: merges the release branch back into 'master', tags the release with its name, back-merges the release into 'develop' and removes the release branch.",
+			"description": "<p>Finishing a release is one of the big steps in git branching. It performs several actions: merges the release branch back into 'master', tags the release with its name, back-merges the release into 'develop' and removes the release branch.</p>",
 			"code": "git flow release finish <VERSION_NUMBER>"
 		},
 		{
@@ -851,7 +851,7 @@
 			"url": "commands-git-flow",
 			"name": "gitflow-tags-push-single",
 			"title": "Git Flow. Push a single tag",
-			"description": "After finishing the release branch, don't forget to add the tags to the remote repository. This command will push a single tag to the remote repository.",
+			"description": "<p>After finishing the release branch, don't forget to add the tags to the remote repository. This command will push a single tag to the remote repository.</p>",
 			"code": "git push <REPO_NAME> <TAG_NAME>"
 		},
 		{
@@ -859,7 +859,7 @@
 			"url": "commands-git-flow",
 			"name": "gitflow-tags-push",
 			"title": "Git Flow. Push all the tags",
-			"description": "After finishing the release branch, don't forget to add the tags to the remote repository. This command will push all tags to the remote repository. This way is not recommended because it's common for developers to have old or 'bad' tags in their local repositories that have no need to be in the remote one, so it's advised to only ever explicitly push a tag and not all of your tags at once.",
+			"description": "<p>After finishing the release branch, don't forget to add the tags to the remote repository. This command will push all tags to the remote repository. This way is not recommended because it's common for developers to have old or 'bad' tags in their local repositories that have no need to be in the remote one, so it's advised to only ever explicitly push a tag and not all of your tags at once.</p>",
 			"code": "git push <REPO_NAME> --tags"
 		},
 		{
@@ -867,7 +867,7 @@
 			"url": "commands-git-flow",
 			"name": "gitflow-hotfix-start",
 			"title": "Git Flow. Start a hotfix",
-			"description": "The hotfix branches are created to act immediately on an unwanted state of a live production release. This branch is used for to correct errors or omissions is created from master, is merged back into master and removed after merging. It can be derived from the corresponding tag in the master branch that marks the production version. The version argument marks the name of the new hotfix version. Optionally, you can specify a base name to start from.",
+			"description": "<p>The hotfix branches are created to act immediately on an unwanted state of a live production release. This branch is used for to correct errors or omissions is created from master, is merged back into master and removed after merging. It can be derived from the corresponding tag in the master branch that marks the production version. The version argument marks the name of the new hotfix version. Optionally, you can specify a base name to start from.</p>",
 			"code": "git flow hotfix start <VERSION_NUMBER> <[BASE_NAME]>"
 		},
 		{
@@ -875,7 +875,7 @@
 			"url": "commands-git-flow",
 			"name": "gitflow-hotfix-finish",
 			"title": "Git Flow. Finish a hotfix",
-			"description": "By finishing a hotfix it gets merged back into develop and master. Additionally the master merge is tagged with the hotfix version.",
+			"description": "<p>By finishing a hotfix it gets merged back into develop and master. Additionally the master merge is tagged with the hotfix version.</p>",
 			"code": "git flow hotfix finish <VERSION_NUMBER>"
 		}
 	]

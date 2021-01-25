@@ -18,6 +18,9 @@
 		components: {
 			Logo,
 			Search
+		},
+		mounted(){
+			document.querySelector(".page-header").style.boxShadow = 'none';
 		}
 	};
 </script>

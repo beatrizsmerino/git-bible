@@ -7,6 +7,11 @@
 import Vue from 'vue';
 import VueI18n from 'vue-i18n';
 
+
+
+import commandsENData from "../data/en/data-commands.json";
+import commandsESData from "../data/es/data-commands.json";
+
 Vue.use(VueI18n);
 
 const messages = {
@@ -14,22 +19,30 @@ const messages = {
 		hello: {
 			world: 'Hola mundo!'
 		},
-		spanish: 'Español',
-		english: 'Inglés'
+		language:{
+			spanish: 'Español',
+			english: 'Inglés',
+		},
+		commands: commandsESData
 	},
 	en: {
 		hello: {
 			world: 'Hello world!'
 		},
-		spanish: 'Spanish',
-		english: 'English'
+		language: {
+			spanish: 'Spanish',
+			english: 'English',
+		},
+		commands: commandsENData
 	}
 }
 
-export const i18n = new VueI18n({
+const i18n = new VueI18n({
 	// Default browser language:
 	// locale: window.navigator.language.split('-')[0]
 	locale: 'es',
 	fallbackLocale: 'en',
 	messages
 })
+
+export { i18n }

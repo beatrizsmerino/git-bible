@@ -86,16 +86,16 @@
 		&::-webkit-scrollbar {
 			width: 1.5em;
 			padding: 0 0.5rem;
-			background-color: rgba($color-white, 0.7);
+			background-color: rgba($color-brand-2, 0.7);
 		}
 
 		&::-webkit-scrollbar-track {
-			-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+			-webkit-box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.3);
 		}
 
 		&::-webkit-scrollbar-thumb {
-			background-color: $color-brand-1;
-			-webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+			background-color: rgba($color-brand-2, 0.4);
+			-webkit-box-shadow: inset 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
 		}
 	}
 

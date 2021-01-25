@@ -48,8 +48,6 @@
 
 
 <script>
-	import dataCommands from "../data/data-commands.json";
-
 	export default {
 		name: 'Search',
 		data() {
@@ -107,8 +105,8 @@
 			}
 		},
 		created() {
-			let commandsGit = dataCommands.git.filter(command => command.name !== "" && command.title !== "");
-			let commandsGitFlow = dataCommands.gitFlow.filter(command => command.name !== "" && command.title !== "");
+			let commandsGit = this.$t('commands.git').filter(command => command.name !== "" && command.title !== "");
+			let commandsGitFlow = this.$t('commands.gitFlow').filter(command => command.name !== "" && command.title !== "");
 			this.commands = commandsGit.concat(commandsGitFlow);
 		}
 	};

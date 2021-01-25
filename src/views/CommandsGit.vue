@@ -2,7 +2,7 @@
 	<div class="page-content">
 		<div class="page-content__inner">
 			<FilterNav />
-			<ListCommandsGit/>
+			<ListCommands :commands="getCommands" />
 		</div>
 	</div>
 </template>
@@ -10,14 +10,20 @@
 
 
 <script>
+	// import { i18n } from '@/plugins/i18n';
 	import FilterNav from "@/components/FilterNav";
-	import ListCommandsGit from "@/components/ListCommandsGit";
+	import ListCommands from "@/components/ListCommands";
 
 	export default {
 		name: "CommandsGit",
 		components: {
 			FilterNav,
-			ListCommandsGit
+			ListCommands
+		},
+		computed: {
+			getCommands() {
+				return this.$t('commands.git');
+			},
 		}
 	};
 </script>

@@ -37,6 +37,10 @@
 		watch: {
 			$route(to) {
 				this.anchorName = to.hash.split('#').pop();
+			},
+			commands(newValue, oldValue) {
+				this.commandsFormatted = newValue;
+				console.log('Prop changed: ', newValue, ' | was: ', oldValue)
 			}
 		},
 		created() {
