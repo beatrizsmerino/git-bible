@@ -27,7 +27,7 @@
 			class="command__blocks-code"
 			v-if="Array.isArray(commandData.code) && Array.isArray(commandData.code[0])"
 		>
-			<code-theme
+			<CodeTheme
 				class="command__code"
 				v-for="(codeBlock, index) in commandData.code"
 				:code="commandData.code[index]"
@@ -35,7 +35,7 @@
 			/>
 		</div>
 
-		<code-theme
+		<CodeTheme
 			class="command__code"
 			:code="commandData.code"
 			v-if="Array.isArray(commandData.code) && typeof commandData.code[0] == 'string' || typeof commandData.code == 'string'"
@@ -46,7 +46,7 @@
 
 
 <script>
-	import CodeTheme from "@/components/CodeTheme.vue";
+	import CodeTheme from "@/components/CodeTheme";
 
 	export default {
 		name: 'Commands',
