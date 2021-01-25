@@ -46,6 +46,10 @@
 		font-size: 1.6rem;
 		background-color: $color-brand-2-light;
 
+		@include media("md", $dimension: "height") {
+			position: relative;
+		}
+
 		@include media("md") {
 			position: relative;
 		}
@@ -67,7 +71,7 @@
 	a {
 		color: $color-brand-2;
 
-		&:hover{
+		&:hover {
 			color: $color-black;
 		}
 

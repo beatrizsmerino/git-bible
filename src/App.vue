@@ -173,13 +173,17 @@
 
 	.page-content {
 		width: 90%;
-		margin: 0 auto 5rem;
+		margin: 0 auto 6rem;
 
 		&__wrapper {
 			padding-top: 8rem;
 			padding-bottom: 5.2rem;
 
-			@include media("sm") {
+			@include media("md", $dimension: "height") {
+				padding-bottom: 0;
+			}
+
+			@include media("md") {
 				padding-top: 6rem;
 				padding-bottom: 0;
 			}

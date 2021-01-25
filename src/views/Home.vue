@@ -27,7 +27,7 @@
 	.page-content {
 		width: 100%;
 		height: 100%;
-		margin: 0 auto;
+		margin-bottom: 0;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -35,11 +35,21 @@
 
 		@include media("md", $dimension: "height") {
 			height: auto;
+			margin: 6rem auto;
+		}
+
+		@include media("md") {
+			height: auto;
+			margin: 6rem auto;
 		}
 
 		&__inner {
-			max-width: 80rem;
-			margin: 0 auto;
+			width: 100%;
+			max-width: 60rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 
 			@include media("md") {
 				width: 90%;

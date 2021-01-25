@@ -116,7 +116,12 @@
 
 
 <style lang="scss" scoped>
+	.search{
+		width: 100%;
+	}
+
 	.search-form {
+		width: 100%;
 		margin: 0 auto;
 
 		&__field {
@@ -125,11 +130,12 @@
 
 		&__input {
 			width: 100%;
-			padding: 1.92rem 3.2rem;
+			padding: 1.8rem 3rem;
 			font-size: 2rem;
 			font-weight: 700;
 			color: $color-brand-1;
-			border: 0.3rem solid $color-brand-1;
+			border: none;
+			border-bottom: 0.3rem solid $color-brand-1;
 		}
 
 		&__icon {
@@ -143,12 +149,22 @@
 	}
 
 	.search-results {
+		width: 100%;
 		margin-top: 2rem;
 		font-size: 1.7rem;
 
 		&__inner {
+			width: 100%;
 			height: #{((5 + 1) * 4)}rem;
 			overflow-y: scroll;
+
+			@include media('md'){
+				height: #{((5 + 1) * 8)}rem;
+			}
+
+			@include media("md", $dimension: "height") {
+				height: #{((5 + 1) * 8)}rem;
+			}
 		}
 
 		&__list {
