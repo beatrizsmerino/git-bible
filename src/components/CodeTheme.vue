@@ -61,7 +61,7 @@
 
 
 <script>
-	import ButtonCopy from "@/components/ButtonCopy";
+	import ButtonCopy from "@/components/Button/ButtonCopy";
 
 	export default {
 		name: 'CodeTheme',
