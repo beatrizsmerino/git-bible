@@ -17,9 +17,9 @@
 
 
 <script>
-	import PageHeader from "./components/PageHeader.vue";
-	import PageTitle from "./components/PageTitle.vue";
-	import PageFooter from "./components/PageFooter.vue";
+	import PageHeader from "./components/Page/PageHeader";
+	import PageTitle from "./components/Page/PageTitle";
+	import PageFooter from "./components/Page/PageFooter";
 
 	export default {
 		components: {

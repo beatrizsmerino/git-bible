@@ -9,7 +9,7 @@
 					Shell Bash
 				</p>
 				<div class="code-theme__buttons">
-					<button-copy
+					<ButtonCopy
 						class="code-theme__button-copy code-theme__button"
 						:textToCopy="codeFormatted"
 					/>
@@ -61,7 +61,7 @@
 
 
 <script>
-	import ButtonCopy from "@/components/ButtonCopy.vue";
+	import ButtonCopy from "@/components/ButtonCopy";
 
 	export default {
 		name: 'CodeTheme',

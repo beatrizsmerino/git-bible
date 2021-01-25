@@ -1,8 +1,8 @@
 <template>
 	<div class="page-content">
 		<div class="page-content__inner">
-			<logo theme="logo--home" />
-			<search />
+			<Logo theme="logo--home" />
+			<Search />
 		</div>
 	</div>
 </template>
@@ -10,8 +10,8 @@
 
 <script>
 	// @ is an alias to /src
-	import Logo from "@/components/Logo.vue";
-	import Search from "@/components/Search.vue";
+	import Logo from "@/components/Logo";
+	import Search from "@/components/Search";
 
 	export default {
 		name: "home",

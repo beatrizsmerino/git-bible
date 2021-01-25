@@ -1,7 +1,7 @@
 <template>
 	<div class="page-content">
 		<div class="page-content__inner">
-			<list-commands-git></list-commands-git>
+			<ListCommandsGit/>
 		</div>
 	</div>
 </template>
@@ -9,7 +9,7 @@
 
 
 <script>
-	import ListCommandsGit from "@/components/ListCommandsGit.vue";
+	import ListCommandsGit from "@/components/ListCommandsGit";
 
 	export default {
 		name: "CommandsGit",

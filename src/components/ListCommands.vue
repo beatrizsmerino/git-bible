@@ -6,7 +6,7 @@
 			:key="`command-${index}`"
 			:ref="command.name"
 		>
-			<command
+			<Command
 				:command-data="command"
 				:command-index="index"
 				:command-status="(command.name === anchorName) ? true : false"
@@ -18,7 +18,7 @@
 
 
 <script>
-	import Command from "@/components/Command.vue";
+	import Command from "@/components/Command";
 
 	export default {
 		name: 'ListCommands',

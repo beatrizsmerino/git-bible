@@ -1,7 +1,7 @@
 <template>
 	<div class="page-content">
 		<div class="page-content__inner">
-			<list-commands-git-flow></list-commands-git-flow>
+			<ListCommandsGitFlow/>
 		</div>
 	</div>
 </template>
@@ -9,7 +9,7 @@
 
 
 <script>
-	import ListCommandsGitFlow from "@/components/ListCommandsGitFlow.vue";
+	import ListCommandsGitFlow from "@/components/ListCommandsGitFlow";
 
 	export default {
 		name: "CommandsGitFlow",

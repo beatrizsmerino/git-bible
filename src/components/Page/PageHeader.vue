@@ -1,15 +1,15 @@
 <template>
 	<header class="page-header">
-		<logo theme="logo--header logo--light" />
-		<page-nav />
+		<Logo theme="logo--header logo--light" />
+		<PageNav />
 	</header>
 </template>
 
 
 
 <script>
-	import Logo from "@/components/Logo.vue";
-	import PageNav from "@/components/PageNav.vue";
+	import Logo from "@/components/Logo";
+	import PageNav from "@/components/Page/PageNav";
 
 	export default {
 		name: 'PageHeader',

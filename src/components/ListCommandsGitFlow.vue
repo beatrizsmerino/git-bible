@@ -1,11 +1,11 @@
 <template>
-	<list-commands :commands="commands" />
+	<ListCommands :commands="commands" />
 </template>
 
 
 
 <script>
-	import ListCommands from "@/components/ListCommands.vue";
+	import ListCommands from "@/components/ListCommands";
 	import dataCommandsGitFlow from "../data/data-commands-git-flow.json";
 
 	export default {
