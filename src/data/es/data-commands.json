@@ -739,143 +739,163 @@
 			"url": "commands-git-flow",
 			"name": "create-gitflow-repository",
 			"title": "Git Flow. Inicializar el repositorio",
-			"description": "<p>Git-flow necesita ser inicializado para personalizar la configuración de tu proyecto. Empieza a usar git-flow inicializándolo dentro de un repositorio git existente. Tendrás que responder a algunas preguntas sobre las convenciones de nomenclatura para tus ramas. Se recomienda utilizar los valores por defecto (feature, release, hotfix y support).</p>",
-			"code": "git flow init"
+			"description": "<p>Git-flow es un <strong>flujo de trabajo</strong> aplicado a un repositorio Git.<br> Todo proyecto suele tener al menos 2 ramas infinitas: <code>develop</code> que contiene el código en desarrollo y <code>master</code> que contiene cada una de las versiones estables para incluir en producción.<br> Este modelo de ramificación, diseñado en torno a los lanzamientos del proyecto, tiene además un conjunto de ramas de apoyo, que están limitadas en el tiempo y son eliminadas eventualmente. Estas ramas permiten el trabajo en equipo, para la creación de nuevas funcionalidades (<code>feature</code>), resolución de errores en desarrollo (<code>bugfix</code>), resolución de errores urgentes en producción (<code>hotfix</code>) y la publicación de diferentes versiones (<code>release</code>).</p><p>Empieza a usarlo inicializándolo dentro de un repositorio git existente con <code>git flow init</code>. Al comienzo, Git-flow necesita ser inicializado para personalizar la configuración del proyecto, tendrás que responder a algunas preguntas sobre las convenciones de nomenclatura de tus ramas, en este momento puedes cambiar el nombre de las ramas si lo deseas, aunque se recomienda utilizar los valores por defecto (<code>feature</code>, <code>release</code>, <code>hotfix</code> y <code>support</code>).</p>",
+			"code": [
+				["git flow init"],
+				[
+					"git flow init",
+					"",
+					"Initialized empty Git repository in ~/project/.git/",
+					"No branches exist yet. Base branches must be created now.",
+					"Branch name for production releases: [master]",
+					"Branch name for \"next release\" development: [develop]",
+					"",
+					"How to name your supporting branch prefixes?",
+					"Feature branches? [feature/]",
+					"Release branches? [release/]",
+					"Hotfix branches? [hotfix/]",
+					"Support branches? [support/]",
+					"",
+					"git branch",
+					"* develop",
+					"master"
+				]
+			]
 		},
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
 			"name": "gitflow-feature-start",
-			"title": "Git Flow. Start a new feature",
-			"description": "<p>Development of new features starting from the 'develop' branch. This action creates a new feature branch based on 'develop' and switches to it.</p>",
-			"code": "git flow feature start <FEATURE_NAME>"
+			"title": "Git Flow. Iniciar una nueva 'feature'",
+			"description": "<p>Cuando se va desarrollar una nueva funcionalidad o característica del proyecto se crea una nueva rama llamada <code>feature</code>. Este tipo de ramas nacen a partir de la rama <code>develop</code> y una vez terminado su desarrollo, se incorporan nuevamente a ella.</p><p>El siguiente commando es un atajo, que engloba la ejecución de varios commandos: <ul><li><code>git checkout develop</code></li><li><code>git branch feature/&lt;BRANCH_NAME&gt;</code></li> <li><code>git checkout feature/&lt;BRANCH_NAME&gt;</code></li></ul></p>",
+			"code": [["git flow feature start <FEATURE_NAME>"],["git checkout -b feature/<FEATURE_NAME> develop"]]
 		},
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
 			"name": "gitflow-feature-list",
-			"title": "Git Flow. Get a feature list",
-			"description": "<p>You can to see a list of the features created on the local repository.</p>",
+			"title": "Git Flow. Obtener la lista de 'features'",
+			"description": "<p>Puedes ver una lista de las ramas <code>feature</code> ya creadas en el repositorio local usando el siguiente commando.</p>",
 			"code": "git flow feature list"
 		},
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
 			"name": "gitflow-feature-publish",
-			"title": "Git Flow. Publish a feature",
-			"description": "<p>If you want to share this feature branch with some of you team so you can do some collaborative development then you would publish a feature to the remote server so it can be used by other users.</p>",
+			"title": "Git Flow. Publicar una 'feature'",
+			"description": "<p>Normalmente las <code>feature</code> existen solamente en los repositorios locales de los desarrolladores y no en el repositorio origen. Si quieres compartir esta rama con algunos miembros de tu equipo para poder hacer un desarrollo colaborativo, tendrías que publicar la <code>feature</code> en el servidor remoto para que pueda ser utilizada por otros usuarios.</p>",
 			"code": "git flow feature publish <FEATURE_NAME>"
 		},
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
 			"name": "gitflow-feature-pull",
-			"title": "Git Flow. Getting a published feature",
-			"description": "<p>This will be done when more than one person works on a feature together. Once you’ve published the feature your team mates will be able to work on the feature branch with you by cloning the repository. Once they have a Gitflow enabled repository they should be in the develop branch on which they should now do a pull to ensure their local repository is in sync with the one on the remote. Something to note here is that if you do a pull from the feature branch with the normal “git pull” command it breaks your HEAD and for some reason it’s very hard to get back to a point where you would be able to push any changes made or even do a feature pull in the future.</p>",
+			"title": "Git Flow. Conseguir una 'feature' publicada",
+			"description": "<p>Cuando más de una persona trabaje a la vez en una <code>feature</code>, esta será publicada por tus compañeros de equipo, y podrás ser capaz de desarrollar en la misma rama con ellos.</p><p>Si es la primera vez que participas en el proyecto, primero tendrás que clonar repositorio usando <code>git clone &lt;URL&gt;</code> para tener una copia en tu ordenador (repositorio local), después inicializar Gitflow con <code>git flow init</code> y descargar las ramas <code>master</code> y <code>develop</code> con los comandos <code>git checkout master</code> y <code>git checkout develop</code>.</p><p>Si ya estás participando en el proyecto puedes saltarte los pasos anteriores y usar el siguiente comando para descargar una <code>feature</code> y para asegurar que el repositorio local está sincronizado con el remoto.</p>",
 			"code": "git flow feature pull origin <FEATURE_NAME>"
 		},
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
 			"name": "gitflow-feature-track",
-			"title": "Git Flow. Track a published feature",
-			"description": "<p>You can track the changes a feature published on origin repository.</p>",
+			"title": "Git Flow. Seguir una 'feature' publicada",
+			"description": "<p>Digamos que has creado una nueva función con <code>git flow feature start &lt;FEATURE_NAME&gt;</code>, y la has publicado al repositorio remoto con <code>git flow feature publish &lt;FEATURE_NAME&gt;</code> para que otros miembros de tu equipo puedan colaborar contigo usando <code>git flow feature pull &lt;FEATURE_NAME&gt;</code> para descargarsela. Esto crea una nueva rama en su repositorio local, basada en la rama del remoto, sin embargo esto no la configura para que los cambios que se realizen en esta, sean rastreados por la rama remota, por lo que ahora tiene que ser rastreada manualmente.</p><p>Con el siguiente comando <code>git flow feature track &lt;FEATURE_NAME&gt;</code>, tu compañero de trabajo, puede descargar la <code>feature</code> y además seguir los cambios que otros realizen en la publicada en el repositorio de origen.</p><p>Para ilustrar el aspecto colaborativo con una rama de una nueva función, utilizando el aspecto de solicitud de extracción de GitHub que facilita la parte de revisión y discursión del código, nos ponemos en la siguiente situación:<ul><li>Varias personas trabajan en la misma función y a medida que se confirman los cambios, se envían a GitHub (o una vez al final de su desarrollo si se prefiere).</li><li>Cuando se completa la función, se abre una solicitud de extracción en GitHub comparando <code>develop</code> y con la rama.</li><li>El equipo revisa la solicitud de extracción y realiza comentarios.</li><li>Cualquier cambio de la solicitud de extracción se realiza en la rama de funciones.</li><li>Una vez que se incorporan todos los cambios en la rama de funciones se da por terminada: <code>git flow feature finish &lt;FEATURE_NAME&gt;</code>.</li><li>La rama <code>develop</code> se envía a GitHub (GitHub marcará automáticamente la solicitud de extracción como cerrada/fusionada cuando esto suceda).</li></ul><p>Sin embargo, eso deja el problema de cerrar esa sucursal, quien ejecute primero <code>git flow feature finish &lt;FEATURE_NAME&gt;</code> tendrá el lujo de eliminar su rama local, pero cualquier otra persona que haya verificado la rama tendrá que hacerlo manualmente si así lo desea. Puedes usar <code>git fetch --prune</code> o un simple <code>git fetch</code> para eliminar tu rama si ya ha sido  eliminada en el remoto.</p><p>Si ya has descargado la rama y ahora necesitas realizar un seguimiento de esta, todo lo que tienes que hacer sería que tu rama existente rastree a la anterior con <code>git branch -u origin feature/&lt;FEATURE_NAME&gt;</code> o <code>git branch --set-upstream-to origin feature/&lt;FEATURE_NAME&gt;</code></p><p>En general, lo mejor sería empezar usando <code>git flow feature track &lt;FEATURE_NAME&gt;</code> y luego mantener tu rama actualizada con <code>git flow feature pull origin &lt;FEATURE_NAME&gt;</code></p></p><p><a href='https://stackoverflow.com/questions/18412750/why-doesnt-git-flow-feature-pull-track' target='_blank'>Know more</a></p>",
 			"code": "git flow feature track <FEATURE_NAME>"
 		},
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
 			"name": "gitflow-feature-finish",
-			"title": "Git Flow. Finish up a feature",
-			"description": "<p>Finish the development of a feature. This action performs the following: merges <FEATURE_NAME> into 'develop', removes the feature branch and switches back to 'develop' branch.</p>",
+			"title": "Git Flow. Terminar una 'feature'",
+			"description": "<p>Cuando se finaliza el desarrollo de la nueva función, se deberá fusionar con <code>develop</code> y eliminarse del repositorio local y del remoto si llego a subirse.</p><p>El siguiente comando realiza los siguientes commandos: <ul><li><code>git checkout develop</code></li><li><code>git merge feature/&lt;FEATURE_NAME&gt;</code></li><li><code>git branch -D &lt;FEATURE_NAME&gt;</code></li><li><code>git push origin :&lt;FEATURE_NAME&gt;</code></li></ul></p>",
 			"code": "git flow feature finish <FEATURE_NAME>"
 		},
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
 			"name": "gitflow-bugfix-start",
-			"title": "Git Flow. Start a bugfix",
-			"description": "<p>If you want to fix a known bug in some branch of the repository, you should create a bugfix or hotfix branch. The difference between bugfix and hotfix has to do with where they fit into the git flow workflow. The bugfix branches are used for to fix bugs of features or omissions of development, are created from develop and merge back into develop.</p>",
+			"title": "Git Flow. Empezar un 'bugfix'",
+			"description": "<p>Durante el desarrollo del proyecto podrán encontrase errores en alguna de las ramas del repositorio. Para solucionarlos tenemos 2 tipos de ramas diferentes según el lugar que ocupan estos errores en el flujo de trabajo de git: <code>bugfix</code> y <code>hotfix</code>.</p><p>El término <code>bugfix</code> o <strong>corrección de errores</strong> se utilizan cuando se encuentra un problema durante la fase de desarrollo, para arreglar errores de una anterior funcionalidad u omisiones de desarrollo.<br> Este tipo de ramas se crean desde <code>develop</code> y se fusionan de nuevo en <code>develop</code> al terminarse.</p><p>El siguiente comando es lo mismo que ejecutar: <ul><li><code>git checkout develop</code></li><li><code>git branch bugfix/&lt;BUGFIX_NAME&gt;</code></li><li><code>git checkout bugfix/&lt;BUGFIX_NAME&gt;</code></li></ul></p>",
 			"code": "git flow bugfix start <BUGFIX_NAME>"
 		},
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
 			"name": "gitflow-bugfix-finish",
-			"title": "Git Flow. Finish a bugfix",
-			"description": "<p>The bugfix branches are temporary branches that are removed after merging into develop.</p>",
+			"title": "Git Flow. Terminar un 'bugfix'",
+			"description": "<p>Las ramas <code>bugfix</code> o de corrección de errores son ramas temporales, que una vez resueltos los errores, se eliminan después de fusionarse con la rama de desarrollo <code>develop</code>.</p><p>El siguiente comando es lo mismo que ejecutar: <ul><li><code>git checkout develop</code></li><li><code>git merge bugfix/&lt;BUGFIX_NAME&gt;</code></li><li><code>git branch -D bugfix/&lt;BUGFIX_NAME&gt;</code></li></ul></p>",
 			"code": "git flow bugfix finish <BUGFIX_NAME>"
 		},
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
 			"name": "gitflow-release-start",
-			"title": "Git Flow. Start a release",
-			"description": "<p>A release support preparation of a new production release and allow for minor bug fixes and preparing meta-data for a release. It creates a release branch created from the 'develop' branch. You can optionally supply a <[BASE]> commit sha-1 hash to start the release from. The commit must be on the 'develop' branch.</p>",
+			"title": "Git Flow. Empezar una 'release'",
+			"description": "<p>Para preparar nuestra aplicación para su puesta en producción existen unas ramas llamadas <code>release</code>. En algunos equipos, estas ramas son las que se vuelcan en los servidores de pre-producción para hacer el testing final: se corrigen errores menores, se pule la interfaz, se ajusta la maquetación…se hace la puesta a punto final de la aplicación antes de liberar la versión definitiva.</p><p>El nombre de la <code>release</code> es una cifra de 3 números enteros separados por puntos que van incrementandose numericamente en incrementos de 1. Este número sigue la nomenclatura del <a href='https://semver.org/lang/es/' target='_blank'>versionado semántico</a>, <code>X.Y.Z</code>, donde <code>X</code> es la versión 'major' (incorporación de multiples cambios que ya no son compatibles con la API pública), <code>Y</code> es la versión 'minor' (incorporación de una funcionalidad), y <code>Z</code> es la versión 'patch' (correción de errores compatibles con la versión anterior). </br> Por tanto, el número de la <code>release</code> sería el primero, <code>X</code>.</p><p>El siguiente comando crea una rama de lanzamiento a partir de la rama <code>develop</code>. Opcionalmente, se puede suministrar el id de una confirmación situada en <code>develop</code> para iniciar el lanzamiento desde el commit.</p><p><a href='https://aprendegit.com/git-flow-release-branches/' target='_blank'>Saber más</a></p>",
 			"code": "git flow release start <VERSION_NUMBER> <[BASE]>"
 		},
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
 			"name": "gitflow-release-list",
-			"title": "Git Flow. Get a release list",
-			"description": "<p>You can see a lists all the current release branches created on the local repository.</p>",
+			"title": "Git Flow. Obtener una lista de 'release'",
+			"description": "<p>Puede ver una lista de todas las ramas de lanzamiento actuales creadas en el repositorio local.</p>",
 			"code": "git flow release list"
 		},
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
 			"name": "gitflow-release-publish",
-			"title": "Git Flow. Publish a release",
-			"description": "<p>It's wise to publish the release branch after creating it to allow release commits by other developers.</p>",
+			"title": "Git Flow. Publicar una 'release'",
+			"description": "<p>Si esta trabajando en equipo y otro de sus compañeros debe revisar el código antes del lanzamiento de una nueva versión, es aconsejable publicar la rama de lanzamiento después de crearla para permitir que otros desarrolladores hagan commits de lanzamiento.</p>",
 			"code": "git flow release publish <VERSION_NUMBER>"
 		},
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
 			"name": "gitflow-release-track",
-			"title": "Git Flow. Track a release",
-			"description": "<p>You can track the changes a release published on remote repository.</p>",
+			"title": "Git Flow. Seguir el rastro de una 'release'",
+			"description": "<p>Puede seguir los cambios de una versión publicada en el repositorio remoto.</p>",
 			"code": "git flow release track <VERSION_NUMBER>"
 		},
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
 			"name": "gitflow-release-finish",
-			"title": "Git Flow. Finish up a release",
-			"description": "<p>Finishing a release is one of the big steps in git branching. It performs several actions: merges the release branch back into 'master', tags the release with its name, back-merges the release into 'develop' and removes the release branch.</p>",
+			"title": "Git Flow. Terminar una 'release'",
+			"description": "<p>Una vez creada la rama <code>release</code>, empezamos el proceso de corrección y depuración, se realizan los commits necesarios y cuando hemos terminado de arreglar todos los 'bugs', estamos listos para que nuestro proyecto pase a producción y eliminar la rama.</p><p>Terminar una versión es uno de los grandes pasos en la creación de ramas de git. El siguiente comando realiza varias acciones: fusiona la rama de la versión con <code>master</code>, etiqueta la versión con su nombre, vuelve a fusionar la versión con <code>develop</code> y elimina la rama de la versión.</p><p>Cuando ejecutamos este comando git-flow nos va a pedir que introduzcamos 3 mensajes: <ol><li>El mensaje del commit del merge como resultado de incorporar los cambios en <code>master</code>.</li><li>El mensaje que git-flow pondrá a la etiqueta que va a crear para identificar esta versión.</li><li>Y por último el mensaje del commit del merge como resultado de incorporar la rama a <code>develop</code>.</li></ol></p><p>La ejecución de este comando que pueden resumirse en los siguientes comandos: <ul><li><code>git checkout master</code></li><li><code>git merge release/&lt;VERSION_NUMBER&gt; --no-ff</code></li><li><code>git tag v&lt;VERSION_NUMBER&gt;</code></li><li><code>git checkout develop</code></li><li><code>git merge release/&lt;VERSION_NUMBER&gt; --no-ff</code></li><li><code>git branch -d release/&lt;VERSION_NUMBER&gt;</code></li></ul></p>",
 			"code": "git flow release finish <VERSION_NUMBER>"
 		},
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
 			"name": "gitflow-tags-push-single",
-			"title": "Git Flow. Push a single tag",
-			"description": "<p>After finishing the release branch, don't forget to add the tags to the remote repository. This command will push a single tag to the remote repository.</p>",
+			"title": "Git Flow. Publicar una sola etiqueta",
+			"description": "<p>Después de terminar la rama de lanzamiento, no olvide añadir las etiquetas al repositorio remoto. Este comando empujará una sola etiqueta al repositorio remoto.</p>",
 			"code": "git push <REPO_NAME> <TAG_NAME>"
 		},
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
 			"name": "gitflow-tags-push",
-			"title": "Git Flow. Push all the tags",
-			"description": "<p>After finishing the release branch, don't forget to add the tags to the remote repository. This command will push all tags to the remote repository. This way is not recommended because it's common for developers to have old or 'bad' tags in their local repositories that have no need to be in the remote one, so it's advised to only ever explicitly push a tag and not all of your tags at once.</p>",
+			"title": "Git Flow. Publicar todas las etiquetas",
+			"description": "<p>Puedes añadir todas las etiquetas al repositorio remoto con un solo comando. Esta forma no se recomienda porque es común que los desarrolladores tengan etiquetas viejas o 'malas' en sus repositorios locales que no tienen necesidad de estar en el remoto, por lo que se aconseja sólo empujar explícitamente una etiqueta y no todas sus etiquetas a la vez.</p>",
 			"code": "git push <REPO_NAME> --tags"
 		},
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
 			"name": "gitflow-hotfix-start",
-			"title": "Git Flow. Start a hotfix",
-			"description": "<p>The hotfix branches are created to act immediately on an unwanted state of a live production release. This branch is used for to correct errors or omissions is created from master, is merged back into master and removed after merging. It can be derived from the corresponding tag in the master branch that marks the production version. The version argument marks the name of the new hotfix version. Optionally, you can specify a base name to start from.</p>",
+			"title": "Git Flow. Iniciar un 'hotfix'",
+			"description": "<p>Al igual que existen ramas para resolver errores que hemos encontrado durante el proceso de desarrollo, exisiten otro tipo de ramas. Estas ramas llamadas <code>hotfix</code>, se crean para actuar inmediatamente sobre un estado no deseado de una versión de producción en vivo, se utilizan para corregir errores u omisiones urgentes que no pueden esperar al lanzamiento de la siguiente versión.<br>El tiempo de vida de esta rama es temporal, se crea a partir de <code>master</code>, se fusiona de nuevo en <code>master</code> y se elimina después de la fusión.</p><p>El nombre del <code>hotfix</code> es una cifra de 3 números enteros separados por puntos que van incrementandose numericamente en incrementos de 1. Este número sigue la nomenclatura del <a href='https://semver.org/lang/es/' target='_blank'>versionado semántico</a>, <code>X.Y.Z</code>, donde <code>X</code> es la versión 'major' (incorporación de multiples cambios que ya no son compatibles con la API pública), <code>Y</code> es la versión 'minor' (incorporación de una funcionalidad), y <code>Z</code> es la versión 'patch' (correción de errores compatibles con la versión anterior).</br> Por tanto, el número del <code>hotfix</code> sería el tercero y último, <code>Z</code>.</p><p>Opcionalmente, se puede especificar un nombre base, el id de un commit, desde el que crear la rama.</p>",
 			"code": "git flow hotfix start <VERSION_NUMBER> <[BASE_NAME]>"
 		},
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
 			"name": "gitflow-hotfix-finish",
-			"title": "Git Flow. Finish a hotfix",
-			"description": "<p>By finishing a hotfix it gets merged back into develop and master. Additionally the master merge is tagged with the hotfix version.</p>",
+			"title": "Git Flow. Terminar un 'hotfix'",
+			"description": "<p>Cuando se han realizado todas las correciones en una rama <code>hotfix</code>, hay que realizar el siguiente comando para finalizar la rama. Este proceso fusiona la rama de nuevo con <code>develop</code> y <code>master</code>, crea una etiqueta con el número de versión del <code>hotfix</code> y elimina dicha rama, ya que su existencia es temporal.</p>",
 			"code": "git flow hotfix finish <VERSION_NUMBER>"
 		}
 	]
