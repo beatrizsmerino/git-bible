@@ -42,6 +42,7 @@
 			font-size: 3.5rem;
 			color: $color-white;
 			background-color: rgba($color-brand-3, 0.9);
+			box-shadow: inset -7rem 0.3rem 1rem -6rem rgba($color-black, 0.5);
 
 			@include media("sm") {
 				top: 6rem;

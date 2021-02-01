@@ -1,7 +1,8 @@
 <template>
 	<div class="page-content">
 		<div class="page-content__inner">
-			<list-commands-git></list-commands-git>
+			<FilterNav />
+			<ListCommands :commands="getCommands" />
 		</div>
 	</div>
 </template>
@@ -9,12 +10,20 @@
 
 
 <script>
-	import ListCommandsGit from "@/components/ListCommandsGit.vue";
+	// import { i18n } from '@/plugins/i18n';
+	import FilterNav from "@/components/FilterNav";
+	import ListCommands from "@/components/ListCommands";
 
 	export default {
 		name: "CommandsGit",
 		components: {
-			ListCommandsGit
+			FilterNav,
+			ListCommands
+		},
+		computed: {
+			getCommands() {
+				return this.$t('commands.git');
+			},
 		}
 	};
 </script>
