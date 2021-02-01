@@ -3,9 +3,16 @@
 		class="filter__wrapper"
 		:class="{'is-open': isOpen}"
 	>
-		<div class="filter">
+		<div
+			class="filter"
+			v-closable="{
+				exclude: ['buttonFilter'],
+				handler: 'closeFilter'
+			}"
+		>
 			<button
 				class="filter__button"
+				ref="buttonFilter"
 				@click="openCloseFilter"
 			>
 
@@ -45,7 +52,56 @@
 </template>
 
 <script>
+	import Vue from 'vue';
 	import ButtonsLanguages from "@/components/Button/ButtonsLanguages";
+
+	let handleOutsideClick
+
+	Vue.directive('closable', {
+		bind(el, binding, vnode) {
+			// Here's the click/touchstart handler
+			// (it is registered below)
+			handleOutsideClick = (e) => {
+				e.stopPropagation()
+				// Get the handler method name and the exclude array
+				// from the object used in v-closable
+				const { handler, exclude } = binding.value
+
+				// This variable indicates if the clicked element is excluded
+				let clickedOnExcludedEl = false
+				exclude.forEach(refName => {
+					// We only run this code if we haven't detected
+					// any excluded element yet
+					if (!clickedOnExcludedEl) {
+						// Get the element using the reference name
+						const excludedEl = vnode.context.$refs[refName];
+						// See if this excluded element
+						// is the same element the user just clicked on
+						clickedOnExcludedEl = excludedEl.contains(e.target);
+					}
+				})
+
+				// We check to see if the clicked element is not
+				// the dialog element and not excluded
+				if (!el.contains(e.target) && !clickedOnExcludedEl) {
+					// If the clicked element is outside the dialog
+					// and not the button, then call the outside-click handler
+					// from the same component this directive is used in
+					vnode.context[handler]()
+				}
+			}
+			// Register click/touchstart event listeners on the whole page
+			document.addEventListener('click', handleOutsideClick)
+			document.addEventListener('touchstart', handleOutsideClick)
+		},
+
+		unbind() {
+			// If the element that has v-closable is removed, then
+			// unbind click/touchstart listeners from the whole page
+			document.removeEventListener('click', handleOutsideClick)
+			document.removeEventListener('touchstart', handleOutsideClick)
+		}
+	})
 
 	export default {
 		name: 'FilterNav',
@@ -57,9 +113,17 @@
 				isOpen: false
 			}
 		},
+		watch: {
+			isOpen: function () {
+				document.body.style.overflow = this.isOpen ? 'hidden' : '';
+			}
+		},
 		methods: {
 			openCloseFilter() {
 				this.isOpen = !this.isOpen;
+			},
+			closeFilter() {
+				this.isOpen = false;
 			}
 		}
 	}
@@ -73,7 +137,7 @@
 		position: relative;
 		background-color: $color-white;
 		transform: translate3d(100%, 0, 0);
-		pointer-events: auto;
+		pointer-events: all;
 		transition: all 0.5s ease-in-out 0s;
 
 		&__wrapper {
@@ -89,7 +153,7 @@
 			transition: all 0.4s ease-in-out 0.3s;
 
 			&.is-open {
-				pointer-events: auto;
+				pointer-events: all;
 				background-color: rgba($color-black, 0.5);
 
 				.filter {

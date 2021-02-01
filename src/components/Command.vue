@@ -6,14 +6,14 @@
 		:class="{'is-selected': commandStatus}"
 	>
 		<h3 class="command__title">
-			<a
-				:href="`#${commandData.name}`"
+			<router-link
+				:to="`#${commandData.name}`"
 				class="command__anchor-link"
 			>
 				<i class="reference__url-icon">
 					<font-awesome-icon :icon="['fas', 'link']" />
 				</i>
-			</a>
+			</router-link>
 			{{commandData.title}}
 		</h3>
 
