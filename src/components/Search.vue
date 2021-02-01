@@ -2,8 +2,7 @@
 	<div class="search">
 		<form
 			class="search-form"
-			method
-			action
+			@submit.prevent
 		>
 			<div class="search-form__field">
 				<input
@@ -12,7 +11,7 @@
 					type="text"
 					placeholder="Search command"
 					v-model="searchText"
-					v-on:change="checkScrollVertical"
+					@change="checkScrollVertical"
 				/>
 				<i class="search-form__icon icon icon-search"></i>
 			</div>
@@ -21,7 +20,7 @@
 			<div
 				id="searchResultsInner"
 				class="search-results__inner"
-				v-on:scroll="checkScrollVertical"
+				@scroll="checkScrollVertical"
 			>
 				<ul class="search-results__list">
 					<li
@@ -31,14 +30,14 @@
 						class="search-results__item"
 						:data-index="command.id"
 					>
-						<router-link
-							:to="`/commands-git/#${command.name}`"
+						<a
+							:href="`/${command.url}/#${command.name}`"
 							class="search-results__link"
 						>
 							<span class="search-results__text text-ellipsis">
 								{{command.title}}
 							</span>
-						</router-link>
+						</a>
 					</li>
 				</ul>
 			</div>
@@ -49,8 +48,6 @@
 
 
 <script>
-	import dataCommandsGit from "../data/data-commands-git.json";
-
 	export default {
 		name: 'Search',
 		data() {
@@ -103,12 +100,14 @@
 			},
 		},
 		computed: {
-			filteredList: function () {
+			filteredList() {
 				return this.commands.filter(command => command.title.toLowerCase().includes(this.searchText.toLowerCase()));
 			}
 		},
 		created() {
-			this.commands = dataCommandsGit.filter(command => command.name !== "" && command.title !== "");
+			let commandsGit = this.$t('commands.git').filter(command => command.name !== "" && command.title !== "");
+			let commandsGitFlow = this.$t('commands.gitFlow').filter(command => command.name !== "" && command.title !== "");
+			this.commands = commandsGit.concat(commandsGitFlow);
 		}
 	};
 </script>
@@ -116,7 +115,7 @@
 
 
 <style lang="scss" scoped>
-	.search{
+	.search {
 		width: 100%;
 	}
 
@@ -158,7 +157,7 @@
 			height: #{((5 + 1) * 4)}rem;
 			overflow-y: scroll;
 
-			@include media('md'){
+			@include media("md") {
 				height: #{((5 + 1) * 8)}rem;
 			}
 
@@ -201,7 +200,7 @@
 			}
 		}
 
-		&__text{
+		&__text {
 			width: 100%;
 		}
 
