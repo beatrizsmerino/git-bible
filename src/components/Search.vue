@@ -56,6 +56,11 @@
 				searchText: '',
 			}
 		},
+		computed: {
+			filteredList() {
+				return this.commands.filter(command => command.title.toLowerCase().includes(this.searchText.toLowerCase()));
+			}
+		},
 		methods: {
 			isScrollStart: function (element) {
 				element.classList.add("is-scroll");
@@ -98,11 +103,6 @@
 					this.isScrollReset($thisBoxParent);
 				}
 			},
-		},
-		computed: {
-			filteredList() {
-				return this.commands.filter(command => command.title.toLowerCase().includes(this.searchText.toLowerCase()));
-			}
 		},
 		created() {
 			let commandsGit = this.$t('commands.git').filter(command => command.name !== "" && command.title !== "");
