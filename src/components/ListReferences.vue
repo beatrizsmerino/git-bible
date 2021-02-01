@@ -6,7 +6,7 @@
 			:key="`reference-${index}`"
 			:data-index="index"
 		>
-			<reference :dataReference="reference" />
+			<Reference :data-reference="reference" />
 		</li>
 	</ul>
 </template>
@@ -15,7 +15,7 @@
 
 <script>
 	import data from "../data/data-references.json";
-	import Reference from "@/components/Reference.vue";
+	import Reference from "@/components/Reference";
 
 
 	export default {

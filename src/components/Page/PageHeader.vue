@@ -1,15 +1,15 @@
 <template>
 	<header class="page-header">
-		<logo theme="logo--header logo--light" />
-		<page-nav />
+		<Logo theme="logo--header logo--light" />
+		<PageNav />
 	</header>
 </template>
 
 
 
 <script>
-	import Logo from "@/components/Logo.vue";
-	import PageNav from "@/components/PageNav.vue";
+	import Logo from "@/components/Logo";
+	import PageNav from "@/components/Page/PageNav";
 
 	export default {
 		name: 'PageHeader',
@@ -35,6 +35,7 @@
 		left: 0;
 		z-index: 999;
 		background-color: $color-brand-1;
+		box-shadow: inset -7rem 0.3rem 1rem -6rem rgba($color-black, 0.5);
 
 		@include media("sm") {
 			height: 6rem;

@@ -9,14 +9,14 @@
 					Shell Bash
 				</p>
 				<div class="code-theme__buttons">
-					<button-copy
+					<ButtonCopy
 						class="code-theme__button-copy code-theme__button"
 						:textToCopy="codeFormatted"
 					/>
 
 					<label
 						class="switch-theme code-theme__button-switch code-theme__button"
-						v-on:change="switchTheme"
+						@change="switchTheme"
 					>
 						<input
 							class="switch-theme__field"
@@ -30,7 +30,7 @@
 			<div class="code-theme__content">
 				<code
 					class="code-theme__code is-multiple-line"
-					v-on:scroll="checkScrollHorizontal"
+					@scroll="checkScrollHorizontal"
 					v-if="checkLines(code) === 2"
 				>
 					<ol class="code-theme__code-list">
@@ -44,13 +44,13 @@
 
 				<code
 					class="code-theme__code is-one-line"
-					v-on:scroll="checkScrollHorizontal"
+					@scroll="checkScrollHorizontal"
 					v-else-if="checkLines(code) === 1"
 				>{{code[0]}}</code>
 
 				<code
 					class="code-theme__code is-one-line"
-					v-on:scroll="checkScrollHorizontal"
+					@scroll="checkScrollHorizontal"
 					v-else
 				>{{code}}</code>
 			</div>
@@ -61,7 +61,7 @@
 
 
 <script>
-	import ButtonCopy from "@/components/ButtonCopy.vue";
+	import ButtonCopy from "@/components/Button/ButtonCopy";
 
 	export default {
 		name: 'CodeTheme',

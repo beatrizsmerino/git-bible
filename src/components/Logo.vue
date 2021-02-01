@@ -20,6 +20,7 @@
 
 <script>
 	export default {
+		name: 'Logo',
 		props: {
 			theme: {
 				type: String

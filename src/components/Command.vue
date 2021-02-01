@@ -6,14 +6,14 @@
 		:class="{'is-selected': commandStatus}"
 	>
 		<h3 class="command__title">
-			<router-link
-				:to="`#${commandData.name}`"
+			<a
+				:href="`#${commandData.name}`"
 				class="command__anchor-link"
 			>
 				<i class="reference__url-icon">
 					<font-awesome-icon :icon="['fas', 'link']" />
 				</i>
-			</router-link>
+			</a>
 			{{commandData.title}}
 		</h3>
 
@@ -21,13 +21,13 @@
 			class="command__description"
 			v-if="commandData.description"
 			v-html="commandData.description"
-		></div>
+		/>
 
 		<div
 			class="command__blocks-code"
 			v-if="Array.isArray(commandData.code) && Array.isArray(commandData.code[0])"
 		>
-			<code-theme
+			<CodeTheme
 				class="command__code"
 				v-for="(codeBlock, index) in commandData.code"
 				:code="commandData.code[index]"
@@ -35,7 +35,7 @@
 			/>
 		</div>
 
-		<code-theme
+		<CodeTheme
 			class="command__code"
 			:code="commandData.code"
 			v-if="Array.isArray(commandData.code) && typeof commandData.code[0] == 'string' || typeof commandData.code == 'string'"
@@ -46,7 +46,7 @@
 
 
 <script>
-	import CodeTheme from "@/components/CodeTheme.vue";
+	import CodeTheme from "@/components/CodeTheme";
 
 	export default {
 		name: 'Commands',
@@ -64,7 +64,7 @@
 			},
 			commandStatus: {
 				type: Boolean,
-				reuired: true
+				required: true
 			}
 		}
 	}
@@ -73,17 +73,16 @@
 
 <style lang="scss" scoped>
 	.command {
-		padding: 2.72rem 3.2rem;
-		font-size: 1.92rem;
+		padding: 2.7rem 3.2rem;
+		font-size: 1.9rem;
 		background-color: $color-light;
 		border-bottom: 0.8rem solid $color-silver;
+		scroll-margin-top: calc(8em + 3rem);
+		transition: all 0.5s ease-in-out 0s;
 
 		@include media("sm") {
-			padding: 1.5rem;
-		}
-
-		&:not(:last-child) {
-			margin-bottom: 1.6rem;
+			padding: 1.8rem;
+			scroll-margin-top: calc(6em + 3rem);
 		}
 
 		&__title {
@@ -141,7 +140,7 @@
 					border-radius: 0.6rem;
 					background-color: $color-silver;
 
-					@include media("sm") {
+					@include media("md") {
 						white-space: initial;
 					}
 				}
@@ -163,11 +162,11 @@
 		}
 
 		&.is-selected {
-			padding: 2.72rem 3.2rem calc(2.72rem - 0.8rem);
+			padding: 2.7rem 3.2rem calc(2.7rem - 0.8rem);
 			background-color: $color-silver;
 
 			@include media("sm") {
-				padding: 1.5rem 1.5rem calc(1.5rem - 0.8rem);
+				padding: 1.8rem 1.8rem calc(1.8rem - 0.8rem);
 			}
 
 			.command {
