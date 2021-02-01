@@ -34,8 +34,8 @@ const messages = {
 const i18n = new VueI18n({
 	// Default browser language:
 	// locale: window.navigator.language.split('-')[0]
-	locale: 'es',
-	fallbackLocale: 'en',
+	locale: 'en',
+	fallbackLocale: 'es',
 	messages
 })
 
