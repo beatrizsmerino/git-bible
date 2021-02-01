@@ -24,7 +24,7 @@
 
 			<div class="filter__inner">
 				<h1 class="filter__title">
-					{{ $t('hello.world') }}
+					Filter
 				</h1>
 
 				<div class="filter__content">

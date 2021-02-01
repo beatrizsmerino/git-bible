@@ -16,9 +16,6 @@ Vue.use(VueI18n);
 
 const messages = {
 	es: {
-		hello: {
-			world: 'Hola mundo!'
-		},
 		language:{
 			spanish: 'Español',
 			english: 'Inglés',
@@ -26,9 +23,6 @@ const messages = {
 		commands: commandsESData
 	},
 	en: {
-		hello: {
-			world: 'Hello world!'
-		},
 		language: {
 			spanish: 'Spanish',
 			english: 'English',
