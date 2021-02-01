@@ -30,14 +30,14 @@
 						class="search-results__item"
 						:data-index="command.id"
 					>
-						<a
-							:href="`/${command.url}/#${command.name}`"
+						<router-link
+							:to="`/${command.url}/#${command.name}`"
 							class="search-results__link"
 						>
 							<span class="search-results__text text-ellipsis">
 								{{command.title}}
 							</span>
-						</a>
+						</router-link>
 					</li>
 				</ul>
 			</div>
@@ -54,6 +54,11 @@
 			return {
 				commands: [],
 				searchText: '',
+			}
+		},
+		computed: {
+			filteredList() {
+				return this.commands.filter(command => command.title.toLowerCase().includes(this.searchText.toLowerCase()));
 			}
 		},
 		methods: {
@@ -98,11 +103,6 @@
 					this.isScrollReset($thisBoxParent);
 				}
 			},
-		},
-		computed: {
-			filteredList() {
-				return this.commands.filter(command => command.title.toLowerCase().includes(this.searchText.toLowerCase()));
-			}
 		},
 		created() {
 			let commandsGit = this.$t('commands.git').filter(command => command.name !== "" && command.title !== "");
