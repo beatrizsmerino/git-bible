@@ -45,7 +45,7 @@
 	},
 	{
 		"url": "https://explainshell.com/explain?cmd=git+log+--all+--graph+--decorate+--oneline+--simplify-by-decoration",
-		"description": "explainshell.com: About git log --all --graph --decorate --oneline --simplify-by-decoration"
+		"description": "Explain shell: About git log --all --graph --decorate --oneline --simplify-by-decoration"
 	},
 	{
 		"url": "https://davidinformatico.com/apuntes-git/",
@@ -53,7 +53,7 @@
 	},
 	{
 		"url": "https://www.git-tower.com/learn/git/faq/change-author-name-email/",
-		"description": "How can I change the author name / email of a commit?"
+		"description": "How can I change the author name/email of a commit?"
 	},
 	{
 		"url": "https://www.runroom.com/realworld/git-stash",
@@ -70,5 +70,17 @@
 	{
 		"url": "https://www.atlassian.com/git/tutorials/merging-vs-rebasing",
 		"description": "Merging vs. Rebasing"
+	},
+	{
+		"url": "https://platzi.com/clases/1557-git-github/19988-git-reset-y-reflog-usese-en-caso-de-emergencia/",
+		"description": "Platzi: Git reset y reflog: úsese en caso de emergencia"
+	},
+	{
+		"url": "https://riptutorial.com/ebook/git",
+		"description": "Learning Git eBook (PDF)"
+	},
+	{
+		"url": "https://www.freecodecamp.org/news/git-cheat-sheet/",
+		"description": "Git Cheat Sheet – 50 Git Commands You Should Know"
 	}
 ]
