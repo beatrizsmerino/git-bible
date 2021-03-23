@@ -6,15 +6,15 @@
 
 ### Git Bible is an application that acts as a consultation dictionary in which the most used GIT, Git Flow and desktop commands are collected.
 
-![GitBible](https://github.com/beatrizsmerino/git-bible/blob/master/doc/images/git-bible-head.svg)
+![GitBible](https://github.com/beatrizsmerino/git-bible/blob/master/README/images/git-bible-head.svg)
 
-![GitBible - Git search](https://github.com/beatrizsmerino/git-bible/blob/master/doc/images/git-bible-screenshots-1.jpg)
+![GitBible - Git search](https://github.com/beatrizsmerino/git-bible/blob/master/README/images/git-bible-screenshots-1.jpg)
 
-![GitBible - Git commands](https://github.com/beatrizsmerino/git-bible/blob/master/doc/images/git-bible-screenshots-2.jpg)
+![GitBible - Git commands](https://github.com/beatrizsmerino/git-bible/blob/master/README/images/git-bible-screenshots-2.jpg)
 
 ## Development interface
 
-![GitBible - Git commands](https://github.com/beatrizsmerino/git-bible/blob/master/doc/images/vue-js-2.jpg)
+![GitBible - Git commands](https://github.com/beatrizsmerino/git-bible/blob/master/README/images/vue-js-2.jpg)
 
 Is developed with **[vue.js](https://vuejs.org/)** 2.6.10 a Javascript framework. This project use [Vue Cli](https://cli.vuejs.org/) and has dependencies as vue router.
 
