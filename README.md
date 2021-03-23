@@ -48,7 +48,7 @@ npm run test
 npm run lint
 ```
 
-### Publish project
+### Publish in Github Pages
 
 ```
 npm run deploy
