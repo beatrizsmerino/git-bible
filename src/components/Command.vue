@@ -114,7 +114,7 @@
 				line-height: 130%;
 			}
 
-			/deep/ {
+			::v-deep {
 				ol,
 				ul {
 					margin-left: 3rem;
@@ -171,7 +171,7 @@
 
 			.command {
 				&__description {
-					/deep/ {
+					::v-deep {
 						code {
 							background-color: $color-light;
 						}
