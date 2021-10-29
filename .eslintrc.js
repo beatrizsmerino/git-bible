@@ -51,7 +51,7 @@ module.exports = {
 		'comma-style': 2,
 		complexity: 0,
 		'computed-property-spacing': 2,
-		'consistent-return': 2,
+		'consistent-return': 0,
 		'consistent-this': 1,
 		curly: 2,
 		'default-case': 2,
@@ -81,7 +81,7 @@ module.exports = {
 		'id-match': 2,
 		'implicit-arrow-linebreak': 2,
 		'import/no-named-as-default': 0,
-		'init-declarations': 1,
+		'init-declarations': 0,
 		indent: [2, 'tab'],
 		'jsx-quotes': [2, 'prefer-double'],
 		'key-spacing': 2,
@@ -222,7 +222,7 @@ module.exports = {
 		'no-unmodified-loop-condition': 1,
 		'no-unneeded-ternary': 1,
 		'no-unused-vars': 1,
-		'no-unused-expressions': 1,
+		'no-unused-expressions': 0,
 		'no-use-before-define': [
 			2,
 			{
