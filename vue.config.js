@@ -1,5 +1,5 @@
 module.exports = {
-	publicPath: process.env.NODE_ENV === "production" ? "/git-bible/" : "/",
+	publicPath: process.env.NODE_ENV === 'production' ? '/git-bible/' : '/',
 	css: {
 		loaderOptions: {
 			sass: {
