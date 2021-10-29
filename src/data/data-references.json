@@ -1,86 +1,86 @@
 [
-	{
-		"url": "https://gist.github.com/beatrizsmerino/4a91c69b7590b469c2d09e5007855e56",
-		"description": "GitHub Gist of @beatrizsmerino: Commands Git"
-	},
-	{
-		"url": "https://git-scm.com/doc",
-		"description": "Git documentation"
-	},
-	{
-		"url": "https://training.github.com/",
-		"description": "Git Cheat Sheets"
-	},
-	{
-		"url": "https://ndpsoftware.com/git-cheatsheet.html",
-		"description": "Git: cheatsheet interactive"
-	},
-	{
-		"url": "http://danielkummer.github.io/git-flow-cheatsheet/",
-		"description": "Git Flow: cheatsheet"
-	},
-	{
-		"url": "https://yakiloo.com/getting-started-git-flow/",
-		"description": "Getting Started – Git-Flow"
-	},
-	{
-		"url": "https://stackabuse.com/git-push-tags-to-a-remote-repo/",
-		"description": "Git: Push Tags to a Remote Repo"
-	},
-	{
-		"url": "https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/developer/practices/gitflow.html#gitflow-top",
-		"description": "Follow the Git flow Paradigm"
-	},
-	{
-		"url": "https://www.atlassian.com/git/tutorials/rewriting-history",
-		"description": "Rewriting history"
-	},
-	{
-		"url": "https://blog.ostermiller.org/removing-and-purging-files-from-git-history/",
-		"description": "Removing and purging files from git history"
-	},
-	{
-		"url": "https://www.atlassian.com/es/git/tutorials/comparing-workflows/feature-branch-workflow",
-		"description": "Git Feature Branch Workflow"
-	},
-	{
-		"url": "https://explainshell.com/explain?cmd=git+log+--all+--graph+--decorate+--oneline+--simplify-by-decoration",
-		"description": "Explain shell: About git log --all --graph --decorate --oneline --simplify-by-decoration"
-	},
-	{
-		"url": "https://davidinformatico.com/apuntes-git/",
-		"description": "David Poza: Mis apuntes de git"
-	},
-	{
-		"url": "https://www.git-tower.com/learn/git/faq/change-author-name-email/",
-		"description": "How can I change the author name/email of a commit?"
-	},
-	{
-		"url": "https://www.runroom.com/realworld/git-stash",
-		"description": "El comando stash para cambios rápidos en un proyecto"
-	},
-	{
-		"url": "https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase",
-		"description": "Rewriting history: git rebase"
-	},
-	{
-		"url": "https://www.runroom.com/realworld/comandos-de-git-rebase",
-		"description": "Comandos de Git: Rebase"
-	},
-	{
-		"url": "https://www.atlassian.com/git/tutorials/merging-vs-rebasing",
-		"description": "Merging vs. Rebasing"
-	},
-	{
-		"url": "https://platzi.com/clases/1557-git-github/19988-git-reset-y-reflog-usese-en-caso-de-emergencia/",
-		"description": "Platzi: Git reset y reflog: úsese en caso de emergencia"
-	},
-	{
-		"url": "https://riptutorial.com/ebook/git",
-		"description": "Learning Git eBook (PDF)"
-	},
-	{
-		"url": "https://www.freecodecamp.org/news/git-cheat-sheet/",
-		"description": "Git Cheat Sheet – 50 Git Commands You Should Know"
-	}
+  {
+    "url": "https://gist.github.com/beatrizsmerino/4a91c69b7590b469c2d09e5007855e56",
+    "description": "GitHub Gist of @beatrizsmerino: Commands Git"
+  },
+  {
+    "url": "https://git-scm.com/doc",
+    "description": "Git documentation"
+  },
+  {
+    "url": "https://training.github.com/",
+    "description": "Git Cheat Sheets"
+  },
+  {
+    "url": "https://ndpsoftware.com/git-cheatsheet.html",
+    "description": "Git: cheatsheet interactive"
+  },
+  {
+    "url": "http://danielkummer.github.io/git-flow-cheatsheet/",
+    "description": "Git Flow: cheatsheet"
+  },
+  {
+    "url": "https://yakiloo.com/getting-started-git-flow/",
+    "description": "Getting Started – Git-Flow"
+  },
+  {
+    "url": "https://stackabuse.com/git-push-tags-to-a-remote-repo/",
+    "description": "Git: Push Tags to a Remote Repo"
+  },
+  {
+    "url": "https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/developer/practices/gitflow.html#gitflow-top",
+    "description": "Follow the Git flow Paradigm"
+  },
+  {
+    "url": "https://www.atlassian.com/git/tutorials/rewriting-history",
+    "description": "Rewriting history"
+  },
+  {
+    "url": "https://blog.ostermiller.org/removing-and-purging-files-from-git-history/",
+    "description": "Removing and purging files from git history"
+  },
+  {
+    "url": "https://www.atlassian.com/es/git/tutorials/comparing-workflows/feature-branch-workflow",
+    "description": "Git Feature Branch Workflow"
+  },
+  {
+    "url": "https://explainshell.com/explain?cmd=git+log+--all+--graph+--decorate+--oneline+--simplify-by-decoration",
+    "description": "Explain shell: About git log --all --graph --decorate --oneline --simplify-by-decoration"
+  },
+  {
+    "url": "https://davidinformatico.com/apuntes-git/",
+    "description": "David Poza: Mis apuntes de git"
+  },
+  {
+    "url": "https://www.git-tower.com/learn/git/faq/change-author-name-email/",
+    "description": "How can I change the author name/email of a commit?"
+  },
+  {
+    "url": "https://www.runroom.com/realworld/git-stash",
+    "description": "El comando stash para cambios rápidos en un proyecto"
+  },
+  {
+    "url": "https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase",
+    "description": "Rewriting history: git rebase"
+  },
+  {
+    "url": "https://www.runroom.com/realworld/comandos-de-git-rebase",
+    "description": "Comandos de Git: Rebase"
+  },
+  {
+    "url": "https://www.atlassian.com/git/tutorials/merging-vs-rebasing",
+    "description": "Merging vs. Rebasing"
+  },
+  {
+    "url": "https://platzi.com/clases/1557-git-github/19988-git-reset-y-reflog-usese-en-caso-de-emergencia/",
+    "description": "Platzi: Git reset y reflog: úsese en caso de emergencia"
+  },
+  {
+    "url": "https://riptutorial.com/ebook/git",
+    "description": "Learning Git eBook (PDF)"
+  },
+  {
+    "url": "https://www.freecodecamp.org/news/git-cheat-sheet/",
+    "description": "Git Cheat Sheet – 50 Git Commands You Should Know"
+  }
 ]

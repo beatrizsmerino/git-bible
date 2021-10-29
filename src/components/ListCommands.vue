@@ -1,24 +1,22 @@
 <template>
 	<ul class="list-commands">
 		<li
-			class="list-commands__item"
 			v-for="(command, index) in commandsFormatted"
 			:key="`command-${index}`"
 			:ref="command.name"
+			class="list-commands__item"
 		>
 			<Command
 				:command-data="command"
 				:command-index="index"
-				:command-status="(command.name === anchorName) ? true : false"
+				:command-status="command.name === anchorName ? true : false"
 			/>
 		</li>
 	</ul>
 </template>
 
-
-
 <script>
-	import Command from "@/components/Command";
+	import Command from '@/components/Command';
 
 	export default {
 		name: 'ListCommands',
@@ -26,7 +24,7 @@
 			Command
 		},
 		props: {
-			commands: Array,
+			commands: Array
 		},
 		data() {
 			return {
@@ -40,24 +38,23 @@
 			},
 			commands(newValue, oldValue) {
 				this.commandsFormatted = newValue;
-				console.log('Prop changed: ', newValue, ' | was: ', oldValue)
+				console.log('Prop changed: ', newValue, ' | was: ', oldValue);
 			}
 		},
 		created() {
-			this.commandsFormatted = this.commands.filter(command => command.name !== "" && command.title !== "" && command.code !== "");
+			this.commandsFormatted = this.commands.filter((command) => command.name !== '' && command.title !== '' && command.code !== '');
 		}
 	};
 </script>
 
-
 <style lang="scss" scoped>
-	.list-commands {
-		list-style: none;
+.list-commands {
+  list-style: none;
 
-		&__item {
-			&:not(:last-child) {
-				margin-bottom: 3rem;
-			}
-		}
-	}
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+}
 </style>
