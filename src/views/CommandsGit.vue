@@ -7,15 +7,14 @@
 	</div>
 </template>
 
-
-
 <script>
-	// import { i18n } from '@/plugins/i18n';
-	import FilterNav from "@/components/FilterNav";
-	import ListCommands from "@/components/ListCommands";
+
+// import { i18n } from '@/plugins/i18n';
+	import FilterNav from '@/components/FilterNav';
+	import ListCommands from '@/components/ListCommands';
 
 	export default {
-		name: "CommandsGit",
+		name: 'CommandsGit',
 		components: {
 			FilterNav,
 			ListCommands
@@ -23,12 +22,9 @@
 		computed: {
 			getCommands() {
 				return this.$t('commands.git');
-			},
+			}
 		}
 	};
 </script>
 
-
-
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

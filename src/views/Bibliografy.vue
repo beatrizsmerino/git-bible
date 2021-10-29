@@ -6,18 +6,15 @@
 	</div>
 </template>
 
-
 <script>
-	import ListReferences from "@/components/ListReferences";
+	import ListReferences from '@/components/ListReferences';
 
 	export default {
-		name: "bibliografy",
+		name: 'Bibliografy',
 		components: {
 			ListReferences
 		}
 	};
 </script>
 
-
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

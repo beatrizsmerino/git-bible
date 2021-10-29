@@ -7,14 +7,12 @@
 	</div>
 </template>
 
-
-
 <script>
-	import FilterNav from "@/components/FilterNav";
-	import ListCommands from "@/components/ListCommands";
+	import FilterNav from '@/components/FilterNav';
+	import ListCommands from '@/components/ListCommands';
 
 	export default {
-		name: "CommandsGitFlow",
+		name: 'CommandsGitFlow',
 		components: {
 			FilterNav,
 			ListCommands
@@ -27,7 +25,4 @@
 	};
 </script>
 
-
-
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

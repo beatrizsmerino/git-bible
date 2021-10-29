@@ -1,25 +1,24 @@
 <template>
 	<div
+		v-cloak
 		id="app"
 		class="sticky__app"
-		:class="{'is-scroll-down': !isScrollUp}"
-		v-cloak
+		:class="{ 'is-scroll-down': !isScrollUp }"
 	>
 		<div class="page-content__wrapper sticky__content">
-			<page-header />
-			<page-title :class="{'is-fixed': !isScrollUp}" />
+			<PageHeader />
+			<PageTitle :class="{ 'is-fixed': !isScrollUp }" />
 			<router-view />
 		</div>
 
-		<page-footer class="sticky__footer"></page-footer>
+		<PageFooter class="sticky__footer"/>
 	</div>
 </template>
 
-
 <script>
-	import PageHeader from "./components/Page/PageHeader";
-	import PageTitle from "./components/Page/PageTitle";
-	import PageFooter from "./components/Page/PageFooter";
+	import PageHeader from './components/Page/PageHeader';
+	import PageTitle from './components/Page/PageTitle';
+	import PageFooter from './components/Page/PageFooter';
 
 	export default {
 		components: {
@@ -30,19 +29,7 @@
 		data() {
 			return {
 				isScrollUp: true
-			}
-		},
-		methods: {
-			addSticky: function () {
-				const html = document.getElementsByTagName('html')[0];
-				const body = document.getElementsByTagName('body')[0];
-				html.classList.add("sticky");
-				body.classList.add("sticky__body");
-			},
-			handleScroll() {
-				const maxScroll = 95;
-				(window.scrollY >= maxScroll) ? this.isScrollUp = false : this.isScrollUp = true;
-			}
+			};
 		},
 		watch: {
 			$route: {
@@ -50,13 +37,13 @@
 					const html = document.getElementsByTagName('html')[0];
 					const body = document.getElementsByTagName('body')[0];
 
-					if (from !== undefined) {
-						html.classList.remove('page', 'page-' + from.name.toLowerCase());
+					if (typeof from !== 'undefined') {
+						html.classList.remove('page', `page-${from.name.toLowerCase()}`);
 					}
-					html.classList.add('page', 'page-' + to.name.toLowerCase());
+					html.classList.add('page', `page-${to.name.toLowerCase()}`);
 					body.classList.add('page-body');
 				},
-				immediate: true,
+				immediate: true
 			}
 		},
 		created() {
@@ -66,130 +53,142 @@
 		destroyed() {
 			window.removeEventListener('scroll', this.handleScroll);
 		},
+		methods: {
+			addSticky() {
+				const html = document.getElementsByTagName('html')[0];
+				const body = document.getElementsByTagName('body')[0];
+				html.classList.add('sticky');
+				body.classList.add('sticky__body');
+			},
+			handleScroll() {
+				const maxScroll = 95;
+				window.scrollY >= maxScroll
+					? this.isScrollUp = false
+					: this.isScrollUp = true;
+			}
+		}
 	};
 </script>
 
-
-
 <style lang="scss">
-	@import "./assets/scss/base/_base-reset.scss";
-	@import "./assets/scss/base/_base-fonts.scss";
+@import "./assets/scss/base/_base-reset.scss";
+@import "./assets/scss/base/_base-fonts.scss";
 
-	[v-cloak] {
-		display: none;
-	}
-	
-	body {
-		font-family: $font-oxygen;
-		color: $color-gray;
+[v-cloak] {
+  display: none;
+}
 
-		&::-webkit-scrollbar {
-			width: 1.5em;
-			padding: 0 0.5rem;
-			background-color: rgba($color-brand-2, 0.7);
-		}
+body {
+  font-family: $font-oxygen;
+  color: $color-gray;
 
-		&::-webkit-scrollbar-track {
-			-webkit-box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.3);
-		}
+  &::-webkit-scrollbar {
+    width: 1.5em;
+    padding: 0 0.5rem;
+    background-color: rgba($color-brand-2, 0.7);
+  }
 
-		&::-webkit-scrollbar-thumb {
-			background-color: rgba($color-brand-2, 0.4);
-			-webkit-box-shadow: inset 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
-		}
-	}
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.3);
+  }
 
-	// SELECTION TEXT
-	// =================================================
-	::-moz-selection {
-		/* Code for Firefox */
-		color: $color-brand-1;
-		background: $color-brand-2;
-	}
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba($color-brand-2, 0.4);
+    -webkit-box-shadow: inset 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  }
+}
 
-	::selection {
-		color: $color-brand-1;
-		background: $color-brand-2;
-	}
+// SELECTION TEXT
+// =================================================
+::-moz-selection {
+  /* Code for Firefox */
+  color: $color-brand-1;
+  background: $color-brand-2;
+}
 
-	// FORMS
-	// =================================================
-	::-webkit-input-placeholder {
-		/* Chrome/Opera/Safari */
-		font-weight: 400;
-		color: $color-brand-2-light;
-	}
+::selection {
+  color: $color-brand-1;
+  background: $color-brand-2;
+}
 
-	::-moz-placeholder {
-		/* Firefox 19+ */
-		font-weight: 400;
-		color: $color-brand-2-light;
-	}
+// FORMS
+// =================================================
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-weight: 400;
+  color: $color-brand-2-light;
+}
 
-	:-ms-input-placeholder {
-		/* IE 10+ */
-		font-weight: 400;
-		color: $color-brand-2-light;
-	}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  font-weight: 400;
+  color: $color-brand-2-light;
+}
 
-	:-moz-placeholder {
-		/* Firefox 18- */
-		font-weight: 400;
-		color: $color-brand-2-light;
-	}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  font-weight: 400;
+  color: $color-brand-2-light;
+}
 
-	// TEXT
-	// =================================================
-	.text-ellipsis {
-		max-width: 60rem;
-		white-space: nowrap;
-		text-overflow: ellipsis;
-		overflow: hidden;
-	}
+:-moz-placeholder {
+  /* Firefox 18- */
+  font-weight: 400;
+  color: $color-brand-2-light;
+}
 
-	// STICKY
-	// =================================================
-	.sticky {
-		height: 100%;
+// TEXT
+// =================================================
+.text-ellipsis {
+  max-width: 60rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 
-		&__body {
-			height: 100%;
-		}
+// STICKY
+// =================================================
+.sticky {
+  height: 100%;
 
-		&__app {
-			height: 100%;
-			display: flex;
-			flex-direction: column;
-		}
+  &__body {
+    height: 100%;
+  }
 
-		&__content {
-			flex: 1 0 auto;
-		}
+  &__app {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 
-		&__footer {
-			flex-shrink: 0;
-		}
-	}
+  &__content {
+    flex: 1 0 auto;
+  }
 
-	.page-content {
-		width: 90%;
-		margin: 0 auto 6rem;
+  &__footer {
+    flex-shrink: 0;
+  }
+}
 
-		&__wrapper {
-			padding-top: 8rem;
-			padding-bottom: 5.2rem;
+.page-content {
+  width: 90%;
+  margin: 0 auto 6rem;
 
-			@include media("md", $dimension: "height") {
-				padding-bottom: 0;
-			}
+  &__wrapper {
+    padding-top: 8rem;
+    padding-bottom: 5.2rem;
 
-			@include media("md") {
-				padding-top: 6rem;
-				padding-bottom: 0;
-			}
-		}
+    @include media("md", $dimension: "height") {
+      padding-bottom: 0;
+    }
 
-		&__inner {
-		}
-	}
+    @include media("md") {
+      padding-top: 6rem;
+      padding-bottom: 0;
+    }
+  }
+
+  &__inner {
+  }
+}
 </style>
