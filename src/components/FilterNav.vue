@@ -6,7 +6,7 @@
 		<div
 			v-closable="{
 				exclude: ['buttonFilter'],
-				handler: 'closeFilter',
+				handler: 'closeFilter'
 			}"
 			class="filter"
 		>
@@ -64,7 +64,7 @@
 			 * Here's the click/touchstart handler
 			 * (it is registered below)
 			 */
-			handleOutsideClick = (e) => {
+			handleOutsideClick = e => {
 				e.stopPropagation();
 
 				/*
@@ -75,7 +75,7 @@
 
 				// This variable indicates if the clicked element is excluded
 				let clickedOnExcludedEl = false;
-				exclude.forEach((refName) => {
+				exclude.forEach(refName => {
 					/*
 					 * We only run this code if we haven't detected
 					 * any excluded element yet
@@ -148,151 +148,151 @@
 </script>
 
 <style lang="scss" scoped>
-.filter {
-  width: 80%;
-  max-width: 40rem;
-  height: 100%;
-  position: relative;
-  background-color: $color-white;
-  transform: translate3d(100%, 0, 0);
-  pointer-events: all;
-  transition: all 0.5s ease-in-out 0s;
+	.filter {
+		width: 80%;
+		max-width: 40rem;
+		height: 100%;
+		position: relative;
+		background-color: $color-white;
+		transform: translate3d(100%, 0, 0);
+		pointer-events: all;
+		transition: all 0.5s ease-in-out 0s;
 
-  &__wrapper {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 9999;
-    display: flex;
-    justify-content: flex-end;
-    pointer-events: none;
-    transition: all 0.4s ease-in-out 0.3s;
+		&__wrapper {
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			top: 0;
+			right: 0;
+			z-index: 9999;
+			display: flex;
+			justify-content: flex-end;
+			pointer-events: none;
+			transition: all 0.4s ease-in-out 0.3s;
 
-    &.is-open {
-      pointer-events: all;
-      background-color: rgba($color-black, 0.5);
+			&.is-open {
+				pointer-events: all;
+				background-color: rgba($color-black, 0.5);
 
-      .filter {
-        transform: translate3d(0, 0, 0);
+				.filter {
+					transform: translate3d(0, 0, 0);
 
-        &__button {
-          left: -4.35rem;
+					&__button {
+						left: -4.35rem;
 
-          &-bg {
-            width: 100%;
-            fill: $color-white;
-          }
+						&-bg {
+							width: 100%;
+							fill: $color-white;
+						}
 
-          &-icon {
-            color: $color-black;
-          }
+						&-icon {
+							color: $color-black;
+						}
 
-          &:hover {
-            .filter {
-              &__button {
-                &-icon {
-                  color: $color-brand-1;
-                }
-              }
-            }
-          }
-        }
+						&:hover {
+							.filter {
+								&__button {
+									&-icon {
+										color: $color-brand-1;
+									}
+								}
+							}
+						}
+					}
 
-        &__inner {
-          border-left: 0.8rem solid $color-white;
-          transform: translate(0, 0);
-        }
-      }
-    }
-  }
+					&__inner {
+						border-left: 0.8rem solid $color-white;
+						transform: translate(0, 0);
+					}
+				}
+			}
+		}
 
-  &__button {
-    width: 5rem;
-    position: absolute;
-    top: 10rem;
-    left: calc(-4.35rem - 0.8rem);
-    z-index: -1;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out 0s;
+		&__button {
+			width: 5rem;
+			position: absolute;
+			top: 10rem;
+			left: calc(-4.35rem - 0.8rem);
+			z-index: -1;
+			border: none;
+			background-color: transparent;
+			cursor: pointer;
+			transition: all 0.5s ease-in-out 0s;
 
-    &:hover {
-      .filter {
-        &__button {
-          &-icon {
-            color: $color-white;
-          }
-        }
-      }
-    }
+			&:hover {
+				.filter {
+					&__button {
+						&-icon {
+							color: $color-white;
+						}
+					}
+				}
+			}
 
-    &-bg {
-      width: 100%;
-      fill: $color-brand-2-light;
-      transition: all 0.5s ease-in-out 0s;
-    }
+			&-bg {
+				width: 100%;
+				fill: $color-brand-2-light;
+				transition: all 0.5s ease-in-out 0s;
+			}
 
-    &-icon {
-      margin-right: 1rem;
-      position: absolute;
-      top: 50%;
-      left: 1.2rem;
-      transform: translate3d(0, -50%, 0);
-      font-size: 1.8rem;
-      color: $color-light;
-      pointer-events: none;
-      transition: all 0.5s ease-in-out 0s;
+			&-icon {
+				margin-right: 1rem;
+				position: absolute;
+				top: 50%;
+				left: 1.2rem;
+				transform: translate3d(0, -50%, 0);
+				font-size: 1.8rem;
+				color: $color-light;
+				pointer-events: none;
+				transition: all 0.5s ease-in-out 0s;
 
-      &:before {
-        content: "Filter";
-        display: inline-block;
-        position: absolute;
-        top: 50%;
-        left: 1.6rem;
-        transform-origin: 0 0;
-        transform: rotate(-90deg) translate(-50%, 0);
-        font-weight: 500;
-        font-style: initial;
-        font-size: 1.5rem;
-      }
-    }
-  }
+				&:before {
+					content: 'Filter';
+					display: inline-block;
+					position: absolute;
+					top: 50%;
+					left: 1.6rem;
+					transform-origin: 0 0;
+					transform: rotate(-90deg) translate(-50%, 0);
+					font-weight: 500;
+					font-style: initial;
+					font-size: 1.5rem;
+				}
+			}
+		}
 
-  &__inner {
-    width: 100%;
-    height: 100%;
-    padding: 4rem 2rem;
-    border-left: 0.8rem solid $color-brand-2-light;
-    background-color: $color-white;
-    transform: translate(-0.8rem, 0);
-    transition: all 0.5s ease-in-out 0s;
-  }
+		&__inner {
+			width: 100%;
+			height: 100%;
+			padding: 4rem 2rem;
+			border-left: 0.8rem solid $color-brand-2-light;
+			background-color: $color-white;
+			transform: translate(-0.8rem, 0);
+			transition: all 0.5s ease-in-out 0s;
+		}
 
-  &__title {
-    margin-bottom: 3rem;
-  }
+		&__title {
+			margin-bottom: 3rem;
+		}
 
-  &__content {
-    overflow-y: scroll;
-  }
-}
+		&__content {
+			overflow-y: scroll;
+		}
+	}
 
-.filter-list {
-  list-style: none;
+	.filter-list {
+		list-style: none;
 
-  &__item {
-    &:not(:last-child) {
-      margin-bottom: 2rem;
-    }
-  }
+		&__item {
+			&:not(:last-child) {
+				margin-bottom: 2rem;
+			}
+		}
 
-  &__title {
-    margin-bottom: 1rem;
-    font-size: 2rem;
-    color: $color-brand-1;
-  }
-}
+		&__title {
+			margin-bottom: 1rem;
+			font-size: 2rem;
+			color: $color-brand-1;
+		}
+	}
 </style>

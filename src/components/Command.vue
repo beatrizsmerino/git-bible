@@ -25,7 +25,8 @@
 
 		<div
 			v-if="
-				Array.isArray(commandData.code) && Array.isArray(commandData.code[0])
+				Array.isArray(commandData.code) &&
+					Array.isArray(commandData.code[0])
 			"
 			class="command__blocks-code"
 		>
@@ -75,112 +76,112 @@
 </script>
 
 <style lang="scss" scoped>
-.command {
-  padding: 2.7rem 3.2rem;
-  font-size: 1.9rem;
-  background-color: $color-light;
-  border-bottom: 0.8rem solid $color-silver;
-  scroll-margin-top: calc(8em + 3rem);
-  transition: all 0.5s ease-in-out 0s;
+	.command {
+		padding: 2.7rem 3.2rem;
+		font-size: 1.9rem;
+		background-color: $color-light;
+		border-bottom: 0.8rem solid $color-silver;
+		scroll-margin-top: calc(8em + 3rem);
+		transition: all 0.5s ease-in-out 0s;
 
-  @include media("sm") {
-    padding: 1.8rem;
-    scroll-margin-top: calc(6em + 3rem);
-  }
+		@include media('sm') {
+			padding: 1.8rem;
+			scroll-margin-top: calc(6em + 3rem);
+		}
 
-  &__title {
-    margin-bottom: 1rem;
-    font-size: 2rem;
-    color: $color-brand-2;
+		&__title {
+			margin-bottom: 1rem;
+			font-size: 2rem;
+			color: $color-brand-2;
 
-    @include media("sm") {
-      font-size: 1.8rem;
-    }
-  }
+			@include media('sm') {
+				font-size: 1.8rem;
+			}
+		}
 
-  &__anchor-link {
-    margin-right: 1rem;
-    color: $color-brand-2-light;
+		&__anchor-link {
+			margin-right: 1rem;
+			color: $color-brand-2-light;
 
-    &:hover {
-      color: $color-brand-2;
-    }
-  }
+			&:hover {
+				color: $color-brand-2;
+			}
+		}
 
-  &__description {
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
-    color: $color-brand-2;
+		&__description {
+			margin-bottom: 2rem;
+			font-size: 1.8rem;
+			color: $color-brand-2;
 
-    @include media("sm") {
-      font-size: 1.5rem;
-      line-height: 130%;
-    }
+			@include media('sm') {
+				font-size: 1.5rem;
+				line-height: 130%;
+			}
 
-    ::v-deep {
-      ol,
-      ul {
-        margin-left: 3rem;
-      }
+			::v-deep {
+				ol,
+				ul {
+					margin-left: 3rem;
+				}
 
-      p + ul,
-      p + ol {
-        margin-bottom: 1rem;
-      }
+				p + ul,
+				p + ol {
+					margin-bottom: 1rem;
+				}
 
-      a {
-        font-weight: 700;
-        color: $color-brand-3;
-      }
+				a {
+					font-weight: 700;
+					color: $color-brand-3;
+				}
 
-      code {
-        margin: 0 0.2rem;
-        padding: 0.25rem 0.5rem;
-        display: inline-block;
-        white-space: nowrap;
-        line-height: 100%;
-        font-size: 0.85em;
-        border-radius: 0.6rem;
-        background-color: $color-silver;
+				code {
+					margin: 0 0.2rem;
+					padding: 0.25rem 0.5rem;
+					display: inline-block;
+					white-space: nowrap;
+					line-height: 100%;
+					font-size: 0.85em;
+					border-radius: 0.6rem;
+					background-color: $color-silver;
 
-        @include media("md") {
-          white-space: initial;
-        }
-      }
-    }
-  }
+					@include media('md') {
+						white-space: initial;
+					}
+				}
+			}
+		}
 
-  &__blocks-code {
-    display: flex;
-    flex-direction: column;
-  }
+		&__blocks-code {
+			display: flex;
+			flex-direction: column;
+		}
 
-  &__code {
-    width: 100%;
-    display: inline-block;
+		&__code {
+			width: 100%;
+			display: inline-block;
 
-    &:not(:last-child) {
-      margin-bottom: 1.5rem;
-    }
-  }
+			&:not(:last-child) {
+				margin-bottom: 1.5rem;
+			}
+		}
 
-  &.is-selected {
-    padding: 2.7rem 3.2rem calc(2.7rem - 0.8rem);
-    background-color: $color-silver;
+		&.is-selected {
+			padding: 2.7rem 3.2rem calc(2.7rem - 0.8rem);
+			background-color: $color-silver;
 
-    @include media("sm") {
-      padding: 1.8rem 1.8rem calc(1.8rem - 0.8rem);
-    }
+			@include media('sm') {
+				padding: 1.8rem 1.8rem calc(1.8rem - 0.8rem);
+			}
 
-    .command {
-      &__description {
-        ::v-deep {
-          code {
-            background-color: $color-light;
-          }
-        }
-      }
-    }
-  }
-}
+			.command {
+				&__description {
+					::v-deep {
+						code {
+							background-color: $color-light;
+						}
+					}
+				}
+			}
+		}
+	}
 </style>

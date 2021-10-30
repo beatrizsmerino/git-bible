@@ -6,12 +6,11 @@ document.body.addEventListener('click', function(e) {
 	const target = e.target;
 	if (
 		target.tagName === 'INPUT' &&
-    target.getAttribute('class').indexOf('liga') === -1
+		target.getAttribute('class').indexOf('liga') === -1
 	) {
 		target.select();
 	}
 });
-
 (function() {
 	const fontSize = document.getElementById('fontSize'),
 		testDrive = document.getElementById('testDrive'),
