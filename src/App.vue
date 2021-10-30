@@ -11,7 +11,7 @@
 			<router-view />
 		</div>
 
-		<PageFooter class="sticky__footer"/>
+		<PageFooter class="sticky__footer" />
 	</div>
 </template>
 
@@ -38,7 +38,10 @@
 					const body = document.getElementsByTagName('body')[0];
 
 					if (typeof from !== 'undefined') {
-						html.classList.remove('page', `page-${from.name.toLowerCase()}`);
+						html.classList.remove(
+							'page',
+							`page-${from.name.toLowerCase()}`
+						);
 					}
 					html.classList.add('page', `page-${to.name.toLowerCase()}`);
 					body.classList.add('page-body');
@@ -71,124 +74,124 @@
 </script>
 
 <style lang="scss">
-@import "./assets/scss/base/_base-reset.scss";
-@import "./assets/scss/base/_base-fonts.scss";
+	@import './assets/scss/base/_base-reset.scss';
+	@import './assets/scss/base/_base-fonts.scss';
 
-[v-cloak] {
-  display: none;
-}
+	[v-cloak] {
+		display: none;
+	}
 
-body {
-  font-family: $font-oxygen;
-  color: $color-gray;
+	body {
+		font-family: $font-oxygen;
+		color: $color-gray;
 
-  &::-webkit-scrollbar {
-    width: 1.5em;
-    padding: 0 0.5rem;
-    background-color: rgba($color-brand-2, 0.7);
-  }
+		&::-webkit-scrollbar {
+			width: 1.5em;
+			padding: 0 0.5rem;
+			background-color: rgba($color-brand-2, 0.7);
+		}
 
-  &::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.3);
-  }
+		&::-webkit-scrollbar-track {
+			-webkit-box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.3);
+		}
 
-  &::-webkit-scrollbar-thumb {
-    background-color: rgba($color-brand-2, 0.4);
-    -webkit-box-shadow: inset 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
-  }
-}
+		&::-webkit-scrollbar-thumb {
+			background-color: rgba($color-brand-2, 0.4);
+			-webkit-box-shadow: inset 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+		}
+	}
 
-// SELECTION TEXT
-// =================================================
-::-moz-selection {
-  /* Code for Firefox */
-  color: $color-brand-1;
-  background: $color-brand-2;
-}
+	// SELECTION TEXT
+	// =================================================
+	::-moz-selection {
+		/* Code for Firefox */
+		color: $color-brand-1;
+		background: $color-brand-2;
+	}
 
-::selection {
-  color: $color-brand-1;
-  background: $color-brand-2;
-}
+	::selection {
+		color: $color-brand-1;
+		background: $color-brand-2;
+	}
 
-// FORMS
-// =================================================
-::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  font-weight: 400;
-  color: $color-brand-2-light;
-}
+	// FORMS
+	// =================================================
+	::-webkit-input-placeholder {
+		/* Chrome/Opera/Safari */
+		font-weight: 400;
+		color: $color-brand-2-light;
+	}
 
-::-moz-placeholder {
-  /* Firefox 19+ */
-  font-weight: 400;
-  color: $color-brand-2-light;
-}
+	::-moz-placeholder {
+		/* Firefox 19+ */
+		font-weight: 400;
+		color: $color-brand-2-light;
+	}
 
-:-ms-input-placeholder {
-  /* IE 10+ */
-  font-weight: 400;
-  color: $color-brand-2-light;
-}
+	:-ms-input-placeholder {
+		/* IE 10+ */
+		font-weight: 400;
+		color: $color-brand-2-light;
+	}
 
-:-moz-placeholder {
-  /* Firefox 18- */
-  font-weight: 400;
-  color: $color-brand-2-light;
-}
+	:-moz-placeholder {
+		/* Firefox 18- */
+		font-weight: 400;
+		color: $color-brand-2-light;
+	}
 
-// TEXT
-// =================================================
-.text-ellipsis {
-  max-width: 60rem;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
+	// TEXT
+	// =================================================
+	.text-ellipsis {
+		max-width: 60rem;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
 
-// STICKY
-// =================================================
-.sticky {
-  height: 100%;
+	// STICKY
+	// =================================================
+	.sticky {
+		height: 100%;
 
-  &__body {
-    height: 100%;
-  }
+		&__body {
+			height: 100%;
+		}
 
-  &__app {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
+		&__app {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+		}
 
-  &__content {
-    flex: 1 0 auto;
-  }
+		&__content {
+			flex: 1 0 auto;
+		}
 
-  &__footer {
-    flex-shrink: 0;
-  }
-}
+		&__footer {
+			flex-shrink: 0;
+		}
+	}
 
-.page-content {
-  width: 90%;
-  margin: 0 auto 6rem;
+	.page-content {
+		width: 90%;
+		margin: 0 auto 6rem;
 
-  &__wrapper {
-    padding-top: 8rem;
-    padding-bottom: 5.2rem;
+		&__wrapper {
+			padding-top: 8rem;
+			padding-bottom: 5.2rem;
 
-    @include media("md", $dimension: "height") {
-      padding-bottom: 0;
-    }
+			@include media('md', $dimension: 'height') {
+				padding-bottom: 0;
+			}
 
-    @include media("md") {
-      padding-top: 6rem;
-      padding-bottom: 0;
-    }
-  }
+			@include media('md') {
+				padding-top: 6rem;
+				padding-bottom: 0;
+			}
+		}
 
-  &__inner {
-  }
-}
+		&__inner {
+		}
+	}
 </style>
