@@ -6,7 +6,7 @@
 			:class="[
 				language.locale == $i18n.locale
 					? 'button--bg-color-1'
-					: 'button--bg-color-2-light',
+					: 'button--bg-color-2-light'
 			]"
 			@emit-click="changeLanguage(language.locale)"
 		>
@@ -41,15 +41,15 @@
 </script>
 
 <style lang="scss" scoped>
-.list-buttons {
-  display: flex;
+	.list-buttons {
+		display: flex;
 
-  > * {
-    flex: 1;
+		> * {
+			flex: 1;
 
-    &:not(:last-child) {
-      margin-right: 1rem;
-    }
-  }
-}
+			&:not(:last-child) {
+				margin-right: 1rem;
+			}
+		}
+	}
 </style>

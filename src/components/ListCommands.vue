@@ -42,19 +42,21 @@
 			}
 		},
 		created() {
-			this.commandsFormatted = this.commands.filter((command) => command.name !== '' && command.title !== '' && command.code !== '');
+			this.commandsFormatted = this.commands.filter(command => command.name !== '' &&
+				command.title !== '' &&
+				command.code !== '');
 		}
 	};
 </script>
 
 <style lang="scss" scoped>
-.list-commands {
-  list-style: none;
+	.list-commands {
+		list-style: none;
 
-  &__item {
-    &:not(:last-child) {
-      margin-bottom: 3rem;
-    }
-  }
-}
+		&__item {
+			&:not(:last-child) {
+				margin-bottom: 3rem;
+			}
+		}
+	}
 </style>

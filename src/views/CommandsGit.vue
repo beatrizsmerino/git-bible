@@ -9,7 +9,7 @@
 
 <script>
 
-// import { i18n } from '@/plugins/i18n';
+	// import { i18n } from '@/plugins/i18n';
 	import FilterNav from '@/components/FilterNav';
 	import ListCommands from '@/components/ListCommands';
 

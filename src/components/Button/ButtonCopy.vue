@@ -55,81 +55,81 @@
 </script>
 
 <style lang="scss" scoped>
-.button-copy {
-  appearance: none;
-  height: 2.2rem;
-  padding: 0 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: $color-light;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 0.5rem;
-  background-color: $color-brand-2-light;
-  cursor: pointer;
+	.button-copy {
+		appearance: none;
+		height: 2.2rem;
+		padding: 0 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $color-light;
+		font-size: 1.2rem;
+		border: none;
+		border-radius: 0.5rem;
+		background-color: $color-brand-2-light;
+		cursor: pointer;
 
-  &__icon {
-    font-size: 1.2rem;
-    color: $color-light;
-    pointer-events: none;
-  }
+		&__icon {
+			font-size: 1.2rem;
+			color: $color-light;
+			pointer-events: none;
+		}
 
-  &__message {
-    max-width: 30rem;
-    padding: 0.5rem 1rem;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    z-index: 3;
-    transform: translate(-50%, -1.5rem) scale(1);
-    color: $color-white;
-    border-radius: 0.5rem;
-    background-color: $color-brand-2-light;
-    opacity: 0;
+		&__message {
+			max-width: 30rem;
+			padding: 0.5rem 1rem;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			z-index: 3;
+			transform: translate(-50%, -1.5rem) scale(1);
+			color: $color-white;
+			border-radius: 0.5rem;
+			background-color: $color-brand-2-light;
+			opacity: 0;
 
-    &--success {
-      background-color: $color-success;
-    }
+			&--success {
+				background-color: $color-success;
+			}
 
-    &--error {
-      background-color: $color-error;
-    }
-  }
+			&--error {
+				background-color: $color-error;
+			}
+		}
 
-  &:hover {
-    color: $color-white;
-  }
-}
+		&:hover {
+			color: $color-white;
+		}
+	}
 
-@keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, -1.5rem) scale(1);
-  }
-  10% {
-    opacity: 1;
-    transform: translate(-50%, -3rem) scale(1);
-  }
-  15% {
-    opacity: 1;
-    transform: translate(-50%, -3rem) scale(1.1);
-  }
-  20% {
-    opacity: 1;
-    transform: translate(-50%, -3rem) scale(1);
-  }
-  90% {
-    opacity: 1;
-    transform: translate(-50%, -3rem) scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-50%, -1.5rem) scale(1);
-  }
-}
+	@keyframes fadeUp {
+		0% {
+			opacity: 0;
+			transform: translate(-50%, -1.5rem) scale(1);
+		}
+		10% {
+			opacity: 1;
+			transform: translate(-50%, -3rem) scale(1);
+		}
+		15% {
+			opacity: 1;
+			transform: translate(-50%, -3rem) scale(1.1);
+		}
+		20% {
+			opacity: 1;
+			transform: translate(-50%, -3rem) scale(1);
+		}
+		90% {
+			opacity: 1;
+			transform: translate(-50%, -3rem) scale(1);
+		}
+		100% {
+			opacity: 0;
+			transform: translate(-50%, -1.5rem) scale(1);
+		}
+	}
 
-.fadeUp-enter-active {
-  animation: fadeUp 2s ease-in-out 0s forwards;
-}
+	.fadeUp-enter-active {
+		animation: fadeUp 2s ease-in-out 0s forwards;
+	}
 </style>
