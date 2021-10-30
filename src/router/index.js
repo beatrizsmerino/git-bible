@@ -110,8 +110,8 @@ const scrollBehavior = function(to, from, savedPosition) {
 		return false;
 	}
 
-	return new Promise((resolve) => {
-		if (to.matched.some((m) => m.meta.scrollToTop)) {
+	return new Promise(resolve => {
+		if (to.matched.some(m => m.meta.scrollToTop)) {
 			position.x = 0;
 			position.y = 0;
 		}
@@ -138,25 +138,26 @@ router.beforeEach((to, from, next) => {
 	const nearestWithTitle = to.matched.
 		slice().
 		reverse().
-		find((r) => r.meta && r.meta.title);
+		find(r => r.meta && r.meta.title);
 
 	// Find the nearest route element with meta tags.
 	const nearestWithMeta = to.matched.
 		slice().
 		reverse().
-		find((r) => r.meta && r.meta.metaTags);
+		find(r => r.meta && r.meta.metaTags);
 	from.matched.
 		slice().
 		reverse().
-		find((r) => r.meta && r.meta.metaTags);
+		find(r => r.meta && r.meta.metaTags);
 
 	// If a route with a title was found, set the document (page) title to that value.
 	if (nearestWithTitle) {
-		document.title = `${nearestWithTitle.meta.title} | GitBible` || 'GitBible';
+		document.title =
+			`${nearestWithTitle.meta.title} | GitBible` || 'GitBible';
 	}
 
 	// Remove any stale meta tags from the document using the key attribute we set below.
-	Array.from(document.querySelectorAll('[data-vue-router-controlled]')).map((el) => el.parentNode.removeChild(el));
+	Array.from(document.querySelectorAll('[data-vue-router-controlled]')).map(el => el.parentNode.removeChild(el));
 
 	// Skip rendering meta tags if there are none.
 	if (!nearestWithMeta) {
@@ -165,10 +166,10 @@ router.beforeEach((to, from, next) => {
 
 	// Turn the meta tag definitions into actual elements in the head.
 	nearestWithMeta.meta.metaTags.
-		map((tagDef) => {
+		map(tagDef => {
 			const tag = document.createElement('meta');
 
-			Object.keys(tagDef).forEach((key) => {
+			Object.keys(tagDef).forEach(key => {
 				tag.setAttribute(key, tagDef[key]);
 			});
 
@@ -178,8 +179,8 @@ router.beforeEach((to, from, next) => {
 			return tag;
 		}).
 
-	// Add the meta tags to the document head.
-		forEach((tag) => document.head.appendChild(tag));
+		// Add the meta tags to the document head.
+		forEach(tag => document.head.appendChild(tag));
 
 	next();
 });

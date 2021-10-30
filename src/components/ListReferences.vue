@@ -32,13 +32,13 @@
 </script>
 
 <style lang="scss" scoped>
-.list-references {
-  list-style: none;
+	.list-references {
+		list-style: none;
 
-  &__item {
-    &:not(:last-child) {
-      margin-bottom: 1.6rem;
-    }
-  }
-}
+		&__item {
+			&:not(:last-child) {
+				margin-bottom: 1.6rem;
+			}
+		}
+	}
 </style>
