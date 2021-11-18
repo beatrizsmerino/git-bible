@@ -36,9 +36,8 @@
 			$route(to) {
 				this.anchorName = to.hash.split('#').pop();
 			},
-			commands(newValue, oldValue) {
+			commands(newValue) {
 				this.commandsFormatted = newValue;
-				console.log('Prop changed: ', newValue, ' | was: ', oldValue);
 			}
 		},
 		created() {
