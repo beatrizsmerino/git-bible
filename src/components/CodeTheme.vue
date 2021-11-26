@@ -15,10 +15,7 @@
 					/>
 
 					<label
-						class="
-							switch-theme
-							code-theme__button-switch code-theme__button
-						"
+						class="switch-theme code-theme__button-switch code-theme__button"
 						@change="switchTheme"
 					>
 						<input
@@ -26,10 +23,7 @@
 							type="checkbox"
 						>
 						<span
-							class="
-								switch-theme__bullet
-								switch-theme__bullet--rounded
-							"
+							class="switch-theme__bullet switch-theme__bullet--rounded"
 						/>
 					</label>
 				</div>
