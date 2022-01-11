@@ -168,7 +168,7 @@
 			"url": "commands-git",
 			"name": "get-commits-regex",
 			"title": "Git. Filtro de commit utilizando una expresión regular.",
-			"description": "<p>Podemos buscar dentro de un repositorio git, en todas las ramas, los commits cuyo mensaje coincida con la expresión regular que le indiquemos.</p>",
+			"description": "<p>Podemos buscar dentro de un repositorio git, en todas las ramas, los commits cuyo mensaje coincida con la expresión regular que le indiquemos.</p><p><a href='https://static.platzi.com/media/user_upload/38.gitgrep-91e4368f-580b-4d90-8d2f-628d0b76089a.jpg' target='_blank'>Ver imagen</a> | <a href='https://runebook.dev/es/docs/git/git-grep' target='_blank'>Saber más</a></p>",
 			"code": "git log --grep='<REGEX>'"
 		},
 		{
