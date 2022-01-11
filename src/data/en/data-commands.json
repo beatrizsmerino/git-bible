@@ -168,7 +168,7 @@
 			"url": "commands-git",
 			"name": "get-commits-regex",
 			"title": "Git. Commit filter using a regular expression.",
-			"description": "<p>We can search within a git repository, in all the branches, for commits whose message matches the regular expression we specify.</p>",
+			"description": "<p>We can search within a git repository, in all the branches, for commits whose message matches the regular expression we specify.</p><p><a href='https://mijingo.com/blog/search-git-commits-with-grep' target='_blank'>Know more</a></p>",
 			"code": "git log --grep='<REGEX>'"
 		},
 		{
