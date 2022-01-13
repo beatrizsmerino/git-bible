@@ -39,8 +39,8 @@
 		position: fixed;
 		left: 0;
 		bottom: 0;
-		z-index: 2;
 		color: $color-white;
+		z-index: 99999;
 		font-size: 1.6rem;
 		background-color: $color-brand-2-light;
 
