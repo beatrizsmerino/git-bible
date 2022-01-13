@@ -264,7 +264,7 @@
 		&__inner {
 			width: 100%;
 			height: 100%;
-			padding: 4rem 2rem;
+			padding: 12rem 2rem 4rem;
 			border-left: 0.8rem solid $color-brand-2-light;
 			background-color: $color-white;
 			transform: translate(-0.8rem, 0);
