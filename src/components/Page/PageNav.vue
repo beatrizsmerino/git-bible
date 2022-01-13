@@ -174,13 +174,14 @@
 			justify-content: center;
 			align-items: center;
 			white-space: nowrap;
-			color: $color-brand-2;
+			color: rgba($color-white, 0.7);
 
 			@include media('md') {
 				align-items: flex-end;
 				justify-content: flex-end;
 			}
 
+			&:hover,
 			&.router-link-active {
 				color: $color-white;
 			}
