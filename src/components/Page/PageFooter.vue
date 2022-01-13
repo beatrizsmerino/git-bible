@@ -36,21 +36,9 @@
 		padding: 1.6rem 3.2rem;
 		display: flex;
 		justify-content: space-between;
-		position: fixed;
-		left: 0;
-		bottom: 0;
-		z-index: 2;
-		color: $color-white;
+		color: rgba($color-white, 0.7);
 		font-size: 1.6rem;
-		background-color: $color-brand-2-light;
-
-		@include media('md', $dimension: 'height') {
-			position: relative;
-		}
-
-		@include media('md') {
-			position: relative;
-		}
+		background-color: $color-brand-1;
 
 		@include media('sm') {
 			text-align: center;
@@ -67,14 +55,11 @@
 	}
 
 	a {
-		color: $color-brand-2;
+		color: rgba($color-white, 0.7);
 
-		&:hover {
-			color: $color-black;
-		}
-
+		&:hover,
 		&.router-link-active {
-			color: $color-black;
+			color: $color-white;
 		}
 	}
 </style>
