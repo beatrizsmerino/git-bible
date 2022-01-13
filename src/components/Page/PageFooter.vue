@@ -36,7 +36,7 @@
 		padding: 1.6rem 3.2rem;
 		display: flex;
 		justify-content: space-between;
-		color: $color-light;
+		color: rgba($color-white, 0.7);
 		font-size: 1.6rem;
 		background-color: $color-brand-1;
 
@@ -55,12 +55,9 @@
 	}
 
 	a {
-		color: $color-light;
+		color: rgba($color-white, 0.7);
 
-		&:hover {
-			color: $color-white;
-		}
-
+		&:hover,
 		&.router-link-active {
 			color: $color-white;
 		}
