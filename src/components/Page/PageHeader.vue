@@ -31,7 +31,6 @@
 		left: 0;
 		z-index: 99999;
 		background-color: $color-brand-1;
-		box-shadow: inset -7rem 0.3rem 1rem -6rem rgba($color-black, 0.5);
 
 		@include media('sm') {
 			height: 6rem;
