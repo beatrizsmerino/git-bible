@@ -29,7 +29,7 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		z-index: 999;
+		z-index: 99999;
 		background-color: $color-brand-1;
 		box-shadow: inset -7rem 0.3rem 1rem -6rem rgba($color-black, 0.5);
 
