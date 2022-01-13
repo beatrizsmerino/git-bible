@@ -39,10 +39,10 @@
 		position: fixed;
 		left: 0;
 		bottom: 0;
-		color: $color-white;
 		z-index: 99999;
+		color: $color-light;
 		font-size: 1.6rem;
-		background-color: $color-brand-2-light;
+		background-color: $color-brand-1;
 
 		@include media('md', $dimension: 'height') {
 			position: relative;
@@ -67,14 +67,14 @@
 	}
 
 	a {
-		color: $color-brand-2;
+		color: $color-light;
 
 		&:hover {
-			color: $color-black;
+			color: $color-white;
 		}
 
 		&.router-link-active {
-			color: $color-black;
+			color: $color-white;
 		}
 	}
 </style>
