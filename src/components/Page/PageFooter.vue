@@ -36,21 +36,9 @@
 		padding: 1.6rem 3.2rem;
 		display: flex;
 		justify-content: space-between;
-		position: fixed;
-		left: 0;
-		bottom: 0;
-		z-index: 99999;
 		color: $color-light;
 		font-size: 1.6rem;
 		background-color: $color-brand-1;
-
-		@include media('md', $dimension: 'height') {
-			position: relative;
-		}
-
-		@include media('md') {
-			position: relative;
-		}
 
 		@include media('sm') {
 			text-align: center;
