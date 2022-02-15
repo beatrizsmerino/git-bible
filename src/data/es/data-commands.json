@@ -593,7 +593,7 @@
 			"parent": "git",
 			"url": "commands-git",
 			"categories": [],
-			"name": "exit-without-save",
+			"name": "exit-from-vim-without-save",
 			"title": "Git. Salir de la ventana de texto sin guardar",
 			"description": "<p>Si estás dentro del editor <strong>Vi</strong> (editor de texto creado para UNIX, cuya versión mejorada se llama <strong>Vim</strong>) y quieres simplemente salir de la ventana de texto sin guardar los cambios, escribe el comando y pulsa <em>'enter'</em>.</p><p><a href='https://victorhckinthefreeworld.com/2017/06/14/como-salir-del-editor-vim/' target='_blank'>Saber más</a></p>",
 			"code": ":q!"
@@ -602,7 +602,7 @@
 			"parent": "git",
 			"url": "commands-git",
 			"categories": [],
-			"name": "exit-and-save",
+			"name": "exit-from-vim-and-save",
 			"title": "Git. Salir de la ventana de texto, después de guardar",
 			"description": "<p>Si estás dentro del editor <strong>Vi</strong> (editor de texto creado para UNIX, cuya versión mejorada se llama <strong>Vim</strong>) y quieres salir de la ventana de texto y guardar los cambios, escribe el comando y pulsa <em>'enter'</em>.</p><p><a href='https://victorhckinthefreeworld.com/2017/06/14/como-salir-del-editor-vim/' target='_blank'>Saber más</a></p>",
 			"code": ":wq"
