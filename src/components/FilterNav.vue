@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="filter__wrapper"
+		class="filter-nav__wrapper"
 		:class="{ 'is-open': isOpen }"
 	>
 		<div
@@ -8,40 +8,38 @@
 				exclude: ['buttonFilter'],
 				handler: 'closeFilter'
 			}"
-			class="filter"
+			class="filter-nav"
 		>
 			<button
 				ref="buttonFilter"
-				class="filter__button"
+				class="filter-nav__button"
 				@click="openCloseFilter"
 			>
-				<span class="filter__button-bg">
+				<span class="filter-nav__button-bg">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 366 730"
 					>
-						<path
-							d="M317.638,0V44.353c0,52.1-32.216,89.512-86.9,101.005a151.174,151.174,0,0,1-22.577,2.893C70.024,156.038.623,258.217,0,360.818H0v0H0C.623,463.424,70.024,565.6,208.157,573.39a151.043,151.043,0,0,1,22.577,2.893c54.688,11.493,86.9,48.9,86.9,101.005V730H366V0Z"
-						/>
+						<path d="M317.638,0V44.353c0,52.1-32.216,89.512-86.9,101.005a151.174,151.174,0,0,1-22.577,2.893C70.024,156.038.623,258.217,0,360.818H0v0H0C.623,463.424,70.024,565.6,208.157,573.39a151.043,151.043,0,0,1,22.577,2.893c54.688,11.493,86.9,48.9,86.9,101.005V730H366V0Z" />
 					</svg>
 				</span>
-				<i class="filter__button-icon">
+				<i class="filter-nav__button-icon">
 					<font-awesome-icon :icon="['fas', 'filter']" />
 				</i>
 			</button>
 
-			<div class="filter__inner">
-				<h1 class="filter__title">
+			<div class="filter-nav__inner">
+				<h1 class="filter-nav__title">
 					Filter
 				</h1>
 
-				<div class="filter__content">
-					<ul class="filter-list">
-						<li class="filter-list__item">
-							<h2 class="filter-list__title">
+				<div class="filter-nav__content">
+					<ul class="filter-nav__list">
+						<li class="filter-nav__item">
+							<h2 class="filter-nav__subtitle">
 								Languages
 							</h2>
-							<div class="filter-list__content">
+							<div class="filter-nav__subcontent">
 								<ButtonsLanguages />
 							</div>
 						</li>
@@ -148,7 +146,7 @@
 </script>
 
 <style lang="scss" scoped>
-	.filter {
+	.filter-nav {
 		width: 80%;
 		max-width: 40rem;
 		height: 100%;
@@ -174,7 +172,7 @@
 				pointer-events: all;
 				background-color: rgba($color-black, 0.5);
 
-				.filter {
+				.filter-nav {
 					transform: translate3d(0, 0, 0);
 
 					&__button {
@@ -190,7 +188,7 @@
 						}
 
 						&:hover {
-							.filter {
+							.filter-nav {
 								&__button {
 									&-icon {
 										color: $color-brand-1;
@@ -220,7 +218,7 @@
 			transition: all 0.5s ease-in-out 0s;
 
 			&:hover {
-				.filter {
+				.filter-nav {
 					&__button {
 						&-icon {
 							color: $color-white;
@@ -278,10 +276,10 @@
 		&__content {
 			overflow-y: scroll;
 		}
-	}
 
-	.filter-list {
-		list-style: none;
+		&__list {
+			list-style: none;
+		}
 
 		&__item {
 			&:not(:last-child) {
@@ -289,7 +287,7 @@
 			}
 		}
 
-		&__title {
+		&__subtitle {
 			margin-bottom: 1rem;
 			font-size: 2rem;
 			color: $color-brand-1;
