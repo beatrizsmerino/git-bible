@@ -595,7 +595,7 @@
 			"categories": [],
 			"name": "exit-without-save",
 			"title": "Git. Salir de la ventana de texto sin guardar",
-			"description": "<p>Si estás dentro del editor <strong>Vi</strong> (editor de texto creado para UNIX, cuya versión mejorada se llama <strong>Vim</strong>) y quieres simplemente salir de la ventana de texto sin guardar los cambios, escribe el comando y pulsa <em>'enter'</em>.</p>",
+			"description": "<p>Si estás dentro del editor <strong>Vi</strong> (editor de texto creado para UNIX, cuya versión mejorada se llama <strong>Vim</strong>) y quieres simplemente salir de la ventana de texto sin guardar los cambios, escribe el comando y pulsa <em>'enter'</em>.</p><p><a href='https://victorhckinthefreeworld.com/2017/06/14/como-salir-del-editor-vim/' target='_blank'>Saber más</a></p>",
 			"code": ":q!"
 		},
 		{
@@ -604,7 +604,7 @@
 			"categories": [],
 			"name": "exit-and-save",
 			"title": "Git. Salir de la ventana de texto, después de guardar",
-			"description": "<p>Si estás dentro del editor <strong>Vi</strong> (editor de texto creado para UNIX, cuya versión mejorada se llama <strong>Vim</strong>) y quieres salir de la ventana de texto y guardar los cambios, escribe el comando y pulsa <em>'enter'</em>.</p>",
+			"description": "<p>Si estás dentro del editor <strong>Vi</strong> (editor de texto creado para UNIX, cuya versión mejorada se llama <strong>Vim</strong>) y quieres salir de la ventana de texto y guardar los cambios, escribe el comando y pulsa <em>'enter'</em>.</p><p><a href='https://victorhckinthefreeworld.com/2017/06/14/como-salir-del-editor-vim/' target='_blank'>Saber más</a></p>",
 			"code": ":wq"
 		},
 		{
