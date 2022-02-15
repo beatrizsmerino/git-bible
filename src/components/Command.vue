@@ -40,16 +40,21 @@
 			</template>
 		</div>
 
+		<div class="command__categories">
+			<Tag :tag-list="commandData.categories" />
+		</div>
 	</div>
 </template>
 
 <script>
 	import CodeTheme from '@/components/CodeTheme';
+	import Tag from '@/components/Tag';
 
 	export default {
 		name: 'Commands',
 		components: {
-			CodeTheme
+			CodeTheme,
+			Tag
 		},
 		props: {
 			commandData: {
