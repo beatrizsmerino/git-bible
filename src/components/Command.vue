@@ -23,30 +23,23 @@
 			v-html="commandData.description"
 		/>
 
-		<div
-			v-if="
-				Array.isArray(commandData.code) &&
-					Array.isArray(commandData.code[0])
-			"
-			class="command__blocks-code"
-		>
-			<CodeTheme
-				v-for="(codeBlock, index) in commandData.code"
-				:key="`code-${index}`"
-				class="command__code"
-				:code="commandData.code[index]"
-			/>
+		<div class="command__blocks-code">
+			<template v-if="checkBlocksCode === 'multiple'">
+				<CodeTheme
+					v-for="(item, index) in commandData.code"
+					:key="`code-${index}`"
+					class="command__code"
+					:code="item"
+				/>
+			</template>
+			<template v-if="checkBlocksCode === 'one'">
+				<CodeTheme
+					class="command__code"
+					:code="commandData.code"
+				/>
+			</template>
 		</div>
 
-		<CodeTheme
-			v-if="
-				(Array.isArray(commandData.code) &&
-					typeof commandData.code[0] == 'string') ||
-					typeof commandData.code == 'string'
-			"
-			class="command__code"
-			:code="commandData.code"
-		/>
 	</div>
 </template>
 
@@ -70,6 +63,18 @@
 			commandStatus: {
 				type: Boolean,
 				required: true
+			}
+		},
+		computed: {
+			checkBlocksCode() {
+				if (Array.isArray(this.commandData.code) && typeof this.commandData.code[0] == 'string' || typeof this.commandData.code == 'string') {
+					return 'one';
+				}
+				if (Array.isArray(this.commandData.code) && Array.isArray(this.commandData.code[0])) {
+					return 'multiple';
+				}
+
+				return false;
 			}
 		}
 	};
@@ -154,15 +159,17 @@
 		&__blocks-code {
 			display: flex;
 			flex-direction: column;
+
+			> * {
+				&:not(:last-child) {
+					margin-bottom: 1.5rem;
+				}
+			}
 		}
 
 		&__code {
 			width: 100%;
 			display: inline-block;
-
-			&:not(:last-child) {
-				margin-bottom: 1.5rem;
-			}
 		}
 
 		&.is-selected {
