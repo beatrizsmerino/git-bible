@@ -347,9 +347,9 @@
 			"title": "Git. Remove a commit",
 			"description": "<p>The <code>git reset</code> command is a tool for undoing changes. If you run it without indicating a commit SHA, it will only remove the changes added to the staging area.</p><p>It has 3 arguments that correspond to the 3 internal mechanisms of Git state management, the confirmation tree (HEAD), the staging area, and the working directory.</p><p>When we specify the type of reset we want with one of these arguments, we indicate the previous SHA commit to all those we want to delete: <ul><li><code>--mixed</code>: It is the default option, it causes the same effect as executing<code>git reset</code>. Removes the commits after the selected commit. Remove the changes from the stage area, but keep the ones from the working directory.</li><li><code>--soft</code>: Removes the commits after the selected commit, but keeps the changes added to the stage area and keeps the changes made in the working directory.</li><li><code>--hard</code>: It is the most dangerous option because you lose all the changes made. Remove the commits after the selected commit, which also removes the changes from the stage area and the working directory.</li></ul></p>",
 			"code": [
-				["git reset --soft <idCommit>"],
-				["git reset --mixed <idCommit>"],
-				["git reset --hard <idCommit>"]
+				["git reset --soft <COMMIT_ID>"],
+				["git reset --mixed <COMMIT_ID>"],
+				["git reset --hard <COMMIT_ID>"]
 			]
 		},
 		{
@@ -705,7 +705,7 @@
 			"name": "diff",
 			"title": "Git. Comparing changes with git diff",
 			"description": "<p>We can see what changes have been made to the code with the command <code>diff</code>. This shows on the terminal the lines of code that have been removed with the symbol <code>-</code> and in red, and the lines added with the symbol <code>+</code> and in green.</p><p>The next tool online can help you. <strong>DiffMerge</strong> is an application to visually compare and merge files on Windows, OSX and Linux: <a href='http://sourcegear.com/diffmerge/' target='_blank'>http://sourcegear.com/diffmerge/</a></p><p>We can also compare the changes that have been made to the code of several commits.</p><p><a href='https://www.atlassian.com/git/tutorials/saving-changes/git-diff' target='_blank'>Know more</a></p>",
-			"code": [["git diff"], ["git diff <idCommit1> <idCommit2>"]]
+			"code": [["git diff"], ["git diff <COMMIT_ID_1> <COMMIT_ID_2>"]]
 		},
 		{
 			"parent": "git",
