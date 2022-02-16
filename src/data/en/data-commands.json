@@ -3,7 +3,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-version"
+			],
 			"name": "get-git-version",
 			"title": "Git. Get git version",
 			"description": "<p>Before you install git, it's a good idea to check if you already have it installed by using the following command, which will return the version number installed on your computer. If not, follow the steps described in this <a href='https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git' target='_blank'>link</a> depending on your operating system.</p>",
@@ -12,7 +14,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-init"
+			],
 			"name": "create-git-repository",
 			"title": "Git. Initialize git repository",
 			"description": "<p>A git repository is a virtual repository, allowing you to store versions of your project's code that you can access whenever you need to. The following command, used only once during the initial setup of a new repository, will create a new <code>.git</code> subdirectory in your current working directory and a new <code>master</code> branch.</p><p><a href='https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-init' target='_blank'>Know more</a></p>",
@@ -21,7 +25,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-config"
+			],
 			"name": "show-configuration",
 			"title": "Git. Show the set configuration",
 			"description": "<p>To visualize our current configuration, We must know that all the configuration is saved in the file <code>.gitconfig</code>, found in: if you are <strong>Linux</strong> the user <code>HOME</code>or if you are on <strong>Windows</strong> in <code>C:Users</code> or if you are  <strong>Mac</strong> typing on the <strong>consola</strong> <code>git config --list --show-origin</code>.</p>",
@@ -40,7 +46,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-config"
+			],
 			"name": "config-user-name-email",
 			"title": "Git. Configure the name and email of user",
 			"description": "<p>Git is a <strong>distributed version control system</strong> that’s being used by most software teams today. The first thing you should do after installing Git on your system is to configure your git username and email address. Git associate your identity with every commit you make.</p><p>Git allows you to set a global, per-project username and email address. If you change the name and email during repository development, the changes only affect future commits, the name and email associated with commits you made prior to the change are not affected.</p><p>You can set or change your git identity using the following command.</p>",
@@ -56,7 +64,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-config"
+			],
 			"name": "config-code-editor",
 			"title": "Git. Add or edit the default editor",
 			"description": "<p>When you create a Git commit with <code>git commit –a</code>, the default editor that will be opened is <strong>Vim</strong>. This can be very confusing for people, as Vim is not an easy editor if you have never worked with it previously.</p><p>There are many ways in which this can be done: via the terminal with the next command, opening and edting the <code>.gitconfig</code> file...</p><p>On <strong>OSX</strong> for set <strong>Visual Studio Code</strong> as global Git editor, you need to do the next steps: <ul><li>Open the editor and press at the same time the keys <code>Shift + Command + P</code>.</li><li>Type the word <code>Code</code> on the emergent window and click on <code>Shell Command: Install 'code' command in PATH</code> to do the installation.</li><li>And then use the second block of commands of this description, for run the 2 lines in your terminal. This defines it in your settings as the global editor of Git and opens this same settings file with it.</li></ul></p><p><a href='https://stackoverflow.com/questions/34746045/set-visual-studio-code-to-be-global-git-editor-on-osx' target='_blank'>Know more</a></p>",
@@ -73,7 +83,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"folders-files"
+			],
 			"name": "open-file-with-editor",
 			"title": "Git. Open a project or file with the editor",
 			"description": "<p>Through the terminal you can open a file with your preferred code editor. These commands open a file with the SublimeText, Atom and Visual Studio Code editors.</p>",
@@ -92,7 +104,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-commit"
+			],
 			"name": "change-autor-email-last-commits",
 			"title": "Git. Change the name and email of the author of the last commit",
 			"description": "<p>If you have made a mistake and made your commit with another name or email you can overwrite the author information of only the last commit with this command.</p>",
@@ -101,7 +115,10 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-filter-branch",
+				"git-config"
+			],
 			"name": "change-autor-email-commits",
 			"title": "Git. Change the name and email of the author after make a commit",
 			"description": "<p>If you have made a mistake and made several commits with another name or user email you can overwrite the author information of all commits with the following command.</p><p>Be very careful if these commits have been previously uploaded to the remote repository and if more people are collaborating in the repository. If this is the case, it is important to communicate it before making this command, because you'll also have to overwrite changes in the remote repository with <code>git push -f</code> and the other contributors will have to update their local repository with <code>git pull -f</code>. This type of changes is best made without having any changes saved in the <strong>staging area</strong> or the <strong>working directory</strong>.</p><p><a href='https://stackoverflow.com/questions/750172/how-to-change-the-author-and-committer-name-and-e-mail-of-multiple-commits-in-gi' target='_target'>Know more</p>",
@@ -128,7 +145,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-log"
+			],
 			"name": "get-commits",
 			"title": "Git. Get all commits made",
 			"description": "<p>After you have made several commits, or if you have cloned a repository that already had a commit history, you will probably want to look back to see what modifications have been made.</p><p>This command shows a list of all the commits made, in reverse chronological order, i.e. the most recent ones are shown at the beginning. Each commit contains information about the identification number (<em>Secure Hash Algorithm</em>, <code>SHA-1</code>), the author's name and e-mail address, the date and the commit message.</p><p><a href='https://git-scm.com/book/es/v2/Fundamentos-de-Git-Ver-el-Historial-de-Confirmaciones' target='_blank'>Know more</a></p>",
@@ -137,7 +156,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-log"
+			],
 			"name": "get-commits-oneline",
 			"title": "Git. Get all commits made in a single line",
 			"description": "<p>The <code>git log</code> command has many optional parameters for formatting the output of the commit information. The <code>--oneline</code> option shows the information of each commit in a single line with the first 6 characters of the <code>SHA-1</code> number, the branches, the tags and the message.</p><p><a href='https://git-scm.com/book/es/v2/Fundamentos-de-Git-Ver-el-Historial-de-Confirmaciones#rlog_options' target='_blank'>Know more</a></p>",
@@ -146,7 +167,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-log"
+			],
 			"name": "get-commits-oneline-graph",
 			"title": "Git. Get all commits made in a graph",
 			"description": "<p>This command condenses the information of each commit into a single line, showing only the commit ID and the first line of the commit message, highlighting all references (branches, tags...).</p><p>It draws a graphical <em>ASCII</em> representation of the commit history structure. Prints additional lines between commits, so that the history chart is drawn correctly, and it use asterisks to show which branch the commit was on.</p><p><a href='https://www.atlassian.com/git/tutorials/git-log' target='_blank'>Know more</a></p>",
@@ -155,7 +178,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-log"
+			],
 			"name": "get-commit-without-merges",
 			"title": "Git. Get all commits made, hiding the merge commits",
 			"description": "<p>A <code>merge</code> is the result of merging 2 or more branches. Sometimes, with that merge, an extra commit called <code>merge commit</code> is generated. The information in this commit contains a mix of all changes made in both branches, this can be confusing. We can display the list of commits without them with this command.</p>",
@@ -164,7 +189,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-log"
+			],
 			"name": "get-commits-range",
 			"title": "Git. Get commits between ranges",
 			"description": "<p>The most common way to specify a range of commits is by using the double dot syntax.</p><p>This for example, is often used to get a particular range of commits by selecting the position they occupy in the history.</p><p>Or on the other hand if we select 2 branches it will show all the commits in the first branch that do not appear in the second. This is useful for previewing what is about to be merged or to see what is about to be published in the remote repository.</p><p><a href='https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection#_commit_ranges' target='_blank'>Know more</a></p>",
@@ -183,7 +210,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-log"
+			],
 			"name": "get-commit-by-date",
 			"title": "Git. Search the commits by date",
 			"description": "<p>With the following commands we can obtain a list of commits according to the indicated date. (YYYY-MM-DD): <ul><li><code>--since</code> Commits from the date.</li><li><code>--before</code> Commits before the date.</li><li><code>--after</code> Commits after the date.</li></ul></p>",
@@ -202,7 +231,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-log"
+			],
 			"name": "show-commits-of-file",
 			"title": "Git. Show only the commits in which a file is involved",
 			"description": "<p>It shows all the commits in which the indicated file has been modified.</p>",
@@ -211,7 +242,10 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-log",
+				"git-grep"
+			],
 			"name": "get-commits-regex",
 			"title": "Git. Searching git files and commits using a regular expression",
 			"description": "<p>Usually, we check the repository history using the <code>git log</code> command, which shows us to see a list of all commits. But as our project gets bigger, it will become more complicated to search through the multiple files and commits. So at some point, we will want to <strong>filter this list to find changes that include specific words in the files or in the commit message</strong>.</p><p>Git has a command called <code>grep</code> that allows you to search inside the repository, through any tree or working directory, for files that match a string.</p><p>For example: <ul><li><code>git grep -n 'word'</code> or <code>git grep --line-number 'word'</code>, shows the file, the line number and the text of the line where the match was found.</li><li><code>git grep -c 'word'</code> or <code>git grep --count 'word'</code>, condenses the result showing only the files where the match was found and how many matches there are in each file.</li></ul></p><p>Also git has a command called <code>--grep</code> we can search inside a git repository, in any branch, for commits whose message matches the text string or regular expression you specify.</p><p>For example: <ul><li><code>git log -S 'word'</code>, shows the commits that contain the word to search for both in the commit messages and in the content of the changes.</li><li><code>git log --grep 'word'</code>, shows the commits whose message matches the specified expression.</ul> Once the commit is found, we could run the command <code>git show &lt;COMMIT_ID&gt;</code>, using the <code>HASH</code> (commit identifier), to see it in depth.</p><p><a href='https://mijingo.com/blog/search-git-commits-with-grep' target='_blank'>Know more</a></p>",
@@ -233,7 +267,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-show"
+			],
 			"name": "show-info-commit",
 			"title": "Git. Show the information of a commit",
 			"description": "<p>This is a command-line tool that you use to view expanded details in git objects such as blobs, trees, tags, and commits.</p><p>In the case of a commit, it shows its complete information: (id or <code>SHA-1</code>, author, date and message).</p><p>There are many ways to access a commit's information:<br><ul><li>In an absolute way, referring to the code that identifies it.</li><li>Relatively, referring to the name of the branch of the last commit.</li><li>Through <code>HEAD</code>, accessing the last commit that has been made.</li><li>By his position in the git tree. We can see all the commits backwards from the moment we tell you, with the sign <code>^</code> we can go 1 or 3 commits backwards and with the sign <code>-</code> or <code>~</code> we can specify the number of commits backwards we want to go until we find the one we want to see.</li></ul></p>",
@@ -264,7 +300,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-show"
+			],
 			"name": "summary-branches",
 			"title": "Git. Show branches and their commits",
 			"description": "<p>It shows us a summary of all the branches that are in a project together with their last modifications or commits.</p><p><a href='https://git-scm.com/docs/git-show-branch' target='_blank'>Saber más</a></p>",
@@ -286,7 +324,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-show"
+			],
 			"name": "show-date-commit",
 			"title": "Git. Show date commit",
 			"description": "<p>A commit has 2 types of dates: the author date and the commit date.<ul><li>The <strong>author date</strong> indicates when this commit was originally made, i.e. when the <code>git commit</code> was first made. </li><li>The <strong>commit date</strong> changes each time the commit is modified, for example, when the commit is overwritten with <code>git commit --amend</code></li></ul></p><p>With the following command we can format the output information of a commit (2020-12-03 19:28:49 +0100).<ul><li><code>%ai</code>: <strong>author date</strong>, <em>ISO 8601-like</em> format</li><li><code>%ci</code>: <strong>committer date</strong>, <em>ISO 8601-like</em> format</li></ul></p>",
@@ -295,7 +335,11 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-config",
+				"git-commit",
+				"git-filter-branch"
+			],
 			"name": "overwrite-date-commit",
 			"title": "Git. Overwrite date commit",
 			"description": "<p>This command change the author and committer date of the commit already created (2020-12-03 19:28:49 +0100).<br>Why change two dates? The <strong>author</strong> is the person who originally wrote the work, whereas the <strong>committer</strong> is the person who last applied the work. If we are working alone on the project, the date should be the same in both cases.</p><p>We have 2 ways to overwrite the date of a commit:</p><ul><li>We can modify the date of the <strong>last commit</strong> made with this first command.<br><a href='https://garysferrao.github.io/git/commit/date/2015/12/01/change-git-commit-date.html' target='_blank'>Know more</a></li><li>Or we can modify the date of a particular commit by filtering the list of commits <strong>by the id of the commit</strong> to be searched. The date of the first commit made to a repository can be modified using this second command.<br><a href='https://stackoverflow.com/questions/454734/how-can-one-change-the-timestamp-of-an-old-commit-in-git' target='_blank'>Know more</a></li></ul><p>The second time we run any of these commands we we won't be able to create a new backup. We must delete the previous backup that already exists in <code>.git/refs/original/</code> folder or force overwriting the backup with <code>-f</code>.</p>",
@@ -316,7 +360,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-add"
+			],
 			"name": "git-add",
 			"title": "Git. Add folders and files to staging area",
 			"description": "<p>There are different areas in a git repository: the working tree, working directory or workspace, the staging area or index, the stash, the local repository and remote repository.<ul><li>The <strong>workspace</strong> contains the files you're currently working on, git will notice the changes (if you haven't previously excluded them), but it won't save them until you explicitly tell it to track them.</li><li>The <strong>staging area</strong> contains a snapshot of the content tracking the work tree. This snapshot represents the contents of the next commit.</li></ul></p><p>We use the <code>git add</code> command to add the changes in the working directory to the staging area.<br>You can add them all at the same time (3 first commands) or by indicating the file paths (last command):</p>",
@@ -341,7 +387,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-status"
+			],
 			"name": "show-status-files",
 			"title": "Git. Show the status of files in a git directory",
 			"description": "<p>Executing this command we can see the branch in which we are and the files contained in the stage along with its state (new/modified/deleted). It also warns us of files that are untracked by git (untracked) or files with conflicts.</p>",
@@ -350,7 +398,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"folders-files"
+			],
 			"name": "remove-file-track",
 			"title": "Git. Delete and tracking file",
 			"description": "<p>The <code>git rm</code> command is used to remove individual files or a set of files from a repository, the opposite command would be <code>git add</code>.<br>The removal only affects the working directory areas and the staging area, it only acts on the current branch and files that have no unsaved changes. This change is not stored in the repository history until a new commit is created.</p><p><strong>Why use <code>git rm</code> instead of <code>rm</code></strong><br>With the <code>rm</code> command, a Git repository will recognize when it has run over a file that is being tracked, update the working directory to reflect the removal but not the staging area. You need to run an additional <code>git add</code> command in the deleted file paths to add the changes to the staging area. The <code>git rm</code> command acts as a shortcut as it will update the working directory and the test index with the removal.</p><p>The next commands do:<ul><li><code>rm</code>: Delete the selected file and git doesn't notice this change.</li><li><code>git rm </code>: It only works if the file was already being tracked, i.e. if a <code>git add</code> and a <code>git commit</code> were executed. Delete the selected file, and add the changes to the staging area.</li><li><code>git rm --cached</code>: Removes the trace of the selected file from version control, without deleting the file, this is called an <strong>untracking file</strong>.</li></ul></p><p><a href='https://www.atlassian.com/es/git/tutorials/undoing-changes/git-rm' target='_blank'>Know more</a></p>",
@@ -369,7 +419,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"folders-files"
+			],
 			"name": "rename-file-track",
 			"title": "Git. Rename and tracking file",
 			"description": "<p>This command works the same as <code>git rm</code> command.</p><p>The next commands do:<ul><li><code>mv</code>: Modify the name of a file without the git adding it to the staging area.</li><li><code>git mv</code>: Change the name of a file and have git track this change. After this, if we do a <code>git status</code> it will appear as renamed.</li></ul></p>",
@@ -385,7 +437,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-commit"
+			],
 			"name": "create-commit",
 			"title": "Git. Create a commit with a message",
 			"description": "<p>Commits are created to capture the status of one or more project files at a particular time. They are a <strong>changeset</strong>, snapshots or milestones in the history of a git project. Each commit contains the date it was made, the changes of each file, the author information, a message describing the content of the commit, and a unique identifier (<code>SHA-1</code>) to reference this commit.</p><p>This command only includes modifications to tracked files (those that have been added with <code>git add</code> at some point in their history). The <code>-m</code> or <code>--message</code> option is used to indicate the commit message.</p>",
@@ -394,7 +448,10 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-add",
+				"git-commit"
+			],
 			"name": "add-and-create-commit",
 			"title": "Git. Add folders and files to staging area and create a commit",
 			"description": "<p>If we've already done the first <code>git add</code> and <code>git commit</code> of a file, that is, git already knows about it, the next times we can use another command that includes both steps in a single command. This combination immediately creates a confirmation of all prepared changes and applies an online confirmation message.</p><p>It is a shortcut command for advanced users that combines the options <code>-a</code> or <code>--all</code> (adds the modified or deleted files to the stage, but not the newly created ones, since they have not been reported to git for tracking) and <code>-m</code> or <code>--message</code> (with the specified message).</p><p><a href='https://www.atlassian.com/es/git/tutorials/saving-changes/git-commit' target='_blank'>Know more</a></p>",
@@ -403,7 +460,10 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-add",
+				"git-commit"
+			],
 			"name": "commit-particular-file-on-index",
 			"title": "Git. Make a confirmation of only one file in the staging area",
 			"description": "<p>If you have several files added to the <strong>staging area</strong> and you regret it, because you only want to commit one particular file, you can select the file and commit only the changes to it.</p>",
@@ -415,7 +475,10 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-commit",
+				"git-push"
+			],
 			"name": "overwrite-last-commit",
 			"title": "Git. Overwrite the last commit",
 			"description": "<p>If a message or commit file contains unclear, incorrect, sensitive or missing information, you can correct it locally and create a commit with a new message.<br>Executing this command will open a text editor and ask you to edit the message and save the commit. This process will change the commit ID, creating a new commit that replaces the previous one.</p><p><a href='https://blog.kirei.io/buenas-pr%C3%A1cticas-para-los-mensajes-de-commit-en-git-a9fc43a83821' target='_blank'>Know more</a></p>",
@@ -432,7 +495,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-reset"
+			],
 			"name": "remove-commit",
 			"title": "Git. Remove a commit",
 			"description": "<p>The <code>git reset</code> command is a tool for undoing changes. If you run it without indicating a commit SHA, it will only remove the changes added to the staging area.</p><p>It has 3 arguments that correspond to the 3 internal mechanisms of Git state management, the confirmation tree (HEAD), the staging area, and the working directory.</p><p>When we specify the type of reset we want with one of these arguments, we indicate the previous SHA commit to all those we want to delete: <ul><li><code>--mixed</code>: It is the default option, it causes the same effect as executing<code>git reset</code>. Removes the commits after the selected commit. Remove the changes from the stage area, but keep the ones from the working directory.</li><li><code>--soft</code>: Removes the commits after the selected commit, but keeps the changes added to the stage area and keeps the changes made in the working directory.</li><li><code>--hard</code>: It is the most dangerous option because you lose all the changes made. Remove the commits after the selected commit, which also removes the changes from the stage area and the working directory.</li></ul></p>",
@@ -451,7 +516,10 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-reset",
+				"git-commit"
+			],
 			"name": "squashing-commits",
 			"title": "Git. Squashing or merging of commits",
 			"description": "<p>The process of deleting a number of commits with the argument <code>--soft</code> and then making a commit is usually called doing <strong>squashing</strong>, as it is like compacting several commits into one.</p>",
@@ -463,7 +531,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-revert"
+			],
 			"name": "revert-commit",
 			"title": "Git. Reverses changes to a commit and creates a new one",
 			"description": "<p>This command allows us to create a commit with the changes reverted of the indicated reference. In other words, if we have a commit that added one line and deleted two, we are now creating another commit that deletes the added line and adds the two deleted ones.<br>After running this command in the terminal, it will ask us for the message and create a new commit.</p>",
@@ -472,7 +542,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-stash"
+			],
 			"name": "add-stash",
 			"title": "Git. Save changes on the stash",
 			"description": "<p>Git has an area called the <strong>stash</strong> where you can temporarily store a snapshot of your changes without committing them to the repository. It’s separate from the working directory, the staging area, or the repository.<br> This functionality is useful when you’ve made changes to a branch that you aren’t ready to commit, but you need to switch to another branch. This saves your changes, that will be available from any branch in that repository and reverts the working directory to what it looked like for the latest commit.<br>Note that changes you want to stash need to be on tracked files. If you created a new file and try to stash your changes, you may get the error <em>'No local changes to save'</em>.</p><p>Snapshots are saved in the format <code>stash@{0}: BRANCH: SHA MESSAGE</code>. They will be saved with an identifier of type <code>stash@{0}</code>, where <code>stash</code> indicates that it is a snapshot and the number between the keys, <code>{0}</code>, is the index of that <code>stash</code>. The number of the index grows as you create new snapshots and are ordered inversely, ie the smaller number will always be the last snapshot made. The branch in which the changes were made is indicated, and the identifier and message will be the same as the last commit we have in the repository.</p><p>By default, send all the files we have in the working directory and the staging area, except the untracked ones, to the <code>stash</code> zone. And it generates the message automatically. But there are several options that we can add to the command:<ul><li><code>--include-untracked</code> or <code>-u</code>: Add also the untracked files.</li><li><code>--all</code> or <code>-a</code>: Add also the untracked and ignored files (.gitignore).</li><li><code>--patch</code>: Git will not stash everything that is modified but will instead prompt you interactively which of the changes you would like to stash and which you would like to keep in your working directory.</li><li><code>push -m</code>: Allows us to specify a message for the commit we are sending to the stash.</li><li><code>save</code>: It is deprecated in favour of <code>push -m</code>.</li></ul></p><p><a href='https://www.freecodecamp.org/news/git-stash-explained/' target='_blank'>Know more</a></p>",
@@ -500,7 +572,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-stash"
+			],
 			"name": "get-stash-list",
 			"title": "Git. Get a list of saved stash",
 			"description": "<p>When you have a lot of snapshots saved, you'll want to see a list of all of them so you can select them. The message and id, which by default come from the confirmation, will help you differentiate them.<br>It is advisable to clean the stash or delete those snapshots that we do not need so as not to accumulate them.</p>",
@@ -509,7 +583,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-stash"
+			],
 			"name": "get-stash",
 			"title": "Git. Re-applying your stashed changes",
 			"description": "<p>There are two different ways to recover the changes saved in the stash: <code>apply</code> and <code>pop</code>.</p><p>By default, executing any of these 2 commands we can recover the last stash saved, <code>stash@{0}</code>. The difference is that the option <code>apply</code>, keeps the change in the list for a possible later reuse, and <code>pop</code> after apply the change removes it from the stash stack, but if during this process there are conflicts, it will not delete it, leaving it to behave exactly like <code>apply</code> option.<br>>Another way to do the same as with the <code>pop</code> option is to do it in 2 steps: <code>git stash apply</code> && <code>git stash drop</code>.</p><p>Or also, we can obtain the changes of a specific stash from out stack, indicating their index number.</p><p><a href='https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning#_git_clean' target='_blank'>Know more</a></p>",
@@ -535,7 +611,10 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-stash",
+				"git-branch"
+			],
 			"name": "create-stash-branch",
 			"title": "Git. Create a branch from a stash",
 			"description": "<p>This is a nice shortcut to recover the code saved in the indicated stash and create a new branch to work on it separately. This command creates a new branch with the latest stash (<code>stash@{0}</code>), and then delete it (<code>git stash pop</code>). If you need a particular stash you can specify the stash id.</p><p>This will be useful when you run into conflicts after you’ve applied the stash to the latest version of your branch.</p><p><a href='https://www.freecodecamp.org/news/useful-tricks-you-might-not-know-about-git-stash-e8a9490f0a1a/' target='_blank'>Know more</a></p>",
@@ -551,7 +630,10 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-stash",
+				"git-show"
+			],
 			"name": "show-stash",
 			"title": "Git. Show the stash diffs",
 			"description": "<p>The <code>show</code> option of the <code>stash</code> command gives a very brief summary of the changes made to the files. It shows in one line the path and name of the file, and the number of deleted lines.</p><p>Default, shows the information of the last stash (<code>stash@{0}</code>), but we can indicate an index number to see some other.</p><p>If we want to go deeper and see all the changes of each line of the file in the terminal editor we can use the option <code>-p</code>.</p><p><a href='https://howto.lintel.in/how-to-see-stashed-changes-using-git-stash/' target='_blank'>Know more</a></p>",
@@ -570,7 +652,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-stash"
+			],
 			"name": "remove-stash",
 			"title": "Git. Remove stash",
 			"description": "<p>There are two different ways to remove the changes saved in the stash area: <code>drop</code> and <code> clear</code>.</p><p>We can remove the top stashed element saved (the last stash: <code>stash@{0}</code>) with <code>drop</code> or if you no longer need a particular stash, select it by their index number.</p><p>But, if what we want is to clean the storage area completely, the <code>clear</code> option deletes all the stashes list.</p><p><strong>IMPORTANT WARNING</strong>: With <code>clear</code>option those states will then be subject to pruning, and may be impossible to recover. Use both of them with caution, it maybe is difficult to revert the once deleted stashes.</p><p>To confirm if all cleared, obtain again the stashes list with <code>git stash list</code> command.</p><p><a href='https://kolosek.com/git-stash/' target='_blank'>Know more</a></p>",
@@ -592,7 +676,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"folders-files"
+			],
 			"name": "exit-from-vim-without-save",
 			"title": "Git. Exit without save from the text window",
 			"description": "<p>If you're inside the <strong>Vi</strong> editor (text editor created for UNIX, whose improved version is called <strong>Vim</strong>) and you want to just come out from the text window without save the changes, typing the command and press <em>'enter'</em>.</p><p><a href='https://phoenixnap.com/kb/how-to-vim-save-quit-exit' target='_blank'>Know more</a></p>",
@@ -601,7 +687,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"folders-files"
+			],
 			"name": "exit-from-vim-and-save",
 			"title": "Git. Exit and save from the text window",
 			"description": "<p>If you're inside the <strong>Vi</strong> editor (text editor created for UNIX, whose improved version is called <strong>Vim</strong>) and you want come out from the text window and save the changes, typing the command and press <em>'enter'</em>.</p><p><a href='https://phoenixnap.com/kb/how-to-vim-save-quit-exit' target='_blank'>Know more</a></p>",
@@ -610,7 +698,11 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-reflog",
+				"git-show",
+				"git-reset"
+			],
 			"name": "reflog",
 			"title": "Git. View reference log (reflog)",
 			"description": "<p>Before talking about the reference journal, it should be remembered that <code>HEAD</code> is a reference that points to the most recent commit of the current branch.</p><p>There is a record of all the references taken by the <code>HEAD</code> pointer in Git called <strong>reflog</strong> (reference record shortcut). It is a list that will store all commits where the pointer passes, for example, it will be able to save branch changes or the addition of a commit.</p><p>This command can be very useful, in case you want to recover a deleted commit.<ul><li><code>git reflog</code>: It will show you all the commits you made regardless of whether you deleted them or not. Each commit will display a small amount of information about itself: the hash number (6 digits), the branch it belongs to, the index of the position occupied by its pointer <code>HEAD</code> and the first line of the message.</li><li><code>git show &lt;COMMIT_ID&gt;</code>: Seeing this information we can find the commit we want and access it by its hash number. So we can see in detail its information: its complete hash number, the author and date of the commit, the complete commit message and which files and lines have been added, deleted or modified.</li><li><code>git reset --mixed &lt;COMMIT_ID&gt;</code>: We use this command, once we are sure that we want to recover this commit and so we will get back the files with the changes we had deleted. This command does not generate a commit with these changes, so we will have to run <code>git commit</code> to save them again. We will be able to recover the message we used with the previous command <code>git show</code>, since it showed us the complete message.</li></ul></p><p><a href='https://www.atlassian.com/git/tutorials/rewriting-history/git-reflog' target='_blank'>Know more</a></p>",
@@ -631,7 +723,11 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"folders-files",
+				"git-reflog",
+				"git-prune"
+			],
 			"name": "reflog-remove",
 			"title": "Git. Prune all references with garbage collection and reclaim space",
 			"description": "<p>The <code>expire</code> subcommand cleans up old or unreachable <strong>reflog</strong> entries. It has potential for data loss and is not typically used by end users, but used by git internally. By default, the <strong>reflog</strong> expiration date is set to 90 days. An expire time can be specified by passing a command line argument or by setting a git configuration name.</p>",
@@ -644,7 +740,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-branch"
+			],
 			"name": "get-branches",
 			"title": "Git. Get all branches",
 			"description": "<p>Sometimes it is necessary to know what branches exist in a remote repository in order to determine the names of the available branches.</p><p>With this command you can list both types of branches: remote and local. The current branch will be highlighted in color and marked an asterisk <code>*</code>.</p>",
@@ -660,7 +758,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-branch"
+			],
 			"name": "get-branches-local",
 			"title": "Git. Get all local branches",
 			"description": "<p>A local branch is one whose full name starts with <code>refs/heads/</code>, the <code>git branch</code> command strips off this part to make it easier.</p><p>It seems that with git there is always more than one way to do the same thing:</p>",
@@ -679,7 +779,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-branch"
+			],
 			"name": "get-branches-remotes",
 			"title": "Git. Get all remote branches",
 			"description": "<p>A remote-tracking branch is one whose full name starts with <code>refs/remotes/</code>, this command remove this part to make it easier.</p>",
@@ -695,7 +797,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-branch"
+			],
 			"name": "create-branch",
 			"title": "Git. Create a new branch",
 			"description": "<p>You can create a new branch while in another and move to it later.</p>",
@@ -704,7 +808,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-checkout"
+			],
 			"name": "checkout-branch-path",
 			"title": "Git. Checkout branch/path",
 			"description": "<p>The command <code>git checkout &lt;NAME&gt;</code> is really meant for branches, but Git syntax is relaxed, and if Git can't find a branch, then it will look for a file.</p><p>Suppose you have a file and a branch with the same name, <code>stuff</code>. Then the following command would seem ambiguous, <code>git checkout stuff</code>, because it is not clear whether you are asking to checkout a file or a branch.<br> With <code>--</code> is a way to tell Git to treat what follows <code>checkout</code> as a file and not as a branch, when you use it, it explicitly tell Git to checkout a file by that name/path</p><p>This command made: <ul><li>If it's local branch or remote branch tracked, switch to it.</li><li>If it's a tracked path of a file, reset it, i.e. delete the unsaved changes from the working directory.</li><li>If it's a remote branch, create a tracking branch and switch to it.</li></ul></p><p>So in this case the following commands allow you to move a local branch or download it from the remote and reset a file:</p>",
@@ -720,7 +826,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-checkout"
+			],
 			"name": "move-to-branch",
 			"title": "Git. Move to the branch",
 			"description": "<p>When you try move to a local branch that does not exist, this command will search to see if there is a remote-tracking branch with a similar name. If so, it will create the local branch and set it up to track the remote-tracking branch.</p>",
@@ -729,7 +837,10 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-checkout",
+				"git-branch"
+			],
 			"name": "create-and-move-to-branch",
 			"title": "Git. Create and move to branch",
 			"description": "<p>You must use a separate branch for each function or issue you work on. With this command you make 2 steps at the same time, create and move to the branch so that all changes you make are applied to it. The <code>-b</code> flag tells git to create it if it doesn't already exist, otherwise, it is reset, that is to say, the branch is not reset/created unless <code>git checkout</code> is successful.</p>",
@@ -745,7 +856,10 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-reset",
+				"folders-files"
+			],
 			"name": "extract-files-from-staging-area",
 			"title": "Git. Extract files from the staging area",
 			"description": "<p>If I have already added the file with a <code>git add</code> to the <strong>staging area</strong> but don't want to commit it yet, and want to remove it from this zone, these are some ways to solve it:<ul><li><code>git reset &lt;FILE_NAME&gt;</code>: If changes have been made and added to the <strong>staging area</strong>.</li><li><code>git rm --cached &lt;FILE_NAME&gt;</code>: If I have not launched a commit yet, and therefore the <code>HEAD</code> pointer has not been created.</li><li><code>git reset HEAD &lt;FILE_NAME&gt;</code>: If I've already launched my first commit, i.e. there's a HEAD pointer. Git moves between the commits always pointing to the last one created.</li></ul></p>",
@@ -764,7 +878,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-branch"
+			],
 			"name": "rename-current-branch",
 			"title": "Git. Rename current branch",
 			"description": "<p>It is possible that at some time, as with the commit messages, you may want to rename a branch.<br>With this command you can rename the local branch you are working on.</p><p>It has  optional parametters: <ul><li><code>--move</code> or <code>-m</code>: Move/rename a branch and the corresponding reflog.</li><li><code>-M</code>: It is a shortcut of <code>--delete --force</code></li></ul></p><p><a href='https://git-scm.com/docs/git-branch' target='_blank'>Know more</a></p>",
@@ -780,7 +896,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-branch"
+			],
 			"name": "rename-local-branch",
 			"title": "Git. Rename a local branch",
 			"description": "<p>You can rename a local branch while you are in any other branch.</p>",
@@ -793,7 +911,12 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-checkout",
+				"git-branch",
+				"git-push",
+				"git-remote"
+			],
 			"name": "rename-remote-branch",
 			"title": "Git. Rename a remote branch",
 			"description": "<p>Let's say you are collaborating on a project with a group of people, and you have defined a naming convention for git branches. You created a new branch, pushed the changes to the remote repository, and realized that your branch name was incorrect. Luckily, git allows you to rename the branch local and remote very easily using several commands or doing the same thing with just one.</p><p><a href='https://linuxize.com/post/how-to-rename-local-and-remote-git-branch/' target='_blank'>Know more</a></p>",
@@ -812,7 +935,11 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-branch",
+				"git-push",
+				"git-remote"
+			],
 			"name": "upload-local-branch",
 			"title": "Git. Send the local branch to remote repository",
 			"description": "<p>It is recommended to send the new branch to the remote repository (<code>ORIGIN</code>), since this acts as backup, and when collaborating with other developers, it allows them access to see the commits made in the new branch. La opción <code>-u</code> or <code>--set-upstream-to</code> adds it as a remote tracking branch.</p>",
@@ -828,7 +955,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-branch"
+			],
 			"name": "remove-branch",
 			"title": "Git. Remove a branch",
 			"description": "<p>To delete a branch from git repository you must not be positioned in it.</p>",
@@ -844,7 +973,10 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-merge",
+				"git-branch"
+			],
 			"name": "merge",
 			"title": "Git. Merge branch",
 			"description": "<p>The fusion is Git's way of putting a forked history back together again. The <code>git merge</code> command lets you take the independent lines of development created by <code>git branch</code> command and integrate them into a single branch.<br>It takes two confirmation pointers from the ends of each branch and combines them into the current branch, generating a new <strong>merge commit</strong>. However, if git find data that has been changed in both histories, it will be unable to automatically combine them. In that case, a version control conflict is created and Git will ask for user intervention to continue.</p><p>Before performing a merge there are a couple of preparation steps to take to ensure the merge goes smoothly: <ul><li><strong>Confirm the receiving branch:</strong> Make sure<code>HEAD</code> points to the correct branch with the <code>git status</code> command. If needed, execute <code>git checkout</code> to switch to the receiving branch.</li><li><strong>Fetch latest remote commits: </strong> Make sure the receiving branch and the merging branch are updated with the latest remote changes. Execute <code>git fetch</code> to pull the latest remote commits. Once the fetch is completed ensure the master branch has the latest updates by executing <code>git pull</code>.</li></ul></p><p>This means that <code>git merge</code> is often used in conjunction with <code>git checkout</code> for selecting the current branch and <code>git branch -d</code> for deleting the obsolete target branch.</p><p>If the two branches you're trying to merge both changed the same part of the same file, Git won't be able to figure out which version to use. When such a situation occurs, it stops right before to create the <strong>merge commit</strong> so that you can resolve the conflicts manually. When Git encounters a conflict during a merge, It will edit the content of the affected files with visual indicators that mark both sides of the conflicted content <code><<<<<<<</code> <code> =======</code> <code>>>>>>>></code>. The content before the <code>=======</code> marker is the receiving branch and the part after is the merging branch.Once you've identified conflicting sections, you can go in and fix up the merge to your liking. When you're ready to finish the merge, all you have to do is run <code>git add</code> on the conflicted file(s) to tell Git they're resolved. Then, you run <code>git commit</code> to generate the <strong>merge commit</strong>.</p><p><a href='https://www.atlassian.com/es/git/tutorials/using-branches/git-merge' target='_blank'>Know more</a></p>",
@@ -863,7 +995,10 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-merge",
+				"git-branch"
+			],
 			"name": "commands-merge-commit",
 			"title": "Git. Merge commit",
 			"description": "<p>The <code>--no-ff</code> flag prevents <code>git merge</code> from executing a <strong>'fast-forward'</strong> if it detects that your current <code>HEAD</code> is an ancestor of the commit you're trying to merge. A <strong>fast-forward</strong> is when, instead of constructing a <strong>commit merge</strong>, git just moves your branch pointer to point at the incoming commit.</p><p>Occasionally you want to prevent this behavior from happening, typically because you want to maintain a specific branch topology (e.g. you're merging in a topic branch and you want to ensure it looks that way when reading history). In order to do that, you can pass the <code>--no-ff</code> flag and <code>git merge</code> will always construct a merge instead of <strong>fast-forwarding</strong>.</p>",
@@ -874,7 +1009,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-rebase"
+			],
 			"name": "rebase",
 			"title": "Git. Rebase",
 			"description": "<p>At Git we have two ways of integrating changes from one branch to another: the fusion (<code>merge</code>) and the reorganization (<code>rebase</code>).</p>Git <code>rebase</code> allows us to modify the history of Git using a reference point. It captures all confirmed changes from the branch we're in and applies them to the one we're indicating you about, that is, it is able to recognize that commits are not on the timeline for that reference point and apply them on top of the reference point, this is what we call in Git <strong>rebasing</strong>.<br>In contrast to the merge, this generates a perfectly linear project history, being able to go from the end of the branch to the start of the project without finding any bifurcation.</p><p>It's very important to understand that, even though the branch looks the same, it is made up of entirely new commits, which changes the history of Git. This implies that these commits are being recreated with the same message and content, which can lead to <strong>conflicts</strong> when applying them to the new branch if it has new changes.<br>If this happens, they have to be resolved as they occur and are considered modifications of the commit itself. This allows us to delete, reorder, merge or change the commit message before applying them. When you have the changes fixed, you will have to ask the command to continue with the <code>--continue</code> option to apply the next commit.<br>At any time during <code>rebase</code> if you change your mind you can reject the whole process with the <code>--abort</code> option.</p>",
@@ -893,7 +1030,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-cherry-pick"
+			],
 			"name": "cherry-pick",
 			"title": "Git. Cherry-pick: Copy and paste commits",
 			"description": "<p>It may happen that, at some point, we want to apply some of the changes we have made in another branch without having to make a full merge. The <code>cherry-pick</code> command allows  allows you to <em>'copy'</em> one or more commits from one branch and <em>'paste'</em> them into another branch. Before using, you must have a clean <strong>working directory</strong> and <strong>staging area</strong>. </p><p>By default <code>cherry-pick</code> keeps the original commit message, so the <code>-x</code> option may be useful to add a reference to the original commit, so that you know where you've got this commit from. Other interesting options are <code>-e</code>, which allows you to edit the commit message instead of using the original one and the <code>-n</code> option which will apply the changes but not make any commits.</p><p>As with the <code>merge</code> and <code>rebase</code> commands, after resolving the conflicts, we can indicate to continue applying the changes with the option <code>--continue</code> or reject the process completely with the option <code>--abort</code>.</p><p><a href='https://www.runroom.com/realworld/seleccionando-commits-cherry-pick' target='_blank'>Know more</a></p>",
@@ -924,7 +1063,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-diff"
+			],
 			"name": "diff",
 			"title": "Git. Comparing changes with git diff",
 			"description": "<p>We can see what changes have been made to the code with the command <code>diff</code>. This shows on the terminal the lines of code that have been removed with the symbol <code>-</code> and in red, and the lines added with the symbol <code>+</code> and in green.</p><p>The next tool online can help you. <strong>DiffMerge</strong> is an application to visually compare and merge files on Windows, OSX and Linux: <a href='http://sourcegear.com/diffmerge/' target='_blank'>http://sourcegear.com/diffmerge/</a></p><p>We can also compare the changes that have been made to the code of several commits.</p><p><a href='https://www.atlassian.com/git/tutorials/saving-changes/git-diff' target='_blank'>Know more</a></p>",
@@ -940,7 +1081,11 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-add",
+				"git-status",
+				"git-commit"
+			],
 			"name": "mark-conflicts-resolved",
 			"title": "Git. Mark that the conflict is resolved",
 			"description": "<p>Steps to follow after resolving a conflict in the files: <ul><li>Add all files to the index zone</li><li>View the status of the files (modified/deleted/added)</li><li>Create a commit with those changes indicating a description of what has been done.</li></ul></p>",
@@ -953,7 +1098,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-tag"
+			],
 			"name": "get-tags",
 			"title": "Git. Get all tags made",
 			"description": "<p>Get a simple list of the tags, if you want to make sure they exist and what their version numbers are.</p>",
@@ -969,7 +1116,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-tag"
+			],
 			"name": "create-tag",
 			"title": "Git. Create a new tag",
 			"description": "<p>In software development, git tags represent a version of our code at a given moment in time. Unlike branches, tags are not mutable y always point to the same commit, them so people generally use them to mark important points in git history (as the release points v1.0, v2.0 and so on).</p><p>The <a href='https://semver.org/' target='_blank'>Semantic Versioning</a> use a version format based on 3 integers separated by points: <em>X.Y.Z</em> (<em>Major.Minor.Patch</em>), bug fixes not affecting the API increment the patch version, backwards compatible API additions/changes increment the minor version, and backwards incompatible API changes increment the major version.This would be translated to gitflow branch structure as <em>release.feature.bug</em>.<br>The developer is the responsible for communicating the status of their software publishing this number.</p><p><a href='https://semver.org/' target='_blank'>Know more</a></p>",
@@ -978,7 +1127,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-tag"
+			],
 			"name": "remove-local-tag",
 			"title": "Git. Remove a local tag",
 			"description": "Delete existing local tag with the given names",
@@ -994,7 +1145,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-push"
+			],
 			"name": "remove-tag-remote",
 			"title": "Git. Remove a remote tag",
 			"description": "Delete existing remote tag with the given names.",
@@ -1003,7 +1156,11 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-tag",
+				"git-push",
+				"git-remote"
+			],
 			"name": "remove-and-upload-tag",
 			"title": "Git. Remove local and remote tag",
 			"description": "<p>When you want rename or remove a tag and you have already pushed it to a remote repository (eg. GitHub) then you’ll also need to update the remote references right after renaming or deleting the tag from your local repo.</p><p>Here are two alternatives for remove a tag on the local and remote repository:<ul><li>Delete the local tag and overwrite this change by referring to the name of the deleted tag in the remote repository.</li><li>Or do the process in reverse, delete it first the tag in the remote repository and then in the local repository.</li></ul></p><p><a href='https://cabrerahector.com/development/how-to-remove-a-git-tag-locally-and-remotely/' target='_blank'>Know more</a></p>",
@@ -1021,7 +1178,9 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-tag"
+			],
 			"name": "rename-local-tag",
 			"title": "Git. Rename a local tag",
 			"description": "<p>If you use tags in your projects, you probably have encountered some issue that forced you to remove the tag: <ul><li>There was a change that had to be shipped with this release and you forgot all about it.</li><li>There’s some debugging code that wasn’t supposed to be included with this release.</li><li>There’s a really obvious typo that everyone will notice right away.</li></ul></p><p>If you have not yet uploaded the tag to the remote repository, you can rename the tag with the following command:</p><p><a href='https://cabrerahector.com/development/how-to-remove-a-git-tag-locally-and-remotely/' target='_blank'>Know more</a></p>",
@@ -1030,7 +1189,11 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-tag",
+				"git-push",
+				"git-remote"
+			],
 			"name": "rename-and-upload-tag",
 			"title": "Git. Rename a tag and push it",
 			"description": "<p>If you have made a mistake and need to rename a tag and update it in the remote repository, you should follow these steps:<ol><li>Rename the local tag.</li><li>Remove the old tag so that git knows about the change.</li><li>Tell the remote git repository that you've removed the old tag.</li><li>Update remote repository tags to upload new tag.</li></ol></p>",
@@ -1044,7 +1207,10 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-fetch",
+				"git-prune"
+			],
 			"name": "update-remote-repository",
 			"title": "Git. Update remote repository",
 			"description": "<p>This is highly desirable when working in a team workflow where remote branches are removed after merging with <code>master</code> or are left with obsolete tags.</p><p>In this case, you will want to remove references to branches or tags that no longer exist on the remote control by connecting to the remote control and getting the last status before pruning.</br> It's essentially a combination of commands:</p>",
@@ -1053,7 +1219,11 @@
 		{
 			"parent": "git",
 			"url": "commands-git",
-			"categories": [],
+			"categories": [
+				"git-pull",
+				"git-prune",
+				"git-tag"
+			],
 			"name": "update-local-tags",
 			"title": "Git. Update local tags",
 			"description": "<p>If your project is open source, you will probably have to update the status of your local repository from time to time, since other people may have removed or renamed some tags while you were working and you now may have obsolete local tags.</p><p>This command prunes the tags that no longer exist in the remote repository but in your local repository.</p>",
@@ -1064,7 +1234,10 @@
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
-			"categories": [],
+			"categories": [
+				"git-flow",
+				"git-init"
+			],
 			"name": "create-gitflow-repository",
 			"title": "Git Flow. Initialize repository",
 			"description": "<p>Git-flow is a <strong>workflow</strong> applied to a Git repository.<br> Every project usually has at least 2 infinite branches: <code>develop</code> containing the code under development and <code>master</code> containing each of the stable versions to include in production.<br>  This branching model, designed around project releases, also has a set of support branches, which are time-limited and eventually removed. These branches allow teamwork, for the creation of new features (<code>feature</code>), bug resolution in development (<code>bugfix</code>), urgent bug resolution in production (<code>hotfix</code>) and the release of different versions (<code>release</code>). </p><p>Start using it by initializing it inside an existing git repository with <code>git flow init</code>. At first, Git-flow needs to be initialized to customize the project configuration, you will have to answer some questions about the naming conventions of your branches, at this point you can rename the branches if you wish, although it is recommended to use the default values (<code>feature</code>, <code>release</code>, <code>hotfix</code> and <code>support</code>).</p>",
@@ -1095,7 +1268,12 @@
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
-			"categories": [],
+			"categories": [
+				"git-flow",
+				"feature",
+				"git-checkout",
+				"git-branch"
+			],
 			"name": "gitflow-feature-start",
 			"title": "Git Flow. Start a new feature",
 			"description": "<p>When a new functionality or feature of the project is to be developed, a new branch called <code>feature</code> is created. This type of branches are born from the <code>develop</code> branch and once development is finished, they are incorporated back to it. </p><p>The following command is a shortcut, which includes the execution of several commands: <ul><li><code>git checkout develop</code></li><li><code>git branch feature/&lt;BRANCH_NAME&gt;</code></li><li><code>git checkout feature/&lt;BRANCH_NAME&gt;</code></li></ul></p>",
@@ -1111,7 +1289,11 @@
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
-			"categories": [],
+			"categories": [
+				"git-flow",
+				"feature",
+				"git-branch"
+			],
 			"name": "gitflow-feature-list",
 			"title": "Git Flow. Get a feature list",
 			"description": "<p>You can view a list of the <code>feature</code> branches already created in the local repository using the following command.</p>",
@@ -1120,7 +1302,11 @@
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
-			"categories": [],
+			"categories": [
+				"git-flow",
+				"feature",
+				"git-push"
+			],
 			"name": "gitflow-feature-publish",
 			"title": "Git Flow. Publish a feature",
 			"description": "<p>Normally the <code>feature</code> exists only in the local repositories of the developers and not in the source repository. If you want to share this branch with some members of your team in order to do collaborative development, you would have to publish the <code>feature</code> on the remote server so that it can be used by other users.</p>",
@@ -1129,7 +1315,11 @@
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
-			"categories": [],
+			"categories": [
+				"git-flow",
+				"feature",
+				"git-pull"
+			],
 			"name": "gitflow-feature-pull",
 			"title": "Git Flow. Getting a published feature",
 			"description": "<p>When more than one person works on a <code>feature</code> at the same time, it will be published by your teammates, and you will be able to develop on the same branch with them.</p><p>If this is the first time you participate in the project, you will first have to clone repository using <code>git clone &lt;URL&gt;</code> to have a copy on your computer (local repository), then initialize Gitflow with <code>git flow init</code> and download the <code>master</code> and <code>develop</code> branches with the commands <code>git checkout master</code> and <code>git checkout develop</code>.</p><p>If you are already participating in the project you can skip the above steps and use the following command to download a <code>feature</code> and to make sure that the local repository is synchronized with the remote one.</p>",
@@ -1138,7 +1328,10 @@
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
-			"categories": [],
+			"categories": [
+				"git-flow",
+				"feature"
+			],
 			"name": "gitflow-feature-track",
 			"title": "Git Flow. Track a published feature",
 			"description": "<p>Say you have created a new feature with <code>git flow feature start &lt;FEATURE_NAME&gt;</code>, and published it to the remote repository with <code>git flow feature publish &lt;FEATURE_NAME&gt;</code> so that other members of your team can collaborate with you using <code>git flow feature pull &lt;FEATURE_NAME&gt;</code> to download it. This creates a new branch in your local repository, based on the remote branch, however this does not set it up so that changes made to it, are tracked by the remote branch, so it now has to be tracked manually.</p><p>With the following command <code>git flow feature track &lt;FEATURE_NAME&gt;</code>, your co-worker, can download the <code>feature</code> and also track changes others make to the one published in the source repository. </p><p>To illustrate the collaborative aspect with a branch of a new feature, using the pull request aspect of GitHub that facilitates the code review and discussion part, we put ourselves in the following situation:<ul><li>Several people work on the same feature and as changes are committed, they are submitted to GitHub (or once at the end of development if preferred). </li><li>When the feature is complete, a pull request is opened on GitHub comparing <code>develop</code> and with the branch.</li><li>The team reviews the pull request and makes comments.</li><li>Any changes to the pull request are made to the feature branch. </li><li>Once all changes are incorporated into the feature branch it is terminated:<code>git flow feature finish &lt;FEATURE_NAME&gt;</code>.</li><li><li>The <code>develop</code> branch is sent to GitHub (GitHub will automatically mark the pull request as closed/merged when this happens).</li></ul><p>However, that leaves the problem of closing that branch, whoever runs first <code>git flow feature finish &lt;FEATURE_NAME&gt;</code> will have the luxury of deleting your local branch, but anyone else who has checked out the branch will have to do it manually if they wish. You can use <code>git fetch --prune</code> or a simple <code>git fetch</code> to remove your branch if it has already been removed on the remote. </p><p>If you have already downloaded the branch and now you need to track it, all you have to do would be for your existing branch to trace back to the previous branch with <code>git branch -u origin feature/&lt;FEATURE_NAME&gt;</code> or <code>git branch --set-upstream-to origin feature/&lt;FEATURE_NAME&gt;</code></code></p><p>In general, it would be best to start using <code>git flow feature track &lt;FEATURE_NAME&gt;</code> and then keep your branch updated with <code>git flow feature pull origin &lt;FEATURE_NAME&gt;</code>.</p><p><a href='https://stackoverflow.com/questions/18412750/why-doesnt-git-flow-feature-pull-track' target='_blank'>Know more</a></p>",
@@ -1147,7 +1340,13 @@
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
-			"categories": [],
+			"categories": [
+				"git-flow",
+				"feature",
+				"git-checkout",
+				"git-branch",
+				"git-merge"
+			],
 			"name": "gitflow-feature-finish",
 			"title": "Git Flow. Finish up a feature",
 			"description": "<p>When development of the new feature is complete, it should be merged with <code>develop</code> and removed from the local repository and the remote repository if it was uploaded.</p><p>The following command performs the following commands: <ul><li><code>git checkout develop</code></li><li><code>git merge feature/&lt;FEATURE_NAME&gt;</code></li><li><code>git branch -D &lt;FEATURE_NAME&gt;</code></li></li><li><code>git push origin :&lt;FEATURE_NAME&gt;</code></li></ul></p>",
@@ -1156,7 +1355,12 @@
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
-			"categories": [],
+			"categories": [
+				"git-flow",
+				"bugfix",
+				"git-checkout",
+				"git-branch"
+			],
 			"name": "gitflow-bugfix-start",
 			"title": "Git Flow. Start a bugfix",
 			"description": "<p>During the development of the project you may encounter errors in one of the branches of the repository. To fix them we have 2 different types of branches depending on the place these errors occupy in the git workflow: <code>bugfix</code> and <code>hotfix</code>.</p><p>The term <code>bugfix</code> or <strong>bug fixes</strong> are used when a problem is found during the development phase, to fix bugs from a previous feature or development omissions.<br> These types of branches are created from <code>develop</code> and merged back into <code>develop</code> upon completion. </p><p>The following command is the same as running: <ul><li><code>git checkout develop</code></li><li><code>git branch bugfix/&lt;BUGFIX_NAME&gt;</code></li><li><code>git checkout bugfix/&lt;BUGFIX_NAME&gt;</code></li></ul></p>",
@@ -1165,7 +1369,13 @@
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
-			"categories": [],
+			"categories": [
+				"git-flow",
+				"bugfix",
+				"git-checkout",
+				"git-branch",
+				"git-merge"
+			],
 			"name": "gitflow-bugfix-finish",
 			"title": "Git Flow. Finish a bugfix",
 			"description": "<p>The <code>bugfix</code> branches are temporary branches, which once the bugs are resolved,are removed after merging with the <code>develop</code> branch..</p><p>The following command is the same as running: <ul><li><code>git checkout develop</code></li><li><code>git merge bugfix/&lt;BUGFIX_NAME&gt;</code></li><li><code>git branch -D bugfix/&lt;BUGFIX_NAME&gt;</code></li></ul></p></p>",
@@ -1174,7 +1384,13 @@
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
-			"categories": [],
+			"categories": [
+				"git-flow",
+				"release",
+				"git-checkout",
+				"git-branch",
+				"git-tag"
+			],
 			"name": "gitflow-release-start",
 			"title": "Git Flow. Start a release",
 			"description": "<p>To prepare our application for production there are some branches called <code>release</code>. In some teams, these branches are the ones that are dumped on the pre-production servers to do the final testing: minor bugs are corrected, the interface is polished, the layout is adjusted...the final tuning of the application is done before releasing the final version. </p><p>The name of the <code>release</code> is a figure of 3 integers separated by dots that increase numerically in increments of 1. This number follows the nomenclature of the <a href='https://semver.org/' target='_blank'>semantic versioning</a>, <code>X. Y.Z</code>, where <code>X</code> is the 'major' version (incorporation of multiple changes that are no longer compatible with the public API), <code>Y</code> is the 'minor' version (incorporation of a feature), and <code>Z</code> is the 'patch' version (bug fixes compatible with the previous version). </br> Therefore, the <code>release</code> number would be the first one, <code>X</code>.</p><p>The following command creates a release branch from the <code>develop</code> branch.<br>Optionally, you can supply the id of a commit located in <code>develop</code> to start the release from the commit.</p><p><a href='https://aprendegit.com/git-flow-release-branches/' target='_blank'>Know more</a></p>",
@@ -1183,7 +1399,11 @@
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
-			"categories": [],
+			"categories": [
+				"git-flow",
+				"release",
+				"git-branch"
+			],
 			"name": "gitflow-release-list",
 			"title": "Git Flow. Get a release list",
 			"description": "<p>You can see a lists all the current release branches created on the local repository.</p>",
@@ -1192,7 +1412,11 @@
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
-			"categories": [],
+			"categories": [
+				"git-flow",
+				"release",
+				"git-push"
+			],
 			"name": "gitflow-release-publish",
 			"title": "Git Flow. Publish a release",
 			"description": "<p>If you are working in a team and another of your colleagues must review the code before the release of a new version, it is advisable to publish the release branch after creating it to allow other developers to make release commits.</p>",
@@ -1201,7 +1425,10 @@
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
-			"categories": [],
+			"categories": [
+				"git-flow",
+				"release"
+			],
 			"name": "gitflow-release-track",
 			"title": "Git Flow. Track a release",
 			"description": "<p>You can track the changes a release published on remote repository.</p>",
@@ -1210,7 +1437,13 @@
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
-			"categories": [],
+			"categories": [
+				"git-flow",
+				"release",
+				"git-checkout",
+				"git-branch",
+				"git-merge"
+			],
 			"name": "gitflow-release-finish",
 			"title": "Git Flow. Finish up a release",
 			"description": "<p>Once the <code>release</code> branch is created, we start the fix and debug process, the necessary commits are performed and when we have finished fixing all the bugs, we are ready to move our project to production and remove the branch.</p><p>Terminating a release is one of the big steps in creating git branches. The following command performs several actions: it merges the version branch with <code>master</code>, tags the version with its name, merges the version back with <code>develop</code> and deletes the version branch.</p><p>When we run this command git-flow will ask us to enter 3 messages: <ol><li>The merge commit message as a result of incorporating the changes in <code>master</code>. </li><li>The message that git-flow will put to the tag it is going to create to identify this version.</li><li>And finally the merge commit message as a result of incorporating the branch to <code>develop</code>.</li></ol></p><p>The execution of this command which can be summarized in the following commands: <ul><li><code>git checkout master</code></li><li><code>git merge release/&lt;VERSION_NUMBER&gt; --no-ff</code></li><li><code>git tag v&lt;VERSION_NUMBER&gt;</code></li><li><code>git checkout develop</code></li><li><code>git merge release/&lt;VERSION_NUMBER&gt; --no-ff</code></li><li><code>git branch -d release/&lt;VERSION_NUMBER&gt;</code></li></ul></p>",
@@ -1219,7 +1452,11 @@
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
-			"categories": [],
+			"categories": [
+				"git-flow",
+				"git-push",
+				"git-tag"
+			],
 			"name": "gitflow-tags-push-single",
 			"title": "Git Flow. Push a single tag",
 			"description": "<p>After finishing the release branch, don't forget to add the tags to the remote repository. This command will push a single tag to the remote repository.</p>",
@@ -1228,7 +1465,11 @@
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
-			"categories": [],
+			"categories": [
+				"git-flow",
+				"git-push",
+				"git-tag"
+			],
 			"name": "gitflow-tags-push",
 			"title": "Git Flow. Push all the tags",
 			"description": "<p>You can add all tags to the remote repository with a single command. This way is not recommended because it is common for developers to have old or 'bad' tags in their local repositories that have no need to be in the remote one, so it is advised to only explicitly push one tag and not all its tags at once.</p>",
@@ -1237,7 +1478,12 @@
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
-			"categories": [],
+			"categories": [
+				"git-flow",
+				"hotfix",
+				"git-checkout",
+				"git-branch"
+			],
 			"name": "gitflow-hotfix-start",
 			"title": "Git Flow. Start a hotfix",
 			"description": "<p>Just as there are branches to resolve bugs that we have encountered during the development process, there are other types of branches. These branches, called <code>hotfix</code>, are created to act immediately on an undesired state of a live production version, they are used to fix urgent bugs or omissions that cannot wait for the release of the next version. <br>The lifetime of this branch is temporary, it is created from <code>master</code>, merged back into <code>master</code> and removed after the merge.</p><p>The <code>hotfix</code> name is a figure of 3 whole numbers separated by dots that increment numerically in increments of 1. This number follows the <a href='https://semver.org/' target='_blank'>semantic versioning</a> nomenclature, <code>X.Y.Z</code>, where X is the 'major' version (incorporation of multiple changes that are no longer compatible with the public API), <code>Y</code> is the 'minor' version (incorporation of a feature), and <code>Z</code> is the 'patch' version (bug fixes compatible with the previous version). </br> Therefore, the <code>hotfix</code> number would be the third and last one, <code>Z</code>.</p><p></p><p>Optionally, you can specify a base name, the id of a commit, from which to create the branch.</p>",
@@ -1246,7 +1492,12 @@
 		{
 			"parent": "gitFlow",
 			"url": "commands-git-flow",
-			"categories": [],
+			"categories": [
+				"git-flow",
+				"hotfix",
+				"git-checkout",
+				"git-merge"
+			],
 			"name": "gitflow-hotfix-finish",
 			"title": "Git Flow. Finish a hotfix",
 			"description": "<p>When all fixes have been made to a <code>hotfix</code> branch, the following command must be performed to finalize the branch. This process merges the branch back to <code>develop</code> and <code>master</code>, creates a tag with the version number of the <code>hotfix</code> and deletes that branch, since its existence is temporary.</p>",
