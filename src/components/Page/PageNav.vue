@@ -1,74 +1,75 @@
 <template>
-	<div>
-		<nav
-			class="nav"
-			:class="{ 'is-open': isOpen }"
-		>
-			<ul class="nav__list">
-				<li class="nav__item">
-					<router-link
-						to="/"
-						class="nav__link"
-						exact
+	<nav
+		class="page-nav"
+		:class="{ 'is-open': isOpen, 'is-animated': isAnimated }"
+	>
+		<div class="page-nav__wrapper">
+			<div class="page-nav__inner">
+				<ul class="page-nav__list">
+					<li class="page-nav__item">
+						<router-link
+							to="/"
+							class="page-nav__link"
+							exact
+						>
+							<span>Search</span>
+							<span class="is-small">
+								commands
+							</span>
+						</router-link>
+					</li>
+					<li class="page-nav__item">
+						<router-link
+							to="/commands-git"
+							class="page-nav__link"
+						>
+							<span>Git</span>
+							<span class="is-small">
+								commands
+							</span>
+						</router-link>
+					</li>
+					<li class="page-nav__item">
+						<router-link
+							to="/commands-git-flow"
+							class="page-nav__link"
+						>
+							<span>Git Flow</span>
+							<span class="is-small">
+								commands
+							</span>
+						</router-link>
+					</li>
+					<li
+						v-show="isOpen"
+						class="page-nav__item"
 					>
-						<span>Search</span>
-						<span class="is-small">
-							commands
-						</span>
-					</router-link>
-				</li>
-				<li class="nav__item">
-					<router-link
-						to="/commands-git"
-						class="nav__link"
-					>
-						<span>Git</span>
-						<span class="is-small">
-							commands
-						</span>
-					</router-link>
-				</li>
-				<li class="nav__item">
-					<router-link
-						to="/commands-git-flow"
-						class="nav__link"
-					>
-						<span>Git Flow</span>
-						<span class="is-small">
-							commands
-						</span>
-					</router-link>
-				</li>
-				<li
-					v-show="isOpen"
-					class="nav__item"
-				>
-					<router-link
-						to="/bibliografy"
-						class="nav__link"
-					>
-						Bibliografy
-					</router-link>
-				</li>
-			</ul>
-
-			<button
-				class="nav__button"
-				@click="openCloseNav"
-			>
-				<i class="nav__icon">
-					<font-awesome-icon :icon="['fas', 'code-branch']" />
-				</i>
-			</button>
-
+						<router-link
+							to="/bibliografy"
+							class="page-nav__link"
+						>
+							Bibliografy
+						</router-link>
+					</li>
+				</ul>
+			</div>
 			<i
-				class="nav__bg-mobile"
+				class="page-nav__bg-mobile"
 				:class="{ 'is-view': isOpen }"
 			>
 				<font-awesome-icon :icon="['fas', 'code-branch']" />
 			</i>
-		</nav>
-	</div>
+		</div>
+
+		<button
+			class="page-nav__button"
+			@click="openCloseNav"
+		>
+			<i class="page-nav__icon">
+				<font-awesome-icon :icon="['fas', 'code-branch']" />
+			</i>
+		</button>
+	</nav>
 </template>
 
 <script>
@@ -76,7 +77,9 @@
 		name: 'PageNav',
 		data() {
 			return {
-				isOpen: false
+				isAnimated: false,
+				isOpen: false,
+				isMobile: false
 			};
 		},
 		watch: {
@@ -87,6 +90,14 @@
 			},
 			isOpen() {
 				document.body.style.overflow = this.isOpen ? 'hidden' : '';
+			},
+			isMobile(newVal, oldVal) {
+				if (newVal !== oldVal) {
+					this.isMobile = newVal;
+				}
+				if (!newVal) {
+					this.desktopNav();
+				}
 			}
 		},
 		created() {
@@ -95,29 +106,67 @@
 		destroyed() {
 			window.removeEventListener('resize', this.handleResize);
 		},
+		mounted() {
+			this.checkMobile();
+		},
 		methods: {
 			openCloseNav() {
-				this.isOpen == false
-					? this.isOpen = true
-					: this.isOpen = false;
+				this.isAnimated = true;
+				this.isOpen = !this.isOpen;
 			},
 			closeNav() {
 				this.isOpen = false;
 			},
-			handleResize(event) {
+			desktopNav() {
+				this.isAnimated = false;
+				this.closeNav();
+			},
+			checkMobile() {
 				const maxWidthBreakpointMD = 768;
-				if (event.target.outerWidth >= maxWidthBreakpointMD) {
-					this.closeNav();
+				if (window.outerWidth >= maxWidthBreakpointMD) {
+					this.isMobile = false;
+				} else {
+					this.isMobile = true;
 				}
+			},
+			handleResize() {
+				this.checkMobile();
 			}
 		}
 	};
 </script>
 
 <style lang="scss" scoped>
-	.nav {
+	.page-nav {
 		display: flex;
 		align-items: center;
+
+		&__wrapper {
+			width: 100%;
+			background-color: $color-brand-1;
+
+			@include media('md') {
+				height: calc(100% - 6rem);
+				position: fixed;
+				top: 8rem;
+				left: 0;
+				overflow: hidden;
+				opacity: 0;
+				transform: translate(100%, 0);
+			}
+
+			@include media('sm') {
+				top: 6rem;
+			}
+		}
+
+		&__inner {
+			@include media('md') {
+				height: 100%;
+				position: relative;
+				z-index: 3;
+			}
+		}
 
 		&__list {
 			display: flex;
@@ -126,25 +175,16 @@
 			list-style: none;
 
 			@include media('md') {
-				width: 100%;
-				height: calc(100% - 6rem);
+				height: 100%;
 				padding: 4rem 6rem 4rem 4rem;
-				position: fixed;
-				top: 8rem;
-				left: 0;
 				flex-direction: column;
 				align-items: flex-end;
 				font-size: 4rem;
-				background-color: $color-brand-1;
 				overflow-y: scroll;
-				opacity: 0;
-				transform: translate(100%, 0);
-				transition: all 0.5s ease-in-out 0s;
 			}
 
 			@include media('sm') {
-				top: 6rem;
-				padding: 2rem 4rem 2rem 2rem;
+				padding: 4rem;
 				font-size: 3rem;
 			}
 		}
@@ -235,9 +275,9 @@
 
 		&__bg-mobile {
 			position: absolute;
-			bottom: -80rem;
+			top: 20%;
 			left: 4rem;
-			z-index: 999;
+			z-index: 2;
 			font-size: 50rem;
 			color: rgba(0, 0, 0, 0.1);
 			opacity: 0;
@@ -250,9 +290,16 @@
 			}
 		}
 
+		&.is-animated {
+			.page-nav {
+				&__wrapper {
+					transition: all 0.5s ease-in-out 0s;
+				}
+			}
+		}
 		&.is-open {
-			.nav {
-				&__list {
+			.page-nav {
+				&__wrapper {
 					opacity: 1;
 					transform: translate(0, 0);
 				}
