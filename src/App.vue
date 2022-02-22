@@ -185,7 +185,7 @@
 				padding-bottom: 0;
 			}
 
-			@include media('md') {
+			@include media('sm') {
 				padding-top: 6rem;
 				padding-bottom: 0;
 			}
