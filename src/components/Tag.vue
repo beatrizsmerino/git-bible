@@ -40,7 +40,8 @@
 			margin: 0.5rem;
 			padding: 0.5rem 0.8rem;
 			font-size: 1.5rem;
-			border-left: 0.5rem solid $color-silver;
+			color: $color-brand-2;
+			border-left: 0.5rem solid $color-brand-2-light;
 			background-color: $color-white;
 		}
 	}
