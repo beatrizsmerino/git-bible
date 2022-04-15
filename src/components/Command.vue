@@ -124,9 +124,11 @@
 					margin-left: 3rem;
 				}
 
-				p + ul,
-				p + ol {
-					margin-bottom: 1rem;
+				p {
+					+ ul,
+					+ ol {
+						margin-bottom: 1rem;
+					}
 				}
 
 				a {
