@@ -51,8 +51,8 @@
 
 						<div class="filter-nav__subcontent">
 							<Tag
-								class="tag--theme-light"
 								:tag-list="getCategories"
+								:tag-type="'filter'"
 							/>
 						</div>
 					</li>
