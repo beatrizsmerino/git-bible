@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="filter__wrapper"
+		class="filter-nav"
 		:class="{ 'is-open': isOpen }"
 	>
 		<div
@@ -8,14 +8,14 @@
 				exclude: ['buttonFilter'],
 				handler: 'closeFilter'
 			}"
-			class="filter"
+			class="filter-nav__inner"
 		>
 			<button
 				ref="buttonFilter"
-				class="filter__button"
+				class="filter-nav__button"
 				@click="openCloseFilter"
 			>
-				<span class="filter__button-bg">
+				<span class="bg">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 366 730"
@@ -25,27 +25,24 @@
 						/>
 					</svg>
 				</span>
-				<i class="filter__button-icon">
+				<i class="icon">
 					<font-awesome-icon :icon="['fas', 'filter']" />
 				</i>
 			</button>
 
-			<div class="filter__inner">
-				<h1 class="filter__title">
+			<div class="filter-nav__content">
+				<h1 class="filter-nav__title">
 					Filter
 				</h1>
 
-				<div class="filter__content">
-					<ul class="filter-list">
-						<li class="filter-list__item">
-							<h2 class="filter-list__title">
-								Languages
-							</h2>
-							<div class="filter-list__content">
-								<ButtonsLanguages />
-							</div>
-						</li>
-					</ul>
+				<div class="filter-nav__type">
+					<h2 class="filter-nav__subtitle">
+						Languages
+					</h2>
+
+					<div class="filter-nav__subcontent">
+						<ButtonsLanguages />
+					</div>
 				</div>
 			</div>
 		</div>
@@ -148,64 +145,27 @@
 </script>
 
 <style lang="scss" scoped>
-	.filter {
-		width: 80%;
-		max-width: 40rem;
+	.filter-nav {
+		width: 100%;
 		height: 100%;
-		position: relative;
-		background-color: $color-white;
-		transform: translate3d(100%, 0, 0);
-		pointer-events: all;
-		transition: all 0.5s ease-in-out 0s;
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 9999;
+		display: flex;
+		justify-content: flex-end;
+		pointer-events: none;
+		transition: all 0.4s ease-in-out 0.3s;
 
-		&__wrapper {
-			width: 100%;
+		&__inner {
+			width: 80%;
+			max-width: 40rem;
 			height: 100%;
-			position: fixed;
-			top: 0;
-			right: 0;
-			z-index: 9999;
-			display: flex;
-			justify-content: flex-end;
-			pointer-events: none;
-			transition: all 0.4s ease-in-out 0.3s;
-
-			&.is-open {
-				pointer-events: all;
-				background-color: rgba($color-black, 0.5);
-
-				.filter {
-					transform: translate3d(0, 0, 0);
-
-					&__button {
-						left: -4.35rem;
-
-						&-bg {
-							width: 100%;
-							fill: $color-white;
-						}
-
-						&-icon {
-							color: $color-black;
-						}
-
-						&:hover {
-							.filter {
-								&__button {
-									&-icon {
-										color: $color-brand-1;
-									}
-								}
-							}
-						}
-					}
-
-					&__inner {
-						border-left: 0.8rem solid $color-white;
-						transform: translate(0, 0);
-					}
-				}
-			}
+			position: relative;
+			background-color: $color-white;
+			transform: translate3d(100%, 0, 0);
+			pointer-events: all;
+			transition: all 0.5s ease-in-out 0s;
 		}
 
 		&__button {
@@ -219,23 +179,13 @@
 			cursor: pointer;
 			transition: all 0.5s ease-in-out 0s;
 
-			&:hover {
-				.filter {
-					&__button {
-						&-icon {
-							color: $color-white;
-						}
-					}
-				}
-			}
-
-			&-bg {
+			.bg {
 				width: 100%;
 				fill: $color-brand-2-light;
 				transition: all 0.5s ease-in-out 0s;
 			}
 
-			&-icon {
+			.icon {
 				margin-right: 1rem;
 				position: absolute;
 				top: 50%;
@@ -259,9 +209,19 @@
 					font-size: 1.5rem;
 				}
 			}
+
+			&:hover {
+				.filter-nav {
+					&__button {
+						.icon {
+							color: $color-white;
+						}
+					}
+				}
+			}
 		}
 
-		&__inner {
+		&__content {
 			width: 100%;
 			height: 100%;
 			padding: 12rem 2rem 4rem;
@@ -275,24 +235,49 @@
 			margin-bottom: 3rem;
 		}
 
-		&__content {
-			overflow-y: scroll;
-		}
-	}
-
-	.filter-list {
-		list-style: none;
-
-		&__item {
-			&:not(:last-child) {
-				margin-bottom: 2rem;
-			}
-		}
-
-		&__title {
+		&__subtitle {
 			margin-bottom: 1rem;
 			font-size: 2rem;
 			color: $color-brand-1;
+		}
+
+		&.is-open {
+			pointer-events: all;
+			background-color: rgba($color-black, 0.5);
+
+			.filter-nav {
+				&__inner {
+					transform: translate3d(0, 0, 0);
+				}
+
+				&__button {
+					left: -4.35rem;
+
+					.bg {
+						width: 100%;
+						fill: $color-white;
+					}
+
+					.icon {
+						color: $color-black;
+					}
+
+					&:hover {
+						.filter-nav {
+							&__button {
+								.icon {
+									color: $color-brand-1;
+								}
+							}
+						}
+					}
+				}
+
+				&__content {
+					border-left: 0.8rem solid $color-white;
+					transform: translate(0, 0);
+				}
+			}
 		}
 	}
 </style>
