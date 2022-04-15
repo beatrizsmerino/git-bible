@@ -124,9 +124,11 @@
 					margin-left: 3rem;
 				}
 
-				p + ul,
-				p + ol {
-					margin-bottom: 1rem;
+				p {
+					+ ul,
+					+ ol {
+						margin-bottom: 1rem;
+					}
 				}
 
 				a {
@@ -138,7 +140,6 @@
 					margin: 0 0.2rem;
 					padding: 0.25rem 0.5rem;
 					display: inline-block;
-					white-space: nowrap;
 					line-height: 100%;
 					font-size: 0.85em;
 					border-radius: 0.6rem;
