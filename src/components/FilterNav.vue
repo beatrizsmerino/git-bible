@@ -235,10 +235,6 @@
 			margin-bottom: 3rem;
 		}
 
-		&__type {
-			overflow-y: scroll;
-		}
-
 		&__subtitle {
 			margin-bottom: 1rem;
 			font-size: 2rem;
