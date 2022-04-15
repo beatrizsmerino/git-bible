@@ -33,15 +33,30 @@
 					Filter
 				</h1>
 
-				<div class="filter-nav__type">
-					<h2 class="filter-nav__subtitle">
-						Languages
-					</h2>
+				<ul class="filter-nav__list">
+					<li class="filter-nav__item">
+						<h2 class="filter-nav__subtitle">
+							Languages
+						</h2>
 
-					<div class="filter-nav__subcontent">
-						<ButtonsLanguages />
-					</div>
-				</div>
+						<div class="filter-nav__subcontent">
+							<ButtonsLanguages />
+						</div>
+					</li>
+
+					<li class="filter-nav__item">
+						<h2 class="filter-nav__subtitle">
+							Categories
+						</h2>
+
+						<div class="filter-nav__subcontent">
+							<Tag
+								class="tag--theme-light"
+								:tag-list="getCategories"
+							/>
+						</div>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -50,6 +65,7 @@
 <script>
 	import Vue from 'vue';
 	import ButtonsLanguages from '@/components/Button/ButtonsLanguages';
+	import Tag from '@/components/Tag';
 
 	let handleOutsideClick;
 
@@ -119,12 +135,31 @@
 	export default {
 		name: 'FilterNav',
 		components: {
-			ButtonsLanguages
+			ButtonsLanguages,
+			Tag
+		},
+		props: {
+			commands: {
+				type: Array,
+				required: true
+			}
 		},
 		data() {
 			return {
 				isOpen: false
 			};
+		},
+		computed: {
+			getCategories() {
+				const categoryList = [];
+				this.commands.map(command => command.categories.map(category => {
+					if (!categoryList.includes(category)) {
+						categoryList.push(category);
+					}
+				}));
+
+				return categoryList;
+			}
 		},
 		watch: {
 			isOpen() {
@@ -145,15 +180,20 @@
 <style lang="scss" scoped>
 	.filter-nav {
 		width: 100%;
-		height: 100%;
+		height: calc(100% - 8rem);
 		position: fixed;
-		top: 0;
+		top: 8rem;
 		right: 0;
 		z-index: 9999;
 		display: flex;
 		justify-content: flex-end;
 		pointer-events: none;
 		transition: all 0.4s ease-in-out 0.3s;
+
+		@include media('md') {
+			height: calc(100% - 6rem);
+			top: 6rem;
+		}
 
 		&__inner {
 			width: 80%;
@@ -169,7 +209,7 @@
 		&__button {
 			width: 5rem;
 			position: absolute;
-			top: 10rem;
+			top: 4rem;
 			left: calc(-4.35rem - 0.8rem);
 			z-index: -1;
 			border: none;
@@ -222,7 +262,8 @@
 		&__content {
 			width: 100%;
 			height: 100%;
-			padding: 12rem 2rem 4rem;
+			padding: 4rem 2rem;
+			overflow: auto;
 			border-left: 0.8rem solid $color-brand-2-light;
 			background-color: $color-white;
 			transform: translate(-0.8rem, 0);
@@ -233,14 +274,25 @@
 			margin-bottom: 3rem;
 		}
 
-		&__type {
-			overflow-y: scroll;
+		&__list {
+			list-style: none;
+		}
+
+		&__item {
+			&:not(:last-child) {
+					margin-bottom: 2rem;
+				}
 		}
 
 		&__subtitle {
 			margin-bottom: 1rem;
 			font-size: 2rem;
 			color: $color-brand-1;
+		}
+
+		&__subcontent {
+			//max-height: 20rem;
+			//overflow: auto;
 		}
 
 		&.is-open {

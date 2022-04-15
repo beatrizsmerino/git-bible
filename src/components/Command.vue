@@ -177,6 +177,10 @@
 			display: inline-block;
 		}
 
+		&__categories {
+			margin-top: 2rem;
+		}
+
 		&.is-selected {
 			padding: 2.7rem 3.2rem calc(2.7rem - 0.8rem);
 			background-color: $color-silver;

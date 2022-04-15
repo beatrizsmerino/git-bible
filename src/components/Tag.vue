@@ -26,7 +26,6 @@
 
 <style lang="scss" scoped>
 	.tag {
-		margin-top: 2rem;
 
 		&__list {
 			margin-left: -0.5rem;
@@ -43,6 +42,14 @@
 			color: $color-brand-2;
 			border-left: 0.5rem solid $color-brand-2-light;
 			background-color: $color-white;
+		}
+
+		&--theme-light {
+			.tag {
+				&__item {
+					background-color: $color-light;
+				}
+			}
 		}
 	}
 </style>
