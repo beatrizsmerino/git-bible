@@ -9,7 +9,7 @@
 					Shell Bash
 				</p>
 				<div class="code-theme__buttons">
-					<ButtonCopy
+					<UICopy
 						class="code-theme__button-copy code-theme__button"
 						:text-to-copy="codeFormatted"
 					/>
@@ -22,9 +22,7 @@
 							class="switch-theme__field"
 							type="checkbox"
 						>
-						<span
-							class="switch-theme__bullet switch-theme__bullet--rounded"
-						/>
+						<span class="switch-theme__bullet switch-theme__bullet--rounded" />
 					</label>
 				</div>
 			</div>
@@ -67,18 +65,21 @@
 </template>
 
 <script>
-	import ButtonCopy from '@/components/Button/ButtonCopy';
+	import UICopy from '@/components/UI/UICopy';
 
 	export default {
-		name: 'CodeTheme',
+		name: 'UICodeTheme',
 		components: {
-			ButtonCopy
+			UICopy
 		},
 		props: {
-			code: [
-				String,
-				Array
-			]
+			code: {
+				type: [
+					String,
+					Array
+				],
+				required: true
+			}
 		},
 		data() {
 			return {

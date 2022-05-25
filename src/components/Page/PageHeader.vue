@@ -1,18 +1,18 @@
 <template>
 	<header class="page-header">
-		<Logo theme="logo--header logo--light" />
+		<UILogo theme="logo--header logo--light" />
 		<PageNav />
 	</header>
 </template>
 
 <script>
-	import Logo from '@/components/Logo';
+	import UILogo from '@/components/UI/UILogo';
 	import PageNav from '@/components/Page/PageNav';
 
 	export default {
 		name: 'PageHeader',
 		components: {
-			Logo,
+			UILogo,
 			PageNav
 		}
 	};

@@ -22,7 +22,7 @@
 
 <script>
 	export default {
-		name: 'Logo',
+		name: 'UILogo',
 		props: {
 			theme: {
 				type: String

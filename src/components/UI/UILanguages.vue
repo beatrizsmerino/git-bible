@@ -1,6 +1,6 @@
 <template>
 	<div class="list-buttons">
-		<Button
+		<UIButton
 			v-for="language in languages"
 			:key="language.locale"
 			:class="[
@@ -11,18 +11,18 @@
 			@emit-click="changeLanguage(language.locale)"
 		>
 			{{ language.title }}
-		</Button>
+		</UIButton>
 	</div>
 </template>
 
 <script>
 	import {i18n} from '@/plugins/i18n';
-	import Button from '@/components/Button/Button';
+	import UIButton from '@/components/UI/UIButton';
 
 	export default {
-		name: 'ButtonsLanguages',
+		name: 'UILanguages',
 		components: {
-			Button
+			UIButton
 		},
 		computed: {
 			languages() {

@@ -1,65 +1,65 @@
 <template>
 	<div
-		:id="commandData.name"
-		class="command"
+		:id="commandItem.name"
+		class="command-item"
 		:data-index="commandIndex"
 		:class="{ 'is-selected': commandStatus }"
 	>
-		<h3 class="command__title">
+		<h3 class="command-item__title">
 			<router-link
-				:to="`#${commandData.name}`"
-				class="command__anchor-link"
+				:to="`#${commandItem.name}`"
+				class="command-item__anchor-link"
 			>
 				<i class="reference__url-icon">
 					<font-awesome-icon :icon="['fas', 'link']" />
 				</i>
 			</router-link>
-			{{ commandData.title }}
+			{{ commandItem.title }}
 		</h3>
 
 		<div
-			v-if="commandData.description"
-			class="command__description"
-			v-html="commandData.description"
+			v-if="commandItem.description"
+			class="command-item__description"
+			v-html="commandItem.description"
 		/>
 
 		<div
 			v-if="
-				Array.isArray(commandData.code) &&
-					Array.isArray(commandData.code[0])
+				Array.isArray(commandItem.code) &&
+					Array.isArray(commandItem.code[0])
 			"
-			class="command__blocks-code"
+			class="command-item__blocks-code"
 		>
-			<CodeTheme
-				v-for="(codeBlock, index) in commandData.code"
+			<UICodeTheme
+				v-for="(item, index) in commandItem.code"
 				:key="`code-${index}`"
-				class="command__code"
-				:code="commandData.code[index]"
+				class="command-item__code"
+				:code="item"
 			/>
 		</div>
 
-		<CodeTheme
+		<UICodeTheme
 			v-if="
-				(Array.isArray(commandData.code) &&
-					typeof commandData.code[0] == 'string') ||
-					typeof commandData.code == 'string'
+				(Array.isArray(commandItem.code) &&
+					typeof commandItem.code[0] == 'string') ||
+					typeof commandItem.code == 'string'
 			"
-			class="command__code"
-			:code="commandData.code"
+			class="command-item__code"
+			:code="commandItem.code"
 		/>
 	</div>
 </template>
 
 <script>
-	import CodeTheme from '@/components/CodeTheme';
+	import UICodeTheme from '@/components/UI/UICodeTheme';
 
 	export default {
-		name: 'Commands',
+		name: 'CommandItem',
 		components: {
-			CodeTheme
+			UICodeTheme
 		},
 		props: {
-			commandData: {
+			commandItem: {
 				type: Object,
 				required: true
 			},
@@ -76,7 +76,7 @@
 </script>
 
 <style lang="scss" scoped>
-	.command {
+	.command-item {
 		padding: 2.7rem 3.2rem;
 		font-size: 1.9rem;
 		background-color: $color-light;
@@ -174,7 +174,7 @@
 				padding: 1.8rem 1.8rem calc(1.8rem - 0.8rem);
 			}
 
-			.command {
+			.command-item {
 				&__description {
 					::v-deep {
 						code {

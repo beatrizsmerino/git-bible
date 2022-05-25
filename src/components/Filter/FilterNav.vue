@@ -20,9 +20,7 @@
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 366 730"
 					>
-						<path
-							d="M317.638,0V44.353c0,52.1-32.216,89.512-86.9,101.005a151.174,151.174,0,0,1-22.577,2.893C70.024,156.038.623,258.217,0,360.818H0v0H0C.623,463.424,70.024,565.6,208.157,573.39a151.043,151.043,0,0,1,22.577,2.893c54.688,11.493,86.9,48.9,86.9,101.005V730H366V0Z"
-						/>
+						<path d="M317.638,0V44.353c0,52.1-32.216,89.512-86.9,101.005a151.174,151.174,0,0,1-22.577,2.893C70.024,156.038.623,258.217,0,360.818H0v0H0C.623,463.424,70.024,565.6,208.157,573.39a151.043,151.043,0,0,1,22.577,2.893c54.688,11.493,86.9,48.9,86.9,101.005V730H366V0Z" />
 					</svg>
 				</span>
 				<i class="icon">
@@ -41,7 +39,7 @@
 					</h2>
 
 					<div class="filter-nav__subcontent">
-						<ButtonsLanguages />
+						<UILanguages />
 					</div>
 				</div>
 			</div>
@@ -51,54 +49,37 @@
 
 <script>
 	import Vue from 'vue';
-	import ButtonsLanguages from '@/components/Button/ButtonsLanguages';
+	import UILanguages from '@/components/UI/UILanguages';
 
 	let handleOutsideClick;
 
 	Vue.directive('closable', {
-		bind(el, binding, vnode) {
-			/*
-			 * Here's the click/touchstart handler
-			 * (it is registered below)
-			 */
-			handleOutsideClick = e => {
-				e.stopPropagation();
+		bind(element, binding, vnode) {
+			// Here's the click/touchstart handler (it is registered below)
+			handleOutsideClick = event => {
+				event.stopPropagation();
 
-				/*
-				 * Get the handler method name and the exclude array
-				 * from the object used in v-closable
-				 */
+				// Get the handler method name and the exclude array from the object used in v-closable
 				const {handler, exclude} = binding.value;
 
 				// This variable indicates if the clicked element is excluded
-				let clickedOnExcludedEl = false;
+				let clickedOnElementExcluded = false;
 				exclude.forEach(refName => {
-					/*
-					 * We only run this code if we haven't detected
-					 * any excluded element yet
-					 */
-					if (!clickedOnExcludedEl) {
+					// We only run this code if we haven't detected any excluded element yet
+					if (!clickedOnElementExcluded) {
 						// Get the element using the reference name
-						const excludedEl = vnode.context.$refs[refName];
+						const elementExcluded = vnode.context.$refs[refName];
 
-						/*
-						 * See if this excluded element
-						 * is the same element the user just clicked on
-						 */
-						clickedOnExcludedEl = excludedEl.contains(e.target);
+						if (typeof elementExcluded !== 'undefined') {
+							// See if this excluded element is the same element the user just clicked on
+							clickedOnElementExcluded = elementExcluded.contains(event.target);
+						}
 					}
 				});
 
-				/*
-				 * We check to see if the clicked element is not
-				 * the dialog element and not excluded
-				 */
-				if (!el.contains(e.target) && !clickedOnExcludedEl) {
-					/*
-					 * If the clicked element is outside the dialog
-					 * and not the button, then call the outside-click handler
-					 * from the same component this directive is used in
-					 */
+				// We check to see if the clicked element is not the dialog element and not excluded
+				if (!element.contains(event.target) && !clickedOnElementExcluded) {
+					// If the clicked element is outside the dialog and not the button, then call the outside-click handler from the same component this directive is used in
 					vnode.context[handler]();
 				}
 			};
@@ -109,19 +90,16 @@
 		},
 
 		unbind() {
-			/*
-			 * If the element that has v-closable is removed, then
-			 * unbind click/touchstart listeners from the whole page
-			 */
+			// If the element that has v-closable is removed, then unbind click/touchstart listeners from the whole page
 			document.removeEventListener('click', handleOutsideClick);
 			document.removeEventListener('touchstart', handleOutsideClick);
 		}
 	});
 
 	export default {
-		name: 'FilterNav',
+		name: 'UIFilterNav',
 		components: {
-			ButtonsLanguages
+			UILanguages
 		},
 		data() {
 			return {
