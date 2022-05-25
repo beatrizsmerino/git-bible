@@ -24,7 +24,10 @@
 			CommandItem
 		},
 		props: {
-			commandList: Array
+			commandList: {
+				type: Array,
+				required: true
+			}
 		},
 		data() {
 			return {

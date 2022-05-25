@@ -25,7 +25,10 @@
 	export default {
 		name: 'ReferenceItem',
 		props: {
-			referenceItem: Object
+			referenceItem: {
+				type: Object,
+				required: true
+			}
 		}
 	};
 </script>

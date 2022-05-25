@@ -31,7 +31,10 @@
 	export default {
 		name: 'ButtonCopy',
 		props: {
-			textToCopy: String
+			textToCopy: {
+				type: String,
+				required: true
+			}
 		},
 		data() {
 			return {

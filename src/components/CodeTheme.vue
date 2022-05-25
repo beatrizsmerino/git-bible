@@ -75,10 +75,13 @@
 			ButtonCopy
 		},
 		props: {
-			code: [
-				String,
-				Array
-			]
+			code: {
+				type: [
+					String,
+					Array
+				],
+				required: true
+			}
 		},
 		data() {
 			return {
