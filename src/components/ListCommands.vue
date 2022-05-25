@@ -6,7 +6,7 @@
 			:ref="command.name"
 			class="list-commands__item"
 		>
-			<Command
+			<CommandItem
 				:command-data="command"
 				:command-index="index"
 				:command-status="command.name === anchorName ? true : false"
@@ -16,12 +16,12 @@
 </template>
 
 <script>
-	import Command from '@/components/Command';
+	import CommandItem from '@/components/CommandItem';
 
 	export default {
 		name: 'ListCommands',
 		components: {
-			Command
+			CommandItem
 		},
 		props: {
 			commands: Array

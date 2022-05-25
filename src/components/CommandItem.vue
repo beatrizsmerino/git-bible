@@ -54,7 +54,7 @@
 	import CodeTheme from '@/components/CodeTheme';
 
 	export default {
-		name: 'Commands',
+		name: 'CommandItem',
 		components: {
 			CodeTheme
 		},
