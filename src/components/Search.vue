@@ -50,13 +50,13 @@
 		name: 'Search',
 		data() {
 			return {
-				commands: [],
+				commandList: [],
 				searchText: ''
 			};
 		},
 		computed: {
 			filteredList() {
-				return this.commands.filter(command => command.title.
+				return this.commandList.filter(command => command.title.
 					toLowerCase().
 					includes(this.searchText.toLowerCase()));
 			}
@@ -64,7 +64,7 @@
 		created() {
 			const commandsGit = this.$t('commands.git').filter(command => command.name !== '' && command.title !== '');
 			const commandsGitFlow = this.$t('commands.gitFlow').filter(command => command.name !== '' && command.title !== '');
-			this.commands = commandsGit.concat(commandsGitFlow);
+			this.commandList = commandsGit.concat(commandsGitFlow);
 		},
 		methods: {
 			isScrollStart(element) {

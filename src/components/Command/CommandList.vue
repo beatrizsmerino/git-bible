@@ -1,34 +1,34 @@
 <template>
-	<ul class="list-commands">
+	<ul class="command-list">
 		<li
-			v-for="(command, index) in commandsFormatted"
+			v-for="(item, index) in commandListFormatted"
 			:key="`command-${index}`"
-			:ref="command.name"
-			class="list-commands__item"
+			:ref="item.name"
+			class="command-list__item"
 		>
 			<CommandItem
-				:command-data="command"
+				:command-item="item"
 				:command-index="index"
-				:command-status="command.name === anchorName ? true : false"
+				:command-status="item.name === anchorName ? true : false"
 			/>
 		</li>
 	</ul>
 </template>
 
 <script>
-	import CommandItem from '@/components/CommandItem';
+	import CommandItem from '@/components/Command/CommandItem';
 
 	export default {
-		name: 'ListCommands',
+		name: 'CommandList',
 		components: {
 			CommandItem
 		},
 		props: {
-			commands: Array
+			commandList: Array
 		},
 		data() {
 			return {
-				commandsFormatted: '',
+				commandListFormatted: '',
 				anchorName: this.$route.hash.split('#').pop()
 			};
 		},
@@ -36,12 +36,12 @@
 			$route(to) {
 				this.anchorName = to.hash.split('#').pop();
 			},
-			commands(newValue) {
-				this.commandsFormatted = newValue;
+			commandList(newValue) {
+				this.commandListFormatted = newValue;
 			}
 		},
 		created() {
-			this.commandsFormatted = this.commands.filter(command => command.name !== '' &&
+			this.commandListFormatted = this.commandList.filter(command => command.name !== '' &&
 				command.title !== '' &&
 				command.code !== '');
 		}
@@ -49,7 +49,7 @@
 </script>
 
 <style lang="scss" scoped>
-	.list-commands {
+	.command-list {
 		list-style: none;
 
 		&__item {

@@ -2,23 +2,23 @@
 	<div class="page-content">
 		<div class="page-content__inner">
 			<FilterNav />
-			<ListCommands :commands="getCommands" />
+			<CommandList :command-list="getCommandList" />
 		</div>
 	</div>
 </template>
 
 <script>
 	import FilterNav from '@/components/FilterNav';
-	import ListCommands from '@/components/ListCommands';
+	import CommandList from '@/components/Command/CommandList';
 
 	export default {
 		name: 'CommandsGitFlow',
 		components: {
 			FilterNav,
-			ListCommands
+			CommandList
 		},
 		computed: {
-			getCommands() {
+			getCommandList() {
 				return this.$t('commands.gitFlow');
 			}
 		}
