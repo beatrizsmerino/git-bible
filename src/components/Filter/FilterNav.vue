@@ -54,13 +54,13 @@
 	let handleOutsideClick;
 
 	Vue.directive('closable', {
-		bind(el, binding, vnode) {
+		bind(element, binding, vnode) {
 			/*
 			 * Here's the click/touchstart handler
 			 * (it is registered below)
 			 */
-			handleOutsideClick = e => {
-				e.stopPropagation();
+			handleOutsideClick = event => {
+				event.stopPropagation();
 
 				/*
 				 * Get the handler method name and the exclude array
@@ -69,21 +69,21 @@
 				const {handler, exclude} = binding.value;
 
 				// This variable indicates if the clicked element is excluded
-				let clickedOnExcludedEl = false;
+				let clickedOnElementExcluded = false;
 				exclude.forEach(refName => {
 					/*
 					 * We only run this code if we haven't detected
 					 * any excluded element yet
 					 */
-					if (!clickedOnExcludedEl) {
+					if (!clickedOnElementExcluded) {
 						// Get the element using the reference name
-						const excludedEl = vnode.context.$refs[refName];
+						const elementExcluded = vnode.context.$refs[refName];
 
 						/*
 						 * See if this excluded element
 						 * is the same element the user just clicked on
 						 */
-						clickedOnExcludedEl = excludedEl.contains(e.target);
+						clickedOnElementExcluded = elementExcluded.contains(event.target);
 					}
 				});
 
@@ -91,7 +91,7 @@
 				 * We check to see if the clicked element is not
 				 * the dialog element and not excluded
 				 */
-				if (!el.contains(e.target) && !clickedOnExcludedEl) {
+				if (!element.contains(event.target) && !clickedOnElementExcluded) {
 					/*
 					 * If the clicked element is outside the dialog
 					 * and not the button, then call the outside-click handler
