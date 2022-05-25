@@ -70,7 +70,10 @@
 						// Get the element using the reference name
 						const elementExcluded = vnode.context.$refs[refName];
 
-						clickedOnElementExcluded = elementExcluded.contains(event.target);
+						if (typeof elementExcluded !== 'undefined') {
+							// See if this excluded element is the same element the user just clicked on
+							clickedOnElementExcluded = elementExcluded.contains(event.target);
+						}
 					}
 				});
 
