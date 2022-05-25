@@ -30,7 +30,7 @@
 			"
 			class="command-item__blocks-code"
 		>
-			<CodeTheme
+			<UICodeTheme
 				v-for="(item, index) in commandItem.code"
 				:key="`code-${index}`"
 				class="command-item__code"
@@ -38,7 +38,7 @@
 			/>
 		</div>
 
-		<CodeTheme
+		<UICodeTheme
 			v-if="
 				(Array.isArray(commandItem.code) &&
 					typeof commandItem.code[0] == 'string') ||
@@ -51,12 +51,12 @@
 </template>
 
 <script>
-	import CodeTheme from '@/components/CodeTheme';
+	import UICodeTheme from '@/components/UI/UICodeTheme';
 
 	export default {
 		name: 'CommandItem',
 		components: {
-			CodeTheme
+			UICodeTheme
 		},
 		props: {
 			commandItem: {

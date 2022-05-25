@@ -8,7 +8,7 @@
 </template>
 
 <script>
-	import FilterNav from '@/components/FilterNav';
+	import FilterNav from '@/components/Filter/FilterNav';
 	import CommandList from '@/components/Command/CommandList';
 
 	export default {

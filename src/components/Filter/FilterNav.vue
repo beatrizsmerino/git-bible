@@ -20,9 +20,7 @@
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 366 730"
 					>
-						<path
-							d="M317.638,0V44.353c0,52.1-32.216,89.512-86.9,101.005a151.174,151.174,0,0,1-22.577,2.893C70.024,156.038.623,258.217,0,360.818H0v0H0C.623,463.424,70.024,565.6,208.157,573.39a151.043,151.043,0,0,1,22.577,2.893c54.688,11.493,86.9,48.9,86.9,101.005V730H366V0Z"
-						/>
+						<path d="M317.638,0V44.353c0,52.1-32.216,89.512-86.9,101.005a151.174,151.174,0,0,1-22.577,2.893C70.024,156.038.623,258.217,0,360.818H0v0H0C.623,463.424,70.024,565.6,208.157,573.39a151.043,151.043,0,0,1,22.577,2.893c54.688,11.493,86.9,48.9,86.9,101.005V730H366V0Z" />
 					</svg>
 				</span>
 				<i class="icon">
@@ -41,7 +39,7 @@
 					</h2>
 
 					<div class="filter-nav__subcontent">
-						<ButtonsLanguages />
+						<UILanguages />
 					</div>
 				</div>
 			</div>
@@ -51,7 +49,7 @@
 
 <script>
 	import Vue from 'vue';
-	import ButtonsLanguages from '@/components/Button/ButtonsLanguages';
+	import UILanguages from '@/components/UI/UILanguages';
 
 	let handleOutsideClick;
 
@@ -119,9 +117,9 @@
 	});
 
 	export default {
-		name: 'FilterNav',
+		name: 'UIFilterNav',
 		components: {
-			ButtonsLanguages
+			UILanguages
 		},
 		data() {
 			return {

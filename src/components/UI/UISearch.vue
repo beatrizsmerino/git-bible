@@ -47,7 +47,7 @@
 
 <script>
 	export default {
-		name: 'Search',
+		name: 'UISearch',
 		data() {
 			return {
 				commandList: [],

@@ -17,10 +17,10 @@
 
 <script>
 	import {i18n} from '@/plugins/i18n';
-	import UIButton from '@/components/Button/UIButton';
+	import UIButton from '@/components/UI/UIButton';
 
 	export default {
-		name: 'ButtonsLanguages',
+		name: 'UILanguages',
 		components: {
 			UIButton
 		},

@@ -29,7 +29,7 @@
 
 <script>
 	export default {
-		name: 'ButtonCopy',
+		name: 'UICopy',
 		props: {
 			textToCopy: {
 				type: String,
