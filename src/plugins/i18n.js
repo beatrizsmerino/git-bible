@@ -8,8 +8,8 @@
 import Vue from 'vue';
 import VueI18n from 'vue-i18n';
 
-import commandsENData from '../data/en/data-commands.json';
-import commandsESData from '../data/es/data-commands.json';
+import commandListENData from '../data/en/data-commands.json';
+import commandListESData from '../data/es/data-commands.json';
 
 Vue.use(VueI18n);
 
@@ -19,14 +19,14 @@ const messages = {
 			spanish: 'Español',
 			english: 'Inglés'
 		},
-		commands: commandsESData
+		commandList: commandListESData
 	},
 	en: {
 		language: {
 			spanish: 'Spanish',
 			english: 'English'
 		},
-		commands: commandsENData
+		commandList: commandListENData
 	}
 };
 

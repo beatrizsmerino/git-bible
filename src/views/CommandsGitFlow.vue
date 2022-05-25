@@ -19,7 +19,7 @@
 		},
 		computed: {
 			getCommandList() {
-				return this.$t('commands.gitFlow');
+				return this.$t('commandList.gitFlow');
 			}
 		}
 	};

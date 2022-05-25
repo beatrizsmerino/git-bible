@@ -62,9 +62,9 @@
 			}
 		},
 		created() {
-			const commandsGit = this.$t('commands.git').filter(command => command.name !== '' && command.title !== '');
-			const commandsGitFlow = this.$t('commands.gitFlow').filter(command => command.name !== '' && command.title !== '');
-			this.commandList = commandsGit.concat(commandsGitFlow);
+			const commandListGit = this.$t('commandList.git').filter(command => command.name !== '' && command.title !== '');
+			const commandListGitFlow = this.$t('commandList.gitFlow').filter(command => command.name !== '' && command.title !== '');
+			this.commandList = commandListGit.concat(commandListGitFlow);
 		},
 		methods: {
 			isScrollStart(element) {

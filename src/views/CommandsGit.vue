@@ -21,7 +21,7 @@
 		},
 		computed: {
 			getCommandList() {
-				return this.$t('commands.git');
+				return this.$t('commandList.git');
 			}
 		}
 	};
