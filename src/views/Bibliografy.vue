@@ -1,18 +1,18 @@
 <template>
 	<div class="page-content">
 		<div class="page-content__inner">
-			<ListReferences />
+			<ReferenceList />
 		</div>
 	</div>
 </template>
 
 <script>
-	import ListReferences from '@/components/ListReferences';
+	import ReferenceList from '@/components/Reference/ReferenceList';
 
 	export default {
 		name: 'Bibliografy',
 		components: {
-			ListReferences
+			ReferenceList
 		}
 	};
 </script>

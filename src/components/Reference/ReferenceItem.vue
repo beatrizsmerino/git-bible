@@ -1,20 +1,20 @@
 <template>
-	<div class="reference">
+	<div class="reference-item">
 		<a
-			class="reference__link"
-			:href="dataReference.url"
+			class="reference-item__link"
+			:href="referenceItem.url"
 			target="_blank"
 		>
-			<p class="reference__description">
-				{{ dataReference.description }}
+			<p class="reference-item__description">
+				{{ referenceItem.description }}
 			</p>
-			<p class="reference__url">
-				<i class="reference__url-icon">
+			<p class="reference-item__url">
+				<i class="reference-item__url-icon">
 					<font-awesome-icon :icon="['fas', 'link']" />
 				</i>
 
-				<span class="reference__url-text text-ellipsis">
-					{{ dataReference.url }}
+				<span class="reference-item__url-text text-ellipsis">
+					{{ referenceItem.url }}
 				</span>
 			</p>
 		</a>
@@ -23,15 +23,15 @@
 
 <script>
 	export default {
-		name: 'Reference',
+		name: 'ReferenceItem',
 		props: {
-			dataReference: Object
+			referenceItem: Object
 		}
 	};
 </script>
 
 <style lang="scss" scoped>
-	.reference {
+	.reference-item {
 		width: 100%;
 		display: flex;
 		align-items: center;
