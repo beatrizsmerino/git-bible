@@ -47,24 +47,24 @@
 
 <script>
 	export default {
-		name: 'Search',
+		name: 'UISearch',
 		data() {
 			return {
-				commands: [],
+				commandList: [],
 				searchText: ''
 			};
 		},
 		computed: {
 			filteredList() {
-				return this.commands.filter(command => command.title.
+				return this.commandList.filter(command => command.title.
 					toLowerCase().
 					includes(this.searchText.toLowerCase()));
 			}
 		},
 		created() {
-			const commandsGit = this.$t('commands.git').filter(command => command.name !== '' && command.title !== '');
-			const commandsGitFlow = this.$t('commands.gitFlow').filter(command => command.name !== '' && command.title !== '');
-			this.commands = commandsGit.concat(commandsGitFlow);
+			const commandListGit = this.$t('commandList.git').filter(command => command.name !== '' && command.title !== '');
+			const commandListGitFlow = this.$t('commandList.gitFlow').filter(command => command.name !== '' && command.title !== '');
+			this.commandList = commandListGit.concat(commandListGitFlow);
 		},
 		methods: {
 			isScrollStart(element) {

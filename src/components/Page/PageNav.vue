@@ -19,7 +19,7 @@
 				</li>
 				<li class="nav__item">
 					<router-link
-						to="/commands-git"
+						to="/command-git"
 						class="nav__link"
 					>
 						<span>Git</span>
@@ -30,7 +30,7 @@
 				</li>
 				<li class="nav__item">
 					<router-link
-						to="/commands-git-flow"
+						to="/command-git-flow"
 						class="nav__link"
 					>
 						<span>Git Flow</span>

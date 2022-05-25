@@ -23,8 +23,8 @@ const routes = [
 		}
 	},
 	{
-		path: '/commands-git',
-		name: 'commands-git',
+		path: '/command-git',
+		name: 'command-git',
 		component: CommandsGit,
 		meta: {
 			title: 'Git commands',
@@ -37,8 +37,8 @@ const routes = [
 		}
 	},
 	{
-		path: '/commands-git-flow',
-		name: 'commands-git-flow',
+		path: '/command-git-flow',
+		name: 'command-git-flow',
 		component: CommandsGitFlow,
 		meta: {
 			title: 'Git Flow commands',
