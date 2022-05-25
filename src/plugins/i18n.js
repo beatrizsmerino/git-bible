@@ -1,8 +1,7 @@
-/**
+/*
  * @file i18n.js Plugin traductor
  * @description Configure the app to make it multilingual
  * Medium info: https://medium.com/@pablosirera/a%C3%B1adir-i18n-en-una-aplicaci%C3%B3n-vue-ebeb8e5c60b2
- *
  */
 
 import Vue from 'vue';

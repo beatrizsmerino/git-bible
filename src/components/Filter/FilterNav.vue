@@ -55,48 +55,28 @@
 
 	Vue.directive('closable', {
 		bind(element, binding, vnode) {
-			/*
-			 * Here's the click/touchstart handler
-			 * (it is registered below)
-			 */
+			// Here's the click/touchstart handler (it is registered below)
 			handleOutsideClick = event => {
 				event.stopPropagation();
 
-				/*
-				 * Get the handler method name and the exclude array
-				 * from the object used in v-closable
-				 */
+				// Get the handler method name and the exclude array from the object used in v-closable
 				const {handler, exclude} = binding.value;
 
 				// This variable indicates if the clicked element is excluded
 				let clickedOnElementExcluded = false;
 				exclude.forEach(refName => {
-					/*
-					 * We only run this code if we haven't detected
-					 * any excluded element yet
-					 */
+					// We only run this code if we haven't detected any excluded element yet
 					if (!clickedOnElementExcluded) {
 						// Get the element using the reference name
 						const elementExcluded = vnode.context.$refs[refName];
 
-						/*
-						 * See if this excluded element
-						 * is the same element the user just clicked on
-						 */
 						clickedOnElementExcluded = elementExcluded.contains(event.target);
 					}
 				});
 
-				/*
-				 * We check to see if the clicked element is not
-				 * the dialog element and not excluded
-				 */
+				// We check to see if the clicked element is not the dialog element and not excluded
 				if (!element.contains(event.target) && !clickedOnElementExcluded) {
-					/*
-					 * If the clicked element is outside the dialog
-					 * and not the button, then call the outside-click handler
-					 * from the same component this directive is used in
-					 */
+					// If the clicked element is outside the dialog and not the button, then call the outside-click handler from the same component this directive is used in
 					vnode.context[handler]();
 				}
 			};
@@ -107,10 +87,7 @@
 		},
 
 		unbind() {
-			/*
-			 * If the element that has v-closable is removed, then
-			 * unbind click/touchstart listeners from the whole page
-			 */
+			// If the element that has v-closable is removed, then unbind click/touchstart listeners from the whole page
 			document.removeEventListener('click', handleOutsideClick);
 			document.removeEventListener('touchstart', handleOutsideClick);
 		}
