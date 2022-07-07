@@ -21,7 +21,7 @@
 		"elliptic": "^6.5.4",
 		"execa": "^5.1.1",
 		"node-emoji": "^1.11.0",
-		"vue": "^2.6.14",
+		"vue": "^2.7.3",
 		"vue-clipboard2": "^0.3.3",
 		"vue-i18n": "^8.27.2",
 		"vue-router": "^3.5.4"
@@ -41,7 +41,7 @@
 		"prettier": "^2.7.1",
 		"sass": "^1.53.0",
 		"sass-loader": "^7.3.1",
-		"vue-template-compiler": "^2.6.14"
+		"vue-template-compiler": "^2.7.3"
 	},
 	"resolutions": {
 		"ansi-html": "https://registry.npmjs.org/ansi-html-community/-/ansi-html-community-0.0.8.tgz",
