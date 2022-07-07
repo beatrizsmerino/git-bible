@@ -125,8 +125,8 @@
 				}
 
 				p {
-					+ul,
-					+ol {
+					+ ul,
+					+ ol {
 						margin-bottom: 1rem;
 					}
 				}
