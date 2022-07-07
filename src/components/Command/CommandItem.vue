@@ -118,15 +118,15 @@
 				line-height: 130%;
 			}
 
-			::v-deep {
+			:deep() {
 				ol,
 				ul {
 					margin-left: 3rem;
 				}
 
 				p {
-					+ ul,
-					+ ol {
+					+ul,
+					+ol {
 						margin-bottom: 1rem;
 					}
 				}
@@ -176,7 +176,7 @@
 
 			.command-item {
 				&__description {
-					::v-deep {
+					:deep() {
 						code {
 							background-color: $color-light;
 						}
