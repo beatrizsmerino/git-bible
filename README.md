@@ -1,8 +1,9 @@
+![GitHub last commit](https://img.shields.io/github/last-commit/beatrizsmerino/git-bible)
+![GitHub dependabot](https://img.shields.io/badge/dependabot-enabled-025e8c?logo=Dependabot)  
 ![GitHub issues](https://img.shields.io/github/issues/beatrizsmerino/git-bible)
 ![GitHub forks](https://img.shields.io/github/forks/beatrizsmerino/git-bible)
 ![GitHub stars](https://img.shields.io/github/stars/beatrizsmerino/git-bible)
 ![GitHub watchers](https://img.shields.io/github/watchers/beatrizsmerino/git-bible)
-![GitHub last commit](https://img.shields.io/github/last-commit/beatrizsmerino/git-bible)
 
 # Git Bible
 
