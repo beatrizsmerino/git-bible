@@ -567,7 +567,7 @@
 		{
 			"parent": "git",
 			"url": "command-git",
-			"name": "exit-without-save",
+			"name": "exit-from-vim-without-save",
 			"title": "Git. Exit without save from the text window",
 			"description": "<p>If you're inside the <strong>Vi</strong> editor (text editor created for UNIX, whose improved version is called <strong>Vim</strong>) and you want to just come out from the text window without save the changes, typing the command and press <em>'enter'</em>.</p><p><a href='https://phoenixnap.com/kb/how-to-vim-save-quit-exit' target='_blank'>Know more</a></p>",
 			"code": ":q!"
@@ -575,7 +575,7 @@
 		{
 			"parent": "git",
 			"url": "command-git",
-			"name": "exit-and-save",
+			"name": "exit-from-vim-and-save",
 			"title": "Git. Exit and save from the text window",
 			"description": "<p>If you're inside the <strong>Vi</strong> editor (text editor created for UNIX, whose improved version is called <strong>Vim</strong>) and you want come out from the text window and save the changes, typing the command and press <em>'enter'</em>.</p><p><a href='https://phoenixnap.com/kb/how-to-vim-save-quit-exit' target='_blank'>Know more</a></p>",
 			"code": ":wq"
