@@ -320,9 +320,9 @@
 			"title": "Git. Eliminar una commit",
 			"description": "<p>El comando <code>git reset</code> es una herramienta para deshacer cambios. Si lo ejecutamos sin indicar un SHA de commit, sólo eliminará los cambios añadidos al área de preparación.</p><p>Tiene 3 argumentos que se corresponden con los 3 mecanismos internos de gestión de estados de Git, el árbol de commit (HEAD), el área de preparación y el directorio de trabajo. </p><p>Cuando especificamos el tipo de reset que queremos con uno de estos argumentos, indicamos el commit SHA anterior a todos los que queremos borrar: <ul><li><code>--mixto</code>: Es la opción por defecto, provoca el mismo efecto que ejecutar<code>git reset</code>. Elimina los commits posteriores al commit seleccionado. Elimina los cambios del área de preparación, pero mantiene los del directorio de trabajo.</li><li><code>--soft</code>: Elimina los commits posteriores al commit seleccionado, pero mantiene los cambios añadidos al área de preparación y conserva los realizados en el directorio de trabajo.</li><li><code>--hard</code>: Es la opción más peligrosa porque se pierden todos los cambios realizados. Elimina los commits posteriores al commit seleccionado, lo que también elimina los cambios del área de preparación y del directorio de trabajo.</li></ul></p>",
 			"code": [
-				["git reset --soft <idCommit>"],
-				["git reset --mixed <idCommit>"],
-				["git reset --hard <idCommit>"]
+				["git reset --soft <COMMIT_ID>"],
+				["git reset --mixed <COMMIT_ID>"],
+				["git reset --hard <COMMIT_ID>"]
 			]
 		},
 		{
@@ -660,7 +660,7 @@
 			"name": "diff",
 			"title": "Git. Comparar cambios con git diff",
 			"description": "<p>Podemos ver qué cambios se han hecho en el código con el comando <code>diff</code>. Este, muestra en la terminal las líneas de código que se han eliminado con el símbolo <code>-</code> y en color rojo, y las líneas añadidas con el símbolo <code>+</code> y de color verde.</p><p>La siguiente herramienta online puede ayudarte. <strong>DiffMerge</strong> es una aplicación para comparar y fusionar visualmente archivos en Windows, OSX y Linux: <a href='http://sourcegear.com/diffmerge/' target='_blank'>http://sourcegear.com/diffmerge/</a></p><p>También podemos comparar los cambios que se han realizado en el código de varios commits.</p><p><a href='https://www.atlassian.com/git/tutorials/saving-changes/git-diff' target='_blank'>Saber más</a></p>",
-			"code": [["git diff"], ["git diff <idCommit1> <idCommit2>"]]
+			"code": [["git diff"], ["git diff <COMMIT_ID_1> <COMMIT_ID_2>"]]
 		},
 		{
 			"parent": "git",
