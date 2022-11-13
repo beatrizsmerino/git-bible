@@ -255,6 +255,12 @@
 					"git show-branch"
 				],
 				[
+					"git show-branch --list"
+				],
+				[
+					"git show-branch --more=-1"
+				],
+				[
 					"git show-branch --more=<NUMBER_COMMITS>"
 				]
 			]
