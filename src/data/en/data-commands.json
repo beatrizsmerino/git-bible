@@ -1410,7 +1410,8 @@
 				"feature",
 				"git-checkout",
 				"git-branch",
-				"git-merge"
+				"git-merge",
+				"repo-remote"
 			],
 			"name": "gitflow-feature-finish",
 			"title": "Git Flow. Finish up a feature",
