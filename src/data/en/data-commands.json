@@ -217,6 +217,30 @@
 		{
 			"parent": "git",
 			"url": "command-git",
+			"name": "get-contributors-list",
+			"title": "Git. Get contributors list of a repository",
+			"description": "<p>By default, running <code>git shortlog</code> displays a summary of commits grouped by author, listing the number of commits made my each other, a one-line version of each commit message, and the authors are sorted in alphabetical order.</p><p>Many newer Git users might not know that Git actually records two developer references for each commit - the <strong>author</strong> and the <strong>committer</strong>. The author is permanently set as the person who initially wrote the change and committed it for the first time. Initially, the committer is set to the same value. However, if the commit is applied later as patch by another user as a part of the integration process, the committer information will be updated to reflect the user who performed that action.</p><p>The <code>--committer</code> flag or simply <code>-c</code> can be used to group commits by the <strong>Committer Date</strong> instead the <strong>Author Date</strong>.</p><p>With the <code>--summary</code> or <code>-s</code> flag you can get a shorter result by suppressing the commit description.</p><p>The <code>--number</code> or <code>-n</code> flag can be used to change the sorting method to sort by number of commits per author instead of alphabetically by author name.</p><p>Obviously the <code>--email</code> or <code>-e</code> flag shows the author's email address.</p><p>One cool thing about <code>git shortlog</code> is that it can be combined with time filters like <code>--format</code>, <code>--since</code> and <code>--until</code>, which will reduce the result of commits to those within the specified time range.</p><p><a href='https://linux.die.net/man/1/git-shortlog' target='_blank'>Know more</a></p>",
+			"code": [
+				[
+					"git shortlog"
+				],
+				[
+					"git shortlog --group=committer"
+				],
+				[
+					"git shortlog --summary --numbered --email"
+				],
+				[
+					"git shortlog -sne"
+				],
+				[
+					"git shortlog --format='%s %ae' --since='01-01-2022' --until='01-01-2023'"
+				]
+			]
+		},
+		{
+			"parent": "git",
+			"url": "command-git",
 			"name": "show-info-commit",
 			"title": "Git. Show the information of a commit",
 			"description": "<p>This is a command-line tool that you use to view expanded details in git objects such as blobs, trees, tags, and commits.</p><p>In the case of a commit, it shows its complete information: (id or <code>SHA-1</code>, author, date and message).</p><p>There are many ways to access a commit's information:<br><ul><li>In an absolute way, referring to the code that identifies it.</li><li>Relatively, referring to the name of the branch of the last commit.</li><li>Through <code>HEAD</code>, accessing the last commit that has been made.</li><li>By his position in the git tree. We can see all the commits backwards from the moment we tell you, with the sign <code>^</code> we can go 1 or 3 commits backwards and with the sign <code>-</code> or <code>~</code> we can specify the number of commits backwards we want to go until we find the one we want to see.</li></ul></p>",
