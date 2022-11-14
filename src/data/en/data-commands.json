@@ -953,7 +953,7 @@
 				"git-checkout",
 				"git-branch",
 				"git-push",
-				"git-remote"
+				"repo-remote"
 			],
 			"name": "rename-remote-branch",
 			"title": "Git. Rename a remote branch",
@@ -976,7 +976,7 @@
 			"categories": [
 				"git-branch",
 				"git-push",
-				"git-remote"
+				"repo-remote"
 			],
 			"name": "upload-local-branch",
 			"title": "Git. Send the local branch to remote repository",
@@ -1197,7 +1197,7 @@
 			"categories": [
 				"git-tag",
 				"git-push",
-				"git-remote"
+				"repo-remote"
 			],
 			"name": "remove-and-upload-tag",
 			"title": "Git. Remove local and remote tag",
@@ -1247,7 +1247,7 @@
 			"categories": [
 				"git-tag",
 				"git-push",
-				"git-remote"
+				"repo-remote"
 			],
 			"name": "rename-and-upload-tag",
 			"title": "Git. Rename a tag and push it",

@@ -950,7 +950,7 @@
 				"git-checkout",
 				"git-branch",
 				"git-push",
-				"git-remote"
+				"repo-remote"
 			],
 			"name": "rename-remote-branch",
 			"title": "Git. Renombrar una rama remota",
@@ -973,7 +973,7 @@
 			"categories": [
 				"git-branch",
 				"git-push",
-				"git-remote"
+				"repo-remote"
 			],
 			"name": "upload-local-branch",
 			"title": "Git. Publicar una rama local a un repositorio remoto",
@@ -1194,7 +1194,7 @@
 			"categories": [
 				"git-tag",
 				"git-push",
-				"git-remote"
+				"repo-remote"
 			],
 			"name": "remove-and-upload-tag",
 			"title": "Git. Eliminar una etiqueta local y remota",
@@ -1244,7 +1244,7 @@
 			"categories": [
 				"git-tag",
 				"git-push",
-				"git-remote"
+				"repo-remote"
 			],
 			"name": "rename-and-upload-tag",
 			"title": "Git. Renombrar una etiqueta y publicarla",
@@ -1398,7 +1398,7 @@
 				"git-checkout",
 				"git-merge",
 				"git-branch",
-				"git-remote"
+				"repo-remote"
 			],
 			"name": "gitflow-feature-finish",
 			"title": "Git Flow. Terminar una 'feature'",
