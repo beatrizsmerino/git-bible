@@ -84,7 +84,7 @@
 			"parent": "git",
 			"url": "command-git",
 			"categories": [
-				"folders-files"
+				"folders&files"
 			],
 			"name": "open-file-with-editor",
 			"title": "Git. Open a project or file with the editor",
@@ -424,7 +424,7 @@
 			"parent": "git",
 			"url": "command-git",
 			"categories": [
-				"folders-files"
+				"folders&files"
 			],
 			"name": "remove-file-track",
 			"title": "Git. Delete and tracking file",
@@ -445,7 +445,7 @@
 			"parent": "git",
 			"url": "command-git",
 			"categories": [
-				"folders-files"
+				"folders&files"
 			],
 			"name": "rename-file-track",
 			"title": "Git. Rename and tracking file",
@@ -715,7 +715,7 @@
 			"parent": "git",
 			"url": "command-git",
 			"categories": [
-				"folders-files"
+				"folders&files"
 			],
 			"name": "exit-from-vim-without-save",
 			"title": "Git. Exit without save from the text window",
@@ -726,7 +726,7 @@
 			"parent": "git",
 			"url": "command-git",
 			"categories": [
-				"folders-files"
+				"folders&files"
 			],
 			"name": "exit-from-vim-and-save",
 			"title": "Git. Exit and save from the text window",
@@ -762,7 +762,7 @@
 			"parent": "git",
 			"url": "command-git",
 			"categories": [
-				"folders-files",
+				"folders&files",
 				"git-reflog",
 				"git-prune"
 			],
@@ -896,7 +896,7 @@
 			"url": "command-git",
 			"categories": [
 				"git-reset",
-				"folders-files"
+				"folders&files"
 			],
 			"name": "extract-files-from-staging-area",
 			"title": "Git. Extract files from the staging area",
