@@ -270,7 +270,8 @@
 			"parent": "git",
 			"url": "command-git",
 			"categories": [
-				"git-shortlog"
+				"git-shortlog",
+				"git-log"
 			],
 			"name": "get-contributors-list",
 			"title": "Git. Get contributors list of a repository",
@@ -1229,6 +1230,7 @@
 			"url": "command-git",
 			"categories": [
 				"git-tag",
+				"git-fetch",
 				"git-push",
 				"repo-remote"
 			],
