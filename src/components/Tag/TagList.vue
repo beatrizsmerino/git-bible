@@ -1,7 +1,7 @@
 <template>
 	<ul class="tag-list">
 		<li
-			v-for="(item, index) in tagList"
+			v-for="(item, index) in sortTagList"
 			:key="index"
 			class="tag-list__item"
 			:class="{
@@ -33,6 +33,13 @@
 			return {
 				tagListActive: []
 			};
+		},
+		computed: {
+			sortTagList() {
+				const data = this.tagList;
+
+				return data.sort();
+			}
 		},
 		methods: {
 			activeTag(tag) {
