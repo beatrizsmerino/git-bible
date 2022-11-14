@@ -117,7 +117,8 @@
 			"url": "command-git",
 			"categories": [
 				"git-filter-branch",
-				"git-config"
+				"git-config",
+				"repo-remote"
 			],
 			"name": "change-autor-email-commits",
 			"title": "Git. Change the name and email of the author after make a commit",
@@ -190,7 +191,8 @@
 			"parent": "git",
 			"url": "command-git",
 			"categories": [
-				"git-log"
+				"git-log",
+				"repo-remote"
 			],
 			"name": "get-commits-range",
 			"title": "Git. Get commits between ranges",
@@ -388,7 +390,8 @@
 			"parent": "git",
 			"url": "command-git",
 			"categories": [
-				"git-add"
+				"git-add",
+				"repo-remote"
 			],
 			"name": "git-add",
 			"title": "Git. Add folders and files to staging area",
@@ -824,7 +827,8 @@
 			"parent": "git",
 			"url": "command-git",
 			"categories": [
-				"git-branch"
+				"git-branch",
+				"repo-remote"
 			],
 			"name": "get-branches-remotes",
 			"title": "Git. Get all remote branches",
@@ -853,7 +857,8 @@
 			"parent": "git",
 			"url": "command-git",
 			"categories": [
-				"git-checkout"
+				"git-checkout",
+				"repo-remote"
 			],
 			"name": "checkout-branch-path",
 			"title": "Git. Checkout branch/path",
@@ -1274,7 +1279,8 @@
 			"url": "command-git",
 			"categories": [
 				"git-fetch",
-				"git-prune"
+				"git-prune",
+				"repo-remote"
 			],
 			"name": "update-remote-repository",
 			"title": "Git. Update remote repository",
