@@ -2,7 +2,7 @@
 	"git": [
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-version"
 			],
@@ -13,7 +13,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-init"
 			],
@@ -24,7 +24,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-config"
 			],
@@ -45,7 +45,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-config"
 			],
@@ -63,7 +63,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-config"
 			],
@@ -82,7 +82,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"folders-files"
 			],
@@ -103,7 +103,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-commit"
 			],
@@ -114,7 +114,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-filter-branch",
 				"git-config"
@@ -144,7 +144,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-log"
 			],
@@ -155,7 +155,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-log"
 			],
@@ -166,7 +166,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-log"
 			],
@@ -177,7 +177,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-log"
 			],
@@ -188,7 +188,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-log"
 			],
@@ -209,7 +209,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-log"
 			],
@@ -230,7 +230,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-log"
 			],
@@ -241,7 +241,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-log",
 				"git-grep"
@@ -266,7 +266,28 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
+			"name": "get-contributors-list",
+			"title": "Git. Get contributors list of a repository",
+			"description": "<p>De forma predeterminada, ejecutar  <code>git shortlog</code> muestra un resumen de las confirmaciones agrupadas por autor, enumerando la cantidad de confirmaciones realizadas entre sí, una versión de una línea de cada mensaje de confirmación y los autores están ordenados alfabéticamente.</p><p>Muchos de los nuevos usuarios de Git pueden no saber que Git en realidad registra dos referencias de desarrolladores para cada commit - el <strong>autor</strong> y el <strong>committer</strong>. El autor se establece permanentemente como la persona que inicialmente escribió el cambio y lo confirmó por primera vez. Inicialmente, el committer se establece con el mismo valor. Sin embargo, si la confirmación es aplicada posteriormente como parche por otro usuario como parte del proceso de integración, la información del autor se actualizará para reflejar el usuario que realizó esa acción.</p><p>La bandera <code>--committer</code> o simplemente <code>-c</code> se puede usar para agrupar commits por <strong>autor de commit</strong> en vez de por <strong>autor de fecha</strong>.</p><p>Con la bandera <code>--summary</code> o <code>-s</code> se puede obtener un resultado más corto suprimiendo la descripción de la confirmación.</p><p>La bandera <code>--number</code> o <code>-n</code> se puede usar para cambiar el método de clasificación para ordenar por número de confirmaciones por autor en lugar de alfabeticamente por el nombre del autor.</p><p>Obviamente la bandera <code>--email</code> o <code>-e</code> muestra el email del autor.</p><p>Una cosa interesante sobre el <code>git shortlog</code> es que se puede combinar con filtros de tiempo como <code>--format</code>, <code>--since</code> y <code>--until</code>, que reducirán el resultado de las confirmaciones a aquellas dentro del rango de tiempo especificado.</p><p><a href='https://initialcommit.com/blog/git-shortlog' target='_blank'>Saber más</a></p>",
+			"code": [
+				[
+					"git shortlog"
+				],
+				[
+					"git shortlog --summary --numbered --email"
+				],
+				[
+					"git shortlog -sne"
+				],
+				[
+					"git shortlog --format='%s %ae' --since='01-01-2022' --until='01-01-2023'"
+				]
+			]
+		},
+		{
+			"parent": "git",
+			"url": "command-git",
 			"categories": [
 				"git-show"
 			],
@@ -299,7 +320,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-show"
 			],
@@ -323,7 +344,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-show"
 			],
@@ -334,7 +355,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-config",
 				"git-commit",
@@ -359,7 +380,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-add"
 			],
@@ -386,7 +407,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-status"
 			],
@@ -397,7 +418,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"folders-files"
 			],
@@ -418,7 +439,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"folders-files"
 			],
@@ -436,7 +457,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-commit"
 			],
@@ -447,19 +468,19 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-add",
 				"git-commit"
 			],
 			"name": "add-and-create-commit",
 			"title": "Git. Añadir carpetas y archivos al área de preparación y crear un commit",
-			"description": "<p>Si ya hemos hecho el primer <code>git add</code> y <code>git commit</code> de un archivo, es decir, git ya lo conoce, las próximas veces podemos usar otro comando que incluya ambos pasos en un solo comando. Esta combinación crea inmediatamente una commit de todos los cambios preparados y aplica un mensaje de commit en línea.</p><p>Es un comando de acceso directo para usuarios avanzados que combina las opciones <code>-a</code> o <code>--all</code> (añade los archivos modificados o borrados al escenario, pero no los recién creados, ya que no han sido reportados a git para su seguimiento) y <code>-m</code> o <code>--message</code> (con el mensaje especificado).</p><p><a href='https://www.atlassian.com/es/git/tutorials/saving-changes/git-commit' target='_blank'>Saber más</a></p>",
+			"description": "<p>Si ya hemos hecho el primer <code>git add</code> y <code>git commit</code> de un archivo, es decir, git ya lo conoce, las próximas veces podemos usar otro comando que incluya ambos pasos en un solo comando. Esta combinación crea inmediatamente un commit de todos los cambios preparados y aplica un mensaje de commit en línea.</p><p>Es un comando de acceso directo para usuarios avanzados que combina las opciones <code>-a</code> o <code>--all</code> (añade los archivos modificados o borrados al escenario, pero no los recién creados, ya que no han sido reportados a git para su seguimiento) y <code>-m</code> o <code>--message</code> (con el mensaje especificado).</p><p><a href='https://www.atlassian.com/es/git/tutorials/saving-changes/git-commit' target='_blank'>Saber más</a></p>",
 			"code": "git commit -am '<COMMIT_MESSAGE>'"
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-add",
 				"git-commit"
@@ -474,7 +495,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-commit",
 				"git-push"
@@ -494,12 +515,12 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-reset"
 			],
 			"name": "remove-commit",
-			"title": "Git. Eliminar una commit",
+			"title": "Git. Eliminar un commit",
 			"description": "<p>El comando <code>git reset</code> es una herramienta para deshacer cambios. Si lo ejecutamos sin indicar un SHA de commit, sólo eliminará los cambios añadidos al área de preparación.</p><p>Tiene 3 argumentos que se corresponden con los 3 mecanismos internos de gestión de estados de Git, el árbol de commit (HEAD), el área de preparación y el directorio de trabajo. </p><p>Cuando especificamos el tipo de reset que queremos con uno de estos argumentos, indicamos el commit SHA anterior a todos los que queremos borrar: <ul><li><code>--mixto</code>: Es la opción por defecto, provoca el mismo efecto que ejecutar<code>git reset</code>. Elimina los commits posteriores al commit seleccionado. Elimina los cambios del área de preparación, pero mantiene los del directorio de trabajo.</li><li><code>--soft</code>: Elimina los commits posteriores al commit seleccionado, pero mantiene los cambios añadidos al área de preparación y conserva los realizados en el directorio de trabajo.</li><li><code>--hard</code>: Es la opción más peligrosa porque se pierden todos los cambios realizados. Elimina los commits posteriores al commit seleccionado, lo que también elimina los cambios del área de preparación y del directorio de trabajo.</li></ul></p>",
 			"code": [
 				[
@@ -515,7 +536,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-reset",
 				"git-commit"
@@ -530,7 +551,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-revert"
 			],
@@ -541,7 +562,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-stash"
 			],
@@ -571,7 +592,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-stash"
 			],
@@ -582,7 +603,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-stash"
 			],
@@ -610,7 +631,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-stash",
 				"git-branch"
@@ -629,7 +650,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-stash",
 				"git-show"
@@ -651,12 +672,12 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-stash"
 			],
 			"name": "remove-stash",
-			"title": "Git. Eliminar el stash",
+			"title": "Git. Eliminar el 'stash'",
 			"description": "<p>Hay dos formas diferentes de eliminar los cambios guardados en el área de stash: <code>drop</code> y <code>clear</code>.</p><p>Podemos eliminar el primer elemento guardado en el stash (el último stash: <code>stash@{0}</code>) con <code>drop</code> o si ya no necesitas un stash en particular, seleccionarlo por su número de índice.</p><p>Pero, si lo que queremos es limpiar el área de almacenamiento por completo, la opción <code>clear</code> borra toda la lista de stashes.</p><p><strong>ADVERTENCIA IMPORTANTE</strong>: Con la opción <code>clear</code> esos estados serán entonces objeto de poda, y puede ser imposible recuperarlos. Utilice ambas opciones con precaución, ya que puede ser difícil revertir los stashes una vez borrados.</p> <p>Para confirmar si todo se ha borrado, obtenga de nuevo la lista de stashes con el comando <code>git stash list</code>.</p><p><a href='https://kolosek.com/git-stash/' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
@@ -675,7 +696,19 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
+			"name": "recover-dropped-stash",
+			"title": "Git. Recuperar un commit eliminado del 'stash'",
+			"description": "<p>Pongamos el caso de que has hecho limpieza en tu repositorio, acabas de borrar todos los commits antiguos almacenados en el stash y justo te das cuenta que en uno de esos commits tenias cambios importantes que no has guardado.</p><p><strong>No entres en pánico</strong>, es posible que puedas recuperar los cambios perdidos con el comando <code>git fsck</code>.</p><p>Para resolver este problema lo primero es localizar el hash ID (de 6 cifras) del commit eliminado. Una vez lo tengamos podemos ver en detalle la información que contiene y decidir si es el que estamos buscando. Si es así, todo lo que hay que hacer es volver a guardarlo.</p><p>Veamoslo en detalle: <ol><li><strong>Encontrar los commits del stash eliminados</strong><br>El siguiente comando te mostrará un gráfico con todos los commits que ya no son referenciados desde ninguna rama o etiqueta, es decir, cada commit perdido que hayas creado, incluyendo los del stash.</br><em>Shell bash/sh:</em><br><code>git log --graph --oneline --decorate $( git fsck --no-reflog | awk '/dangling commit/ {print $3}’ )</code><br>En algún lugar de ese gráfico encontrarás el mensaje de confirmación que buscas.<br> Pista: Si no proporcionaste un mensaje cuando hiciste <code>git stash</code>, este commit comenzará con <code>WIP on</code>.</li><li><strong>Confirmar que son los cambios que buscamos</strong><br>Una vez tienes el hash del commit del stash puedes utilizar el comando <code>git show &lt;COMMIT_ID&gt;</code> para examinar en detalle el <code>diff</code> del commit, es decir, los nombres de las carpetas, archivos y líneas de código modificadas.</li><li><strong>Recuperar los cambios y guardarlos</strong><br>Después de confirmar que son los cambios que quieres recuperar, puedes traerlos al área de trabajo usando <code>git stash apply &lt;COMMIT_ID&gt;</code>.<br> Y si, por si a caso, además quieres volver a guardar esos cambios en la lista del stash ubicada en <code>.git/logs/refs/stash</code>, puedes usar el comando <code>git stash &lt;COMMIT_ID&gt;</code>.</li></ol></p><p><a href='https://foroayuda.es/recuperar-alijo-eliminado-en-git-usando-sourcetree/' target='_blank'>Saber más</a></p>",
+			"code": [
+				"git log --graph --oneline --decorate $( git fsck --no-reflog | awk '/dangling commit/ {print $3}' )",
+				"git show <COMMIT_ID>",
+				"git stash apply <COMMIT_ID>"
+			]
+		},
+		{
+			"parent": "git",
+			"url": "command-git",
 			"categories": [
 				"folders-files"
 			],
@@ -686,7 +719,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"folders-files"
 			],
@@ -697,7 +730,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-reflog",
 				"git-show",
@@ -722,7 +755,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"folders-files",
 				"git-reflog",
@@ -739,7 +772,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-branch"
 			],
@@ -757,7 +790,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-branch"
 			],
@@ -778,7 +811,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-branch"
 			],
@@ -796,7 +829,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-branch"
 			],
@@ -807,7 +840,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-checkout"
 			],
@@ -825,7 +858,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-checkout"
 			],
@@ -836,7 +869,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-checkout",
 				"git-branch"
@@ -855,7 +888,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-reset",
 				"folders-files"
@@ -877,7 +910,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-branch"
 			],
@@ -895,7 +928,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-branch"
 			],
@@ -910,7 +943,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-checkout",
 				"git-branch",
@@ -934,7 +967,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-branch",
 				"git-push",
@@ -954,7 +987,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-branch"
 			],
@@ -972,12 +1005,12 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-merge",
 				"git-branch"
 			],
-			"name": "merge",
+			"name": "merge-branch",
 			"title": "Git. Fusionar una rama",
 			"description": "<p>La fusión es la forma que tiene Git de volver a unir un historial bifurcado. El comando <code>git merge</code> permite tomar las líneas de desarrollo independientes creadas por el comando <code>git branch</code> e integrarlas en una única rama.<br>Toma dos punteros de commit de los extremos de cada rama y los combina en la rama actual, generando un nuevo <strong>commit de fusión</strong>. Sin embargo, si git encuentra datos que han sido cambiados en ambos historiales, no podrá combinarlos automáticamente. En ese caso, se crea un conflicto de control de versiones y Git pedirá la intervención del usuario para continuar.</p><p>Antes de realizar una fusión hay un par de pasos de preparación para asegurar que la fusión se realice sin problemas: <ul><li><strong>Confirmar la rama receptora:</strong> Asegúrate de que <code>HEAD</code> apunta a la rama correcta con el comando <code>git status</code>. Si es necesario, ejecute <code>git checkout</code> para cambiar a la rama receptora.</li><li><strong>Obtener los últimos commits remotos: </strong> Asegúrate de que la rama receptora y la rama de fusión están actualizadas con los últimos cambios remotos. Ejecute <code>git fetch</code> para obtener los últimos commits remotos. Una vez que el fetch se ha completado asegúrese de que la rama maestra tiene las últimas actualizaciones ejecutando <code>git pull</code>.</li></ul></p><p>Esto significa que <code>git merge</code> se utiliza a menudo junto con <code>git checkout</code> para seleccionar la rama actual y <code>git branch -d</code> para eliminar la rama de destino obsoleta. </p> <p>Si las dos ramas que estás intentando fusionar han cambiado la misma parte del mismo archivo, Git no será capaz de averiguar qué versión usar. Cuando se produce esta situación, se detiene justo antes de crear el <strong>commit de fusión</strong> para que puedas resolver los conflictos manualmente. Cuando Git encuentra un conflicto durante una fusión, editará el contenido de los archivos afectados con indicadores visuales que marcan ambos lados del contenido en conflicto <code><<<<<<<</code> <code> =======</code> <code>>>>>>>></code>. El contenido anterior al marcador <code>=======</code> es la rama receptora y la parte posterior es la rama de fusión. Una vez que hayas identificado las secciones conflictivas, puedes entrar y arreglar la fusión a tu gusto. Cuando estés listo para terminar la fusión, todo lo que tienes que hacer es ejecutar <código>git add</código> en los archivos en conflicto para decirle a Git que están resueltos. Luego, ejecuta <code>git commit</code> para generar el <strong>commit de fusión</strong>.</p><p><a href='https://www.atlassian.com/es/git/tutorials/using-branches/git-merge' target='_blank'>Saber más</a></p>",
 			"code": [
@@ -994,12 +1027,12 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-merge",
 				"git-branch"
 			],
-			"name": "commands-merge-commit",
+			"name": "merge-fast-forward",
 			"title": "Git. Fusionar una rama y crear un commit",
 			"description": "<p>La opción <code>--no-ff</code> evita que <code>git merge</code> ejecute un <strong>'fast-forward'</strong> si detecta que tu <code>HEAD</code> actual es un ancestro del commit que estás intentando fusionar. Un <strong>fast-forward</strong> (adelantar rápidamente) es cuando, en lugar de construir un <strong>commit merge</strong> (confirmación de fusión), git simplemente mueve tu puntero de rama para apuntar a la confirmación entrante.</p><p>En ocasiones quieres evitar que este comportamiento ocurra, normalmente porque quieres mantener una topología de rama específica (por ejemplo, estás fusionando en una rama temática y quieres asegurarte de que se vea así al leer el historial). Para ello, puedes pasar esta opción <code>--no-ff</code> y <code>git merge</code> siempre construirá una fusión en lugar de <strong>fast-forwarding</strong>.</p>",
 			"code": [
@@ -1008,7 +1041,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-rebase"
 			],
@@ -1029,7 +1062,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-cherry-pick"
 			],
@@ -1062,7 +1095,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-diff"
 			],
@@ -1080,7 +1113,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-add",
 				"git-status",
@@ -1097,7 +1130,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-tag"
 			],
@@ -1115,7 +1148,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-tag"
 			],
@@ -1126,7 +1159,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-tag"
 			],
@@ -1144,7 +1177,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-push"
 			],
@@ -1155,7 +1188,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-tag",
 				"git-push",
@@ -1177,7 +1210,23 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
+			"name": "remove-and-upload-all-tags",
+			"title": "Git. Eliminar todas las etiquetas locales y remotas",
+			"description": "<p>Si por alguna razón necesitas eliminar todas las etiquetas locales y ya las has enviado a un repositorio remoto (por ejemplo, GitHub), también tendrás que actualizar las referencias remotas justo después de eliminar las etiquetas de tu repositorio local.</p><p>You can use these steps, which correspond to the following set of commands: <ol><li>Borrar todas las etiquetas locales (Opcional recomendado). <a href='https://stackoverflow.com/a/44702758' target='_blank'>Saber más</a></li><li>Fetch remote todas las etiquetas (Opcional recomendado).</li><li>Borrar todas las etiquetas remotas.</li><li>Borrar todas las etiquetas locales.</li><li>Forzar el empuje de todas las etiquetas y sobrescribir las existentes. <a href='https://stackoverflow.com/a/52475362' target='_blank'>Saber más</a></li></ol></p>",
+			"code": [
+				[
+					"git tag -d $(git tag -l)",
+					"git fetch",
+					"git push origin --delete $(git tag -l)",
+					"git tag -d $(git tag -l)",
+					"git push -f --tags"
+				]
+			]
+		},
+		{
+			"parent": "git",
+			"url": "command-git",
 			"categories": [
 				"git-tag"
 			],
@@ -1188,7 +1237,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-tag",
 				"git-push",
@@ -1206,7 +1255,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-fetch",
 				"git-prune"
@@ -1218,7 +1267,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-pull",
 				"git-prune",
@@ -1233,7 +1282,7 @@
 	"gitFlow": [
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"git-init"
@@ -1267,7 +1316,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"feature",
@@ -1288,7 +1337,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"feature",
@@ -1301,7 +1350,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"feature",
@@ -1314,7 +1363,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"feature",
@@ -1327,7 +1376,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"feature"
@@ -1339,7 +1388,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"feature",
@@ -1355,7 +1404,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"bugfix",
@@ -1369,7 +1418,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"bugfix",
@@ -1384,7 +1433,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"release",
@@ -1394,12 +1443,12 @@
 			],
 			"name": "gitflow-release-start",
 			"title": "Git Flow. Empezar una 'release'",
-			"description": "<p>Para preparar nuestra aplicación para su puesta en producción existen unas ramas llamadas <code>release</code>. En algunos equipos, estas ramas son las que se vuelcan en los servidores de pre-producción para hacer el testing final: se corrigen errores menores, se pule la interfaz, se ajusta la maquetación…se hace la puesta a punto final de la aplicación antes de liberar la versión definitiva.</p><p>El nombre de la <code>release</code> es una cifra de 3 números enteros separados por puntos que van incrementandose numericamente en incrementos de 1. Este número sigue la nomenclatura del <a href='https://semver.org/lang/es/' target='_blank'>versionado semántico</a>, <code>X.Y.Z</code>, donde <code>X</code> es la versión 'major' (incorporación de multiples cambios que ya no son compatibles con la API pública), <code>Y</code> es la versión 'minor' (incorporación de una funcionalidad), y <code>Z</code> es la versión 'patch' (correción de errores compatibles con la versión anterior). </br> Por tanto, el número de la <code>release</code> sería el primero, <code>X</code>.</p><p>El siguiente comando crea una rama de lanzamiento a partir de la rama <code>develop</code>. Opcionalmente, se puede suministrar el id de una commit situada en <code>develop</code> para iniciar el lanzamiento desde el commit.</p><p><a href='https://aprendegit.com/git-flow-release-branches/' target='_blank'>Saber más</a></p>",
+			"description": "<p>Para preparar nuestra aplicación para su puesta en producción existen unas ramas llamadas <code>release</code>. En algunos equipos, estas ramas son las que se vuelcan en los servidores de pre-producción para hacer el testing final: se corrigen errores menores, se pule la interfaz, se ajusta la maquetación…se hace la puesta a punto final de la aplicación antes de liberar la versión definitiva.</p><p>El nombre de la <code>release</code> es una cifra de 3 números enteros separados por puntos que van incrementandose numericamente en incrementos de 1. Este número sigue la nomenclatura del <a href='https://semver.org/lang/es/' target='_blank'>versionado semántico</a>, <code>X.Y.Z</code>, donde <code>X</code> es la versión 'major' (incorporación de multiples cambios que ya no son compatibles con la API pública), <code>Y</code> es la versión 'minor' (incorporación de una funcionalidad), y <code>Z</code> es la versión 'patch' (correción de errores compatibles con la versión anterior). </br> Por tanto, el número de la <code>release</code> sería el primero, <code>X</code>.</p><p>El siguiente comando crea una rama de lanzamiento a partir de la rama <code>develop</code>. Opcionalmente, se puede suministrar el id de un commit situada en <code>develop</code> para iniciar el lanzamiento desde el commit.</p><p><a href='https://aprendegit.com/git-flow-release-branches/' target='_blank'>Saber más</a></p>",
 			"code": "git flow release start <VERSION_NUMBER> <[BASE]>"
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"release",
@@ -1412,7 +1461,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"release",
@@ -1425,7 +1474,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"release"
@@ -1437,7 +1486,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"release",
@@ -1452,7 +1501,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"git-push",
@@ -1465,7 +1514,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"git-push",
@@ -1478,7 +1527,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"hotfix",
@@ -1492,7 +1541,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"hotfix",

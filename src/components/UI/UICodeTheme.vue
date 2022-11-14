@@ -9,8 +9,8 @@
 					Shell Bash
 				</p>
 				<div class="code-theme__button-list">
-					<ButtonCopy
-						class="code-theme__button"
+					<UICopy
+						class="code-theme__button-copy code-theme__button"
 						:text-to-copy="codeFormatted"
 					/>
 
@@ -73,18 +73,21 @@
 </template>
 
 <script>
-	import ButtonCopy from '@/components/Button/ButtonCopy';
+	import UICopy from '@/components/UI/UICopy';
 
 	export default {
-		name: 'CodeTheme',
+		name: 'UICodeTheme',
 		components: {
-			ButtonCopy
+			UICopy
 		},
 		props: {
-			code: [
-				String,
-				Array
-			]
+			code: {
+				type: [
+					String,
+					Array
+				],
+				required: true
+			}
 		},
 		data() {
 			return {

@@ -2,7 +2,7 @@
 	"git": [
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-version"
 			],
@@ -13,7 +13,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-init"
 			],
@@ -24,7 +24,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-config"
 			],
@@ -45,7 +45,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-config"
 			],
@@ -63,7 +63,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-config"
 			],
@@ -82,7 +82,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"folders-files"
 			],
@@ -103,7 +103,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-commit"
 			],
@@ -114,7 +114,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-filter-branch",
 				"git-config"
@@ -144,7 +144,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-log"
 			],
@@ -155,7 +155,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-log"
 			],
@@ -166,7 +166,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-log"
 			],
@@ -177,7 +177,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-log"
 			],
@@ -188,7 +188,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-log"
 			],
@@ -209,7 +209,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-log"
 			],
@@ -230,7 +230,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-log"
 			],
@@ -241,7 +241,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-log",
 				"git-grep"
@@ -266,7 +266,31 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
+			"name": "get-contributors-list",
+			"title": "Git. Get contributors list of a repository",
+			"description": "<p>By default, running <code>git shortlog</code> displays a summary of commits grouped by author, listing the number of commits made my each other, a one-line version of each commit message, and the authors are sorted in alphabetical order.</p><p>Many newer Git users might not know that Git actually records two developer references for each commit - the <strong>author</strong> and the <strong>committer</strong>. The author is permanently set as the person who initially wrote the change and committed it for the first time. Initially, the committer is set to the same value. However, if the commit is applied later as patch by another user as a part of the integration process, the committer information will be updated to reflect the user who performed that action.</p><p>The <code>--committer</code> flag or simply <code>-c</code> can be used to group commits by the <strong>Committer Date</strong> instead the <strong>Author Date</strong>.</p><p>With the <code>--summary</code> or <code>-s</code> flag you can get a shorter result by suppressing the commit description.</p><p>The <code>--number</code> or <code>-n</code> flag can be used to change the sorting method to sort by number of commits per author instead of alphabetically by author name.</p><p>Obviously the <code>--email</code> or <code>-e</code> flag shows the author's email address.</p><p>One cool thing about <code>git shortlog</code> is that it can be combined with time filters like <code>--format</code>, <code>--since</code> and <code>--until</code>, which will reduce the result of commits to those within the specified time range.</p><p><a href='https://linux.die.net/man/1/git-shortlog' target='_blank'>Know more</a></p>",
+			"code": [
+				[
+					"git shortlog"
+				],
+				[
+					"git shortlog --group=committer"
+				],
+				[
+					"git shortlog --summary --numbered --email"
+				],
+				[
+					"git shortlog -sne"
+				],
+				[
+					"git shortlog --format='%s %ae' --since='01-01-2022' --until='01-01-2023'"
+				]
+			]
+		},
+		{
+			"parent": "git",
+			"url": "command-git",
 			"categories": [
 				"git-show"
 			],
@@ -299,7 +323,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-show"
 			],
@@ -323,7 +347,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-show"
 			],
@@ -334,7 +358,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-config",
 				"git-commit",
@@ -359,7 +383,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-add"
 			],
@@ -386,7 +410,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-status"
 			],
@@ -397,7 +421,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"folders-files"
 			],
@@ -418,7 +442,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"folders-files"
 			],
@@ -436,7 +460,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-commit"
 			],
@@ -447,7 +471,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-add",
 				"git-commit"
@@ -459,7 +483,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-add",
 				"git-commit"
@@ -474,7 +498,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-commit",
 				"git-push"
@@ -494,7 +518,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-reset"
 			],
@@ -515,7 +539,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-reset",
 				"git-commit"
@@ -530,7 +554,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-revert"
 			],
@@ -541,7 +565,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-stash"
 			],
@@ -571,7 +595,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-stash"
 			],
@@ -582,7 +606,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-stash"
 			],
@@ -610,7 +634,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-stash",
 				"git-branch"
@@ -629,7 +653,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-stash",
 				"git-show"
@@ -651,7 +675,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-stash"
 			],
@@ -675,7 +699,19 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
+			"name": "recover-dropped-stash",
+			"title": "Git. Recovering a deleted commit from the stash",
+			"description": "<p>Let's say you have cleaned up your repository, you have just deleted all the old commits stored in the stash and you just realized that in one of those commits you had important changes that you have not saved.</p><p><strong>Don't panic</strong>, you may be able to recover the lost changes with the <code>git fsck</code> command.</p><p>To solve this problem the first thing to do is to locate the hash ID (6 digits) of the deleted commit. Once we have it we can see in detail the information it contains and decide if it is the one we are looking for. If it is, all we have to do is to save it again.</p><p>Let's see it in detail: <ol><li><strong>Find deleted stash commits</strong><br>The following command will show you a graph with all the commits that are no longer referenced from any branch or tag, i.e., every missing commit you have created, including those from the stash.</br><em>Shell bash/sh:</em><br><code>git log --graph --oneline --decorate $( git fsck --no-reflog | awk '/dangling commit/ {print $3}’ )</code><br>Somewhere in that graph you will find the confirmation message you are looking for.<br> Tip: If you did not provide a message when you did <code>git stash</code>, this commit will start with <code>WIP on</code>.</li><li><strong>Confirm that these are the changes we are looking for</strong><br>Once you have the commit hash of the stash you can use the command <code>git show &lt;COMMIT_ID&gt;</code> to examine in detail the commit <code>diff</code>, i.e., the names of the modified folders, files and lines of code.</li><li><strong>Retrieve the changes and save them</strong><br>After committing the changes you want to retrieve, you can bring them back to the workspace using <code>git stash apply &lt;COMMIT_ID&gt;</code>.<br> And if, just in case, you also want to save those changes back to the stash list located in <code>.git/logs/refs/stash</code>, you can use the command <code>git stash &lt;COMMIT_ID&gt;</code>.</li></ol></p><p><a href='https://gist.github.com/joseluisq/7f0f1402f05c45bac10814a9e38f81bf' target='_blank'>Know more</a></p>",
+			"code": [
+				"git log --graph --oneline --decorate $( git fsck --no-reflog | awk '/dangling commit/ {print $3}' )",
+				"git show <COMMIT_ID>",
+				"git stash apply <COMMIT_ID>"
+			]
+		},
+		{
+			"parent": "git",
+			"url": "command-git",
 			"categories": [
 				"folders-files"
 			],
@@ -686,7 +722,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"folders-files"
 			],
@@ -697,7 +733,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-reflog",
 				"git-show",
@@ -722,7 +758,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"folders-files",
 				"git-reflog",
@@ -739,7 +775,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-branch"
 			],
@@ -757,7 +793,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-branch"
 			],
@@ -778,7 +814,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-branch"
 			],
@@ -796,7 +832,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-branch"
 			],
@@ -807,7 +843,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-checkout"
 			],
@@ -825,7 +861,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-checkout"
 			],
@@ -836,7 +872,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-checkout",
 				"git-branch"
@@ -855,7 +891,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-reset",
 				"folders-files"
@@ -877,7 +913,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-branch"
 			],
@@ -895,7 +931,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-branch"
 			],
@@ -910,7 +946,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-checkout",
 				"git-branch",
@@ -934,7 +970,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-branch",
 				"git-push",
@@ -954,7 +990,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-branch"
 			],
@@ -972,12 +1008,12 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-merge",
 				"git-branch"
 			],
-			"name": "merge",
+			"name": "merge-branch",
 			"title": "Git. Merge branch",
 			"description": "<p>The fusion is Git's way of putting a forked history back together again. The <code>git merge</code> command lets you take the independent lines of development created by <code>git branch</code> command and integrate them into a single branch.<br>It takes two confirmation pointers from the ends of each branch and combines them into the current branch, generating a new <strong>merge commit</strong>. However, if git find data that has been changed in both histories, it will be unable to automatically combine them. In that case, a version control conflict is created and Git will ask for user intervention to continue.</p><p>Before performing a merge there are a couple of preparation steps to take to ensure the merge goes smoothly: <ul><li><strong>Confirm the receiving branch:</strong> Make sure<code>HEAD</code> points to the correct branch with the <code>git status</code> command. If needed, execute <code>git checkout</code> to switch to the receiving branch.</li><li><strong>Fetch latest remote commits: </strong> Make sure the receiving branch and the merging branch are updated with the latest remote changes. Execute <code>git fetch</code> to pull the latest remote commits. Once the fetch is completed ensure the master branch has the latest updates by executing <code>git pull</code>.</li></ul></p><p>This means that <code>git merge</code> is often used in conjunction with <code>git checkout</code> for selecting the current branch and <code>git branch -d</code> for deleting the obsolete target branch.</p><p>If the two branches you're trying to merge both changed the same part of the same file, Git won't be able to figure out which version to use. When such a situation occurs, it stops right before to create the <strong>merge commit</strong> so that you can resolve the conflicts manually. When Git encounters a conflict during a merge, It will edit the content of the affected files with visual indicators that mark both sides of the conflicted content <code><<<<<<<</code> <code> =======</code> <code>>>>>>>></code>. The content before the <code>=======</code> marker is the receiving branch and the part after is the merging branch.Once you've identified conflicting sections, you can go in and fix up the merge to your liking. When you're ready to finish the merge, all you have to do is run <code>git add</code> on the conflicted file(s) to tell Git they're resolved. Then, you run <code>git commit</code> to generate the <strong>merge commit</strong>.</p><p><a href='https://www.atlassian.com/es/git/tutorials/using-branches/git-merge' target='_blank'>Know more</a></p>",
 			"code": [
@@ -994,12 +1030,12 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-merge",
 				"git-branch"
 			],
-			"name": "commands-merge-commit",
+			"name": "merge-fast-forward",
 			"title": "Git. Merge commit",
 			"description": "<p>The <code>--no-ff</code> flag prevents <code>git merge</code> from executing a <strong>'fast-forward'</strong> if it detects that your current <code>HEAD</code> is an ancestor of the commit you're trying to merge. A <strong>fast-forward</strong> is when, instead of constructing a <strong>commit merge</strong>, git just moves your branch pointer to point at the incoming commit.</p><p>Occasionally you want to prevent this behavior from happening, typically because you want to maintain a specific branch topology (e.g. you're merging in a topic branch and you want to ensure it looks that way when reading history). In order to do that, you can pass the <code>--no-ff</code> flag and <code>git merge</code> will always construct a merge instead of <strong>fast-forwarding</strong>.</p>",
 			"code": [
@@ -1008,7 +1044,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-rebase"
 			],
@@ -1029,7 +1065,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-cherry-pick"
 			],
@@ -1062,7 +1098,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-diff"
 			],
@@ -1080,7 +1116,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-add",
 				"git-status",
@@ -1097,7 +1133,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-tag"
 			],
@@ -1115,7 +1151,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-tag"
 			],
@@ -1126,7 +1162,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-tag"
 			],
@@ -1144,7 +1180,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-push"
 			],
@@ -1155,7 +1191,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-tag",
 				"git-push",
@@ -1177,7 +1213,23 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
+			"name": "remove-and-upload-all-tags",
+			"title": "Git. Remove all local and remote tags",
+			"description": "<p>If for some reason you need to remove all local tags and you have already committed them to a remote repository (e.g. GitHub), you will also need to update the remote references right after removing the tags from your local repository.</p><p>You can use these steps that correspond to the following set of commands: <ol><li>Delete all local tags (Optional Recommended). <a href='https://stackoverflow.com/a/44702758' target='_blank'>Know more</a></li><li>Fetch remote all tags (Optional Recommended).</li><li>Delete all remote tags.</li><li>Delete all local tags.</li><li>Force push all the tags and overwrite the existing ones. <a href='https://stackoverflow.com/a/52475362' target='_blank'>Know more</a></li></ol></p>",
+			"code": [
+				[
+					"git tag -d $(git tag -l)",
+					"git fetch",
+					"git push origin --delete $(git tag -l)",
+					"git tag -d $(git tag -l)",
+					"git push -f --tags"
+				]
+			]
+		},
+		{
+			"parent": "git",
+			"url": "command-git",
 			"categories": [
 				"git-tag"
 			],
@@ -1188,7 +1240,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-tag",
 				"git-push",
@@ -1206,7 +1258,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-fetch",
 				"git-prune"
@@ -1218,7 +1270,7 @@
 		},
 		{
 			"parent": "git",
-			"url": "commands-git",
+			"url": "command-git",
 			"categories": [
 				"git-pull",
 				"git-prune",
@@ -1233,7 +1285,7 @@
 	"gitFlow": [
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"git-init"
@@ -1267,7 +1319,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"feature",
@@ -1288,7 +1340,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"feature",
@@ -1301,7 +1353,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"feature",
@@ -1314,7 +1366,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"feature",
@@ -1327,7 +1379,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"feature"
@@ -1339,7 +1391,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"feature",
@@ -1354,7 +1406,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"bugfix",
@@ -1368,7 +1420,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"bugfix",
@@ -1383,7 +1435,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"release",
@@ -1398,7 +1450,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"release",
@@ -1411,7 +1463,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"release",
@@ -1424,7 +1476,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"release"
@@ -1436,7 +1488,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"release",
@@ -1451,7 +1503,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"git-push",
@@ -1464,7 +1516,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"git-push",
@@ -1477,7 +1529,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"hotfix",
@@ -1491,7 +1543,7 @@
 		},
 		{
 			"parent": "gitFlow",
-			"url": "commands-git-flow",
+			"url": "command-git-flow",
 			"categories": [
 				"git-flow",
 				"hotfix",

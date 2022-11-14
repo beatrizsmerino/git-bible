@@ -1,8 +1,8 @@
 <template>
 	<div class="page-content">
 		<div class="page-content__inner">
-			<Logo theme="logo--home" />
-			<Search />
+			<UILogo theme="logo--home" />
+			<UISearch />
 		</div>
 	</div>
 </template>
@@ -10,14 +10,14 @@
 <script>
 
 	// @ is an alias to /src
-	import Logo from '@/components/Logo';
-	import Search from '@/components/Search';
+	import UILogo from '@/components/UI/UILogo';
+	import UISearch from '@/components/UI/UISearch';
 
 	export default {
 		name: 'Home',
 		components: {
-			Logo,
-			Search
+			UILogo,
+			UISearch
 		},
 		mounted() {
 			document.querySelector('.page-header').style.boxShadow = 'none';

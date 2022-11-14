@@ -1,63 +1,63 @@
 <template>
 	<div
-		:id="commandData.name"
-		class="command"
+		:id="commandItem.name"
+		class="command-item"
 		:data-index="commandIndex"
 		:class="{ 'is-selected': commandStatus }"
 	>
-		<h3 class="command__title">
+		<h3 class="command-item__title">
 			<router-link
-				:to="`#${commandData.name}`"
-				class="command__anchor-link"
+				:to="`#${commandItem.name}`"
+				class="command-item__anchor-link"
 			>
 				<i class="reference__url-icon">
 					<font-awesome-icon :icon="['fas', 'link']" />
 				</i>
 			</router-link>
-			{{ commandData.title }}
+			{{ commandItem.title }}
 		</h3>
 
 		<div
-			v-if="commandData.description"
-			class="command__description"
-			v-html="commandData.description"
+			v-if="commandItem.description"
+			class="command-item__description"
+			v-html="commandItem.description"
 		/>
 
-		<div class="command__blocks-code">
+		<div class="command-item__blocks-code">
 			<template v-if="checkBlocksCode === 'multiple'">
-				<CodeTheme
-					v-for="(item, index) in commandData.code"
+				<UICodeTheme
+					v-for="(item, index) in commandItem.code"
 					:key="`code-${index}`"
-					class="command__code"
+					class="command-item__code"
 					:code="item"
 				/>
 			</template>
 			<template v-if="checkBlocksCode === 'one'">
-				<CodeTheme
-					class="command__code"
-					:code="commandData.code"
+				<UICodeTheme
+					class="command-item__code"
+					:code="commandItem.code"
 				/>
 			</template>
 		</div>
 
-		<div class="command__categories">
-			<Tag :tag-list="commandData.categories" />
+		<div class="command-item__categories">
+			<Tag :tag-list="commandItem.categories" />
 		</div>
 	</div>
 </template>
 
 <script>
-	import CodeTheme from '@/components/CodeTheme';
+	import UICodeTheme from '@/components/UI/UICodeTheme';
 	import Tag from '@/components/Tag';
 
 	export default {
-		name: 'Commands',
+		name: 'CommandItem',
 		components: {
-			CodeTheme,
+			UICodeTheme,
 			Tag
 		},
 		props: {
-			commandData: {
+			commandItem: {
 				type: Object,
 				required: true
 			},
@@ -72,10 +72,10 @@
 		},
 		computed: {
 			checkBlocksCode() {
-				if (Array.isArray(this.commandData.code) && typeof this.commandData.code[0] == 'string' || typeof this.commandData.code == 'string') {
+				if (Array.isArray(this.commandItem.code) && typeof this.commandItem.code[0] == 'string' || typeof this.commandItem.code == 'string') {
 					return 'one';
 				}
-				if (Array.isArray(this.commandData.code) && Array.isArray(this.commandData.code[0])) {
+				if (Array.isArray(this.commandItem.code) && Array.isArray(this.commandItem.code[0])) {
 					return 'multiple';
 				}
 
@@ -86,7 +86,7 @@
 </script>
 
 <style lang="scss" scoped>
-	.command {
+	.command-item {
 		padding: 2.7rem 3.2rem;
 		font-size: 1.9rem;
 		background-color: $color-light;
@@ -128,15 +128,17 @@
 				line-height: 130%;
 			}
 
-			::v-deep {
+			:deep() {
 				ol,
 				ul {
 					margin-left: 3rem;
 				}
 
-				p + ul,
-				p + ol {
-					margin-bottom: 1rem;
+				p {
+					+ ul,
+					+ ol {
+						margin-bottom: 1rem;
+					}
 				}
 
 				a {
@@ -148,7 +150,6 @@
 					margin: 0 0.2rem;
 					padding: 0.25rem 0.5rem;
 					display: inline-block;
-					white-space: nowrap;
 					line-height: 100%;
 					font-size: 0.85em;
 					border-radius: 0.6rem;
@@ -189,9 +190,9 @@
 				padding: 1.8rem 1.8rem calc(1.8rem - 0.8rem);
 			}
 
-			.command {
+			.command-item {
 				&__description {
-					::v-deep {
+					:deep() {
 						code {
 							background-color: $color-light;
 						}
