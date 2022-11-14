@@ -135,7 +135,7 @@
 		computed: {
 			getCategories() {
 				const categoryList = [];
-				this.commandList.map(command => command.categories.map(category => {
+				this.commandList.forEach(command => command.categories.forEach(category => {
 					if (!categoryList.includes(category)) {
 						categoryList.push(category);
 					}
