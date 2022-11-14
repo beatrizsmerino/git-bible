@@ -267,7 +267,9 @@
 		{
 			"parent": "git",
 			"url": "command-git",
-			"categories": [],
+			"categories": [
+				"git-shortlog"
+			],
 			"name": "get-contributors-list",
 			"title": "Git. Get contributors list of a repository",
 			"description": "<p>By default, running <code>git shortlog</code> displays a summary of commits grouped by author, listing the number of commits made my each other, a one-line version of each commit message, and the authors are sorted in alphabetical order.</p><p>Many newer Git users might not know that Git actually records two developer references for each commit - the <strong>author</strong> and the <strong>committer</strong>. The author is permanently set as the person who initially wrote the change and committed it for the first time. Initially, the committer is set to the same value. However, if the commit is applied later as patch by another user as a part of the integration process, the committer information will be updated to reflect the user who performed that action.</p><p>The <code>--committer</code> flag or simply <code>-c</code> can be used to group commits by the <strong>Committer Date</strong> instead the <strong>Author Date</strong>.</p><p>With the <code>--summary</code> or <code>-s</code> flag you can get a shorter result by suppressing the commit description.</p><p>The <code>--number</code> or <code>-n</code> flag can be used to change the sorting method to sort by number of commits per author instead of alphabetically by author name.</p><p>Obviously the <code>--email</code> or <code>-e</code> flag shows the author's email address.</p><p>One cool thing about <code>git shortlog</code> is that it can be combined with time filters like <code>--format</code>, <code>--since</code> and <code>--until</code>, which will reduce the result of commits to those within the specified time range.</p><p><a href='https://linux.die.net/man/1/git-shortlog' target='_blank'>Know more</a></p>",
@@ -701,7 +703,11 @@
 		{
 			"parent": "git",
 			"url": "command-git",
-			"categories":[],
+			"categories": [
+				"git-log",
+				"git-show",
+				"git-stash"
+			],
 			"name": "recover-dropped-stash",
 			"title": "Git. Recovering a deleted commit from the stash",
 			"description": "<p>Let's say you have cleaned up your repository, you have just deleted all the old commits stored in the stash and you just realized that in one of those commits you had important changes that you have not saved.</p><p><strong>Don't panic</strong>, you may be able to recover the lost changes with the <code>git fsck</code> command.</p><p>To solve this problem the first thing to do is to locate the hash ID (6 digits) of the deleted commit. Once we have it we can see in detail the information it contains and decide if it is the one we are looking for. If it is, all we have to do is to save it again.</p><p>Let's see it in detail: <ol><li><strong>Find deleted stash commits</strong><br>The following command will show you a graph with all the commits that are no longer referenced from any branch or tag, i.e., every missing commit you have created, including those from the stash.</br><em>Shell bash/sh:</em><br><code>git log --graph --oneline --decorate $( git fsck --no-reflog | awk '/dangling commit/ {print $3}’ )</code><br>Somewhere in that graph you will find the confirmation message you are looking for.<br> Tip: If you did not provide a message when you did <code>git stash</code>, this commit will start with <code>WIP on</code>.</li><li><strong>Confirm that these are the changes we are looking for</strong><br>Once you have the commit hash of the stash you can use the command <code>git show &lt;COMMIT_ID&gt;</code> to examine in detail the commit <code>diff</code>, i.e., the names of the modified folders, files and lines of code.</li><li><strong>Retrieve the changes and save them</strong><br>After committing the changes you want to retrieve, you can bring them back to the workspace using <code>git stash apply &lt;COMMIT_ID&gt;</code>.<br> And if, just in case, you also want to save those changes back to the stash list located in <code>.git/logs/refs/stash</code>, you can use the command <code>git stash &lt;COMMIT_ID&gt;</code>.</li></ol></p><p><a href='https://gist.github.com/joseluisq/7f0f1402f05c45bac10814a9e38f81bf' target='_blank'>Know more</a></p>",
@@ -1216,7 +1222,11 @@
 		{
 			"parent": "git",
 			"url": "command-git",
-			"categories": [],
+			"categories": [
+				"git-tag",
+				"git-push",
+				"repo-remote"
+			],
 			"name": "remove-and-upload-all-tags",
 			"title": "Git. Remove all local and remote tags",
 			"description": "<p>If for some reason you need to remove all local tags and you have already committed them to a remote repository (e.g. GitHub), you will also need to update the remote references right after removing the tags from your local repository.</p><p>You can use these steps that correspond to the following set of commands: <ol><li>Delete all local tags (Optional Recommended). <a href='https://stackoverflow.com/a/44702758' target='_blank'>Know more</a></li><li>Fetch remote all tags (Optional Recommended).</li><li>Delete all remote tags.</li><li>Delete all local tags.</li><li>Force push all the tags and overwrite the existing ones. <a href='https://stackoverflow.com/a/52475362' target='_blank'>Know more</a></li></ol></p>",
