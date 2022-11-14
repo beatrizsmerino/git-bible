@@ -968,6 +968,22 @@
 		{
 			"parent": "git",
 			"url": "command-git",
+			"name": "remove-and-upload-all-tags",
+			"title": "Git. Eliminar todas las etiquetas locales y remotas",
+			"description": "<p>Si por alguna razón necesitas eliminar todas las etiquetas locales y ya las has enviado a un repositorio remoto (por ejemplo, GitHub), también tendrás que actualizar las referencias remotas justo después de eliminar las etiquetas de tu repositorio local.</p><p>You can use these steps, which correspond to the following set of commands: <ol><li>Borrar todas las etiquetas locales (Opcional recomendado). <a href='https://stackoverflow.com/a/44702758' target='_blank'>Saber más</a></li><li>Fetch remote todas las etiquetas (Opcional recomendado).</li><li>Borrar todas las etiquetas remotas.</li><li>Borrar todas las etiquetas locales.</li><li>Forzar el empuje de todas las etiquetas y sobrescribir las existentes. <a href='https://stackoverflow.com/a/52475362' target='_blank'>Saber más</a></li></ol></p>",
+			"code": [
+				[
+					"git tag -d $(git tag -l)",
+					"git fetch",
+					"git push origin --delete $(git tag -l)",
+					"git tag -d $(git tag -l)",
+					"git push -f --tags"
+				]
+			]
+		},
+		{
+			"parent": "git",
+			"url": "command-git",
 			"name": "rename-local-tag",
 			"title": "Git. Renombrar una etiqueta local",
 			"description": "<p>Si utilizas etiquetas en tus proyectos, probablemente te hayas encontrado con algún problema que te haya obligado a eliminar la etiqueta: <ul><li>Hubo un cambio que debía enviarse con esta versión y te olvidaste de él.</li><li>Hay algún código de depuración que no debía incluirse con esta versión.</li><li>Hay un error tipográfico realmente obvio que todo el mundo notará de inmediato.</li></ul></p><p>Si aún no has subido la etiqueta al repositorio remoto, puedes renombrar la etiqueta con el siguiente comando:</p><p><a href='https://cabrerahector.com/development/how-to-remove-a-git-tag-locally-and-remotely/' target='_blank'>Saber más</a></p>",
