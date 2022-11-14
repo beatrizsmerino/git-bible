@@ -179,15 +179,9 @@
 
 		&__wrapper {
 			padding-top: 8rem;
-			padding-bottom: 5.2rem;
-
-			@include media('md', $dimension: 'height') {
-				padding-bottom: 0;
-			}
 
 			@include media('sm') {
 				padding-top: 6rem;
-				padding-bottom: 0;
 			}
 		}
 
