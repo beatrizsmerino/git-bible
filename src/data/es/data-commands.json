@@ -217,6 +217,27 @@
 		{
 			"parent": "git",
 			"url": "command-git",
+			"name": "get-contributors-list",
+			"title": "Git. Get contributors list of a repository",
+			"description": "<p>De forma predeterminada, ejecutar  <code>git shortlog</code> muestra un resumen de las confirmaciones agrupadas por autor, enumerando la cantidad de confirmaciones realizadas entre sí, una versión de una línea de cada mensaje de confirmación y los autores están ordenados alfabéticamente.</p><p>Muchos de los nuevos usuarios de Git pueden no saber que Git en realidad registra dos referencias de desarrolladores para cada commit - el <strong>autor</strong> y el <strong>committer</strong>. El autor se establece permanentemente como la persona que inicialmente escribió el cambio y lo confirmó por primera vez. Inicialmente, el committer se establece con el mismo valor. Sin embargo, si la confirmación es aplicada posteriormente como parche por otro usuario como parte del proceso de integración, la información del autor se actualizará para reflejar el usuario que realizó esa acción.</p><p>La bandera <code>--committer</code> o simplemente <code>-c</code> se puede usar para agrupar commits por <strong>autor de commit</strong> en vez de por <strong>autor de fecha</strong>.</p><p>Con la bandera <code>--summary</code> o <code>-s</code> se puede obtener un resultado más corto suprimiendo la descripción de la confirmación.</p><p>La bandera <code>--number</code> o <code>-n</code> se puede usar para cambiar el método de clasificación para ordenar por número de confirmaciones por autor en lugar de alfabeticamente por el nombre del autor.</p><p>Obviamente la bandera <code>--email</code> o <code>-e</code> muestra el email del autor.</p><p>Una cosa interesante sobre el <code>git shortlog</code> es que se puede combinar con filtros de tiempo como <code>--format</code>, <code>--since</code> y <code>--until</code>, que reducirán el resultado de las confirmaciones a aquellas dentro del rango de tiempo especificado.</p><p><a href='https://initialcommit.com/blog/git-shortlog' target='_blank'>Saber más</a></p>",
+			"code": [
+				[
+					"git shortlog"
+				],
+				[
+					"git shortlog --summary --numbered --email"
+				],
+				[
+					"git shortlog -sne"
+				],
+				[
+					"git shortlog --format='%s %ae' --since='01-01-2022' --until='01-01-2023'"
+				]
+			]
+		},
+		{
+			"parent": "git",
+			"url": "command-git",
 			"name": "show-info-commit",
 			"title": "Git. Mostrar la información de un commit",
 			"description": "<p>Se trata de una herramienta de línea de comandos que se utiliza para ver detalles ampliados en objetos git como blobs, árboles, etiquetas y commits.</p><p>En el caso de un commit, muestra su información completa: id o <code>SHA-1</code>, autor, fecha y mensaje. </p><p>Hay muchas formas de acceder a la información de un commit:<br><ul><li>De forma absoluta, refiriéndose al código que lo identifica.</li><li>De forma relativa, refiriéndose al nombre de la rama del último commit.</li><li>A través de <code>HEAD</code>, accediendo al último commit que se ha realizado.</li><li>Por su posición en el árbol de git. Podemos ver todos los commits hacia atrás desde el momento que le digamos, con el signo <code>^</code> podemos ir 1 o 3 commits hacia atrás y con el signo <code>-</code> o <code>~</code> podemos especificar el número de commits hacia atrás que queremos ir hasta encontrar el que queremos ver.</li></ul></p>",
@@ -962,6 +983,22 @@
 				[
 					"git push --delete origin <TAG_VERSION>",
 					"git tag -d <TAG_VERSION>"
+				]
+			]
+		},
+		{
+			"parent": "git",
+			"url": "command-git",
+			"name": "remove-and-upload-all-tags",
+			"title": "Git. Eliminar todas las etiquetas locales y remotas",
+			"description": "<p>Si por alguna razón necesitas eliminar todas las etiquetas locales y ya las has enviado a un repositorio remoto (por ejemplo, GitHub), también tendrás que actualizar las referencias remotas justo después de eliminar las etiquetas de tu repositorio local.</p><p>You can use these steps, which correspond to the following set of commands: <ol><li>Borrar todas las etiquetas locales (Opcional recomendado). <a href='https://stackoverflow.com/a/44702758' target='_blank'>Saber más</a></li><li>Fetch remote todas las etiquetas (Opcional recomendado).</li><li>Borrar todas las etiquetas remotas.</li><li>Borrar todas las etiquetas locales.</li><li>Forzar el empuje de todas las etiquetas y sobrescribir las existentes. <a href='https://stackoverflow.com/a/52475362' target='_blank'>Saber más</a></li></ol></p>",
+			"code": [
+				[
+					"git tag -d $(git tag -l)",
+					"git fetch",
+					"git push origin --delete $(git tag -l)",
+					"git tag -d $(git tag -l)",
+					"git push -f --tags"
 				]
 			]
 		},
