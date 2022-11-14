@@ -72,10 +72,17 @@
 		},
 		computed: {
 			checkBlocksCode() {
-				if (Array.isArray(this.commandItem.code) && typeof this.commandItem.code[0] == 'string' || typeof this.commandItem.code == 'string') {
+				if (
+					Array.isArray(this.commandItem.code) &&
+					typeof this.commandItem.code[0] == 'string' ||
+					typeof this.commandItem.code == 'string'
+				) {
 					return 'one';
 				}
-				if (Array.isArray(this.commandItem.code) && Array.isArray(this.commandItem.code[0])) {
+				if (
+					Array.isArray(this.commandItem.code) &&
+					Array.isArray(this.commandItem.code[0])
+				) {
 					return 'multiple';
 				}
 

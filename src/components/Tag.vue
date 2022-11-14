@@ -5,7 +5,10 @@
 				v-for="(item, index) in tagList"
 				:key="index"
 				class="tag__item"
-				:class="{'tag__item--filter': tagType === 'filter', 'is-active': tagListActive.includes(item)}"
+				:class="{
+					'tag__item--filter': tagType === 'filter',
+					'is-active': tagListActive.includes(item)
+				}"
 				@click="activeTag(item)"
 			>
 				<span>
@@ -37,7 +40,10 @@
 			activeTag(tag) {
 				if (this.tagType === 'filter') {
 					if (this.tagListActive.includes(tag)) {
-						this.tagListActive.splice(this.tagListActive.indexOf(tag), 1);
+						this.tagListActive.splice(
+							this.tagListActive.indexOf(tag),
+							1
+						);
 					} else {
 						this.tagListActive.push(tag);
 					}
@@ -49,7 +55,6 @@
 
 <style lang="scss" scoped>
 	.tag {
-
 		&__list {
 			margin-left: -0.5rem;
 			display: flex;
