@@ -41,20 +41,20 @@
 		</div>
 
 		<div class="command-item__categories">
-			<Tag :tag-list="commandItem.categories" />
+			<TagList :tag-list="commandItem.categories" />
 		</div>
 	</div>
 </template>
 
 <script>
 	import UICodeTheme from '@/components/UI/UICodeTheme';
-	import Tag from '@/components/Tag';
+	import TagList from '@/components/Tag/TagList';
 
 	export default {
 		name: 'CommandItem',
 		components: {
 			UICodeTheme,
-			Tag
+			TagList
 		},
 		props: {
 			commandItem: {

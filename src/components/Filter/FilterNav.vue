@@ -52,9 +52,9 @@
 						</h2>
 
 						<div class="filter-nav__subcontent">
-							<Tag
-								:tag-list="getCategories"
-								:tag-type="'filter'"
+							<TagList
+								:tag-list="getCategoryList"
+								:tag-list-type="'filter'"
 							/>
 						</div>
 					</li>
@@ -67,7 +67,7 @@
 <script>
 	import Vue from 'vue';
 	import UILanguages from '@/components/UI/UILanguages';
-	import Tag from '@/components/Tag';
+	import TagList from '@/components/Tag/TagList';
 
 	let handleOutsideClick;
 
@@ -121,7 +121,7 @@
 		name: 'FilterNav',
 		components: {
 			UILanguages,
-			Tag
+			TagList
 		},
 		props: {
 			commandList: {
@@ -135,7 +135,7 @@
 			};
 		},
 		computed: {
-			getCategories() {
+			getCategoryList() {
 				const categoryList = [];
 				this.commandList.forEach(command => command.categories.forEach(category => {
 					if (!categoryList.includes(category)) {

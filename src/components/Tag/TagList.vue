@@ -1,22 +1,20 @@
 <template>
-	<div class="tag">
-		<ul class="tag__list">
-			<li
-				v-for="(item, index) in tagList"
-				:key="index"
-				class="tag__item"
-				:class="{
-					'tag__item--filter': tagType === 'filter',
-					'is-active': tagListActive.includes(item)
-				}"
-				@click="activeTag(item)"
-			>
-				<span>
-					{{ item }}
-				</span>
-			</li>
-		</ul>
-	</div>
+	<ul class="tag-list">
+		<li
+			v-for="(item, index) in tagList"
+			:key="index"
+			class="tag-list__item"
+			:class="{
+				'tag-list__item--filter': tagListType === 'filter',
+				'is-active': tagListActive.includes(item)
+			}"
+			@click="activeTag(item)"
+		>
+			<span>
+				{{ item }}
+			</span>
+		</li>
+	</ul>
 </template>
 
 <script>
@@ -27,7 +25,7 @@
 				type: Array,
 				required: true
 			},
-			tagType: {
+			tagListType: {
 				type: String
 			}
 		},
@@ -38,7 +36,7 @@
 		},
 		methods: {
 			activeTag(tag) {
-				if (this.tagType === 'filter') {
+				if (this.tagListType === 'filter') {
 					if (this.tagListActive.includes(tag)) {
 						this.tagListActive.splice(
 							this.tagListActive.indexOf(tag),
@@ -54,14 +52,12 @@
 </script>
 
 <style lang="scss" scoped>
-	.tag {
-		&__list {
-			margin-left: -0.5rem;
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			list-style: none;
-		}
+	.tag-list {
+		margin-left: -0.5rem;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		list-style: none;
 
 		&__item {
 			margin: 0.5rem;
