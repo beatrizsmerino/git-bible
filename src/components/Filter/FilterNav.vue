@@ -52,7 +52,7 @@
 						</h2>
 
 						<div class="filter-nav__subcontent">
-							<TagList
+							<UITagList
 								:tag-list="getCategoryList"
 								:tag-list-type="'clickable'"
 								@emit-click="setCommandListFilterByCategories"
@@ -68,7 +68,7 @@
 <script>
 	import Vue from 'vue';
 	import UILanguages from '@/components/UI/UILanguages';
-	import TagList from '@/components/Tag/TagList';
+	import UITagList from '@/components/UI/UITagList';
 
 	let handleOutsideClick;
 
@@ -122,7 +122,7 @@
 		name: 'FilterNav',
 		components: {
 			UILanguages,
-			TagList
+			UITagList
 		},
 		props: {
 			commandList: {

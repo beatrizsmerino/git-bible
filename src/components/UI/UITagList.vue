@@ -19,7 +19,7 @@
 
 <script>
 	export default {
-		name: 'TagList',
+		name: 'UITagList',
 		props: {
 			tagList: {
 				type: Array,
