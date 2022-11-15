@@ -55,6 +55,7 @@
 							<TagList
 								:tag-list="getCategoryList"
 								:tag-list-type="'clickable'"
+								@emit-click="setCommandListFilterByCategories"
 							/>
 						</div>
 					</li>
@@ -131,7 +132,8 @@
 		},
 		data() {
 			return {
-				isOpen: false
+				isOpen: false,
+				commandListFiltered: []
 			};
 		},
 		computed: {
@@ -144,6 +146,9 @@
 				}));
 
 				return categoryList;
+			},
+			getCommandListFilteredByCategories() {
+				return this.commandListFiltered;
 			}
 		},
 		watch: {
@@ -157,6 +162,14 @@
 			},
 			closeFilter() {
 				this.isOpen = false;
+			},
+			setCommandListFilterByCategories(categoryListActive) {
+				const commandListFound = [];
+				categoryListActive.forEach(categoryActive => {
+					const data = this.commandList.filter(command => command.categories.includes(categoryActive));
+					data.forEach(commandFound => commandListFound.push(commandFound));
+				});
+				this.commandListFiltered = commandListFound;
 			}
 		}
 	};

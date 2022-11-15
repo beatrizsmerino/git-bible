@@ -8,7 +8,7 @@
 				'tag-list__item--clickable': tagListType === 'clickable',
 				'is-active': tagListActive.includes(item)
 			}"
-			@click="activeTag(item)"
+			@click="tagClick(item)"
 		>
 			<span>
 				{{ item }}
@@ -53,6 +53,10 @@
 						this.tagListActive.push(tag);
 					}
 				}
+			},
+			tagClick(tag) {
+				this.activeTag(tag);
+				this.$emit('emit-click', this.tagListActive);
 			}
 		}
 	};
