@@ -5,7 +5,7 @@
 			:key="index"
 			class="tag-list__item"
 			:class="{
-				'tag-list__item--filter': tagListType === 'filter',
+				'tag-list__item--clickable': tagListType === 'clickable',
 				'is-active': tagListActive.includes(item)
 			}"
 			@click="activeTag(item)"
@@ -43,7 +43,7 @@
 		},
 		methods: {
 			activeTag(tag) {
-				if (this.tagListType === 'filter') {
+				if (this.tagListType === 'clickable') {
 					if (this.tagListActive.includes(tag)) {
 						this.tagListActive.splice(
 							this.tagListActive.indexOf(tag),
@@ -74,7 +74,7 @@
 			border-left: 0.5rem solid $color-brand-2-light;
 			background-color: $color-white;
 
-			&--filter {
+			&--clickable {
 				background-color: $color-light;
 				cursor: pointer;
 

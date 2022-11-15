@@ -54,7 +54,7 @@
 						<div class="filter-nav__subcontent">
 							<TagList
 								:tag-list="getCategoryList"
-								:tag-list-type="'filter'"
+								:tag-list-type="'clickable'"
 							/>
 						</div>
 					</li>
