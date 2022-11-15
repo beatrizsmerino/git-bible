@@ -73,10 +73,10 @@
 			color: $color-brand-2;
 			border-left: 0.5rem solid $color-brand-2-light;
 			background-color: $color-white;
-			cursor: pointer;
 
 			&--filter {
 				background-color: $color-light;
+				cursor: pointer;
 
 				&.is-active,
 				&:hover {
