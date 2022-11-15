@@ -146,12 +146,14 @@
 				}));
 
 				return categoryList;
-			},
-			getCommandListFilteredByCategories() {
-				return this.commandListFiltered;
 			}
 		},
 		watch: {
+			commandListFiltered(newValue, oldValue) {
+				if (newValue !== oldValue) {
+					this.$emit('emit-command-list-filtered', newValue);
+				}
+			},
 			isOpen() {
 				document.body.style.overflow = this.isOpen ? 'hidden' : '';
 			}
