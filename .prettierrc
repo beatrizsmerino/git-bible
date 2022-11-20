@@ -20,6 +20,14 @@
 		{
 			"files": ".prettierrc",
 			"options": { "parser": "json" }
+		},
+		{
+			"files": [
+				"*.json"
+			],
+			"options": {
+				"printWidth": 0
+			}
 		}
 	]
 }
