@@ -51,10 +51,10 @@
 </template>
 
 <script>
-	import UICodeTheme from '@/components/UI/UICodeTheme';
+	import UICodeTheme from "@/components/UI/UICodeTheme";
 
 	export default {
-		name: 'CommandItem',
+		name: "CommandItem",
 		components: {
 			UICodeTheme
 		},

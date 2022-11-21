@@ -21,7 +21,7 @@
 
 <script>
 	export default {
-		name: 'PageFooter',
+		name: "PageFooter",
 		data() {
 			return {
 				currentYear: new Date().getFullYear()

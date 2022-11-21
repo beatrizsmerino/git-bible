@@ -12,7 +12,7 @@
 
 <script>
 	export default {
-		name: 'UIButton',
+		name: "UIButton",
 		props: {
 			href: {
 				type: String,
@@ -30,17 +30,17 @@
 		computed: {
 			checkTag() {
 				if (this.href) {
-					return 'a';
+					return "a";
 				} else if (this.value) {
-					return 'input';
+					return "input";
 				}
 
-				return 'button';
+				return "button";
 			}
 		},
 		methods: {
 			buttonClick() {
-				this.$emit('emit-click');
+				this.$emit("emit-click");
 			}
 		}
 	};

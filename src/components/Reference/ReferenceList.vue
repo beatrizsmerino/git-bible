@@ -12,11 +12,11 @@
 </template>
 
 <script>
-	import data from '../../data/data-references.json';
-	import ReferenceItem from '@/components/Reference/ReferenceItem';
+	import data from "../../data/data-references.json";
+	import ReferenceItem from "@/components/Reference/ReferenceItem";
 
 	export default {
-		name: 'ReferenceList',
+		name: "ReferenceList",
 		components: {
 			ReferenceItem
 		},

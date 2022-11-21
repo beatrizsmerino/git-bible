@@ -23,7 +23,7 @@
 
 <script>
 	export default {
-		name: 'ReferenceItem',
+		name: "ReferenceItem",
 		props: {
 			referenceItem: {
 				type: Object,

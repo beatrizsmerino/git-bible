@@ -1,5 +1,5 @@
 module.exports = {
-	publicPath: process.env.NODE_ENV === 'production' ? '/git-bible/' : '/',
+	publicPath: process.env.NODE_ENV === "production" ? "/git-bible/" : "/",
 	lintOnSave: true,
 	css: {
 		loaderOptions: {
@@ -9,7 +9,7 @@ module.exports = {
 		}
 	},
 	chainWebpack: config => {
-		config.module.rule('eslint').use('eslint-loader').
+		config.module.rule("eslint").use("eslint-loader").
 			options({
 				fix: true
 			});

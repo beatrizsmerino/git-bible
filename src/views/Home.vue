@@ -10,17 +10,17 @@
 <script>
 
 	// @ is an alias to /src
-	import UILogo from '@/components/UI/UILogo';
-	import UISearch from '@/components/UI/UISearch';
+	import UILogo from "@/components/UI/UILogo";
+	import UISearch from "@/components/UI/UISearch";
 
 	export default {
-		name: 'Home',
+		name: "Home",
 		components: {
 			UILogo,
 			UISearch
 		},
 		mounted() {
-			document.querySelector('.page-header').style.boxShadow = 'none';
+			document.querySelector(".page-header").style.boxShadow = "none";
 		}
 	};
 </script>

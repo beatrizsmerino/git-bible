@@ -73,7 +73,7 @@
 
 <script>
 	export default {
-		name: 'PageNav',
+		name: "PageNav",
 		data() {
 			return {
 				isOpen: false
@@ -86,14 +86,14 @@
 				}
 			},
 			isOpen() {
-				document.body.style.overflow = this.isOpen ? 'hidden' : '';
+				document.body.style.overflow = this.isOpen ? "hidden" : "";
 			}
 		},
 		created() {
-			window.addEventListener('resize', this.handleResize);
+			window.addEventListener("resize", this.handleResize);
 		},
 		destroyed() {
-			window.removeEventListener('resize', this.handleResize);
+			window.removeEventListener("resize", this.handleResize);
 		},
 		methods: {
 			openCloseNav() {

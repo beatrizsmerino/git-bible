@@ -29,7 +29,7 @@
 
 <script>
 	export default {
-		name: 'UICopy',
+		name: "UICopy",
 		props: {
 			textToCopy: {
 				type: String,

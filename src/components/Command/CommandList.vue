@@ -16,10 +16,10 @@
 </template>
 
 <script>
-	import CommandItem from '@/components/Command/CommandItem';
+	import CommandItem from "@/components/Command/CommandItem";
 
 	export default {
-		name: 'CommandList',
+		name: "CommandList",
 		components: {
 			CommandItem
 		},
@@ -31,22 +31,22 @@
 		},
 		data() {
 			return {
-				commandListFormatted: '',
-				anchorName: this.$route.hash.split('#').pop()
+				commandListFormatted: "",
+				anchorName: this.$route.hash.split("#").pop()
 			};
 		},
 		watch: {
 			$route(to) {
-				this.anchorName = to.hash.split('#').pop();
+				this.anchorName = to.hash.split("#").pop();
 			},
 			commandList(newValue) {
 				this.commandListFormatted = newValue;
 			}
 		},
 		created() {
-			this.commandListFormatted = this.commandList.filter(command => command.name !== '' &&
-				command.title !== '' &&
-				command.code !== '');
+			this.commandListFormatted = this.commandList.filter(command => command.name !== "" &&
+				command.title !== "" &&
+				command.code !== "");
 		}
 	};
 </script>

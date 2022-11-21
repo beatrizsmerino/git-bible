@@ -7,10 +7,10 @@
 </template>
 
 <script>
-	import ReferenceList from '@/components/Reference/ReferenceList';
+	import ReferenceList from "@/components/Reference/ReferenceList";
 
 	export default {
-		name: 'Bibliografy',
+		name: "Bibliografy",
 		components: {
 			ReferenceList
 		}

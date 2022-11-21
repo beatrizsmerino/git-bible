@@ -67,10 +67,10 @@
 </template>
 
 <script>
-	import UICopy from '@/components/UI/UICopy';
+	import UICopy from "@/components/UI/UICopy";
 
 	export default {
-		name: 'UICodeTheme',
+		name: "UICodeTheme",
 		components: {
 			UICopy
 		},
@@ -85,7 +85,7 @@
 		},
 		data() {
 			return {
-				codeFormatted: ''
+				codeFormatted: ""
 			};
 		},
 		created() {
@@ -99,20 +99,20 @@
 				const $thisBoxScrollWidth = $thisBox.scrollWidth;
 
 				const $thisBoxParent = $thisBox.parentNode.parentNode;
-				$thisBoxParent.classList.add('is-scroll');
+				$thisBoxParent.classList.add("is-scroll");
 
 				if ($thisBoxScrollLeft === 0) {
-					$thisBoxParent.classList.remove('is-scroll-end');
-					$thisBoxParent.classList.add('is-scroll-start');
+					$thisBoxParent.classList.remove("is-scroll-end");
+					$thisBoxParent.classList.add("is-scroll-start");
 				} else if (
 					$thisBoxScrollWidth - $thisBoxScrollLeft ==
 					$thisBoxWidth
 				) {
-					$thisBoxParent.classList.remove('is-scroll-start');
-					$thisBoxParent.classList.add('is-scroll-end');
+					$thisBoxParent.classList.remove("is-scroll-start");
+					$thisBoxParent.classList.add("is-scroll-end");
 				} else {
-					$thisBoxParent.classList.remove('is-scroll-end');
-					$thisBoxParent.classList.remove('is-scroll-start');
+					$thisBoxParent.classList.remove("is-scroll-end");
+					$thisBoxParent.classList.remove("is-scroll-start");
 				}
 			},
 			switchTheme(event) {
@@ -122,11 +122,11 @@
 						parentNode;
 
 				if ($thisCodeTheme && $thisSwitchThemeField.checked) {
-					$thisCodeTheme.classList.remove('is-theme-light');
-					$thisCodeTheme.classList.add('is-theme-dark');
+					$thisCodeTheme.classList.remove("is-theme-light");
+					$thisCodeTheme.classList.add("is-theme-dark");
 				} else {
-					$thisCodeTheme.classList.remove('is-theme-dark');
-					$thisCodeTheme.classList.add('is-theme-light');
+					$thisCodeTheme.classList.remove("is-theme-dark");
+					$thisCodeTheme.classList.add("is-theme-light");
 				}
 			},
 			checkLines(codeText) {
@@ -140,7 +140,7 @@
 			},
 			convertArrayToStringLines(codeText) {
 				return Array.isArray(codeText) || Array.isArray(codeText[0])
-					? codeText.join('\r\n')
+					? codeText.join("\r\n")
 					: codeText;
 			}
 		}

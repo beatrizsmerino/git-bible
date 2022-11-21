@@ -6,7 +6,7 @@
 			:class="[
 				language.locale == $i18n.locale
 					? 'button--bg-color-1'
-					: 'button--bg-color-2-light'
+					: 'button--bg-color-2-light',
 			]"
 			@emit-click="changeLanguage(language.locale)"
 		>
@@ -16,19 +16,25 @@
 </template>
 
 <script>
-	import {i18n} from '@/plugins/i18n';
-	import UIButton from '@/components/UI/UIButton';
+	import {
+		i18n
+	} from "@/plugins/i18n";
+	import UIButton from "@/components/UI/UIButton";
 
 	export default {
-		name: 'UILanguages',
+		name: "UILanguages",
 		components: {
 			UIButton
 		},
 		computed: {
 			languages() {
 				return [
-					{locale: 'es', title: this.$t('language.spanish')},
-					{locale: 'en', title: this.$t('language.english')}
+					{
+						locale: "es", title: this.$t("language.spanish")
+					},
+					{
+						locale: "en", title: this.$t("language.english")
+					}
 				];
 			}
 		},

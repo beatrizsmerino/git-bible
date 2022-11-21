@@ -6,11 +6,11 @@
 </template>
 
 <script>
-	import UILogo from '@/components/UI/UILogo';
-	import PageNav from '@/components/Page/PageNav';
+	import UILogo from "@/components/UI/UILogo";
+	import PageNav from "@/components/Page/PageNav";
 
 	export default {
-		name: 'PageHeader',
+		name: "PageHeader",
 		components: {
 			UILogo,
 			PageNav
