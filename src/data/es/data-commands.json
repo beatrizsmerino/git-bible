@@ -743,7 +743,7 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "rename-local-branch",
-			"title": "Git. Rename a local branch",
+			"title": "Git. Renombrar una rama local",
 			"description": "<p>Puedes renombrar una rama local mientras te encuentras en cualquier otra rama.</p>",
 			"code": [
 				[
