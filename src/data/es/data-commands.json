@@ -4,7 +4,7 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "get-git-version",
-			"title": "Git. Obtener la versión Git",
+			"title": "Git. Obtener la versión de Git",
 			"description": "<p>Antes de instalar Git, es conveniente comprobar si ya lo tienes instalado mediante el siguiente comando, que te devolverá el número de versión instalado en tu ordenador. Si no es así, sigue los pasos descritos en este <a href='https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git' target='_blank'>enlace</a> en función de tu sistema operativo.</p>",
 			"code": "git --version"
 		},
@@ -12,7 +12,7 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "create-git-repository",
-			"title": "Git. Inicializar el repositorio Git",
+			"title": "Git. Inicializar un repositorio Git",
 			"description": "<p>Un repositorio Git es un almacén virtual, te permite guardar versiones del código de tu proyecto a las que puedes acceder siempre que lo necesites. El siguiente comando, utilizado sólo una vez durante la configuración inicial de un nuevo repositorio, creará un nuevo subdirectorio <code>.git</code> en tu directorio de trabajo actual y una nueva rama <code>master</code>.</p><p><a href='https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-init' target='_blank'>Saber más</a></p>",
 			"code": "git init"
 		},
@@ -584,7 +584,7 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "reflog",
-			"title": "Git. Ver registro de referencia (reflog)",
+			"title": "Git. Ver registro de referencia con 'reflog'",
 			"description": "<p>Antes de hablar del diario de referencias, hay que recordar que <code>HEAD</code> es una referencia, es decir, un puntero que apunta al 'commit' más reciente de la rama actual.</p><p>Existe un registro de todas las referencias tomadas por el puntero <code>HEAD</code> en Git llamado <strong>reflog</strong>. Es un listado que almacenará todos los 'commits' por los que pase el puntero, por ejemplo, podrá guardar los cambios de una rama o la adición de un 'commit'.</p><p>Este comando puede ser muy útil, en el caso de que queramos recuperar un 'commit' borrado.<ul><li><code>git reflog</code>: Te va a mostrar todos los 'commits' que realizaste sin importar si los borraste o no. Cada 'commit' mostrara una pequeña información de si mismo: su número de hash (6 cifras), la rama a la que pertenece, el índice de la posición que ocupa su puntero <code>HEAD</code> y la primera línea del mensaje.</li><li><code>git show &lt;COMMIT_ID&gt;</code>: Viendo esta información podemos encontrar el 'commit' que queremos y acceder a él mediante su número de hash. Así podemos ver en detalle su información: su número de hash completo, el autor y la fecha del 'commit', el mensaje del 'commit' completo y que archivos y líneas se han añadido, eliminado o modificado.</li><li><code>git reset --mixed &lt;COMMIT_ID&gt;</code>: Usamos este comando, una vez estamos seguros de que queremos recuperar este 'commit' y asi obtendremos de nuevo los archivos con los cambios que habiamos eliminado. Este comando no genera un 'commit' con estos cambios, así que tendremos que ejecutar un <code>git commit</code> para volver a guardarlos. Podremos recuperar el mensaje que habiamos usado con el commando anterior <code>git show</code>, ya que nos mostraba el mensaje completo.</li></ul></p><p><a href='https://www.atlassian.com/es/git/tutorials/rewriting-history/git-reflog' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
@@ -672,7 +672,7 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "checkout-branch-path",
-			"title": "Git. Checkout branch/path",
+			"title": "Git. Desplazarse a una rama/ruta",
 			"description": "<p>El comando <code>git checkout &lt;NAME&gt;</code> está realmente pensado para ramas, pero la sintaxis de Git es relajada, y si Git no puede encontrar una rama, entonces buscará un archivo.</p><p>Supongamos que tienes un archivo y una rama que se llaman igual, <code>stuff</code>. Entonces el siguiente comando parecería ambiguo, <code>git checkout stuff</code>, porque no está claro si estás pidiendo la salida de un archivo o de una rama.</br>Con <code>--</code> es una forma de decirle a Git que trate lo que sigue a <code>checkout</code> como un archivo y no como una rama, cuando lo usas, le dice explícitamente a Git que saque un archivo con ese nombre/ruta</p><p>Este comando hizo:<ul><li>Si es una rama local o rama remota rastreada, cambia a ella.</li><li>Si es una ruta rastreada de un archivo, lo restablece, es decir, borra los cambios no guardados del directorio de trabajo.</li><li>Si es una rama remota, crea una rama de seguimiento y cambia a ella.</li></ul><p>Así que en este caso los siguientes comandos permiten mover una rama local o descargarla de la remota y restablecer un archivo:</p>",
 			"code": [
 				[
@@ -849,7 +849,7 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "cherry-pick",
-			"title": "Git. Cherry-pick: Copiar y pegar 'commits'",
+			"title": "Git. Copiar y pegar 'commits' con 'cherry-pick'",
 			"description": "<p>Puede ocurrir que, en algún momento, queramos aplicar algunos de los cambios que hemos hecho en otra rama sin tener que hacer un merge completo. El comando <code>cherry-pick</code> permite <em>'copiar'</em> uno o varios 'commits' de una rama y <em>'pegarlos'</em> en otra rama. Antes de utilizarlo, debe tener un <strong>directorio de trabajo</strong> y <strong>zona de preparación</strong> limpios.</p><p>Por defecto, <code>cherry-pick</code> mantiene el mensaje de 'commit' original, por lo que la opción <code>-x</code> puede ser útil para añadir una referencia a el 'commit' original y así para saber de dónde se ha obtenido el 'commit'. Otras opciones interesantes son <code>-e</code>, que permite editar el mensaje de 'commit' en lugar de utilizar el original y la opción <code>-n</code> que aplicará los cambios pero no hará ningun 'commit'.</p><p>Al igual que con los comandos <code>merge</code> y <code>rebase</code>, tras resolver los conflictos, podemos indicar que se sigan aplicando los cambios con la opción <code>--continue</code> o rechazar el proceso completamente con la opción <code>--abort</code>.</p><p><a href='https://www.runroom.com/realworld/seleccionando-commits-cherry-pick' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
@@ -879,7 +879,7 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "diff",
-			"title": "Git. Comparar cambios con git diff",
+			"title": "Git. Comparar cambios con 'git diff'",
 			"description": "<p>Podemos ver qué cambios se han hecho en el código con el comando <code>diff</code>. Este, muestra en la terminal las líneas de código que se han eliminado con el símbolo <code>-</code> y en color rojo, y las líneas añadidas con el símbolo <code>+</code> y de color verde.</p><p>La siguiente herramienta online puede ayudarte. <strong>DiffMerge</strong> es una aplicación para comparar y fusionar visualmente archivos en Windows, OSX y Linux: <a href='http://sourcegear.com/diffmerge/' target='_blank'>http://sourcegear.com/diffmerge/</a></p><p>También podemos comparar los cambios que se han realizado en el código de varios 'commits'.</p><p><a href='https://www.atlassian.com/git/tutorials/saving-changes/git-diff' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
