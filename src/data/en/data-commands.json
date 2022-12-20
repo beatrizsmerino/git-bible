@@ -154,7 +154,7 @@
 			"url": "command-git",
 			"name": "get-commits-range",
 			"title": "Git. Get commits between ranges",
-			"description": "<p>The most common way to specify a range of commits is by using the double dot syntax.</p><p>This for example, is often used to get a particular range of commits by selecting the position they occupy in the history.</p><p>Or on the other hand if we select 2 branches it will show all the commits in the first branch that do not appear in the second. This is useful for previewing what is about to be merged or to see what is about to be published in the remote repository.</p><p><a href='https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection#_commit_ranges' target='_blank'>Know more</a></p>",
+			"description": "<p>The most common way to specify a range of commits is by using the double dot syntax.</p><p>This, for example, is often used to get a particular range of commits by selecting the position they occupy in the history.</p><p>Or on the other hand if we select 2 branches it will show all the commits in the first branch that do not appear in the second. This is useful for previewing what is about to be merged or to see what is about to be published in the remote repository.</p><p><a href='https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection#_commit_ranges' target='_blank'>Know more</a></p>",
 			"code": [
 				[
 					"git log master~<POSITION_NUMBER>..master~<POSITION_NUMBER>"
