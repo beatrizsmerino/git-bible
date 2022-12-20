@@ -21,7 +21,7 @@
 			"url": "command-git",
 			"name": "show-configuration",
 			"title": "Git. Show the set configuration",
-			"description": "<p>To visualize our current configuration. We must know that all the configuration is saved in the file <code>.gitconfig</code>, found in: if you are <strong>Linux</strong> the user <code>HOME</code> or if you are on <strong>Windows</strong> in <code>C:Users</code> or if you are <strong>Mac</strong> typing on the <strong>consola</strong> <code>git config --list --show-origin</code>.</p>",
+			"description": "<p>To visualize our current configuration. We must know that all the configuration is saved in the file <code>.gitconfig</code>, found in: if you are <strong>Linux</strong> the user <code>HOME</code> or if you are on <strong>Windows</strong> in <code>C:Users</code> or if you are <strong>Mac</strong> typing on the <strong>console</strong> <code>git config --list --show-origin</code>.</p>",
 			"code": [
 				[
 					"git config -l"
