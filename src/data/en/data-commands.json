@@ -88,7 +88,7 @@
 			"url": "command-git",
 			"name": "change-autor-email-last-commits",
 			"title": "Git. Change the name and email of the author of the last commit",
-			"description": "<p>If you have made a mistake and made your commit with another name or email you can overwrite the author information of only the last commit with this command.</p>",
+			"description": "<p>If you have made a mistake and made your commit with another name or email, you can overwrite the author information of only the last commit with this command.</p>",
 			"code": "git commit --amend --author='<USER_NAME> <USER_EMAIL>'"
 		},
 		{
