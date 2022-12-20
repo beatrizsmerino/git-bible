@@ -138,7 +138,7 @@
 			"url": "command-git",
 			"name": "get-commits-oneline-graph",
 			"title": "Git. Get all commits made in a graph",
-			"description": "<p>This command condenses the information of each commit into a single line, showing only the commit ID and the first line of the commit message, highlighting all references (branches, tags...).</p><p>It draws a graphical <em>ASCII</em> representation of the commit history structure. Prints additional lines between commits, so that the history chart is drawn correctly, and it use asterisks to show which branch the commit was on.</p><p><a href='https://www.atlassian.com/git/tutorials/git-log' target='_blank'>Know more</a></p>",
+			"description": "<p>This command condenses the information of each commit into a single line, showing only the commit ID and the first line of the commit message, highlighting all references (branches, tags...).</p><p>It draws a graphical <em>ASCII</em> representation of the commit history structure. Prints additional lines between commits, so that the history chart is drawn correctly, and it uses asterisks to show which branch the commit was on.</p><p><a href='https://www.atlassian.com/git/tutorials/git-log' target='_blank'>Know more</a></p>",
 			"code": "git log --oneline --graph --decorate"
 		},
 		{
