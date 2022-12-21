@@ -348,7 +348,7 @@
 			"url": "command-git",
 			"name": "rename-file-track",
 			"title": "Git. Rename and tracking file",
-			"description": "<p>This command works the same as <code>git rm</code> command.</p><p>The next commands do:<ul><li><code>mv</code>: Modify the name of a file without the Git, adding it to the staging area.</li><li><code>git mv</code>: Change the name of a file and have Git track this change. After this, if we do a <code>git status</code> it will appear as renamed.</li></ul></p>",
+			"description": "<p>This command works the same as <code>git rm</code> command.</p><p>The next commands do:<ul><li><code>mv</code>: Modify the name of a file without the Git, adding it to the staging area.</li><li><code>git mv</code>: Change the name of a file and have Git track this change. After this, if we do a <code>git status</code>, it will appear as renamed.</li></ul></p>",
 			"code": [
 				[
 					"mv <OLD_FILE_NAME> <NEW_FILE_NAME>"
