@@ -322,7 +322,7 @@
 			"url": "command-git",
 			"name": "show-status-files",
 			"title": "Git. Show the status of files in a Git directory",
-			"description": "<p>Executing this command we can see the branch in which we are and the files contained in the stage along with its state (new/modified/deleted). It also warns us of files that are untracked by Git (untracked) or files with conflicts.</p>",
+			"description": "<p>Executing this command, we can see the branch in which we are and the files contained in the stage along with its state (new/modified/deleted). It also warns us of files that are untracked by Git (untracked) or files with conflicts.</p>",
 			"code": "git status"
 		},
 		{
