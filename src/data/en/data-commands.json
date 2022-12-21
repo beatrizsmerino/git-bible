@@ -172,7 +172,7 @@
 			"url": "command-git",
 			"name": "get-commit-by-date",
 			"title": "Git. Search the commits by date",
-			"description": "<p>With the following commands we can obtain a list of commits according to the indicated date. (YYYY-MM-DD):<ul><li><code>--since</code> Commits from the date.</li><li><code>--before</code> Commits before the date.</li><li><code>--after</code> Commits after the date.</li></ul></p>",
+			"description": "<p>With the following commands, we can obtain a list of commits according to the indicated date. (YYYY-MM-DD):<ul><li><code>--since</code> Commits from the date.</li><li><code>--before</code> Commits before the date.</li><li><code>--after</code> Commits after the date.</li></ul></p>",
 			"code": [
 				[
 					"git log --since={<DATE>}"
