@@ -822,7 +822,7 @@
 			"url": "command-git",
 			"name": "merge-fast-forward",
 			"title": "Git. Merge commit",
-			"description": "<p>The <code>--no-ff</code> flag prevents <code>git merge</code> from executing a <strong>'fast-forward'</strong> if it detects that your current <code>HEAD</code> is an ancestor of the commit you're trying to merge. A <strong>fast-forward</strong> is when, instead of constructing a <strong>commit merge</strong>, Git just moves your branch pointer to point at the incoming commit.</p><p>Occasionally you want to prevent this behavior from happening, typically because you want to maintain a specific branch topology (e.g. you're merging in a topic branch and you want to ensure it looks that way when reading history). In order to do that, you can pass the <code>--no-ff</code> flag and <code>git merge</code> will always construct a merge instead of <strong>fast-forwarding</strong>.</p>",
+			"description": "<p>The <code>--no-ff</code> flag prevents <code>git merge</code> from executing a <strong>'fast-forward'</strong> if it detects that your current <code>HEAD</code> is an ancestor of the commit you're trying to merge. A <strong>fast-forward</strong> is when, instead of constructing a <strong>commit merge</strong>, Git just moves your branch pointer to point at the incoming commit.</p><p>Occasionally, you want to prevent this behavior from happening, typically because you want to maintain a specific branch topology (e.g. you're merging in a topic branch and you want to ensure it looks that way when reading history). In order to do that, you can pass the <code>--no-ff</code> flag and <code>git merge</code> will always construct a merge instead of <strong>fast-forwarding</strong>.</p>",
 			"code": [
 				"git merge <BRANCH_NAME> --no-ff"
 			]
