@@ -605,7 +605,7 @@
 			"url": "command-git",
 			"name": "reflog-remove",
 			"title": "Git. Prune all references with garbage collection and reclaim space",
-			"description": "<p>The <code>expire</code> subcommand cleans up old or unreachable <strong>reflog</strong> entries. It has potential for data loss and is not typically used by end users, but used by Git internally. By default, the <strong>reflog</strong> expiration date is set to 90 days. An expire time can be specified by passing a command line argument or by setting a Git configuration name.</p>",
+			"description": "<p>The <code>expire</code> subcommand cleans up old or unreachable <strong>reflog</strong> entries. It has potential for data loss and is not typically used by end users, but used by Git internally. By default, the <strong>reflog</strong> expiration date is set to 90 days. An expiry time can be specified by passing a command line argument or by setting a Git configuration name.</p>",
 			"code": [
 				"rm -rf .git/refs/original/",
 				"git reflog expire --expire=now --all",
