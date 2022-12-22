@@ -270,7 +270,7 @@
 			"url": "command-git",
 			"name": "show-date-commit",
 			"title": "Git. Show date commit",
-			"description": "<p>A commit has 2 types of dates: the author date and the commit date.<ul><li>The <strong>author date</strong> indicates when this commit was originally made, i.e. when the <code>git commit</code> was first made.</li><li>The <strong>commit date</strong> changes each time the commit is modified, for example, when the commit is overwritten with <code>git commit --amend</code></li></ul></p><p>With the following command, we can format the output information of a commit (2020-12-03 19:28:49 +0100).<ul><li><code>%ai</code>: <strong>author date</strong>, <em>ISO 8601-like</em> format</li><li><code>%ci</code>: <strong>committer date</strong>, <em>ISO 8601-like</em> format</li></ul></p>",
+			"description": "<p>A commit has 2 types of dates: the author date and the commit date.<ul><li>The <strong>author date</strong> indicates when this commit was originally made, i.e., when the <code>git commit</code> was first made.</li><li>The <strong>commit date</strong> changes each time the commit is modified, for example, when the commit is overwritten with <code>git commit --amend</code></li></ul></p><p>With the following command, we can format the output information of a commit (2020-12-03 19:28:49 +0100).<ul><li><code>%ai</code>: <strong>author date</strong>, <em>ISO 8601-like</em> format</li><li><code>%ci</code>: <strong>committer date</strong>, <em>ISO 8601-like</em> format</li></ul></p>",
 			"code": "git show -s --format=%ci <COMMIT_ID>"
 		},
 		{
