@@ -789,7 +789,7 @@
 			"url": "command-git",
 			"name": "remove-branch",
 			"title": "Git. Remove a branch",
-			"description": "<p>To delete a branch from Git repository you must not be positioned in it.</p>",
+			"description": "<p>To delete a branch from Git repository, you must not be positioned in it.</p>",
 			"code": [
 				[
 					"git branch -D <BRANCH_NAME>"
