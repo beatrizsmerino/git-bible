@@ -970,7 +970,7 @@
 			"url": "command-git",
 			"name": "rename-local-tag",
 			"title": "Git. Rename a local tag",
-			"description": "<p>If you use tags in your projects, you probably have encountered some issue that forced you to remove the tag:<ul><li>There was a change that had to be shipped with this release and you forgot all about it.</li><li>There’s some debugging code that wasn’t supposed to be included with this release.</li><li>There’s a really obvious typo that everyone will notice right away.</li></ul></p><p>If you have not yet uploaded the tag to the remote repository, you can rename the tag with the following command:</p><p><a href='https://cabrerahector.com/development/how-to-remove-a-git-tag-locally-and-remotely/' target='_blank'>Know more</a></p>",
+			"description": "<p>If you use tags in your projects, you probably have encountered some issue that forced you to remove the tag:<ul><li>There was a change that had to be shipped with this release, and you forgot all about it.</li><li>There’s some debugging code that wasn’t supposed to be included with this release.</li><li>There’s a really obvious typo that everyone will notice right away.</li></ul></p><p>If you have not yet uploaded the tag to the remote repository, you can rename the tag with the following command:</p><p><a href='https://cabrerahector.com/development/how-to-remove-a-git-tag-locally-and-remotely/' target='_blank'>Know more</a></p>",
 			"code": "git tag <NEW_TAG_VERSION> <OLD_TAG_VERSION>"
 		},
 		{
