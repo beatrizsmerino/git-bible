@@ -650,7 +650,7 @@
 			"url": "command-git",
 			"name": "get-branches-remotes",
 			"title": "Git. Get all remote branches",
-			"description": "<p>A remote-tracking branch is one whose full name starts with <code>refs/remotes/</code>, this command remove this part to make it easier.</p>",
+			"description": "<p>A remote-tracking branch is one whose full name starts with <code>refs/remotes/</code>, this command removes this part to make it easier.</p>",
 			"code": [
 				[
 					"git branch --remotes"
