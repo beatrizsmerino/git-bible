@@ -503,7 +503,7 @@
 			"url": "command-git",
 			"name": "create-stash-branch",
 			"title": "Git. Create a branch from a stash",
-			"description": "<p>This is a nice shortcut to recover the code saved in the indicated stash and create a new branch to work on it separately. This command creates a new branch with the latest stash (<code>stash@{0}</code>), and then delete it (<code>git stash pop</code>). If you need a particular stash, you can specify the stash id.</p><p>This will be useful when you run into conflicts after you’ve applied the stash to the latest version of your branch.</p><p><a href='https://www.freecodecamp.org/news/useful-tricks-you-might-not-know-about-git-stash-e8a9490f0a1a/' target='_blank'>Know more</a></p>",
+			"description": "<p>This is a nice shortcut to recover the code saved in the indicated stash and create a new branch to work on it separately. This command creates a new branch with the latest stash (<code>stash@{0}</code>), and then delete it (<code>git stash pop</code>). If you need a particular stash, you can specify the stash ID.</p><p>This will be useful when you run into conflicts after you’ve applied the stash to the latest version of your branch.</p><p><a href='https://www.freecodecamp.org/news/useful-tricks-you-might-not-know-about-git-stash-e8a9490f0a1a/' target='_blank'>Know more</a></p>",
 			"code": [
 				[
 					"git stash branch <BRANCH_NAME>"
