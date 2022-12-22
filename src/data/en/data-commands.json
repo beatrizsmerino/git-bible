@@ -632,7 +632,7 @@
 			"url": "command-git",
 			"name": "get-branches-local",
 			"title": "Git. Get all local branches",
-			"description": "<p>A local branch is one whose full name starts with <code>refs/heads/</code>, the <code>git branch</code> command strips off this part to make it easier.</p><p>It seems that with Git there is always more than one way to do the same thing:</p>",
+			"description": "<p>A local branch is one whose full name starts with <code>refs/heads/</code>, the <code>git branch</code> command strips off this part to make it easier.</p><p>It seems that with Git, there is always more than one way to do the same thing:</p>",
 			"code": [
 				[
 					"git branch"
