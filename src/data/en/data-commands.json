@@ -696,7 +696,7 @@
 			"url": "command-git",
 			"name": "create-and-move-to-branch",
 			"title": "Git. Create and move to branch",
-			"description": "<p>You must use a separate branch for each function or issue you work on. With this command you make 2 steps at the same time, create and move to the branch so that all changes you make are applied to it. The <code>-b</code> flag tells Git to create it if it doesn't already exist, otherwise, it is reset, that is to say, the branch is not reset/created unless <code>git checkout</code> is successful.</p>",
+			"description": "<p>You must use a separate branch for each function or issue you work on. With this command, you make 2 steps at the same time, create and move to the branch so that all changes you make are applied to it. The <code>-b</code> flag tells Git to create it if it doesn't already exist, otherwise, it is reset, that is to say, the branch is not reset/created unless <code>git checkout</code> is successful.</p>",
 			"code": [
 				[
 					"git checkout -B <NEW_BRANCH_NAME>"
