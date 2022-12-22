@@ -953,7 +953,7 @@
 			"url": "command-git",
 			"name": "remove-and-upload-tag",
 			"title": "Git. Remove local and remote tag",
-			"description": "<p>When you want rename or remove a tag and you have already pushed it to a remote repository (eg. GitHub) then you’ll also need to update the remote references right after renaming or deleting the tag from your local repo.</p><p>Here are two alternatives for remove a tag on the local and remote repository:<ul><li>Delete the local tag and overwrite this change by referring to the name of the deleted tag in the remote repository.</li><li>Or do the process in reverse, delete it first the tag in the remote repository and then in the local repository.</li></ul></p><p><a href='https://cabrerahector.com/development/how-to-remove-a-git-tag-locally-and-remotely/' target='_blank'>Know more</a></p>",
+			"description": "<p>When you want to rename or remove a tag and you have already pushed it to a remote repository (eg. GitHub) then you’ll also need to update the remote references right after renaming or deleting the tag from your local repo.</p><p>Here are two alternatives for remove a tag on the local and remote repository:<ul><li>Delete the local tag and overwrite this change by referring to the name of the deleted tag in the remote repository.</li><li>Or do the process in reverse, delete it first the tag in the remote repository and then in the local repository.</li></ul></p><p><a href='https://cabrerahector.com/development/how-to-remove-a-git-tag-locally-and-remotely/' target='_blank'>Know more</a></p>",
 			"code": [
 				[
 					"git tag -d <TAG_VERSION>",
