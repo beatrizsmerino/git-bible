@@ -617,7 +617,7 @@
 			"url": "command-git",
 			"name": "get-branches",
 			"title": "Git. Get all branches",
-			"description": "<p>Sometimes it is necessary to know what branches exist in a remote repository in order to determine the names of the available branches.</p><p>With this command you can list both types of branches: remote and local. The current branch will be highlighted in color and marked an asterisk <code>*</code>.</p>",
+			"description": "<p>Sometimes it is necessary to know what branches exist in a remote repository in order to determine the names of the available branches.</p><p>With this command, you can list both types of branches: remote and local. The current branch will be highlighted in color and marked an asterisk <code>*</code>.</p>",
 			"code": [
 				[
 					"git branch --all"
