@@ -999,7 +999,7 @@
 			"url": "command-git",
 			"name": "update-local-tags",
 			"title": "Git. Update local tags",
-			"description": "<p>If your project is open source, you will probably have to update the status of your local repository from time to time, since other people may have removed or renamed some tags while you were working and you now may have obsolete local tags.</p><p>This command prunes the tags that no longer exist in the remote repository but in your local repository.</p>",
+			"description": "<p>If your project is open source, you will probably have to update the status of your local repository from time to time, since other people may have removed or renamed some tags while you were working, and you now may have obsolete local tags.</p><p>This command prunes the tags that no longer exist in the remote repository but in your local repository.</p>",
 			"code": "git pull --prune --tags"
 		}
 	],
