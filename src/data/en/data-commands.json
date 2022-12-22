@@ -774,7 +774,7 @@
 			"url": "command-git",
 			"name": "upload-local-branch",
 			"title": "Git. Send the local branch to remote repository",
-			"description": "<p>It is recommended to send the new branch to the remote repository (<code>ORIGIN</code>), since this acts as backup, and when collaborating with other developers, it allows them access to see the commits made in the new branch. La opción <code>-u</code> or <code>--set-upstream-to</code> adds it as a remote tracking branch.</p>",
+			"description": "<p>It is recommended to send the new branch to the remote repository (<code>ORIGIN</code>), since this acts as backup, and when collaborating with other developers, it allows them access to see the commits made in the new branch. The option <code>-u</code> or <code>--set-upstream-to</code> adds it as a remote tracking branch.</p>",
 			"code": [
 				[
 					"git branch --set-upstream-to origin/<OTHER_BRANCH_NAME>"
