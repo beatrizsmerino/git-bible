@@ -518,7 +518,7 @@
 			"url": "command-git",
 			"name": "show-stash",
 			"title": "Git. Show the stash diffs",
-			"description": "<p>The <code>show</code> option of the <code>stash</code> command gives a very brief summary of the changes made to the files. It shows in one line the path and name of the file, and the number of deleted lines.</p><p>Default, shows the information of the last stash (<code>stash@{0}</code>), but we can indicate an index number to see some other.</p><p>If we want to go deeper and see all the changes of each line of the file in the terminal editor we can use the option <code>-p</code>.</p><p><a href='https://howto.lintel.in/how-to-see-stashed-changes-using-git-stash/' target='_blank'>Know more</a></p>",
+			"description": "<p>The <code>show</code> option of the <code>stash</code> command gives a very brief summary of the changes made to the files. It shows in one line the path and name of the file, and the number of deleted lines.</p><p>Default, shows the information of the last stash (<code>stash@{0}</code>), but we can indicate an index number to see some other.</p><p>If we want to go deeper and see all the changes of each line of the file in the terminal editor, we can use the option <code>-p</code>.</p><p><a href='https://howto.lintel.in/how-to-see-stashed-changes-using-git-stash/' target='_blank'>Know more</a></p>",
 			"code": [
 				[
 					"git stash show"
