@@ -895,7 +895,7 @@
 			"url": "command-git",
 			"name": "mark-conflicts-resolved",
 			"title": "Git. Mark that the conflict is resolved",
-			"description": "<p>Steps to follow after resolving a conflict in the files:<ul><li>Add all files to the index zone</li><li>View the status of the files (modified/deleted/added)</li><li>Create a commit with those changes indicating a description of what has been done.</li></ul></p>",
+			"description": "<p>Steps to follow after resolving a conflict in the files:<ul><li>Add all files to the index zone</li><li>View the status of the files (modified/deleted/added)</li><li>Create a commit with those changes, indicating a description of what has been done.</li></ul></p>",
 			"code": [
 				"git add .",
 				"git status",
