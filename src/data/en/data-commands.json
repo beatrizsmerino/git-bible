@@ -379,7 +379,7 @@
 			"url": "command-git",
 			"name": "commit-particular-file-on-index",
 			"title": "Git. Make a confirmation of only one file in the staging area",
-			"description": "<p>If you have several files added to the <strong>staging area</strong> and you regret it, because you only want to commit one particular file, you can select the file and commit only the changes to it.</p>",
+			"description": "<p>If you have several files added to the <strong>staging area</strong>, and you regret it, because you only want to commit one particular file, you can select the file and commit only the changes to it.</p>",
 			"code": [
 				"git <FILE_NAME>",
 				"git commit -am <COMMIT_MESSAGE>"
