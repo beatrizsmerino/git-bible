@@ -249,7 +249,7 @@
 			"url": "command-git",
 			"name": "summary-branches",
 			"title": "Git. Show branches and their commits",
-			"description": "<p>It shows us a summary of all the branches that are in a project, together with their last modifications or commits.</p><p><a href='https://git-scm.com/docs/git-show-branch' target='_blank'>Saber más</a></p>",
+			"description": "<p>It shows us a summary of all the branches that are in a project, together with their last modifications or commits.</p><p><a href='https://git-scm.com/docs/git-show-branch' target='_blank'>Know more</a></p>",
 			"code": [
 				[
 					"git show-branch"
