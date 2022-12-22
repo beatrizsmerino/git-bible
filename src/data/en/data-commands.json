@@ -688,7 +688,7 @@
 			"url": "command-git",
 			"name": "move-to-branch",
 			"title": "Git. Move to the branch",
-			"description": "<p>When you try move to a local branch that does not exist, this command will search to see if there is a remote-tracking branch with a similar name. If so, it will create the local branch and set it up to track the remote-tracking branch.</p>",
+			"description": "<p>When you try to move to a local branch that does not exist, this command will search to see if there is a remote-tracking branch with a similar name. If so, it will create the local branch and set it up to track the remote-tracking branch.</p>",
 			"code": "git checkout <BRANCH_NAME>"
 		},
 		{
