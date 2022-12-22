@@ -470,7 +470,7 @@
 			"url": "command-git",
 			"name": "get-stash-list",
 			"title": "Git. Get a list of saved stash",
-			"description": "<p>When you have a lot of snapshots saved, you'll want to see a list of all of them, so you can select them. The message and id, which by default come from the confirmation, will help you differentiate them.</br>It is advisable to clean the stash or delete those snapshots that we do not need so as not to accumulate them.</p>",
+			"description": "<p>When you have a lot of snapshots saved, you'll want to see a list of all of them, so you can select them. The message and ID, which by default come from the confirmation, will help you differentiate them.</br>It is advisable to clean the stash or delete those snapshots that we do not need so as not to accumulate them.</p>",
 			"code": "git stash list"
 		},
 		{
