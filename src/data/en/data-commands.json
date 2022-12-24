@@ -1118,7 +1118,7 @@
 			"url": "command-git-flow",
 			"name": "gitflow-release-list",
 			"title": "Git Flow. Get a release list",
-			"description": "<p>You can see a list all the current release branches created on the local repository.</p>",
+			"description": "<p>You can see a list of all the current release branches created on the local repository.</p>",
 			"code": "git flow release list"
 		},
 		{
