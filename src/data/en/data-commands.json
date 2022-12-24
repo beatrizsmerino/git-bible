@@ -1134,7 +1134,7 @@
 			"url": "command-git-flow",
 			"name": "gitflow-release-track",
 			"title": "Git Flow. Track a release",
-			"description": "<p>You can track the changes a release published on remote repository.</p>",
+			"description": "<p>You can track the changes of a release published on remote repository.</p>",
 			"code": "git flow release track <VERSION_NUMBER>"
 		},
 		{
