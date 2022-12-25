@@ -87,7 +87,7 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "change-autor-email-last-commits",
-			"title": "Git. Cambiar el nombre y el correo electrónico del autor de el último 'commit'",
+			"title": "Git. Cambiar el nombre y el correo electrónico del autor del último 'commit'",
 			"description": "<p>Si te has equivocado y has hecho tu 'commit' con otro nombre o correo electrónico puedes sobrescribir la información del autor sólo del último 'commit' con este comando.</p>",
 			"code": "git commit --amend --author='<USER_NAME> <USER_EMAIL>'"
 		},
