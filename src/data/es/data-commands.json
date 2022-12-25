@@ -13,7 +13,7 @@
 			"url": "command-git",
 			"name": "create-git-repository",
 			"title": "Git. Inicializar un repositorio Git",
-			"description": "<p>Un repositorio Git es un almacén virtual, te permite guardar versiones del código de tu proyecto a las que puedes acceder siempre que lo necesites. El siguiente comando, utilizado sólo una vez durante la configuración inicial de un nuevo repositorio, creará un nuevo subdirectorio <code>.git</code> en tu directorio de trabajo actual y una nueva rama <code>master</code>.</p><p><a href='https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-init' target='_blank'>Saber más</a></p>",
+			"description": "<p>Un repositorio Git es un almacén virtual, te permite guardar versiones del código de tu proyecto a las que puedes acceder siempre que lo necesites. El siguiente comando, utilizado solo una vez durante la configuración inicial de un nuevo repositorio, creará un nuevo subdirectorio <code>.git</code> en tu directorio de trabajo actual y una nueva rama <code>master</code>.</p><p><a href='https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-init' target='_blank'>Saber más</a></p>",
 			"code": "git init"
 		},
 		{
