@@ -154,7 +154,7 @@
 			"url": "command-git",
 			"name": "get-commits-range",
 			"title": "Git. Obtener 'commits' entre rangos",
-			"description": "<p>La forma más común de especificar un rango de 'commits' es mediante la sintaxis de doble punto.</p><p>Esto, por ejemplo, suele usarse para obtener un rango concreto de 'commits' seleccionando la posición que ocupan en el histórico.</p><p>O por otro lado si seleccionamos 2 ramas mostrará todos los 'commits' de la primera rama que no aparecen en la segunda. Esto es útil para previsualizar lo que se está a punto de fusionar o para ver lo que se está a punto de publicar en el repositorio remoto.</p><p><a href='https://git-scm.com/book/es/v2/Herramientas-de-Git-Revisi%C3%B3n-por-selecci%C3%B3n#r_commit_ranges' target='_blank'>Saber más</a></p>",
+			"description": "<p>La forma más común de especificar un rango de 'commits' es mediante la sintaxis de doble punto.</p><p>Esto, por ejemplo, suele usarse para obtener un rango concreto de 'commits' seleccionando la posición que ocupan en el histórico.</p><p>O, por otro lado, si seleccionamos 2 ramas mostrará todos los 'commits' de la primera rama que no aparecen en la segunda. Esto es útil para previsualizar lo que se está a punto de fusionar o para ver lo que se está a punto de publicar en el repositorio remoto.</p><p><a href='https://git-scm.com/book/es/v2/Herramientas-de-Git-Revisi%C3%B3n-por-selecci%C3%B3n#r_commit_ranges' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
 					"git log master~<POSITION_NUMBER>..master~<POSITION_NUMBER>"
