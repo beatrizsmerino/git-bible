@@ -503,7 +503,7 @@
 			"url": "command-git",
 			"name": "create-stash-branch",
 			"title": "Git. Crear una rama a partir de un 'stash'",
-			"description": "<p>Este es un buen atajo para recuperar el código almacenado en 'stash' indicado y crear una nueva rama para trabajar en el por separado. Este comando crea una nueva rama con el último 'stash' (<code>stash@{0}</code>), y luego lo borra (<code>git stash pop</code>). Si necesitas un 'stash' en particular puedes especificar el id del 'stash'.</p><p>Esto será útil cuando te encuentres con conflictos después de haber aplicado el 'stash' a la última versión de tu rama.</p><p><a href='https://www.freecodecamp.org/news/useful-tricks-you-might-not-know-about-git-stash-e8a9490f0a1a/' target='_blank'>Saber más</a></p>",
+			"description": "<p>Este es un buen atajo para recuperar el código almacenado en 'stash' indicado y crear una nueva rama para trabajar en él por separado. Este comando crea una nueva rama con el último 'stash' (<code>stash@{0}</code>), y luego lo borra (<code>git stash pop</code>). Si necesitas un 'stash' en particular puedes especificar el id del 'stash'.</p><p>Esto será útil cuando te encuentres con conflictos después de haber aplicado el 'stash' a la última versión de tu rama.</p><p><a href='https://www.freecodecamp.org/news/useful-tricks-you-might-not-know-about-git-stash-e8a9490f0a1a/' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
 					"git stash branch <BRANCH_NAME>"
