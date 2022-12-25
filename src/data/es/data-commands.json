@@ -390,7 +390,7 @@
 			"url": "command-git",
 			"name": "overwrite-last-commit",
 			"title": "Git. Sobrescribir el último 'commit'",
-			"description": "<p>Si un mensaje o archivo de 'commit' contiene información poco clara, incorrecta, sensible o que falta, puedes corregirlo localmente y crear un 'commit' con un nuevo mensaje.</br>Al ejecutar este comando se abrirá un editor de texto y te pedirá que edites el mensaje y guardes el 'commit'. Este proceso cambiará el ID de el 'commit', creando una nueva 'commit' que sustituye a la anterior.</p><p><a href='https://blog.kirei.io/buenas-pr%C3%A1cticas-para-los-mensajes-de-commit-en-git-a9fc43a83821' target='_blank'>Saber más</a></p>",
+			"description": "<p>Si un mensaje o archivo de 'commit' contiene información poco clara, incorrecta, sensible o que falta, puedes corregirlo localmente y crear un 'commit' con un nuevo mensaje.</br>Al ejecutar este comando se abrirá un editor de texto y te pedirá que edites el mensaje y guardes el 'commit'. Este proceso cambiará el ID del 'commit', creando una nueva 'commit' que sustituye a la anterior.</p><p><a href='https://blog.kirei.io/buenas-pr%C3%A1cticas-para-los-mensajes-de-commit-en-git-a9fc43a83821' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
 					"git commit --amend"
