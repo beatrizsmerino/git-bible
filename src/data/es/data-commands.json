@@ -518,7 +518,7 @@
 			"url": "command-git",
 			"name": "show-stash",
 			"title": "Git. Mostrar las diferencias del 'stash'",
-			"description": "<p>La opción <code>show</code> del comando <code>stash</code> ofrece un resumen muy breve de los cambios realizados en los archivos. Muestra en una línea la ruta y el nombre del fichero, y el número de líneas eliminadas.</p><p>Por defecto, muestra la información del último 'stash' (<code>stash@{0}</code>), pero podemos indicar un número de índice para ver algún otro.</p><p>Si queremos profundizar y ver todos los cambios de cada línea del fichero en el editor del terminal podemos utilizar la opción <code>-p</code>.</p><p><a href='https://howto.lintel.in/how-to-see-stashed-changes-using-git-stash/' target='_blank'>Saber más</a></p>",
+			"description": "<p>La opción <code>show</code> del comando <code>stash</code> ofrece un resumen muy breve de los cambios realizados en los archivos. Muestra en una línea la ruta y el nombre del fichero, y el número de líneas eliminadas.</p><p>Por defecto, muestra la información del último 'stash' (<code>stash@{0}</code>), pero podemos indicar un número de índice para ver algún otro.</p><p>Si queremos profundizar y ver todos los cambios de cada línea del fichero en el editor del terminal, podemos utilizar la opción <code>-p</code>.</p><p><a href='https://howto.lintel.in/how-to-see-stashed-changes-using-git-stash/' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
 					"git stash show"
