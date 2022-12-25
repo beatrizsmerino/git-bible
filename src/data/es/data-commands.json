@@ -379,7 +379,7 @@
 			"url": "command-git",
 			"name": "commit-particular-file-on-index",
 			"title": "Git. Confirmar un solo archivo en el área preparación",
-			"description": "<p>Si tiene varios archivos añadidos al <strong>staging area</strong> y se arrepiente, porque solo quiere añadir un archivo en particular, puede seleccionar el archivo y hacer un 'commit' sólo de sus cambios.</p>",
+			"description": "<p>Si tiene varios archivos añadidos al <strong>staging area</strong> y se arrepiente, porque solo quiere añadir un archivo en particular, puede seleccionar el archivo y hacer un 'commit' solo de sus cambios.</p>",
 			"code": [
 				"git <FILE_NAME>",
 				"git commit -am <COMMIT_MESSAGE>"
