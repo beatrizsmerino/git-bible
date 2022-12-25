@@ -470,7 +470,7 @@
 			"url": "command-git",
 			"name": "get-stash-list",
 			"title": "Git. Obtener una lista de los 'stash' guardados",
-			"description": "<p>Cuando tienes muchas instantáneas guardadas, te conviene ver una lista de todas ellas para poder seleccionarlas. El mensaje y el id, que por defecto vienen del 'commit', te ayudarán a diferenciarlos.</br>Es recomendable limpiar el alijo o borrar aquellas instantáneas que no necesitemos para no acumularlas.</p>",
+			"description": "<p>Cuando tienes muchas instantáneas guardadas, te conviene ver una lista de todas ellas para poder seleccionarlas. El mensaje y el ID, que por defecto vienen del 'commit', te ayudarán a diferenciarlos.</br>Es recomendable limpiar el alijo o borrar aquellas instantáneas que no necesitemos para no acumularlas.</p>",
 			"code": "git stash list"
 		},
 		{
