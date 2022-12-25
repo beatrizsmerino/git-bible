@@ -363,7 +363,7 @@
 			"url": "command-git",
 			"name": "create-commit",
 			"title": "Git. Crear un 'commit' con un mensaje",
-			"description": "<p>Los 'commits' se crean para capturar el estado de uno o más archivos del proyecto en un momento determinado. Son un <strong>conjunto de cambios</strong>, instantáneas o hitos en la historia de un proyecto Git. Cada 'commit' contiene la fecha en que se hizo, los cambios de cada archivo, la información del autor, un mensaje que describe el contenido del 'commit' y un identificador único (<code>SHA-1</code>) para referenciar este 'commit'.</p><p>Este comando sólo incluye las modificaciones de los archivos rastreados (aquellos que han sido añadidos con <code>git add</code> en algún momento de su historia). La opción <code>-m</code> o <code>--message</code> sirve para indicar el mensaje del 'commit'.</p>",
+			"description": "<p>Los 'commits' se crean para capturar el estado de uno o más archivos del proyecto en un momento determinado. Son un <strong>conjunto de cambios</strong>, instantáneas o hitos en la historia de un proyecto Git. Cada 'commit' contiene la fecha en que se hizo, los cambios de cada archivo, la información del autor, un mensaje que describe el contenido del 'commit' y un identificador único (<code>SHA-1</code>) para referenciar este 'commit'.</p><p>Este comando solo incluye las modificaciones de los archivos rastreados (aquellos que han sido añadidos con <code>git add</code> en algún momento de su historia). La opción <code>-m</code> o <code>--message</code> sirve para indicar el mensaje del 'commit'.</p>",
 			"code": "git commit -m '<COMMIT_MESSAGE>'"
 		},
 		{
