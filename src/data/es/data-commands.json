@@ -189,7 +189,7 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "show-commits-of-file",
-			"title": "Git. Mostrar sólo los 'commits' en los que está involucrado un archivo",
+			"title": "Git. Mostrar solo los 'commits' en los que está involucrado un archivo",
 			"description": "<p>Muestra todos los 'commits' en los que se ha modificado el archivo indicado.</p>",
 			"code": "git log --oneline -- <FILE_NAME>"
 		},
