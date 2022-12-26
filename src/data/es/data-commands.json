@@ -1126,7 +1126,7 @@
 			"url": "command-git-flow",
 			"name": "gitflow-release-publish",
 			"title": "Git Flow. Publicar una 'release'",
-			"description": "<p>Si esta trabajando en equipo y otro de sus compañeros debe revisar el código antes del lanzamiento de una nueva versión, es aconsejable publicar la rama de lanzamiento después de crearla para permitir que otros desarrolladores hagan 'commits' de lanzamiento.</p>",
+			"description": "<p>Si está trabajando en equipo y otro de sus compañeros debe revisar el código antes del lanzamiento de una nueva versión, es aconsejable publicar la rama de lanzamiento después de crearla para permitir que otros desarrolladores hagan 'commits' de lanzamiento.</p>",
 			"code": "git flow release publish <VERSION_NUMBER>"
 		},
 		{
