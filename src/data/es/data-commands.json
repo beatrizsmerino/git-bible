@@ -1158,7 +1158,7 @@
 			"url": "command-git-flow",
 			"name": "gitflow-tags-push",
 			"title": "Git Flow. Publicar todas las etiquetas",
-			"description": "<p>Puedes añadir todas las etiquetas al repositorio remoto con un solo comando. Esta forma no se recomienda porque es común que los desarrolladores tengan etiquetas viejas o 'malas' en sus repositorios locales que no tienen necesidad de estar en el remoto, por lo que se aconseja sólo empujar explícitamente una etiqueta y no todas sus etiquetas a la vez.</p>",
+			"description": "<p>Puedes añadir todas las etiquetas al repositorio remoto con un solo comando. Esta forma no se recomienda porque es común que los desarrolladores tengan etiquetas viejas o 'malas' en sus repositorios locales que no tienen necesidad de estar en el remoto, por lo que se aconseja solo empujar explícitamente una etiqueta y no todas sus etiquetas a la vez.</p>",
 			"code": "git push <REPO_NAME> --tags"
 		},
 		{
