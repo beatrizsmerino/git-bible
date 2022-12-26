@@ -1174,7 +1174,7 @@
 			"url": "command-git-flow",
 			"name": "gitflow-hotfix-finish",
 			"title": "Git Flow. Terminar un 'hotfix'",
-			"description": "<p>Cuando se han realizado todas las correciones en una rama <code>hotfix</code>, hay que realizar el siguiente comando para finalizar la rama. Este proceso fusiona la rama de nuevo con <code>develop</code> y <code>master</code>, crea una etiqueta con el número de versión del <code>hotfix</code> y elimina dicha rama, ya que su existencia es temporal.</p>",
+			"description": "<p>Cuando se han realizado todas las correcciones en una rama <code>hotfix</code>, hay que realizar el siguiente comando para finalizar la rama. Este proceso fusiona la rama de nuevo con <code>develop</code> y <code>master</code>, crea una etiqueta con el número de versión del <code>hotfix</code> y elimina dicha rama, ya que su existencia es temporal.</p>",
 			"code": "git flow hotfix finish <VERSION_NUMBER>"
 		}
 	]
