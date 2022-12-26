@@ -1062,7 +1062,7 @@
 			"url": "command-git-flow",
 			"name": "gitflow-feature-publish",
 			"title": "Git Flow. Publicar una 'feature'",
-			"description": "<p>Normalmente las <code>feature</code> existen solamente en los repositorios locales de los desarrolladores y no en el repositorio origen. Si quieres compartir esta rama con algunos miembros de tu equipo para poder hacer un desarrollo colaborativo, tendrías que publicar la <code>feature</code> en el servidor remoto para que pueda ser utilizada por otros usuarios.</p>",
+			"description": "<p>Normalmente, las <code>feature</code> existen solamente en los repositorios locales de los desarrolladores y no en el repositorio origen. Si quieres compartir esta rama con algunos miembros de tu equipo para poder hacer un desarrollo colaborativo, tendrías que publicar la <code>feature</code> en el servidor remoto para que pueda ser utilizada por otros usuarios.</p>",
 			"code": "git flow feature publish <FEATURE_NAME>"
 		},
 		{
