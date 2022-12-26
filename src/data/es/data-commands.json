@@ -1086,7 +1086,7 @@
 			"url": "command-git-flow",
 			"name": "gitflow-feature-finish",
 			"title": "Git Flow. Terminar una 'feature'",
-			"description": "<p>Cuando se finaliza el desarrollo de la nueva función, se deberá fusionar con <code>develop</code> y eliminarse del repositorio local y del remoto si llego a subirse.</p><p>El siguiente comando realiza los siguientes commandos:<ul><li><code>git checkout develop</code></li><li><code>git merge feature/&lt;FEATURE_NAME&gt;</code></li><li><code>git branch -D &lt;FEATURE_NAME&gt;</code></li><li><code>git push origin :&lt;FEATURE_NAME&gt;</code></li></ul></p>",
+			"description": "<p>Cuando se finaliza el desarrollo de la nueva función, se deberá fusionar con <code>develop</code> y eliminarse del repositorio local y del remoto si llego a subirse.</p><p>El siguiente comando realiza los siguientes comandos:<ul><li><code>git checkout develop</code></li><li><code>git merge feature/&lt;FEATURE_NAME&gt;</code></li><li><code>git branch -D &lt;FEATURE_NAME&gt;</code></li><li><code>git push origin :&lt;FEATURE_NAME&gt;</code></li></ul></p>",
 			"code": "git flow feature finish <FEATURE_NAME>"
 		},
 		{
