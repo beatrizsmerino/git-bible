@@ -138,7 +138,7 @@
 			"url": "command-git",
 			"name": "get-commits-oneline-graph",
 			"title": "Git. Obtener todos los 'commits' realizados en un gráfico",
-			"description": "<p>Este comando condensa la información de cada 'commit' en una sola línea, mostrando solo el ID del 'commit' y la primera línea del mensaje del 'commit', resaltando todas las referencias (ramas, etiquetas...).</p><p>Dibuja una representación gráfica <em>ASCII</em> de la estructura del historial de 'commit'. Imprime líneas adicionales entre los 'commits', para que el gráfico del historial se dibuje correctamente, y utiliza asteriscos para mostrar en qué rama estaba el 'commit'.</p><p><a href='https://www.atlassian.com/git/tutorials/git-log' target='_blank'>Saber más</a></p>",
+			"description": "<p>Este comando condensa la información de cada 'commit' en una sola línea, mostrando solo el ID del 'commit' y la primera línea del mensaje del 'commit', resaltando todas las referencias (ramas, etiquetas…).</p><p>Dibuja una representación gráfica <em>ASCII</em> de la estructura del historial de 'commit'. Imprime líneas adicionales entre los 'commits', para que el gráfico del historial se dibuje correctamente, y utiliza asteriscos para mostrar en qué rama estaba el 'commit'.</p><p><a href='https://www.atlassian.com/git/tutorials/git-log' target='_blank'>Saber más</a></p>",
 			"code": "git log --oneline --graph --decorate"
 		},
 		{
