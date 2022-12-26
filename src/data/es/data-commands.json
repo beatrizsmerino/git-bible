@@ -1054,7 +1054,7 @@
 			"url": "command-git-flow",
 			"name": "gitflow-feature-list",
 			"title": "Git Flow. Obtener la lista de 'features'",
-			"description": "<p>Puedes ver una lista de las ramas <code>feature</code> ya creadas en el repositorio local usando el siguiente commando.</p>",
+			"description": "<p>Puedes ver una lista de las ramas <code>feature</code> ya creadas en el repositorio local usando el siguiente comando.</p>",
 			"code": "git flow feature list"
 		},
 		{
