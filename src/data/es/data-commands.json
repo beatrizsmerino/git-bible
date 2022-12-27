@@ -270,7 +270,7 @@
 			"url": "command-git",
 			"name": "show-date-commit",
 			"title": "Git. Mostrar fecha de 'commit'",
-			"description": "<p>Un 'commit' tiene 2 tipos de fechas: la fecha del autor y la fecha del 'commit'.<ul><li>La <strong>fecha del autor</strong> indica cuándo se realizó originalmente esta confirmación, es decir, cuándo se realizó por primera vez el <code>git commit</code>.</li><li>La <strong>fecha de confirmación</strong> cambia cada vez que se modifica la confirmación, por ejemplo, cuando se sobreescribe el 'commit' con <code>git commit --amend</code></li></ul></p><p>Con el siguiente comando podemos formatear la información de salida de un 'commit' (2020-12-03 19:28:49 +0100).<ul><li><code>%ai</code>: <strong>fecha del autor</strong>, <em>ISO 8601-like</em> format</li><li><code>%ci</code>: <strong>fecha del commit</strong>, <em>ISO 8601-like</em> format</li></ul></p>",
+			"description": "<p>Un 'commit' tiene 2 tipos de fechas: la fecha del autor y la fecha del 'commit'.<ul><li>La <strong>fecha del autor</strong> indica cuándo se realizó originalmente esta confirmación, es decir, cuándo se realizó por primera vez el <code>git commit</code>.</li><li>La <strong>fecha de confirmación</strong> cambia cada vez que se modifica la confirmación, por ejemplo, cuando se sobreescribe el 'commit' con <code>git commit --amend</code></li></ul></p><p>Con el siguiente comando, podemos formatear la información de salida de un 'commit' (2020-12-03 19:28:49 +0100).<ul><li><code>%ai</code>: <strong>fecha del autor</strong>, <em>ISO 8601-like</em> format</li><li><code>%ci</code>: <strong>fecha del commit</strong>, <em>ISO 8601-like</em> format</li></ul></p>",
 			"code": "git show -s --format=%ci <COMMIT_ID>"
 		},
 		{
