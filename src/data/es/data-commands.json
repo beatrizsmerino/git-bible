@@ -146,7 +146,7 @@
 			"url": "command-git",
 			"name": "get-commit-without-merges",
 			"title": "Git. Obtener todos los 'commits' realizados, ocultando los 'commits' de fusión",
-			"description": "<p>Un <code>merge</code> es el resultado de fusionar 2 o más ramas. En ocasiones, con esa fusión se genera un 'commit' extra llamado <code>merge commit</code>. La información de este 'commit' contiene una mezcla de todos los cambios realizados en ambas ramas, esto puede resultar confuso. Podemos mostrar la lista de 'commits' sin ellos con este comando.</p>",
+			"description": "<p>Un <code>merge</code> es el resultado de fusionar 2 o más ramas. En ocasiones, con esa fusión, se genera un 'commit' extra llamado <code>merge commit</code>. La información de este 'commit' contiene una mezcla de todos los cambios realizados en ambas ramas, esto puede resultar confuso. Podemos mostrar la lista de 'commits' sin ellos con este comando.</p>",
 			"code": "git log --oneline --no-merges"
 		},
 		{
