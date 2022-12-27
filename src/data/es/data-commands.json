@@ -21,7 +21,7 @@
 			"url": "command-git",
 			"name": "show-configuration",
 			"title": "Git. Mostrar la configuración",
-			"description": "<p>Para visualizar nuestra configuración actual debemos saber que toda la configuración se guarda en el archivo <code>.gitconfig</code>, que se encuentra en: si eres <strong>Linux</strong> en el usuario <code>HOME</code> o si estás en <strong>Windows</strong> en <code>C:Users</code> o si eres <strong>Mac</strong> escribiendo en la <strong>consola</strong> <code>git config --list --show-origin</code>.</p>",
+			"description": "<p>Para visualizar nuestra configuración actual, debemos saber que toda la configuración se guarda en el archivo <code>.gitconfig</code>, que se encuentra en: si eres <strong>Linux</strong> en el usuario <code>HOME</code> o si estás en <strong>Windows</strong> en <code>C:Users</code> o si eres <strong>Mac</strong> escribiendo en la <strong>consola</strong> <code>git config --list --show-origin</code>.</p>",
 			"code": [
 				[
 					"git config -l"
