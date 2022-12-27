@@ -39,7 +39,7 @@
 			"url": "command-git",
 			"name": "config-user-name-email",
 			"title": "Git. Configure the name and email of user",
-			"description": "<p>Git is a <strong>distributed version control system</strong> that’s being used by most software teams today. The first thing you should do after installing Git on your system is to configure your Git username and email address. Git associate your identity with every commit you make.</p><p>Git allows you to set a global, per-project username and email address. If you change the name and email during repository development, the changes only affect future commits, the name and email associated with commits you made prior to the change are not affected.</p><p>You can set or change your Git identity using the following command.</p>",
+			"description": "<p>Git is a <strong>distributed version control system</strong> that’s being used by most software teams today. The first thing you should do after installing Git on your system is to configure your Git username and email address. Git associate your identity with every commit you make.</p><p>Git allows you to set a global username and email address per-project. If you change the name and email during repository development, the changes only affect future commits, the name and email associated with commits you made prior to the change are not affected.</p><p>You can set or change your Git identity using the following command.</p>",
 			"code": [
 				[
 					"git config --global user.name <USER_NAME>"
