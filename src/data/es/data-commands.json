@@ -322,7 +322,7 @@
 			"url": "command-git",
 			"name": "show-status-files",
 			"title": "Git. Mostrar el estado de los archivos en un directorio Git",
-			"description": "<p>Ejecutando este comando podemos ver la rama en la que nos encontramos y los archivos que contiene el área de preparación junto con su estado (nuevo/modificado/borrado). También nos avisa de los archivos no rastreados por Git (untracked) o de los archivos con conflictos.</p>",
+			"description": "<p>Ejecutando este comando, podemos ver la rama en la que nos encontramos, y los archivos que contiene el área de preparación junto con su estado (nuevo/modificado/borrado). También nos avisa de los archivos no rastreados por Git (untracked) o de los archivos con conflictos.</p>",
 			"code": "git status"
 		},
 		{
