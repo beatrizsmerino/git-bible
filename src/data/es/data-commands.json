@@ -5,7 +5,7 @@
 			"url": "command-git",
 			"name": "get-git-version",
 			"title": "Git. Obtener la versión de Git",
-			"description": "<p>Antes de instalar Git, es conveniente comprobar si ya lo tienes instalado mediante el siguiente comando, que te devolverá el número de versión instalado en tu ordenador. Si no es así, sigue los pasos descritos en este <a href='https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git' target='_blank'>enlace</a> en función de tu sistema operativo.</p>",
+			"description": "<p>Antes de instalar Git, es conveniente comprobar si ya lo tienes instalado mediante el siguiente comando, que te devolverá el número de versión instalado en tu ordenador. Si no es así, sigue los pasos descritos en este <a href='https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git' target='_blank'>enlace</a>, en función de tu sistema operativo.</p>",
 			"code": "git --version"
 		},
 		{
