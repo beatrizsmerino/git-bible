@@ -756,7 +756,7 @@
 			"url": "command-git",
 			"name": "rename-remote-branch",
 			"title": "Git. Rename a remote branch",
-			"description": "<p>Let's say you are collaborating on a project with a group of people, and you have defined a naming convention for Git branches. You created a new branch, pushed the changes to the remote repository, and realized that your branch name was incorrect. Luckily, Git allows you to rename the branch local and remote very easily using several commands or doing the same thing with just one.</p><p><a href='https://linuxize.com/post/how-to-rename-local-and-remote-git-branch/' target='_blank'>Know more</a></p>",
+			"description": "<p>Let's say you are collaborating on a project with a group of people, and you have defined a naming convention for Git branches. You created a new branch, pushed the changes to the remote repository, and realized that your branch name was incorrect. Luckily, Git allows you to rename the branch local and remote very easily, using several commands or doing the same thing with just one.</p><p><a href='https://linuxize.com/post/how-to-rename-local-and-remote-git-branch/' target='_blank'>Know more</a></p>",
 			"code": [
 				[
 					"git checkout <OLD_BRANCH_NAME>",
