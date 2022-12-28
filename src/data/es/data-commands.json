@@ -348,7 +348,7 @@
 			"url": "command-git",
 			"name": "rename-file-track",
 			"title": "Git. Renombrar y rastrear el archivo",
-			"description": "<p>Este comando funciona igual que el comando <code>git rm</code>.</p><p>Los siguientes comandos hacen:<ul><li><code>mv</code>: Modificar el nombre de un archivo sin que el Git lo añada al área de preparación.</li><li><code>git mv</code>: Modificar el nombre de un archivo y que Git rastree este cambio. Después de esto, si hacemos un <code>git status</code>, aparecerá como renombrado.</li></ul></p>",
+			"description": "<p>Este comando funciona igual que el comando <code>git rm</code>.</p><p>Los siguientes comandos hacen:<ul><li><code>mv</code>: Modificar el nombre de un archivo sin que el Git, lo añada al área de preparación.</li><li><code>git mv</code>: Modificar el nombre de un archivo y que Git rastree este cambio. Después de esto, si hacemos un <code>git status</code>, aparecerá como renombrado.</li></ul></p>",
 			"code": [
 				[
 					"mv <OLD_FILE_NAME> <NEW_FILE_NAME>"
