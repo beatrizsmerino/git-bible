@@ -999,7 +999,7 @@
 			"url": "command-git",
 			"name": "update-local-tags",
 			"title": "Git. Actualizar etiquetas remotas",
-			"description": "<p>Si tu proyecto es de código abierto, probablemente tendrás que actualizar el estado de tu repositorio local de vez en cuando, ya que otras personas pueden haber eliminado o renombrado algunas etiquetas mientras estabas trabajando y ahora puedes tener etiquetas locales obsoletas.</p><p>Este comando poda las etiquetas que ya no existen en el repositorio remoto pero sí en tu repositorio local.</p>",
+			"description": "<p>Si tu proyecto es de código abierto, probablemente tendrás que actualizar el estado de tu repositorio local de vez en cuando, ya que otras personas pueden haber eliminado o renombrado algunas etiquetas mientras estabas trabajando, y ahora puedes tener etiquetas locales obsoletas.</p><p>Este comando poda las etiquetas que ya no existen en el repositorio remoto, pero sí en tu repositorio local.</p>",
 			"code": "git pull --prune --tags"
 		}
 	],
