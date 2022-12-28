@@ -435,7 +435,7 @@
 			"url": "command-git",
 			"name": "revert-commit",
 			"title": "Git. Revertir los cambios de un 'commit' y crear uno nuevo",
-			"description": "<p>Este comando nos permite crear un 'commit' con los cambios revertidos de la referencia indicada, es decir, si tenemos un 'commit' que añadía una línea y borraba dos, ahora estamos creando otro 'commit' que borra la línea añadida y añade las dos borradas.</br>Tras ejecutar este comando en la consola, nos pedirá el mensaje y creará un nuevo 'commit'.</p>",
+			"description": "<p>Este comando nos permite crear un 'commit' con los cambios revertidos de la referencia indicada. En otras palabras, si tenemos un 'commit' que añadía una línea y borraba dos, ahora estamos creando otro 'commit' que borra la línea añadida y añade las dos borradas.</br>Tras ejecutar este comando en la consola, nos pedirá el mensaje y creará un nuevo 'commit'.</p>",
 			"code": "git revert <COMMIT_ID>"
 		},
 		{
