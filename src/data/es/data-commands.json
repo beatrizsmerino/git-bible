@@ -1039,7 +1039,7 @@
 			"url": "command-git-flow",
 			"name": "gitflow-feature-start",
 			"title": "Git Flow. Iniciar una nueva 'feature'",
-			"description": "<p>Cuando se va a desarrollar una nueva funcionalidad o característica del proyecto se crea una nueva rama llamada <code>feature</code>. Este tipo de ramas nacen a partir de la rama <code>develop</code> y una vez terminado su desarrollo, se incorporan nuevamente a ella.</p><p>El siguiente comando es un atajo, que engloba la ejecución de varios comandos:<ul><li><code>git checkout develop</code></li><li><code>git branch feature/&lt;BRANCH_NAME&gt;</code></li><li><code>git checkout feature/&lt;BRANCH_NAME&gt;</code></li></ul></p>",
+			"description": "<p>Cuando se va a desarrollar una nueva funcionalidad o característica del proyecto, se crea una nueva rama llamada <code>feature</code>. Este tipo de ramas nacen a partir de la rama <code>develop</code> y una vez terminado su desarrollo, se incorporan nuevamente a ella.</p><p>El siguiente comando es un atajo, que engloba la ejecución de varios comandos:<ul><li><code>git checkout develop</code></li><li><code>git branch feature/&lt;BRANCH_NAME&gt;</code></li><li><code>git checkout feature/&lt;BRANCH_NAME&gt;</code></li></ul></p>",
 			"code": [
 				[
 					"git flow feature start <FEATURE_NAME>"
