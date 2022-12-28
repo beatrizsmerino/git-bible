@@ -363,7 +363,7 @@
 			"url": "command-git",
 			"name": "create-commit",
 			"title": "Git. Create a commit with a message",
-			"description": "<p>Commits are created to capture the status of one or more project files at a particular time. They are a <strong>changeset</strong>, snapshots or milestones in the history of a Git project. Each commit contains the date it was made, the changes of each file, the author information, a message describing the content of the commit, and a unique identifier (<code>SHA-1</code>) to reference this commit.</p><p>This command only includes modifications to tracked files (those that have been added with <code>git add</code> at some point in their history). The <code>-m</code> or <code>--message</code> option is used to indicate the commit message.</p>",
+			"description": "<p>Commits are created to capture the status of one or more project files at a particular time. They are a <strong>changeset</strong>, snapshots or milestones in the history of a Git project. Each commit contains the date it was made, the changes of each file, the author information, a message describing the content of the commit and a unique identifier (<code>SHA-1</code>) to reference this commit.</p><p>This command only includes modifications to tracked files (those that have been added with <code>git add</code> at some point in their history). The <code>-m</code> or <code>--message</code> option is used to indicate the commit message.</p>",
 			"code": "git commit -m '<COMMIT_MESSAGE>'"
 		},
 		{
