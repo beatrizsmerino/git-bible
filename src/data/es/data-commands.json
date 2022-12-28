@@ -696,7 +696,7 @@
 			"url": "command-git",
 			"name": "create-and-move-to-branch",
 			"title": "Git. Crear y moverse a una rama",
-			"description": "<p>Debes utilizar una rama distinta para cada función o problema en el que trabajes. Con este comando se hacen 2 pasos a la vez, crear y moverse a la rama para que todos los cambios que hagas se apliquen a ella.</br>La opción <code>-b</code> le dice a Git que la cree si no existe ya, de lo contrario, se restablece, es decir, la rama no se restablece/crea a menos que <code>git checkout</code> tenga éxito.</p>",
+			"description": "<p>Debes utilizar una rama distinta para cada función o problema en el que trabajes. Con este comando, se hacen 2 pasos a la vez, crear y moverse a la rama para que todos los cambios que hagas se apliquen a ella.</br>La opción <code>-b</code> le dice a Git que la cree si no existe ya, de lo contrario, se restablece, es decir, la rama no se restablece/crea a menos que <code>git checkout</code> tenga éxito.</p>",
 			"code": [
 				[
 					"git checkout -B <NEW_BRANCH_NAME>"
