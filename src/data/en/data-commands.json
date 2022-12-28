@@ -711,7 +711,7 @@
 			"url": "command-git",
 			"name": "extract-files-from-staging-area",
 			"title": "Git. Extract files from the staging area",
-			"description": "<p>If I have already added the file with a <code>git add</code> to the <strong>staging area</strong>, but don't want to commit it yet, and want to remove it from this zone, these are some ways to solve it:<ul><li><code>git reset &lt;FILE_NAME&gt;</code>: If changes have been made and added to the <strong>staging area</strong>.</li><li><code>git rm --cached &lt;FILE_NAME&gt;</code>: If I have not launched a commit yet, and therefore, the <code>HEAD</code> pointer has not been created.</li><li><code>git reset HEAD &lt;FILE_NAME&gt;</code>: If I've already launched my first commit, i.e., there's a HEAD pointer. Git moves between the commits, always pointing to the last one created.</li></ul></p>",
+			"description": "<p>If I have already added the file with a <code>git add</code> to the <strong>staging area</strong>, but don't want to commit it yet, and want to remove it from this zone, these are some ways to solve it:<ul><li><code>git reset &lt;FILE_NAME&gt;</code>: If changes have been made and added to the <strong>staging area</strong>.</li><li><code>git rm --cached &lt;FILE_NAME&gt;</code>: If I have not launched a commit yet and, therefore, the <code>HEAD</code> pointer has not been created.</li><li><code>git reset HEAD &lt;FILE_NAME&gt;</code>: If I've already launched my first commit, i.e., there's a HEAD pointer. Git moves between the commits, always pointing to the last one created.</li></ul></p>",
 			"code": [
 				[
 					"git reset <FILE_NAME>"
