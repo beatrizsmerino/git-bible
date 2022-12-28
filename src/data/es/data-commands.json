@@ -895,7 +895,7 @@
 			"url": "command-git",
 			"name": "mark-conflicts-resolved",
 			"title": "Git. Marcar el conflicto como resuelto",
-			"description": "<p>Pasos a seguir tras resolver un conflicto en los archivos:<ul><li>Añadir todos los archivos a la zona de preparación</li><li>Ver el estado de los archivos (modificados/borrados/añadidos)</li><li>Crear un 'commit' con esos cambios indicando una descripción de lo que se ha realizado</li></ul></p>",
+			"description": "<p>Pasos a seguir tras resolver un conflicto en los archivos:<ul><li>Añadir todos los archivos a la zona de preparación</li><li>Ver el estado de los archivos (modificados/borrados/añadidos)</li><li>Crear un 'commit' con esos cambios, indicando una descripción de lo que se ha realizado</li></ul></p>",
 			"code": [
 				"git add .",
 				"git status",
