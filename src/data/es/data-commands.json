@@ -632,7 +632,7 @@
 			"url": "command-git",
 			"name": "get-branches-local",
 			"title": "Git. Obtener todas las ramas locales",
-			"description": "<p>Una rama local es aquella cuyo nombre completo empieza por <code>refs/heads/</code>, el comando <code>git branch</code> quita esta parte para hacerlo más fácil.</p><p>Parece que con Git siempre hay más de una forma de hacer la misma cosa:</p>",
+			"description": "<p>Una rama local es aquella cuyo nombre completo empieza por <code>refs/heads/</code>, el comando <code>git branch</code> quita esta parte para hacerlo más fácil.</p><p>Parece que con Git, siempre hay más de una forma de hacer la misma cosa:</p>",
 			"code": [
 				[
 					"git branch"
