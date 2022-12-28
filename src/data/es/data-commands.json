@@ -789,7 +789,7 @@
 			"url": "command-git",
 			"name": "remove-branch",
 			"title": "Git. Eliminar una rama",
-			"description": "<p>Para eliminar una rama del repositorio Git no debes estar posicionado en ella.</p>",
+			"description": "<p>Para eliminar una rama del repositorio Git, no debes estar posicionado en ella.</p>",
 			"code": [
 				[
 					"git branch -D <BRANCH_NAME>"
