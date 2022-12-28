@@ -756,7 +756,7 @@
 			"url": "command-git",
 			"name": "rename-remote-branch",
 			"title": "Git. Renombrar una rama remota",
-			"description": "<p>Supongamos que estás colaborando en un proyecto con un grupo de personas, y habéis definido una convención de nombres para las ramas de Git. Tú has creado una nueva rama, has enviado los cambios al repositorio remoto y te has dado cuenta de que el nombre de tu rama era incorrecto. Por suerte, Git te permite renombrar la rama local y la remota muy fácilmente usando varios comandos o haciendo lo mismo con uno solo.</p><p><a href='https://linuxize.com/post/how-to-rename-local-and-remote-git-branch/' target='_blank'>Saber más</a></p>",
+			"description": "<p>Supongamos que estás colaborando en un proyecto con un grupo de personas, y habéis definido una convención de nombres para las ramas de Git. Tú has creado una nueva rama, has enviado los cambios al repositorio remoto, y te has dado cuenta de que el nombre de tu rama era incorrecto. Por suerte, Git te permite renombrar la rama local y la remota muy fácilmente usando varios comandos o haciendo lo mismo con uno solo.</p><p><a href='https://linuxize.com/post/how-to-rename-local-and-remote-git-branch/' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
 					"git checkout <OLD_BRANCH_NAME>",
