@@ -711,7 +711,7 @@
 			"url": "command-git",
 			"name": "extract-files-from-staging-area",
 			"title": "Git. Extraer los archivos del área de preparación",
-			"description": "<p>Si ya he añadido el archivo con un <code>git add</code> al <strong>staging area</strong>, pero no quiero hacer 'commit' todavía, y quiero eliminarlo de esta zona, estas son algunas formas de solucionarlo:<ul><li><code>git reset &lt;FILE_NAME&gt;</code>: Si los cambios se han realizado y añadido al <strong>staging area</strong>.</li><li><code>git rm --cached &lt;FILE_NAME&gt;</code>: Si aún no he lanzado un 'commit', y por tanto, no se ha creado el puntero <code>HEAD</code>.</li><li><code>git reset HEAD &lt;FILE_NAME&gt;</code>: Si ya he lanzado mi primer 'commit', es decir, hay un puntero HEAD. Git se mueve entre los 'commits', apuntando siempre al último creado.</li></ul></p>",
+			"description": "<p>Si ya he añadido el archivo con un <code>git add</code> al <strong>staging area</strong>, pero no quiero hacer 'commit' todavía, y quiero eliminarlo de esta zona, estas son algunas formas de solucionarlo:<ul><li><code>git reset &lt;FILE_NAME&gt;</code>: Si los cambios se han realizado y añadido al <strong>staging area</strong>.</li><li><code>git rm --cached &lt;FILE_NAME&gt;</code>: Si aún no he lanzado un 'commit' y, por tanto, no se ha creado el puntero <code>HEAD</code>.</li><li><code>git reset HEAD &lt;FILE_NAME&gt;</code>: Si ya he lanzado mi primer 'commit', es decir, hay un puntero HEAD. Git se mueve entre los 'commits', apuntando siempre al último creado.</li></ul></p>",
 			"code": [
 				[
 					"git reset <FILE_NAME>"
