@@ -953,7 +953,7 @@
 			"url": "command-git",
 			"name": "remove-and-upload-tag",
 			"title": "Git. Eliminar una etiqueta local y remota",
-			"description": "<p>Cuando quieras renombrar o eliminar una etiqueta y ya la hayas empujado a un repositorio remoto (por ejemplo, GitHub) entonces también tendrás que actualizar las referencias remotas justo después de renombrar o eliminar la etiqueta de tu repo local.</p><p>Aquí hay dos alternativas para eliminar una etiqueta en el repositorio local y en el remoto:<ul><li>Eliminar la etiqueta local y sobrescribir este cambio haciendo referencia al nombre de la etiqueta eliminada en el repositorio remoto.</li><li>O hacer el proceso a la inversa, eliminar primero la etiqueta en el repositorio remoto y luego en el repositorio local.</li></ul></p><p><a href='https://cabrerahector.com/development/how-to-remove-a-git-tag-locally-and-remotely/' target='_blank'>Saber más</a></p>",
+			"description": "<p>Cuando quieras renombrar o eliminar una etiqueta, y ya la hayas empujado a un repositorio remoto (por ejemplo, GitHub) entonces también tendrás que actualizar las referencias remotas justo después de renombrar o eliminar la etiqueta de tu repo local.</p><p>Aquí hay dos alternativas para eliminar una etiqueta en el repositorio local y en el remoto:<ul><li>Eliminar la etiqueta local y sobrescribir este cambio haciendo referencia al nombre de la etiqueta eliminada en el repositorio remoto.</li><li>O hacer el proceso a la inversa, eliminar primero la etiqueta en el repositorio remoto y luego en el repositorio local.</li></ul></p><p><a href='https://cabrerahector.com/development/how-to-remove-a-git-tag-locally-and-remotely/' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
 					"git tag -d <TAG_VERSION>",
