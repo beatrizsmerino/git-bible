@@ -880,7 +880,7 @@
 			"url": "command-git",
 			"name": "diff",
 			"title": "Git. Comparing changes with git diff",
-			"description": "<p>We can see what changes have been made to the code with the command <code>diff</code>. This shows on the terminal the lines of code that have been removed with the symbol <code>-</code> and in red, and the lines added with the symbol <code>+</code> and in green.</p><p>The next tool online can help you. <strong>DiffMerge</strong> is an application to visually compare and merge files on Windows, OSX and Linux: <a href='http://sourcegear.com/diffmerge/' target='_blank'>http://sourcegear.com/diffmerge/</a></p><p>We can also compare the changes that have been made to the code of several commits.</p><p><a href='https://www.atlassian.com/git/tutorials/saving-changes/git-diff' target='_blank'>Know more</a></p>",
+			"description": "<p>We can see what changes have been made to the code with the command <code>diff</code>. This, shows on the terminal the lines of code that have been removed with the symbol <code>-</code> and in red, and the lines added with the symbol <code>+</code> and in green.</p><p>The next tool online can help you. <strong>DiffMerge</strong> is an application to visually compare and merge files on Windows, OSX and Linux: <a href='http://sourcegear.com/diffmerge/' target='_blank'>http://sourcegear.com/diffmerge/</a></p><p>We can also compare the changes that have been made to the code of several commits.</p><p><a href='https://www.atlassian.com/git/tutorials/saving-changes/git-diff' target='_blank'>Know more</a></p>",
 			"code": [
 				[
 					"git diff"
