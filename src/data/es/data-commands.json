@@ -617,7 +617,7 @@
 			"url": "command-git",
 			"name": "get-branches",
 			"title": "Git. Obtener todas las ramas",
-			"description": "<p>A veces es necesario saber qué ramas existen en un repositorio remoto para determinar los nombres de las ramas disponibles.</p><p>Con este comando puedes listar ambos tipos de ramas: remotas y locales. La rama actual aparecerá resaltada en color y marcada con un asterisco <code>*</code>.</p>",
+			"description": "<p>A veces es necesario saber qué ramas existen en un repositorio remoto para determinar los nombres de las ramas disponibles.</p><p>Con este comando, puedes listar ambos tipos de ramas: remotas y locales. La rama actual aparecerá resaltada en color y marcada con un asterisco <code>*</code>.</p>",
 			"code": [
 				[
 					"git branch --all"
