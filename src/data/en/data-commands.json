@@ -576,7 +576,7 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "exit-from-vim-and-save",
-			"title": "Git. Exit and save from the text window",
+			"title": "Git. Exit text window, after saving",
 			"description": "<p>If you're inside the <strong>Vi</strong> editor (text editor created for UNIX, whose improved version is called <strong>Vim</strong>) and you want to come out from the text window and save the changes, typing the command and press <em>'enter'</em>.</p><p><a href='https://phoenixnap.com/kb/how-to-vim-save-quit-exit' target='_blank'>Know more</a></p>",
 			"code": ":wq"
 		},
