@@ -13,7 +13,7 @@
 			"url": "command-git",
 			"name": "create-git-repository",
 			"title": "Git. Initialize a Git repository",
-			"description": "<p>A Git repository is a virtual repository, allowing you to store versions of your project's code that you can access whenever you need to. The following command, used only once during the initial setup of a new repository, will create a new <code>.git</code> subdirectory in your current working directory and a new <code>master</code> branch.</p><p><a href='https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-init' target='_blank'>Know more</a></p>",
+			"description": "<p>A <strong>Git repository</strong> is a virtual repository, which allows you to store different versions of your project's code, which you can access whenever you need to.</br>The following command, used only once during the initial setup of a new repository, will create a new subdirectory called <code>.git</code> in your current working directory and a new branch called <code>master</code>.</p><p><a href='https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-init' target='_blank'>Know more</a></p>",
 			"code": "git init"
 		},
 		{
