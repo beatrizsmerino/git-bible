@@ -19,24 +19,6 @@
 		{
 			"parent": "git",
 			"url": "command-git",
-			"name": "show-configuration",
-			"title": "Git. Mostrar la configuración",
-			"description": "<p>Para visualizar nuestra configuración actual, debemos saber que toda la configuración se guarda en el archivo <code>.gitconfig</code>, que se encuentra en: si eres <strong>Linux</strong> en el usuario <code>HOME</code> o si estás en <strong>Windows</strong> en <code>C:Users</code> o si eres <strong>Mac</strong> escribiendo en la <strong>consola</strong> <code>git config --list --show-origin</code>.</p>",
-			"code": [
-				[
-					"git config -l"
-				],
-				[
-					"git config --list"
-				],
-				[
-					"git config --global --list"
-				]
-			]
-		},
-		{
-			"parent": "git",
-			"url": "command-git",
 			"name": "config-user-name-email",
 			"title": "Git. Configurar el nombre y el correo electrónico del usuario",
 			"description": "<p>Git es un <strong>sistema de control de versiones distribuido</strong> que está siendo utilizado por la mayoría de los equipos de software hoy en día. Lo primero que debes hacer después de instalar Git en tu sistema es configurar tu nombre de usuario y dirección de correo electrónico de Git. Git asocia tu identidad con cada 'commit' que haces.</p><p>Git te permite establecer un nombre de usuario y una dirección de correo electrónico globales por proyecto. Si modificas el nombre y el correo durante el desarrollo del repositorio, los cambios solo afectan a futuros 'commits', el nombre y el correo electrónico asociados a los 'commits' que hiciste antes del cambio no se ven afectados.</p><p>Puedes establecer o cambiar tu identidad Git usando el siguiente comando.</p>",
@@ -62,6 +44,24 @@
 				[
 					"git config --global core.editor 'code --wait'",
 					"git config --global -e"
+				]
+			]
+		},
+		{
+			"parent": "git",
+			"url": "command-git",
+			"name": "show-configuration",
+			"title": "Git. Mostrar la configuración",
+			"description": "<p>Para visualizar nuestra configuración actual, debemos saber que toda la configuración se guarda en el archivo <code>.gitconfig</code>, que se encuentra en: si eres <strong>Linux</strong> en el usuario <code>HOME</code> o si estás en <strong>Windows</strong> en <code>C:Users</code> o si eres <strong>Mac</strong> escribiendo en la <strong>consola</strong> <code>git config --list --show-origin</code>.</p>",
+			"code": [
+				[
+					"git config -l"
+				],
+				[
+					"git config --list"
+				],
+				[
+					"git config --global --list"
 				]
 			]
 		},
