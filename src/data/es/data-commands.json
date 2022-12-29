@@ -5,7 +5,7 @@
 			"url": "command-git",
 			"name": "get-git-version",
 			"title": "Git. Obtener la versión de Git instalada",
-			"description": "<p>Antes de empezar a utilizar <strong>Git</strong>, es conveniente comprobar si está disponible en tu ordenador. Incluso si ya está instalado, este es posiblemente un buen momento para actualizarlo a su última versión.</br>La opción <code>--version</code> del siguiente comando, te devolverá el número de versión instalada en tu ordenador. De no ser así, hay varias maneras de instalar <strong>Git</strong>, sigue los pasos descritos en este <a href='https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git' target='_blank'>enlace</a>, en función de tu sistema operativo.</p>",
+			"description": "<p><strong>Git</strong> es un <strong>sistema de control de versiones distribuido</strong> que está siendo utilizado por la mayoría de los equipos de software hoy en día.</p><p>Antes de empezar a utilizar <strong>Git</strong>, es conveniente comprobar si está disponible en tu ordenador. Incluso si ya está instalado, este es posiblemente un buen momento para actualizarlo a su última versión.</br>La opción <code>--version</code> del siguiente comando, te devolverá el número de versión instalada en tu ordenador. De no ser así, hay varias maneras de instalar <strong>Git</strong>, sigue los pasos descritos en este <a href='https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git' target='_blank'>enlace</a>, en función de tu sistema operativo.</p>",
 			"code": "git --version"
 		},
 		{
@@ -21,7 +21,7 @@
 			"url": "command-git",
 			"name": "config-user-name-email",
 			"title": "Git. Configurar el nombre y el correo electrónico del usuario",
-			"description": "<p>Git es un <strong>sistema de control de versiones distribuido</strong> que está siendo utilizado por la mayoría de los equipos de software hoy en día. Lo primero que debes hacer después de instalar Git en tu sistema es configurar tu nombre de usuario y dirección de correo electrónico de Git. Git asocia tu identidad con cada 'commit' que haces.</p><p>Git te permite establecer un nombre de usuario y una dirección de correo electrónico globales por proyecto. Si modificas el nombre y el correo durante el desarrollo del repositorio, los cambios solo afectan a futuros 'commits', el nombre y el correo electrónico asociados a los 'commits' que hiciste antes del cambio no se ven afectados.</p><p>Puedes establecer o cambiar tu identidad Git usando el siguiente comando.</p>",
+			"description": "<p>Lo primero que debes hacer después de instalar Git en tu sistema es configurar tu nombre de usuario y dirección de correo electrónico de Git. Git asocia tu identidad con cada 'commit' que haces.</p><p>Git te permite establecer un nombre de usuario y una dirección de correo electrónico globales por proyecto. Si modificas el nombre y el correo durante el desarrollo del repositorio, los cambios solo afectan a futuros 'commits', el nombre y el correo electrónico asociados a los 'commits' que hiciste antes del cambio no se ven afectados.</p><p>Puedes establecer o cambiar tu identidad Git usando el siguiente comando.</p>",
 			"code": [
 				[
 					"git config --global user.name <USER_NAME>"
