@@ -21,7 +21,7 @@
 			"url": "command-git",
 			"name": "config-user-name-email",
 			"title": "Git. Configurar el nombre y el correo electrónico del usuario",
-			"description": "<p>Lo primero que debes hacer después de instalar Git en tu sistema es configurar tu nombre de usuario y dirección de correo electrónico de Git. Git <strong>asocia tu identidad con cada «commit»</strong> que haces.</p><p>Git te permite establecer un nombre de usuario y una dirección de correo electrónico globales por proyecto. Si modificas el nombre y el correo durante el desarrollo del repositorio, los cambios solo afectan a futuros «commits», el nombre y el correo electrónico asociados a los «commits» que hiciste antes del cambio no se ven afectados.</p><p>Puedes establecer o cambiar tu identidad Git usando el siguiente comando.</p>",
+			"description": "<p>Lo primero que debes hacer después de instalar Git en tu sistema es configurar tu nombre de usuario y dirección de correo electrónico de Git. Git <strong>asocia tu identidad con cada <em>«commit»</em></strong> que haces.</p><p>Git te permite establecer un nombre de usuario y una dirección de correo electrónico globales por proyecto. Si modificas el nombre y el correo durante el desarrollo del repositorio, los cambios solo afectan a futuros <em>«commits»</em>, el nombre y el correo electrónico asociados a los <em>«commits»</em> que hiciste antes del cambio no se ven afectados.</p><p>Puedes establecer o cambiar tu identidad Git usando el siguiente comando.</p>",
 			"code": [
 				[
 					"git config --global user.name <USER_NAME>"
@@ -36,7 +36,7 @@
 			"url": "command-git",
 			"name": "config-code-editor",
 			"title": "Git. Añadir o editar el editor por defecto",
-			"description": "<p>Cuando creas un «commit» de Git con <code>git commit -a</code>, el editor por defecto que se abrirá es <strong>Vim</strong>. Esto puede ser muy confuso para la gente, ya que Vim no es un editor fácil si nunca has trabajado con él previamente.</p><p>Hay muchas formas de hacerlo: a través del terminal con el siguiente comando, abriendo y editando el archivo <code>.gitconfig</code>…</p><p>En <strong>OSX</strong>, para establecer <strong>Visual Studio Code</strong> como editor global de Git, hay que hacer los siguientes pasos:<ul><li>Abrir el editor y pulsar a la vez las teclas <code>Shift + Command + P</code>.</li><li>Escribir la palabra <code>Code</code> en la ventana emergente y hacer clic en <code>Shell Command: Install 'code' command in PATH</code> para hacer la instalación.</li><li>Y luego usa el segundo bloque de comandos de esta descripción, para ejecutar las 2 líneas en tu terminal. Esto lo define en su configuración como el editor global de Git y abre este mismo archivo de configuración con él.</li></ul></p><p><a href='https://stackoverflow.com/questions/34746045/set-visual-studio-code-to-be-global-git-editor-on-osx' target='_blank'>Saber más</a></p>",
+			"description": "<p>Cuando creas un <em>«commit»</em> de Git con <code>git commit -a</code>, el editor por defecto que se abrirá es <strong>Vim</strong>. Esto puede ser muy confuso para la gente, ya que Vim no es un editor fácil si nunca has trabajado con él previamente.</p><p>Hay muchas formas de hacerlo: a través del terminal con el siguiente comando, abriendo y editando el archivo <code>.gitconfig</code>…</p><p>En <strong>OSX</strong>, para establecer <strong>Visual Studio Code</strong> como editor global de Git, hay que hacer los siguientes pasos:<ul><li>Abrir el editor y pulsar a la vez las teclas <code>Shift + Command + P</code>.</li><li>Escribir la palabra <code>Code</code> en la ventana emergente y hacer clic en <code>Shell Command: Install 'code' command in PATH</code> para hacer la instalación.</li><li>Y luego usa el segundo bloque de comandos de esta descripción, para ejecutar las 2 líneas en tu terminal. Esto lo define en su configuración como el editor global de Git y abre este mismo archivo de configuración con él.</li></ul></p><p><a href='https://stackoverflow.com/questions/34746045/set-visual-studio-code-to-be-global-git-editor-on-osx' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
 					"git config --global core.editor <PATH/TO/EDITOR_CODE>"
@@ -87,16 +87,16 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "change-autor-email-last-commits",
-			"title": "Git. Cambiar el nombre y el correo electrónico del autor del último «commit»",
-			"description": "<p>Si te has equivocado y has hecho tu «commit» con otro nombre o correo electrónico, puedes sobrescribir la información del autor solo del último «commit» con este comando.</p>",
+			"title": "Git. Cambiar el nombre y el correo electrónico del autor del último <em>«commit»</em>",
+			"description": "<p>Si te has equivocado y has hecho tu <em>«commit»</em> con otro nombre o correo electrónico, puedes sobrescribir la información del autor solo del último <em>«commit»</em> con este comando.</p>",
 			"code": "git commit --amend --author='<USER_NAME> <USER_EMAIL>'"
 		},
 		{
 			"parent": "git",
 			"url": "command-git",
 			"name": "change-autor-email-commits",
-			"title": "Git. Cambiar el nombre y el correo electrónico del autor después de hacer un «commit»",
-			"description": "<p>Si te has equivocado y has hecho varios «commits» con otro nombre o email de usuario, puedes sobrescribir la información de autor de todos los «commits» con el siguiente comando.</p><p>Ten mucho cuidado si estos «commits» han sido subidos previamente al repositorio remoto y si hay más gente colaborando en el repositorio. Si este es el caso, es importante comunicarlo antes de hacer este comando, ya que también tendrás que sobrescribir los cambios en el repositorio remoto con <code>git push -f</code> y los demás colaboradores tendrán que actualizar su repositorio local con <code>git pull -f</code>. Este tipo de cambios es mejor hacerlos sin tener ningún cambio guardado en el <strong>área de preparación</strong> o en el <strong>directorio de trabajo</strong>.</p><p><a href='https://stackoverflow.com/questions/750172/how-to-change-the-author-and-committer-name-and-e-mail-of-multiple-commits-in-gi' target='_target'>Saber más</p>",
+			"title": "Git. Cambiar el nombre y el correo electrónico del autor después de hacer un <em>«commit»</em>",
+			"description": "<p>Si te has equivocado y has hecho varios <em>«commits»</em> con otro nombre o email de usuario, puedes sobrescribir la información de autor de todos los <em>«commits»</em> con el siguiente comando.</p><p>Ten mucho cuidado si estos <em>«commits»</em> han sido subidos previamente al repositorio remoto y si hay más gente colaborando en el repositorio. Si este es el caso, es importante comunicarlo antes de hacer este comando, ya que también tendrás que sobrescribir los cambios en el repositorio remoto con <code>git push -f</code> y los demás colaboradores tendrán que actualizar su repositorio local con <code>git pull -f</code>. Este tipo de cambios es mejor hacerlos sin tener ningún cambio guardado en el <strong>área de preparación</strong> o en el <strong>directorio de trabajo</strong>.</p><p><a href='https://stackoverflow.com/questions/750172/how-to-change-the-author-and-committer-name-and-e-mail-of-multiple-commits-in-gi' target='_target'>Saber más</p>",
 			"code": [
 				"#!/bin/sh",
 				"",
@@ -121,40 +121,40 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "get-commits",
-			"title": "Git. Obtener todos los «commits» realizados",
-			"description": "<p>Después de haber realizado varios «commits», o si ha clonado un repositorio que ya tenía un historial de «commits», probablemente querrá mirar hacia atrás para ver qué modificaciones se han realizado.</p><p>Este comando muestra una lista de todos los «commits» realizados, en orden cronológico inverso, es decir, los más recientes se muestran al principio. Cada «commit» contiene información sobre el número de identificación (<em>Secure Hash Algorithm</em>, <code>SHA-1</code>), el nombre y la dirección de correo electrónico del autor, la fecha y el mensaje del «commit».</p><p><a href='https://git-scm.com/book/es/v2/Fundamentos-de-Git-Ver-el-Historial-de-Confirmaciones' target='_blank'>Saber más</a></p>",
+			"title": "Git. Obtener todos los <em>«commits»</em> realizados",
+			"description": "<p>Después de haber realizado varios <em>«commits»</em>, o si ha clonado un repositorio que ya tenía un historial de <em>«commits»</em>, probablemente querrá mirar hacia atrás para ver qué modificaciones se han realizado.</p><p>Este comando muestra una lista de todos los <em>«commits»</em> realizados, en orden cronológico inverso, es decir, los más recientes se muestran al principio. Cada <em>«commit»</em> contiene información sobre el número de identificación (<em>Secure Hash Algorithm</em>, <code>SHA-1</code>), el nombre y la dirección de correo electrónico del autor, la fecha y el mensaje del <em>«commit»</em>.</p><p><a href='https://git-scm.com/book/es/v2/Fundamentos-de-Git-Ver-el-Historial-de-Confirmaciones' target='_blank'>Saber más</a></p>",
 			"code": "git log"
 		},
 		{
 			"parent": "git",
 			"url": "command-git",
 			"name": "get-commits-oneline",
-			"title": "Git. Obtener todos los «commits» realizados en una sola línea",
-			"description": "<p>El comando <code>git log</code> tiene muchos parámetros opcionales para formatear la salida de la información del «commit». La opción <code>--oneline</code> muestra la información de cada «commit» en una sola línea con los 6 primeros caracteres del número <code>SHA-1</code>, las ramas, las etiquetas y el mensaje.</p><p><a href='https://git-scm.com/book/es/v2/Fundamentos-de-Git-Ver-el-Historial-de-Confirmaciones#rlog_options' target='_blank'>Saber más</a></p>",
+			"title": "Git. Obtener todos los <em>«commits»</em> realizados en una sola línea",
+			"description": "<p>El comando <code>git log</code> tiene muchos parámetros opcionales para formatear la salida de la información del <em>«commit»</em>. La opción <code>--oneline</code> muestra la información de cada <em>«commit»</em> en una sola línea con los 6 primeros caracteres del número <code>SHA-1</code>, las ramas, las etiquetas y el mensaje.</p><p><a href='https://git-scm.com/book/es/v2/Fundamentos-de-Git-Ver-el-Historial-de-Confirmaciones#rlog_options' target='_blank'>Saber más</a></p>",
 			"code": "git log --oneline"
 		},
 		{
 			"parent": "git",
 			"url": "command-git",
 			"name": "get-commits-oneline-graph",
-			"title": "Git. Obtener todos los «commits» realizados en un gráfico",
-			"description": "<p>Este comando condensa la información de cada «commit» en una sola línea, mostrando solo el ID del «commit» y la primera línea del mensaje del «commit», resaltando todas las referencias (ramas, etiquetas…).</p><p>Dibuja una representación gráfica <em>ASCII</em> de la estructura del historial de «commit». Imprime líneas adicionales entre los «commits», para que el gráfico del historial se dibuje correctamente, y utiliza asteriscos para mostrar en qué rama estaba el «commit».</p><p><a href='https://www.atlassian.com/git/tutorials/git-log' target='_blank'>Saber más</a></p>",
+			"title": "Git. Obtener todos los <em>«commits»</em> realizados en un gráfico",
+			"description": "<p>Este comando condensa la información de cada <em>«commit»</em> en una sola línea, mostrando solo el ID del <em>«commit»</em> y la primera línea del mensaje del <em>«commit»</em>, resaltando todas las referencias (ramas, etiquetas…).</p><p>Dibuja una representación gráfica <em>ASCII</em> de la estructura del historial de <em>«commit»</em>. Imprime líneas adicionales entre los <em>«commits»</em>, para que el gráfico del historial se dibuje correctamente, y utiliza asteriscos para mostrar en qué rama estaba el <em>«commit»</em>.</p><p><a href='https://www.atlassian.com/git/tutorials/git-log' target='_blank'>Saber más</a></p>",
 			"code": "git log --oneline --graph --decorate"
 		},
 		{
 			"parent": "git",
 			"url": "command-git",
 			"name": "get-commit-without-merges",
-			"title": "Git. Obtener todos los «commits» realizados, ocultando los «commits» de fusión",
-			"description": "<p>Un <code>merge</code> es el resultado de fusionar 2 o más ramas. En ocasiones, con esa fusión, se genera un «commit» extra llamado <code>merge commit</code>. La información de este «commit» contiene una mezcla de todos los cambios realizados en ambas ramas, esto puede resultar confuso. Podemos mostrar la lista de «commits» sin ellos con este comando.</p>",
+			"title": "Git. Obtener todos los <em>«commits»</em> realizados, ocultando los <em>«commits»</em> de fusión",
+			"description": "<p>Un <code>merge</code> es el resultado de fusionar 2 o más ramas. En ocasiones, con esa fusión, se genera un <em>«commit»</em> extra llamado <code>merge commit</code>. La información de este <em>«commit»</em> contiene una mezcla de todos los cambios realizados en ambas ramas, esto puede resultar confuso. Podemos mostrar la lista de <em>«commits»</em> sin ellos con este comando.</p>",
 			"code": "git log --oneline --no-merges"
 		},
 		{
 			"parent": "git",
 			"url": "command-git",
 			"name": "get-commits-range",
-			"title": "Git. Obtener «commits» entre rangos",
-			"description": "<p>La forma más común de especificar un rango de «commits» es mediante la sintaxis de doble punto.</p><p>Esto, por ejemplo, suele usarse para obtener un rango concreto de «commits» seleccionando la posición que ocupan en el histórico.</p><p>O, por otro lado, si seleccionamos 2 ramas, mostrará todos los «commits» de la primera rama que no aparecen en la segunda. Esto es útil para previsualizar lo que se está a punto de fusionar o para ver lo que se está a punto de publicar en el repositorio remoto.</p><p><a href='https://git-scm.com/book/es/v2/Herramientas-de-Git-Revisi%C3%B3n-por-selecci%C3%B3n#r_commit_ranges' target='_blank'>Saber más</a></p>",
+			"title": "Git. Obtener <em>«commits»</em> entre rangos",
+			"description": "<p>La forma más común de especificar un rango de <em>«commits»</em> es mediante la sintaxis de doble punto.</p><p>Esto, por ejemplo, suele usarse para obtener un rango concreto de <em>«commits»</em> seleccionando la posición que ocupan en el histórico.</p><p>O, por otro lado, si seleccionamos 2 ramas, mostrará todos los <em>«commits»</em> de la primera rama que no aparecen en la segunda. Esto es útil para previsualizar lo que se está a punto de fusionar o para ver lo que se está a punto de publicar en el repositorio remoto.</p><p><a href='https://git-scm.com/book/es/v2/Herramientas-de-Git-Revisi%C3%B3n-por-selecci%C3%B3n#r_commit_ranges' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
 					"git log master~<POSITION_NUMBER>..master~<POSITION_NUMBER>"
@@ -171,8 +171,8 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "get-commit-by-date",
-			"title": "Git. Buscar los «commits» por fecha",
-			"description": "<p>Con los siguientes comandos, podemos obtener una lista de «commits» según la fecha indicada (AAAA-MM-DD):<ul><li><code>--since</code>, muestra los «commits» desde la fecha.</li><li><code>--before</code>, muestra los «commits» anteriores a la fecha.</li><li><code>--after</code>, muestra los «commits» posteriores a la fecha.</li></ul></p>",
+			"title": "Git. Buscar los <em>«commits»</em> por fecha",
+			"description": "<p>Con los siguientes comandos, podemos obtener una lista de <em>«commits»</em> según la fecha indicada (AAAA-MM-DD):<ul><li><code>--since</code>, muestra los <em>«commits»</em> desde la fecha.</li><li><code>--before</code>, muestra los <em>«commits»</em> anteriores a la fecha.</li><li><code>--after</code>, muestra los <em>«commits»</em> posteriores a la fecha.</li></ul></p>",
 			"code": [
 				[
 					"git log --since={<DATE>}"
@@ -189,16 +189,16 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "show-commits-of-file",
-			"title": "Git. Mostrar solo los «commits» en los que está involucrado un archivo",
-			"description": "<p>Muestra todos los «commits» en los que se ha modificado el archivo indicado.</p>",
+			"title": "Git. Mostrar solo los <em>«commits»</em> en los que está involucrado un archivo",
+			"description": "<p>Muestra todos los <em>«commits»</em> en los que se ha modificado el archivo indicado.</p>",
 			"code": "git log --oneline -- <FILE_NAME>"
 		},
 		{
 			"parent": "git",
 			"url": "command-git",
 			"name": "get-commits-regex",
-			"title": "Git. Buscar en archivos y «commits» de Git usando una expresión regular",
-			"description": "<p>Por lo general, revisamos el historial del repositorio usando el comando <code>git log</code>, que nos muestra ver una lista de todos los «commits». Pero a medida que nuestro proyecto se vaya haciendo más grande, se complicará la búsqueda entre los múltiples archivos y confirmaciones. Por ello, en algún momento, querremos <strong>filtrar esta lista para encontrar los cambios que incluyan ciertas palabras en los archivos o en el mensaje de confirmación</strong>.</p><p>Git tiene un comando llamado <code>grep</code> que le permite buscar dentro del repositorio, a través de cualquier árbol o directorio de trabajo, los archivos que coincidan con una cadena de texto.</p><p>Por ejemplo:<ul><li><code>git grep -n 'word'</code> o <code>git grep --line-number 'word'</code>, muestra el archivo, el número de línea y el texto de la línea donde se ha encontrado la coincidencia.</li><li><code>git grep -c 'word'</code> o <code>git grep --count 'word'</code>, resume el resultado, mostrando solo los archivos donde se ha encontrado la coincidencia y cuantas coincidencias hay en cada archivo.</li></ul></p><p>También, con el comando <code>--grep</code> podemos buscar dentro de un repositorio Git, en cualquier rama, los «commits» cuyo mensaje coincida con la cadena de texto o expresión regular que le indiquemos.</p><p>Por ejemplo:<ul><li><code>git log -S 'word'</code>, muestra los «commits» que contiene la palabra a buscar, tanto en los mensajes de los «commits» como en el contenido de los cambios.</li><li><code>git log --grep='word'</code>, muestra los «commits» cuyo mensaje coincida con la expresión que le indiquemos.</li></ul>Una vez encontrado el «commit», podríamos ejecutar el comando <code>git show &lt;COMMIT_ID&gt;</code>, usando el <code>HASH</code> (identificador del «commit»), para verlo en profundidad.</p><p><a href='https://static.platzi.com/media/user_upload/38.gitgrep-91e4368f-580b-4d90-8d2f-628d0b76089a.jpg' target='_blank'>Ver imagen</a> | <a href='https://runebook.dev/es/docs/git/git-grep' target='_blank'>Saber más</a></p>",
+			"title": "Git. Buscar en archivos y <em>«commits»</em> de Git usando una expresión regular",
+			"description": "<p>Por lo general, revisamos el historial del repositorio usando el comando <code>git log</code>, que nos muestra ver una lista de todos los <em>«commits»</em>. Pero a medida que nuestro proyecto se vaya haciendo más grande, se complicará la búsqueda entre los múltiples archivos y confirmaciones. Por ello, en algún momento, querremos <strong>filtrar esta lista para encontrar los cambios que incluyan ciertas palabras en los archivos o en el mensaje de confirmación</strong>.</p><p>Git tiene un comando llamado <code>grep</code> que le permite buscar dentro del repositorio, a través de cualquier árbol o directorio de trabajo, los archivos que coincidan con una cadena de texto.</p><p>Por ejemplo:<ul><li><code>git grep -n 'word'</code> o <code>git grep --line-number 'word'</code>, muestra el archivo, el número de línea y el texto de la línea donde se ha encontrado la coincidencia.</li><li><code>git grep -c 'word'</code> o <code>git grep --count 'word'</code>, resume el resultado, mostrando solo los archivos donde se ha encontrado la coincidencia y cuantas coincidencias hay en cada archivo.</li></ul></p><p>También, con el comando <code>--grep</code> podemos buscar dentro de un repositorio Git, en cualquier rama, los <em>«commits»</em> cuyo mensaje coincida con la cadena de texto o expresión regular que le indiquemos.</p><p>Por ejemplo:<ul><li><code>git log -S 'word'</code>, muestra los <em>«commits»</em> que contiene la palabra a buscar, tanto en los mensajes de los <em>«commits»</em> como en el contenido de los cambios.</li><li><code>git log --grep='word'</code>, muestra los <em>«commits»</em> cuyo mensaje coincida con la expresión que le indiquemos.</li></ul>Una vez encontrado el <em>«commit»</em>, podríamos ejecutar el comando <code>git show &lt;COMMIT_ID&gt;</code>, usando el <code>HASH</code> (identificador del <em>«commit»</em>), para verlo en profundidad.</p><p><a href='https://static.platzi.com/media/user_upload/38.gitgrep-91e4368f-580b-4d90-8d2f-628d0b76089a.jpg' target='_blank'>Ver imagen</a> | <a href='https://runebook.dev/es/docs/git/git-grep' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
 					"git grep --line-number '<REGEX>'"
@@ -218,8 +218,8 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "show-info-commit",
-			"title": "Git. Mostrar la información de un «commit»",
-			"description": "<p>Se trata de una herramienta de línea de comandos que se utiliza para ver detalles ampliados en objetos Git como blobs, árboles, etiquetas y «commits».</p><p>En el caso de un «commit», muestra su información completa: ID o <code>SHA-1</code>, autor, fecha y mensaje.</p><p>Hay muchas formas de acceder a la información de un «commit»:</br><ul><li>De forma absoluta, refiriéndose al código que lo identifica.</li><li>De forma relativa, refiriéndose al nombre de la rama del último «commit».</li><li>A través de <code>HEAD</code>, accediendo al último «commit» que se ha realizado.</li><li>Por su posición en el árbol de Git. Podemos ver todos los «commits» hacia atrás desde el momento que le digamos, con el signo <code>^</code> podemos ir 1 o 3 «commits» hacia atrás y con el signo <code>-</code> o <code>~</code> podemos especificar el número de «commits» hacia atrás que queremos ir hasta encontrar el que queremos ver.</li></ul></p>",
+			"title": "Git. Mostrar la información de un <em>«commit»</em>",
+			"description": "<p>Se trata de una herramienta de línea de comandos que se utiliza para ver detalles ampliados en objetos Git como blobs, árboles, etiquetas y <em>«commits»</em>.</p><p>En el caso de un <em>«commit»</em>, muestra su información completa: ID o <code>SHA-1</code>, autor, fecha y mensaje.</p><p>Hay muchas formas de acceder a la información de un <em>«commit»</em>:</br><ul><li>De forma absoluta, refiriéndose al código que lo identifica.</li><li>De forma relativa, refiriéndose al nombre de la rama del último <em>«commit»</em>.</li><li>A través de <code>HEAD</code>, accediendo al último <em>«commit»</em> que se ha realizado.</li><li>Por su posición en el árbol de Git. Podemos ver todos los <em>«commits»</em> hacia atrás desde el momento que le digamos, con el signo <code>^</code> podemos ir 1 o 3 <em>«commits»</em> hacia atrás y con el signo <code>-</code> o <code>~</code> podemos especificar el número de <em>«commits»</em> hacia atrás que queremos ir hasta encontrar el que queremos ver.</li></ul></p>",
 			"code": [
 				[
 					"git show <COMMIT_ID>"
@@ -248,8 +248,8 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "summary-branches",
-			"title": "Git. Mostrar ramas y sus «commits»",
-			"description": "<p>Nos muestra un resumen de todas las ramas que hay en un proyecto, junto con sus últimas modificaciones o «commits».</p><p><a href='https://git-scm.com/docs/git-show-branch' target='_blank'>Saber más</a></p>",
+			"title": "Git. Mostrar ramas y sus <em>«commits»</em>",
+			"description": "<p>Nos muestra un resumen de todas las ramas que hay en un proyecto, junto con sus últimas modificaciones o <em>«commits»</em>.</p><p><a href='https://git-scm.com/docs/git-show-branch' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
 					"git show-branch"
@@ -269,16 +269,16 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "show-date-commit",
-			"title": "Git. Mostrar fecha de «commit»",
-			"description": "<p>Un «commit» tiene 2 tipos de fechas: la fecha del autor y la fecha del «commit».<ul><li>La <strong>fecha del autor</strong> indica cuándo se realizó originalmente esta confirmación, es decir, cuándo se realizó por primera vez el <code>git commit</code>.</li><li>La <strong>fecha de confirmación</strong> cambia cada vez que se modifica la confirmación, por ejemplo, cuando se sobrescribe el «commit» con <code>git commit --amend</code>.</li></ul></p><p>Con el siguiente comando, podemos formatear la información de salida de un «commit» (2020-12-03 19:28:49 +0100).<ul><li><code>%ai</code>: <strong>fecha del autor</strong>, <em>ISO 8601-like</em> format</li><li><code>%ci</code>: <strong>fecha del commit</strong>, <em>ISO 8601-like</em> format</li></ul></p>",
+			"title": "Git. Mostrar fecha de <em>«commit»</em>",
+			"description": "<p>Un <em>«commit»</em> tiene 2 tipos de fechas: la fecha del autor y la fecha del <em>«commit»</em>.<ul><li>La <strong>fecha del autor</strong> indica cuándo se realizó originalmente esta confirmación, es decir, cuándo se realizó por primera vez el <code>git commit</code>.</li><li>La <strong>fecha de confirmación</strong> cambia cada vez que se modifica la confirmación, por ejemplo, cuando se sobrescribe el <em>«commit»</em> con <code>git commit --amend</code>.</li></ul></p><p>Con el siguiente comando, podemos formatear la información de salida de un <em>«commit»</em> (2020-12-03 19:28:49 +0100).<ul><li><code>%ai</code>: <strong>fecha del autor</strong>, <em>ISO 8601-like</em> format</li><li><code>%ci</code>: <strong>fecha del commit</strong>, <em>ISO 8601-like</em> format</li></ul></p>",
 			"code": "git show -s --format=%ci <COMMIT_ID>"
 		},
 		{
 			"parent": "git",
 			"url": "command-git",
 			"name": "overwrite-date-commit",
-			"title": "Git. Sobrescribir la fecha de «commit»",
-			"description": "<p>Este comando cambia la fecha de autor y committer del «commit» ya creado (2020-12-03 19:28:49 +0100).</br>¿Por qué cambiar dos fechas? El <strong>autor</strong> es la persona que escribió originalmente el trabajo, mientras que el <strong>committer</strong> es la persona que aplicó por última vez el trabajo. Si estamos trabajando solos en el proyecto, la fecha debe ser la misma en ambos casos.</p><p>Tenemos 2 formas de sobrescribir la fecha de un «commit»:</p><ul><li>Podemos modificar la fecha del <strong>último commit</strong> realizado con este primer comando.</br><a href='https://garysferrao.github.io/git/commit/date/2015/12/01/change-git-commit-date.html' target='_blank'>Saber más</a></li><li>O podemos modificar la fecha de un «commit» en particular filtrando la lista de «commits» <strong>por el ID del «commit»</strong> a buscar. La fecha del primer «commit» realizado en un repositorio se puede modificar utilizando este segundo comando.</br><a href='https://stackoverflow.com/questions/454734/how-can-one-change-the-timestamp-of-an-old-commit-in-git' target='_blank'>Saber más</a></li></ul><p>La segunda vez que ejecutemos cualquiera de estos comandos, no podremos crear una nueva copia de seguridad. Debemos borrar la copia de seguridad anterior que ya existe en la carpeta <code>.git/refs/original/</code> o forzar la sobrescritura de la copia de seguridad con <code>-f</code>.</p>",
+			"title": "Git. Sobrescribir la fecha de <em>«commit»</em>",
+			"description": "<p>Este comando cambia la fecha de autor y committer del <em>«commit»</em> ya creado (2020-12-03 19:28:49 +0100).</br>¿Por qué cambiar dos fechas? El <strong>autor</strong> es la persona que escribió originalmente el trabajo, mientras que el <strong>committer</strong> es la persona que aplicó por última vez el trabajo. Si estamos trabajando solos en el proyecto, la fecha debe ser la misma en ambos casos.</p><p>Tenemos 2 formas de sobrescribir la fecha de un <em>«commit»</em>:</p><ul><li>Podemos modificar la fecha del <strong>último commit</strong> realizado con este primer comando.</br><a href='https://garysferrao.github.io/git/commit/date/2015/12/01/change-git-commit-date.html' target='_blank'>Saber más</a></li><li>O podemos modificar la fecha de un <em>«commit»</em> en particular filtrando la lista de <em>«commits»</em> <strong>por el ID del <em>«commit»</em></strong> a buscar. La fecha del primer <em>«commit»</em> realizado en un repositorio se puede modificar utilizando este segundo comando.</br><a href='https://stackoverflow.com/questions/454734/how-can-one-change-the-timestamp-of-an-old-commit-in-git' target='_blank'>Saber más</a></li></ul><p>La segunda vez que ejecutemos cualquiera de estos comandos, no podremos crear una nueva copia de seguridad. Debemos borrar la copia de seguridad anterior que ya existe en la carpeta <code>.git/refs/original/</code> o forzar la sobrescritura de la copia de seguridad con <code>-f</code>.</p>",
 			"code": [
 				[
 					"GIT_COMMITTER_DATE='<YYYY-MM-DDThh:mm:ss±hh:mm>' git commit --amend --date='<YYYY-MM-DDThh:mm:ss±hh:mm>' -C <COMMIT_ID>"
@@ -298,7 +298,7 @@
 			"url": "command-git",
 			"name": "git-add",
 			"title": "Git. Añadir carpetas y archivos al área de preparación",
-			"description": "<p>Existen diferentes áreas en un repositorio Git: el árbol de trabajo, el directorio de trabajo o espacio de trabajo, el área de preparación o índice, el «stash», el repositorio local y el repositorio remoto.<ul><li>El <strong>espacio de trabajo</strong> contiene los archivos en los que estás trabajando actualmente, Git notará los cambios (si no los has excluido previamente), pero no los guardará hasta que le digas explícitamente que los rastree.</li><li>El <strong>área de preparación</strong> contiene una instantánea del contenido que rastrea el árbol de trabajo. Esta instantánea representa el contenido del siguiente «commit».</li></ul></p><p>Utilizamos el comando <code>git add</code> para añadir los cambios en el directorio de trabajo al área de preparación.</br>Puedes añadirlos todos a la vez (3 primeros comandos) o indicando las rutas de los archivos (último comando):</p>",
+			"description": "<p>Existen diferentes áreas en un repositorio Git: el árbol de trabajo, el directorio de trabajo o espacio de trabajo, el área de preparación o índice, el <em>«stash»</em>, el repositorio local y el repositorio remoto.<ul><li>El <strong>espacio de trabajo</strong> contiene los archivos en los que estás trabajando actualmente, Git notará los cambios (si no los has excluido previamente), pero no los guardará hasta que le digas explícitamente que los rastree.</li><li>El <strong>área de preparación</strong> contiene una instantánea del contenido que rastrea el árbol de trabajo. Esta instantánea representa el contenido del siguiente <em>«commit»</em>.</li></ul></p><p>Utilizamos el comando <code>git add</code> para añadir los cambios en el directorio de trabajo al área de preparación.</br>Puedes añadirlos todos a la vez (3 primeros comandos) o indicando las rutas de los archivos (último comando):</p>",
 			"code": [
 				[
 					"git add --all"
@@ -330,7 +330,7 @@
 			"url": "command-git",
 			"name": "remove-file-track",
 			"title": "Git. Borrar y rastrear el archivo",
-			"description": "<p>El comando <code>git rm</code> se utiliza para eliminar archivos individuales o un conjunto de archivos de un repositorio, el comando contrario sería <code>git add</code>.</br>La eliminación solo afecta a las áreas del directorio de trabajo y al área de preparación, solo actúa sobre la rama actual y sobre los archivos que no tengan cambios sin guardar. Este cambio no se almacena en el historial del repositorio hasta que se crea un nuevo «commit».</p><p><strong>Por qué utilizar <code>git rm</code> en lugar de <code>rm</code></strong></br>Con el comando <code>rm</code>, un repositorio Git reconocerá cuando ha pasado por encima de un archivo que está siendo rastreado, actualizará el directorio de trabajo para reflejar la eliminación pero no el área de preparación. Es necesario ejecutar un comando adicional <code>git add</code> en las rutas de los archivos eliminados para añadir los cambios al área de preparación. El comando <code>git rm</code> actúa como un atajo, ya que actualizará el directorio de trabajo y el índice de prueba con la eliminación.</p><p>Los siguientes comandos hacen:<ul><li><code>rm</code>: Elimina el archivo seleccionado, y Git no nota este cambio.</li><li><code>git rm</code>: Solo funciona si el archivo ya estaba siendo rastreado, es decir, si se ejecutó un <code>git add</code> y un <code>git commit</code>. Elimina el archivo seleccionado, y añade los cambios al área de preparación.</li><li><code>git rm --cached</code>: Elimina el rastro del archivo seleccionado del control de versiones, sin borrar el archivo, esto se llama un <strong>fichero sin seguimiento</strong>.</li></ul></p><p><a href='https://www.atlassian.com/es/git/tutorials/undoing-changes/git-rm' target='_blank'>Saber más</a></p>",
+			"description": "<p>El comando <code>git rm</code> se utiliza para eliminar archivos individuales o un conjunto de archivos de un repositorio, el comando contrario sería <code>git add</code>.</br>La eliminación solo afecta a las áreas del directorio de trabajo y al área de preparación, solo actúa sobre la rama actual y sobre los archivos que no tengan cambios sin guardar. Este cambio no se almacena en el historial del repositorio hasta que se crea un nuevo <em>«commit»</em>.</p><p><strong>Por qué utilizar <code>git rm</code> en lugar de <code>rm</code></strong></br>Con el comando <code>rm</code>, un repositorio Git reconocerá cuando ha pasado por encima de un archivo que está siendo rastreado, actualizará el directorio de trabajo para reflejar la eliminación pero no el área de preparación. Es necesario ejecutar un comando adicional <code>git add</code> en las rutas de los archivos eliminados para añadir los cambios al área de preparación. El comando <code>git rm</code> actúa como un atajo, ya que actualizará el directorio de trabajo y el índice de prueba con la eliminación.</p><p>Los siguientes comandos hacen:<ul><li><code>rm</code>: Elimina el archivo seleccionado, y Git no nota este cambio.</li><li><code>git rm</code>: Solo funciona si el archivo ya estaba siendo rastreado, es decir, si se ejecutó un <code>git add</code> y un <code>git commit</code>. Elimina el archivo seleccionado, y añade los cambios al área de preparación.</li><li><code>git rm --cached</code>: Elimina el rastro del archivo seleccionado del control de versiones, sin borrar el archivo, esto se llama un <strong>fichero sin seguimiento</strong>.</li></ul></p><p><a href='https://www.atlassian.com/es/git/tutorials/undoing-changes/git-rm' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
 					"rm <PATH/TO/FOLDER/FILE>"
@@ -362,16 +362,16 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "create-commit",
-			"title": "Git. Crear un «commit» con un mensaje",
-			"description": "<p>Los «commits» se crean para capturar el estado de uno o más archivos del proyecto en un momento determinado. Son un <strong>conjunto de cambios</strong>, instantáneas o hitos en la historia de un proyecto Git. Cada «commit» contiene la fecha en que se hizo, los cambios de cada archivo, la información del autor, un mensaje que describe el contenido del «commit» y un identificador único (<code>SHA-1</code>) para referenciar este «commit».</p><p>Este comando solo incluye las modificaciones de los archivos rastreados (aquellos que han sido añadidos con <code>git add</code> en algún momento de su historia). La opción <code>-m</code> o <code>--message</code> sirve para indicar el mensaje del «commit».</p>",
+			"title": "Git. Crear un <em>«commit»</em> con un mensaje",
+			"description": "<p>Los <em>«commits»</em> se crean para capturar el estado de uno o más archivos del proyecto en un momento determinado. Son un <strong>conjunto de cambios</strong>, instantáneas o hitos en la historia de un proyecto Git. Cada <em>«commit»</em> contiene la fecha en que se hizo, los cambios de cada archivo, la información del autor, un mensaje que describe el contenido del <em>«commit»</em> y un identificador único (<code>SHA-1</code>) para referenciar este <em>«commit»</em>.</p><p>Este comando solo incluye las modificaciones de los archivos rastreados (aquellos que han sido añadidos con <code>git add</code> en algún momento de su historia). La opción <code>-m</code> o <code>--message</code> sirve para indicar el mensaje del <em>«commit»</em>.</p>",
 			"code": "git commit -m '<COMMIT_MESSAGE>'"
 		},
 		{
 			"parent": "git",
 			"url": "command-git",
 			"name": "add-and-create-commit",
-			"title": "Git. Añadir carpetas y archivos al área de preparación y crear un «commit»",
-			"description": "<p>Si ya hemos hecho el primer <code>git add</code> y <code>git commit</code> de un archivo, es decir, Git ya lo conoce, las próximas veces podemos usar otro comando que incluya ambos pasos en un solo comando. Esta combinación crea inmediatamente un «commit» de todos los cambios preparados y aplica un mensaje de «commit» en línea.</p><p>Es un comando de acceso directo para usuarios avanzados que combina las opciones <code>-a</code> o <code>--all</code> (añade los archivos modificados o borrados al escenario, pero no los recién creados, ya que no han sido reportados a Git para su seguimiento) y <code>-m</code> o <code>--message</code> (con el mensaje especificado).</p><p><a href='https://www.atlassian.com/es/git/tutorials/saving-changes/git-commit' target='_blank'>Saber más</a></p>",
+			"title": "Git. Añadir carpetas y archivos al área de preparación y crear un <em>«commit»</em>",
+			"description": "<p>Si ya hemos hecho el primer <code>git add</code> y <code>git commit</code> de un archivo, es decir, Git ya lo conoce, las próximas veces podemos usar otro comando que incluya ambos pasos en un solo comando. Esta combinación crea inmediatamente un <em>«commit»</em> de todos los cambios preparados y aplica un mensaje de <em>«commit»</em> en línea.</p><p>Es un comando de acceso directo para usuarios avanzados que combina las opciones <code>-a</code> o <code>--all</code> (añade los archivos modificados o borrados al escenario, pero no los recién creados, ya que no han sido reportados a Git para su seguimiento) y <code>-m</code> o <code>--message</code> (con el mensaje especificado).</p><p><a href='https://www.atlassian.com/es/git/tutorials/saving-changes/git-commit' target='_blank'>Saber más</a></p>",
 			"code": "git commit -am '<COMMIT_MESSAGE>'"
 		},
 		{
@@ -379,7 +379,7 @@
 			"url": "command-git",
 			"name": "commit-particular-file-on-index",
 			"title": "Git. Confirmar un solo archivo en el área preparación",
-			"description": "<p>Si tiene varios archivos añadidos al <strong>staging area</strong>, y se arrepiente, porque solo quiere añadir un archivo en particular, puede seleccionar el archivo y hacer un «commit» solo de sus cambios.</p>",
+			"description": "<p>Si tiene varios archivos añadidos al <strong>staging area</strong>, y se arrepiente, porque solo quiere añadir un archivo en particular, puede seleccionar el archivo y hacer un <em>«commit»</em> solo de sus cambios.</p>",
 			"code": [
 				"git <FILE_NAME>",
 				"git commit -am <COMMIT_MESSAGE>"
@@ -389,8 +389,8 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "overwrite-last-commit",
-			"title": "Git. Sobrescribir el último «commit»",
-			"description": "<p>Si un mensaje o archivo de «commit» contiene información poco clara, incorrecta, sensible o que falta, puedes corregirlo localmente y crear un «commit» con un nuevo mensaje.</br>Al ejecutar este comando se abrirá un editor de texto y te pedirá que edites el mensaje y guardes el «commit». Este proceso cambiará el ID del «commit», creando una nueva «commit» que sustituye a la anterior.</p><p><a href='https://blog.kirei.io/buenas-pr%C3%A1cticas-para-los-mensajes-de-commit-en-git-a9fc43a83821' target='_blank'>Saber más</a></p>",
+			"title": "Git. Sobrescribir el último <em>«commit»</em>",
+			"description": "<p>Si un mensaje o archivo de <em>«commit»</em> contiene información poco clara, incorrecta, sensible o que falta, puedes corregirlo localmente y crear un <em>«commit»</em> con un nuevo mensaje.</br>Al ejecutar este comando se abrirá un editor de texto y te pedirá que edites el mensaje y guardes el <em>«commit»</em>. Este proceso cambiará el ID del <em>«commit»</em>, creando una nueva <em>«commit»</em> que sustituye a la anterior.</p><p><a href='https://blog.kirei.io/buenas-pr%C3%A1cticas-para-los-mensajes-de-commit-en-git-a9fc43a83821' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
 					"git commit --amend"
@@ -405,8 +405,8 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "remove-commit",
-			"title": "Git. Eliminar un «commit»",
-			"description": "<p>El comando <code>git reset</code> es una herramienta para deshacer cambios. Si lo ejecutamos sin indicar un SHA de «commit», solo eliminará los cambios añadidos al área de preparación.</p><p>Tiene 3 argumentos que se corresponden con los 3 mecanismos internos de gestión de estados de Git: el árbol de «commit» (HEAD), el área de preparación y el directorio de trabajo.</p><p>Cuando especificamos el tipo de reset que queremos con uno de estos argumentos, indicamos el «commit» SHA anterior a todos los que queremos borrar:<ul><li><code>--mixed</code>: Es la opción por defecto, provoca el mismo efecto que ejecutar <code>git reset</code>. Elimina los «commits» posteriores al «commit» seleccionado. Elimina los cambios del área de preparación, pero mantiene los del directorio de trabajo.</li><li><code>--soft</code>: Elimina los «commits» posteriores al «commit» seleccionado, pero mantiene los cambios añadidos al área de preparación y conserva los realizados en el directorio de trabajo.</li><li><code>--hard</code>: Es la opción más peligrosa porque se pierden todos los cambios realizados. Elimina los «commits» posteriores al «commit» seleccionado, lo que también elimina los cambios del área de preparación y del directorio de trabajo.</li></ul></p>",
+			"title": "Git. Eliminar un <em>«commit»</em>",
+			"description": "<p>El comando <code>git reset</code> es una herramienta para deshacer cambios. Si lo ejecutamos sin indicar un SHA de <em>«commit»</em>, solo eliminará los cambios añadidos al área de preparación.</p><p>Tiene 3 argumentos que se corresponden con los 3 mecanismos internos de gestión de estados de Git: el árbol de <em>«commit»</em> (HEAD), el área de preparación y el directorio de trabajo.</p><p>Cuando especificamos el tipo de reset que queremos con uno de estos argumentos, indicamos el <em>«commit»</em> SHA anterior a todos los que queremos borrar:<ul><li><code>--mixed</code>: Es la opción por defecto, provoca el mismo efecto que ejecutar <code>git reset</code>. Elimina los <em>«commits»</em> posteriores al <em>«commit»</em> seleccionado. Elimina los cambios del área de preparación, pero mantiene los del directorio de trabajo.</li><li><code>--soft</code>: Elimina los <em>«commits»</em> posteriores al <em>«commit»</em> seleccionado, pero mantiene los cambios añadidos al área de preparación y conserva los realizados en el directorio de trabajo.</li><li><code>--hard</code>: Es la opción más peligrosa porque se pierden todos los cambios realizados. Elimina los <em>«commits»</em> posteriores al <em>«commit»</em> seleccionado, lo que también elimina los cambios del área de preparación y del directorio de trabajo.</li></ul></p>",
 			"code": [
 				[
 					"git reset --soft <COMMIT_ID>"
@@ -424,7 +424,7 @@
 			"url": "command-git",
 			"name": "squashing-commits",
 			"title": "Git. Aplastamiento o fusión de confirmaciones",
-			"description": "<p>El proceso de borrar un número de «commits» con el argumento <code>--soft</code> y luego hacer un «commit» se suele llamar hacer <strong>squashing</strong>, ya que es como compactar varios «commits» en uno.</p>",
+			"description": "<p>El proceso de borrar un número de <em>«commits»</em> con el argumento <code>--soft</code> y luego hacer un <em>«commit»</em> se suele llamar hacer <strong>squashing</strong>, ya que es como compactar varios <em>«commits»</em> en uno.</p>",
 			"code": [
 				"git reset --soft master~<NUMBER_LAST_COMMITS>",
 				"git commit -m '<COMMIT_MESSAGE>'"
@@ -434,16 +434,16 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "revert-commit",
-			"title": "Git. Revertir los cambios de un «commit» y crear uno nuevo",
-			"description": "<p>Este comando nos permite crear un «commit» con los cambios revertidos de la referencia indicada. En otras palabras, si tenemos un «commit» que añadía una línea y borraba dos, ahora estamos creando otro «commit» que borra la línea añadida y añade las dos borradas.</br>Tras ejecutar este comando en la consola, nos pedirá el mensaje y creará un nuevo «commit».</p>",
+			"title": "Git. Revertir los cambios de un <em>«commit»</em> y crear uno nuevo",
+			"description": "<p>Este comando nos permite crear un <em>«commit»</em> con los cambios revertidos de la referencia indicada. En otras palabras, si tenemos un <em>«commit»</em> que añadía una línea y borraba dos, ahora estamos creando otro <em>«commit»</em> que borra la línea añadida y añade las dos borradas.</br>Tras ejecutar este comando en la consola, nos pedirá el mensaje y creará un nuevo <em>«commit»</em>.</p>",
 			"code": "git revert <COMMIT_ID>"
 		},
 		{
 			"parent": "git",
 			"url": "command-git",
 			"name": "add-stash",
-			"title": "Git. Guardar los cambios en el «stash»",
-			"description": "<p>Git tiene un área llamada <strong>stash</strong> donde puedes almacenar temporalmente una instantánea de tus cambios sin confirmarlos en el repositorio. Está separada del directorio de trabajo, del área de preparación, o del repositorio.</br>Esta funcionalidad es útil cuando has hecho cambios en una rama que no estás listo para confirmar, pero necesitas cambiar a otra rama. Esto guarda tus cambios, que estarán disponibles desde cualquier rama en ese repositorio, y revierte el directorio de trabajo a como estaba para el último «commit».</br>Note que los cambios que quiere almacenar necesitan estar en archivos rastreados. Si ha creado un nuevo archivo y trata de almacenar sus cambios, puede obtener el error <em>'No hay cambios locales para guardar'</em>.</p><p>Las instantáneas se guardan en el formato <code>stash@{0}: BRANCH: SHA MESSAGE</code>. Se guardarán con un identificador del tipo <code>stash@{0}</code>, donde <code>stash</code> indica que es una instantánea y el número entre las llaves, <code>{0}</code>, es el índice de ese <code>stash</code>. El número del índice crece a medida que se crean nuevas instantáneas y se ordenan de forma inversa, es decir, el número más pequeño será siempre la última instantánea realizada. Se indica la rama en la que se hicieron los cambios, y el identificador y el mensaje serán los mismos que el último «commit» que tengamos en el repositorio.</p><p>Por defecto, envía todos los ficheros que tengamos en el directorio de trabajo y en el área de preparación, excepto los no rastreados, a la zona <code>stash</code>. Y genera el mensaje automáticamente. Pero hay varias opciones que podemos añadir al comando:<ul><li><code>--include-untracked</code> o <code>-u</code>: Añade también los archivos no rastreados.</li><li><code>--all</code> o <code>-a</code>: Añade también los archivos no rastreados e ignorados (.gitignore).</li><li><code>--patch</code>: Git no almacenará todo lo que se modifique, sino que nos preguntará de forma interactiva cuáles de los cambios queremos almacenar y cuáles queremos mantener en nuestro directorio de trabajo.</li><li><code>push -m</code>: Nos permite especificar un mensaje para el «commit» que estamos enviando al «stash».</li><li><code>save</code>: Está obsoleto en favor de <code>push -m</code>.</li></ul></p><p><a href='https://www.freecodecamp.org/news/git-stash-explained/' target='_blank'>Saber más</a></p>",
+			"title": "Git. Guardar los cambios en el <em>«stash»</em>",
+			"description": "<p>Git tiene un área llamada <strong>stash</strong> donde puedes almacenar temporalmente una instantánea de tus cambios sin confirmarlos en el repositorio. Está separada del directorio de trabajo, del área de preparación, o del repositorio.</br>Esta funcionalidad es útil cuando has hecho cambios en una rama que no estás listo para confirmar, pero necesitas cambiar a otra rama. Esto guarda tus cambios, que estarán disponibles desde cualquier rama en ese repositorio, y revierte el directorio de trabajo a como estaba para el último <em>«commit»</em>.</br>Note que los cambios que quiere almacenar necesitan estar en archivos rastreados. Si ha creado un nuevo archivo y trata de almacenar sus cambios, puede obtener el error <em>'No hay cambios locales para guardar'</em>.</p><p>Las instantáneas se guardan en el formato <code>stash@{0}: BRANCH: SHA MESSAGE</code>. Se guardarán con un identificador del tipo <code>stash@{0}</code>, donde <code>stash</code> indica que es una instantánea y el número entre las llaves, <code>{0}</code>, es el índice de ese <code>stash</code>. El número del índice crece a medida que se crean nuevas instantáneas y se ordenan de forma inversa, es decir, el número más pequeño será siempre la última instantánea realizada. Se indica la rama en la que se hicieron los cambios, y el identificador y el mensaje serán los mismos que el último <em>«commit»</em> que tengamos en el repositorio.</p><p>Por defecto, envía todos los ficheros que tengamos en el directorio de trabajo y en el área de preparación, excepto los no rastreados, a la zona <code>stash</code>. Y genera el mensaje automáticamente. Pero hay varias opciones que podemos añadir al comando:<ul><li><code>--include-untracked</code> o <code>-u</code>: Añade también los archivos no rastreados.</li><li><code>--all</code> o <code>-a</code>: Añade también los archivos no rastreados e ignorados (.gitignore).</li><li><code>--patch</code>: Git no almacenará todo lo que se modifique, sino que nos preguntará de forma interactiva cuáles de los cambios queremos almacenar y cuáles queremos mantener en nuestro directorio de trabajo.</li><li><code>push -m</code>: Nos permite especificar un mensaje para el <em>«commit»</em> que estamos enviando al <em>«stash»</em>.</li><li><code>save</code>: Está obsoleto en favor de <code>push -m</code>.</li></ul></p><p><a href='https://www.freecodecamp.org/news/git-stash-explained/' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
 					"git stash"
@@ -469,16 +469,16 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "get-stash-list",
-			"title": "Git. Obtener una lista de los «stash» guardados",
-			"description": "<p>Cuando tienes muchas instantáneas guardadas, te conviene ver una lista de todas ellas, para poder seleccionarlas. El mensaje y el ID, que por defecto vienen del «commit», te ayudarán a diferenciarlos.</br>Es recomendable limpiar el alijo o borrar aquellas instantáneas que no necesitemos para no acumularlas.</p>",
+			"title": "Git. Obtener una lista de los <em>«stash»</em> guardados",
+			"description": "<p>Cuando tienes muchas instantáneas guardadas, te conviene ver una lista de todas ellas, para poder seleccionarlas. El mensaje y el ID, que por defecto vienen del <em>«commit»</em>, te ayudarán a diferenciarlos.</br>Es recomendable limpiar el alijo o borrar aquellas instantáneas que no necesitemos para no acumularlas.</p>",
 			"code": "git stash list"
 		},
 		{
 			"parent": "git",
 			"url": "command-git",
 			"name": "get-stash",
-			"title": "Git. Volver a aplicar los cambios guardados en el «stash»",
-			"description": "<p>Hay dos formas diferentes de recuperar los cambios guardados en el «stash»: <code>apply</code> y <code>pop</code>.</p><p>Por defecto, ejecutando cualquiera de estos 2 comandos, podemos recuperar el último «stash» guardado, <code>stash@{0}</code>. La diferencia es que la opción <code>apply</code>, mantiene el cambio en la lista para una posible reutilización posterior, y <code>pop</code> tras aplicar el cambio lo elimina de la pila de «stash», pero si durante este proceso hay conflictos, no lo elimina, dejando que se comporte exactamente como la opción <code>apply</code>.</br>Otra forma de hacer lo mismo que con la opción <code>pop</code> es hacerlo en 2 pasos: <code>git stash apply</code> && <code>git stash drop</code>.</p><p>O también, podemos obtener los cambios de un «stash» concreto de nuestra pila, indicando su número de índice.</p><p><a href='https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning#_git_clean' target='_blank'>Saber más</a></p>",
+			"title": "Git. Volver a aplicar los cambios guardados en el <em>«stash»</em>",
+			"description": "<p>Hay dos formas diferentes de recuperar los cambios guardados en el <em>«stash»</em>: <code>apply</code> y <code>pop</code>.</p><p>Por defecto, ejecutando cualquiera de estos 2 comandos, podemos recuperar el último <em>«stash»</em> guardado, <code>stash@{0}</code>. La diferencia es que la opción <code>apply</code>, mantiene el cambio en la lista para una posible reutilización posterior, y <code>pop</code> tras aplicar el cambio lo elimina de la pila de <em>«stash»</em>, pero si durante este proceso hay conflictos, no lo elimina, dejando que se comporte exactamente como la opción <code>apply</code>.</br>Otra forma de hacer lo mismo que con la opción <code>pop</code> es hacerlo en 2 pasos: <code>git stash apply</code> && <code>git stash drop</code>.</p><p>O también, podemos obtener los cambios de un <em>«stash»</em> concreto de nuestra pila, indicando su número de índice.</p><p><a href='https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning#_git_clean' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
 					"git stash apply"
@@ -502,8 +502,8 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "create-stash-branch",
-			"title": "Git. Crear una rama a partir de un «stash»",
-			"description": "<p>Este es un buen atajo para recuperar el código almacenado en «stash» indicado y crear una nueva rama para trabajar en él por separado. Este comando crea una nueva rama con el último «stash» (<code>stash@{0}</code>), y luego lo borra (<code>git stash pop</code>). Si necesitas un «stash» en particular, puedes especificar el ID del «stash».</p><p>Esto será útil cuando te encuentres con conflictos después de haber aplicado el «stash» a la última versión de tu rama.</p><p><a href='https://www.freecodecamp.org/news/useful-tricks-you-might-not-know-about-git-stash-e8a9490f0a1a/' target='_blank'>Saber más</a></p>",
+			"title": "Git. Crear una rama a partir de un <em>«stash»</em>",
+			"description": "<p>Este es un buen atajo para recuperar el código almacenado en <em>«stash»</em> indicado y crear una nueva rama para trabajar en él por separado. Este comando crea una nueva rama con el último <em>«stash»</em> (<code>stash@{0}</code>), y luego lo borra (<code>git stash pop</code>). Si necesitas un <em>«stash»</em> en particular, puedes especificar el ID del <em>«stash»</em>.</p><p>Esto será útil cuando te encuentres con conflictos después de haber aplicado el <em>«stash»</em> a la última versión de tu rama.</p><p><a href='https://www.freecodecamp.org/news/useful-tricks-you-might-not-know-about-git-stash-e8a9490f0a1a/' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
 					"git stash branch <BRANCH_NAME>"
@@ -517,8 +517,8 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "show-stash",
-			"title": "Git. Mostrar las diferencias del «stash»",
-			"description": "<p>La opción <code>show</code> del comando <code>stash</code> ofrece un resumen muy breve de los cambios realizados en los archivos. Muestra en una línea la ruta y el nombre del fichero, y el número de líneas eliminadas.</p><p>Por defecto, muestra la información del último «stash» (<code>stash@{0}</code>), pero podemos indicar un número de índice para ver algún otro.</p><p>Si queremos profundizar y ver todos los cambios de cada línea del fichero en el editor del terminal, podemos utilizar la opción <code>-p</code>.</p><p><a href='https://howto.lintel.in/how-to-see-stashed-changes-using-git-stash/' target='_blank'>Saber más</a></p>",
+			"title": "Git. Mostrar las diferencias del <em>«stash»</em>",
+			"description": "<p>La opción <code>show</code> del comando <code>stash</code> ofrece un resumen muy breve de los cambios realizados en los archivos. Muestra en una línea la ruta y el nombre del fichero, y el número de líneas eliminadas.</p><p>Por defecto, muestra la información del último <em>«stash»</em> (<code>stash@{0}</code>), pero podemos indicar un número de índice para ver algún otro.</p><p>Si queremos profundizar y ver todos los cambios de cada línea del fichero en el editor del terminal, podemos utilizar la opción <code>-p</code>.</p><p><a href='https://howto.lintel.in/how-to-see-stashed-changes-using-git-stash/' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
 					"git stash show"
@@ -535,8 +535,8 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "remove-stash",
-			"title": "Git. Eliminar el «stash»",
-			"description": "<p>Hay dos formas diferentes de eliminar los cambios guardados en el área de «stash»: <code>drop</code> y <code>clear</code>.</p><p>Podemos eliminar el primer elemento guardado en el «stash» (el último «stash»: <code>stash@{0}</code>) con <code>drop</code> o si ya no necesitas un «stash» en particular, seleccionarlo por su número de índice.</p><p>Pero, si lo que queremos es limpiar el área de almacenamiento por completo, la opción <code>clear</code> borra toda la lista de stashes.</p><p><strong>ADVERTENCIA IMPORTANTE</strong>: Con la opción <code>clear</code>, esos estados serán entonces objeto de poda, y puede ser imposible recuperarlos. Utilice ambas opciones con precaución, ya que puede ser difícil revertir los stashes una vez borrados.</p><p>Para confirmar si todo se ha borrado, obtenga de nuevo la lista de stashes con el comando <code>git stash list</code>.</p><p><a href='https://kolosek.com/git-stash/' target='_blank'>Saber más</a></p>",
+			"title": "Git. Eliminar el <em>«stash»</em>",
+			"description": "<p>Hay dos formas diferentes de eliminar los cambios guardados en el área de <em>«stash»</em>: <code>drop</code> y <code>clear</code>.</p><p>Podemos eliminar el primer elemento guardado en el <em>«stash»</em> (el último <em>«stash»</em>: <code>stash@{0}</code>) con <code>drop</code> o si ya no necesitas un <em>«stash»</em> en particular, seleccionarlo por su número de índice.</p><p>Pero, si lo que queremos es limpiar el área de almacenamiento por completo, la opción <code>clear</code> borra toda la lista de stashes.</p><p><strong>ADVERTENCIA IMPORTANTE</strong>: Con la opción <code>clear</code>, esos estados serán entonces objeto de poda, y puede ser imposible recuperarlos. Utilice ambas opciones con precaución, ya que puede ser difícil revertir los stashes una vez borrados.</p><p>Para confirmar si todo se ha borrado, obtenga de nuevo la lista de stashes con el comando <code>git stash list</code>.</p><p><a href='https://kolosek.com/git-stash/' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
 					"git stash drop"
@@ -556,8 +556,8 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "recover-dropped-stash",
-			"title": "Git. Recuperar un «commit» eliminado del «stash»",
-			"description": "<p>Pongamos el caso de que has hecho limpieza en tu repositorio, acabas de borrar todos los «commits» antiguos almacenados en el «stash», y justo te das cuenta de que en uno de esos «commits» tenías cambios importantes que no has guardado.</p><p><strong>No entres en pánico</strong>, es posible que puedas recuperar los cambios perdidos con el comando <code>git fsck</code>.</p><p>Para resolver este problema, lo primero es localizar el hash ID (de 6 cifras) del «commit» eliminado. Una vez lo tengamos, podemos ver en detalle la información que contiene y decidir si es el que estamos buscando. Si es así, todo lo que hay que hacer es volver a guardarlo.</p><p>Veámoslo en detalle: <ol><li><strong>Encontrar los «commits» del «stash» eliminados</strong></br>El siguiente comando te mostrará un gráfico con todos los «commits» que ya no son referenciados desde ninguna rama o etiqueta, es decir, cada «commit» perdido que hayas creado, incluyendo los del «stash».</br><em>Shell bash/sh:</em></br><code>git log --graph --oneline --decorate $( git fsck --no-reflog | awk '/dangling commit/ {print $3}’ )</code></br>En algún lugar de ese gráfico, encontrarás el mensaje de confirmación que buscas.</br>Pista: Si no proporcionaste un mensaje cuando hiciste <code>git stash</code>, este «commit» comenzará con <code>WIP on</code>.</li><li><strong>Confirmar que son los cambios que buscamos</strong></br>Una vez tienes el hash del «commit» del «stash», puedes utilizar el comando <code>git show &lt;COMMIT_ID&gt;</code> para examinar en detalle el <code>diff</code> del «commit», es decir, los nombres de las carpetas, archivos y líneas de código modificadas.</li><li><strong>Recuperar los cambios y guardarlos</strong></br>Después de confirmar que son los cambios que quieres recuperar, puedes traerlos al área de trabajo usando <code>git stash apply &lt;COMMIT_ID&gt;</code>.</br>Y si, por si a caso, además quieres volver a guardar esos cambios en la lista del «stash» ubicada en <code>.git/logs/refs/stash</code>, puedes usar el comando <code>git stash &lt;COMMIT_ID&gt;</code>.</li></ol></p><p><a href='https://foroayuda.es/recuperar-alijo-eliminado-en-git-usando-sourcetree/' target='_blank'>Saber más</a></p>",
+			"title": "Git. Recuperar un <em>«commit»</em> eliminado del <em>«stash»</em>",
+			"description": "<p>Pongamos el caso de que has hecho limpieza en tu repositorio, acabas de borrar todos los <em>«commits»</em> antiguos almacenados en el <em>«stash»</em>, y justo te das cuenta de que en uno de esos <em>«commits»</em> tenías cambios importantes que no has guardado.</p><p><strong>No entres en pánico</strong>, es posible que puedas recuperar los cambios perdidos con el comando <code>git fsck</code>.</p><p>Para resolver este problema, lo primero es localizar el hash ID (de 6 cifras) del <em>«commit»</em> eliminado. Una vez lo tengamos, podemos ver en detalle la información que contiene y decidir si es el que estamos buscando. Si es así, todo lo que hay que hacer es volver a guardarlo.</p><p>Veámoslo en detalle: <ol><li><strong>Encontrar los <em>«commits»</em> del <em>«stash»</em> eliminados</strong></br>El siguiente comando te mostrará un gráfico con todos los <em>«commits»</em> que ya no son referenciados desde ninguna rama o etiqueta, es decir, cada <em>«commit»</em> perdido que hayas creado, incluyendo los del <em>«stash»</em>.</br><em>Shell bash/sh:</em></br><code>git log --graph --oneline --decorate $( git fsck --no-reflog | awk '/dangling commit/ {print $3}’ )</code></br>En algún lugar de ese gráfico, encontrarás el mensaje de confirmación que buscas.</br>Pista: Si no proporcionaste un mensaje cuando hiciste <code>git stash</code>, este <em>«commit»</em> comenzará con <code>WIP on</code>.</li><li><strong>Confirmar que son los cambios que buscamos</strong></br>Una vez tienes el hash del <em>«commit»</em> del <em>«stash»</em>, puedes utilizar el comando <code>git show &lt;COMMIT_ID&gt;</code> para examinar en detalle el <code>diff</code> del <em>«commit»</em>, es decir, los nombres de las carpetas, archivos y líneas de código modificadas.</li><li><strong>Recuperar los cambios y guardarlos</strong></br>Después de confirmar que son los cambios que quieres recuperar, puedes traerlos al área de trabajo usando <code>git stash apply &lt;COMMIT_ID&gt;</code>.</br>Y si, por si a caso, además quieres volver a guardar esos cambios en la lista del <em>«stash»</em> ubicada en <code>.git/logs/refs/stash</code>, puedes usar el comando <code>git stash &lt;COMMIT_ID&gt;</code>.</li></ol></p><p><a href='https://foroayuda.es/recuperar-alijo-eliminado-en-git-usando-sourcetree/' target='_blank'>Saber más</a></p>",
 			"code": [
 				"git log --graph --oneline --decorate $( git fsck --no-reflog | awk '/dangling commit/ {print $3}' )",
 				"git show <COMMIT_ID>",
@@ -584,8 +584,8 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "reflog",
-			"title": "Git. Ver registro de referencia con «reflog»",
-			"description": "<p>Antes de hablar del diario de referencias, hay que recordar que <code>HEAD</code> es una referencia, es decir, un puntero, que apunta al «commit» más reciente de la rama actual.</p><p>Existe un registro de todas las referencias tomadas por el puntero <code>HEAD</code> en Git llamado <strong>reflog</strong>. Es un listado que almacenará todos los «commits» por los que pase el puntero, por ejemplo, podrá guardar los cambios de una rama o la adición de un «commit».</p><p>Este comando puede ser muy útil, en el caso de que queramos recuperar un «commit» borrado.<ul><li><code>git reflog</code>: Te va a mostrar todos los «commits» que realizaste, sin importar si los borraste o no. Cada «commit» mostrará una pequeña información de sí mismo: su número de hash (6 cifras), la rama a la que pertenece, el índice de la posición que ocupa su puntero <code>HEAD</code> y la primera línea del mensaje.</li><li><code>git show &lt;COMMIT_ID&gt;</code>: Viendo esta información, podemos encontrar el «commit» que queremos y acceder a él mediante su número de hash. Así, podemos ver en detalle su información: su número de hash completo, el autor y la fecha del «commit», el mensaje del «commit» completo y qué archivos y líneas se han añadido, eliminado o modificado.</li><li><code>git reset --mixed &lt;COMMIT_ID&gt;</code>: Usamos este comando, una vez estamos seguros de que queremos recuperar este «commit», y así obtendremos de nuevo los archivos con los cambios que habíamos eliminado. Este comando no genera un «commit» con estos cambios, así que tendremos que ejecutar un <code>git commit</code> para volver a guardarlos. Podremos recuperar el mensaje que habíamos usado con el comando anterior <code>git show</code>, ya que nos mostraba el mensaje completo.</li></ul></p><p><a href='https://www.atlassian.com/es/git/tutorials/rewriting-history/git-reflog' target='_blank'>Saber más</a></p>",
+			"title": "Git. Ver registro de referencia con <em>«reflog»</em>",
+			"description": "<p>Antes de hablar del diario de referencias, hay que recordar que <code>HEAD</code> es una referencia, es decir, un puntero, que apunta al <em>«commit»</em> más reciente de la rama actual.</p><p>Existe un registro de todas las referencias tomadas por el puntero <code>HEAD</code> en Git llamado <strong>reflog</strong>. Es un listado que almacenará todos los <em>«commits»</em> por los que pase el puntero, por ejemplo, podrá guardar los cambios de una rama o la adición de un <em>«commit»</em>.</p><p>Este comando puede ser muy útil, en el caso de que queramos recuperar un <em>«commit»</em> borrado.<ul><li><code>git reflog</code>: Te va a mostrar todos los <em>«commits»</em> que realizaste, sin importar si los borraste o no. Cada <em>«commit»</em> mostrará una pequeña información de sí mismo: su número de hash (6 cifras), la rama a la que pertenece, el índice de la posición que ocupa su puntero <code>HEAD</code> y la primera línea del mensaje.</li><li><code>git show &lt;COMMIT_ID&gt;</code>: Viendo esta información, podemos encontrar el <em>«commit»</em> que queremos y acceder a él mediante su número de hash. Así, podemos ver en detalle su información: su número de hash completo, el autor y la fecha del <em>«commit»</em>, el mensaje del <em>«commit»</em> completo y qué archivos y líneas se han añadido, eliminado o modificado.</li><li><code>git reset --mixed &lt;COMMIT_ID&gt;</code>: Usamos este comando, una vez estamos seguros de que queremos recuperar este <em>«commit»</em>, y así obtendremos de nuevo los archivos con los cambios que habíamos eliminado. Este comando no genera un <em>«commit»</em> con estos cambios, así que tendremos que ejecutar un <code>git commit</code> para volver a guardarlos. Podremos recuperar el mensaje que habíamos usado con el comando anterior <code>git show</code>, ya que nos mostraba el mensaje completo.</li></ul></p><p><a href='https://www.atlassian.com/es/git/tutorials/rewriting-history/git-reflog' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
 					"git reflog"
@@ -711,7 +711,7 @@
 			"url": "command-git",
 			"name": "extract-files-from-staging-area",
 			"title": "Git. Extraer los archivos del área de preparación",
-			"description": "<p>Si ya he añadido el archivo con un <code>git add</code> al <strong>staging area</strong>, pero no quiero hacer «commit» todavía, y quiero eliminarlo de esta zona, estas son algunas formas de solucionarlo:<ul><li><code>git reset &lt;FILE_NAME&gt;</code>: Si los cambios se han realizado y añadido al <strong>staging area</strong>.</li><li><code>git rm --cached &lt;FILE_NAME&gt;</code>: Si aún no he lanzado un «commit» y, por tanto, no se ha creado el puntero <code>HEAD</code>.</li><li><code>git reset HEAD &lt;FILE_NAME&gt;</code>: Si ya he lanzado mi primer «commit», es decir, hay un puntero HEAD. Git se mueve entre los «commits», apuntando siempre al último creado.</li></ul></p>",
+			"description": "<p>Si ya he añadido el archivo con un <code>git add</code> al <strong>staging area</strong>, pero no quiero hacer <em>«commit»</em> todavía, y quiero eliminarlo de esta zona, estas son algunas formas de solucionarlo:<ul><li><code>git reset &lt;FILE_NAME&gt;</code>: Si los cambios se han realizado y añadido al <strong>staging area</strong>.</li><li><code>git rm --cached &lt;FILE_NAME&gt;</code>: Si aún no he lanzado un <em>«commit»</em> y, por tanto, no se ha creado el puntero <code>HEAD</code>.</li><li><code>git reset HEAD &lt;FILE_NAME&gt;</code>: Si ya he lanzado mi primer <em>«commit»</em>, es decir, hay un puntero HEAD. Git se mueve entre los <em>«commits»</em>, apuntando siempre al último creado.</li></ul></p>",
 			"code": [
 				[
 					"git reset <FILE_NAME>"
@@ -729,7 +729,7 @@
 			"url": "command-git",
 			"name": "rename-current-branch",
 			"title": "Git. Renombrar la rama actual",
-			"description": "<p>Es posible que en algún momento, como ocurre con los mensajes de «commit», quieras renombrar una rama.</br>Con este comando, puedes renombrar la rama local en la que estás trabajando.</p><p>Tiene parámetros opcionales:<ul><li><code>--mover</code> o <code>-m</code>: Mover/renombrar una rama y el correspondiente <strong>reflog</strong>.</li><li><code>-M</code>: Es un atajo de <code>--delete --force</code></li></ul></p><p><a href='https://git-scm.com/docs/git-branch' target='_blank'>Saber más</a></p>",
+			"description": "<p>Es posible que en algún momento, como ocurre con los mensajes de <em>«commit»</em>, quieras renombrar una rama.</br>Con este comando, puedes renombrar la rama local en la que estás trabajando.</p><p>Tiene parámetros opcionales:<ul><li><code>--mover</code> o <code>-m</code>: Mover/renombrar una rama y el correspondiente <strong>reflog</strong>.</li><li><code>-M</code>: Es un atajo de <code>--delete --force</code></li></ul></p><p><a href='https://git-scm.com/docs/git-branch' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
 					"git branch -m <NEW_BRANCH_NAME>"
@@ -774,7 +774,7 @@
 			"url": "command-git",
 			"name": "upload-local-branch",
 			"title": "Git. Publicar una rama local a un repositorio remoto",
-			"description": "<p>Se recomienda enviar la nueva rama al repositorio remoto (<code>ORIGIN</code>), ya que esto actúa como copia de seguridad, y al colaborar con otros desarrolladores, les permite acceder a ver los «commits» realizados en la nueva rama.</br>La opción <code>-u</code> o <code>--set-upstream-to</code> la añade como rama de seguimiento remoto.</p>",
+			"description": "<p>Se recomienda enviar la nueva rama al repositorio remoto (<code>ORIGIN</code>), ya que esto actúa como copia de seguridad, y al colaborar con otros desarrolladores, les permite acceder a ver los <em>«commits»</em> realizados en la nueva rama.</br>La opción <code>-u</code> o <code>--set-upstream-to</code> la añade como rama de seguimiento remoto.</p>",
 			"code": [
 				[
 					"git branch --set-upstream-to origin/<OTHER_BRANCH_NAME>"
@@ -804,7 +804,7 @@
 			"url": "command-git",
 			"name": "merge-branch",
 			"title": "Git. Fusionar una rama",
-			"description": "<p>La fusión es la forma que tiene Git de volver a unir un historial bifurcado. El comando <code>git merge</code> permite tomar las líneas de desarrollo independientes creadas por el comando <code>git branch</code> e integrarlas en una única rama.</br>Toma dos punteros de «commit» de los extremos de cada rama y los combina en la rama actual, generando un nuevo <strong>commit de fusión</strong>. Sin embargo, si Git encuentra datos que han sido cambiados en ambos historiales, no podrá combinarlos automáticamente. En ese caso, se crea un conflicto de control de versiones y Git pedirá la intervención del usuario para continuar.</p><p>Antes de realizar una fusión, hay un par de pasos de preparación para asegurar que la fusión se realice sin problemas:<ul><li><strong>Confirmar la rama receptora:</strong> Asegúrate de que <code>HEAD</code> apunta a la rama correcta con el comando <code>git status</code>. Si es necesario, ejecute <code>git checkout</code> para cambiar a la rama receptora.</li><li><strong>Obtener los últimos «commits» remotos:</strong> Asegúrate de que la rama receptora y la rama de fusión están actualizadas con los últimos cambios remotos. Ejecute <code>git fetch</code> para obtener los últimos «commits» remotos. Una vez que el fetch se ha completado, asegúrese de que la rama maestra tiene las últimas actualizaciones ejecutando <code>git pull</code>.</li></ul></p><p>Esto significa que <code>git merge</code> se utiliza a menudo junto con <code>git checkout</code> para seleccionar la rama actual y <code>git branch -d</code> para eliminar la rama de destino obsoleta.</p><p>Si las dos ramas que estás intentando fusionar han cambiado la misma parte del mismo archivo, Git no será capaz de averiguar qué versión usar. Cuando se produce esta situación, se detiene justo antes de crear el <strong>commit de fusión</strong> para que puedas resolver los conflictos manualmente. Cuando Git encuentra un conflicto durante una fusión, editará el contenido de los archivos afectados con indicadores visuales que marcan ambos lados del contenido en conflicto <code><<<<<<<</code> <code> =======</code> <code>>>>>>>></code>. El contenido anterior al marcador <code>=======</code> es la rama receptora, y la parte posterior es la rama de fusión. Una vez que hayas identificado las secciones conflictivas, puedes entrar y arreglar la fusión a tu gusto. Cuando estés listo para terminar la fusión, todo lo que tienes que hacer es ejecutar <code>git add</code> en los archivos en conflicto para decirle a Git que están resueltos. Luego, ejecuta <code>git commit</code> para generar el <strong>commit de fusión</strong>.</p><p><a href='https://www.atlassian.com/es/git/tutorials/using-branches/git-merge' target='_blank'>Saber más</a></p>",
+			"description": "<p>La fusión es la forma que tiene Git de volver a unir un historial bifurcado. El comando <code>git merge</code> permite tomar las líneas de desarrollo independientes creadas por el comando <code>git branch</code> e integrarlas en una única rama.</br>Toma dos punteros de <em>«commit»</em> de los extremos de cada rama y los combina en la rama actual, generando un nuevo <strong>commit de fusión</strong>. Sin embargo, si Git encuentra datos que han sido cambiados en ambos historiales, no podrá combinarlos automáticamente. En ese caso, se crea un conflicto de control de versiones y Git pedirá la intervención del usuario para continuar.</p><p>Antes de realizar una fusión, hay un par de pasos de preparación para asegurar que la fusión se realice sin problemas:<ul><li><strong>Confirmar la rama receptora:</strong> Asegúrate de que <code>HEAD</code> apunta a la rama correcta con el comando <code>git status</code>. Si es necesario, ejecute <code>git checkout</code> para cambiar a la rama receptora.</li><li><strong>Obtener los últimos <em>«commits»</em> remotos:</strong> Asegúrate de que la rama receptora y la rama de fusión están actualizadas con los últimos cambios remotos. Ejecute <code>git fetch</code> para obtener los últimos <em>«commits»</em> remotos. Una vez que el fetch se ha completado, asegúrese de que la rama maestra tiene las últimas actualizaciones ejecutando <code>git pull</code>.</li></ul></p><p>Esto significa que <code>git merge</code> se utiliza a menudo junto con <code>git checkout</code> para seleccionar la rama actual y <code>git branch -d</code> para eliminar la rama de destino obsoleta.</p><p>Si las dos ramas que estás intentando fusionar han cambiado la misma parte del mismo archivo, Git no será capaz de averiguar qué versión usar. Cuando se produce esta situación, se detiene justo antes de crear el <strong>commit de fusión</strong> para que puedas resolver los conflictos manualmente. Cuando Git encuentra un conflicto durante una fusión, editará el contenido de los archivos afectados con indicadores visuales que marcan ambos lados del contenido en conflicto <code><<<<<<<</code> <code> =======</code> <code>>>>>>>></code>. El contenido anterior al marcador <code>=======</code> es la rama receptora, y la parte posterior es la rama de fusión. Una vez que hayas identificado las secciones conflictivas, puedes entrar y arreglar la fusión a tu gusto. Cuando estés listo para terminar la fusión, todo lo que tienes que hacer es ejecutar <code>git add</code> en los archivos en conflicto para decirle a Git que están resueltos. Luego, ejecuta <code>git commit</code> para generar el <strong>commit de fusión</strong>.</p><p><a href='https://www.atlassian.com/es/git/tutorials/using-branches/git-merge' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
 					"git merge <BRANCH_NAME>"
@@ -821,8 +821,8 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "merge-fast-forward",
-			"title": "Git. Fusionar una rama y crear un «commit»",
-			"description": "<p>La opción <code>--no-ff</code> evita que <code>git merge</code> ejecute un <strong>'fast-forward'</strong> si detecta que tu <code>HEAD</code> actual es un ancestro del «commit» que estás intentando fusionar. Un <strong>fast-forward</strong> (adelantar rápidamente) es cuando, en lugar de construir un <strong>merge commit</strong> (confirmación de fusión), Git simplemente mueve tu puntero de rama para apuntar a la confirmación entrante.</p><p>En ocasiones, quieres evitar que este comportamiento ocurra, normalmente porque quieres mantener una topología de rama específica (por ejemplo, estás fusionando en una rama temática, y quieres asegurarte de que se vea así al leer el historial). Para ello, puedes pasar esta opción <code>--no-ff</code> y <code>git merge</code> siempre construirá una fusión en lugar de <strong>fast-forwarding</strong>.</p>",
+			"title": "Git. Fusionar una rama y crear un <em>«commit»</em>",
+			"description": "<p>La opción <code>--no-ff</code> evita que <code>git merge</code> ejecute un <strong>'fast-forward'</strong> si detecta que tu <code>HEAD</code> actual es un ancestro del <em>«commit»</em> que estás intentando fusionar. Un <strong>fast-forward</strong> (adelantar rápidamente) es cuando, en lugar de construir un <strong>merge commit</strong> (confirmación de fusión), Git simplemente mueve tu puntero de rama para apuntar a la confirmación entrante.</p><p>En ocasiones, quieres evitar que este comportamiento ocurra, normalmente porque quieres mantener una topología de rama específica (por ejemplo, estás fusionando en una rama temática, y quieres asegurarte de que se vea así al leer el historial). Para ello, puedes pasar esta opción <code>--no-ff</code> y <code>git merge</code> siempre construirá una fusión en lugar de <strong>fast-forwarding</strong>.</p>",
 			"code": [
 				"git merge <BRANCH_NAME> --no-ff"
 			]
@@ -832,7 +832,7 @@
 			"url": "command-git",
 			"name": "rebase",
 			"title": "Git. Rebasar una rama",
-			"description": "<p>En Git, tenemos dos formas de integrar los cambios de una rama a otra: la fusión (<code>merge</code>) y la reorganización (<code>rebase</code>).</p><p>Git <code>rebase</code> nos permite modificar el historial de Git utilizando un punto de referencia. Captura todos los cambios confirmados de la rama en la que estamos y los aplica a la que le estamos indicando, es decir, es capaz de reconocer que «commits» no están en la línea de tiempo de ese punto de referencia y aplicarlos sobre el punto de referencia, es lo que llamamos en Git <strong>rebasing</strong>.</br>En contraste con el merge, esto genera una historia del proyecto perfectamente lineal, pudiendo ir desde el final de la rama hasta el inicio del proyecto sin encontrar ninguna bifurcación.</p><p>Es muy importante entender que, aunque la rama parezca la misma, está formada por «commits» totalmente nuevos, lo que cambia la historia de Git. Esto implica que estos «commits» se están recreando con el mismo mensaje y contenido, lo que puede dar lugar a <strong>conflictos</strong> a la hora de aplicarlos a la nueva rama si esta tiene nuevos cambios.</br>Si esto ocurre, hay que resolverlos a medida que se producen y se consideran modificaciones del propio «commit». Esto nos permite borrar, reordenar, fusionar o cambiar el mensaje del «commit» antes de aplicarlos. Cuando tengas los cambios arreglados, tendrás que pedirle al comando que continúe con la opción <code>--continue</code> para aplicar el siguiente «commit».</br>En cualquier momento, durante el <code>rebase</code>, si cambias de opinión, puedes rechazar todo el proceso con la opción <code>--abort</code>.</p>",
+			"description": "<p>En Git, tenemos dos formas de integrar los cambios de una rama a otra: la fusión (<code>merge</code>) y la reorganización (<code>rebase</code>).</p><p>Git <code>rebase</code> nos permite modificar el historial de Git utilizando un punto de referencia. Captura todos los cambios confirmados de la rama en la que estamos y los aplica a la que le estamos indicando, es decir, es capaz de reconocer que <em>«commits»</em> no están en la línea de tiempo de ese punto de referencia y aplicarlos sobre el punto de referencia, es lo que llamamos en Git <strong>rebasing</strong>.</br>En contraste con el merge, esto genera una historia del proyecto perfectamente lineal, pudiendo ir desde el final de la rama hasta el inicio del proyecto sin encontrar ninguna bifurcación.</p><p>Es muy importante entender que, aunque la rama parezca la misma, está formada por <em>«commits»</em> totalmente nuevos, lo que cambia la historia de Git. Esto implica que estos <em>«commits»</em> se están recreando con el mismo mensaje y contenido, lo que puede dar lugar a <strong>conflictos</strong> a la hora de aplicarlos a la nueva rama si esta tiene nuevos cambios.</br>Si esto ocurre, hay que resolverlos a medida que se producen y se consideran modificaciones del propio <em>«commit»</em>. Esto nos permite borrar, reordenar, fusionar o cambiar el mensaje del <em>«commit»</em> antes de aplicarlos. Cuando tengas los cambios arreglados, tendrás que pedirle al comando que continúe con la opción <code>--continue</code> para aplicar el siguiente <em>«commit»</em>.</br>En cualquier momento, durante el <code>rebase</code>, si cambias de opinión, puedes rechazar todo el proceso con la opción <code>--abort</code>.</p>",
 			"code": [
 				[
 					"git rebase <BRANCH_NAME>"
@@ -849,8 +849,8 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "cherry-pick",
-			"title": "Git. Copiar y pegar «commits» con «cherry-pick»",
-			"description": "<p>Puede ocurrir que, en algún momento, queramos aplicar algunos de los cambios que hemos hecho en otra rama sin tener que hacer un merge completo. El comando <code>cherry-pick</code> permite <em>'copiar'</em> uno o varios «commits» de una rama y <em>'pegarlos'</em> en otra rama. Antes de utilizarlo, debe tener un <strong>directorio de trabajo</strong> y <strong>zona de preparación</strong> limpios.</p><p>Por defecto, <code>cherry-pick</code> mantiene el mensaje de «commit» original, por lo que la opción <code>-x</code> puede ser útil para añadir una referencia al «commit» original, y así, para saber de dónde se ha obtenido el «commit». Otras opciones interesantes son <code>-e</code>, que permite editar el mensaje de «commit» en lugar de utilizar el original, y la opción <code>-n</code>, que aplicará los cambios, pero no hará ningún «commit».</p><p>Al igual que con los comandos <code>merge</code> y <code>rebase</code>, tras resolver los conflictos, podemos indicar que se sigan aplicando los cambios con la opción <code>--continue</code> o rechazar el proceso completamente con la opción <code>--abort</code>.</p><p><a href='https://www.runroom.com/realworld/seleccionando-commits-cherry-pick' target='_blank'>Saber más</a></p>",
+			"title": "Git. Copiar y pegar <em>«commits»</em> con <em>«cherry-pick»</em>",
+			"description": "<p>Puede ocurrir que, en algún momento, queramos aplicar algunos de los cambios que hemos hecho en otra rama sin tener que hacer un merge completo. El comando <code>cherry-pick</code> permite <em>'copiar'</em> uno o varios <em>«commits»</em> de una rama y <em>'pegarlos'</em> en otra rama. Antes de utilizarlo, debe tener un <strong>directorio de trabajo</strong> y <strong>zona de preparación</strong> limpios.</p><p>Por defecto, <code>cherry-pick</code> mantiene el mensaje de <em>«commit»</em> original, por lo que la opción <code>-x</code> puede ser útil para añadir una referencia al <em>«commit»</em> original, y así, para saber de dónde se ha obtenido el <em>«commit»</em>. Otras opciones interesantes son <code>-e</code>, que permite editar el mensaje de <em>«commit»</em> en lugar de utilizar el original, y la opción <code>-n</code>, que aplicará los cambios, pero no hará ningún <em>«commit»</em>.</p><p>Al igual que con los comandos <code>merge</code> y <code>rebase</code>, tras resolver los conflictos, podemos indicar que se sigan aplicando los cambios con la opción <code>--continue</code> o rechazar el proceso completamente con la opción <code>--abort</code>.</p><p><a href='https://www.runroom.com/realworld/seleccionando-commits-cherry-pick' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
 					"git cherry-pick"
@@ -879,8 +879,8 @@
 			"parent": "git",
 			"url": "command-git",
 			"name": "diff",
-			"title": "Git. Comparar cambios con «git diff»",
-			"description": "<p>Podemos ver qué cambios se han hecho en el código con el comando <code>diff</code>. Este, muestra en la terminal las líneas de código que se han eliminado con el símbolo <code>-</code> y en color rojo, y las líneas añadidas con el símbolo <code>+</code> y de color verde.</p><p>La siguiente herramienta online puede ayudarte. <strong>DiffMerge</strong> es una aplicación para comparar y fusionar visualmente archivos en Windows, OSX y Linux: <a href='http://sourcegear.com/diffmerge/' target='_blank'>http://sourcegear.com/diffmerge/</a></p><p>También podemos comparar los cambios que se han realizado en el código de varios «commits».</p><p><a href='https://www.atlassian.com/git/tutorials/saving-changes/git-diff' target='_blank'>Saber más</a></p>",
+			"title": "Git. Comparar cambios con <em>«git diff»</em>",
+			"description": "<p>Podemos ver qué cambios se han hecho en el código con el comando <code>diff</code>. Este, muestra en la terminal las líneas de código que se han eliminado con el símbolo <code>-</code> y en color rojo, y las líneas añadidas con el símbolo <code>+</code> y de color verde.</p><p>La siguiente herramienta online puede ayudarte. <strong>DiffMerge</strong> es una aplicación para comparar y fusionar visualmente archivos en Windows, OSX y Linux: <a href='http://sourcegear.com/diffmerge/' target='_blank'>http://sourcegear.com/diffmerge/</a></p><p>También podemos comparar los cambios que se han realizado en el código de varios <em>«commits»</em>.</p><p><a href='https://www.atlassian.com/git/tutorials/saving-changes/git-diff' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
 					"git diff"
@@ -895,7 +895,7 @@
 			"url": "command-git",
 			"name": "mark-conflicts-resolved",
 			"title": "Git. Marcar el conflicto como resuelto",
-			"description": "<p>Pasos a seguir tras resolver un conflicto en los archivos:<ul><li>Añadir todos los archivos a la zona de preparación</li><li>Ver el estado de los archivos (modificados/borrados/añadidos)</li><li>Crear un «commit» con esos cambios, indicando una descripción de lo que se ha realizado</li></ul></p>",
+			"description": "<p>Pasos a seguir tras resolver un conflicto en los archivos:<ul><li>Añadir todos los archivos a la zona de preparación</li><li>Ver el estado de los archivos (modificados/borrados/añadidos)</li><li>Crear un <em>«commit»</em> con esos cambios, indicando una descripción de lo que se ha realizado</li></ul></p>",
 			"code": [
 				"git add .",
 				"git status",
@@ -922,7 +922,7 @@
 			"url": "command-git",
 			"name": "create-tag",
 			"title": "Git. Crear una nueva etiqueta",
-			"description": "<p>En el desarrollo de software, las etiquetas Git representan una versión de nuestro código en un momento dado. A diferencia de las ramas, las etiquetas no son mutables y siempre apuntan al mismo «commit», por lo que la gente generalmente las utiliza para marcar puntos importantes en la historia de Git (como los puntos de liberación v1.0, v2.0 y así sucesivamente).</p><p>El <a href='https://semver.org/lang/es/' target='_blank'>versionado semántico</a> utiliza un formato de versión basado en números 3 enteros separados por puntos: <code>X.Y.Z</code> (<em>Major.Minor.Patch</em>), los arreglos de bugs que no cambian la API incrementan el <code>patch</code>, los cambios y adiciones que no rompen la compatibilidad de las dependencias anteriores incrementan el <code>minor</code>, y los cambios que rompen la compatibilidad incrementan el <code>major</code>. Esto se traduciría a la estructura de ramas de Git Flow como <em>release.feature.bug</em>.</br>El desarrollador es el responsable de comunicar el estado de su software, publicando este número.</p><p><a href='https://semver.org/' target='_blank'>Saber más</a></p>",
+			"description": "<p>En el desarrollo de software, las etiquetas Git representan una versión de nuestro código en un momento dado. A diferencia de las ramas, las etiquetas no son mutables y siempre apuntan al mismo <em>«commit»</em>, por lo que la gente generalmente las utiliza para marcar puntos importantes en la historia de Git (como los puntos de liberación v1.0, v2.0 y así sucesivamente).</p><p>El <a href='https://semver.org/lang/es/' target='_blank'>versionado semántico</a> utiliza un formato de versión basado en números 3 enteros separados por puntos: <code>X.Y.Z</code> (<em>Major.Minor.Patch</em>), los arreglos de bugs que no cambian la API incrementan el <code>patch</code>, los cambios y adiciones que no rompen la compatibilidad de las dependencias anteriores incrementan el <code>minor</code>, y los cambios que rompen la compatibilidad incrementan el <code>major</code>. Esto se traduciría a la estructura de ramas de Git Flow como <em>release.feature.bug</em>.</br>El desarrollador es el responsable de comunicar el estado de su software, publicando este número.</p><p><a href='https://semver.org/' target='_blank'>Saber más</a></p>",
 			"code": "git tag -a '<TAG_VERSION>' -m '<COMMIT_MESSAGE>'"
 		},
 		{
@@ -1038,7 +1038,7 @@
 			"parent": "gitFlow",
 			"url": "command-git-flow",
 			"name": "gitflow-feature-start",
-			"title": "Git Flow. Iniciar una nueva «feature»",
+			"title": "Git Flow. Iniciar una nueva <em>«feature»</em>",
 			"description": "<p>Cuando se va a desarrollar una nueva funcionalidad o característica del proyecto, se crea una nueva rama llamada <code>feature</code>. Este tipo de ramas nacen a partir de la rama <code>develop</code> y una vez terminado su desarrollo, se incorporan nuevamente a ella.</p><p>El siguiente comando es un atajo, que engloba la ejecución de varios comandos:<ul><li><code>git checkout develop</code></li><li><code>git branch feature/&lt;BRANCH_NAME&gt;</code></li><li><code>git checkout feature/&lt;BRANCH_NAME&gt;</code></li></ul></p>",
 			"code": [
 				[
@@ -1053,7 +1053,7 @@
 			"parent": "gitFlow",
 			"url": "command-git-flow",
 			"name": "gitflow-feature-list",
-			"title": "Git Flow. Obtener la lista de «features»",
+			"title": "Git Flow. Obtener la lista de <em>«features»</em>",
 			"description": "<p>Puedes ver una lista de las ramas <code>feature</code> ya creadas en el repositorio local usando el siguiente comando.</p>",
 			"code": "git flow feature list"
 		},
@@ -1061,7 +1061,7 @@
 			"parent": "gitFlow",
 			"url": "command-git-flow",
 			"name": "gitflow-feature-publish",
-			"title": "Git Flow. Publicar una «feature»",
+			"title": "Git Flow. Publicar una <em>«feature»</em>",
 			"description": "<p>Normalmente, las <code>feature</code> existen solamente en los repositorios locales de los desarrolladores y no en el repositorio origen. Si quieres compartir esta rama con algunos miembros de tu equipo para poder hacer un desarrollo colaborativo, tendrías que publicar la <code>feature</code> en el servidor remoto para que pueda ser utilizada por otros usuarios.</p>",
 			"code": "git flow feature publish <FEATURE_NAME>"
 		},
@@ -1069,7 +1069,7 @@
 			"parent": "gitFlow",
 			"url": "command-git-flow",
 			"name": "gitflow-feature-pull",
-			"title": "Git Flow. Conseguir una «feature» publicada",
+			"title": "Git Flow. Conseguir una <em>«feature»</em> publicada",
 			"description": "<p>Cuando más de una persona trabaje a la vez en una <code>feature</code>, esta será publicada por tus compañeros de equipo, y podrás ser capaz de desarrollar en la misma rama con ellos.</p><p>Si es la primera vez que participas en el proyecto, primero tendrás que clonar el repositorio usando <code>git clone &lt;URL&gt;</code> para tener una copia en tu ordenador (repositorio local), después inicializar Git Flow con <code>git flow init</code> y descargar las ramas <code>master</code> y <code>develop</code> con los comandos <code>git checkout master</code> y <code>git checkout develop</code>.</p><p>Si ya estás participando en el proyecto, puedes saltarte los pasos anteriores y usar el siguiente comando para descargar una <code>feature</code> y para asegurar que el repositorio local está sincronizado con el remoto.</p>",
 			"code": "git flow feature pull origin <FEATURE_NAME>"
 		},
@@ -1077,7 +1077,7 @@
 			"parent": "gitFlow",
 			"url": "command-git-flow",
 			"name": "gitflow-feature-track",
-			"title": "Git Flow. Seguir una «feature» publicada",
+			"title": "Git Flow. Seguir una <em>«feature»</em> publicada",
 			"description": "<p>Digamos que has creado una nueva función con <code>git flow feature start &lt;FEATURE_NAME&gt;</code>, y la has publicado al repositorio remoto con <code>git flow feature publish &lt;FEATURE_NAME&gt;</code> para que otros miembros de tu equipo puedan colaborar contigo usando <code>git flow feature pull &lt;FEATURE_NAME&gt;</code> para descargársela. Esto crea una nueva rama en su repositorio local, basada en la rama del remoto, sin embargo, esto no la configura para que los cambios que se realicen en esta, sean rastreados por la rama remota, por lo que ahora tiene que ser rastreada manualmente.</p><p>Con el siguiente comando, <code>git flow feature track &lt;FEATURE_NAME&gt;</code>, tu compañero de trabajo, puede descargar la <code>feature</code> y además seguir los cambios que otros realicen en la publicada en el repositorio de origen.</p><p>Para ilustrar el aspecto colaborativo con una rama de una nueva función, utilizando el aspecto de solicitud de extracción de GitHub que facilita la parte de revisión y discusión del código, nos ponemos en la siguiente situación:<ul><li>Varias personas trabajan en la misma función y a medida que se confirman los cambios, se envían a GitHub (o una vez al final de su desarrollo si se prefiere).</li><li>Cuando se completa la función, se abre una solicitud de extracción en GitHub comparando <code>develop</code> y con la rama.</li><li>El equipo revisa la solicitud de extracción y realiza comentarios.</li><li>Cualquier cambio de la solicitud de extracción se realiza en la rama de funciones.</li><li>Una vez que se incorporan todos los cambios en la rama de funciones, se da por terminada: <code>git flow feature finish &lt;FEATURE_NAME&gt;</code>.</li><li>La rama <code>develop</code> se envía a GitHub (GitHub marcará automáticamente la solicitud de extracción como cerrada/fusionada cuando esto suceda).</li></ul><p>Sin embargo, eso deja el problema de cerrar esa sucursal, quien ejecute primero <code>git flow feature finish &lt;FEATURE_NAME&gt;</code> tendrá el lujo de eliminar su rama local, pero cualquier otra persona que haya verificado la rama tendrá que hacerlo manualmente si así lo desea. Puedes usar <code>git fetch --prune</code> o un simple <code>git fetch</code> para eliminar tu rama si ya ha sido eliminada en el remoto.</p><p>Si ya has descargado la rama, y ahora necesitas realizar un seguimiento de esta, todo lo que tienes que hacer sería que tu rama existente rastree a la anterior con <code>git branch -u origin feature/&lt;FEATURE_NAME&gt;</code> o <code>git branch --set-upstream-to origin feature/&lt;FEATURE_NAME&gt;</code></p><p>En general, lo mejor sería empezar, usando <code>git flow feature track &lt;FEATURE_NAME&gt;</code> y luego mantener tu rama actualizada con <code>git flow feature pull origin &lt;FEATURE_NAME&gt;</code></p></p><p><a href='https://stackoverflow.com/questions/18412750/why-doesnt-git-flow-feature-pull-track' target='_blank'>Saber más</a></p>",
 			"code": "git flow feature track <FEATURE_NAME>"
 		},
@@ -1085,7 +1085,7 @@
 			"parent": "gitFlow",
 			"url": "command-git-flow",
 			"name": "gitflow-feature-finish",
-			"title": "Git Flow. Terminar una «feature»",
+			"title": "Git Flow. Terminar una <em>«feature»</em>",
 			"description": "<p>Cuando se finaliza el desarrollo de la nueva función, se deberá fusionar con <code>develop</code> y eliminarse del repositorio local y del remoto si llego a subirse.</p><p>El siguiente comando realiza los siguientes comandos:<ul><li><code>git checkout develop</code></li><li><code>git merge feature/&lt;FEATURE_NAME&gt;</code></li><li><code>git branch -D &lt;FEATURE_NAME&gt;</code></li><li><code>git push origin :&lt;FEATURE_NAME&gt;</code></li></ul></p>",
 			"code": "git flow feature finish <FEATURE_NAME>"
 		},
@@ -1093,7 +1093,7 @@
 			"parent": "gitFlow",
 			"url": "command-git-flow",
 			"name": "gitflow-bugfix-start",
-			"title": "Git Flow. Empezar un «bugfix»",
+			"title": "Git Flow. Empezar un <em>«bugfix»</em>",
 			"description": "<p>Durante el desarrollo del proyecto, podrán encontrarse errores en alguna de las ramas del repositorio. Para solucionarlos, tenemos 2 tipos de ramas diferentes según el lugar que ocupan estos errores en el flujo de trabajo de Git: <code>bugfix</code> y <code>hotfix</code>.</p><p>El término <code>bugfix</code> o <strong>corrección de errores</strong> se utilizan cuando se encuentra un problema durante la fase de desarrollo, para arreglar errores de una anterior funcionalidad u omisiones de desarrollo.</br>Este tipo de ramas se crean desde <code>develop</code> y se fusionan de nuevo en <code>develop</code> al terminarse.</p><p>El siguiente comando es lo mismo que ejecutar:<ul><li><code>git checkout develop</code></li><li><code>git branch bugfix/&lt;BUGFIX_NAME&gt;</code></li><li><code>git checkout bugfix/&lt;BUGFIX_NAME&gt;</code></li></ul></p>",
 			"code": "git flow bugfix start <BUGFIX_NAME>"
 		},
@@ -1101,7 +1101,7 @@
 			"parent": "gitFlow",
 			"url": "command-git-flow",
 			"name": "gitflow-bugfix-finish",
-			"title": "Git Flow. Terminar un «bugfix»",
+			"title": "Git Flow. Terminar un <em>«bugfix»</em>",
 			"description": "<p>Las ramas <code>bugfix</code> o de corrección de errores son ramas temporales, que una vez resueltos los errores, se eliminan después de fusionarse con la rama de desarrollo <code>develop</code>.</p><p>El siguiente comando es lo mismo que ejecutar:<ul><li><code>git checkout develop</code></li><li><code>git merge bugfix/&lt;BUGFIX_NAME&gt;</code></li><li><code>git branch -D bugfix/&lt;BUGFIX_NAME&gt;</code></li></ul></p>",
 			"code": "git flow bugfix finish <BUGFIX_NAME>"
 		},
@@ -1109,15 +1109,15 @@
 			"parent": "gitFlow",
 			"url": "command-git-flow",
 			"name": "gitflow-release-start",
-			"title": "Git Flow. Empezar una «release»",
-			"description": "<p>Para preparar nuestra aplicación para su puesta en producción, existen unas ramas llamadas <code>release</code>. En algunos equipos, estas ramas son las que se vuelcan en los servidores de preproducción para hacer el testing final: se corrigen errores menores, se pule la interfaz, se ajusta la maquetación… se hace la puesta a punto final de la aplicación antes de liberar la versión definitiva.</p><p>El nombre de la <code>release</code> es una cifra de 3 números enteros separados por puntos que van incrementándose numéricamente en incrementos de 1. Este número sigue la nomenclatura del <a href='https://semver.org/lang/es/' target='_blank'>versionado semántico</a>, <code>X.Y.Z</code>, donde <code>X</code> es la versión «major» (incorporación de múltiples cambios que ya no son compatibles con la API pública), <code>Y</code> es la versión «minor» (incorporación de una funcionalidad), y <code>Z</code> es la versión «patch» (corrección de errores compatibles con la versión anterior).</br>Por tanto, el número de la <code>release</code> sería el primero, <code>X</code>.</p><p>El siguiente comando crea una rama de lanzamiento a partir de la rama <code>develop</code>. Opcionalmente, se puede suministrar el ID de un «commit» situada en <code>develop</code> para iniciar el lanzamiento desde el «commit».</p><p><a href='https://aprendegit.com/git-flow-release-branches/' target='_blank'>Saber más</a></p>",
+			"title": "Git Flow. Empezar una <em>«release»</em>",
+			"description": "<p>Para preparar nuestra aplicación para su puesta en producción, existen unas ramas llamadas <code>release</code>. En algunos equipos, estas ramas son las que se vuelcan en los servidores de preproducción para hacer el testing final: se corrigen errores menores, se pule la interfaz, se ajusta la maquetación… se hace la puesta a punto final de la aplicación antes de liberar la versión definitiva.</p><p>El nombre de la <code>release</code> es una cifra de 3 números enteros separados por puntos que van incrementándose numéricamente en incrementos de 1. Este número sigue la nomenclatura del <a href='https://semver.org/lang/es/' target='_blank'>versionado semántico</a>, <code>X.Y.Z</code>, donde <code>X</code> es la versión <em>«major»</em> (incorporación de múltiples cambios que ya no son compatibles con la API pública), <code>Y</code> es la versión <em>«minor»</em> (incorporación de una funcionalidad), y <code>Z</code> es la versión <em>«patch»</em> (corrección de errores compatibles con la versión anterior).</br>Por tanto, el número de la <code>release</code> sería el primero, <code>X</code>.</p><p>El siguiente comando crea una rama de lanzamiento a partir de la rama <code>develop</code>. Opcionalmente, se puede suministrar el ID de un <em>«commit»</em> situada en <code>develop</code> para iniciar el lanzamiento desde el <em>«commit»</em>.</p><p><a href='https://aprendegit.com/git-flow-release-branches/' target='_blank'>Saber más</a></p>",
 			"code": "git flow release start <VERSION_NUMBER> <[BASE]>"
 		},
 		{
 			"parent": "gitFlow",
 			"url": "command-git-flow",
 			"name": "gitflow-release-list",
-			"title": "Git Flow. Obtener una lista de «release»",
+			"title": "Git Flow. Obtener una lista de <em>«release»</em>",
 			"description": "<p>Puede ver una lista de todas las ramas de lanzamiento actuales creadas en el repositorio local.</p>",
 			"code": "git flow release list"
 		},
@@ -1125,15 +1125,15 @@
 			"parent": "gitFlow",
 			"url": "command-git-flow",
 			"name": "gitflow-release-publish",
-			"title": "Git Flow. Publicar una «release»",
-			"description": "<p>Si está trabajando en equipo y otro de sus compañeros debe revisar el código antes del lanzamiento de una nueva versión, es aconsejable publicar la rama de lanzamiento después de crearla para permitir que otros desarrolladores hagan «commits» de lanzamiento.</p>",
+			"title": "Git Flow. Publicar una <em>«release»</em>",
+			"description": "<p>Si está trabajando en equipo y otro de sus compañeros debe revisar el código antes del lanzamiento de una nueva versión, es aconsejable publicar la rama de lanzamiento después de crearla para permitir que otros desarrolladores hagan <em>«commits»</em> de lanzamiento.</p>",
 			"code": "git flow release publish <VERSION_NUMBER>"
 		},
 		{
 			"parent": "gitFlow",
 			"url": "command-git-flow",
 			"name": "gitflow-release-track",
-			"title": "Git Flow. Seguir el rastro de una «release»",
+			"title": "Git Flow. Seguir el rastro de una <em>«release»</em>",
 			"description": "<p>Puede seguir los cambios de una versión publicada en el repositorio remoto.</p>",
 			"code": "git flow release track <VERSION_NUMBER>"
 		},
@@ -1141,8 +1141,8 @@
 			"parent": "gitFlow",
 			"url": "command-git-flow",
 			"name": "gitflow-release-finish",
-			"title": "Git Flow. Terminar una «release»",
-			"description": "<p>Una vez creada la rama <code>release</code>, empezamos el proceso de corrección y depuración, se realizan los «commits» necesarios y cuando hemos terminado de arreglar todos los «bugs», estamos listos para que nuestro proyecto pase a producción y eliminar la rama.</p><p>Terminar una versión es uno de los grandes pasos en la creación de ramas de Git. El siguiente comando realiza varias acciones: fusiona la rama de la versión con <code>master</code>, etiqueta la versión con su nombre, vuelve a fusionar la versión con <code>develop</code> y elimina la rama de la versión.</p><p>Cuando ejecutamos este comando, Git Flow nos va a pedir que introduzcamos 3 mensajes: <ol><li>El mensaje del «commit» del merge como resultado de incorporar los cambios en <code>master</code>.</li><li>El mensaje que Git Flow pondrá a la etiqueta que va a crear para identificar esta versión.</li><li>Y por último, el mensaje del «commit» del merge como resultado de incorporar la rama a <code>develop</code>.</li></ol></p><p>La ejecución de este comando, puede resumirse en los siguientes comandos:<ul><li><code>git checkout master</code></li><li><code>git merge release/&lt;VERSION_NUMBER&gt; --no-ff</code></li><li><code>git tag v&lt;VERSION_NUMBER&gt;</code></li><li><code>git checkout develop</code></li><li><code>git merge release/&lt;VERSION_NUMBER&gt; --no-ff</code></li><li><code>git branch -d release/&lt;VERSION_NUMBER&gt;</code></li></ul></p>",
+			"title": "Git Flow. Terminar una <em>«release»</em>",
+			"description": "<p>Una vez creada la rama <code>release</code>, empezamos el proceso de corrección y depuración, se realizan los <em>«commits»</em> necesarios y cuando hemos terminado de arreglar todos los <em>«bugs»</em>, estamos listos para que nuestro proyecto pase a producción y eliminar la rama.</p><p>Terminar una versión es uno de los grandes pasos en la creación de ramas de Git. El siguiente comando realiza varias acciones: fusiona la rama de la versión con <code>master</code>, etiqueta la versión con su nombre, vuelve a fusionar la versión con <code>develop</code> y elimina la rama de la versión.</p><p>Cuando ejecutamos este comando, Git Flow nos va a pedir que introduzcamos 3 mensajes: <ol><li>El mensaje del <em>«commit»</em> del merge como resultado de incorporar los cambios en <code>master</code>.</li><li>El mensaje que Git Flow pondrá a la etiqueta que va a crear para identificar esta versión.</li><li>Y por último, el mensaje del <em>«commit»</em> del merge como resultado de incorporar la rama a <code>develop</code>.</li></ol></p><p>La ejecución de este comando, puede resumirse en los siguientes comandos:<ul><li><code>git checkout master</code></li><li><code>git merge release/&lt;VERSION_NUMBER&gt; --no-ff</code></li><li><code>git tag v&lt;VERSION_NUMBER&gt;</code></li><li><code>git checkout develop</code></li><li><code>git merge release/&lt;VERSION_NUMBER&gt; --no-ff</code></li><li><code>git branch -d release/&lt;VERSION_NUMBER&gt;</code></li></ul></p>",
 			"code": "git flow release finish <VERSION_NUMBER>"
 		},
 		{
@@ -1165,15 +1165,15 @@
 			"parent": "gitFlow",
 			"url": "command-git-flow",
 			"name": "gitflow-hotfix-start",
-			"title": "Git Flow. Iniciar un «hotfix»",
-			"description": "<p>Al igual que existen ramas para resolver errores que hemos encontrado durante el proceso de desarrollo, existen otro tipo de ramas. Estas ramas, llamadas <code>hotfix</code>, se crean para actuar inmediatamente sobre un estado no deseado de una versión de producción en vivo, se utilizan para corregir errores u omisiones urgentes que no pueden esperar al lanzamiento de la siguiente versión.</br>El tiempo de vida de esta rama es temporal, se crea a partir de <code>master</code>, se fusiona de nuevo en <code>master</code> y se elimina después de la fusión.</p><p>El nombre del <code>hotfix</code> es una cifra de 3 números enteros separados por puntos que van incrementándose numéricamente en incrementos de 1. Este número sigue la nomenclatura del <a href='https://semver.org/lang/es/' target='_blank'>versionado semántico</a>, <code>X.Y.Z</code>, donde <code>X</code> es la versión «major» (incorporación de múltiples cambios que ya no son compatibles con la API pública), <code>Y</code> es la versión «minor» (incorporación de una funcionalidad), y <code>Z</code> es la versión «patch» (corrección de errores compatibles con la versión anterior).</br>Por tanto, el número del <code>hotfix</code> sería el tercero y último, <code>Z</code>.</p><p>Opcionalmente, se puede especificar un nombre base, el ID de un «commit», desde el que crear la rama.</p>",
+			"title": "Git Flow. Iniciar un <em>«hotfix»</em>",
+			"description": "<p>Al igual que existen ramas para resolver errores que hemos encontrado durante el proceso de desarrollo, existen otro tipo de ramas. Estas ramas, llamadas <code>hotfix</code>, se crean para actuar inmediatamente sobre un estado no deseado de una versión de producción en vivo, se utilizan para corregir errores u omisiones urgentes que no pueden esperar al lanzamiento de la siguiente versión.</br>El tiempo de vida de esta rama es temporal, se crea a partir de <code>master</code>, se fusiona de nuevo en <code>master</code> y se elimina después de la fusión.</p><p>El nombre del <code>hotfix</code> es una cifra de 3 números enteros separados por puntos que van incrementándose numéricamente en incrementos de 1. Este número sigue la nomenclatura del <a href='https://semver.org/lang/es/' target='_blank'>versionado semántico</a>, <code>X.Y.Z</code>, donde <code>X</code> es la versión <em>«major»</em> (incorporación de múltiples cambios que ya no son compatibles con la API pública), <code>Y</code> es la versión <em>«minor»</em> (incorporación de una funcionalidad), y <code>Z</code> es la versión <em>«patch»</em> (corrección de errores compatibles con la versión anterior).</br>Por tanto, el número del <code>hotfix</code> sería el tercero y último, <code>Z</code>.</p><p>Opcionalmente, se puede especificar un nombre base, el ID de un <em>«commit»</em>, desde el que crear la rama.</p>",
 			"code": "git flow hotfix start <VERSION_NUMBER> <[BASE_NAME]>"
 		},
 		{
 			"parent": "gitFlow",
 			"url": "command-git-flow",
 			"name": "gitflow-hotfix-finish",
-			"title": "Git Flow. Terminar un «hotfix»",
+			"title": "Git Flow. Terminar un <em>«hotfix»</em>",
 			"description": "<p>Cuando se han realizado todas las correcciones en una rama <code>hotfix</code>, hay que realizar el siguiente comando para finalizar la rama. Este proceso fusiona la rama de nuevo con <code>develop</code> y <code>master</code>, crea una etiqueta con el número de versión del <code>hotfix</code> y elimina dicha rama, ya que su existencia es temporal.</p>",
 			"code": "git flow hotfix finish <VERSION_NUMBER>"
 		}
