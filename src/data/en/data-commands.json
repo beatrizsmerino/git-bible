@@ -5,7 +5,7 @@
 			"url": "command-git",
 			"name": "get-git-version",
 			"title": "Git. Get the Git version installed",
-			"description": "<p><strong>Git</strong> is a <strong>distributed version control system</strong> that’s being used by most software teams today.</p><p>Before you start using <strong>Git</strong>, you have to make it available on your computer. Even if it’s already installed, it’s probably a good idea to update to the latest version.</br>The <code>--version</code> option of the following command, will return the version number installed on your computer. If not, there are several ways to install <strong>Git</strong>, follow the steps described in this <a href='https://git-scm.com/book/en/v2/Getting-Started-Installing-Git' target='_blank'>link</a>, depending on your operating system.</p>",
+			"description": "<p>Git is a <strong>distributed version control system</strong> that’s being used by most software teams today.</p><p>Before you start using Git, you have to make it available on your computer. Even if it’s already installed, it’s probably a good idea to update to the latest version.</br>The <code>--version</code> option of the following command, will return the version number installed on your computer. If not, there are several ways to <strong>install Git</strong>, follow the steps described in this <a href='https://git-scm.com/book/en/v2/Getting-Started-Installing-Git' target='_blank'>link</a>, depending on your operating system.</p>",
 			"code": "git --version"
 		},
 		{
