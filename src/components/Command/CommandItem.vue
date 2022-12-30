@@ -14,7 +14,7 @@
 					<font-awesome-icon :icon="['fas', 'link']" />
 				</i>
 			</router-link>
-			{{ commandItem.title }}
+			<span v-html="commandItem.title" />
 		</h3>
 
 		<div
