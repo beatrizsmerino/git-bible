@@ -122,7 +122,7 @@
 			"url": "command-git",
 			"name": "get-commits",
 			"title": "Git. Get all commits made",
-			"description": "<p>After you have made several commits, or if you have cloned a repository that already had a commit history, you will probably want to look back to see what modifications have been made.</p><p>This command shows a list of all the commits made, in reverse chronological order, i.e., the most recent ones are shown at the beginning. Each commit contains information about the identification number (<em>Secure Hash Algorithm</em>, <code>SHA-1</code>), the author's name and e-mail address, the date and the commit message.</p><p><a href='https://git-scm.com/book/es/v2/Fundamentos-de-Git-Ver-el-Historial-de-Confirmaciones' target='_blank'>Know more</a></p>",
+			"description": "<p>After you have made several commits, or if you have cloned a repository that already had a commit history, you will probably want to look back to see what modifications have been made.</p><p>This command shows a list of all the commits made, in reverse chronological order, i.e., the most recent ones are shown at the beginning. Each commit contains information about the identification number (<a href='https://medium.com/@jonathan_finch/git-commit-hash-number-theory-770f67ec492d' target='_blank'><em>Secure Hash Algorithm</em></a>, <code>SHA-1</code>), the author's name and e-mail address, the date and the commit message.</p><p><a href='https://git-scm.com/book/es/v2/Fundamentos-de-Git-Ver-el-Historial-de-Confirmaciones' target='_blank'>Know more</a></p>",
 			"code": "git log"
 		},
 		{
