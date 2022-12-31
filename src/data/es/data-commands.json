@@ -729,7 +729,7 @@
 			"url": "command-git",
 			"name": "rename-current-branch",
 			"title": "Git. Renombrar la rama actual",
-			"description": "<p>Es posible que en algún momento, como ocurre con los mensajes de <em>«commit»</em>, quieras renombrar una rama.</br>Con este comando, puedes renombrar la rama local en la que estás trabajando.</p><p>Tiene parámetros opcionales:<ul><li><code>--mover</code> o <code>-m</code>: Mover/renombrar una rama y el correspondiente <strong><em>«reflog»</em></strong>.</li><li><code>-M</code>: Es un atajo de <code>--delete --force</code></li></ul></p><p><a href='https://git-scm.com/docs/git-branch' target='_blank'>Saber más</a></p>",
+			"description": "<p>Es posible que en algún momento, como ocurre con los mensajes de <em>«commit»</em>, quieras renombrar una rama.</br>Con este comando, puedes renombrar la rama local en la que estás trabajando.</p><p>Tiene parámetros opcionales:<ul><li><code>--move</code> o <code>-m</code>: Mover/renombrar una rama y el correspondiente <strong><em>«reflog»</em></strong>.</li><li><code>-M</code>: Es un atajo de <code>--delete --force</code></li></ul></p><p><a href='https://git-scm.com/docs/git-branch' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
 					"git branch -m <NEW_BRANCH_NAME>"
