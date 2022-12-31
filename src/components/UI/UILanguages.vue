@@ -30,10 +30,12 @@
 			languages() {
 				return [
 					{
-						locale: "es", title: this.$t("language.spanish")
+						locale: "es",
+						title: this.$t("language.spanish")
 					},
 					{
-						locale: "en", title: this.$t("language.english")
+						locale: "en",
+						title: this.$t("language.english")
 					}
 				];
 			}
