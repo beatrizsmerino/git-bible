@@ -729,7 +729,7 @@
 			"url": "command-git",
 			"name": "rename-current-branch",
 			"title": "Git. Rename current branch",
-			"description": "<p>It is possible that at some time, as with the commit messages, you may want to rename a branch.</br>With this command, you can rename the local branch you are working on.</p><p>It has optional parameters:<ul><li><code>--move</code> or <code>-m</code>: Move/rename a branch and the corresponding reflog.</li><li><code>-M</code>: It is a shortcut of <code>--delete --force</code></li></ul></p><p><a href='https://git-scm.com/docs/git-branch' target='_blank'>Know more</a></p>",
+			"description": "<p>It is possible that at some time, as with the commit messages, you may want to rename a branch.</br>With this command, you can rename the local branch you are working on.</p><p>It has optional parameters:<ul><li><code>--move</code> or <code>-m</code>: Move/rename a branch and the corresponding reflog.</li><li><code>-M</code>: It is a shortcut of <code>--move --force</code></li></ul></p><p><a href='https://git-scm.com/docs/git-branch' target='_blank'>Know more</a></p>",
 			"code": [
 				[
 					"git branch -m <NEW_BRANCH_NAME>"
