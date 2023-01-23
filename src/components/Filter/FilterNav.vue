@@ -133,13 +133,14 @@
 		data() {
 			return {
 				isOpen: false,
+				commandListStaticData: [],
 				commandListFiltered: []
 			};
 		},
 		computed: {
 			getCategoryList() {
 				const categoryList = [];
-				this.commandList.forEach(command => command.categories.forEach(category => {
+				this.commandListStaticData.forEach(command => command.categories.forEach(category => {
 					if (!categoryList.includes(category)) {
 						categoryList.push(category);
 					}
@@ -158,12 +159,18 @@
 				document.body.style.overflow = this.isOpen ? 'hidden' : '';
 			}
 		},
+		mounted() {
+			this.saveCommandListStaticData();
+		},
 		methods: {
 			openCloseFilter() {
 				this.isOpen = !this.isOpen;
 			},
 			closeFilter() {
 				this.isOpen = false;
+			},
+			saveCommandListStaticData() {
+				this.commandListStaticData = this.commandList;
 			},
 			setCommandListFilterByCategories(categoryListActive) {
 				const commandListFound = [];
