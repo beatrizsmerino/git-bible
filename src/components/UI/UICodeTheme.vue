@@ -8,14 +8,14 @@
 					</i>
 					Shell Bash
 				</p>
-				<div class="code-theme__buttons">
+				<div class="code-theme__button-list">
 					<UICopy
 						class="code-theme__button-copy code-theme__button"
 						:text-to-copy="codeFormatted"
 					/>
 
 					<label
-						class="switch-theme code-theme__button-switch code-theme__button"
+						class="code-theme__button switch-theme"
 						@change="switchTheme"
 					>
 						<input
@@ -51,7 +51,11 @@
 					class="code-theme__code is-one-line"
 					@scroll="checkScrollHorizontal"
 				>
-					{{ code[0] }}
+					<ol class="code-theme__code-list">
+						<li class="code-theme__code-item">
+							{{ code[0] }}
+						</li>
+					</ol>
 				</code>
 
 				<code
@@ -59,7 +63,11 @@
 					class="code-theme__code is-one-line"
 					@scroll="checkScrollHorizontal"
 				>
-					{{ code }}
+					<ol class="code-theme__code-list">
+						<li class="code-theme__code-item">
+							{{ code }}
+						</li>
+					</ol>
 				</code>
 			</div>
 		</div>
@@ -166,7 +174,7 @@
 			&:checked + .switch-theme__bullet:before {
 				left: initial;
 				right: 0.5rem;
-				background-color: $color-brand-2;
+				background-color: $color-brand-2-light;
 			}
 		}
 
@@ -207,7 +215,11 @@
 			.switch-theme {
 				&__field {
 					&:checked + .switch-theme__bullet:before {
-						background-color: $color-black;
+						background-color: mix(
+							$color-black,
+							$color-brand-2-light,
+							20%
+						);
 					}
 				}
 
@@ -241,13 +253,14 @@
 		&__type {
 			font-size: 1.5rem;
 			font-weight: 300;
+			color: $color-brand-2-light;
 		}
 
 		&__type-icon {
 			font-size: 0.9rem;
 		}
 
-		&__buttons {
+		&__button-list {
 			display: flex;
 			align-items: center;
 		}
@@ -258,12 +271,6 @@
 			&:not(:last-child) {
 				margin-right: 0.5rem;
 			}
-		}
-
-		&__button-switch {
-		}
-
-		&__button-copy {
 		}
 
 		&__content {
@@ -282,16 +289,6 @@
 			@include media('sm') {
 				font-size: 1.3rem;
 			}
-
-			&.is-one-line {
-				&::before {
-					content: '1';
-					min-width: 3rem;
-					margin-right: 0.5rem;
-					display: inline-block;
-					color: rgba($color-brand-2-light, 0.5);
-				}
-			}
 		}
 
 		&__code-list {
@@ -305,7 +302,7 @@
 
 			&::before {
 				content: counter(numberOfLine);
-				min-width: 3rem;
+				min-width: 2rem;
 				margin-right: 0.5rem;
 				display: inline-block;
 				color: rgba($color-brand-2-light, 0.5);
@@ -389,28 +386,57 @@
 		}
 
 		&.is-theme-dark {
-			color: $color-brand-1;
-			background-color: $color-brand-2;
+			color: $color-white;
+			background-color: $color-brand-2-light;
+
+			.button-copy {
+				color: $color-brand-2-light;
+				background-color: mix($color-white, $color-brand-2-light, 70%);
+
+				&:hover {
+					color: mix($color-black, $color-brand-2-light, 20%);
+				}
+			}
+
+			.switch-theme {
+				&__bullet {
+					background-color: mix(
+						$color-white,
+						$color-brand-2-light,
+						70%
+					);
+				}
+			}
 
 			.code-theme {
+				&__type {
+					color: $color-brand-2;
+				}
+
+				&__code-item {
+					&::before {
+						color: rgba($color-brand-2, 0.5);
+					}
+				}
+
 				&__content {
 					&:before {
-						background: $color-brand-2;
+						background: $color-brand-2-light;
 						background: linear-gradient(
 							90deg,
-							rgba($color-brand-2, 1) 0%,
-							rgba($color-brand-2, 1) 40%,
-							rgba($color-brand-2, 0) 80%
+							rgba($color-brand-2-light, 1) 0%,
+							rgba($color-brand-2-light, 1) 40%,
+							rgba($color-brand-2-light, 0) 80%
 						);
 					}
 
 					&:after {
-						background: $color-brand-2;
+						background: $color-brand-2-light;
 						background: linear-gradient(
 							90deg,
-							rgba($color-brand-2, 0) 0%,
-							rgba($color-brand-2, 1) 40%,
-							rgba($color-brand-2, 1) 80%
+							rgba($color-brand-2-light, 0) 0%,
+							rgba($color-brand-2-light, 1) 40%,
+							rgba($color-brand-2-light, 1) 80%
 						);
 					}
 				}

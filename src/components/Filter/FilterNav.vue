@@ -35,15 +35,31 @@
 					Filter
 				</h1>
 
-				<div class="filter-nav__type">
-					<h2 class="filter-nav__subtitle">
-						Languages
-					</h2>
+				<ul class="filter-nav__list">
+					<li class="filter-nav__item">
+						<h2 class="filter-nav__subtitle">
+							Languages
+						</h2>
 
-					<div class="filter-nav__subcontent">
-						<UILanguages />
-					</div>
-				</div>
+						<div class="filter-nav__subcontent">
+							<UILanguages />
+						</div>
+					</li>
+
+					<li class="filter-nav__item">
+						<h2 class="filter-nav__subtitle">
+							Categories
+						</h2>
+
+						<div class="filter-nav__subcontent">
+							<UITagList
+								:tag-list="getCategoryList"
+								:tag-list-type="'clickable'"
+								@emit-click="setCommandListFilterByCategories"
+							/>
+						</div>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -52,6 +68,7 @@
 <script>
 	import Vue from 'vue';
 	import UILanguages from '@/components/UI/UILanguages';
+	import UITagList from '@/components/UI/UITagList';
 
 	let handleOutsideClick;
 
@@ -102,19 +119,48 @@
 	});
 
 	export default {
-		name: 'UIFilterNav',
+		name: 'FilterNav',
 		components: {
-			UILanguages
+			UILanguages,
+			UITagList
+		},
+		props: {
+			commandList: {
+				type: Array,
+				required: true
+			}
 		},
 		data() {
 			return {
-				isOpen: false
+				isOpen: false,
+				commandListStaticData: [],
+				commandListFiltered: []
 			};
 		},
+		computed: {
+			getCategoryList() {
+				const categoryList = [];
+				this.commandListStaticData.forEach(command => command.categories.forEach(category => {
+					if (!categoryList.includes(category)) {
+						categoryList.push(category);
+					}
+				}));
+
+				return categoryList;
+			}
+		},
 		watch: {
+			commandListFiltered(newValue, oldValue) {
+				if (newValue !== oldValue) {
+					this.$emit('emit-command-list-filtered', newValue);
+				}
+			},
 			isOpen() {
 				document.body.style.overflow = this.isOpen ? 'hidden' : '';
 			}
+		},
+		mounted() {
+			this.saveCommandListStaticData();
 		},
 		methods: {
 			openCloseFilter() {
@@ -122,6 +168,17 @@
 			},
 			closeFilter() {
 				this.isOpen = false;
+			},
+			saveCommandListStaticData() {
+				this.commandListStaticData = this.commandList;
+			},
+			setCommandListFilterByCategories(categoryListActive) {
+				const commandListFound = [];
+				categoryListActive.forEach(categoryActive => {
+					const data = this.commandList.filter(command => command.categories.includes(categoryActive));
+					data.forEach(commandFound => commandListFound.push(commandFound));
+				});
+				this.commandListFiltered = commandListFound;
 			}
 		}
 	};
@@ -130,15 +187,20 @@
 <style lang="scss" scoped>
 	.filter-nav {
 		width: 100%;
-		height: 100%;
+		height: calc(100% - 8rem);
 		position: fixed;
-		top: 0;
+		top: 8rem;
 		right: 0;
 		z-index: 9999;
 		display: flex;
 		justify-content: flex-end;
 		pointer-events: none;
 		transition: all 0.4s ease-in-out 0.3s;
+
+		@include media('md') {
+			height: calc(100% - 6rem);
+			top: 6rem;
+		}
 
 		&__inner {
 			width: 80%;
@@ -154,7 +216,7 @@
 		&__button {
 			width: 5rem;
 			position: absolute;
-			top: 10rem;
+			top: 4rem;
 			left: calc(-4.35rem - 0.8rem);
 			z-index: -1;
 			border: none;
@@ -207,7 +269,8 @@
 		&__content {
 			width: 100%;
 			height: 100%;
-			padding: 12rem 2rem 4rem;
+			padding: 4rem 2rem;
+			overflow: auto;
 			border-left: 0.8rem solid $color-brand-2-light;
 			background-color: $color-white;
 			transform: translate(-0.8rem, 0);
@@ -218,10 +281,25 @@
 			margin-bottom: 3rem;
 		}
 
+		&__list {
+			list-style: none;
+		}
+
+		&__item {
+			&:not(:last-child) {
+				margin-bottom: 2rem;
+			}
+		}
+
 		&__subtitle {
 			margin-bottom: 1rem;
 			font-size: 2rem;
 			color: $color-brand-1;
+		}
+
+		&__subcontent {
+			//max-height: 20rem;
+			//overflow: auto;
 		}
 
 		&.is-open {

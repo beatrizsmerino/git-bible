@@ -23,40 +23,38 @@
 			v-html="commandItem.description"
 		/>
 
-		<div
-			v-if="
-				Array.isArray(commandItem.code) &&
-					Array.isArray(commandItem.code[0])
-			"
-			class="command-item__blocks-code"
-		>
-			<UICodeTheme
-				v-for="(item, index) in commandItem.code"
-				:key="`code-${index}`"
-				class="command-item__code"
-				:code="item"
-			/>
+		<div class="command-item__blocks-code">
+			<template v-if="checkBlocksCode === 'multiple'">
+				<UICodeTheme
+					v-for="(item, index) in commandItem.code"
+					:key="`code-${index}`"
+					class="command-item__code"
+					:code="item"
+				/>
+			</template>
+			<template v-if="checkBlocksCode === 'one'">
+				<UICodeTheme
+					class="command-item__code"
+					:code="commandItem.code"
+				/>
+			</template>
 		</div>
 
-		<UICodeTheme
-			v-if="
-				(Array.isArray(commandItem.code) &&
-					typeof commandItem.code[0] == 'string') ||
-					typeof commandItem.code == 'string'
-			"
-			class="command-item__code"
-			:code="commandItem.code"
-		/>
+		<div class="command-item__categories">
+			<UITagList :tag-list="commandItem.categories" />
+		</div>
 	</div>
 </template>
 
 <script>
 	import UICodeTheme from '@/components/UI/UICodeTheme';
+	import UITagList from '@/components/UI/UITagList';
 
 	export default {
 		name: 'CommandItem',
 		components: {
-			UICodeTheme
+			UICodeTheme,
+			UITagList
 		},
 		props: {
 			commandItem: {
@@ -70,6 +68,25 @@
 			commandStatus: {
 				type: Boolean,
 				required: true
+			}
+		},
+		computed: {
+			checkBlocksCode() {
+				if (
+					Array.isArray(this.commandItem.code) &&
+					typeof this.commandItem.code[0] == 'string' ||
+					typeof this.commandItem.code == 'string'
+				) {
+					return 'one';
+				}
+				if (
+					Array.isArray(this.commandItem.code) &&
+					Array.isArray(this.commandItem.code[0])
+				) {
+					return 'multiple';
+				}
+
+				return false;
 			}
 		}
 	};
@@ -155,15 +172,21 @@
 		&__blocks-code {
 			display: flex;
 			flex-direction: column;
+
+			> * {
+				&:not(:last-child) {
+					margin-bottom: 1.5rem;
+				}
+			}
 		}
 
 		&__code {
 			width: 100%;
 			display: inline-block;
+		}
 
-			&:not(:last-child) {
-				margin-bottom: 1.5rem;
-			}
+		&__categories {
+			margin-top: 2rem;
 		}
 
 		&.is-selected {

@@ -15,7 +15,7 @@
 
 <style lang="scss" scoped>
 	.page-title {
-		margin: 5rem 0 3rem;
+		margin: 5rem 0 2rem;
 		padding: 1.5rem 0;
 		text-align: center;
 		font-size: 4.8rem;
@@ -25,8 +25,8 @@
 		transition: all 1s ease-in-out 0s, margin 1ms;
 
 		@include media('sm') {
-			padding: 6rem 0 3rem;
-			font-size: 3.5rem;
+			margin: 4rem 0 2rem;
+			font-size: 3.8rem;
 		}
 
 		&.is-fixed {
@@ -36,12 +36,12 @@
 			top: 8rem;
 			left: 0;
 			z-index: 99;
-			font-size: 3.5rem;
+			font-size: 3.8rem;
 			background-color: rgba($color-white, 0.8);
 
 			@include media('sm') {
 				top: 6rem;
-				font-size: 2.5rem;
+				font-size: 2.8rem;
 			}
 		}
 	}

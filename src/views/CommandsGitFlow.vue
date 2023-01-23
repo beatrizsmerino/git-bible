@@ -1,7 +1,7 @@
 <template>
 	<div class="page-content">
 		<div class="page-content__inner">
-			<FilterNav />
+			<FilterNav :command-list="getCommandList" />
 			<CommandList :command-list="getCommandList" />
 		</div>
 	</div>
