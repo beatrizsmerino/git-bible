@@ -15,32 +15,32 @@
 
 <style lang="scss" scoped>
 	.page-title {
-		margin: 5rem 0 2rem;
-		padding: 1.5rem 0;
+		width: 100%;
+		padding: 5rem 0;
+		position: fixed;
+		top: 8rem;
+		left: 0;
+		z-index: 1;
 		text-align: center;
 		font-size: 4.8rem;
 		line-height: 100%;
 		color: $color-brand-1;
 		background-color: $color-white;
-		transition: all 1s ease-in-out 0s, margin 1ms;
+		transition: all 0.5s ease-in-out 0s;
 
 		@include media('sm') {
-			margin: 4rem 0 2rem;
+			padding: 3rem 0;
+			top: 6rem;
 			font-size: 3.8rem;
 		}
 
 		&.is-fixed {
-			width: 100%;
-			margin: 0;
-			position: fixed;
-			top: 8rem;
-			left: 0;
+			padding: 1.5rem 0;
 			z-index: 99;
 			font-size: 3.8rem;
 			background-color: rgba($color-white, 0.8);
 
 			@include media('sm') {
-				top: 6rem;
 				font-size: 2.8rem;
 			}
 		}

@@ -8,7 +8,7 @@
 		<div class="page-content__wrapper sticky__content">
 			<PageHeader />
 			<PageTitle :class="{ 'is-fixed': !isScrollUp }" />
-			<router-view />
+			<router-view :class="$route.name !== 'home' ? 'is-no-home' : ''" />
 		</div>
 
 		<PageFooter class="sticky__footer" />
@@ -64,7 +64,7 @@
 				body.classList.add('sticky__body');
 			},
 			handleScroll() {
-				const maxScroll = 95;
+				const maxScroll = 10;
 				window.scrollY >= maxScroll
 					? this.isScrollUp = false
 					: this.isScrollUp = true;
@@ -186,6 +186,14 @@
 		}
 
 		&__inner {
+		}
+
+		&.is-no-home {
+			margin: 15rem auto 6rem;
+
+			@include media('sm') {
+				margin: 10rem auto 6rem;
+			}
 		}
 	}
 </style>
