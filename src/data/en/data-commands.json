@@ -73,7 +73,7 @@
 			"url": "command-git",
 			"name": "open-file-with-editor",
 			"title": "Git. Open a project or file with the editor",
-			"description": "<p>Through the terminal, you can open a file with your preferred code editor. These commands open a file with the Sublime Text, Atom and Visual Studio Code editors.</p>",
+			"description": "<p>Through the terminal, you can open a file with your preferred code editor. These commands open a file with the <strong>Sublime Text</strong>, <strong>Atom</strong> and <strong>Visual Studio Code</strong> editors.</p>",
 			"code": [
 				[
 					"subl <PATH/TO/FOLDER/FILE>"
