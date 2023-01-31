@@ -52,7 +52,7 @@
 			"url": "command-git",
 			"name": "show-configuration",
 			"title": "Git. Mostrar la configuración",
-			"description": "<p>Para visualizar nuestra configuración actual podemos usar el commando <code>git config</code> con la opción <code>--list</code>.</p><p>O también, abriendo el propio archivo en el que se almacena. Debemos saber que se guarda en el archivo <code>.gitconfig</code> y este se encuentra en diferentes ubicaciones según nuestro sistema operativo:<ul><li>si eres <strong>Linux</strong> en el usuario <code>HOME</code></li><li>o si estás en <strong>Windows</strong> en <code>C:Users</code></li>o si eres <strong>Mac</strong> escribiendo en la <strong>consola</strong> <code>git config --list --show-origin</code></li></ul>.</p>",
+			"description": "<p>El comando <code>git config</code> es una herramienta útil que permite personalizar y visualizar la configuración de Git. Con él, puedes <strong>establecer opciones de usuario</strong>, como tu nombre de usuario y correo electrónico, así como <strong>opciones de configuración del sistema</strong>, como la ruta de tu editor de texto predeterminado. Además, puedes <strong>visualizar la configuración actual</strong> de forma local usando el comando con la opción <code>--list</code>, de forma global usando las opciones <code>--list --global</code>, o abriendo directamente el archivo en el que se almacena la configuración.</p><p>Cabe destacar que esta configuración puede estar en el repositorio actual y/o a nivel de sistema. Las opciones <code>--list --show-origin</code>, pueden ser muy útiles para localizar dónde se ha guardado cada configuración de Git, ya sea local o global.</p><p>El archivo <code>.git/config</code> contiene configuraciones específicas para un repositorio en particular, mientras que la configuración a nivel de sistema, se guarda en el archivo <code>.gitconfig</code>, que se encuentra en diferentes ubicaciones según el sistema operativo que utilices:<ul><li>En <strong>Linux</strong>, la ubicación del archivo puede variar según la versión que se esté utilizando. En general, la mayoría de las distribuciones de Linux colocan el archivo en el directorio <code>HOME</code> del usuario, que es el equivalente a <code>~</code>, es decir, en <code>~/.gitconfig</code>. Sin embargo, en algunas distribuciones más recientes puede encontrarse en <code>~/.config/git/config</code>, como parte de un esfuerzo por organizar mejor los archivos de configuración de las aplicaciones.</li><li>En <strong>Windows</strong>, se encuentra en <code>C:\\Users\\&lt;USER_NAME&gt;\\.gitconfig</code>.</li><li>En <strong>Mac</strong>, se encuentra en <code>~/.gitconfig</code>.</li></ul></p><p>Recuerda tener cuidado al editar estos archivos manualmente, ya que cualquier error puede afectar el comportamiento de Git.</p><p><a href='https://stackoverflow.com/questions/12254076/how-do-i-show-my-global-git-configuration' target='_blank'>Saber más</a></p>",
 			"code": [
 				[
 					"git config -l"
@@ -61,7 +61,10 @@
 					"git config --list"
 				],
 				[
-					"git config --global --list"
+					"git config --list --global"
+				],
+				[
+					"git config --list --show-origin"
 				]
 			]
 		},
