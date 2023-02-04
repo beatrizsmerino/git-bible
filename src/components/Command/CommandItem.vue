@@ -97,6 +97,10 @@
 			@include media('sm') {
 				font-size: 1.8rem;
 			}
+
+			> * {
+				display: inline;
+			}
 		}
 
 		&__anchor-link {
