@@ -149,7 +149,7 @@
 			"url": "command-git",
 			"name": "get-commit-without-merges",
 			"title": "Git. Obtener todos los <em>«commits»</em> realizados, ocultando los <em>«commits»</em> de fusión",
-			"description": "<p>Un <code>merge</code> es el resultado de fusionar 2 o más ramas. En ocasiones, con esa fusión, se genera un <em>«commit»</em> extra llamado <em>«merge commit»</em>. La información de este <em>«commit»</em> contiene una mezcla de todos los cambios realizados en ambas ramas, esto puede resultar confuso. Podemos mostrar la lista de <em>«commits»</em> sin ellos con este comando.</p>",
+			"description": "<p>Un <strong><em>«merge»</em></strong> es el resultado de combinar los cambios de 2 o más ramas en Git. En algunos casos, este proceso genera un <em>«commit»</em> adicional conocido como <strong>confirmación de fusión</strong>. La información de este <em>«commit»</em> contiene una mezcla de todos los cambios realizados en ambas ramas, esto puede resultar confuso y dificultar la legibilidad de la lista de <em>«commits»</em>.</p><p>Para obtener una lista clara y concisa de los <em>«commits»</em> realizados, se puede utilizar el comando <code>git log</code> con la opcion <code>--oneline</code>, y para <strong>excluir los <em>«commits»</em> de fusión</strong> se puede agregar la opcion <code>--no-merges</code>. Esto mostrará una lista de <em>«commits»</em> sin los <strong><em>«merge commit»</em></strong> y con una descripción resumida de cada <em>«commit»</em> en una sola línea.</p>",
 			"code": "git log --oneline --no-merges"
 		},
 		{

@@ -149,7 +149,7 @@
 			"url": "command-git",
 			"name": "get-commit-without-merges",
 			"title": "Git. Get all commits made, hiding the merge commits",
-			"description": "<p>A <code>merge</code> is the result of merging 2 or more branches. Sometimes, with that merge, an extra commit called <code>merge commit</code> is generated. The information in this commit contains a mix of all changes made in both branches, this can be confusing. We can display the list of commits without them with this command.</p>",
+			"description": "<p>A <strong>merge</strong> is the result of combining the changes from 2 or more branches in Git. In some cases, this process generates an additional commit known as a <strong>merge commit</strong>. The information in this commit contains a mix of all the changes made in both branches, this can be confusing and make the commit list difficult to legibly read.</p><p>To get a clear and concise list of commits made, you can use the <code>git log</code> command with the <code>--oneline</code> option, and <strong>to exclude merge commits</strong> you can add the <code>--no-merges</code> option. This will show a list of commits without the <strong>merge commits</strong> and with a summary description of each commit on a single line.</p>",
 			"code": "git log --oneline --no-merges"
 		},
 		{
