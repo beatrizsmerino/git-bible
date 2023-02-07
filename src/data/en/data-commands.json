@@ -133,7 +133,7 @@
 			"url": "command-git",
 			"name": "get-commits-oneline",
 			"title": "Git. Get all commits made in a single line",
-			"description": "<p>The <code>git log</code> command has many optional parameters for formatting the output of the commit information. The <code>--oneline</code> option shows the information of each commit in a single line with the first 6 characters of the <code>SHA-1</code> number, the branches, the tags and the message.</p><p><a href='https://dev.to/ansdb/10-helpful-flags-to-use-with-git-log-command-1l3k' target='_blank'>Know more</a></p>",
+			"description": "<p>The <code>git log</code> command displays <strong>detailed information</strong> about each commit, this option is more suitable for investigating a specific commit or <strong>for a deeper analysis of the commit history</strong>.</p><p>On the other hand, Git offers multiple options for formatting the commit information. One of them is the <code>--oneline</code> option, it is possible to display the information of each commit on a single line, including the first 6 characters of the <code>SHA-1</code> number, the branches, the tags and the short description of the associated message. This option is especially useful if you need <strong>a quick, clear and concise overview of the commit history</strong> of a project.</p><p><a href='https://dev.to/ansdb/10-helpful-flags-to-use-with-git-log-command-1l3k' target='_blank'>Know more</a></p>",
 			"code": "git log --oneline"
 		},
 		{

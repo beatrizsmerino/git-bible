@@ -133,7 +133,7 @@
 			"url": "command-git",
 			"name": "get-commits-oneline",
 			"title": "Git. Obtener todos los <em>«commits»</em> realizados en una sola línea",
-			"description": "<p>El comando <code>git log</code> tiene muchos parámetros opcionales para formatear la salida de la información del <em>«commit»</em>. La opción <code>--oneline</code> muestra la información de cada <em>«commit»</em> en una sola línea con los 6 primeros caracteres del número <code>SHA-1</code>, las ramas, las etiquetas y el mensaje.</p><p><a href='https://www.freecodecamp.org/espanol/news/explicacion-del-comando-git-log/' target='_blank'>Saber más</a></p>",
+			"description": "<p>El comando <code>git log</code> muestra <strong>información detallada</strong> sobre cada <em>«commit»</em>, esta opción es más adecuada para investigar un <em>«commit»</em> específico o <strong>para un análisis más profundo del historial de <em>«commits»</em></strong>.</p><p>Por otro lado, Git ofrece múltiples opciones para formatear la información de los <em>«commits»</em>. Una de ellas es la opción <code>--oneline</code>, es posible mostrar la información de cada <em>«commit»</em> en una sola línea, incluyendo los primeros 6 caracteres del número <code>SHA-1</code>, las ramas, las etiquetas y la descripción corta del mensaje asociado. Esta opción resulta especialmente útil, si necesitas <strong>una vista general rápida de forma clara y concisa del historial de <em>«commits»</em></strong> de un proyecto.</p><p><a href='https://www.freecodecamp.org/espanol/news/explicacion-del-comando-git-log/' target='_blank'>Saber más</a></p>",
 			"code": "git log --oneline"
 		},
 		{
