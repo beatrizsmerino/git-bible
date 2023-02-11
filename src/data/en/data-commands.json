@@ -157,16 +157,16 @@
 			"url": "command-git",
 			"name": "get-commits-range",
 			"title": "Git. Get commits between ranges",
-			"description": "<p>The most common way to specify a range of commits is by using the double dot syntax.</p><p>This, for example, is often used to get a particular range of commits by selecting the position they occupy in the history.</p><p>Or, on the other hand, if we select 2 branches, it will show all the commits in the first branch that do not appear in the second. This is useful for previewing what is about to be merged or to see what is about to be published in the remote repository.</p><p><a href='https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection#_commit_ranges' target='_blank'>Know more</a></p>",
+			"description": "<p>It is useful to review and <strong>compare the changes</strong> that have been made and <strong>get a range of commits</strong> from a specific branch to another branch, between remote and local branches or between two different reference points in the same branch of the repository history.</p><p>This command is commonly used by software development teams to check and preview the changes that have been made to a build branch (<code>develop</code>) and then decide if they should be merged with the main branch (<code>master</code>) of the project, as it will be published to the remote repository.</br>It is used to show commits that exist in the <code>develop</code> branch, but are not in the <code>master</code> branch. In other words, it shows the list of changes that have been made to the <code>develop</code> branch since the point at which it was detached from the <code>master</code> branch.</br>The <code>git log</code> command with the <strong>double-dot syntax</strong> (<code>..</code>) is used to define the boundaries of a range of commits between two branches, where the first branch name (<code>master</code>) indicates the starting point and the second branch name (<code>develop</code>) indicates the end point of the range.</p><p>For example, we could show the commits that exist in the <code>HEAD</code> branch (the current branch we are working on) but are not present in the remote <code>origin/master</code> branch to see the changes that have been made locally and <strong>have not yet been synchronized</strong> with the remote repository.</p><p>Or, we could also show the list of commits that are between two specific positions in the same <code>master</code> branch. Using directly the <code>SHA-1</code> code or with the syntax <code>master~&lt;POSITION_NUMBER&gt;</code>, where <code>&lt;POSITION_NUMBER&gt;</code> is the position that the commit occupies counting from the most recent to the oldest.</p><p>In conclusion, it is a Git command that allows you to see the changes that have been made in a specific branch and that have not yet been integrated into another specific branch.</p><p><a href='https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection#_commit_ranges' target='_blank'>Know more</a></p>",
 			"code": [
-				[
-					"git log master~<POSITION_NUMBER>..master~<POSITION_NUMBER>"
-				],
 				[
 					"git log master..develop"
 				],
 				[
 					"git log origin/master..HEAD"
+				],
+				[
+					"git log master~<POSITION_NUMBER>..master~<POSITION_NUMBER>"
 				]
 			]
 		},

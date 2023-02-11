@@ -157,16 +157,16 @@
 			"url": "command-git",
 			"name": "get-commits-range",
 			"title": "Git. Obtener <em>«commits»</em> entre rangos",
-			"description": "<p>La forma más común de especificar un rango de <em>«commits»</em> es mediante la sintaxis de doble punto.</p><p>Esto, por ejemplo, suele usarse para obtener un rango concreto de <em>«commits»</em> seleccionando la posición que ocupan en el histórico.</p><p>O, por otro lado, si seleccionamos 2 ramas, mostrará todos los <em>«commits»</em> de la primera rama que no aparecen en la segunda. Esto es útil para previsualizar lo que se está a punto de fusionar o para ver lo que se está a punto de publicar en el repositorio remoto.</p><p><a href='https://git-scm.com/book/es/v2/Herramientas-de-Git-Revisi%C3%B3n-por-selecci%C3%B3n#r_commit_ranges' target='_blank'>Saber más</a></p>",
+			"description": "<p>Es útil para revisar y <strong>comparar los cambios</strong> que se han realizado y <strong>obtener un rango de <em>«commits»</em></strong> de una rama específica con respecto a otra rama, entre ramas remotas y locales o entre dos puntos de referencia diferentes en la misma rama de la historia del repositorio.</p><p>Este comando es comúnmente utilizado por equipos de desarrollo de software para verificar y previsualizar los cambios que se han realizado en una rama de desarrollo (<code>develop</code>) y luego decidir si se deben fusionar con la rama principal (<code>master</code>) del proyecto, ya que, se publicará en el repositorio remoto.</br>Se utiliza para mostrar los <em>«commits»</em> que existen en la rama <code>develop</code>, pero que no están en la rama <code>master</code>. En otras palabras, muestra la lista de cambios que se han realizado en la rama <code>develop</code> desde el punto en el que se separó de la rama <code>master</code>.</br>El comando de <code>git log</code> con la <strong>sintaxis de doble punto</strong> (<code>..</code>) se utiliza para definir los límites de un rango de <em>«commits»</em> entre dos ramas, donde el primer nombre de la rama (<code>master</code>) indica el punto de partida y el segundo nombre de la rama (<code>develop</code>) indica el punto final del rango.</p><p>Por ejemplo, podríamos mostrar los <em>«commits»</em> que existen en la rama <code>HEAD</code> (la rama actual en la que estamos trabajando) pero que no están presentes en la rama remota <code>origin/master</code> para ver los cambios que se han realizado localmente y que <strong>aún no han sido sincronizados</strong> con el repositorio remoto.</p><p>O también, podríamos mostrar la lista de <em>«commits»</em> que están entre dos posiciones específicas en la misma rama <code>master</code>. Utilizando directamente el código <code>SHA-1</code> o con la sintaxis <code>master~&lt;POSITION_NUMBER&gt;</code>, donde <code>&lt;POSITION_NUMBER&gt;</code> es la posición que ocupa el <em>«commit»</em> contando desde el más reciente al más antiguo.</p><p>En resumen, es un comando de Git que permite ver los cambios que se han realizado en una rama determinada y que aún no han sido integrados en otra rama específica.</p><p><a href='https://git-scm.com/book/es/v2/Herramientas-de-Git-Revisi%C3%B3n-por-selecci%C3%B3n#r_commit_ranges' target='_blank'>Saber más</a></p>",
 			"code": [
-				[
-					"git log master~<POSITION_NUMBER>..master~<POSITION_NUMBER>"
-				],
 				[
 					"git log master..develop"
 				],
 				[
 					"git log origin/master..HEAD"
+				],
+				[
+					"git log master~<POSITION_NUMBER>..master~<POSITION_NUMBER>"
 				]
 			]
 		},
