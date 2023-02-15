@@ -175,16 +175,31 @@
 			"url": "command-git",
 			"name": "get-commit-by-date",
 			"title": "Git. Search the commits by date",
-			"description": "<p>With the following commands, we can obtain a list of commits according to the indicated date (<code>YYYY-MM-DD</code>):<ul><li><code>--since</code>, shows the commits from the date.</li><li><code>--before</code>, shows the commits before the date.</li><li><code>--after</code>, shows the commits after the date.</li></ul></p>",
+			"description": "<p>The <code>git log</code> command shows the history of commits in a Git repository. If you need to <strong>search for specific commits based on the date they were made</strong>, you can filter them using the options <code>--since</code>, <code>--before</code>, and <code>--after</code> followed by the date in the format <code>YYYY-MM-DD</code>.<ul><li>The <code>--since</code> option allows you to display commits <strong>made from the specified date including it, up to the present</strong>. For example, if you want to search for commits made yesterday, <em>1 March 2023</em>, up to today, <em>2 March 2023</em>, you can use <code>git log --since=2023-03-01</code>.</li><li>The <code>--before</code> option allows you to display commits <strong>made before the specified date including it, up to the present</strong>. For example, if you want to search for old commits prior to today, <em>2 March 2023</em>, you can use the following command <code>git log --before=2023-03-02</code>, that is, in this case, all the commits made up to now in the repository.</li><li>The <code>--after</code> option allows you to display commits <strong>made after the specified date, not including it, up to the present</strong>. For example, if you want to search for commits made from the beginning of the year up to today, that is, from <em>1 January 2023</em> to <em>1 March 2023</em>, both inclusive, you can use the following command <code>git log --after=2023-01-01</code>.</li></ul></p><p>In addition, you can also <strong>combine several options</strong> to refine your search: <ul><li>For example, it is common to use both options <code>--since</code> and <code>--before</code> to search for commits made within a specific <strong>range of dates</strong>.</li><li>Another useful command is to combine them with the <code>--author</code> option, which allows you to search for commits <strong>made by a specific author on a certain date</strong>.</li><li>You can combine them with the <code>--grep</code> option to search for commits that <strong>contain a text string in their message or description on a certain date</strong>. For example, if you want to search for commits from the previous month that contain the word <code>bug</code> in their message.</li><li>Finally, other options that could be useful to combine or use independently include the <code>--all</code> option to <strong>search all branches</strong> of the repository, and the <code>--no-merges</code> option to <strong>exclude merge commits</strong> from the search results.</li></ul></p>",
 			"code": [
 				[
-					"git log --since={<DATE>}"
+					"git log --since='<DATE>'"
 				],
 				[
-					"git log --before={<DATE>}"
+					"git log --since='1 month ago'"
 				],
 				[
-					"git log --after={<DATE>}"
+					"git log --before='<DATE>'"
+				],
+				[
+					"git log --after='<DATE>'"
+				],
+				[
+					"git log --author='<USER_NAME>' --since='<DATE>' --before='<DATE>'"
+				],
+				[
+					"git log --grep='<REGEX>' --since='<DATE>' --before='<DATE>'"
+				],
+				[
+					"git log --all='<REGEX>' --since='<DATE>' --before='<DATE>'"
+				],
+				[
+					"git log --no-merges='<REGEX>' --since='<DATE>' --before='<DATE>'"
 				]
 			]
 		},

@@ -175,16 +175,31 @@
 			"url": "command-git",
 			"name": "get-commit-by-date",
 			"title": "Git. Buscar los <em>«commits»</em> por fecha",
-			"description": "<p>Con los siguientes comandos, podemos obtener una lista de <em>«commits»</em> según la fecha indicada (<code>AAAA-MM-DD</code>):<ul><li><code>--since</code>, muestra los <em>«commits»</em> desde la fecha.</li><li><code>--before</code>, muestra los <em>«commits»</em> anteriores a la fecha.</li><li><code>--after</code>, muestra los <em>«commits»</em> posteriores a la fecha.</li></ul></p>",
+			"description": "<p>El comando <code>git log</code> muestra el historial de <em>«commits»</em> en un repositorio Git. Si necesitas <strong>buscar <em>«commits»</em> específicos según la fecha en que se realizaron</strong>, puedes filtrarlos utilizando las opciones <code>--since</code>, <code>--before</code> y <code>--after</code> seguidas de la fecha en formato <code>AAAA-MM-DD</code>.<ul><li>La opción <code>--since</code> te permitirá mostrar los <em>«commits»</em> <strong>realizados desde la fecha especificada incluyéndola, hasta el presente</strong>. Por ejemplo, si deseas buscar los <em>«commits»</em> realizados ayer, <em>1 de marzo de 2023</em>, hasta el día de hoy, <em>2 de marzo de 2023</em>, puedes utilizar <code>git log --since=2023-03-01</code>.</li><li>La opción <code>--before</code> te permitirá mostrar los <em>«commits»</em> <strong>realizados antes de la fecha especificada, incluyéndola, hasta el presente</strong>. Por ejemplo, si deseas buscar <em>«commits»</em> antiguos, anteriores al día de hoy <em>2 de marzo de 2023</em>, puedes utilizar el siguiente comando <code>git log --before=2023-03-02</code>, es decir, en este caso, todos los <em>«commits»</em> realizados hasta ahora en el repositorio.</li><li>La opción <code>--after</code> te permitirá mostrar los <em>«commits»</em> <strong>realizados después de la fecha especificada, sin incluirla, hasta el presente</strong>. Por ejemplo, si deseas buscar los <em>«commits»</em> que se han realizado desde principios de año a día de hoy, es decir, del <em>1 de enero de 2023</em> al <em>1 de marzo de 2023</em>, ambos inclusive, puedes utilizar el siguiente comando <code>git log --after=2023-01-01</code>.</li></ul></p><p>Además, también puedes <strong>combinar varias opciones</strong> para refinar tu búsqueda: <ul><li>Por ejemplo, es común utilizar ambas opciones <code>--since</code> y <code>--before</code>, para buscar los <em>«commits»</em> realizados dentro de un <strong>rango de fechas</strong> específico.</li><li>Otro comando útil es combinarlas con la opción <code>--author</code>, que te permitirá buscar los <em>«commits»</em> <strong>realizados por un autor específico en una fecha determinada</strong>.</li><li>Puedes combiarlo con la opción <code>--grep</code> para buscar <em>«commits»</em> que <strong>contengan una cadena de texto en su mensaje o descripción en una fecha determinada</strong>. Por ejemplo, si deseas buscar los <em>«commits»</em> del mes anterior, que contengan la palabra <code>bug</code> en su mensaje.</li><li>FInalmente, tras opciones que podrían ser útiles para combinar o usar independientemente, incluyen la opción <code>--all</code> para <strong>buscar en todas las ramas</strong> del repositorio, y la opción <code>--no-merges</code> para <strong>excluir los commits de fusión</strong> en los resultados de búsqueda.</li></ul></p>",
 			"code": [
 				[
-					"git log --since={<DATE>}"
+					"git log --since='<DATE>'"
 				],
 				[
-					"git log --before={<DATE>}"
+					"git log --since='1 month ago'"
 				],
 				[
-					"git log --after={<DATE>}"
+					"git log --before='<DATE>'"
+				],
+				[
+					"git log --after='<DATE>'"
+				],
+				[
+					"git log --author='<USER_NAME>' --since='<DATE>' --before='<DATE>'"
+				],
+				[
+					"git log --grep='<REGEX>' --since='<DATE>' --before='<DATE>'"
+				],
+				[
+					"git log --all='<REGEX>' --since='<DATE>' --before='<DATE>'"
+				],
+				[
+					"git log --no-merges='<REGEX>' --since='<DATE>' --before='<DATE>'"
 				]
 			]
 		},
