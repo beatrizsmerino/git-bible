@@ -208,7 +208,7 @@
 			"url": "command-git",
 			"name": "show-commits-of-file",
 			"title": "Git. Show only the commits in which a file is involved",
-			"description": "<p>It shows all the commits in which the indicated file has been modified.</p>",
+			"description": "<p>Git is a distributed version control system that allows users to keep track of changes made to a project. The <code>git log</code> command is a valuable tool for understanding the history of a project and analyzing the commits made in it.</p><p>With the <code>--oneline</code> option, <strong>reduces the information displayed for each <em>commit</em> to a single line</strong>, instead of multiple lines, making the output easier to read and analyze, especially when working with a large number of commits.</p><p>It is common to combine it with other options, to quickly filter and find specific changes or to find a particular <em>commit</em> that has been made in the past. For example, you can use the <code>--author</code> option to show only the commits made by a particular author, or <code>--since</code> and <code>--until</code> to show the commits made in a specific date range, or <code>--grep</code> to search for commits that contain a specific text string in their commit message.</p><p>By using the <code>--</code> option followed by a name, it indicates that the next argument is the specific file that you want to track and not an additional option, as in the previous examples described. By adding the file name after the options, <strong>only the commits for that particular file will be shown</strong>. This can be useful when you want to understand how a file has evolved over time, especially in large projects with many files.</p>",
 			"code": "git log --oneline -- <FILE_NAME>"
 		},
 		{
