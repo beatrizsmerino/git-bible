@@ -12,22 +12,22 @@
 </template>
 
 <script>
-	import data from '../../data/data-references.json';
-	import ReferenceItem from '@/components/Reference/ReferenceItem';
+	import data from "../../data/data-references.json";
+	import ReferenceItem from "@/components/Reference/ReferenceItem";
 
 	export default {
-		name: 'ReferenceList',
-		components: {
-			ReferenceItem
+		"name": "ReferenceList",
+		"components": {
+			ReferenceItem,
 		},
 		data() {
 			return {
-				referenceList: []
+				"referenceList": [],
 			};
 		},
 		created() {
 			this.referenceList = data;
-		}
+		},
 	};
 </script>
 

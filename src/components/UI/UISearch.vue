@@ -47,46 +47,46 @@
 
 <script>
 	export default {
-		name: 'UISearch',
+		"name": "UISearch",
 		data() {
 			return {
-				commandList: [],
-				searchText: ''
+				"commandList": [],
+				"searchText": "",
 			};
 		},
-		computed: {
+		"computed": {
 			filteredList() {
 				return this.commandList.filter(command => command.title.toLowerCase().includes(this.searchText.toLowerCase()));
-			}
+			},
 		},
 		created() {
-			const commandListGit = this.$t('commandList.git').filter(command => command.name !== '' && command.title !== '');
-			const commandListGitFlow = this.$t('commandList.gitFlow').filter(command => command.name !== '' && command.title !== '');
+			const commandListGit = this.$t("commandList.git").filter(command => command.name !== "" && command.title !== "");
+			const commandListGitFlow = this.$t("commandList.gitFlow").filter(command => command.name !== "" && command.title !== "");
 			this.commandList = commandListGit.concat(commandListGitFlow);
 		},
-		methods: {
+		"methods": {
 			isScrollStart(element) {
-				element.classList.add('is-scroll');
-				element.classList.add('is-scroll-start');
-				element.classList.remove('is-scroll-end');
+				element.classList.add("is-scroll");
+				element.classList.add("is-scroll-start");
+				element.classList.remove("is-scroll-end");
 			},
 			isScrollEnd(element) {
-				element.classList.add('is-scroll');
-				element.classList.add('is-scroll-end');
-				element.classList.remove('is-scroll-start');
+				element.classList.add("is-scroll");
+				element.classList.add("is-scroll-end");
+				element.classList.remove("is-scroll-start");
 			},
 			isScrollBoth(element) {
-				element.classList.add('is-scroll');
-				element.classList.remove('is-scroll-start');
-				element.classList.remove('is-scroll-end');
+				element.classList.add("is-scroll");
+				element.classList.remove("is-scroll-start");
+				element.classList.remove("is-scroll-end");
 			},
 			isScrollReset(element) {
-				element.classList.remove('is-scroll');
-				element.classList.remove('is-scroll-end');
-				element.classList.remove('is-scroll-start');
+				element.classList.remove("is-scroll");
+				element.classList.remove("is-scroll-end");
+				element.classList.remove("is-scroll-start");
 			},
 			checkScrollVertical() {
-				const $thisBox = document.getElementById('searchResultsInner');
+				const $thisBox = document.getElementById("searchResultsInner");
 				const $thisBoxHeight = $thisBox.offsetHeight;
 				const $thisBoxScrollTop = $thisBox.scrollTop;
 				const $thisBoxScrollHeight = $thisBox.scrollHeight;
@@ -105,8 +105,8 @@
 				} else {
 					this.isScrollReset($thisBoxParent);
 				}
-			}
-		}
+			},
+		},
 	};
 </script>
 

@@ -22,12 +22,12 @@
 
 <script>
 	export default {
-		name: 'UILogo',
-		props: {
-			theme: {
-				type: String
-			}
-		}
+		"name": "UILogo",
+		"props": {
+			"theme": {
+				"type": String,
+			},
+		},
 	};
 </script>
 

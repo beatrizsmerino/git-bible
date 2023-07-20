@@ -65,31 +65,31 @@
 </template>
 
 <script>
-	import UICopy from '@/components/UI/UICopy';
+	import UICopy from "@/components/UI/UICopy";
 
 	export default {
-		name: 'UICodeTheme',
-		components: {
-			UICopy
+		"name": "UICodeTheme",
+		"components": {
+			UICopy,
 		},
-		props: {
-			code: {
-				type: [
+		"props": {
+			"code": {
+				"type": [
 					String,
-					Array
+					Array,
 				],
-				required: true
-			}
+				"required": true,
+			},
 		},
 		data() {
 			return {
-				codeFormatted: ''
+				"codeFormatted": "",
 			};
 		},
 		created() {
 			this.codeFormatted = this.convertArrayToStringLines(this.code);
 		},
-		methods: {
+		"methods": {
 			checkScrollHorizontal(event) {
 				const $thisBox = event.target;
 				const $thisBoxWidth = $thisBox.offsetWidth;
@@ -97,17 +97,17 @@
 				const $thisBoxScrollWidth = $thisBox.scrollWidth;
 
 				const $thisBoxParent = $thisBox.parentNode.parentNode;
-				$thisBoxParent.classList.add('is-scroll');
+				$thisBoxParent.classList.add("is-scroll");
 
 				if ($thisBoxScrollLeft === 0) {
-					$thisBoxParent.classList.remove('is-scroll-end');
-					$thisBoxParent.classList.add('is-scroll-start');
+					$thisBoxParent.classList.remove("is-scroll-end");
+					$thisBoxParent.classList.add("is-scroll-start");
 				} else if ($thisBoxScrollWidth - $thisBoxScrollLeft == $thisBoxWidth) {
-					$thisBoxParent.classList.remove('is-scroll-start');
-					$thisBoxParent.classList.add('is-scroll-end');
+					$thisBoxParent.classList.remove("is-scroll-start");
+					$thisBoxParent.classList.add("is-scroll-end");
 				} else {
-					$thisBoxParent.classList.remove('is-scroll-end');
-					$thisBoxParent.classList.remove('is-scroll-start');
+					$thisBoxParent.classList.remove("is-scroll-end");
+					$thisBoxParent.classList.remove("is-scroll-start");
 				}
 			},
 			switchTheme(event) {
@@ -115,11 +115,11 @@
 				const $thisCodeTheme = $thisSwitchThemeField.parentNode.parentNode.parentNode.parentNode;
 
 				if ($thisCodeTheme && $thisSwitchThemeField.checked) {
-					$thisCodeTheme.classList.remove('is-theme-light');
-					$thisCodeTheme.classList.add('is-theme-dark');
+					$thisCodeTheme.classList.remove("is-theme-light");
+					$thisCodeTheme.classList.add("is-theme-dark");
 				} else {
-					$thisCodeTheme.classList.remove('is-theme-dark');
-					$thisCodeTheme.classList.add('is-theme-light');
+					$thisCodeTheme.classList.remove("is-theme-dark");
+					$thisCodeTheme.classList.add("is-theme-light");
 				}
 			},
 			checkLines(codeText) {
@@ -132,9 +132,9 @@
 				return 0;
 			},
 			convertArrayToStringLines(codeText) {
-				return Array.isArray(codeText) || Array.isArray(codeText[0]) ? codeText.join('\r\n') : codeText;
-			}
-		}
+				return Array.isArray(codeText) || Array.isArray(codeText[0]) ? codeText.join("\r\n") : codeText;
+			},
+		},
 	};
 </script>
 

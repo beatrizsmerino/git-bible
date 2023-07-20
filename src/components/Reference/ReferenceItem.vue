@@ -23,13 +23,13 @@
 
 <script>
 	export default {
-		name: 'ReferenceItem',
-		props: {
-			referenceItem: {
-				type: Object,
-				required: true
-			}
-		}
+		"name": "ReferenceItem",
+		"props": {
+			"referenceItem": {
+				"type": Object,
+				"required": true,
+			},
+		},
 	};
 </script>
 

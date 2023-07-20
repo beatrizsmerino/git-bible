@@ -8,20 +8,20 @@
 </template>
 
 <script>
-	import FilterNav from '@/components/Filter/FilterNav';
-	import CommandList from '@/components/Command/CommandList';
+	import FilterNav from "@/components/Filter/FilterNav";
+	import CommandList from "@/components/Command/CommandList";
 
 	export default {
-		name: 'CommandsGitFlow',
-		components: {
+		"name": "CommandsGitFlow",
+		"components": {
 			FilterNav,
-			CommandList
+			CommandList,
 		},
-		computed: {
+		"computed": {
 			getCommandList() {
-				return this.$t('commandList.gitFlow');
-			}
-		}
+				return this.$t("commandList.gitFlow");
+			},
+		},
 	};
 </script>
 

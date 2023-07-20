@@ -47,27 +47,27 @@
 </template>
 
 <script>
-	import UICodeTheme from '@/components/UI/UICodeTheme';
+	import UICodeTheme from "@/components/UI/UICodeTheme";
 
 	export default {
-		name: 'CommandItem',
-		components: {
-			UICodeTheme
+		"name": "CommandItem",
+		"components": {
+			UICodeTheme,
 		},
-		props: {
-			commandItem: {
-				type: Object,
-				required: true
+		"props": {
+			"commandItem": {
+				"type": Object,
+				"required": true,
 			},
-			commandIndex: {
-				type: Number,
-				required: true
+			"commandIndex": {
+				"type": Number,
+				"required": true,
 			},
-			commandStatus: {
-				type: Boolean,
-				required: true
-			}
-		}
+			"commandStatus": {
+				"type": Boolean,
+				"required": true,
+			},
+		},
 	};
 </script>
 

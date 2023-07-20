@@ -12,27 +12,29 @@
 </template>
 
 <script>
-	import {i18n} from '@/plugins/i18n';
-	import UIButton from '@/components/UI/UIButton';
+	import { i18n } from "@/plugins/i18n";
+	import UIButton from "@/components/UI/UIButton";
 
 	export default {
-		name: 'UILanguages',
-		components: {
-			UIButton
+		"name": "UILanguages",
+		"components": {
+			UIButton,
 		},
-		computed: {
+		"computed": {
 			languages() {
 				return [
-					{locale: 'es', title: this.$t('language.spanish')},
-					{locale: 'en', title: this.$t('language.english')}
+					{ "locale": "es",
+						"title": this.$t("language.spanish") },
+					{ "locale": "en",
+						"title": this.$t("language.english") },
 				];
-			}
+			},
 		},
-		methods: {
+		"methods": {
 			changeLanguage(locale) {
 				i18n.locale = locale;
-			}
-		}
+			},
+		},
 	};
 </script>
 

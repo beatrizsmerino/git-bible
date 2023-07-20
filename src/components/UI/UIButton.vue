@@ -12,37 +12,37 @@
 
 <script>
 	export default {
-		name: 'UIButton',
-		props: {
-			href: {
-				type: String,
-				default: null
+		"name": "UIButton",
+		"props": {
+			"href": {
+				"type": String,
+				"default": null,
 			},
-			to: {
-				type: String,
-				default: null
+			"to": {
+				"type": String,
+				"default": null,
 			},
-			value: {
-				type: String,
-				default: null
-			}
+			"value": {
+				"type": String,
+				"default": null,
+			},
 		},
-		computed: {
+		"computed": {
 			checkTag() {
 				if (this.href) {
-					return 'a';
+					return "a";
 				} else if (this.value) {
-					return 'input';
+					return "input";
 				}
 
-				return 'button';
-			}
+				return "button";
+			},
 		},
-		methods: {
+		"methods": {
 			buttonClick() {
-				this.$emit('emit-click');
-			}
-		}
+				this.$emit("emit-click");
+			},
+		},
 	};
 </script>
 

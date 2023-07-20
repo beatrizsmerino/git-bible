@@ -73,29 +73,29 @@
 
 <script>
 	export default {
-		name: 'PageNav',
+		"name": "PageNav",
 		data() {
 			return {
-				isOpen: false
+				"isOpen": false,
 			};
 		},
-		watch: {
+		"watch": {
 			$route(to, from) {
 				if (to !== from) {
 					this.closeNav();
 				}
 			},
 			isOpen() {
-				document.body.style.overflow = this.isOpen ? 'hidden' : '';
-			}
+				document.body.style.overflow = this.isOpen ? "hidden" : "";
+			},
 		},
 		created() {
-			window.addEventListener('resize', this.handleResize);
+			window.addEventListener("resize", this.handleResize);
 		},
 		destroyed() {
-			window.removeEventListener('resize', this.handleResize);
+			window.removeEventListener("resize", this.handleResize);
 		},
-		methods: {
+		"methods": {
 			openCloseNav() {
 				this.isOpen == false ? this.isOpen = true : this.isOpen = false;
 			},
@@ -107,8 +107,8 @@
 				if (event.target.outerWidth >= maxWidthBreakpointMD) {
 					this.closeNav();
 				}
-			}
-		}
+			},
+		},
 	};
 </script>
 
