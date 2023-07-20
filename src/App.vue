@@ -16,66 +16,61 @@
 </template>
 
 <script>
-	import PageHeader from './components/Page/PageHeader';
-	import PageTitle from './components/Page/PageTitle';
-	import PageFooter from './components/Page/PageFooter';
+	import PageHeader from "./components/Page/PageHeader";
+	import PageTitle from "./components/Page/PageTitle";
+	import PageFooter from "./components/Page/PageFooter";
 
 	export default {
-		components: {
+		"components": {
 			PageHeader,
 			PageTitle,
-			PageFooter
+			PageFooter,
 		},
 		data() {
 			return {
-				isScrollUp: true
+				"isScrollUp": true,
 			};
 		},
-		watch: {
-			$route: {
+		"watch": {
+			"$route": {
 				handler(to, from) {
-					const html = document.getElementsByTagName('html')[0];
-					const body = document.getElementsByTagName('body')[0];
+					const html = document.getElementsByTagName("html")[0];
+					const body = document.getElementsByTagName("body")[0];
 
-					if (typeof from !== 'undefined') {
-						html.classList.remove(
-							'page',
-							`page-${from.name.toLowerCase()}`
-						);
+					if (typeof from !== "undefined") {
+						html.classList.remove("page", `page-${from.name.toLowerCase()}`);
 					}
-					html.classList.add('page', `page-${to.name.toLowerCase()}`);
-					body.classList.add('page-body');
+					html.classList.add("page", `page-${to.name.toLowerCase()}`);
+					body.classList.add("page-body");
 				},
-				immediate: true
-			}
+				"immediate": true,
+			},
 		},
 		created() {
 			this.addSticky();
-			window.addEventListener('scroll', this.handleScroll);
+			window.addEventListener("scroll", this.handleScroll);
 		},
 		destroyed() {
-			window.removeEventListener('scroll', this.handleScroll);
+			window.removeEventListener("scroll", this.handleScroll);
 		},
-		methods: {
+		"methods": {
 			addSticky() {
-				const html = document.getElementsByTagName('html')[0];
-				const body = document.getElementsByTagName('body')[0];
-				html.classList.add('sticky');
-				body.classList.add('sticky__body');
+				const html = document.getElementsByTagName("html")[0];
+				const body = document.getElementsByTagName("body")[0];
+				html.classList.add("sticky");
+				body.classList.add("sticky__body");
 			},
 			handleScroll() {
 				const maxScroll = 95;
-				window.scrollY >= maxScroll
-					? this.isScrollUp = false
-					: this.isScrollUp = true;
-			}
-		}
+				window.scrollY >= maxScroll ? this.isScrollUp = false : this.isScrollUp = true;
+			},
+		},
 	};
 </script>
 
 <style lang="scss">
-	@import './assets/scss/base/_base-reset.scss';
-	@import './assets/scss/base/_base-fonts.scss';
+	@import "./assets/scss/base/_base-reset.scss";
+	@import "./assets/scss/base/_base-fonts.scss";
 
 	[v-cloak] {
 		display: none;
@@ -181,11 +176,11 @@
 			padding-top: 8rem;
 			padding-bottom: 5.2rem;
 
-			@include media('md', $dimension: 'height') {
+			@include media("md", $dimension: "height") {
 				padding-bottom: 0;
 			}
 
-			@include media('md') {
+			@include media("md") {
 				padding-top: 6rem;
 				padding-bottom: 0;
 			}

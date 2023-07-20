@@ -6,15 +6,15 @@
 </template>
 
 <script>
-	import UILogo from '@/components/UI/UILogo';
-	import PageNav from '@/components/Page/PageNav';
+	import UILogo from "@/components/UI/UILogo";
+	import PageNav from "@/components/Page/PageNav";
 
 	export default {
-		name: 'PageHeader',
-		components: {
+		"name": "PageHeader",
+		"components": {
 			UILogo,
-			PageNav
-		}
+			PageNav,
+		},
 	};
 </script>
 
@@ -32,7 +32,7 @@
 		z-index: 99999;
 		background-color: $color-brand-1;
 
-		@include media('sm') {
+		@include media("sm") {
 			height: 6rem;
 			padding: 0.5rem 5%;
 		}

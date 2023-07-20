@@ -47,80 +47,39 @@
 
 <script>
 	export default {
-		name: 'UISearch',
+		"name": "UISearch",
 		data() {
 			return {
-				commandList: [],
-				searchText: ''
+				"commandList": [],
+				"searchText": "",
 			};
 		},
-		computed: {
+		"computed": {
 			filteredList() {
-				return this.commandList.filter(command => command.title.
-					toLowerCase().
-					includes(this.searchText.toLowerCase()));
-			}
+				return this.commandList.filter(command => command.title.toLowerCase().includes(this.searchText.toLowerCase()));
+			},
 		},
 		created() {
-			const commandListGit = this.$t('commandList.git').filter(command => command.name !== '' && command.title !== '');
-			const commandListGitFlow = this.$t('commandList.gitFlow').filter(command => command.name !== '' && command.title !== '');
+			const commandListGit = this.$t("commandList.git").filter(command => command.name !== "" && command.title !== "");
+			const commandListGitFlow = this.$t("commandList.gitFlow").filter(command => command.name !== "" && command.title !== "");
 			this.commandList = commandListGit.concat(commandListGitFlow);
 		},
-		methods: {
-			isScrollStart(element) {
-				element.classList.add('is-scroll');
-				element.classList.add('is-scroll-start');
-				element.classList.remove('is-scroll-end');
-			},
-			isScrollEnd(element) {
-				element.classList.add('is-scroll');
-				element.classList.add('is-scroll-end');
-				element.classList.remove('is-scroll-start');
-			},
-			isScrollBoth(element) {
-				element.classList.add('is-scroll');
-				element.classList.remove('is-scroll-start');
-				element.classList.remove('is-scroll-end');
-			},
-			isScrollReset(element) {
-				element.classList.remove('is-scroll');
-				element.classList.remove('is-scroll-end');
-				element.classList.remove('is-scroll-start');
+		"methods": {
+			toggleScrollClass(element, className, shouldAdd) {
+				shouldAdd ? element.classList.add(className) : element.classList.remove(className);
 			},
 			checkScrollVertical() {
-				const $thisBox = document.getElementById('searchResultsInner');
-				const $thisBoxHeight = $thisBox.offsetHeight;
-				const $thisBoxScrollTop = $thisBox.scrollTop;
-				const $thisBoxScrollHeight = $thisBox.scrollHeight;
+				const $thisBox = document.getElementById("searchResultsInner");
 				const $thisBoxParent = $thisBox.parentNode;
 
-				if (
-					$thisBoxScrollTop === 0 &&
-					$thisBoxScrollHeight === $thisBoxHeight
-				) {
-					this.isScrollReset($thisBoxParent);
-				} else if (
-					$thisBoxScrollTop === 0 &&
-					$thisBoxScrollHeight >= $thisBoxHeight
-				) {
-					this.isScrollStart($thisBoxParent);
-				} else if ($thisBoxScrollTop === 0) {
-					this.isScrollStart($thisBoxParent);
-				} else if (
-					$thisBoxScrollTop !== 0 &&
-					$thisBoxScrollHeight - $thisBoxScrollTop !== $thisBoxHeight
-				) {
-					this.isScrollBoth($thisBoxParent);
-				} else if (
-					$thisBoxScrollHeight - $thisBoxScrollTop ==
-					$thisBoxHeight
-				) {
-					this.isScrollEnd($thisBoxParent);
-				} else {
-					this.isScrollReset($thisBoxParent);
-				}
-			}
-		}
+				const { scrollTop, scrollHeight, offsetHeight } = $thisBox;
+				const isAtStart = scrollTop === 0;
+				const isAtEnd = scrollHeight - scrollTop === offsetHeight;
+
+				this.toggleScrollClass($thisBoxParent, "is-scroll-start", isAtStart);
+				this.toggleScrollClass($thisBoxParent, "is-scroll-end", isAtEnd);
+			},
+		},
 	};
 </script>
 
@@ -167,11 +126,11 @@
 			height: #{((5 + 1) * 4)}rem;
 			overflow-y: scroll;
 
-			@include media('md') {
+			@include media("md") {
 				height: #{((5 + 1) * 8)}rem;
 			}
 
-			@include media('md', $dimension: 'height') {
+			@include media("md", $dimension: "height") {
 				height: #{((5 + 1) * 8)}rem;
 			}
 		}
@@ -219,7 +178,7 @@
 
 			&:before,
 			&:after {
-				content: '';
+				content: "";
 				display: inline-block;
 				width: 100%;
 				height: 5rem;
@@ -231,20 +190,12 @@
 
 			&:before {
 				top: 0;
-				background: linear-gradient(
-					0deg,
-					rgba($color-white, 0) 0%,
-					rgba($color-white, 1) 100%
-				);
+				background: linear-gradient(0deg, rgba($color-white, 0) 0%, rgba($color-white, 1) 100%);
 			}
 
 			&:after {
 				bottom: 0;
-				background: linear-gradient(
-					0deg,
-					rgba($color-white, 1) 0%,
-					rgba($color-white, 0) 100%
-				);
+				background: linear-gradient(0deg, rgba($color-white, 1) 0%, rgba($color-white, 0) 100%);
 			}
 
 			&.is-scroll-start {

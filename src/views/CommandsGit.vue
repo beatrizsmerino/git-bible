@@ -10,20 +10,20 @@
 <script>
 
 	// import { i18n } from '@/plugins/i18n';
-	import FilterNav from '@/components/Filter/FilterNav';
-	import CommandList from '@/components/Command/CommandList';
+	import FilterNav from "@/components/Filter/FilterNav";
+	import CommandList from "@/components/Command/CommandList";
 
 	export default {
-		name: 'CommandsGit',
-		components: {
+		"name": "CommandsGit",
+		"components": {
 			FilterNav,
-			CommandList
+			CommandList,
 		},
-		computed: {
+		"computed": {
 			getCommandList() {
-				return this.$t('commandList.git');
-			}
-		}
+				return this.$t("commandList.git");
+			},
+		},
 	};
 </script>
 

@@ -12,37 +12,37 @@
 
 <script>
 	export default {
-		name: 'UIButton',
-		props: {
-			href: {
-				type: String,
-				default: null
+		"name": "UIButton",
+		"props": {
+			"href": {
+				"type": String,
+				"default": null,
 			},
-			to: {
-				type: String,
-				default: null
+			"to": {
+				"type": String,
+				"default": null,
 			},
-			value: {
-				type: String,
-				default: null
-			}
+			"value": {
+				"type": String,
+				"default": null,
+			},
 		},
-		computed: {
+		"computed": {
 			checkTag() {
 				if (this.href) {
-					return 'a';
+					return "a";
 				} else if (this.value) {
-					return 'input';
+					return "input";
 				}
 
-				return 'button';
-			}
+				return "button";
+			},
 		},
-		methods: {
+		"methods": {
 			buttonClick() {
-				this.$emit('emit-click');
-			}
-		}
+				this.$emit("emit-click");
+			},
+		},
 	};
 </script>
 
@@ -59,9 +59,7 @@
 		border: 0.2rem solid transparent;
 		outline: none;
 		background-color: transparent;
-		transition: color 0.15s ease-in-out 0s,
-			background-color 0.15s ease-in-out 0s,
-			border-color 0.15s ease-in-out 0s;
+		transition: color 0.15s ease-in-out 0s, background-color 0.15s ease-in-out 0s, border-color 0.15s ease-in-out 0s;
 		user-select: none;
 		cursor: pointer;
 		appearance: none;
@@ -134,11 +132,7 @@
 				background-color: $color-brand-2-light;
 
 				&:hover {
-					background-color: mix(
-						$color-black,
-						$color-brand-2-light,
-						15%
-					);
+					background-color: mix($color-black, $color-brand-2-light, 15%);
 				}
 			}
 

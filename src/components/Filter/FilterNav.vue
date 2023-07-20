@@ -6,7 +6,7 @@
 		<div
 			v-closable="{
 				exclude: ['buttonFilter'],
-				handler: 'closeFilter'
+				handler: 'closeFilter',
 			}"
 			class="filter-nav__inner"
 		>
@@ -50,19 +50,19 @@
 </template>
 
 <script>
-	import Vue from 'vue';
-	import UILanguages from '@/components/UI/UILanguages';
+	import Vue from "vue";
+	import UILanguages from "@/components/UI/UILanguages";
 
-	let handleOutsideClick;
+	let handleOutsideClick = null;
 
-	Vue.directive('closable', {
+	Vue.directive("closable", {
 		bind(element, binding, vnode) {
 			// Here's the click/touchstart handler (it is registered below)
 			handleOutsideClick = event => {
 				event.stopPropagation();
 
 				// Get the handler method name and the exclude array from the object used in v-closable
-				const {handler, exclude} = binding.value;
+				const { handler, exclude } = binding.value;
 
 				// This variable indicates if the clicked element is excluded
 				let clickedOnElementExcluded = false;
@@ -72,7 +72,7 @@
 						// Get the element using the reference name
 						const elementExcluded = vnode.context.$refs[refName];
 
-						if (typeof elementExcluded !== 'undefined') {
+						if (typeof elementExcluded !== "undefined") {
 							// See if this excluded element is the same element the user just clicked on
 							clickedOnElementExcluded = elementExcluded.contains(event.target);
 						}
@@ -80,50 +80,47 @@
 				});
 
 				// We check to see if the clicked element is not the dialog element and not excluded
-				if (
-					!element.contains(event.target) &&
-					!clickedOnElementExcluded
-				) {
+				if (!element.contains(event.target) && !clickedOnElementExcluded) {
 					// If the clicked element is outside the dialog and not the button, then call the outside-click handler from the same component this directive is used in
 					vnode.context[handler]();
 				}
 			};
 
 			// Register click/touchstart event listeners on the whole page
-			document.addEventListener('click', handleOutsideClick);
-			document.addEventListener('touchstart', handleOutsideClick);
+			document.addEventListener("click", handleOutsideClick);
+			document.addEventListener("touchstart", handleOutsideClick);
 		},
 
 		unbind() {
 			// If the element that has v-closable is removed, then unbind click/touchstart listeners from the whole page
-			document.removeEventListener('click', handleOutsideClick);
-			document.removeEventListener('touchstart', handleOutsideClick);
-		}
+			document.removeEventListener("click", handleOutsideClick);
+			document.removeEventListener("touchstart", handleOutsideClick);
+		},
 	});
 
 	export default {
-		name: 'UIFilterNav',
-		components: {
-			UILanguages
+		"name": "UIFilterNav",
+		"components": {
+			UILanguages,
 		},
 		data() {
 			return {
-				isOpen: false
+				"isOpen": false,
 			};
 		},
-		watch: {
+		"watch": {
 			isOpen() {
-				document.body.style.overflow = this.isOpen ? 'hidden' : '';
-			}
+				document.body.style.overflow = this.isOpen ? "hidden" : "";
+			},
 		},
-		methods: {
+		"methods": {
 			openCloseFilter() {
 				this.isOpen = !this.isOpen;
 			},
 			closeFilter() {
 				this.isOpen = false;
-			}
-		}
+			},
+		},
 	};
 </script>
 
@@ -180,7 +177,7 @@
 				transition: all 0.5s ease-in-out 0s;
 
 				&:before {
-					content: 'Filter';
+					content: "Filter";
 					display: inline-block;
 					position: absolute;
 					top: 50%;

@@ -22,9 +22,7 @@
 							class="switch-theme__field"
 							type="checkbox"
 						>
-						<span
-							class="switch-theme__bullet switch-theme__bullet--rounded"
-						/>
+						<span class="switch-theme__bullet switch-theme__bullet--rounded" />
 					</label>
 				</div>
 			</div>
@@ -67,83 +65,68 @@
 </template>
 
 <script>
-	import UICopy from '@/components/UI/UICopy';
+	import UICopy from "@/components/UI/UICopy";
 
 	export default {
-		name: 'UICodeTheme',
-		components: {
-			UICopy
+		"name": "UICodeTheme",
+		"components": {
+			UICopy,
 		},
-		props: {
-			code: {
-				type: [
+		"props": {
+			"code": {
+				"type": [
 					String,
-					Array
+					Array,
 				],
-				required: true
-			}
+				"required": true,
+			},
 		},
 		data() {
 			return {
-				codeFormatted: ''
+				"codeFormatted": "",
 			};
 		},
 		created() {
 			this.codeFormatted = this.convertArrayToStringLines(this.code);
 		},
-		methods: {
+		"methods": {
+			toggleScrollClass(element, className, shouldAdd) {
+				shouldAdd ? element.classList.add(className) : element.classList.remove(className);
+			},
 			checkScrollHorizontal(event) {
 				const $thisBox = event.target;
-				const $thisBoxWidth = $thisBox.offsetWidth;
-				const $thisBoxScrollLeft = $thisBox.scrollLeft;
-				const $thisBoxScrollWidth = $thisBox.scrollWidth;
-
 				const $thisBoxParent = $thisBox.parentNode.parentNode;
-				$thisBoxParent.classList.add('is-scroll');
 
-				if ($thisBoxScrollLeft === 0) {
-					$thisBoxParent.classList.remove('is-scroll-end');
-					$thisBoxParent.classList.add('is-scroll-start');
-				} else if (
-					$thisBoxScrollWidth - $thisBoxScrollLeft ==
-					$thisBoxWidth
-				) {
-					$thisBoxParent.classList.remove('is-scroll-start');
-					$thisBoxParent.classList.add('is-scroll-end');
-				} else {
-					$thisBoxParent.classList.remove('is-scroll-end');
-					$thisBoxParent.classList.remove('is-scroll-start');
-				}
+				const { scrollLeft, scrollWidth, offsetWidth } = $thisBox;
+				const isAtStart = scrollLeft === 0;
+				const isAtEnd = scrollWidth - scrollLeft === offsetWidth;
+
+				this.toggleScrollClass($thisBoxParent, "is-scroll-start", isAtStart);
+				this.toggleScrollClass($thisBoxParent, "is-scroll-end", isAtEnd);
 			},
 			switchTheme(event) {
 				const $thisSwitchThemeField = event.target;
-				const $thisCodeTheme =
-					$thisSwitchThemeField.parentNode.parentNode.parentNode.
-						parentNode;
+				const $thisCodeTheme = $thisSwitchThemeField.parentNode.parentNode.parentNode.parentNode;
 
 				if ($thisCodeTheme && $thisSwitchThemeField.checked) {
-					$thisCodeTheme.classList.remove('is-theme-light');
-					$thisCodeTheme.classList.add('is-theme-dark');
+					$thisCodeTheme.classList.remove("is-theme-light");
+					$thisCodeTheme.classList.add("is-theme-dark");
 				} else {
-					$thisCodeTheme.classList.remove('is-theme-dark');
-					$thisCodeTheme.classList.add('is-theme-light');
+					$thisCodeTheme.classList.remove("is-theme-dark");
+					$thisCodeTheme.classList.add("is-theme-light");
 				}
 			},
 			checkLines(codeText) {
-				if (Array.isArray(codeText) && codeText.length == 1) {
-					return 1;
-				} else if (Array.isArray(codeText) && codeText.length >= 1) {
-					return 2;
+				if (Array.isArray(codeText)) {
+					return codeText.length === 1 ? 1 : 2;
 				}
 
 				return 0;
 			},
 			convertArrayToStringLines(codeText) {
-				return Array.isArray(codeText) || Array.isArray(codeText[0])
-					? codeText.join('\r\n')
-					: codeText;
-			}
-		}
+				return Array.isArray(codeText) || Array.isArray(codeText[0]) ? codeText.join("\r\n") : codeText;
+			},
+		},
 	};
 </script>
 
@@ -182,7 +165,7 @@
 			cursor: pointer;
 
 			&:before {
-				content: '';
+				content: "";
 				width: 1.5rem;
 				height: 1.5rem;
 				display: inline-block;
@@ -279,13 +262,13 @@
 			border-radius: 0.4rem;
 			overflow-x: auto;
 
-			@include media('sm') {
+			@include media("sm") {
 				font-size: 1.3rem;
 			}
 
 			&.is-one-line {
 				&::before {
-					content: '1';
+					content: "1";
 					min-width: 3rem;
 					margin-right: 0.5rem;
 					display: inline-block;
@@ -317,7 +300,7 @@
 				&__content {
 					&:before,
 					&:after {
-						content: '';
+						content: "";
 						display: inline-block;
 						width: 3rem;
 						height: 100%;

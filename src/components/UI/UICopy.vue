@@ -29,19 +29,19 @@
 
 <script>
 	export default {
-		name: 'UICopy',
-		props: {
-			textToCopy: {
-				type: String,
-				required: true
-			}
+		"name": "UICopy",
+		"props": {
+			"textToCopy": {
+				"type": String,
+				"required": true,
+			},
 		},
 		data() {
 			return {
-				status: null
+				"status": null,
 			};
 		},
-		methods: {
+		"methods": {
 			resetStatus() {
 				this.status = null;
 			},
@@ -52,8 +52,8 @@
 			onError() {
 				this.status = false;
 				setTimeout(() => this.resetStatus(), 5000);
-			}
-		}
+			},
+		},
 	};
 </script>
 
