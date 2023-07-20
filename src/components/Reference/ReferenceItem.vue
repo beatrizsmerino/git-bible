@@ -35,16 +35,16 @@
 
 <style lang="scss" scoped>
 	.reference-item {
-		width: 100%;
 		display: flex;
 		align-items: center;
+		width: 100%;
 
 		&__link {
 			width: 100%;
 			padding: 1.92rem 3.2rem;
-			font-size: 1.92rem;
-			color: $color-brand-3;
 			background-color: $color-light;
+			color: $color-brand-3;
+			font-size: 1.92rem;
 
 			@include media("sm") {
 				padding: 1.5rem;
@@ -52,8 +52,8 @@
 			}
 
 			&:hover {
-				color: $color-brand-2;
 				background-color: $color-silver;
+				color: $color-brand-2;
 			}
 		}
 

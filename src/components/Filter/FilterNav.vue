@@ -126,55 +126,55 @@
 
 <style lang="scss" scoped>
 	.filter-nav {
-		width: 100%;
-		height: 100%;
+		display: flex;
 		position: fixed;
+		z-index: 9999;
 		top: 0;
 		right: 0;
-		z-index: 9999;
-		display: flex;
 		justify-content: flex-end;
-		pointer-events: none;
+		width: 100%;
+		height: 100%;
 		transition: all 0.4s ease-in-out 0.3s;
+		pointer-events: none;
 
 		&__inner {
+			position: relative;
 			width: 80%;
 			max-width: 40rem;
 			height: 100%;
-			position: relative;
-			background-color: $color-white;
 			transform: translate3d(100%, 0, 0);
-			pointer-events: all;
 			transition: all 0.5s ease-in-out 0s;
+			background-color: $color-white;
+			pointer-events: all;
 		}
 
 		&__button {
-			width: 5rem;
 			position: absolute;
+			z-index: -1;
 			top: 10rem;
 			left: calc(-4.35rem - 0.8rem);
-			z-index: -1;
+			width: 5rem;
+			transition: all 0.5s ease-in-out 0s;
 			border: none;
 			background-color: transparent;
 			cursor: pointer;
-			transition: all 0.5s ease-in-out 0s;
 
 			.bg {
 				width: 100%;
-				fill: $color-brand-2-light;
 				transition: all 0.5s ease-in-out 0s;
+				fill: $color-brand-2-light;
 			}
 
 			.icon {
-				margin-right: 1rem;
 				position: absolute;
 				top: 50%;
 				left: 1.2rem;
+				margin-right: 1rem;
 				transform: translate3d(0, -50%, 0);
-				font-size: 1.8rem;
-				color: $color-light;
-				pointer-events: none;
 				transition: all 0.5s ease-in-out 0s;
+				color: $color-light;
+				font-size: 1.8rem;
+				pointer-events: none;
 
 				&:before {
 					content: "Filter";
@@ -182,11 +182,11 @@
 					position: absolute;
 					top: 50%;
 					left: 1.6rem;
-					transform-origin: 0 0;
 					transform: rotate(-90deg) translate(-50%, 0);
-					font-weight: 500;
-					font-style: initial;
+					transform-origin: 0 0;
 					font-size: 1.5rem;
+					font-style: initial;
+					font-weight: 500;
 				}
 			}
 
@@ -205,10 +205,10 @@
 			width: 100%;
 			height: 100%;
 			padding: 12rem 2rem 4rem;
-			border-left: 0.8rem solid $color-brand-2-light;
-			background-color: $color-white;
 			transform: translate(-0.8rem, 0);
 			transition: all 0.5s ease-in-out 0s;
+			border-left: 0.8rem solid $color-brand-2-light;
+			background-color: $color-white;
 		}
 
 		&__title {
@@ -217,13 +217,13 @@
 
 		&__subtitle {
 			margin-bottom: 1rem;
-			font-size: 2rem;
 			color: $color-brand-1;
+			font-size: 2rem;
 		}
 
 		&.is-open {
-			pointer-events: all;
 			background-color: rgba($color-black, 0.5);
+			pointer-events: all;
 
 			.filter-nav {
 				&__inner {
@@ -254,8 +254,8 @@
 				}
 
 				&__content {
-					border-left: 0.8rem solid $color-white;
 					transform: translate(0, 0);
+					border-left: 0.8rem solid $color-white;
 				}
 			}
 		}

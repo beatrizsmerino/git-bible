@@ -30,17 +30,17 @@
 
 <style lang="scss" scoped>
 	.footer {
-		width: 100%;
-		padding: 1.6rem 3.2rem;
 		display: flex;
 		justify-content: space-between;
+		width: 100%;
+		padding: 1.6rem 3.2rem;
+		background-color: $color-brand-1;
 		color: rgba($color-white, 0.7);
 		font-size: 1.6rem;
-		background-color: $color-brand-1;
 
 		@include media("sm") {
-			text-align: center;
 			flex-direction: column-reverse;
+			text-align: center;
 		}
 
 		&__item {

@@ -27,12 +27,12 @@
 
 <style lang="scss" scoped>
 	.page-content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		width: 100%;
 		height: 100%;
 		margin-bottom: 0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		text-align: center;
 
 		@include media("md", $dimension: "height") {
@@ -46,12 +46,12 @@
 		}
 
 		&__inner {
-			width: 100%;
-			max-width: 60rem;
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
 			align-items: center;
+			justify-content: center;
+			width: 100%;
+			max-width: 60rem;
 
 			@include media("md") {
 				width: 90%;

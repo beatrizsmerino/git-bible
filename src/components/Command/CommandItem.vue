@@ -74,11 +74,11 @@
 <style lang="scss" scoped>
 	.command-item {
 		padding: 2.7rem 3.2rem;
-		font-size: 1.9rem;
-		background-color: $color-light;
-		border-bottom: 0.8rem solid $color-silver;
-		scroll-margin-top: calc(8em + 3rem);
 		transition: all 0.5s ease-in-out 0s;
+		border-bottom: 0.8rem solid $color-silver;
+		background-color: $color-light;
+		font-size: 1.9rem;
+		scroll-margin-top: calc(8em + 3rem);
 
 		@include media("sm") {
 			padding: 1.8rem;
@@ -87,8 +87,8 @@
 
 		&__title {
 			margin-bottom: 1rem;
-			font-size: 2rem;
 			color: $color-brand-2;
+			font-size: 2rem;
 
 			@include media("sm") {
 				font-size: 1.8rem;
@@ -106,8 +106,8 @@
 
 		&__description {
 			margin-bottom: 2rem;
-			font-size: 1.8rem;
 			color: $color-brand-2;
+			font-size: 1.8rem;
 
 			@include media("sm") {
 				font-size: 1.5rem;
@@ -128,18 +128,18 @@
 				}
 
 				a {
-					font-weight: 700;
 					color: $color-brand-3;
+					font-weight: 700;
 				}
 
 				code {
+					display: inline-block;
 					margin: 0 0.2rem;
 					padding: 0.25rem 0.5rem;
-					display: inline-block;
-					line-height: 100%;
-					font-size: 0.85em;
 					border-radius: 0.6rem;
 					background-color: $color-silver;
+					font-size: 0.85em;
+					line-height: 100%;
 
 					@include media("md") {
 						white-space: initial;
@@ -154,8 +154,8 @@
 		}
 
 		&__code {
-			width: 100%;
 			display: inline-block;
+			width: 100%;
 
 			&:not(:last-child) {
 				margin-bottom: 1.5rem;

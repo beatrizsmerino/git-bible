@@ -59,37 +59,37 @@
 
 <style lang="scss" scoped>
 	.button-copy {
-		appearance: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		height: 2.2rem;
 		padding: 0 1rem;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		color: $color-light;
-		font-size: 1.2rem;
 		border: none;
 		border-radius: 0.5rem;
 		background-color: $color-brand-2-light;
+		color: $color-light;
+		font-size: 1.2rem;
 		cursor: pointer;
+		appearance: none;
 
 		&__icon {
-			font-size: 1.2rem;
 			color: $color-light;
+			font-size: 1.2rem;
 			pointer-events: none;
 		}
 
 		&__message {
-			max-width: 30rem;
-			padding: 0.5rem 1rem;
 			position: absolute;
+			z-index: 3;
 			top: 0;
 			left: 50%;
-			z-index: 3;
+			max-width: 30rem;
+			padding: 0.5rem 1rem;
 			transform: translate(-50%, -1.5rem) scale(1);
-			color: $color-white;
 			border-radius: 0.5rem;
-			background-color: $color-brand-2-light;
 			opacity: 0;
+			background-color: $color-brand-2-light;
+			color: $color-white;
 
 			&--success {
 				background-color: $color-success;
@@ -107,28 +107,33 @@
 
 	@keyframes fadeUp {
 		0% {
-			opacity: 0;
 			transform: translate(-50%, -1.5rem) scale(1);
+			opacity: 0;
 		}
+
 		10% {
-			opacity: 1;
 			transform: translate(-50%, -3rem) scale(1);
+			opacity: 1;
 		}
+
 		15% {
-			opacity: 1;
 			transform: translate(-50%, -3rem) scale(1.1);
+			opacity: 1;
 		}
+
 		20% {
-			opacity: 1;
 			transform: translate(-50%, -3rem) scale(1);
+			opacity: 1;
 		}
+
 		90% {
-			opacity: 1;
 			transform: translate(-50%, -3rem) scale(1);
+			opacity: 1;
 		}
+
 		100% {
-			opacity: 0;
 			transform: translate(-50%, -1.5rem) scale(1);
+			opacity: 0;
 		}
 	}
 
