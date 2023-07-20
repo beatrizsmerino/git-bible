@@ -13,5 +13,15 @@ module.exports = {
 			options({
 				"fix": true,
 			});
+
+		config.plugin("stylelint").use(require("stylelint-webpack-plugin"), [
+			{
+				"fix": true,
+				"files": [
+					"src/**/*.vue",
+					"src/**/*.scss",
+				],
+			},
+		]);
 	},
 };
