@@ -85,6 +85,7 @@
 				element.classList.remove("is-scroll-end");
 				element.classList.remove("is-scroll-start");
 			},
+			// eslint-disable-next-line complexity, max-statements
 			checkScrollVertical() {
 				const $thisBox = document.getElementById("searchResultsInner");
 				const $thisBoxHeight = $thisBox.offsetHeight;

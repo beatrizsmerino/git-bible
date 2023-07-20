@@ -90,6 +90,7 @@
 			this.codeFormatted = this.convertArrayToStringLines(this.code);
 		},
 		"methods": {
+			// eslint-disable-next-line max-statements
 			checkScrollHorizontal(event) {
 				const $thisBox = event.target;
 				const $thisBoxWidth = $thisBox.offsetWidth;
@@ -122,6 +123,7 @@
 					$thisCodeTheme.classList.add("is-theme-light");
 				}
 			},
+			// eslint-disable-next-line complexity
 			checkLines(codeText) {
 				if (Array.isArray(codeText) && codeText.length == 1) {
 					return 1;

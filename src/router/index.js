@@ -80,6 +80,7 @@ const routes = [
 	},
 ];
 
+// eslint-disable-next-line complexity, max-statements
 const scrollBehavior = function(to, from, savedPosition) {
 	if (savedPosition) {
 		return savedPosition;
@@ -128,6 +129,7 @@ const router = new VueRouter({
 });
 
 // This callback runs before every route change, including on page load.
+// eslint-disable-next-line consistent-return
 router.beforeEach((to, from, next) => {
 	// This goes through the matched routes from last to first, finding the closest route with a title.
 	// eg. if we have /some/deep/nested/route and /some, /deep, and /nested have titles, nested's will be chosen.
