@@ -243,12 +243,6 @@
 			}
 		}
 
-		&__button-switch {
-		}
-
-		&__button-copy {
-		}
-
 		&__content {
 			position: relative;
 		}

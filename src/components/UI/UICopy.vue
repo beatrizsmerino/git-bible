@@ -10,7 +10,7 @@
 			<font-awesome-icon :icon="['fas', 'clone']" />
 		</i>
 
-		<transition name="fadeUp">
+		<transition name="fade-up">
 			<span
 				v-if="status === true"
 				class="button-copy__message button-copy__message--success"
@@ -64,7 +64,7 @@
 		justify-content: center;
 		height: 2.2rem;
 		padding: 0 1rem;
-		border: none;
+		border: 0;
 		border-radius: 0.5rem;
 		background-color: $color-brand-2-light;
 		color: $color-light;
@@ -105,7 +105,7 @@
 		}
 	}
 
-	@keyframes fadeUp {
+	@keyframes fade-up {
 		0% {
 			transform: translate(-50%, -1.5rem) scale(1);
 			opacity: 0;
@@ -137,7 +137,7 @@
 		}
 	}
 
-	.fadeUp-enter-active {
-		animation: fadeUp 2s ease-in-out 0s forwards;
+	.fade-up-enter-active {
+		animation: fade-up 2s ease-in-out 0s forwards;
 	}
 </style>

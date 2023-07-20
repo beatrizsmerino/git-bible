@@ -203,7 +203,7 @@
 			z-index: 2;
 			margin-top: 1.5rem;
 			margin-left: 2rem;
-			border: none;
+			border: 0;
 			background-color: transparent;
 			color: $color-white;
 			cursor: pointer;

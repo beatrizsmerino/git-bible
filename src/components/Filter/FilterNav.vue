@@ -155,7 +155,7 @@
 			left: calc(-4.35rem - 0.8rem);
 			width: 5rem;
 			transition: all 0.5s ease-in-out 0s;
-			border: none;
+			border: 0;
 			background-color: transparent;
 			cursor: pointer;
 

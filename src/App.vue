@@ -69,8 +69,8 @@
 </script>
 
 <style lang="scss">
-	@import "./assets/scss/base/_base-reset.scss";
-	@import "./assets/scss/base/_base-fonts.scss";
+	@import "./assets/scss/base/base-reset";
+	@import "./assets/scss/base/base-fonts";
 
 	[v-cloak] {
 		display: none;
@@ -105,38 +105,10 @@
 		color: $color-brand-1;
 	}
 
-	::selection {
-		background: $color-brand-2;
-		color: $color-brand-1;
-	}
-
 	// FORMS
 	// =================================================
-	::input-placeholder {
-		color: $color-brand-2-light;
-
-		/* Chrome/Opera/Safari */
-		font-weight: 400;
-	}
-
 	::placeholder {
 		color: $color-brand-2-light;
-
-		/* Firefox 19+ */
-		font-weight: 400;
-	}
-
-	:input-placeholder {
-		color: $color-brand-2-light;
-
-		/* IE 10+ */
-		font-weight: 400;
-	}
-
-	:placeholder {
-		color: $color-brand-2-light;
-
-		/* Firefox 18- */
 		font-weight: 400;
 	}
 
@@ -189,9 +161,6 @@
 				padding-top: 6rem;
 				padding-bottom: 0;
 			}
-		}
-
-		&__inner {
 		}
 	}
 </style>

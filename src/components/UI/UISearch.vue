@@ -99,7 +99,7 @@
 		&__input {
 			width: 100%;
 			padding: 1.8rem 3rem;
-			border: none;
+			border: 0;
 			border-bottom: 0.3rem solid $color-brand-1;
 			color: $color-brand-1;
 			font-size: 2rem;
