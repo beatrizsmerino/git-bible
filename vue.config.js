@@ -1,3 +1,6 @@
+const ESLintPlugin = require("eslint-webpack-plugin");
+const StylelintPlugin = require("stylelint-webpack-plugin");
+
 module.exports = {
 	"publicPath": process.env.NODE_ENV === "production" ? "/git-bible/" : "/",
 	"lintOnSave": true,
@@ -9,7 +12,7 @@ module.exports = {
 		},
 	},
 	"chainWebpack": config => {
-		config.plugin("eslint").use(require("eslint-webpack-plugin"), [
+		config.plugin("eslint").use(ESLintPlugin, [
 			{
 				"fix": true,
 				"extensions": [
@@ -19,7 +22,7 @@ module.exports = {
 			},
 		]);
 
-		config.plugin("stylelint").use(require("stylelint-webpack-plugin"), [
+		config.plugin("stylelint").use(StylelintPlugin, [
 			{
 				"fix": true,
 				"files": [
