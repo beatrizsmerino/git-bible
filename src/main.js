@@ -2,18 +2,8 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import {library} from '@fortawesome/fontawesome-svg-core';
-import {
-	faLink,
-	faCodeBranch,
-	faClone,
-	faTerminal,
-	faFilter
-} from '@fortawesome/free-solid-svg-icons';
-import {
-	FontAwesomeIcon,
-	FontAwesomeLayers,
-	FontAwesomeLayersText
-} from '@fortawesome/vue-fontawesome';
+import {faLink, faCodeBranch, faClone, faTerminal, faFilter} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText} from '@fortawesome/vue-fontawesome';
 import VueClipboard from 'vue-clipboard2';
 import {i18n} from '@/plugins/i18n';
 

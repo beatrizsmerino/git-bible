@@ -3,11 +3,7 @@
 		<UIButton
 			v-for="language in languages"
 			:key="language.locale"
-			:class="[
-				language.locale == $i18n.locale
-					? 'button--bg-color-1'
-					: 'button--bg-color-2-light'
-			]"
+			:class="[language.locale == $i18n.locale ? 'button--bg-color-1' : 'button--bg-color-2-light']"
 			@emit-click="changeLanguage(language.locale)"
 		>
 			{{ language.title }}

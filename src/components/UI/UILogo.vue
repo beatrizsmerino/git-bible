@@ -34,7 +34,7 @@
 <style lang="scss">
 	.logo {
 		display: inline-block;
-		font-family: 'Adelle Bold', 'Georgia', 'Times New Roman', serif;
+		font-family: "Adelle Bold", "Georgia", "Times New Roman", serif;
 		font-size: 5rem;
 
 		&__link {
@@ -87,7 +87,7 @@
 			.logo {
 				&__icon,
 				&__text {
-					@include media('sm') {
+					@include media("sm") {
 						font-size: 0.8em;
 					}
 				}
@@ -99,15 +99,15 @@
 			margin-bottom: 2rem;
 			font-size: 11.2rem;
 
-			@include media('md') {
+			@include media("md") {
 				font-size: 10rem;
 			}
 
-			@include media('md') {
+			@include media("md") {
 				display: none;
 			}
 
-			@include media('md', $dimension: 'height') {
+			@include media("md", $dimension: "height") {
 				display: none;
 			}
 		}

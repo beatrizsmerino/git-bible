@@ -35,12 +35,12 @@
 		align-items: center;
 		text-align: center;
 
-		@include media('md', $dimension: 'height') {
+		@include media("md", $dimension: "height") {
 			height: auto;
 			margin: 6rem auto;
 		}
 
-		@include media('md') {
+		@include media("md") {
 			height: auto;
 			margin: 6rem auto;
 		}
@@ -53,7 +53,7 @@
 			justify-content: center;
 			align-items: center;
 
-			@include media('md') {
+			@include media("md") {
 				width: 90%;
 				max-width: 100%;
 			}

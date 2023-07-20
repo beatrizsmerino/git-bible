@@ -24,10 +24,7 @@
 		/>
 
 		<div
-			v-if="
-				Array.isArray(commandItem.code) &&
-					Array.isArray(commandItem.code[0])
-			"
+			v-if="Array.isArray(commandItem.code) && Array.isArray(commandItem.code[0])"
 			class="command-item__blocks-code"
 		>
 			<UICodeTheme
@@ -40,8 +37,7 @@
 
 		<UICodeTheme
 			v-if="
-				(Array.isArray(commandItem.code) &&
-					typeof commandItem.code[0] == 'string') ||
+				(Array.isArray(commandItem.code) && typeof commandItem.code[0] == 'string') ||
 					typeof commandItem.code == 'string'
 			"
 			class="command-item__code"
@@ -84,7 +80,7 @@
 		scroll-margin-top: calc(8em + 3rem);
 		transition: all 0.5s ease-in-out 0s;
 
-		@include media('sm') {
+		@include media("sm") {
 			padding: 1.8rem;
 			scroll-margin-top: calc(6em + 3rem);
 		}
@@ -94,7 +90,7 @@
 			font-size: 2rem;
 			color: $color-brand-2;
 
-			@include media('sm') {
+			@include media("sm") {
 				font-size: 1.8rem;
 			}
 		}
@@ -113,7 +109,7 @@
 			font-size: 1.8rem;
 			color: $color-brand-2;
 
-			@include media('sm') {
+			@include media("sm") {
 				font-size: 1.5rem;
 				line-height: 130%;
 			}
@@ -145,7 +141,7 @@
 					border-radius: 0.6rem;
 					background-color: $color-silver;
 
-					@include media('md') {
+					@include media("md") {
 						white-space: initial;
 					}
 				}
@@ -170,7 +166,7 @@
 			padding: 2.7rem 3.2rem calc(2.7rem - 0.8rem);
 			background-color: $color-silver;
 
-			@include media('sm') {
+			@include media("sm") {
 				padding: 1.8rem 1.8rem calc(1.8rem - 0.8rem);
 			}
 

@@ -38,10 +38,7 @@
 					const body = document.getElementsByTagName('body')[0];
 
 					if (typeof from !== 'undefined') {
-						html.classList.remove(
-							'page',
-							`page-${from.name.toLowerCase()}`
-						);
+						html.classList.remove('page', `page-${from.name.toLowerCase()}`);
 					}
 					html.classList.add('page', `page-${to.name.toLowerCase()}`);
 					body.classList.add('page-body');
@@ -65,17 +62,15 @@
 			},
 			handleScroll() {
 				const maxScroll = 95;
-				window.scrollY >= maxScroll
-					? this.isScrollUp = false
-					: this.isScrollUp = true;
+				window.scrollY >= maxScroll ? this.isScrollUp = false : this.isScrollUp = true;
 			}
 		}
 	};
 </script>
 
 <style lang="scss">
-	@import './assets/scss/base/_base-reset.scss';
-	@import './assets/scss/base/_base-fonts.scss';
+	@import "./assets/scss/base/_base-reset.scss";
+	@import "./assets/scss/base/_base-fonts.scss";
 
 	[v-cloak] {
 		display: none;
@@ -181,11 +176,11 @@
 			padding-top: 8rem;
 			padding-bottom: 5.2rem;
 
-			@include media('md', $dimension: 'height') {
+			@include media("md", $dimension: "height") {
 				padding-bottom: 0;
 			}
 
-			@include media('md') {
+			@include media("md") {
 				padding-top: 6rem;
 				padding-bottom: 0;
 			}

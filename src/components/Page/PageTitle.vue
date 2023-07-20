@@ -24,7 +24,7 @@
 		background-color: $color-white;
 		transition: all 1s ease-in-out 0s, margin 1ms;
 
-		@include media('sm') {
+		@include media("sm") {
 			padding: 6rem 0 3rem;
 			font-size: 3.5rem;
 		}
@@ -39,7 +39,7 @@
 			font-size: 3.5rem;
 			background-color: rgba($color-white, 0.8);
 
-			@include media('sm') {
+			@include media("sm") {
 				top: 6rem;
 				font-size: 2.5rem;
 			}

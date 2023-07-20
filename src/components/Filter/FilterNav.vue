@@ -6,7 +6,7 @@
 		<div
 			v-closable="{
 				exclude: ['buttonFilter'],
-				handler: 'closeFilter'
+				handler: 'closeFilter',
 			}"
 			class="filter-nav__inner"
 		>
@@ -80,10 +80,7 @@
 				});
 
 				// We check to see if the clicked element is not the dialog element and not excluded
-				if (
-					!element.contains(event.target) &&
-					!clickedOnElementExcluded
-				) {
+				if (!element.contains(event.target) && !clickedOnElementExcluded) {
 					// If the clicked element is outside the dialog and not the button, then call the outside-click handler from the same component this directive is used in
 					vnode.context[handler]();
 				}
@@ -180,7 +177,7 @@
 				transition: all 0.5s ease-in-out 0s;
 
 				&:before {
-					content: 'Filter';
+					content: "Filter";
 					display: inline-block;
 					position: absolute;
 					top: 50%;

@@ -97,9 +97,7 @@
 		},
 		methods: {
 			openCloseNav() {
-				this.isOpen == false
-					? this.isOpen = true
-					: this.isOpen = false;
+				this.isOpen == false ? this.isOpen = true : this.isOpen = false;
 			},
 			closeNav() {
 				this.isOpen = false;
@@ -125,7 +123,7 @@
 			font-weight: 600;
 			list-style: none;
 
-			@include media('md') {
+			@include media("md") {
 				width: 100%;
 				height: calc(100% - 6rem);
 				padding: 4rem 6rem 4rem 4rem;
@@ -142,7 +140,7 @@
 				transition: all 0.5s ease-in-out 0s;
 			}
 
-			@include media('sm') {
+			@include media("sm") {
 				top: 6rem;
 				padding: 2rem 4rem 2rem 2rem;
 				font-size: 3rem;
@@ -154,14 +152,14 @@
 			justify-content: center;
 			align-items: center;
 
-			@include media('md') {
+			@include media("md") {
 				justify-content: flex-end;
 			}
 
 			&:not(:last-child) {
 				margin-right: 2.4rem;
 
-				@include media('md') {
+				@include media("md") {
 					margin-right: 0;
 					margin-bottom: 4rem;
 				}
@@ -176,7 +174,7 @@
 			white-space: nowrap;
 			color: rgba($color-white, 0.7);
 
-			@include media('md') {
+			@include media("md") {
 				align-items: flex-end;
 				justify-content: flex-end;
 			}
@@ -192,7 +190,7 @@
 				&.is-small {
 					font-size: 1.5rem;
 
-					@include media('md') {
+					@include media("md") {
 						font-size: 3rem;
 					}
 				}
@@ -212,7 +210,7 @@
 			cursor: pointer;
 
 			&:before {
-				content: 'Menu';
+				content: "Menu";
 				display: inline-block;
 				position: absolute;
 				top: -1.5rem;
@@ -222,7 +220,7 @@
 				font-size: 1.2rem;
 			}
 
-			@include media('md') {
+			@include media("md") {
 				display: inline-block;
 			}
 		}

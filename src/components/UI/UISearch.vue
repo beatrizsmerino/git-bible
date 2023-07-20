@@ -56,9 +56,7 @@
 		},
 		computed: {
 			filteredList() {
-				return this.commandList.filter(command => command.title.
-					toLowerCase().
-					includes(this.searchText.toLowerCase()));
+				return this.commandList.filter(command => command.title.toLowerCase().includes(this.searchText.toLowerCase()));
 			}
 		},
 		created() {
@@ -94,27 +92,15 @@
 				const $thisBoxScrollHeight = $thisBox.scrollHeight;
 				const $thisBoxParent = $thisBox.parentNode;
 
-				if (
-					$thisBoxScrollTop === 0 &&
-					$thisBoxScrollHeight === $thisBoxHeight
-				) {
+				if ($thisBoxScrollTop === 0 && $thisBoxScrollHeight === $thisBoxHeight) {
 					this.isScrollReset($thisBoxParent);
-				} else if (
-					$thisBoxScrollTop === 0 &&
-					$thisBoxScrollHeight >= $thisBoxHeight
-				) {
+				} else if ($thisBoxScrollTop === 0 && $thisBoxScrollHeight >= $thisBoxHeight) {
 					this.isScrollStart($thisBoxParent);
 				} else if ($thisBoxScrollTop === 0) {
 					this.isScrollStart($thisBoxParent);
-				} else if (
-					$thisBoxScrollTop !== 0 &&
-					$thisBoxScrollHeight - $thisBoxScrollTop !== $thisBoxHeight
-				) {
+				} else if ($thisBoxScrollTop !== 0 && $thisBoxScrollHeight - $thisBoxScrollTop !== $thisBoxHeight) {
 					this.isScrollBoth($thisBoxParent);
-				} else if (
-					$thisBoxScrollHeight - $thisBoxScrollTop ==
-					$thisBoxHeight
-				) {
+				} else if ($thisBoxScrollHeight - $thisBoxScrollTop == $thisBoxHeight) {
 					this.isScrollEnd($thisBoxParent);
 				} else {
 					this.isScrollReset($thisBoxParent);
@@ -167,11 +153,11 @@
 			height: #{((5 + 1) * 4)}rem;
 			overflow-y: scroll;
 
-			@include media('md') {
+			@include media("md") {
 				height: #{((5 + 1) * 8)}rem;
 			}
 
-			@include media('md', $dimension: 'height') {
+			@include media("md", $dimension: "height") {
 				height: #{((5 + 1) * 8)}rem;
 			}
 		}
@@ -219,7 +205,7 @@
 
 			&:before,
 			&:after {
-				content: '';
+				content: "";
 				display: inline-block;
 				width: 100%;
 				height: 5rem;
@@ -231,20 +217,12 @@
 
 			&:before {
 				top: 0;
-				background: linear-gradient(
-					0deg,
-					rgba($color-white, 0) 0%,
-					rgba($color-white, 1) 100%
-				);
+				background: linear-gradient(0deg, rgba($color-white, 0) 0%, rgba($color-white, 1) 100%);
 			}
 
 			&:after {
 				bottom: 0;
-				background: linear-gradient(
-					0deg,
-					rgba($color-white, 1) 0%,
-					rgba($color-white, 0) 100%
-				);
+				background: linear-gradient(0deg, rgba($color-white, 1) 0%, rgba($color-white, 0) 100%);
 			}
 
 			&.is-scroll-start {

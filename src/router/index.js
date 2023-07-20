@@ -91,9 +91,7 @@ const scrollBehavior = function(to, from, savedPosition) {
 		position.offset = {y: 200};
 		position.behavior = 'smooth';
 
-		const selectorIndex = document.
-			querySelector(to.hash).
-			getAttribute('data-index');
+		const selectorIndex = document.querySelector(to.hash).getAttribute('data-index');
 
 		if ((/^#\d/u).test(to.hash) || document.querySelector(to.hash)) {
 			if (selectorIndex) {
@@ -152,8 +150,7 @@ router.beforeEach((to, from, next) => {
 
 	// If a route with a title was found, set the document (page) title to that value.
 	if (nearestWithTitle) {
-		document.title =
-			`${nearestWithTitle.meta.title} | GitBible` || 'GitBible';
+		document.title = `${nearestWithTitle.meta.title} | GitBible` || 'GitBible';
 	}
 
 	// Remove any stale meta tags from the document using the key attribute we set below.

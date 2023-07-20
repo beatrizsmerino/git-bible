@@ -22,9 +22,7 @@
 							class="switch-theme__field"
 							type="checkbox"
 						>
-						<span
-							class="switch-theme__bullet switch-theme__bullet--rounded"
-						/>
+						<span class="switch-theme__bullet switch-theme__bullet--rounded" />
 					</label>
 				</div>
 			</div>
@@ -104,10 +102,7 @@
 				if ($thisBoxScrollLeft === 0) {
 					$thisBoxParent.classList.remove('is-scroll-end');
 					$thisBoxParent.classList.add('is-scroll-start');
-				} else if (
-					$thisBoxScrollWidth - $thisBoxScrollLeft ==
-					$thisBoxWidth
-				) {
+				} else if ($thisBoxScrollWidth - $thisBoxScrollLeft == $thisBoxWidth) {
 					$thisBoxParent.classList.remove('is-scroll-start');
 					$thisBoxParent.classList.add('is-scroll-end');
 				} else {
@@ -117,9 +112,7 @@
 			},
 			switchTheme(event) {
 				const $thisSwitchThemeField = event.target;
-				const $thisCodeTheme =
-					$thisSwitchThemeField.parentNode.parentNode.parentNode.
-						parentNode;
+				const $thisCodeTheme = $thisSwitchThemeField.parentNode.parentNode.parentNode.parentNode;
 
 				if ($thisCodeTheme && $thisSwitchThemeField.checked) {
 					$thisCodeTheme.classList.remove('is-theme-light');
@@ -139,9 +132,7 @@
 				return 0;
 			},
 			convertArrayToStringLines(codeText) {
-				return Array.isArray(codeText) || Array.isArray(codeText[0])
-					? codeText.join('\r\n')
-					: codeText;
+				return Array.isArray(codeText) || Array.isArray(codeText[0]) ? codeText.join('\r\n') : codeText;
 			}
 		}
 	};
@@ -182,7 +173,7 @@
 			cursor: pointer;
 
 			&:before {
-				content: '';
+				content: "";
 				width: 1.5rem;
 				height: 1.5rem;
 				display: inline-block;
@@ -279,13 +270,13 @@
 			border-radius: 0.4rem;
 			overflow-x: auto;
 
-			@include media('sm') {
+			@include media("sm") {
 				font-size: 1.3rem;
 			}
 
 			&.is-one-line {
 				&::before {
-					content: '1';
+					content: "1";
 					min-width: 3rem;
 					margin-right: 0.5rem;
 					display: inline-block;
@@ -317,7 +308,7 @@
 				&__content {
 					&:before,
 					&:after {
-						content: '';
+						content: "";
 						display: inline-block;
 						width: 3rem;
 						height: 100%;

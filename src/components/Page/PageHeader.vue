@@ -32,7 +32,7 @@
 		z-index: 99999;
 		background-color: $color-brand-1;
 
-		@include media('sm') {
+		@include media("sm") {
 			height: 6rem;
 			padding: 0.5rem 5%;
 		}

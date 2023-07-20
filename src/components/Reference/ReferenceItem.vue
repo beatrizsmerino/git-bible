@@ -46,7 +46,7 @@
 			color: $color-brand-3;
 			background-color: $color-light;
 
-			@include media('sm') {
+			@include media("sm") {
 				padding: 1.5rem;
 				font-size: 1.5rem;
 			}
@@ -60,7 +60,7 @@
 		&__description {
 			color: $color-brand-2;
 
-			@include media('sm') {
+			@include media("sm") {
 				margin-bottom: 0.5rem;
 			}
 		}
@@ -73,7 +73,7 @@
 		&__url-icon {
 			margin-right: 0.8rem;
 
-			@include media('sm') {
+			@include media("sm") {
 				margin-right: 0.5rem;
 				font-size: 1.2rem;
 			}

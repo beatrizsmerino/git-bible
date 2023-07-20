@@ -1,9 +1,7 @@
 <template>
 	<footer class="footer">
 		<div class="footer__copyright footer__item">
-			<p>
-				© Copyright 2019-{{ currentYear }}. Git Bible. @beatrizsmerino
-			</p>
+			<p>© Copyright 2019-{{ currentYear }}. Git Bible. @beatrizsmerino</p>
 		</div>
 
 		<div class="footer__nav footer__item">
@@ -40,14 +38,14 @@
 		font-size: 1.6rem;
 		background-color: $color-brand-1;
 
-		@include media('sm') {
+		@include media("sm") {
 			text-align: center;
 			flex-direction: column-reverse;
 		}
 
 		&__item {
 			&:not(:first-child) {
-				@include media('sm') {
+				@include media("sm") {
 					margin-bottom: 0.5rem;
 				}
 			}

@@ -4,10 +4,7 @@ if (!('boxShadow' in document.body.style)) {
 
 document.body.addEventListener('click', function(e) {
 	const target = e.target;
-	if (
-		target.tagName === 'INPUT' &&
-		target.getAttribute('class').indexOf('liga') === -1
-	) {
+	if (target.tagName === 'INPUT' && target.getAttribute('class').indexOf('liga') === -1) {
 		target.select();
 	}
 });
