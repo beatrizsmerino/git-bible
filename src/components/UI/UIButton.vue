@@ -48,20 +48,20 @@
 
 <style lang="scss" scoped>
 	.button {
-		padding: 1.2rem 4rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		text-transform: capitalize;
-		font-size: 1.6rem;
-		font-weight: 900;
-		line-height: 110%;
+		padding: 1.2rem 4rem;
+		transition: color 0.15s ease-in-out 0s, background-color 0.15s ease-in-out 0s, border-color 0.15s ease-in-out 0s;
 		border: 0.2rem solid transparent;
 		outline: none;
 		background-color: transparent;
-		transition: color 0.15s ease-in-out 0s, background-color 0.15s ease-in-out 0s, border-color 0.15s ease-in-out 0s;
-		user-select: none;
+		font-size: 1.6rem;
+		font-weight: 900;
+		line-height: 110%;
+		text-transform: capitalize;
 		cursor: pointer;
+		user-select: none;
 		appearance: none;
 
 		> * {
@@ -95,8 +95,8 @@
 		}
 
 		&--bg-color {
-			color: $color-white;
 			background-color: $color-brand-1;
+			color: $color-white;
 
 			.icon {
 				&__use {
@@ -105,13 +105,13 @@
 			}
 
 			&:hover {
-				color: $color-white;
 				background-color: mix($color-black, $color-brand-1, 15%);
+				color: $color-white;
 			}
 
 			&-1 {
-				color: $color-white;
 				background-color: $color-brand-1;
+				color: $color-white;
 
 				&:hover {
 					background-color: mix($color-black, $color-brand-1, 15%);
@@ -119,8 +119,8 @@
 			}
 
 			&-2 {
-				color: $color-white;
 				background-color: $color-brand-2;
+				color: $color-white;
 
 				&:hover {
 					background-color: mix($color-black, $color-brand-2, 15%);
@@ -128,8 +128,8 @@
 			}
 
 			&-2-light {
-				color: $color-white;
 				background-color: $color-brand-2-light;
+				color: $color-white;
 
 				&:hover {
 					background-color: mix($color-black, $color-brand-2-light, 15%);
@@ -137,8 +137,8 @@
 			}
 
 			&-3 {
-				color: $color-white;
 				background-color: $color-brand-3;
+				color: $color-white;
 
 				&:hover {
 					background-color: mix($color-black, $color-brand-3, 15%);

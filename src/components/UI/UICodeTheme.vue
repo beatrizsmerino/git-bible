@@ -132,49 +132,49 @@
 
 <style lang="scss" scoped>
 	.switch-theme {
-		width: 4.5rem;
-		height: 2.2rem;
 		display: inline-block;
 		position: relative;
+		width: 4.5rem;
+		height: 2.2rem;
 
 		&__field {
-			width: 1.5rem;
-			height: 1.5rem;
 			position: absolute;
 			top: 50%;
 			left: 4.8rem;
+			width: 1.5rem;
+			height: 1.5rem;
 			transform: translate(0, -50%);
 			opacity: 0;
 
 			&:checked + .switch-theme__bullet:before {
-				left: initial;
 				right: 0.5rem;
+				left: initial;
 				background-color: $color-brand-2;
 			}
 		}
 
 		&__bullet {
-			width: 100%;
-			height: 2.2rem;
 			display: inline-block;
 			position: absolute;
 			top: 0;
 			left: 0;
-			background-color: $color-brand-2-light;
+			width: 100%;
+			height: 2.2rem;
 			transition: 0.4s;
+			background-color: $color-brand-2-light;
 			cursor: pointer;
 
 			&:before {
 				content: "";
-				width: 1.5rem;
-				height: 1.5rem;
 				display: inline-block;
 				position: absolute;
-				left: 0.5rem;
 				top: 50%;
+				left: 0.5rem;
+				width: 1.5rem;
+				height: 1.5rem;
 				transform: translate(0, -50%);
-				background-color: $color-light;
 				transition: 0.4s;
+				background-color: $color-light;
 			}
 
 			&--rounded {
@@ -204,21 +204,21 @@
 	}
 
 	.code-theme {
+		position: relative;
 		width: 100%;
 		min-height: 5rem;
 		padding: 1.6rem;
-		position: relative;
-		white-space: nowrap;
-		font-weight: 600;
-		color: $color-brand-3;
 		border-radius: 0.5rem;
 		background-color: $color-white;
+		color: $color-brand-3;
+		font-weight: 600;
+		white-space: nowrap;
 
 		&__header {
-			margin-bottom: 1.8rem;
 			display: flex;
-			justify-content: space-between;
 			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 1.8rem;
 		}
 
 		&__type {
@@ -243,54 +243,48 @@
 			}
 		}
 
-		&__button-switch {
-		}
-
-		&__button-copy {
-		}
-
 		&__content {
 			position: relative;
 		}
 
 		&__code {
+			display: block;
 			width: 100%;
 			padding-bottom: 1.6rem;
-			display: block;
-			white-space: pre;
-			font-size: 1.56rem;
-			border-radius: 0.4rem;
 			overflow-x: auto;
+			border-radius: 0.4rem;
+			font-size: 1.56rem;
+			white-space: pre;
 
 			@include media("sm") {
 				font-size: 1.3rem;
 			}
 
 			&.is-one-line {
-				&::before {
+				&:before {
 					content: "1";
+					display: inline-block;
 					min-width: 3rem;
 					margin-right: 0.5rem;
-					display: inline-block;
 					color: rgba($color-brand-2-light, 0.5);
 				}
 			}
 		}
 
 		&__code-list {
+			margin-left: 0;
 			list-style: none;
 			counter-reset: numberOfLine;
-			margin-left: 0;
 		}
 
 		&__code-item {
 			counter-increment: numberOfLine;
 
-			&::before {
+			&:before {
 				content: counter(numberOfLine);
+				display: inline-block;
 				min-width: 3rem;
 				margin-right: 0.5rem;
-				display: inline-block;
 				color: rgba($color-brand-2-light, 0.5);
 			}
 		}
@@ -302,11 +296,11 @@
 					&:after {
 						content: "";
 						display: inline-block;
+						position: absolute;
+						z-index: 1;
+						top: 0;
 						width: 3rem;
 						height: 100%;
-						position: absolute;
-						top: 0;
-						z-index: 1;
 					}
 
 					&:before {
@@ -343,8 +337,8 @@
 		}
 
 		&.is-theme-light {
-			color: $color-brand-3;
 			background-color: $color-white;
+			color: $color-brand-3;
 
 			.code-theme {
 				&__content {
@@ -372,8 +366,8 @@
 		}
 
 		&.is-theme-dark {
-			color: $color-brand-1;
 			background-color: $color-brand-2;
+			color: $color-brand-1;
 
 			.code-theme {
 				&__content {

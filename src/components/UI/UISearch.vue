@@ -99,20 +99,20 @@
 		&__input {
 			width: 100%;
 			padding: 1.8rem 3rem;
+			border: 0;
+			border-bottom: 0.3rem solid $color-brand-1;
+			color: $color-brand-1;
 			font-size: 2rem;
 			font-weight: 700;
-			color: $color-brand-1;
-			border: none;
-			border-bottom: 0.3rem solid $color-brand-1;
 		}
 
 		&__icon {
 			position: absolute;
-			right: 3.2rem;
 			top: 50%;
+			right: 3.2rem;
 			transform: translate(0, -50%);
-			font-size: 3.2rem;
 			color: $color-brand-1;
+			font-size: 3.2rem;
 		}
 	}
 
@@ -149,14 +149,14 @@
 		}
 
 		&__link {
+			display: inline-block;
 			width: 100%;
 			height: 5rem;
 			margin: 0 auto;
 			padding: 1.3rem;
-			display: inline-block;
-			color: $color-brand-3;
-			background-color: $color-light;
 			border-bottom: 0.5rem solid $color-silver;
+			background-color: $color-light;
+			color: $color-brand-3;
 
 			&:hover {
 				background-color: $color-silver;
@@ -180,11 +180,11 @@
 			&:after {
 				content: "";
 				display: inline-block;
+				position: absolute;
+				z-index: 1;
+				left: 0;
 				width: 100%;
 				height: 5rem;
-				position: absolute;
-				left: 0;
-				z-index: 1;
 				background: $color-white;
 			}
 

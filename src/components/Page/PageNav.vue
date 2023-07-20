@@ -124,20 +124,20 @@
 			list-style: none;
 
 			@include media("md") {
-				width: 100%;
-				height: calc(100% - 6rem);
-				padding: 4rem 6rem 4rem 4rem;
 				position: fixed;
 				top: 8rem;
 				left: 0;
 				flex-direction: column;
 				align-items: flex-end;
-				font-size: 4rem;
-				background-color: $color-brand-1;
+				width: 100%;
+				height: calc(100% - 6rem);
+				padding: 4rem 6rem 4rem 4rem;
 				overflow-y: scroll;
-				opacity: 0;
 				transform: translate(100%, 0);
 				transition: all 0.5s ease-in-out 0s;
+				opacity: 0;
+				background-color: $color-brand-1;
+				font-size: 4rem;
 			}
 
 			@include media("sm") {
@@ -149,8 +149,8 @@
 
 		&__item {
 			display: flex;
-			justify-content: center;
 			align-items: center;
+			justify-content: center;
 
 			@include media("md") {
 				justify-content: flex-end;
@@ -169,10 +169,10 @@
 		&__link {
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
 			align-items: center;
-			white-space: nowrap;
+			justify-content: center;
 			color: rgba($color-white, 0.7);
+			white-space: nowrap;
 
 			@include media("md") {
 				align-items: flex-end;
@@ -199,15 +199,15 @@
 
 		&__button {
 			display: none;
-			appearance: none;
-			margin-top: 1.5rem;
-			margin-left: 2rem;
 			position: relative;
 			z-index: 2;
-			color: $color-white;
-			border: none;
+			margin-top: 1.5rem;
+			margin-left: 2rem;
+			border: 0;
 			background-color: transparent;
+			color: $color-white;
 			cursor: pointer;
+			appearance: none;
 
 			&:before {
 				content: "Menu";
@@ -216,8 +216,8 @@
 				top: -1.5rem;
 				left: 50%;
 				transform: translate3d(-50%, 0, 0);
-				font-style: initial;
 				font-size: 1.2rem;
+				font-style: initial;
 			}
 
 			@include media("md") {
@@ -233,26 +233,26 @@
 
 		&__bg-mobile {
 			position: absolute;
+			z-index: 999;
 			bottom: -80rem;
 			left: 4rem;
-			z-index: 999;
-			font-size: 50rem;
-			color: rgba(0, 0, 0, 0.1);
-			opacity: 0;
-			pointer-events: none;
 			transition: opacity 0s ease-in-out;
+			opacity: 0;
+			color: rgb(0 0 0 / 10%);
+			font-size: 50rem;
+			pointer-events: none;
 
 			&.is-view {
-				opacity: 1;
 				transition: opacity 1.8s ease-in-out, opacity 1s ease-in;
+				opacity: 1;
 			}
 		}
 
 		&.is-open {
 			.nav {
 				&__list {
-					opacity: 1;
 					transform: translate(0, 0);
+					opacity: 1;
 				}
 			}
 		}

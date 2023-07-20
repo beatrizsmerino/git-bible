@@ -34,13 +34,13 @@
 <style lang="scss">
 	.logo {
 		display: inline-block;
-		font-family: "Adelle Bold", "Georgia", "Times New Roman", serif;
+		font-family: "Adelle Bold", Georgia, "Times New Roman", serif;
 		font-size: 5rem;
 
 		&__link {
 			display: flex;
-			justify-content: center;
 			align-items: center;
+			justify-content: center;
 		}
 
 		&__icon {
@@ -48,13 +48,14 @@
 		}
 
 		&__text {
-			margin-left: 1.6rem;
 			display: flex;
+			margin-left: 1.6rem;
 		}
 
 		&__git {
 			color: $color-brand-2;
 		}
+
 		&__bible {
 			color: $color-brand-2-light;
 		}

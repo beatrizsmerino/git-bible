@@ -17,12 +17,12 @@
 	.page-title {
 		margin: 5rem 0 3rem;
 		padding: 1.5rem 0;
-		text-align: center;
+		transition: all 1s ease-in-out 0s, margin 1ms;
+		background-color: $color-white;
+		color: $color-brand-1;
 		font-size: 4.8rem;
 		line-height: 100%;
-		color: $color-brand-1;
-		background-color: $color-white;
-		transition: all 1s ease-in-out 0s, margin 1ms;
+		text-align: center;
 
 		@include media("sm") {
 			padding: 6rem 0 3rem;
@@ -30,14 +30,14 @@
 		}
 
 		&.is-fixed {
-			width: 100%;
-			margin: 0;
 			position: fixed;
+			z-index: 99;
 			top: 8rem;
 			left: 0;
-			z-index: 99;
-			font-size: 3.5rem;
+			width: 100%;
+			margin: 0;
 			background-color: rgba($color-white, 0.8);
+			font-size: 3.5rem;
 
 			@include media("sm") {
 				top: 6rem;

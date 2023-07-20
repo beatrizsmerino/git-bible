@@ -175,7 +175,7 @@ select {
 fieldset {
 	margin: 0;
 	padding: 0;
-	border: none;
+	border: 0;
 }
 
 input,
@@ -194,7 +194,7 @@ textarea {
 input {
 	&[type="submit"],
 	&[type="reset"] {
-		border: none;
+		border: 0;
 		background-color: inherit;
 		cursor: pointer;
 	}

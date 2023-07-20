@@ -69,16 +69,16 @@
 </script>
 
 <style lang="scss">
-	@import "./assets/scss/base/_base-reset.scss";
-	@import "./assets/scss/base/_base-fonts.scss";
+	@import "./assets/scss/base/base-reset";
+	@import "./assets/scss/base/base-fonts";
 
 	[v-cloak] {
 		display: none;
 	}
 
 	body {
-		font-family: $font-oxygen;
 		color: $color-gray;
+		font-family: $font-oxygen;
 
 		&::-webkit-scrollbar {
 			width: 1.5em;
@@ -87,61 +87,38 @@
 		}
 
 		&::-webkit-scrollbar-track {
-			-webkit-box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.3);
+			box-shadow: inset 0 0 0.6rem rgb(0 0 0 / 30%);
 		}
 
 		&::-webkit-scrollbar-thumb {
 			background-color: rgba($color-brand-2, 0.4);
-			-webkit-box-shadow: inset 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+			box-shadow: inset 0.5rem 0.5rem 1rem rgb(0 0 0 / 30%);
 		}
 	}
 
 	// SELECTION TEXT
 	// =================================================
-	::-moz-selection {
+	::selection {
+		background: $color-brand-2;
+
 		/* Code for Firefox */
 		color: $color-brand-1;
-		background: $color-brand-2;
-	}
-
-	::selection {
-		color: $color-brand-1;
-		background: $color-brand-2;
 	}
 
 	// FORMS
 	// =================================================
-	::-webkit-input-placeholder {
-		/* Chrome/Opera/Safari */
-		font-weight: 400;
+	::placeholder {
 		color: $color-brand-2-light;
-	}
-
-	::-moz-placeholder {
-		/* Firefox 19+ */
 		font-weight: 400;
-		color: $color-brand-2-light;
-	}
-
-	:-ms-input-placeholder {
-		/* IE 10+ */
-		font-weight: 400;
-		color: $color-brand-2-light;
-	}
-
-	:-moz-placeholder {
-		/* Firefox 18- */
-		font-weight: 400;
-		color: $color-brand-2-light;
 	}
 
 	// TEXT
 	// =================================================
 	.text-ellipsis {
 		max-width: 60rem;
-		white-space: nowrap;
-		text-overflow: ellipsis;
 		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 
 	// STICKY
@@ -154,9 +131,9 @@
 		}
 
 		&__app {
-			height: 100%;
 			display: flex;
 			flex-direction: column;
+			height: 100%;
 		}
 
 		&__content {
@@ -184,9 +161,6 @@
 				padding-top: 6rem;
 				padding-bottom: 0;
 			}
-		}
-
-		&__inner {
 		}
 	}
 </style>
