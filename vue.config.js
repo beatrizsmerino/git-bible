@@ -9,10 +9,15 @@ module.exports = {
 		},
 	},
 	"chainWebpack": config => {
-		config.module.rule("eslint").use("eslint-loader").
-			options({
+		config.plugin("eslint").use(require("eslint-webpack-plugin"), [
+			{
 				"fix": true,
-			});
+				"extensions": [
+					"js",
+					"vue",
+				],
+			},
+		]);
 
 		config.plugin("stylelint").use(require("stylelint-webpack-plugin"), [
 			{
