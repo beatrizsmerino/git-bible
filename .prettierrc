@@ -8,20 +8,31 @@
 	"jsxSingleQuote": false,
 	"overrides": [
 		{
-			"files": ".prettierrc",
+			"files": [
+				".prettierrc"
+			],
 			"options": {
 				"parser": "json"
 			}
+		},
+		{
+			"files": [
+				"*.json"
+			],
+			"options": {
+				"printWidth": 0
+			}
 		}
 	],
-	"printWidth": 80,
-	"proseWrap": "preserve",
-	"quoteProps": "as-needed",
+	"printWidth": 120,
+	"proseWrap": "always",
+	"quoteProps": "preserve",
 	"requirePragma": false,
-	"semi": false,
-	"singleQuote": true,
+	"semi": true,
+	"singleAttributePerLine": true,
+	"singleQuote": false,
 	"tabWidth": 4,
-	"trailingComma": "none",
+	"trailingComma": "all",
 	"useTabs": true,
 	"vueIndentScriptAndStyle": true
 }
