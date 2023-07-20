@@ -90,26 +90,19 @@
 			this.codeFormatted = this.convertArrayToStringLines(this.code);
 		},
 		"methods": {
-			// eslint-disable-next-line max-statements
+			toggleScrollClass(element, className, shouldAdd) {
+				shouldAdd ? element.classList.add(className) : element.classList.remove(className);
+			},
 			checkScrollHorizontal(event) {
 				const $thisBox = event.target;
-				const $thisBoxWidth = $thisBox.offsetWidth;
-				const $thisBoxScrollLeft = $thisBox.scrollLeft;
-				const $thisBoxScrollWidth = $thisBox.scrollWidth;
-
 				const $thisBoxParent = $thisBox.parentNode.parentNode;
-				$thisBoxParent.classList.add("is-scroll");
 
-				if ($thisBoxScrollLeft === 0) {
-					$thisBoxParent.classList.remove("is-scroll-end");
-					$thisBoxParent.classList.add("is-scroll-start");
-				} else if ($thisBoxScrollWidth - $thisBoxScrollLeft == $thisBoxWidth) {
-					$thisBoxParent.classList.remove("is-scroll-start");
-					$thisBoxParent.classList.add("is-scroll-end");
-				} else {
-					$thisBoxParent.classList.remove("is-scroll-end");
-					$thisBoxParent.classList.remove("is-scroll-start");
-				}
+				const { scrollLeft, scrollWidth, offsetWidth } = $thisBox;
+				const isAtStart = scrollLeft === 0;
+				const isAtEnd = scrollWidth - scrollLeft === offsetWidth;
+
+				this.toggleScrollClass($thisBoxParent, "is-scroll-start", isAtStart);
+				this.toggleScrollClass($thisBoxParent, "is-scroll-end", isAtEnd);
 			},
 			switchTheme(event) {
 				const $thisSwitchThemeField = event.target;
@@ -123,12 +116,9 @@
 					$thisCodeTheme.classList.add("is-theme-light");
 				}
 			},
-			// eslint-disable-next-line complexity
 			checkLines(codeText) {
-				if (Array.isArray(codeText) && codeText.length == 1) {
-					return 1;
-				} else if (Array.isArray(codeText) && codeText.length >= 1) {
-					return 2;
+				if (Array.isArray(codeText)) {
+					return codeText.length === 1 ? 1 : 2;
 				}
 
 				return 0;

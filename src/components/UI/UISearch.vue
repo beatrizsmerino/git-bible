@@ -65,47 +65,19 @@
 			this.commandList = commandListGit.concat(commandListGitFlow);
 		},
 		"methods": {
-			isScrollStart(element) {
-				element.classList.add("is-scroll");
-				element.classList.add("is-scroll-start");
-				element.classList.remove("is-scroll-end");
+			toggleScrollClass(element, className, shouldAdd) {
+				shouldAdd ? element.classList.add(className) : element.classList.remove(className);
 			},
-			isScrollEnd(element) {
-				element.classList.add("is-scroll");
-				element.classList.add("is-scroll-end");
-				element.classList.remove("is-scroll-start");
-			},
-			isScrollBoth(element) {
-				element.classList.add("is-scroll");
-				element.classList.remove("is-scroll-start");
-				element.classList.remove("is-scroll-end");
-			},
-			isScrollReset(element) {
-				element.classList.remove("is-scroll");
-				element.classList.remove("is-scroll-end");
-				element.classList.remove("is-scroll-start");
-			},
-			// eslint-disable-next-line complexity, max-statements
 			checkScrollVertical() {
 				const $thisBox = document.getElementById("searchResultsInner");
-				const $thisBoxHeight = $thisBox.offsetHeight;
-				const $thisBoxScrollTop = $thisBox.scrollTop;
-				const $thisBoxScrollHeight = $thisBox.scrollHeight;
 				const $thisBoxParent = $thisBox.parentNode;
 
-				if ($thisBoxScrollTop === 0 && $thisBoxScrollHeight === $thisBoxHeight) {
-					this.isScrollReset($thisBoxParent);
-				} else if ($thisBoxScrollTop === 0 && $thisBoxScrollHeight >= $thisBoxHeight) {
-					this.isScrollStart($thisBoxParent);
-				} else if ($thisBoxScrollTop === 0) {
-					this.isScrollStart($thisBoxParent);
-				} else if ($thisBoxScrollTop !== 0 && $thisBoxScrollHeight - $thisBoxScrollTop !== $thisBoxHeight) {
-					this.isScrollBoth($thisBoxParent);
-				} else if ($thisBoxScrollHeight - $thisBoxScrollTop == $thisBoxHeight) {
-					this.isScrollEnd($thisBoxParent);
-				} else {
-					this.isScrollReset($thisBoxParent);
-				}
+				const { scrollTop, scrollHeight, offsetHeight } = $thisBox;
+				const isAtStart = scrollTop === 0;
+				const isAtEnd = scrollHeight - scrollTop === offsetHeight;
+
+				this.toggleScrollClass($thisBoxParent, "is-scroll-start", isAtStart);
+				this.toggleScrollClass($thisBoxParent, "is-scroll-end", isAtEnd);
 			},
 		},
 	};

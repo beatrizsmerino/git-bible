@@ -53,8 +53,7 @@
 	import Vue from "vue";
 	import UILanguages from "@/components/UI/UILanguages";
 
-	// eslint-disable-next-line init-declarations
-	let handleOutsideClick;
+	let handleOutsideClick = null;
 
 	Vue.directive("closable", {
 		bind(element, binding, vnode) {

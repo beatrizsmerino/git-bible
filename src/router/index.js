@@ -80,45 +80,48 @@ const routes = [
 	},
 ];
 
-// eslint-disable-next-line complexity, max-statements
+function getPositionForHashRoute(to) {
+	const element = document.querySelector(to.hash);
+	const selectorIndex = element?.getAttribute("data-index");
+
+	if (element && selectorIndex === "1") {
+		return {
+			"selector": to.hash,
+			"offset": { "y": 400 },
+			"behavior": "smooth",
+		};
+	} else if (selectorIndex === "0") {
+		return false;
+	}
+
+	return {
+		"selector": to.hash,
+		"offset": { "y": 200 },
+		"behavior": "smooth",
+	};
+}
+
+async function getPositionWithScrollToTop(app, to) {
+	const scrollToTopPosition = {
+		"x": 0,
+		"y": 0,
+	};
+	const position = to.matched.some(m => m.meta.scrollToTop) ? scrollToTopPosition : {};
+	await new Promise(resolve => app.$root.$once("triggerScroll", resolve));
+
+	return position;
+}
+
 const scrollBehavior = function(to, from, savedPosition) {
 	if (savedPosition) {
 		return savedPosition;
 	}
-	const position = {};
 
 	if (to.hash) {
-		position.selector = to.hash;
-		position.offset = { "y": 200 };
-		position.behavior = "smooth";
-
-		const selectorIndex = document.querySelector(to.hash).getAttribute("data-index");
-
-		if ((/^#\d/u).test(to.hash) || document.querySelector(to.hash)) {
-			if (selectorIndex) {
-				if (selectorIndex == 0) {
-					return false;
-				} else if (selectorIndex == 1) {
-					position.offset = { "y": 400 };
-				}
-			}
-
-			return position;
-		}
-
-		return false;
+		return getPositionForHashRoute(to);
 	}
 
-	return new Promise(resolve => {
-		if (to.matched.some(m => m.meta.scrollToTop)) {
-			position.x = 0;
-			position.y = 0;
-		}
-
-		this.app.$root.$once("triggerScroll", () => {
-			resolve(position);
-		});
-	});
+	return getPositionWithScrollToTop(this.app, to);
 };
 
 const router = new VueRouter({
@@ -129,7 +132,6 @@ const router = new VueRouter({
 });
 
 // This callback runs before every route change, including on page load.
-// eslint-disable-next-line consistent-return
 router.beforeEach((to, from, next) => {
 	// This goes through the matched routes from last to first, finding the closest route with a title.
 	// eg. if we have /some/deep/nested/route and /some, /deep, and /nested have titles, nested's will be chosen.
@@ -179,7 +181,7 @@ router.beforeEach((to, from, next) => {
 		// Add the meta tags to the document head.
 		forEach(tag => document.head.appendChild(tag));
 
-	next();
+	return next();
 });
 
 export default router;
