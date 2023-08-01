@@ -2,6 +2,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"name": "git-bible",
+	"description": "Reference dictionary about Git, Git Flow and desktop commands made with Vue.",
 	"author": "beatrizsmerino@gmail.com",
 	"license": "ISC",
 	"main": "index.js",
