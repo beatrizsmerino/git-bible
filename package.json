@@ -20,7 +20,7 @@
 		"deploy": "node gh-pages-deploy.mjs"
 	},
 	"dependencies": {
-		"@fortawesome/fontawesome-svg-core": "^6.6.0",
+		"@fortawesome/fontawesome-svg-core": "^6.7.1",
 		"@fortawesome/free-solid-svg-icons": "^6.6.0",
 		"@fortawesome/vue-fontawesome": "^2.0.10",
 		"chalk": "^5.3.0",
