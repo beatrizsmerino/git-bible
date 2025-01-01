@@ -27,7 +27,7 @@
 		"core-js": "^3.39.0",
 		"elliptic": "^6.6.1",
 		"execa": "^7.2.0",
-		"node-emoji": "^2.1.3",
+		"node-emoji": "^2.2.0",
 		"vue": "^2.7.15",
 		"vue-clipboard2": "^0.3.3",
 		"vue-i18n": "^8.28.2",
